@@ -16,6 +16,7 @@ limitations under the License.
 */
 
 import Foundation
+import DeviceKit
 
 class SpanToDiskExporter {
     let db: SpanDb
@@ -34,6 +35,8 @@ class SpanToDiskExporter {
     public func shutdown() {}
 
     public func export(spans: [Dictionary<String, Any>]) -> Bool {
+        print("Device desc: \(Device.current.description)")
+
         if !db.ready() {
             return false
         }

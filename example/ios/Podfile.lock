@@ -1,6 +1,7 @@
 PODS:
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
+  - DeviceKit (4.9.0)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.70.5)
   - FBReactNativeSpec (0.70.5):
@@ -379,6 +380,7 @@ PODS:
     - React-RCTImage
   - SocketRocket (0.6.0)
   - splunk-otel-react-native (0.1.0):
+    - DeviceKit (~> 4.0)
     - React-Core
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -451,6 +453,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - CocoaAsyncSocket
+    - DeviceKit
     - Flipper
     - Flipper-Boost-iOSX
     - Flipper-DoubleConversion
@@ -545,6 +548,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  DeviceKit: 847709bf70b78fd9ab765bd571fb9f5f815c3fc1
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   FBLazyVector: affa4ba1bfdaac110a789192f4d452b053a86624
   FBReactNativeSpec: fe8b5f1429cfe83a8d72dc8ed61dc7704cac8745
@@ -592,7 +596,7 @@ SPEC CHECKSUMS:
   ReactCommon: c9246996e73bf75a2c6c3ff15f1e16707cdc2da9
   RNScreens: 34cc502acf1b916c582c60003dc3089fa01dc66d
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
-  splunk-otel-react-native: 1b6d1445d3a3ddb0c42a652a793b3a31cb4a35b1
+  splunk-otel-react-native: e8fd2cb2182be98d7539adcefefd841f14c5e261
   Yoga: eca980a5771bf114c41a754098cd85e6e0d90ed7
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
