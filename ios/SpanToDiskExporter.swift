@@ -35,13 +35,18 @@ class SpanToDiskExporter {
     public func shutdown() {}
 
     public func export(spans: [Dictionary<String, Any>]) -> Bool {
-        print("Device desc: \(Device.current.description)")
 
         if !db.ready() {
             return false
         }
 
-        if !db.store(spans: ZipkinTransform.toZipkinSpans(spans: spans)) {
+        let zipkinSpans = ZipkinTransform.toZipkinSpans(spans: spans)
+
+        for var s in zipkinSpans {
+            s.tags["device.model.name"] = Device.current.description
+        }
+
+        if !db.store(spans: zipkinSpans) {
             return true
         }
 
