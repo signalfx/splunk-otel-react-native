@@ -18,17 +18,20 @@ const SplunkOtelReactNative = NativeModules.SplunkOtelReactNative
     );
 
 export interface ReactNativeConfiguration {
+  realm?: string;
   beaconEndpoint: string;
   rumAccessToken: string;
   applicationName: string;
-  defaultTracerName?: string;
-  debugEnabled?: boolean;
-  // realm ?
+  environment?: string;
 }
 
-//TODO should probably not expose this
+export interface NativeSdKConfiguration {
+  beaconEndpoint?: string;
+  rumAccessToken?: string;
+}
+//TODO should probably not export this
 export function initializeNativeSdk(
-  config: ReactNativeConfiguration
+  config: NativeSdKConfiguration
 ): Promise<string> {
   return SplunkOtelReactNative.initialize(config);
 }

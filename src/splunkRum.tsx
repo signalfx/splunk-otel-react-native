@@ -1,32 +1,52 @@
-import { trace, context, Span } from '@opentelemetry/api';
+import { trace, context, Span, Attributes } from '@opentelemetry/api';
 import { WebTracerProvider } from '@opentelemetry/sdk-trace-web';
 import { SimpleSpanProcessor } from '@opentelemetry/sdk-trace-base';
 
-import { initializeNativeSdk, ReactNativeConfiguration } from './index';
+import {
+  initializeNativeSdk,
+  ReactNativeConfiguration,
+  NativeSdKConfiguration,
+} from './index';
 import ReacNativeSpanExporter from './exporting';
 import { startXHRTracking } from './trackXHR';
 import { startErrorTracking } from './trackErrors';
 import { setGlobalAttributes } from './globalAttributes';
 
 interface SplunkRumType {
-  init: (options: ReactNativeConfiguration) => SplunkRumType;
+  init: (options: ReactNativeConfiguration) => SplunkRumType | undefined;
   finishAppStart: () => void;
   provider?: WebTracerProvider;
   appStart?: Span;
   appStartEnd: number | null;
 }
 
+//FIXME
 const enableAppStart = false;
 
 export const SplunkRum: SplunkRumType = {
   appStartEnd: null,
   init(config: ReactNativeConfiguration) {
-    //TODO check config for required props
+    console.log('CONFIG ', config);
     const clientInit = Date.now();
-    setGlobalAttributes({ app: config.applicationName });
+    if (!config.applicationName) {
+      console.error('applicationName name is required.');
+      return;
+    }
 
+    if (!config.realm && !config.beaconEndpoint) {
+      console.error('Either realm or beaconEndpoint is required.');
+      return;
+    }
+
+    if (config.realm && !config.rumAccessToken) {
+      console.error('When sending data to Splunk rumAccessToken is required.');
+      return;
+    }
+
+    addGlobalAttributesFromConf(config);
     const provider = new WebTracerProvider({});
     provider.addSpanProcessor(
+      //TODO should we Batch?
       new SimpleSpanProcessor(new ReacNativeSpanExporter())
     );
 
@@ -40,10 +60,25 @@ export const SplunkRum: SplunkRumType = {
 
     const tracer = provider.getTracer('appStart');
     const nativeInit = Date.now();
+    const nativeSdkConf: NativeSdKConfiguration = {};
 
-    console.log('InitNative: ', config.applicationName, config.beaconEndpoint);
+    if (config.realm) {
+      nativeSdkConf.beaconEndpoint = `https://rum-ingest." + ${config.realm} + ".signalfx.com/v1/rum`;
+    }
 
-    initializeNativeSdk(config).then((appStartTime) => {
+    if (config.beaconEndpoint) {
+      nativeSdkConf.beaconEndpoint = config.beaconEndpoint;
+    }
+    nativeSdkConf.rumAccessToken = config.rumAccessToken;
+
+    console.log(
+      'Initializing with: ',
+      config.applicationName,
+      nativeSdkConf.beaconEndpoint,
+      nativeSdkConf.rumAccessToken
+    );
+
+    initializeNativeSdk(nativeSdkConf).then((appStartTime) => {
       if (enableAppStart) {
         const nativeInitEnd = Date.now();
         const appStartTimeInt = parseInt(appStartTime, 10);
@@ -98,3 +133,14 @@ export const SplunkRum: SplunkRumType = {
     }
   },
 };
+
+function addGlobalAttributesFromConf(config: ReactNativeConfiguration) {
+  const confAttributes: Attributes = {};
+  confAttributes.app = config.applicationName;
+
+  if (config.environment) {
+    confAttributes['deployment.environment'] = config.environment;
+  }
+
+  setGlobalAttributes(confAttributes);
+}

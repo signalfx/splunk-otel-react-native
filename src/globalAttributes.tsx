@@ -6,14 +6,15 @@ import { getSession } from './session';
 
 let globalAttributes: Attributes = {};
 
+//TODO get from semconv
 const platformConstants = (Platform as any).constants;
 const DEVICE_MODEL_NAME = 'device.model.name';
 const DEVICE_MODEL_IDENTIFIER = 'device.model.identifier';
 const OS_NAME = 'os.name';
+const OS_TYPE = 'os.type';
 const OS_VERSION = 'os.version';
 
 console.log('CONSTANTTS: ', platformConstants);
-
 
 // just for future where there may be a way to use proper resource
 function getResource(): ResourceAttributes {
@@ -28,16 +29,13 @@ function getResource(): ResourceAttributes {
   };
 
   if (Platform.OS === 'ios') {
-    resourceAttrs = {
-      ...resourceAttrs,
-      ...{
-        [DEVICE_MODEL_NAME]: 'ios-emulator', //FIXME get proper model
-        [DEVICE_MODEL_IDENTIFIER]: 'ios-emulator',
-        [OS_NAME]: 'iOS',
-        [OS_VERSION]: platformConstants.Release,
-      },
-    };
+    resourceAttrs[OS_NAME] = 'iOS';
+    resourceAttrs[OS_VERSION] = platformConstants.osVersion;
   } else {
+    resourceAttrs[OS_NAME] = 'Android';
+    resourceAttrs[OS_TYPE] = 'linux'; //matches android-sdk not sure if needed
+    // Release should be Android version eg. 12 and Version is API version eg. 32
+    resourceAttrs[OS_VERSION] = platformConstants.Release;
     resourceAttrs[DEVICE_MODEL_NAME] = platformConstants.Model;
     resourceAttrs[DEVICE_MODEL_IDENTIFIER] = platformConstants.Model;
   }

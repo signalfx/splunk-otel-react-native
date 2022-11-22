@@ -7,8 +7,6 @@ let session = {
   id: idGenerator.generateTraceId(),
 };
 
-console.log('CLINET:session:initialized: ', session.id);
-
 const SESSION_UPDATE_INTERVAL = 60 * 1000;
 const MAX_SESSION_AGE = 4 * 60 * 60 * 1000;
 

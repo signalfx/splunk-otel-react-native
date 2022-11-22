@@ -14,6 +14,7 @@ export default class ReacNativeSpanExporter implements SpanExporter {
     spans: ReadableSpan[],
     resultCallback: (result: ExportResult) => void
   ): void {
+    //FIXME unify this so ios and android are the same
     if (Platform.OS === 'ios') {
       exportSpanToNative(spans.map(this.toZipkin));
     } else {
