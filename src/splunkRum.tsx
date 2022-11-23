@@ -8,13 +8,16 @@ import {
   NativeSdKConfiguration,
 } from './index';
 import ReacNativeSpanExporter from './exporting';
+import GlobalAttributeAppender from './globalAttributeAppender';
 import { startXHRTracking } from './trackXHR';
 import { startErrorTracking } from './trackErrors';
 import { setGlobalAttributes } from './globalAttributes';
+import { _generatenewSessionId } from './session';
 
 interface SplunkRumType {
   init: (options: ReactNativeConfiguration) => SplunkRumType | undefined;
   finishAppStart: () => void;
+  _generatenewSessionId: () => void;
   provider?: WebTracerProvider;
   appStart?: Span;
   appStartEnd: number | null;
@@ -25,6 +28,7 @@ const enableAppStart = false;
 
 export const SplunkRum: SplunkRumType = {
   appStartEnd: null,
+  _generatenewSessionId: _generatenewSessionId,
   init(config: ReactNativeConfiguration) {
     console.log('CONFIG ', config);
     const clientInit = Date.now();
@@ -45,8 +49,8 @@ export const SplunkRum: SplunkRumType = {
 
     addGlobalAttributesFromConf(config);
     const provider = new WebTracerProvider({});
+    provider.addSpanProcessor(new GlobalAttributeAppender());
     provider.addSpanProcessor(
-      //TODO should we Batch?
       new SimpleSpanProcessor(new ReacNativeSpanExporter())
     );
 

@@ -5,7 +5,7 @@ const originalOpen = XMLHttpRequest.prototype.open;
 const originalSend = XMLHttpRequest.prototype.send;
 
 export function startXHRTracking() {
-  const tracer = trace.getTracer('rn-xhr');
+  const tracer = trace.getTracer('xhr');
 
   XMLHttpRequest.prototype.open = function (this: XMLHttpRequest, ...args) {
     const attributes = {

@@ -2,7 +2,7 @@ import { Platform } from 'react-native';
 import type { Attributes } from '@opentelemetry/api';
 import type { ResourceAttributes } from '@opentelemetry/resources';
 import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
-import { getSession } from './session';
+import { getSessionId } from './session';
 
 let globalAttributes: Attributes = {};
 
@@ -25,7 +25,6 @@ function getResource(): ResourceAttributes {
     [SemanticResourceAttributes.TELEMETRY_SDK_VERSION]: '0.1.0',
     // Splunk specific attributes
     'splunk.rumVersion': '0.1.0',
-    'splunk.rumSessionId': getSession().id,
   };
 
   if (Platform.OS === 'ios') {
@@ -54,6 +53,8 @@ export function setGlobalAttributes(attrs: object) {
   globalAttributes = Object.assign(globalAttributes, attrs);
 }
 
-export function getGlobalAttributes() {
-  return globalAttributes;
+export function getGlobalAttributes(): Attributes {
+  return Object.assign(globalAttributes, {
+    'splunk.rumSessionId': getSessionId(),
+  });
 }

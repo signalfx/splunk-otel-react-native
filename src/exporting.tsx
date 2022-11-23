@@ -7,8 +7,6 @@ import {
 import { Platform } from 'react-native';
 import { exportSpanToNative } from './index';
 import { toZipkinSpan } from './zipkintransform';
-import { getGlobalAttributes } from './globalAttributes';
-
 export default class ReacNativeSpanExporter implements SpanExporter {
   export(
     spans: ReadableSpan[],
@@ -27,10 +25,6 @@ export default class ReacNativeSpanExporter implements SpanExporter {
 
   toZipkin(span: ReadableSpan) {
     const zipkinSpan = toZipkinSpan(span, 'servicenamegoeshere');
-    const globalAttrs = getGlobalAttributes();
-    for (const name in globalAttrs) {
-      zipkinSpan.tags[name] = globalAttrs[name];
-    }
     console.log('CLIENT:zipkinTonativeSpan', zipkinSpan.name);
     return zipkinSpan;
   }
@@ -43,10 +37,7 @@ export default class ReacNativeSpanExporter implements SpanExporter {
       startTime: hrTimeToMilliseconds(span.startTime),
       endTime: hrTimeToMilliseconds(span.endTime),
       parentSpanId: span.parentSpanId,
-      attributes: {
-        ...getGlobalAttributes(),
-        ...span.attributes,
-      },
+      attributes: span.attributes,
       ...spanContext,
     };
     console.log(

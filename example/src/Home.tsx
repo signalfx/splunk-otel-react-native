@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 import { trace, context } from '@opentelemetry/api';
+import { Rum } from '../index';
 
 export default function Home({ navigation }) {
   const [data, setData] = useState([]);
@@ -66,6 +67,7 @@ export default function Home({ navigation }) {
       <Button title="Nested fetch custom span" onPress={createSpan} />
       <Button title="RN fetch GET" onPress={rnFetch} />
       <Button title="Workflow span" onPress={workflowSpan} />
+      <Button title="New session" onPress={Rum._generatenewSessionId} />
       <Text>{isLoading && 'Loading'}</Text>
       <Button title="JS error" onPress={throwError} />
     </View>
