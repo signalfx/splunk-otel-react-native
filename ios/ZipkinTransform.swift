@@ -1,4 +1,3 @@
-//
 /*
 Copyright 2022 Splunk Inc.
 
@@ -146,7 +145,7 @@ struct ZipkinTransform {
         let traceId = otelSpan["traceId"] as? String ?? "00000000000000000000000000000000"
         let spanId = otelSpan["id"] as? String ?? "0000000000000000"
         let name = otelSpan["name"] as? String ?? "unknown"
-        
+
         return ZipkinSpan(traceId: traceId,
                           parentId: parentId,
                           id: spanId,

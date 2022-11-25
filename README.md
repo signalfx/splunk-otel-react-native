@@ -1,31 +1,49 @@
 # splunk-otel-react-native
 
-OTEL react native instrumentation
+## Install dependencies
 
-## Installation
-
+Calling
 ```sh
-npm install splunk-otel-react-native
+yarn
+```
+in parent folder should install everything. In iOS it sometimes doesn't.
+It is not currently in npm.
+
+To get npm package to install somewhere else:
+```
+yarn pack
+```
+Produces splunk-otel-react-native-v0.1.0.tgz which you can just
+```
+yarn add splunk-otel-react-native-v0.1.0.tgz
+```
+in some other project.
+## Running
+
+In example folder run:
+```
+npx react-native start
+```
+and in another terminal tab run:
+```
+npx react-native run-android
+```
+or
+```
+npx react-native run-ios
 ```
 
-## Usage
+To run native RN project in IDE open example/android in android studio or example/ios/BasicRnModuleExample.xcworkspace in XCode
+# Usage
+Somwhere in your app call SplunkRum.init()
 
 ```js
-import { multiply } from 'splunk-otel-react-native';
+import { SplunkRum } from 'splunk-otel-react-native';
 
-// ...
+export const Rum = SplunkRum.init({
+  beaconEndpoint: 'https://rum-ingest.us0.signalfx.com/v1/rum',
+  applicationName: 'reactNativeTest',
+  rumAccessToken: 'token',
+});
 
-const result = await multiply(3, 7);
 ```
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
