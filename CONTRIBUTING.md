@@ -1,114 +1,79 @@
-# Contributing
+# Contributing Guidelines
 
-Contributions are always welcome, no matter how large or small!
+Thank you for your interest in contributing to our repository! Whether it's a bug
+report, new feature, question, or additional documentation, we greatly value
+feedback and contributions from our community. Read through this document
+before submitting any issues or pull requests to ensure we have all the
+necessary information to effectively respond to your bug report or
+contribution.
 
-We want this community to be friendly and respectful to each other. Please follow it in all your interactions with the project. Before contributing, please read the [code of conduct](./CODE_OF_CONDUCT.md).
+In addition to this document, please review our [Code of
+Conduct](CODE_OF_CONDUCT.md). For any code of conduct questions or comments
+please email oss@splunk.com.
 
-## Development workflow
+## Reporting Bugs/Feature Requests
 
-To get started with the project, run `yarn` in the root directory to install the required dependencies for each package:
+We welcome you to use the GitHub issue tracker to report bugs or suggest
+features. When filing an issue, please check existing open, or recently closed,
+issues to make sure somebody else hasn't already reported the issue. Please try
+to include as much information as you can. Details like these are incredibly
+useful:
 
-```sh
-yarn
-```
+- A reproducible test case or series of steps
+- The version of our code being used
+- Any modifications you've made relevant to the bug
+- Anything unusual about your environment or deployment
+- Any known workarounds
 
-> While it's possible to use [`npm`](https://github.com/npm/cli), the tooling is built around [`yarn`](https://classic.yarnpkg.com/), so you'll have an easier time if you use `yarn` for development.
+When filing an issue, please do *NOT* include:
 
-While developing, you can run the [example app](/example/) to test your changes. Any changes you make in your library's JavaScript code will be reflected in the example app without a rebuild. If you change any native code, then you'll need to rebuild the example app.
+- Internal identifiers such as JIRA tickets
+- Any sensitive information related to your environment, users, etc.
 
-To start the packager:
+## Reporting Security Issues
 
-```sh
-yarn example start
-```
+See [SECURITY.md](SECURITY.md#reporting-security-issues) for detailed instructions.
 
-To run the example app on Android:
+## Contributing via Pull Requests
 
-```sh
-yarn example android
-```
+Contributions via Pull Requests (PRs) are much appreciated. Before sending us a
+pull request, please ensure that:
 
-To run the example app on iOS:
+1. You are working against the latest source on the `main` branch.
+2. You check existing open, and recently merged, pull requests to make sure
+   someone else hasn't addressed the problem already.
+3. You open an issue to discuss any significant work - we would hate for your
+   time to be wasted.
+4. You submit PRs that are easy to review and ideally less 500 lines of code.
+   Multiple PRs can be submitted for larger contributions.
 
-```sh
-yarn example ios
-```
+To send us a pull request, please:
 
-Make sure your code passes TypeScript and ESLint. Run the following to verify:
+1. Fork the repository.
+2. Modify the source; please ensure a single change per PR. If you also
+   reformat all the code, it will be hard for us to focus on your change.
+3. Ensure local tests pass and add new tests related to the contribution.
+4. Commit to your fork using clear commit messages.
+5. Send us a pull request, answering any default questions in the pull request
+   interface.
+6. Pay attention to any automated CI failures reported in the pull request, and
+   stay involved in the conversation.
 
-```sh
-yarn typescript
-yarn lint
-```
+GitHub provides additional documentation on [forking a
+repository](https://help.github.com/articles/fork-a-repo/) and [creating a pull
+request](https://help.github.com/articles/creating-a-pull-request/).
 
-To fix formatting errors, run the following:
+## Finding contributions to work on
 
-```sh
-yarn lint --fix
-```
+Looking at the existing issues is a great way to find something to contribute
+on. As our repositories, by default, use the default GitHub issue labels
+(enhancement/bug/duplicate/help wanted/invalid/question/wontfix), looking at
+any 'help wanted' issues is a great place to start.
 
-Remember to add tests for your change if possible. Run the unit tests by:
+## Licensing
 
-```sh
-yarn test
-```
+See the [LICENSE](LICENSE) file for our repository's licensing. We will ask you to
+confirm the licensing of your contribution.
 
-To edit the Objective-C or Swift files, open `example/ios/SplunkOtelReactNativeExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > splunk-otel-react-native`.
-
-To edit the Java or Kotlin files, open `example/android` in Android studio and find the source files at `splunk-otel-react-native` under `Android`.
-
-
-### Commit message convention
-
-We follow the [conventional commits specification](https://www.conventionalcommits.org/en) for our commit messages:
-
-- `fix`: bug fixes, e.g. fix crash due to deprecated method.
-- `feat`: new features, e.g. add new method to the module.
-- `refactor`: code refactor, e.g. migrate from class components to hooks.
-- `docs`: changes into documentation, e.g. add usage example for the module..
-- `test`: adding or updating tests, e.g. add integration tests using detox.
-- `chore`: tooling changes, e.g. change CI config.
-
-Our pre-commit hooks verify that your commit message matches this format when committing.
-
-### Linting and tests
-
-[ESLint](https://eslint.org/), [Prettier](https://prettier.io/), [TypeScript](https://www.typescriptlang.org/)
-
-We use [TypeScript](https://www.typescriptlang.org/) for type checking, [ESLint](https://eslint.org/) with [Prettier](https://prettier.io/) for linting and formatting the code, and [Jest](https://jestjs.io/) for testing.
-
-Our pre-commit hooks verify that the linter and tests pass when committing.
-
-### Publishing to npm
-
-We use [release-it](https://github.com/release-it/release-it) to make it easier to publish new versions. It handles common tasks like bumping version based on semver, creating tags and releases etc.
-
-To publish new versions, run the following:
-
-```sh
-yarn release
-```
-
-### Scripts
-
-The `package.json` file contains various scripts for common tasks:
-
-- `yarn bootstrap`: setup project by installing all dependencies and pods.
-- `yarn typescript`: type-check files with TypeScript.
-- `yarn lint`: lint files with ESLint.
-- `yarn test`: run unit tests with Jest.
-- `yarn example start`: start the Metro server for the example app.
-- `yarn example android`: run the example app on Android.
-- `yarn example ios`: run the example app on iOS.
-
-### Sending a pull request
-
-> **Working on your first pull request?** You can learn how from this _free_ series: [How to Contribute to an Open Source Project on GitHub](https://app.egghead.io/playlists/how-to-contribute-to-an-open-source-project-on-github).
-
-When you're sending a pull request:
-
-- Prefer small pull requests focused on one change.
-- Verify that linters and tests are passing.
-- Review the documentation to make sure it looks good.
-- Follow the pull request template when opening a pull request.
-- For pull requests that change the API or implementation, discuss with maintainers first by opening an issue.
+All contributors must execute the [Splunk Contributor License Agreement
+(CLA) form](https://www.splunk.com/en_us/form/contributions.html).

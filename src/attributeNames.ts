@@ -14,13 +14,5 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-const path = require('path');
-const pak = require('../package.json');
-
-module.exports = {
-  dependencies: {
-    [pak.name]: {
-      root: path.join(__dirname, '..'),
-    },
-  },
-};
+export const SCREEN_NAME = 'screen.name';
+export const LAST_SCREEN_NAME = 'last.screen.name';
