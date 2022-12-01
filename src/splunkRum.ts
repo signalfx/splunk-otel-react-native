@@ -25,8 +25,8 @@ import {
 } from './index';
 import ReacNativeSpanExporter from './exporting';
 import GlobalAttributeAppender from './globalAttributeAppender';
-import { startXHRTracking } from './trackXHR';
-import { startErrorTracking } from './trackErrors';
+import { instrumentXHR } from './instrumentations/xhr';
+import { instrumentErrors } from './instrumentations/errors';
 import { setGlobalAttributes } from './globalAttributes';
 import { _generatenewSessionId } from './session';
 
@@ -74,9 +74,8 @@ export const SplunkRum: SplunkRumType = {
     this.provider = provider;
     const clientInitEnd = Date.now();
 
-    //FIXME make into instrumentations?
-    startXHRTracking();
-    startErrorTracking();
+    instrumentXHR();
+    instrumentErrors();
 
     const tracer = provider.getTracer('appStart');
     const nativeInit = Date.now();

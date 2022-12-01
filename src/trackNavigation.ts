@@ -15,7 +15,7 @@ limitations under the License.
 */
 
 import { setGlobalAttributes } from './globalAttributes';
-import { SCREEN_NAME, LAST_SCREEN_NAME } from './attributeNames';
+import { SCREEN_NAME, LAST_SCREEN_NAME } from './splunkAttributeNames';
 import { trace } from '@opentelemetry/api';
 
 let current: string = 'none';
