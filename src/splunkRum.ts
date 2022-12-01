@@ -25,8 +25,8 @@ import {
 } from './index';
 import ReacNativeSpanExporter from './exporting';
 import GlobalAttributeAppender from './globalAttributeAppender';
-import { startXHRTracking } from './trackXHR';
-import { startErrorTracking } from './trackErrors';
+import { instrumentXHR } from './instrumentations/xhr';
+import { instrumentErrors, reportError } from './instrumentations/errors';
 import { setGlobalAttributes } from './globalAttributes';
 import { _generatenewSessionId } from './session';
 
@@ -34,6 +34,7 @@ interface SplunkRumType {
   init: (options: ReactNativeConfiguration) => SplunkRumType | undefined;
   finishAppStart: () => void;
   _generatenewSessionId: () => void;
+  reportError: (err: any, isFatal?: boolean) => void;
   provider?: WebTracerProvider;
   appStart?: Span;
   appStartEnd: number | null;
@@ -45,6 +46,7 @@ const enableAppStart = false;
 export const SplunkRum: SplunkRumType = {
   appStartEnd: null,
   _generatenewSessionId: _generatenewSessionId,
+  reportError: reportError,
   init(config: ReactNativeConfiguration) {
     console.log('CONFIG ', config);
     const clientInit = Date.now();
@@ -74,9 +76,8 @@ export const SplunkRum: SplunkRumType = {
     this.provider = provider;
     const clientInitEnd = Date.now();
 
-    //FIXME make into instrumentations?
-    startXHRTracking();
-    startErrorTracking();
+    instrumentXHR();
+    instrumentErrors();
 
     const tracer = provider.getTracer('appStart');
     const nativeInit = Date.now();
