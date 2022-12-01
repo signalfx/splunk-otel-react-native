@@ -20,32 +20,34 @@ const STACK_LIMIT = 4096;
 const MESSAGE_LIMIT = 1024;
 
 export function instrumentErrors() {
-  const tracer = trace.getTracer('error');
-
   ErrorUtils.setGlobalHandler((err: any, isFatal?: boolean) => {
-    const msg = err.message || err.toString();
-
-    const attributes = {
-      'error.isFatal': isFatal,
-      'error.message': limitLen(msg, MESSAGE_LIMIT),
-      'error.object': useful(err.name)
-        ? err.name
-        : err.constructor && err.constructor.name
-        ? err.constructor.name
-        : 'Error',
-      'error': true, //TODO do we use this?
-      'component': 'error',
-    };
-
-    if (err.stack && useful(err.stack)) {
-      (attributes as any)['error.stack'] = limitLen(
-        err.stack.toString(),
-        STACK_LIMIT
-      );
-    }
-
-    tracer.startSpan('error', { attributes }).end();
+    reportError(err, isFatal);
   });
+}
+
+export function reportError(err: any, isFatal?: boolean) {
+  const tracer = trace.getTracer('error');
+  const msg = err.message || err.toString();
+
+  const attributes = {
+    'error.isFatal': isFatal,
+    'error.message': limitLen(msg, MESSAGE_LIMIT),
+    'error.object': useful(err.name)
+      ? err.name
+      : err.constructor && err.constructor.name
+      ? err.constructor.name
+      : 'Error',
+    'error': true, //TODO do we use this?
+    'component': 'error',
+  };
+
+  if (err.stack && useful(err.stack)) {
+    (attributes as any)['error.stack'] = limitLen(
+      err.stack.toString(),
+      STACK_LIMIT
+    );
+  }
+  tracer.startSpan('error', { attributes }).end();
 }
 
 function limitLen(s: string, cap: number): string {
