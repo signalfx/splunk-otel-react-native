@@ -39,15 +39,19 @@ interface SplunkRumType {
   appStart?: Span;
   appStartEnd: number | null;
 }
-
-//FIXME
-const enableAppStart = false;
+const DEFAULT_CONFIG = {
+  appStart: true,
+};
 
 export const SplunkRum: SplunkRumType = {
   appStartEnd: null,
   _generatenewSessionId: _generatenewSessionId,
   reportError: reportError,
-  init(config: ReactNativeConfiguration) {
+  init(configugration: ReactNativeConfiguration) {
+    const config = {
+      ...DEFAULT_CONFIG,
+      ...configugration,
+    };
     console.log('CONFIG ', config);
     const clientInit = Date.now();
     if (!config.applicationName) {
@@ -79,12 +83,11 @@ export const SplunkRum: SplunkRumType = {
     instrumentXHR();
     instrumentErrors();
 
-    const tracer = provider.getTracer('appStart');
     const nativeInit = Date.now();
     const nativeSdkConf: NativeSdKConfiguration = {};
 
     if (config.realm) {
-      nativeSdkConf.beaconEndpoint = `https://rum-ingest." + ${config.realm} + ".signalfx.com/v1/rum`;
+      nativeSdkConf.beaconEndpoint = `https://rum-ingest.${config.realm}.signalfx.com/v1/rum`;
     }
 
     if (config.beaconEndpoint) {
@@ -100,24 +103,26 @@ export const SplunkRum: SplunkRumType = {
     );
 
     initializeNativeSdk(nativeSdkConf).then((appStartTime) => {
-      if (enableAppStart) {
+      //TODO refactor appStart
+      if (config.appStart) {
+        const tracer = provider.getTracer('AppStart');
         const nativeInitEnd = Date.now();
-        const appStartTimeInt = parseInt(appStartTime, 10);
 
-        this.appStart = tracer.startSpan('appStart', {
-          startTime: appStartTimeInt,
+        this.appStart = tracer.startSpan('AppStart', {
+          startTime: appStartTime,
           attributes: {
-            component: 'appstart',
+            'component': 'appstart',
+            'start.type': 'cold',
           },
         });
-        console.log('APPStart: ', appStartTimeInt, new Date(appStartTimeInt));
+        console.log('APPStart: ', appStartTime, new Date(appStartTime));
 
         //FIXME no need to have native init span probably
         const ctx = trace.setSpan(context.active(), this.appStart);
         context.with(ctx, () => {
           tracer
             .startSpan('nativeInit', { startTime: nativeInit })
-            .end(this.appStartEnd || nativeInitEnd);
+            .end(nativeInitEnd);
           tracer
             .startSpan('clientInit', { startTime: clientInit })
             .end(clientInitEnd);
@@ -136,7 +141,10 @@ export const SplunkRum: SplunkRumType = {
                 console.log('CLIENT:SplunkRum:REALappStartEnd: ');
               } else {
                 this.appStart.end(defaultAppStartEnd);
-                console.log('CLIENT:SplunkRum:DEFAULTappStartEnd: ');
+                console.log(
+                  'CLIENT:SplunkRum:DEFAULTappStartEnd: ',
+                  new Date(defaultAppStartEnd)
+                );
               }
             }
           }, 5000);

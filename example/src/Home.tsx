@@ -25,10 +25,10 @@ export default function Home({ navigation }) {
   const tracer = trace.getTracer('home');
 
   useEffect(() => {
-    // setTimeout(() => {
-    //   console.log('APP:useEffect');
-    //   SplunkRum.finishAppStart();
-    // }, 2431);
+    setTimeout(() => {
+      console.log('APP:useEffect');
+      Rum.finishAppStart();
+    }, 3431);
   }, []);
 
   const createSpan = () => {

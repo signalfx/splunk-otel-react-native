@@ -20,9 +20,7 @@ import { name as appName } from './app.json';
 import { SplunkRum } from 'splunk-otel-react-native';
 
 export const Rum = SplunkRum.init({
-  beaconEndpoint: 'http://192.168.1.136:53820/zipkindump',
-  // beaconEndpoint: 'http://192.168.1.136:9412/api/v2/spans',
-  // realm: 'us0',
+  realm: 'us0',
   applicationName: 'reactNativeTest',
   rumAccessToken: 'test',
 });

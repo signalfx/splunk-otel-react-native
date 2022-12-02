@@ -39,6 +39,7 @@ export interface ReactNativeConfiguration {
   rumAccessToken: string;
   applicationName: string;
   environment?: string;
+  appStart?: boolean;
 }
 
 export interface NativeSdKConfiguration {
@@ -48,7 +49,7 @@ export interface NativeSdKConfiguration {
 //TODO should probably not export this
 export function initializeNativeSdk(
   config: NativeSdKConfiguration
-): Promise<string> {
+): Promise<number> {
   return SplunkOtelReactNative.initialize(config);
 }
 
