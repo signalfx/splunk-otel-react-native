@@ -75,9 +75,10 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
 
     exporter = new ZipkinSpanExporterBuilder()
       .setEndpoint(endpointWithAuthentication)
+      .setEncoder(new CustomZipkinEncoder())
       .build();
 
-    promise.resolve(null);
+    promise.resolve((double) moduleStartTime);
   }
 
   @ReactMethod
@@ -155,7 +156,7 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
       SpanKind.INTERNAL,
       StatusData.ok(),
       millisToNanos(startEpochMillis),
-      millisToNanos(startEpochMillis)
+      millisToNanos(endEpochMillis)
     );
   }
 

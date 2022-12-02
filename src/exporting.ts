@@ -56,12 +56,8 @@ export default class ReacNativeSpanExporter implements SpanExporter {
       attributes: span.attributes,
       ...spanContext,
     };
-    console.log(
-      'CLIENT:toNativeSpan: ',
-      nSpan.name,
-      new Date(nSpan.startTime),
-      new Date(nSpan.endTime)
-    );
+    nSpan.attributes._splunk_operation = span.name;
+    console.log('CLIENT:toNativeSpan: ', nSpan.name, span.duration);
     return nSpan;
   }
 
