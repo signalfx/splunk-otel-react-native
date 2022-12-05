@@ -15,6 +15,7 @@ limitations under the License.
 */
 
 import Foundation
+import DeviceKit
 
 // Zipkin conversion code modified from https://github.com/open-telemetry/opentelemetry-swift/blob/main/Sources/Exporters/Zipkin/Implementation/ZipkinConversionExtension.swift
 
@@ -145,6 +146,8 @@ struct ZipkinTransform {
         let traceId = otelSpan["traceId"] as? String ?? "00000000000000000000000000000000"
         let spanId = otelSpan["id"] as? String ?? "0000000000000000"
         let name = otelSpan["name"] as? String ?? "unknown"
+        var tags = otelSpan["tags"] as? Dictionary<String, String> ?? [:]
+        tags["device.model.name"] = Device.current.description
 
         return ZipkinSpan(traceId: traceId,
                           parentId: parentId,
@@ -155,6 +158,6 @@ struct ZipkinTransform {
                           duration: otelSpan["duration"] as? UInt64 ?? 0,
                           remoteEndpoint: nil,
                           annotations: [],
-                          tags: otelSpan["tags"] as? Dictionary<String, String> ?? [:])
+                          tags: tags)
     }
 }

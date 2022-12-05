@@ -19,9 +19,16 @@ fileprivate var spanExporter: SpanToDiskExporter?
 
 @objc(SplunkOtelReactNative)
 class SplunkOtelReactNative: NSObject {
-
+  private var appStartTime = Date()
   @objc(initialize:withResolver:withRejecter:)
   func initialize(config: Dictionary<String, Any>, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
+      print("Default appStartTime \(appStartTime)")
+      do {
+          appStartTime = try processStartTime()
+          print("Processed appStartTime \(appStartTime)")
+      } catch {
+          // ignore
+      }
 
       let beaconUrl = config["beaconEndpoint"] as? String
 
@@ -44,7 +51,7 @@ class SplunkOtelReactNative: NSObject {
 
       SpanFromDiskExport.start(spanDb: db, endpoint: beaconWithAuth)
 
-      resolve(true)
+      resolve(appStartTime.timeIntervalSince1970 * 1000)
     }
 
     @objc(export:withResolver:withRejecter:)
@@ -56,5 +63,28 @@ class SplunkOtelReactNative: NSObject {
 
         let exporter = spanExporter!
         resolve(exporter.export(spans: spans))
+    }
+    
+    private func processStartTime() throws -> Date {
+        let name = "kern.proc.pid"
+        var len: size_t = 4
+        var mib = [Int32](repeating: 0, count: 4)
+        var kp: kinfo_proc = kinfo_proc()
+        try mib.withUnsafeMutableBufferPointer { (mibBP: inout UnsafeMutableBufferPointer<Int32>) throws in
+            try name.withCString { (nbp: UnsafePointer<Int8>) throws in
+                guard sysctlnametomib(nbp, mibBP.baseAddress, &len) == 0 else {
+                    throw POSIXError(.EAGAIN)
+                }
+            }
+            mibBP[3] = getpid()
+            len =  MemoryLayout<kinfo_proc>.size
+            guard sysctl(mibBP.baseAddress, 4, &kp, &len, nil, 0) == 0 else {
+                throw POSIXError(.EAGAIN)
+            }
+        }
+        // Type casts to finally produce the answer
+        let startTime = kp.kp_proc.p_un.__p_starttime
+        let ti: TimeInterval = Double(startTime.tv_sec) + (Double(startTime.tv_usec) / 1e6)
+        return Date(timeIntervalSince1970: ti)
     }
 }

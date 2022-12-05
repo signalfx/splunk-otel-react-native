@@ -16,7 +16,6 @@ limitations under the License.
 */
 
 import Foundation
-import DeviceKit
 
 /*
 Copyright 2022 Splunk Inc.
@@ -58,10 +57,6 @@ class SpanToDiskExporter {
         }
 
         let zipkinSpans = ZipkinTransform.toZipkinSpans(spans: spans)
-
-        for var s in zipkinSpans {
-            s.tags["device.model.name"] = Device.current.description
-        }
 
         if !db.store(spans: zipkinSpans) {
             return true

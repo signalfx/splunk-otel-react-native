@@ -103,6 +103,7 @@ export const SplunkRum: SplunkRumType = {
     );
 
     initializeNativeSdk(nativeSdkConf).then((appStartTime) => {
+      console.log('APPStart: ', appStartTime, new Date(appStartTime));
       //TODO refactor appStart
       if (config.appStart) {
         const tracer = provider.getTracer('AppStart');
@@ -115,7 +116,6 @@ export const SplunkRum: SplunkRumType = {
             'start.type': 'cold',
           },
         });
-        console.log('APPStart: ', appStartTime, new Date(appStartTime));
 
         //FIXME no need to have native init span probably
         const ctx = trace.setSpan(context.active(), this.appStart);

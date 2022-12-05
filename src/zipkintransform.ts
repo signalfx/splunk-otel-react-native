@@ -194,7 +194,7 @@ export function toZipkinSpan(span: ReadableSpan, serviceName: string): Span {
     timestamp: hrTimeToMicroseconds(span.startTime),
     duration: hrTimeToMicroseconds(span.duration),
     localEndpoint: { serviceName },
-    tags: _toZipkinTags(span.attributes, span.status, span.resource),
+    tags: _toZipkinTags(span.attributes, span.status), //omitted span.resource
     annotations: span.events.length
       ? _toZipkinAnnotations(span.events)
       : undefined,
@@ -207,7 +207,7 @@ export function toZipkinSpan(span: ReadableSpan, serviceName: string): Span {
 export function _toZipkinTags(
   attributes: api.Attributes,
   status: api.SpanStatus,
-  resource: Resource
+  resource?: Resource
 ): Tags {
   const tags: { [key: string]: string } = {};
   for (const key of Object.keys(attributes)) {
@@ -220,9 +220,11 @@ export function _toZipkinTags(
     tags.error = status.message;
   }
 
-  Object.keys(resource.attributes).forEach(
-    (name) => (tags[name] = String(resource.attributes[name]))
-  );
+  if (resource) {
+    Object.keys(resource.attributes).forEach(
+      (name) => (tags[name] = String(resource.attributes[name]))
+    );
+  }
 
   return tags;
 }
