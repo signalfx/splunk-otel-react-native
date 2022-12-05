@@ -30,8 +30,6 @@ const OS_NAME = 'os.name';
 const OS_TYPE = 'os.type';
 const OS_VERSION = 'os.version';
 
-console.log('CONSTANTTS: ', platformConstants);
-
 // just for future where there may be a way to use proper resource
 function getResource(): ResourceAttributes {
   let resourceAttrs = {

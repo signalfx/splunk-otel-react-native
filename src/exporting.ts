@@ -41,7 +41,11 @@ export default class ReacNativeSpanExporter implements SpanExporter {
 
   toZipkin(span: ReadableSpan) {
     const zipkinSpan = toZipkinSpan(span, 'servicenamegoeshere');
-    console.log('CLIENT:zipkinTonativeSpan', zipkinSpan.name);
+    console.log(
+      'CLIENT:zipkinTonativeSpan',
+      zipkinSpan.name,
+      zipkinSpan.duration / 1e6
+    );
     return zipkinSpan;
   }
 
