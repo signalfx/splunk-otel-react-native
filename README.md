@@ -1,6 +1,6 @@
 # Splunk distribution of OpenTelemetry for React Native
 
-> :construction: This project is currently in early **BETA**. Using it in production is not advised.
+> :construction: This project status is currently **Experimental**. Using it in production is not advised.
 
 ## Install dependencies
 
