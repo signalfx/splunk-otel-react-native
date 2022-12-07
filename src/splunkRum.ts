@@ -28,16 +28,19 @@ import GlobalAttributeAppender from './globalAttributeAppender';
 import { instrumentXHR } from './instrumentations/xhr';
 import { instrumentErrors, reportError } from './instrumentations/errors';
 import { setGlobalAttributes } from './globalAttributes';
+import { LOCATION_LATITUDE, LOCATION_LONGITUDE } from './splunkAttributeNames';
 import { _generatenewSessionId } from './session';
 
 interface SplunkRumType {
-  init: (options: ReactNativeConfiguration) => SplunkRumType | undefined;
-  finishAppStart: () => void;
-  _generatenewSessionId: () => void;
-  reportError: (err: any, isFatal?: boolean) => void;
-  provider?: WebTracerProvider;
   appStart?: Span;
   appStartEnd: number | null;
+  finishAppStart: () => void;
+  init: (options: ReactNativeConfiguration) => SplunkRumType | undefined;
+  provider?: WebTracerProvider;
+  _generatenewSessionId: () => void;
+  reportError: (err: any, isFatal?: boolean) => void;
+  setGlobalAttributes: (attributes: Attributes) => void;
+  updateLocation: (latitude: number, longitude: number) => void;
 }
 const DEFAULT_CONFIG = {
   appStart: true,
@@ -45,8 +48,13 @@ const DEFAULT_CONFIG = {
 
 export const SplunkRum: SplunkRumType = {
   appStartEnd: null,
-  _generatenewSessionId: _generatenewSessionId,
-  reportError: reportError,
+  finishAppStart() {
+    if (this.appStart && this.appStart.isRecording()) {
+      this.appStart.end();
+    } else {
+      this.appStartEnd = Date.now();
+    }
+  },
   init(configugration: ReactNativeConfiguration) {
     const config = {
       ...DEFAULT_CONFIG,
@@ -154,13 +162,10 @@ export const SplunkRum: SplunkRumType = {
 
     return this;
   },
-  finishAppStart() {
-    if (this.appStart && this.appStart.isRecording()) {
-      this.appStart.end();
-    } else {
-      this.appStartEnd = Date.now();
-    }
-  },
+  _generatenewSessionId: _generatenewSessionId,
+  reportError: reportError,
+  setGlobalAttributes: setGlobalAttributes,
+  updateLocation: updateLocation,
 };
 
 function addGlobalAttributesFromConf(config: ReactNativeConfiguration) {
@@ -172,4 +177,11 @@ function addGlobalAttributesFromConf(config: ReactNativeConfiguration) {
   }
 
   setGlobalAttributes(confAttributes);
+}
+
+function updateLocation(latitude: number, longitude: number) {
+  setGlobalAttributes({
+    [LOCATION_LATITUDE]: latitude,
+    [LOCATION_LONGITUDE]: longitude,
+  });
 }
