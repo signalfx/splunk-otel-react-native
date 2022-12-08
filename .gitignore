@@ -69,4 +69,4 @@ lib/
 # Cocoapods
 /ios/Pods
 
-.tgz
+*.tgz
