@@ -36,9 +36,9 @@ function getResource(): ResourceAttributes {
     // ...SDK_INFO,
     [SemanticResourceAttributes.TELEMETRY_SDK_NAME]:
       '@splunk/otel-react-native',
-    [SemanticResourceAttributes.TELEMETRY_SDK_VERSION]: '0.1.0',
+    [SemanticResourceAttributes.TELEMETRY_SDK_VERSION]: '0.2.0',
     // Splunk specific attributes
-    'splunk.rumVersion': '0.1.0',
+    'splunk.rumVersion': '0.2.0',
   };
 
   if (Platform.OS === 'ios') {
