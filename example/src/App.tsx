@@ -22,7 +22,7 @@ import {
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './Home';
 import Details from './Details';
-import { startNavigationTracking } from 'splunk-otel-react-native';
+import { startNavigationTracking } from '@splunk/otel-react-native';
 
 const Stack = createNativeStackNavigator();
 

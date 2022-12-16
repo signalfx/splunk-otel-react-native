@@ -379,7 +379,7 @@ PODS:
     - React-Core
     - React-RCTImage
   - SocketRocket (0.6.0)
-  - splunk-otel-react-native (0.1.0):
+  - splunk-otel-react-native (0.1.0-alpha.0):
     - DeviceKit (~> 4.0)
     - React-Core
   - Yoga (1.14.0)
@@ -596,7 +596,7 @@ SPEC CHECKSUMS:
   ReactCommon: c9246996e73bf75a2c6c3ff15f1e16707cdc2da9
   RNScreens: 34cc502acf1b916c582c60003dc3089fa01dc66d
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
-  splunk-otel-react-native: e8fd2cb2182be98d7539adcefefd841f14c5e261
+  splunk-otel-react-native: e0153f4c238f07bb73f3c978baf003572018515e
   Yoga: eca980a5771bf114c41a754098cd85e6e0d90ed7
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 

@@ -31,9 +31,8 @@
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepare": "bob build",
-    "example": "yarn --cwd example",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build",
-    "bootstrap": "yarn example && yarn install && yarn example pods"
+    "bootstrap": "npm --prefix example install && npm --prefix example run pods"
   },
   "keywords": [
     "react-native",
