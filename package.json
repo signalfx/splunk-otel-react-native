@@ -1,6 +1,6 @@
 {
-  "name": "splunk-otel-react-native",
-  "version": "0.2.0",
+  "name": "@splunk/otel-react-native",
+  "version": "0.1.0-alpha.0",
   "description": "Splunk distribution of Open Telemetry for react native.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -31,7 +31,6 @@
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepare": "bob build",
-    "release": "release-it",
     "example": "yarn --cwd example",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build",
     "bootstrap": "yarn example && yarn install && yarn example pods"
@@ -42,7 +41,7 @@
     "android"
   ],
   "repository": "https://github.com/signalfx/splunk-otel-react-native",
-  "homepage": "https://github.com/signalfx/splunk-otel-react-native",
+  "homepage": "https://github.com/signalfx/splunk-otel-react-native#readme",
   "author": "Splunk Observability Instrumentals Team",
   "license": "Apache-2.0",
   "bugs": {
@@ -53,7 +52,6 @@
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^3.0.2",
-    "@release-it/conventional-changelog": "^5.0.0",
     "@types/jest": "^28.1.2",
     "@types/react": "~17.0.21",
     "@types/react-native": "0.70.0",
@@ -68,7 +66,6 @@
     "react": "18.1.0",
     "react-native": "0.70.5",
     "react-native-builder-bob": "^0.20.0",
-    "release-it": "^15.0.0",
     "typescript": "^4.5.2"
   },
   "resolutions": {
@@ -84,23 +81,6 @@
       "<rootDir>/example/node_modules",
       "<rootDir>/lib/"
     ]
-  },
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release ${version}",
-      "tagName": "v${version}"
-    },
-    "npm": {
-      "publish": true
-    },
-    "github": {
-      "release": true
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "angular"
-      }
-    }
   },
   "prettier": {
     "quoteProps": "consistent",
