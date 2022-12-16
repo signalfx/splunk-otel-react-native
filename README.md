@@ -2,24 +2,9 @@
 
 > :construction: This project status is currently **Experimental**. Using it in production is not advised.
 
-## Install dependencies
+## Install
 
-Calling
-```sh
-yarn
-```
-in parent folder should install everything. In iOS it sometimes doesn't.
-It is not currently in npm.
-
-To get npm package to install somewhere else:
-```
-yarn pack
-```
-Produces splunk-otel-react-native-v0.2.0.tgz which you can just
-```
-yarn add splunk-otel-react-native-v0.2.0.tgz
-```
-in some other project.
+TODO
 ## Running
 
 In example folder run:
@@ -40,7 +25,7 @@ To run native RN project in IDE open example/android in android studio or exampl
 Somwhere in your app call SplunkRum.init()
 
 ```js
-import { SplunkRum } from 'splunk-otel-react-native';
+import { SplunkRum } from '@splunk/otel-react-native';
 
 export const Rum = SplunkRum.init({
   beaconEndpoint: 'https://rum-ingest.us0.signalfx.com/v1/rum',
