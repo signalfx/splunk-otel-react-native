@@ -24,7 +24,7 @@ build_artifacts:
   artifacts:
     paths:
       - dist/
-    script:
+  script:
     - if [ ! -d "dist" ]; then mkdir dist; fi
     - npm pack --pack-destination dist -ws
     - shasum -a 256 dist/* > dist/checksums.txt
