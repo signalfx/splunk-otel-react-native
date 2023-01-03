@@ -26,7 +26,7 @@ build_artifacts:
       - dist/
   script:
     - if [ ! -d "dist" ]; then mkdir dist; fi
-    - npm pack --pack-destination dist -ws
+    - npm pack --pack-destination dist
     - shasum -a 256 dist/* > dist/checksums.txt
 
 oss-scan:
