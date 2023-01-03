@@ -1,22 +1,9 @@
 default:
   image: 'cimg/node:lts'
 
-cache:
-  key:
-    files:
-      - package-lock.json
-  paths:
-    - "./node_modules"
-    
 stages:
-  - setup
   - build
   - release
-
-npm_install:
-  stage: setup
-  script:
-    - npm ci --include=dev
 
 build_artifacts:
   stage: build
@@ -26,6 +13,7 @@ build_artifacts:
     paths:
       - dist/
   script:
+    - npm ci --include=dev
     - if [ ! -d "dist" ]; then mkdir dist; fi
     - npm pack --pack-destination dist
     - shasum -a 256 dist/* > dist/checksums.txt
@@ -38,7 +26,6 @@ release_npm:
   only:
     - /^v[0-9]+\..*/
   script:
-    # release to NPM
     - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
     - for f in dist/*.tgz; do npm publish ./$f; done;
     - rm -f ~/.npmrc
