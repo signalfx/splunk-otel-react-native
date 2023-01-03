@@ -27,8 +27,6 @@ release_npm:
     - /^v[0-9]+\..*/
   script:
     - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-    - npm whoami
     - for f in dist/*.tgz; do npm publish ./$f; done;
-    - npm whoami
     - rm -f ~/.npmrc
     
