@@ -50,5 +50,5 @@ release_npm:
   script:
     # release to NPM
     - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-    - for f in dist/*.tgz; do npm publish --dry-run ./$f; done;
+    - for f in dist/*.tgz; do npm publish ./$f; done;
     - rm -f ~/.npmrc
