@@ -6,6 +6,13 @@ include:
     ref: master
     file: '/prodsec/.oss-scan.yml'
 
+cache:
+  key:
+    files:
+      - package-lock.json
+  paths:
+    - "./node_modules"
+    
 stages:
   - setup
   - build
