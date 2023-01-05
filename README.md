@@ -2,38 +2,72 @@
 
 > :construction: This project status is currently **Experimental**. Using it in production is not advised.
 
-## Install
+## Getting Started
 
-TODO
-## Running
-
-In example folder run:
+Installing with npm:
 ```
-npx react-native start
+npm install @splunk/otel-react-native
 ```
-and in another terminal tab run:
+Installing with yarn
 ```
-npx react-native run-android
-```
-or
-```
-npx react-native run-ios
+yarn add @splunk/otel-react-native
 ```
 
-To run native RN project in IDE open example/android in android studio or example/ios/BasicRnModuleExample.xcworkspace in XCode
-# Usage
-Somwhere in your app call SplunkRum.init()
+Setup
+1. Initialize the library as early in your App lifecycle as possible by calling:
 
 ```js
 import { SplunkRum } from '@splunk/otel-react-native';
 
-export const Rum = SplunkRum.init({
-  beaconEndpoint: 'https://rum-ingest.us0.signalfx.com/v1/rum',
+const Rum = SplunkRum.init({
+  realm: 'us0'.
   applicationName: 'reactNativeTest',
   rumAccessToken: 'token',
 });
 
 ```
+
+2. Modify the initialization parameters to specify:
+
+- `realm` - If sending data to Splunk ingest use realm you are using (i.e. us0, us1)
+  - `beaconUrl` - It is possible to send data to arbitary url by specifing this parameter. Setting this will override realm.
+- `rumAuth` - token authorizing the Agent to send the telemetry to the backend. You can find (or generate) the token [here](https://app.signalfx.com/o11y/#/organization/current?selectedKeyValue=sf_section:accesstokens). Notice that RUM and APM auth tokens are different.
+- `app` - naming the application that will be monitored so it can be distinguished from other applications.
+
+## View navigation
+[react-navigation](https://github.com/react-navigation/react-navigation) v6 and v5 are currently supported.
+
+### Usage
+```
+import { startNavigationTracking } from '@splunk/otel-react-native';
+
+export default function App() {
+  const navigationRef = useNavigationContainerRef();
+  return (
+    <NavigationContainer
+      ref={navigationRef}
+      onReady={() => {
+        startNavigationTracking(navigationRef);
+      }}
+    >
+      <Stack.Navigator>
+        ...
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+```
+
+## Gathered Data
+
+Currently only Zipkin exporter is used for sending data. Adding your own exporters/processors is not yet supported. 
+
+Supported features
+- Autoinstrumented HTTP requests
+- Autoinstrumented JS Error tracking
+- Custom instrumentation via opentelemetry
+
+For more information about how this library uses opentelemetry and about future plans check [here](CONTRIBUTING.md#Opentelemetry).
 
 ## License
 Copyright 2022 Splunk Inc.
