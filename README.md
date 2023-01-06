@@ -2,6 +2,9 @@
 
 > :construction: This project status is currently **Experimental**. Using it in production is not advised.
 
+## Overview
+This library lets you autoinstrument react native applications. Currently expo is not supported.
+
 ## Getting Started
 
 Installing with npm:
