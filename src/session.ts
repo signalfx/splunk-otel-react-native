@@ -16,7 +16,7 @@ limitations under the License.
 
 import { RandomIdGenerator } from '@opentelemetry/sdk-trace-base';
 import { AppState } from 'react-native';
-import { trace } from '@opentelemetry/api';
+import { trace, diag } from '@opentelemetry/api';
 
 const idGenerator = new RandomIdGenerator();
 
@@ -44,9 +44,9 @@ const State = {
 let currentState: String = AppState.currentState;
 
 AppState.addEventListener('change', (nextAppState) => {
-  console.log('Session:AppStateChange: ', currentState, nextAppState);
+  diag.debug('Session:AppStateChange: ', currentState, nextAppState);
   if (nextAppState === State.FOREGROUND && currentState === State.BACKGROUND) {
-    console.log('Session:AppStateChange:TRANSITIONING_TO_FOREGROUND');
+    diag.debug('Session:AppStateChange:TRANSITIONING_TO_FOREGROUND');
     currentState = State.TRANSITIONING_TO_FOREGROUND;
     return;
   }
@@ -63,7 +63,7 @@ export function getSessionId() {
 
 function bump() {
   lastActivityTime = Date.now();
-  console.log('Session:bump:', new Date(lastActivityTime));
+  diag.debug('Session:bump:', new Date(lastActivityTime));
   // when the app spent >15 minutes without any activity (spans) in the background,
   // after moving to the foreground the first span should trigger the sessionId timeout.
   if (currentState === State.TRANSITIONING_TO_FOREGROUND) {
@@ -74,21 +74,17 @@ function bump() {
 function hasTimedOut() {
   // don't apply sessionId timeout to apps in the foreground
   if (currentState === State.FOREGROUND) {
-    console.log('Session:hasTimedOut: State.FOREGROUND');
+    diag.debug('Session:hasTimedOut: State.FOREGROUND');
     return false;
   }
   const elapsedTime = Date.now() - lastActivityTime;
-  console.log(
-    'Session:hasTimedOut',
-    elapsedTime,
-    SESSION_TIMEOUT - elapsedTime
-  );
+  diag.debug('Session:hasTimedOut', elapsedTime, SESSION_TIMEOUT - elapsedTime);
   return elapsedTime >= SESSION_TIMEOUT;
 }
 
 function hasExpired() {
   const timeElapsed = Date.now() - session.startTime;
-  console.log('Session:hasExpired', timeElapsed, MAX_SESSION_AGE - timeElapsed);
+  diag.debug('Session:hasExpired', timeElapsed, MAX_SESSION_AGE - timeElapsed);
   return Date.now() - session.startTime >= MAX_SESSION_AGE;
 }
 
@@ -96,7 +92,7 @@ function newSessionId() {
   const previousId = session.id;
   session.startTime = Date.now();
   session.id = idGenerator.generateTraceId();
-  console.log('Session:newSessionId:', previousId, session.id);
+  diag.debug('Session:newSessionId:', previousId, session.id);
   const span = tracer.startSpan('sessionId.change', {
     attributes: {
       'splunk.rum.previous_session_id': previousId,
@@ -107,5 +103,5 @@ function newSessionId() {
 
 export function _generatenewSessionId() {
   newSessionId();
-  console.log('CLIENT:session:generateNewId: ', session.id);
+  diag.debug('CLIENT:session:generateNewId: ', session.id);
 }

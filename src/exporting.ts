@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+import { diag } from '@opentelemetry/api';
 import type { SpanExporter, ReadableSpan } from '@opentelemetry/sdk-trace-base';
 import {
   ExportResult,
@@ -41,8 +42,8 @@ export default class ReacNativeSpanExporter implements SpanExporter {
 
   toZipkin(span: ReadableSpan) {
     const zipkinSpan = toZipkinSpan(span, 'servicenamegoeshere');
-    console.log(
-      'CLIENT:zipkinTonativeSpan',
+    diag.debug(
+      'Exporting:zipkinTonativeSpan',
       zipkinSpan.name,
       zipkinSpan.duration / 1e6
     );
@@ -61,7 +62,7 @@ export default class ReacNativeSpanExporter implements SpanExporter {
       ...spanContext,
     };
     nSpan.attributes._splunk_operation = span.name;
-    console.log('CLIENT:toNativeSpan: ', nSpan.name, span.duration);
+    diag.debug('Exporting:toNativeSpan: ', nSpan.name, span.duration);
     return nSpan;
   }
 

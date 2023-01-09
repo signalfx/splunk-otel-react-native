@@ -14,10 +14,18 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import { trace, context, Span, Attributes } from '@opentelemetry/api';
+import {
+  trace,
+  context,
+  Span,
+  Attributes,
+  diag,
+  DiagConsoleLogger,
+  DiagLogLevel,
+} from '@opentelemetry/api';
 import { WebTracerProvider } from '@opentelemetry/sdk-trace-web';
 import { SimpleSpanProcessor } from '@opentelemetry/sdk-trace-base';
-
+import { _globalThis } from '@opentelemetry/core';
 import {
   initializeNativeSdk,
   ReactNativeConfiguration,
@@ -56,24 +64,34 @@ export const SplunkRum: SplunkRumType = {
     }
   },
   init(configugration: ReactNativeConfiguration) {
+    //by default wants to use otlp
+    if (!('OTEL_TRACES_EXPORTER' in _globalThis)) {
+      (_globalThis as any).OTEL_TRACES_EXPORTER = 'none';
+    }
+
     const config = {
       ...DEFAULT_CONFIG,
       ...configugration,
     };
-    console.log('CONFIG ', config);
+
+    diag.setLogger(
+      new DiagConsoleLogger(),
+      config?.debug ? DiagLogLevel.DEBUG : DiagLogLevel.ERROR
+    );
+
     const clientInit = Date.now();
     if (!config.applicationName) {
-      console.error('applicationName name is required.');
+      diag.error('applicationName name is required.');
       return;
     }
 
     if (!config.realm && !config.beaconEndpoint) {
-      console.error('Either realm or beaconEndpoint is required.');
+      diag.error('Either realm or beaconEndpoint is required.');
       return;
     }
 
     if (config.realm && !config.rumAccessToken) {
-      console.error('When sending data to Splunk rumAccessToken is required.');
+      diag.error('When sending data to Splunk rumAccessToken is required.');
       return;
     }
 
@@ -103,7 +121,7 @@ export const SplunkRum: SplunkRumType = {
     }
     nativeSdkConf.rumAccessToken = config.rumAccessToken;
 
-    console.log(
+    diag.debug(
       'Initializing with: ',
       config.applicationName,
       nativeSdkConf.beaconEndpoint,
@@ -111,7 +129,11 @@ export const SplunkRum: SplunkRumType = {
     );
 
     initializeNativeSdk(nativeSdkConf).then((appStartTime) => {
-      console.log('APPStart: ', appStartTime, new Date(appStartTime));
+      diag.debug(
+        'AppStart: native module start',
+        appStartTime,
+        new Date(appStartTime)
+      );
       //TODO refactor appStart
       if (config.appStart) {
         const tracer = provider.getTracer('AppStart');
@@ -138,7 +160,7 @@ export const SplunkRum: SplunkRumType = {
 
         const defaultAppStartEnd = Date.now();
         if (this.appStartEnd !== null) {
-          console.log('CLIENT:SplunkRum: end appstart with real end');
+          diag.debug('AppStart: real end');
           this.appStart.end(this.appStartEnd);
         } else {
           setTimeout(() => {
@@ -146,11 +168,11 @@ export const SplunkRum: SplunkRumType = {
             if (this.appStart && this.appStart.isRecording()) {
               if (this.appStartEnd) {
                 this.appStart.end(this.appStartEnd);
-                console.log('CLIENT:SplunkRum:REALappStartEnd: ');
+                diag.debug('AppStart: real end in timeout');
               } else {
                 this.appStart.end(defaultAppStartEnd);
-                console.log(
-                  'CLIENT:SplunkRum:DEFAULTappStartEnd: ',
+                diag.debug(
+                  'AppStart: timeout end',
                   new Date(defaultAppStartEnd)
                 );
               }
