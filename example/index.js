@@ -23,6 +23,7 @@ export const Rum = SplunkRum.init({
   realm: 'us0',
   applicationName: 'reactNativeTest',
   rumAccessToken: 'test',
+  debug: true,
 });
 
 AppRegistry.registerComponent(appName, () => App);

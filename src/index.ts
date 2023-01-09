@@ -40,6 +40,7 @@ export interface ReactNativeConfiguration {
   applicationName: string;
   environment?: string;
   appStart?: boolean;
+  debug?: boolean;
 }
 
 export interface NativeSdKConfiguration {
@@ -57,18 +58,10 @@ export function exportSpanToNative(span: object): Promise<null> {
   return SplunkOtelReactNative.export(span);
 }
 
-// TODO tmp? workaround for otel which uses timeOrigin
+// TODO workaround for otel which uses timeOrigin
 if (!global.performance.timeOrigin) {
   (global as any).performance.timeOrigin = Date.now() - performance.now();
-  console.log(
-    'Setting new timeorigin',
-    global.performance.timeOrigin,
-    new Date(global.performance.timeOrigin)
-  );
 }
-
-console.log('DATE NOW: ', Date.now(), new Date());
-console.log('PERF NOW: ', performance.now());
 
 export * from './splunkRum';
 export * from './trackNavigation';
