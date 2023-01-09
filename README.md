@@ -33,7 +33,7 @@ const Rum = SplunkRum.init({
 2. Modify the initialization parameters to specify:
 
 - `realm` - If sending data to Splunk ingest use realm you are using (i.e. us0, us1)
-  - `beaconUrl` - It is possible to send data to arbitary url by specifing this parameter. Setting this will override realm.
+  - `beaconUrl` - It is possible to send data to arbitrary url by specifing this parameter. Setting this will override realm.
 - `rumAuth` - token authorizing the Agent to send the telemetry to the backend. You can find (or generate) the token [here](https://app.signalfx.com/o11y/#/organization/current?selectedKeyValue=sf_section:accesstokens). Notice that RUM and APM auth tokens are different.
 - `app` - naming the application that will be monitored so it can be distinguished from other applications.
 
