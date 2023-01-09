@@ -379,7 +379,7 @@ PODS:
     - React-Core
     - React-RCTImage
   - SocketRocket (0.6.0)
-  - splunk-otel-react-native (0.1.0-alpha.0):
+  - splunk-otel-react-native (0.1.0-alpha.1):
     - DeviceKit (~> 4.0)
     - React-Core
   - Yoga (1.14.0)
