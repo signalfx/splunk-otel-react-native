@@ -2,9 +2,16 @@ default:
   image: 'cimg/node:lts'
 
 stages:
+  - setup
   - build
   - release
 
+# add cache
+npm_install:
+  stage: setup
+  script:
+    - npm ci --include=dev
+    
 build_artifacts:
   stage: build
   only:
