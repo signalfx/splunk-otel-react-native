@@ -41,7 +41,7 @@ const Rum = SplunkRum.init({
 [react-navigation](https://github.com/react-navigation/react-navigation) v6 and v5 are currently supported.
 
 ### Usage
-```
+```js
 import { startNavigationTracking } from '@splunk/otel-react-native';
 
 export default function App() {
