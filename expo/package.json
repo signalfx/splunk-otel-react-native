@@ -1,0 +1,19 @@
+{
+  "name": "splunk-otel-expo",
+  "version": "0.1.0",
+  "description": "Expo config plugin for Splunk Otel React Native",
+  "main": "app.plugin.js",
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "expo-module-scripts": "^3.0.4"
+  }
+}
