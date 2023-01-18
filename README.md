@@ -23,7 +23,7 @@ Setup
 import { SplunkRum } from '@splunk/otel-react-native';
 
 const Rum = SplunkRum.init({
-  realm: 'us0'.
+  realm: 'us0',
   applicationName: 'reactNativeTest',
   rumAccessToken: 'token',
 });
