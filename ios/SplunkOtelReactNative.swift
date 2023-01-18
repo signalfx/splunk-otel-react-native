@@ -56,12 +56,6 @@ class SplunkOtelReactNative: NSObject {
 
     @objc(export:withResolver:withRejecter:)
     func export(spans: Array<Dictionary<String, Any>>, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
-        if Double.random(in: 0.0...1.0) > 0.9 {
-            print("crashing")
-            let x: Int? = nil
-            let f = x!
-            print(f)
-        }
         resolve(spanExporter.export(spans: spans))
     }
     
