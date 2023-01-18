@@ -77,6 +77,7 @@ PODS:
   - hermes-engine (0.70.5)
   - libevent (2.1.12)
   - OpenSSL-Universal (1.1.1100)
+  - PLCrashReporter (1.11.0)
   - RCT-Folly (2021.07.22.00):
     - boost
     - DoubleConversion
@@ -381,6 +382,7 @@ PODS:
   - SocketRocket (0.6.0)
   - splunk-otel-react-native (0.1.0-alpha.1):
     - DeviceKit (~> 4.0)
+    - PLCrashReporter (~> 1.11)
     - React-Core
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -466,6 +468,7 @@ SPEC REPOS:
     - fmt
     - libevent
     - OpenSSL-Universal
+    - PLCrashReporter
     - SocketRocket
     - YogaKit
 
@@ -566,6 +569,7 @@ SPEC CHECKSUMS:
   hermes-engine: 7fe5fc6ef707b7fdcb161b63898ec500e285653d
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
+  PLCrashReporter: 7a9dff14a23ba5d2e28c6160f0bb6fada5e71a8d
   RCT-Folly: 0080d0a6ebf2577475bda044aa59e2ca1f909cda
   RCTRequired: 21229f84411088e5d8538f21212de49e46cc83e2
   RCTTypeSafety: 62eed57a32924b09edaaf170a548d1fc96223086
@@ -596,7 +600,7 @@ SPEC CHECKSUMS:
   ReactCommon: c9246996e73bf75a2c6c3ff15f1e16707cdc2da9
   RNScreens: 34cc502acf1b916c582c60003dc3089fa01dc66d
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
-  splunk-otel-react-native: e0153f4c238f07bb73f3c978baf003572018515e
+  splunk-otel-react-native: 7a4aaad4cbd3dafb23813e23093a4e55ab25a17d
   Yoga: eca980a5771bf114c41a754098cd85e6e0d90ed7
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 

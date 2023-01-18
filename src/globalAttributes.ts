@@ -19,6 +19,7 @@ import type { Attributes } from '@opentelemetry/api';
 import type { ResourceAttributes } from '@opentelemetry/resources';
 import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
 import { getSessionId } from './session';
+import { setNativeGlobalAttributes } from '.';
 
 let globalAttributes: Attributes = {};
 
@@ -65,6 +66,7 @@ globalAttributes = {
 //screen.name
 export function setGlobalAttributes(attrs: object) {
   globalAttributes = Object.assign(globalAttributes, attrs);
+  setNativeGlobalAttributes(globalAttributes);
 }
 
 export function getGlobalAttributes(): Attributes {

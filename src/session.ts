@@ -17,6 +17,7 @@ limitations under the License.
 import { RandomIdGenerator } from '@opentelemetry/sdk-trace-base';
 import { AppState } from 'react-native';
 import { trace, diag } from '@opentelemetry/api';
+import { setNativeSessionId } from '.';
 
 const idGenerator = new RandomIdGenerator();
 
@@ -92,6 +93,7 @@ function newSessionId() {
   const previousId = session.id;
   session.startTime = Date.now();
   session.id = idGenerator.generateTraceId();
+  setNativeSessionId(session.id);
   diag.debug('Session:newSessionId:', previousId, session.id);
   const span = tracer.startSpan('sessionId.change', {
     attributes: {
