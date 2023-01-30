@@ -17,20 +17,25 @@ limitations under the License.
 
 package com.splunkotelreactnative;
 
+import android.app.Application;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.module.annotations.ReactModule;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicReference;
 
 import io.opentelemetry.api.common.Attributes;
 import io.opentelemetry.api.common.AttributesBuilder;
@@ -46,12 +51,16 @@ import io.opentelemetry.sdk.trace.export.SpanExporter;
 public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
   public static final String NAME = "SplunkOtelReactNative";
 
-  private final long moduleStartTime;
   private volatile SpanExporter exporter;
+  private final AtomicReference<String> initialAppActivity = new AtomicReference<>();
+  private AppStart appStart;
 
   public SplunkOtelReactNativeModule(ReactApplicationContext reactContext) {
     super(reactContext);
-    this.moduleStartTime = System.currentTimeMillis();
+    appStart = new AppStart();
+    Application application = (Application) reactContext.getApplicationContext();
+    application.registerActivityLifecycleCallbacks(new ActivityCallbacks(initialAppActivity, appStart));
+    appStart.setStartTime(System.currentTimeMillis());
   }
 
   @Override
@@ -78,7 +87,10 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
       .setEncoder(new CustomZipkinEncoder())
       .build();
 
-    promise.resolve((double) moduleStartTime);
+    WritableMap map = Arguments.createMap();
+    map.putString("type", appStart.type);
+    map.putDouble("startTime", (double) appStart.startTime);
+    promise.resolve(map);
   }
 
   @ReactMethod

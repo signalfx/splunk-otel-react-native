@@ -128,19 +128,15 @@ export const SplunkRum: SplunkRumType = {
       nativeSdkConf.rumAccessToken
     );
 
-    initializeNativeSdk(nativeSdkConf).then((appStartTime) => {
-      diag.debug(
-        'AppStart: native module start',
-        appStartTime,
-        new Date(appStartTime)
-      );
+    initializeNativeSdk(nativeSdkConf).then((appStart) => {
+      diag.debug('AppStart: native module start', appStart);
       //TODO refactor appStart
       if (config.appStart) {
         const tracer = provider.getTracer('AppStart');
         const nativeInitEnd = Date.now();
 
         this.appStart = tracer.startSpan('AppStart', {
-          startTime: appStartTime,
+          startTime: Date.now(),
           attributes: {
             'component': 'appstart',
             'start.type': 'cold',

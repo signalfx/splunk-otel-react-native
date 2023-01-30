@@ -50,7 +50,7 @@ export interface NativeSdKConfiguration {
 //TODO should probably not export this
 export function initializeNativeSdk(
   config: NativeSdKConfiguration
-): Promise<number> {
+): Promise<Object> {
   return SplunkOtelReactNative.initialize(config);
 }
 
