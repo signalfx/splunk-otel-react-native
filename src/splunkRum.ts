@@ -40,7 +40,7 @@ import { LOCATION_LATITUDE, LOCATION_LONGITUDE } from './splunkAttributeNames';
 import { _generatenewSessionId } from './session';
 
 interface SplunkRumType {
-  appStart?: Span;
+  appStart?: Span | undefined;
   appStartEnd: number | null;
   finishAppStart: () => void;
   init: (options: ReactNativeConfiguration) => SplunkRumType | undefined;
