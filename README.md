@@ -22,7 +22,7 @@ npm install @splunk/otel-react-native
 yarn add @splunk/otel-react-native
 ```
 
-2. Initialize the library as early in your app lifecycle as possibleg:
+2. Initialize the library as early in your app lifecycle as possible:
 
 ```js
 import { SplunkRum } from '@splunk/otel-react-native';
