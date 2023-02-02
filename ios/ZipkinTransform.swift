@@ -48,7 +48,41 @@ class ZipkinEndpoint: Encodable {
     }
 }
 
-struct ZipkinSpan: Encodable {
+enum TagValue : Encodable {
+    case string (String)
+    case bool (Bool)
+    case int(Int)
+    case double(Double)
+    case stringArray([String])
+    case boolArray([Bool])
+    case intArray([Int])
+    case doubleArray([Double])
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+
+        switch self {
+            case .string(let value):
+            try container.encode(value)
+        case .bool(let value):
+            try container.encode(value)
+        case .int(let value):
+            try container.encode(value)
+        case .double(let value):
+            try container.encode(value)
+        case .stringArray(let value):
+            try container.encode(value)
+        case .boolArray(let value):
+            try container.encode(value)
+        case .intArray(let value):
+            try container.encode(value)
+        case .doubleArray(let value):
+            try container.encode(value)
+        }
+    }
+}
+
+class ZipkinSpan: Encodable {
     var traceId: String
     var parentId: String?
     var id: String
@@ -58,10 +92,9 @@ struct ZipkinSpan: Encodable {
     var duration: UInt64?
     var remoteEndpoint: ZipkinEndpoint?
     var annotations: [ZipkinAnnotation]
-    var tags: [String: String]
+    var tags: [String: TagValue]
 
-    init(traceId: String, parentId: String?, id: String, kind: String?, name: String, timestamp: UInt64, duration: UInt64?, remoteEndpoint: ZipkinEndpoint?, annotations: [ZipkinAnnotation], tags: [String: String]) {
-
+    init(traceId: String, parentId: String?, id: String, kind: String?, name: String, timestamp: UInt64, duration: UInt64?, remoteEndpoint: ZipkinEndpoint?, annotations: [ZipkinAnnotation], tags: [String: TagValue]) {
         self.traceId = traceId
         self.parentId = parentId
         self.id = id
@@ -146,8 +179,8 @@ struct ZipkinTransform {
         let traceId = otelSpan["traceId"] as? String ?? "00000000000000000000000000000000"
         let spanId = otelSpan["id"] as? String ?? "0000000000000000"
         let name = otelSpan["name"] as? String ?? "unknown"
-        var tags = otelSpan["tags"] as? Dictionary<String, String> ?? [:]
-        tags["device.model.name"] = Device.current.description
+        var tags = otelSpan["tags"] as? Dictionary<String, TagValue> ?? [:]
+        tags["device.model.name"] = .string(Device.current.description)
 
         return ZipkinSpan(traceId: traceId,
                           parentId: parentId,
@@ -159,5 +192,19 @@ struct ZipkinTransform {
                           remoteEndpoint: nil,
                           annotations: [],
                           tags: tags)
+    }
+}
+
+extension ZipkinSpan {
+    func setAttribute(key: String, value: String) {
+        self.tags[key] = .string(value)
+    }
+    
+    func setAttribute(key: String, value: Bool) {
+        self.tags[key] = .bool(value)
+    }
+    
+    func addEvent(name: String, timestamp: Date) {
+        self.annotations.append(ZipkinAnnotation(timestamp: UInt64(timestamp.timeIntervalSince1970 * 1e6), value: name))
     }
 }

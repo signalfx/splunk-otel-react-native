@@ -30,6 +30,7 @@ import {
   initializeNativeSdk,
   ReactNativeConfiguration,
   NativeSdKConfiguration,
+  setNativeSessionId,
 } from './index';
 import ReacNativeSpanExporter from './exporting';
 import GlobalAttributeAppender from './globalAttributeAppender';
@@ -37,7 +38,7 @@ import { instrumentXHR } from './instrumentations/xhr';
 import { instrumentErrors, reportError } from './instrumentations/errors';
 import { setGlobalAttributes } from './globalAttributes';
 import { LOCATION_LATITUDE, LOCATION_LONGITUDE } from './splunkAttributeNames';
-import { _generatenewSessionId } from './session';
+import { getSessionId, _generatenewSessionId } from './session';
 
 interface SplunkRumType {
   appStart?: Span | undefined;
@@ -129,6 +130,7 @@ export const SplunkRum: SplunkRumType = {
     );
 
     initializeNativeSdk(nativeSdkConf).then((appStartTime) => {
+      setNativeSessionId(getSessionId())
       diag.debug(
         'AppStart: native module start',
         appStartTime,

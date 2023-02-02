@@ -14,14 +14,17 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-
-fileprivate var spanExporter: SpanToDiskExporter?
+fileprivate var spanExporter: SpanExporter = NoopExporter()
 
 @objc(SplunkOtelReactNative)
 class SplunkOtelReactNative: NSObject {
   private var appStartTime = Date()
   @objc(initialize:withResolver:withRejecter:)
   func initialize(config: Dictionary<String, Any>, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
+      let db = SpanDb()
+      spanExporter = SpanToDiskExporter(spanDb: db)
+      initializeCrashReporting(exporter: spanExporter)
+
       print("Default appStartTime \(appStartTime)")
       do {
           appStartTime = try processStartTime()
@@ -46,9 +49,6 @@ class SplunkOtelReactNative: NSObject {
       var beaconWithAuth = beaconUrl!
       beaconWithAuth += "?auth=" + auth!
 
-      let db = SpanDb()
-      spanExporter = SpanToDiskExporter(spanDb: db)
-
       SpanFromDiskExport.start(spanDb: db, endpoint: beaconWithAuth)
 
       resolve(appStartTime.timeIntervalSince1970 * 1000)
@@ -56,13 +56,35 @@ class SplunkOtelReactNative: NSObject {
 
     @objc(export:withResolver:withRejecter:)
     func export(spans: Array<Dictionary<String, Any>>, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
-        if spanExporter == nil {
-            resolve(false)
-            return
+        resolve(spanExporter.export(spans: spans))
+    }
+    
+    @objc(setSessionId:withResolver:withRejecter:)
+    func setSessionId(id: String, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
+        Globals.setSessionId(id)
+        updateCrashReportSessionId(id)
+        resolve(true)
+    }
+    
+    @objc(setGlobalAttributes:withResolver:withRejecter:)
+    func setGlobalAttributes(attributes: Dictionary<String, Any>, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
+        let newAttribs: [String:TagValue] = attributes.compactMapValues { v in
+            switch v {
+            case is String:
+                return TagValue.string(v as! String)
+            case is Bool:
+                return TagValue.bool(v as! Bool)
+            case is Double:
+                return TagValue.double(v as! Double)
+            case is Int:
+                return TagValue.int(v as! Int)
+            default:
+                return nil
+            }
         }
-
-        let exporter = spanExporter!
-        resolve(exporter.export(spans: spans))
+        
+        Globals.setGlobalAttributes(newAttribs)
+        resolve(true)
     }
     
     private func processStartTime() throws -> Date {

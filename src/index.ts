@@ -15,6 +15,7 @@ limitations under the License.
 */
 
 import { NativeModules, Platform } from 'react-native';
+import type { Attributes } from '@opentelemetry/api';
 
 const LINKING_ERROR =
   `The package 'splunk-otel-react-native' doesn't seem to be linked. Make sure: \n\n` +
@@ -56,6 +57,24 @@ export function initializeNativeSdk(
 
 export function exportSpanToNative(span: object): Promise<null> {
   return SplunkOtelReactNative.export(span);
+}
+
+export function setNativeSessionId(id: string): Promise<boolean> {
+  if (Platform.OS === 'ios') {
+    return SplunkOtelReactNative.setSessionId(id);
+  }
+
+  return Promise.resolve(false);
+}
+
+export function setNativeGlobalAttributes(attributes: Attributes): Promise<boolean> {
+  if (Platform.OS === 'ios') {
+    // For some reason React Native mucks with the input argument, destroying the object values.
+    // E.g. { 'os.name': 'iOS' } gets turned into { 'os.name': [Getter/Setter] }
+    return SplunkOtelReactNative.setGlobalAttributes({ ...attributes });
+  }
+
+  return Promise.resolve(false);
 }
 
 // TODO workaround for otel which uses timeOrigin
