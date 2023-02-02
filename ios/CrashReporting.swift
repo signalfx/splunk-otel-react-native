@@ -18,8 +18,6 @@ limitations under the License.
 import Foundation
 import CrashReporter
 
-let CrashReportingVersionString = "0.5.0"
-
 var TheCrashReporter: PLCrashReporter?
 private var customDataDictionary = RWLocked<[String: String]>(initialValue: [:])
 private var spanExporter: SpanExporter = NoopExporter()
