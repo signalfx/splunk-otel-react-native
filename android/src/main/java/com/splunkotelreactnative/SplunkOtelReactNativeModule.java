@@ -17,9 +17,11 @@ limitations under the License.
 
 package com.splunkotelreactnative;
 
+import android.content.Context;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -27,6 +29,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.module.annotations.ReactModule;
+import com.splunkotelreactnative.crash.CrashReporter;
 
 import java.util.Collections;
 import java.util.Iterator;
@@ -78,6 +81,9 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
       .setEncoder(new CustomZipkinEncoder())
       .build();
 
+    CrashReporter.start(exporter,
+      attributesFromMap(mapReader.getCrashSpanAttributes()), getReactApplicationContext());
+
     promise.resolve((double) moduleStartTime);
   }
 
@@ -106,9 +112,10 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
       return;
     }
 
-    Attributes attributes = attributesFromMap(mapReader);
+    Attributes attributes = attributesFromMap(mapReader.getAttributes());
 
-    ReactSpanData spanData = new ReactSpanData(spanProperties, attributes, context, parentContext);
+    ReactSpanData spanData = new ReactSpanData(spanProperties, attributes, context, parentContext,
+      Collections.emptyList());
     currentExporter.export(Collections.singleton(spanData));
 
     promise.resolve(null);
@@ -161,9 +168,7 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
   }
 
   @NonNull
-  private Attributes attributesFromMap(SpanMapReader mapReader) {
-    ReadableMap attributeMap = mapReader.getAttributes();
-
+  private Attributes attributesFromMap(@Nullable ReadableMap attributeMap) {
     if (attributeMap == null) {
       return Attributes.empty();
     }

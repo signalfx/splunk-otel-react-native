@@ -47,6 +47,7 @@ export interface ReactNativeConfiguration {
 export interface NativeSdKConfiguration {
   beaconEndpoint?: string;
   rumAccessToken?: string;
+  crashSpanAttributes?: object;
 }
 //TODO should probably not export this
 export function initializeNativeSdk(
@@ -62,6 +63,8 @@ export function exportSpanToNative(span: object): Promise<null> {
 export function setNativeSessionId(id: string): Promise<boolean> {
   if (Platform.OS === 'ios') {
     return SplunkOtelReactNative.setSessionId(id);
+  } else if (Platform.OS === 'android') {
+    
   }
 
   return Promise.resolve(false);

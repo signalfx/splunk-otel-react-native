@@ -39,6 +39,7 @@ import { instrumentErrors, reportError } from './instrumentations/errors';
 import { setGlobalAttributes } from './globalAttributes';
 import { LOCATION_LATITUDE, LOCATION_LONGITUDE } from './splunkAttributeNames';
 import { getSessionId, _generatenewSessionId } from './session';
+import { getGlobalAttributes } from './globalAttributes';
 
 interface SplunkRumType {
   appStart?: Span | undefined;
@@ -121,6 +122,7 @@ export const SplunkRum: SplunkRumType = {
       nativeSdkConf.beaconEndpoint = config.beaconEndpoint;
     }
     nativeSdkConf.rumAccessToken = config.rumAccessToken;
+    nativeSdkConf.crashSpanAttributes = { ...getGlobalAttributes() };
 
     diag.debug(
       'Initializing with: ',
