@@ -37,7 +37,7 @@ import ReacNativeSpanExporter from './exporting';
 import GlobalAttributeAppender from './globalAttributeAppender';
 import { instrumentXHR } from './instrumentations/xhr';
 import { instrumentErrors, reportError } from './instrumentations/errors';
-import { setGlobalAttributes } from './globalAttributes';
+import { getResource, setGlobalAttributes } from './globalAttributes';
 import { LOCATION_LATITUDE, LOCATION_LONGITUDE } from './splunkAttributeNames';
 import { getSessionId, _generatenewSessionId } from './session';
 
@@ -123,6 +123,7 @@ export const SplunkRum: SplunkRumType = {
       nativeSdkConf.beaconEndpoint = config.beaconEndpoint;
     }
     nativeSdkConf.rumAccessToken = config.rumAccessToken;
+    nativeSdkConf.globalAttributes = { ...getResource() };
 
     diag.debug(
       'Initializing with: ',
