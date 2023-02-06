@@ -20,6 +20,7 @@ package com.splunkotelreactnative;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -27,6 +28,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.module.annotations.ReactModule;
+import com.splunkotelreactnative.crash.CrashReporter;
 
 import java.util.Collections;
 import java.util.Iterator;
@@ -48,6 +50,7 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
 
   private final long moduleStartTime;
   private volatile SpanExporter exporter;
+  private volatile CrashReporter crashReporter;
 
   public SplunkOtelReactNativeModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -78,6 +81,11 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
       .setEncoder(new CustomZipkinEncoder())
       .build();
 
+    crashReporter = new CrashReporter(exporter,
+      attributesFromMap(mapReader.getGlobalAttributes()), getReactApplicationContext());
+
+    crashReporter.install();
+
     promise.resolve((double) moduleStartTime);
   }
 
@@ -106,12 +114,31 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
       return;
     }
 
-    Attributes attributes = attributesFromMap(mapReader);
+    Attributes attributes = attributesFromMap(mapReader.getAttributes());
 
-    ReactSpanData spanData = new ReactSpanData(spanProperties, attributes, context, parentContext);
+    ReactSpanData spanData = new ReactSpanData(spanProperties, attributes, context, parentContext,
+      Collections.emptyList());
     currentExporter.export(Collections.singleton(spanData));
 
     promise.resolve(null);
+  }
+
+  @ReactMethod
+  public void setSessionId(String sessionId) {
+    CrashReporter currentCrashReporter = crashReporter;
+
+    if (currentCrashReporter != null) {
+      currentCrashReporter.updateSessionId(sessionId);
+    }
+  }
+
+  @ReactMethod
+  public void setGlobalAttributes(ReadableMap attributeMap) {
+    CrashReporter currentCrashReporter = crashReporter;
+
+    if (currentCrashReporter != null) {
+      currentCrashReporter.updateGlobalAttributes(attributesFromMap(attributeMap));
+    }
   }
 
   @NonNull
@@ -161,9 +188,7 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
   }
 
   @NonNull
-  private Attributes attributesFromMap(SpanMapReader mapReader) {
-    ReadableMap attributeMap = mapReader.getAttributes();
-
+  private Attributes attributesFromMap(@Nullable ReadableMap attributeMap) {
     if (attributeMap == null) {
       return Attributes.empty();
     }
