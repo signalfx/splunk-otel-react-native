@@ -17,7 +17,6 @@ limitations under the License.
 
 package com.splunkotelreactnative;
 
-import android.content.Context;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -51,6 +50,7 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
 
   private final long moduleStartTime;
   private volatile SpanExporter exporter;
+  private volatile CrashReporter crashReporter;
 
   public SplunkOtelReactNativeModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -81,8 +81,10 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
       .setEncoder(new CustomZipkinEncoder())
       .build();
 
-    CrashReporter.start(exporter,
-      attributesFromMap(mapReader.getCrashSpanAttributes()), getReactApplicationContext());
+    crashReporter = new CrashReporter(exporter,
+      attributesFromMap(mapReader.getGlobalAttributes()), getReactApplicationContext());
+
+    crashReporter.install();
 
     promise.resolve((double) moduleStartTime);
   }
@@ -119,6 +121,24 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
     currentExporter.export(Collections.singleton(spanData));
 
     promise.resolve(null);
+  }
+
+  @ReactMethod
+  public void setSessionId(String sessionId) {
+    CrashReporter currentCrashReporter = crashReporter;
+
+    if (currentCrashReporter != null) {
+      currentCrashReporter.updateSessionId(sessionId);
+    }
+  }
+
+  @ReactMethod
+  public void setGlobalAttributes(ReadableMap attributeMap) {
+    CrashReporter currentCrashReporter = crashReporter;
+
+    if (currentCrashReporter != null) {
+      currentCrashReporter.updateGlobalAttributes(attributesFromMap(attributeMap));
+    }
   }
 
   @NonNull

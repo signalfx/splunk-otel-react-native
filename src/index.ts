@@ -47,7 +47,7 @@ export interface ReactNativeConfiguration {
 export interface NativeSdKConfiguration {
   beaconEndpoint?: string;
   rumAccessToken?: string;
-  crashSpanAttributes?: object;
+  globalAttributes?: object;
 }
 //TODO should probably not export this
 export function initializeNativeSdk(
@@ -61,23 +61,13 @@ export function exportSpanToNative(span: object): Promise<null> {
 }
 
 export function setNativeSessionId(id: string): Promise<boolean> {
-  if (Platform.OS === 'ios') {
-    return SplunkOtelReactNative.setSessionId(id);
-  } else if (Platform.OS === 'android') {
-    
-  }
-
-  return Promise.resolve(false);
+  return SplunkOtelReactNative.setSessionId(id);
 }
 
 export function setNativeGlobalAttributes(attributes: Attributes): Promise<boolean> {
-  if (Platform.OS === 'ios') {
-    // For some reason React Native mucks with the input argument, destroying the object values.
-    // E.g. { 'os.name': 'iOS' } gets turned into { 'os.name': [Getter/Setter] }
-    return SplunkOtelReactNative.setGlobalAttributes({ ...attributes });
-  }
-
-  return Promise.resolve(false);
+  // For some reason React Native mucks with the input argument, destroying the object values.
+  // E.g. { 'os.name': 'iOS' } gets turned into { 'os.name': [Getter/Setter] }
+  return SplunkOtelReactNative.setGlobalAttributes({ ...attributes });
 }
 
 // TODO workaround for otel which uses timeOrigin

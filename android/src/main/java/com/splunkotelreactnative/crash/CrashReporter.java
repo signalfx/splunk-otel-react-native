@@ -27,25 +27,30 @@ import io.opentelemetry.semconv.trace.attributes.SemanticAttributes;
 
 public class CrashReporter {
   private final SpanExporter exporter;
-  private final Attributes crashSpanAttributes;
+  private volatile Attributes globalAttributes;
+  private volatile String sessionId;
   private final RuntimeDetailsExtractor runtimeDetailsExtractor;
   private final AtomicBoolean crashHappened = new AtomicBoolean(false);
   private final AnchoredClock clock;
   private final IdGenerator idGenerator;
 
-  public static void start(SpanExporter exporter, Attributes crashSpanAttributes, Context context) {
-    new CrashReporter(exporter, crashSpanAttributes, context).install();
-  }
-
-  private CrashReporter(SpanExporter exporter, Attributes crashSpanAttributes, Context context) {
+  public CrashReporter(SpanExporter exporter, Attributes globalAttributes, Context context) {
     this.exporter = exporter;
-    this.crashSpanAttributes = crashSpanAttributes;
+    this.globalAttributes = globalAttributes;
     this.runtimeDetailsExtractor = RuntimeDetailsExtractor.create(context);
     this.clock = AnchoredClock.create(Clock.getDefault());
     this.idGenerator = IdGenerator.random();
   }
 
-  private void install() {
+  public void updateSessionId(String sessionId) {
+    this.sessionId = sessionId;
+  }
+
+  public void updateGlobalAttributes(Attributes globalAttributes) {
+    this.globalAttributes = globalAttributes;
+  }
+
+  public void install() {
     Thread.UncaughtExceptionHandler existingHandler = Thread.getDefaultUncaughtExceptionHandler();
 
     Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> {
@@ -80,7 +85,7 @@ public class CrashReporter {
   }
 
   private Attributes buildAttributes(Thread thread) {
-    AttributesBuilder attributes = Attributes.builder().putAll(crashSpanAttributes);
+    AttributesBuilder attributes = Attributes.builder().putAll(globalAttributes);
     attributes.put(SemanticAttributes.THREAD_ID, thread.getId());
     attributes.put(SemanticAttributes.THREAD_NAME, thread.getName());
     attributes.put(SemanticAttributes.EXCEPTION_ESCAPED, true);
@@ -89,6 +94,12 @@ public class CrashReporter {
       runtimeDetailsExtractor.getCurrentStorageFreeSpaceInBytes());
     attributes.put(CrashReporterAttributes.HEAP_FREE_KEY,
       runtimeDetailsExtractor.getCurrentFreeHeapInBytes());
+
+    String currentSessionId = sessionId;
+
+    if (currentSessionId != null) {
+      attributes.put("splunk.rumSessionId", currentSessionId);
+    }
 
     Double currentBatteryPercent = runtimeDetailsExtractor.getCurrentBatteryPercent();
     if (currentBatteryPercent != null) {

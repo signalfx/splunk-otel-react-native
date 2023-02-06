@@ -34,13 +34,13 @@ public class ConfigMapReader extends MapReader {
     return Keys.RUM_ACCESS_TOKEN.get(map);
   }
 
-  public ReadableMap getCrashSpanAttributes() {
-    return ConfigMapReader.Keys.CRASH_SPAN_ATTRIBUTES.getMap(map);
+  public ReadableMap getGlobalAttributes() {
+    return ConfigMapReader.Keys.GLOBAL_ATTRIBUTES.getMap(map);
   }
 
   private interface Keys {
     StringKey BEACON_ENDPOINT = new StringKey("beaconEndpoint");
     StringKey RUM_ACCESS_TOKEN = new StringKey("rumAccessToken");
-    MapKey CRASH_SPAN_ATTRIBUTES = new MapKey("crashSpanAttributes");
+    MapKey GLOBAL_ATTRIBUTES = new MapKey("globalAttributes");
   }
 }
