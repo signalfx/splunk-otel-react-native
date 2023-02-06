@@ -77,6 +77,10 @@ export function setNativeGlobalAttributes(attributes: Attributes): Promise<boole
   return Promise.resolve(false);
 }
 
+export function _testNativeCrash() {
+  SplunkOtelReactNative.nativeCrash();
+}
+
 // TODO workaround for otel which uses timeOrigin
 if (!global.performance.timeOrigin) {
   (global as any).performance.timeOrigin = Date.now() - performance.now();

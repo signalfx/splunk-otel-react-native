@@ -31,6 +31,7 @@ import {
   ReactNativeConfiguration,
   NativeSdKConfiguration,
   setNativeSessionId,
+  _testNativeCrash,
 } from './index';
 import ReacNativeSpanExporter from './exporting';
 import GlobalAttributeAppender from './globalAttributeAppender';
@@ -47,6 +48,7 @@ interface SplunkRumType {
   init: (options: ReactNativeConfiguration) => SplunkRumType | undefined;
   provider?: WebTracerProvider;
   _generatenewSessionId: () => void;
+  _testNativeCrash: () => void;
   reportError: (err: any, isFatal?: boolean) => void;
   setGlobalAttributes: (attributes: Attributes) => void;
   updateLocation: (latitude: number, longitude: number) => void;
@@ -130,7 +132,7 @@ export const SplunkRum: SplunkRumType = {
     );
 
     initializeNativeSdk(nativeSdkConf).then((appStartTime) => {
-      setNativeSessionId(getSessionId())
+      setNativeSessionId(getSessionId());
       diag.debug(
         'AppStart: native module start',
         appStartTime,
@@ -187,6 +189,7 @@ export const SplunkRum: SplunkRumType = {
     return this;
   },
   _generatenewSessionId: _generatenewSessionId,
+  _testNativeCrash: _testNativeCrash,
   reportError: reportError,
   setGlobalAttributes: setGlobalAttributes,
   updateLocation: updateLocation,

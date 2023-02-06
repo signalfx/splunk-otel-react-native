@@ -81,6 +81,12 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
     promise.resolve((double) moduleStartTime);
   }
 
+
+  @ReactMethod
+  public void nativeCrash() {
+      throw new RuntimeException("Crash for testing crash reporting");
+  }
+
   @ReactMethod
   public void export(ReadableMap spanMap, Promise promise) {
     SpanExporter currentExporter = exporter;
