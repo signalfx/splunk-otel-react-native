@@ -66,7 +66,7 @@ class SpanToDiskExporter : SpanExporter {
 
         for span in zipkinSpans {
             if span.tags["splunk.rumSessionId"] == nil && !sessionId.isEmpty {
-                span.tags["splunk.rumSessionId"] = TagValue.string(sessionId)
+                span.tags["splunk.rumSessionId"] = sessionId
             }
 
             for (key, attrib) in globalAttribs {

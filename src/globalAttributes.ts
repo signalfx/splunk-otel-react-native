@@ -32,7 +32,7 @@ const OS_TYPE = 'os.type';
 const OS_VERSION = 'os.version';
 
 // just for future where there may be a way to use proper resource
-function getResource(): ResourceAttributes {
+export function getResource(): ResourceAttributes {
   let resourceAttrs = {
     // ...SDK_INFO,
     [SemanticResourceAttributes.TELEMETRY_SDK_NAME]:

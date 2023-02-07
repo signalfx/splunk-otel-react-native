@@ -14,15 +14,15 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-fileprivate var globalAttributes = RWLocked<[String:TagValue]>(initialValue: [:])
+fileprivate var globalAttributes = RWLocked<[String:String]>(initialValue: [:])
 fileprivate var sessionId = RWLocked<String>(initialValue: "")
 
 struct Globals {
-    static func setGlobalAttributes(_ attributes: [String:TagValue]) {
+    static func setGlobalAttributes(_ attributes: [String:String]) {
         globalAttributes.write(value: attributes)
     }
 
-    static func getGlobalAttributes() -> [String:TagValue] {
+    static func getGlobalAttributes() -> [String:String] {
         return globalAttributes.read()
     }
     
