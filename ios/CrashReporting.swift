@@ -24,7 +24,7 @@ private var spanExporter: SpanExporter = NoopExporter()
 
 func initializeCrashReporting(exporter: SpanExporter) {
     spanExporter = exporter
-    var startupSpan = newSpan(name: "SplunkIosReactNativeCrashReporting")
+    let startupSpan = newSpan(name: "CrashReportingInit")
     startupSpan.setAttribute(key: "component", value: "appstart")
     defer {
         endSpan(exporter: spanExporter, startupSpan)
@@ -37,6 +37,7 @@ func initializeCrashReporting(exporter: SpanExporter) {
         return
     }
     let crashReporter = crashReporter_!
+    updateCrashReportSessionId(Globals.getSessionId())
     let success = crashReporter.enable()
     print("PLCrashReporter enabled: "+success.description)
     if !success {
@@ -69,11 +70,14 @@ func updateCrashReportSessionId(_ id: String) {
        customDataDictionary.with_write_access { dict in
            dict["sessionId"] = id
        }
-       let customData = try NSKeyedArchiver.archivedData(
-           withRootObject: customDataDictionary.read(),
-            requiringSecureCoding: false
-       )
-       TheCrashReporter?.customData = customData
+
+       if TheCrashReporter != nil {
+           let customData = try NSKeyedArchiver.archivedData(
+               withRootObject: customDataDictionary.read(),
+                requiringSecureCoding: false
+           )
+           TheCrashReporter?.customData = customData
+       }
    } catch {
         // We have failed to archive the custom data dictionary.
         print("Failed to add the sessionId to the crash reports custom data.")

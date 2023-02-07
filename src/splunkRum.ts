@@ -130,59 +130,60 @@ export const SplunkRum: SplunkRumType = {
       nativeSdkConf.rumAccessToken
     );
 
-    initializeNativeSdk(nativeSdkConf).then((appStartTime) => {
-      setNativeSessionId(getSessionId())
-      diag.debug(
-        'AppStart: native module start',
-        appStartTime,
-        new Date(appStartTime)
-      );
-      //TODO refactor appStart
-      if (config.appStart) {
-        const tracer = provider.getTracer('AppStart');
-        const nativeInitEnd = Date.now();
+    setNativeSessionId(getSessionId()).then(() => {
+      initializeNativeSdk(nativeSdkConf).then((appStartTime) => {
+        diag.debug(
+          'AppStart: native module start',
+          appStartTime,
+          new Date(appStartTime)
+        );
+        //TODO refactor appStart
+        if (config.appStart) {
+          const tracer = provider.getTracer('AppStart');
+          const nativeInitEnd = Date.now();
 
-        this.appStart = tracer.startSpan('AppStart', {
-          startTime: appStartTime,
-          attributes: {
-            'component': 'appstart',
-            'start.type': 'cold',
-          },
-        });
+          this.appStart = tracer.startSpan('AppStart', {
+            startTime: appStartTime,
+            attributes: {
+              'component': 'appstart',
+              'start.type': 'cold',
+            },
+          });
 
-        //FIXME no need to have native init span probably
-        const ctx = trace.setSpan(context.active(), this.appStart);
-        context.with(ctx, () => {
-          tracer
-            .startSpan('nativeInit', { startTime: nativeInit })
-            .end(nativeInitEnd);
-          tracer
-            .startSpan('clientInit', { startTime: clientInit })
-            .end(clientInitEnd);
-        });
+          //FIXME no need to have native init span probably
+          const ctx = trace.setSpan(context.active(), this.appStart);
+          context.with(ctx, () => {
+            tracer
+              .startSpan('nativeInit', { startTime: nativeInit })
+              .end(nativeInitEnd);
+            tracer
+              .startSpan('clientInit', { startTime: clientInit })
+              .end(clientInitEnd);
+          });
 
-        const defaultAppStartEnd = Date.now();
-        if (this.appStartEnd !== null) {
-          diag.debug('AppStart: real end');
-          this.appStart.end(this.appStartEnd);
-        } else {
-          setTimeout(() => {
-            //FIXME temp
-            if (this.appStart && this.appStart.isRecording()) {
-              if (this.appStartEnd) {
-                this.appStart.end(this.appStartEnd);
-                diag.debug('AppStart: real end in timeout');
-              } else {
-                this.appStart.end(defaultAppStartEnd);
-                diag.debug(
-                  'AppStart: timeout end',
-                  new Date(defaultAppStartEnd)
-                );
+          const defaultAppStartEnd = Date.now();
+          if (this.appStartEnd !== null) {
+            diag.debug('AppStart: real end');
+            this.appStart.end(this.appStartEnd);
+          } else {
+            setTimeout(() => {
+              //FIXME temp
+              if (this.appStart && this.appStart.isRecording()) {
+                if (this.appStartEnd) {
+                  this.appStart.end(this.appStartEnd);
+                  diag.debug('AppStart: real end in timeout');
+                } else {
+                  this.appStart.end(defaultAppStartEnd);
+                  diag.debug(
+                    'AppStart: timeout end',
+                    new Date(defaultAppStartEnd)
+                  );
+                }
               }
-            }
-          }, 5000);
+            }, 5000);
+          }
         }
-      }
+      });
     });
 
     return this;
