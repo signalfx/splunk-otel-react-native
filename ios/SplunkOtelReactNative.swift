@@ -59,6 +59,13 @@ class SplunkOtelReactNative: NSObject {
         resolve(spanExporter.export(spans: spans))
     }
     
+    @objc(nativeCrash)
+    func nativeCrash() -> Void {
+        print("Native crash")
+        let x: Int? = nil
+        print(x! as Any);
+    }
+    
     @objc(setSessionId:withResolver:withRejecter:)
     func setSessionId(id: String, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
         Globals.setSessionId(id)

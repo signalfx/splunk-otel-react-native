@@ -92,7 +92,12 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void nativeCrash() {
-      throw new RuntimeException("Crash for testing crash reporting");
+    new Thread(() -> {
+      try {
+        Thread.sleep(2000);
+      } catch (InterruptedException e) {}
+      throw new RuntimeException("test crash");
+    }).start();
   }
 
   @ReactMethod

@@ -17,7 +17,7 @@ limitations under the License.
 import { RandomIdGenerator } from '@opentelemetry/sdk-trace-base';
 import { AppState } from 'react-native';
 import { trace, diag } from '@opentelemetry/api';
-import { setNativeSessionId } from '.';
+import { setNativeSessionId } from './native';
 
 const idGenerator = new RandomIdGenerator();
 

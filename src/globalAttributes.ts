@@ -19,7 +19,7 @@ import type { Attributes } from '@opentelemetry/api';
 import type { ResourceAttributes } from '@opentelemetry/resources';
 import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
 import { getSessionId } from './session';
-import { setNativeGlobalAttributes } from '.';
+import { setNativeGlobalAttributes } from './native';
 
 let globalAttributes: Attributes = {};
 
