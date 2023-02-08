@@ -48,40 +48,6 @@ class ZipkinEndpoint: Encodable {
     }
 }
 
-enum TagValue : Encodable {
-    case string (String)
-    case bool (Bool)
-    case int(Int)
-    case double(Double)
-    case stringArray([String])
-    case boolArray([Bool])
-    case intArray([Int])
-    case doubleArray([Double])
-    
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-
-        switch self {
-            case .string(let value):
-            try container.encode(value)
-        case .bool(let value):
-            try container.encode(value)
-        case .int(let value):
-            try container.encode(value)
-        case .double(let value):
-            try container.encode(value)
-        case .stringArray(let value):
-            try container.encode(value)
-        case .boolArray(let value):
-            try container.encode(value)
-        case .intArray(let value):
-            try container.encode(value)
-        case .doubleArray(let value):
-            try container.encode(value)
-        }
-    }
-}
-
 class ZipkinSpan: Encodable {
     var traceId: String
     var parentId: String?
@@ -92,9 +58,9 @@ class ZipkinSpan: Encodable {
     var duration: UInt64?
     var remoteEndpoint: ZipkinEndpoint?
     var annotations: [ZipkinAnnotation]
-    var tags: [String: TagValue]
+    var tags: [String: String]
 
-    init(traceId: String, parentId: String?, id: String, kind: String?, name: String, timestamp: UInt64, duration: UInt64?, remoteEndpoint: ZipkinEndpoint?, annotations: [ZipkinAnnotation], tags: [String: TagValue]) {
+    init(traceId: String, parentId: String?, id: String, kind: String?, name: String, timestamp: UInt64, duration: UInt64?, remoteEndpoint: ZipkinEndpoint?, annotations: [ZipkinAnnotation], tags: [String: String]) {
         self.traceId = traceId
         self.parentId = parentId
         self.id = id
@@ -105,40 +71,6 @@ class ZipkinSpan: Encodable {
         self.remoteEndpoint = remoteEndpoint
         self.annotations = annotations
         self.tags = tags
-    }
-
-    public func write() -> [String: Any] {
-        var output = [String: Any]()
-
-        output["traceId"] = traceId
-        output["name"] = name
-        output["parentId"] = parentId
-        output["id"] = id
-        output["kind"] = kind
-        output["timestamp"] = timestamp
-        output["duration"] = duration
-        output["localEndpoint"] = ["serviceName": "myservice"]
-
-        if remoteEndpoint != nil {
-            output["remoteEndpoint"] = remoteEndpoint!.write()
-        }
-
-        if annotations.count > 0 {
-            let annotationsArray: [Any] = annotations.map {
-                var object = [String: Any]()
-                object["timestamp"] = $0.timestamp
-                object["value"] = $0.value
-                return object
-            }
-
-            output["annotations"] = annotationsArray
-        }
-
-        if tags.count > 0 {
-            output["tags"] = tags
-        }
-
-        return output
     }
 }
 
@@ -179,8 +111,26 @@ struct ZipkinTransform {
         let traceId = otelSpan["traceId"] as? String ?? "00000000000000000000000000000000"
         let spanId = otelSpan["id"] as? String ?? "0000000000000000"
         let name = otelSpan["name"] as? String ?? "unknown"
-        var tags = otelSpan["tags"] as? Dictionary<String, TagValue> ?? [:]
-        tags["device.model.name"] = .string(Device.current.description)
+        let jsTags = otelSpan["tags"] as? Dictionary<String, Any> ?? [:]
+
+        var tags: Dictionary<String, String> = [:]
+
+        for t in jsTags {
+            switch t.value {
+                case is String:
+                    tags[t.key] = t.value as! String
+                case is Double:
+                    tags[t.key] = (t.value as! Double).description
+                case is Bool:
+                    tags[t.key] = (t.value as! Bool).description
+                case is Int:
+                    tags[t.key] = (t.value as! Int).description
+                default:
+                    break
+            }
+        }
+
+        tags["device.model.name"] = Device.current.description
 
         return ZipkinSpan(traceId: traceId,
                           parentId: parentId,
@@ -197,11 +147,11 @@ struct ZipkinTransform {
 
 extension ZipkinSpan {
     func setAttribute(key: String, value: String) {
-        self.tags[key] = .string(value)
+        self.tags[key] = value
     }
     
     func setAttribute(key: String, value: Bool) {
-        self.tags[key] = .bool(value)
+        self.tags[key] = value.description
     }
     
     func addEvent(name: String, timestamp: Date) {

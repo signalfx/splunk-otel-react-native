@@ -28,11 +28,10 @@ import { SimpleSpanProcessor } from '@opentelemetry/sdk-trace-base';
 import { _globalThis } from '@opentelemetry/core';
 import {
   initializeNativeSdk,
-  ReactNativeConfiguration,
   NativeSdKConfiguration,
   setNativeSessionId,
-  _testNativeCrash,
-} from './index';
+  testNativeCrash,
+} from './native';
 import ReacNativeSpanExporter from './exporting';
 import GlobalAttributeAppender from './globalAttributeAppender';
 import { instrumentXHR } from './instrumentations/xhr';
@@ -40,6 +39,16 @@ import { instrumentErrors, reportError } from './instrumentations/errors';
 import { getResource, setGlobalAttributes } from './globalAttributes';
 import { LOCATION_LATITUDE, LOCATION_LONGITUDE } from './splunkAttributeNames';
 import { getSessionId, _generatenewSessionId } from './session';
+
+export interface ReactNativeConfiguration {
+  realm?: string;
+  beaconEndpoint: string;
+  rumAccessToken: string;
+  applicationName: string;
+  environment?: string;
+  appStart?: boolean;
+  debug?: boolean;
+}
 
 interface SplunkRumType {
   appStart?: Span | undefined;
@@ -190,7 +199,7 @@ export const SplunkRum: SplunkRumType = {
     return this;
   },
   _generatenewSessionId: _generatenewSessionId,
-  _testNativeCrash: _testNativeCrash,
+  _testNativeCrash: testNativeCrash,
   reportError: reportError,
   setGlobalAttributes: setGlobalAttributes,
   updateLocation: updateLocation,

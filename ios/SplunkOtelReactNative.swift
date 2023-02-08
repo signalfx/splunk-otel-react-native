@@ -59,6 +59,13 @@ class SplunkOtelReactNative: NSObject {
         resolve(spanExporter.export(spans: spans))
     }
     
+    @objc(nativeCrash)
+    func nativeCrash() -> Void {
+        print("Native crash")
+        let x: Int? = nil
+        print(x! as Any);
+    }
+    
     @objc(setSessionId:withResolver:withRejecter:)
     func setSessionId(id: String, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
         Globals.setSessionId(id)
@@ -68,16 +75,16 @@ class SplunkOtelReactNative: NSObject {
     
     @objc(setGlobalAttributes:withResolver:withRejecter:)
     func setGlobalAttributes(attributes: Dictionary<String, Any>, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
-        let newAttribs: [String:TagValue] = attributes.compactMapValues { v in
+        let newAttribs: [String:String] = attributes.compactMapValues { v in
             switch v {
             case is String:
-                return TagValue.string(v as! String)
+                return v as! String
             case is Bool:
-                return TagValue.bool(v as! Bool)
+                return (v as! Bool).description
             case is Double:
-                return TagValue.double(v as! Double)
+                return (v as! Double).description
             case is Int:
-                return TagValue.int(v as! Int)
+                return (v as! Int).description
             default:
                 return nil
             }
