@@ -66,9 +66,10 @@ public class CrashReporter {
   private void exportCrashSpan(Thread thread, Throwable exception) {
     long epochNanos = clock.now();
 
+    ReactSpanProperties properties = buildProperties(exception, epochNanos);
     ReactSpanData spanData = new ReactSpanData(
-      buildProperties(exception, epochNanos),
-      buildAttributes(thread),
+      properties,
+      buildAttributes(properties, thread),
       buildContext(),
       SpanContext.getInvalid(),
       buildEvents(exception, epochNanos));
@@ -84,8 +85,9 @@ public class CrashReporter {
       traceId, spanId, TraceFlags.getSampled(), TraceState.getDefault(), false, true);
   }
 
-  private Attributes buildAttributes(Thread thread) {
+  private Attributes buildAttributes(ReactSpanProperties properties, Thread thread) {
     AttributesBuilder attributes = Attributes.builder().putAll(globalAttributes);
+    attributes.put(CrashReporterAttributes.SPLUNK_OPERATION_KEY, properties.name);
     attributes.put(SemanticAttributes.THREAD_ID, thread.getId());
     attributes.put(SemanticAttributes.THREAD_NAME, thread.getName());
     attributes.put(SemanticAttributes.EXCEPTION_ESCAPED, true);

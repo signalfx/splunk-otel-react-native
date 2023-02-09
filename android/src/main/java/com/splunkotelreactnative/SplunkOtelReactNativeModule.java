@@ -28,6 +28,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.module.annotations.ReactModule;
+import com.splunkotelreactnative.crash.CrashEventAttributeExtractor;
 import com.splunkotelreactnative.crash.CrashReporter;
 
 import java.util.Collections;
@@ -76,10 +77,10 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
 
     String endpointWithAuthentication = beaconEndpoint + "?auth=" + accessToken;
 
-    exporter = new ZipkinSpanExporterBuilder()
+    exporter = new CrashEventAttributeExtractor(new ZipkinSpanExporterBuilder()
       .setEndpoint(endpointWithAuthentication)
       .setEncoder(new CustomZipkinEncoder())
-      .build();
+      .build());
 
     crashReporter = new CrashReporter(exporter,
       attributesFromMap(mapReader.getGlobalAttributes()), getReactApplicationContext());
