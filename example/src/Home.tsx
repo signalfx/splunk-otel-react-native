@@ -84,6 +84,7 @@ export default function Home({ navigation }) {
       <Button title="RN fetch GET" onPress={rnFetch} />
       <Button title="Workflow span" onPress={workflowSpan} />
       <Button title="New session" onPress={Rum._generatenewSessionId} />
+      <Button title="Crash" onPress={Rum._testNativeCrash} />
       <Text>{isLoading && 'Loading'}</Text>
       <Button title="JS error" onPress={throwError} />
     </View>
