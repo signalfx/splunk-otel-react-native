@@ -37,6 +37,9 @@ const SplunkOtelReactNative = NativeModules.SplunkOtelReactNative
 export interface NativeSdKConfiguration {
   beaconEndpoint?: string;
   rumAccessToken?: string;
+  isOtlp?: boolean;
+  skipEncode?: boolean;
+  skipAuth?: boolean;
   globalAttributes?: object;
 }
 //TODO should probably not export this

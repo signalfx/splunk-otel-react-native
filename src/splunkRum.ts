@@ -48,6 +48,9 @@ export interface ReactNativeConfiguration {
   environment?: string;
   appStart?: boolean;
   debug?: boolean;
+  isOtlp?: boolean;
+  skipEncode?: boolean;
+  skipAuth?: boolean;
 }
 
 interface SplunkRumType {
@@ -132,13 +135,19 @@ export const SplunkRum: SplunkRumType = {
       nativeSdkConf.beaconEndpoint = config.beaconEndpoint;
     }
     nativeSdkConf.rumAccessToken = config.rumAccessToken;
+    nativeSdkConf.isOtlp = config.isOtlp;
+    nativeSdkConf.skipEncode = config.skipEncode;
+    nativeSdkConf.skipAuth = config.skipAuth;
     nativeSdkConf.globalAttributes = { ...getResource() };
 
     diag.debug(
       'Initializing with: ',
       config.applicationName,
       nativeSdkConf.beaconEndpoint,
-      nativeSdkConf.rumAccessToken
+      nativeSdkConf.rumAccessToken,
+      nativeSdkConf.isOtlp,
+      nativeSdkConf.skipEncode,
+      nativeSdkConf.skipAuth
     );
 
     initializeNativeSdk(nativeSdkConf).then((appStartTime) => {

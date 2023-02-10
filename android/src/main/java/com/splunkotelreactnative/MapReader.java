@@ -36,6 +36,21 @@ public abstract class MapReader {
       }
     }
   }
+  protected static class BooleanKey {
+    private final String key;
+
+    public BooleanKey(String key) {
+      this.key = key;
+    }
+
+    public Boolean get(ReadableMap map) {
+      if (map.hasKey(key) && map.getType(key) == ReadableType.Boolean) {
+        return map.getBoolean(key);
+      } else {
+        return null;
+      }
+    }
+  }
 
   protected static class NumberKey {
     private final String key;

@@ -32,6 +32,9 @@ class SplunkOtelReactNative: NSObject {
       } catch {
           // ignore
       }
+      let isOtlp = config["isOtlp"] as? Bool
+      let skipEncode = config["skipEncode"] as? Bool
+      let skipAuth = config["skipAuth"] as? Bool
 
       let beaconUrl = config["beaconEndpoint"] as? String
 

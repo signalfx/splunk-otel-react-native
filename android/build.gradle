@@ -129,6 +129,7 @@ dependencies {
   implementation "io.opentelemetry:opentelemetry-sdk:1.22.0"
   implementation "io.opentelemetry:opentelemetry-semconv:1.22.0-alpha"
   implementation "io.opentelemetry:opentelemetry-exporter-zipkin:1.22.0"
+  implementation "io.opentelemetry:opentelemetry-exporter-otlp:1.22.0"
   implementation "io.zipkin.reporter2:zipkin-sender-okhttp3:2.16.3"
 // From node_modules
 }

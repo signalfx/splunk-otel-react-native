@@ -34,6 +34,7 @@ import com.splunkotelreactnative.crash.CrashReporter;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import io.opentelemetry.api.common.Attributes;
 import io.opentelemetry.api.common.AttributesBuilder;
@@ -44,6 +45,7 @@ import io.opentelemetry.api.trace.TraceState;
 import io.opentelemetry.exporter.zipkin.ZipkinSpanExporterBuilder;
 import io.opentelemetry.sdk.trace.data.StatusData;
 import io.opentelemetry.sdk.trace.export.SpanExporter;
+import io.opentelemetry.exporter.otlp.http.trace.OtlpHttpSpanExporter;
 
 @ReactModule(name = SplunkOtelReactNativeModule.NAME)
 public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
@@ -69,6 +71,9 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
     ConfigMapReader mapReader = new ConfigMapReader(configMap);
     String beaconEndpoint = mapReader.getBeaconEndpoint();
     String accessToken = mapReader.getRumAccessToken();
+    boolean isOtlp = mapReader.isOtlp();
+    boolean skipEncode = mapReader.skipEncode();
+    boolean skipAuth = mapReader.skipAuth();
 
     if (beaconEndpoint == null || accessToken == null) {
       reportFailure(promise, "Initialize: cannot construct exporter, endpoint or token missing");
@@ -77,10 +82,18 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
 
     String endpointWithAuthentication = beaconEndpoint + "?auth=" + accessToken;
 
+    if(isOtlp) {
     exporter = new CrashEventAttributeExtractor(new ZipkinSpanExporterBuilder()
-      .setEndpoint(endpointWithAuthentication)
-      .setEncoder(new CustomZipkinEncoder())
+      .setEndpoint(skipAuth ? beaconEndpoint : endpointWithAuthentication)
+      .setEncoder(skipEncode ? null : new CustomZipkinEncoder())
       .build());
+    }
+    else {
+    exporter = new CrashEventAttributeExtractor(OtlpHttpSpanExporter.builder()
+      .setEndpoint(beaconEndpoint)
+      .setTimeout(2, TimeUnit.SECONDS)
+      .build());
+    }
 
     crashReporter = new CrashReporter(exporter,
       attributesFromMap(mapReader.getGlobalAttributes()), getReactApplicationContext());

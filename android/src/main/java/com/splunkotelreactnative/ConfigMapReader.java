@@ -34,6 +34,18 @@ public class ConfigMapReader extends MapReader {
     return Keys.RUM_ACCESS_TOKEN.get(map);
   }
 
+  public Boolean isOtlp() {
+    return Keys.IS_OTLP.get(map);
+  }
+
+  public Boolean skipEncode() {
+    return Keys.SKIP_ENCODE.get(map);
+  }
+
+  public Boolean skipAuth() {
+    return Keys.SKIP_AUTH.get(map);
+  }
+
   public ReadableMap getGlobalAttributes() {
     return ConfigMapReader.Keys.GLOBAL_ATTRIBUTES.getMap(map);
   }
@@ -41,6 +53,9 @@ public class ConfigMapReader extends MapReader {
   private interface Keys {
     StringKey BEACON_ENDPOINT = new StringKey("beaconEndpoint");
     StringKey RUM_ACCESS_TOKEN = new StringKey("rumAccessToken");
+    BooleanKey IS_OTLP = new BooleanKey("isOtlp");
+    BooleanKey SKIP_ENCODE = new BooleanKey("skipEncode");
+    BooleanKey SKIP_AUTH = new BooleanKey("skipAuth");
     MapKey GLOBAL_ATTRIBUTES = new MapKey("globalAttributes");
   }
 }
