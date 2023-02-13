@@ -1,23 +1,28 @@
-# Splunk distribution of OpenTelemetry for React Native
+# Splunk Distribution of OpenTelemetry for React Native
 
-> :construction: This project status is currently **Experimental**. Using it in production is not advised.
+> :construction: This project is currently **Experimental**. Do not use it in production environments.
 
 ## Overview
-This library lets you autoinstrument react native applications. Currently expo is not supported.
 
-## Getting Started
+This library lets you autoinstrument React Native applications. 
 
-Installing with npm:
+> ⚠ Expo isn't supported yet.
+
+## Get started
+
+To instrument your React Native application, follow these steps.
+
+1. Install the library using either npm or yarn:
+
 ```
+# npm
 npm install @splunk/otel-react-native
-```
-Installing with yarn
-```
+
+# yarn
 yarn add @splunk/otel-react-native
 ```
 
-Setup
-1. Initialize the library as early in your App lifecycle as possible by calling:
+2. Initialize the library as early in your app lifecycle as possible:
 
 ```js
 import { SplunkRum } from '@splunk/otel-react-native';
@@ -30,17 +35,20 @@ const Rum = SplunkRum.init({
 
 ```
 
-2. Modify the initialization parameters to specify:
+3. Customize the initialization parameters to specify:
 
-- `realm` - If sending data to Splunk ingest use realm you are using (i.e. us0, us1)
-  - `beaconUrl` - It is possible to send data to arbitrary url by specifing this parameter. Setting this will override realm.
-- `rumAuth` - token authorizing the Agent to send the telemetry to the backend. You can find (or generate) the token [here](https://app.signalfx.com/o11y/#/organization/current?selectedKeyValue=sf_section:accesstokens). Notice that RUM and APM auth tokens are different.
-- `app` - naming the application that will be monitored so it can be distinguished from other applications.
+- `realm`: The Splunk Observability Cloud realm of your organization. For example, `us0`.
+- `rumAuth`: Your Splunk RUM authentication token. You can find or generate the token [here](https://app.signalfx.com/o11y/#/organization/current?selectedKeyValue=sf_section:accesstokens). Notice that RUM and APM authentication tokens are different.
+- `app`: Name of your application. Set it to distinguish your app from others in Splunk Observability Cloud.
+
+> If needed, you can set a different target URL by specifying a value for `beaconUrl`. Setting a different beacon URL overrides the `realm` setting.
 
 ## View navigation
-[react-navigation](https://github.com/react-navigation/react-navigation) v6 and v5 are currently supported.
 
-### Usage
+[react-navigation](https://github.com/react-navigation/react-navigation) version 5 and 6 are supported.
+
+The following example shows how to instrument navigation:
+
 ```js
 import { startNavigationTracking } from '@splunk/otel-react-native';
 
@@ -61,18 +69,20 @@ export default function App() {
 }
 ```
 
-## Gathered Data
+## Data collection
 
-Currently only Zipkin exporter is used for sending data. Adding your own exporters/processors is not yet supported. 
+The library exports data using the Zipkin exporter. Adding your own exporters and processors isn't supported yet. 
 
-Supported features
+Supported features:
+
 - Autoinstrumented HTTP requests
 - Autoinstrumented JS Error tracking
-- Custom instrumentation via opentelemetry
+- Custom instrumentation using Opentelemetry
 
-For more information about how this library uses opentelemetry and about future plans check [here](CONTRIBUTING.md#Opentelemetry).
+For more information about how this library uses Opentelemetry and about future plans check [CONTRIBUTING.md](CONTRIBUTING.md#Opentelemetry).
 
 ## License
+
 Copyright 2022 Splunk Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
