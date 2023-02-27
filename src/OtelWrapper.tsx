@@ -14,11 +14,21 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-// TODO workaround for otel which uses timeOrigin
-if (!global.performance.timeOrigin) {
-  (global as any).performance.timeOrigin = Date.now() - performance.now();
-}
+import React, { useEffect } from 'react';
+import type { PropsWithChildren } from 'react';
+import type { ReactNativeConfiguration } from './splunkRum';
+import { SplunkRum } from './splunkRum';
 
-export * from './splunkRum';
-export * from './trackNavigation';
-export * from './OtelWrapper';
+type Props = PropsWithChildren<{
+  configuration: ReactNativeConfiguration;
+}>;
+
+export const OtelWrapper: React.FC<Props> = ({ children, configuration }) => {
+  useEffect(() => {
+    SplunkRum.finishAppStart();
+  }, []);
+
+  SplunkRum.init(configuration);
+
+  return <>{children}</>;
+};
