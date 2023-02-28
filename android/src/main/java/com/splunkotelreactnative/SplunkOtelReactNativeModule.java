@@ -90,7 +90,7 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
     crashReporter.install();
 
     WritableMap appStartInfo = Arguments.createMap();
-    double appStart = (double) SplunkPerfProvider.getAppStartTime(); //TODO yikes
+    double appStart = (double) SplunkPerfProvider.getAppStartTime();
     AppStartTracker appStartTracker = AppStartTracker.getInstance();
     appStartInfo.putDouble("appStart", appStart);
     appStartInfo.putDouble("moduleStart", (double) this.moduleStartTime);

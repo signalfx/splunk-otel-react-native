@@ -13,7 +13,7 @@ public class SplunkPerfProvider extends ContentProvider {
 
   private static final long appStartTime = System.currentTimeMillis();
 
-  public static @Nullable long getAppStartTime() {
+  public static long getAppStartTime() {
     return appStartTime;
   }
 

@@ -3,7 +3,7 @@ package com.splunkotelreactnative;
 import org.jetbrains.annotations.NotNull;
 
 public class AppStartTracker {
-  private static @NotNull AppStartTracker instance = new AppStartTracker();
+  private static final @NotNull AppStartTracker instance = new AppStartTracker();
 
   private boolean isColdStart = false;
 
