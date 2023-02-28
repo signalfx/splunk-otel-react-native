@@ -17,13 +17,14 @@ limitations under the License.
 import { AppRegistry } from 'react-native';
 import App from './src/App';
 import { name as appName } from './app.json';
-import { SplunkRum } from '@splunk/otel-react-native';
+// import { SplunkRum } from '@splunk/otel-react-native';
 
-export const Rum = SplunkRum.init({
-  realm: 'us0',
-  applicationName: 'rnJavaCrash',
-  rumAccessToken: 'tests',
-  debug: true,
-});
+// export const Rum = SplunkRum.init({
+//   // realm: 'us0',
+//   beaconEndpoint: 'http://192.168.1.136:53820/zipkindump',
+//   applicationName: 'appStartTestAndroid',
+//   rumAccessToken: 'tests',
+//   debug: true,
+// });
 
 AppRegistry.registerComponent(appName, () => App);

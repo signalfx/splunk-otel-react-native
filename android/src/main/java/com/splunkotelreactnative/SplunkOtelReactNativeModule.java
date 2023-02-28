@@ -22,11 +22,13 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.module.annotations.ReactModule;
 import com.splunkotelreactnative.crash.CrashEventAttributeExtractor;
 import com.splunkotelreactnative.crash.CrashReporter;
@@ -87,7 +89,13 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
 
     crashReporter.install();
 
-    promise.resolve((double) moduleStartTime);
+    WritableMap appStartInfo = Arguments.createMap();
+    double appStart = (double) SplunkPerfProvider.getAppStartTime();
+    AppStartTracker appStartTracker = AppStartTracker.getInstance();
+    appStartInfo.putDouble("appStart", appStart);
+    appStartInfo.putDouble("moduleStart", (double) this.moduleStartTime);
+    appStartInfo.putBoolean("isColdStart", appStartTracker.isColdStart());
+    promise.resolve(appStartInfo);
   }
 
 

@@ -35,7 +35,7 @@ const tracer = trace.getTracer('session');
 //FIXME add conf
 const MAX_SESSION_AGE = 4 * 60 * 60 * 1000;
 const SESSION_TIMEOUT = 15 * 60 * 1000;
-
+const sessionLogging = false;
 let lastActivityTime = Date.now();
 const State = {
   FOREGROUND: 'active',
@@ -45,9 +45,13 @@ const State = {
 let currentState: String = AppState.currentState;
 
 AppState.addEventListener('change', (nextAppState) => {
-  diag.debug('Session:AppStateChange: ', currentState, nextAppState);
+  if (sessionLogging) {
+    diag.debug('Session:AppStateChange: ', currentState, nextAppState);
+  }
   if (nextAppState === State.FOREGROUND && currentState === State.BACKGROUND) {
-    diag.debug('Session:AppStateChange:TRANSITIONING_TO_FOREGROUND');
+    if (sessionLogging) {
+      diag.debug('Session:AppStateChange:TRANSITIONING_TO_FOREGROUND');
+    }
     currentState = State.TRANSITIONING_TO_FOREGROUND;
     return;
   }
@@ -64,7 +68,9 @@ export function getSessionId() {
 
 function bump() {
   lastActivityTime = Date.now();
-  diag.debug('Session:bump:', new Date(lastActivityTime));
+  if (sessionLogging) {
+    diag.debug('Session:bump:', new Date(lastActivityTime));
+  }
   // when the app spent >15 minutes without any activity (spans) in the background,
   // after moving to the foreground the first span should trigger the sessionId timeout.
   if (currentState === State.TRANSITIONING_TO_FOREGROUND) {
@@ -75,17 +81,31 @@ function bump() {
 function hasTimedOut() {
   // don't apply sessionId timeout to apps in the foreground
   if (currentState === State.FOREGROUND) {
-    diag.debug('Session:hasTimedOut: State.FOREGROUND');
+    if (sessionLogging) {
+      diag.debug('Session:hasTimedOut: State.FOREGROUND');
+    }
     return false;
   }
   const elapsedTime = Date.now() - lastActivityTime;
-  diag.debug('Session:hasTimedOut', elapsedTime, SESSION_TIMEOUT - elapsedTime);
+  if (sessionLogging) {
+    diag.debug(
+      'Session:hasTimedOut',
+      elapsedTime,
+      SESSION_TIMEOUT - elapsedTime
+    );
+  }
   return elapsedTime >= SESSION_TIMEOUT;
 }
 
 function hasExpired() {
   const timeElapsed = Date.now() - session.startTime;
-  diag.debug('Session:hasExpired', timeElapsed, MAX_SESSION_AGE - timeElapsed);
+  if (sessionLogging) {
+    diag.debug(
+      'Session:hasExpired',
+      timeElapsed,
+      MAX_SESSION_AGE - timeElapsed
+    );
+  }
   return Date.now() - session.startTime >= MAX_SESSION_AGE;
 }
 
@@ -94,7 +114,9 @@ function newSessionId() {
   session.startTime = Date.now();
   session.id = idGenerator.generateTraceId();
   setNativeSessionId(session.id);
-  diag.debug('Session:newSessionId:', previousId, session.id);
+  if (sessionLogging) {
+    diag.debug('Session:newSessionId:', previousId, session.id);
+  }
   const span = tracer.startSpan('sessionId.change', {
     attributes: {
       'splunk.rum.previous_session_id': previousId,
@@ -105,5 +127,7 @@ function newSessionId() {
 
 export function _generatenewSessionId() {
   newSessionId();
-  diag.debug('CLIENT:session:generateNewId: ', session.id);
+  if (sessionLogging) {
+    diag.debug('CLIENT:session:generateNewId: ', session.id);
+  }
 }
