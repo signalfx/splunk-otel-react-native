@@ -16,36 +16,40 @@ limitations under the License.
 
 import { setGlobalAttributes } from './globalAttributes';
 import { SCREEN_NAME, LAST_SCREEN_NAME } from './splunkAttributeNames';
-import { trace } from '@opentelemetry/api';
+import { trace, diag, Tracer } from '@opentelemetry/api';
 
-let current: string = 'none';
+let currentRouteName: string = 'none';
+let tracer: Tracer;
 
 export function getCurrentView() {
-  return current;
+  return currentRouteName;
 }
 
-//TODO types
 export function startNavigationTracking(navigationRef: any) {
-  const tracer = trace.getTracer('uiChanges');
-  current = navigationRef.getCurrentRoute()?.name;
-  setGlobalAttributes({ [SCREEN_NAME]: current });
-  createUiSpan(tracer);
-
   if (navigationRef) {
+    tracer = trace.getTracer('uiChanges');
+    const startingRoute = navigationRef.getCurrentRoute();
+    if (startingRoute) {
+      currentRouteName = startingRoute.name;
+      createUiSpan(currentRouteName);
+    }
+
     navigationRef.addListener('state', () => {
-      const previous = current;
-      current = navigationRef.getCurrentRoute().name;
-      setGlobalAttributes({
-        [SCREEN_NAME]: current,
-      });
-      createUiSpan(tracer, previous);
+      const previous = currentRouteName;
+      const route = navigationRef.getCurrentRoute();
+      if (route) {
+        currentRouteName = route.name;
+        createUiSpan(currentRouteName, previous);
+      }
     });
   } else {
-    //TODO Maybe TS is enough
+    diag.debug('Navigation: navigationRef missing');
   }
 }
 
-function createUiSpan(tracer: any, previous?: string) {
+function createUiSpan(current: string, previous?: string) {
+  setGlobalAttributes({ [SCREEN_NAME]: current });
+  // global attrs will get appended to this span anyways
   const span = tracer.startSpan('Created');
   span.setAttribute('component', 'ui');
   if (previous) {
