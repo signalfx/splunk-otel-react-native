@@ -34,7 +34,7 @@ limitations under the License.
 */
 
 
-class SpanToDiskExporter {
+class SpanToDiskExporter : SpanExporter {
     let db: SpanDb
     let maxFileSizeBytes: Int64
     // Count of spans to insert before checking whether truncation is necessary
@@ -57,12 +57,30 @@ class SpanToDiskExporter {
         }
 
         let zipkinSpans = ZipkinTransform.toZipkinSpans(spans: spans)
+        return export(zipkinSpans)
+    }
+
+    public func export(_ zipkinSpans: [ZipkinSpan]) -> Bool {
+        let globalAttribs = Globals.getGlobalAttributes()
+        let sessionId = Globals.getSessionId()
+
+        for span in zipkinSpans {
+            if span.tags["splunk.rumSessionId"] == nil && !sessionId.isEmpty {
+                span.tags["splunk.rumSessionId"] = sessionId
+            }
+
+            for (key, attrib) in globalAttribs {
+                if span.tags[key] == nil {
+                    span.tags[key] = attrib
+                }
+            }
+        }
 
         if !db.store(spans: zipkinSpans) {
             return true
         }
 
-        let inserted = Int64(spans.count)
+        let inserted = Int64(zipkinSpans.count)
         checkpointCounter += inserted
 
         // There might be a case where truncation checkpoint is never reached,

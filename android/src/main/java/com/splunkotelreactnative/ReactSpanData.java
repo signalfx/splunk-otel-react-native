@@ -36,17 +36,19 @@ public class ReactSpanData implements SpanData {
   @NonNull private final Attributes attributes;
   @NonNull private final SpanContext context;
   @NonNull private final SpanContext parentContext;
+  @NonNull private final List<EventData> events;
 
   public ReactSpanData(
     @NonNull ReactSpanProperties properties,
     @NonNull Attributes attributes,
     @NonNull SpanContext context,
-    @NonNull SpanContext parentContext
-  ) {
+    @NonNull SpanContext parentContext,
+    @NonNull List<EventData> events) {
     this.properties = properties;
     this.attributes = attributes;
     this.context = context;
     this.parentContext = parentContext;
+    this.events = events;
   }
 
   @Override
@@ -86,7 +88,7 @@ public class ReactSpanData implements SpanData {
 
   @Override
   public List<EventData> getEvents() {
-    return Collections.emptyList();
+    return events;
   }
 
   @Override

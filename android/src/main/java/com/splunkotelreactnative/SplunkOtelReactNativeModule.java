@@ -21,6 +21,7 @@ import android.app.Application;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
@@ -30,6 +31,8 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.module.annotations.ReactModule;
+import com.splunkotelreactnative.crash.CrashEventAttributeExtractor;
+import com.splunkotelreactnative.crash.CrashReporter;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -52,8 +55,7 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
   public static final String NAME = "SplunkOtelReactNative";
 
   private volatile SpanExporter exporter;
-  private final AtomicReference<String> initialAppActivity = new AtomicReference<>();
-  private AppStart appStart;
+  private volatile CrashReporter crashReporter;
 
   public SplunkOtelReactNativeModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -82,15 +84,34 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
 
     String endpointWithAuthentication = beaconEndpoint + "?auth=" + accessToken;
 
-    exporter = new ZipkinSpanExporterBuilder()
+    exporter = new CrashEventAttributeExtractor(new ZipkinSpanExporterBuilder()
       .setEndpoint(endpointWithAuthentication)
       .setEncoder(new CustomZipkinEncoder())
-      .build();
+      .build());
 
-    WritableMap map = Arguments.createMap();
-    map.putString("type", appStart.type);
-    map.putDouble("startTime", (double) appStart.startTime);
-    promise.resolve(map);
+    crashReporter = new CrashReporter(exporter,
+      attributesFromMap(mapReader.getGlobalAttributes()), getReactApplicationContext());
+
+    crashReporter.install();
+
+    WritableMap appStartInfo = Arguments.createMap();
+    double appStart = (double) SplunkPerfProvider.getAppStartTime();
+    AppStartTracker appStartTracker = AppStartTracker.getInstance();
+    appStartInfo.putDouble("appStart", appStart);
+    appStartInfo.putDouble("moduleStart", (double) this.moduleStartTime);
+    appStartInfo.putBoolean("isColdStart", appStartTracker.isColdStart());
+    promise.resolve(appStartInfo);
+  }
+
+
+  @ReactMethod
+  public void nativeCrash() {
+    new Thread(() -> {
+      try {
+        Thread.sleep(2000);
+      } catch (InterruptedException e) {}
+      throw new RuntimeException("test crash");
+    }).start();
   }
 
   @ReactMethod
@@ -118,12 +139,31 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
       return;
     }
 
-    Attributes attributes = attributesFromMap(mapReader);
+    Attributes attributes = attributesFromMap(mapReader.getAttributes());
 
-    ReactSpanData spanData = new ReactSpanData(spanProperties, attributes, context, parentContext);
+    ReactSpanData spanData = new ReactSpanData(spanProperties, attributes, context, parentContext,
+      Collections.emptyList());
     currentExporter.export(Collections.singleton(spanData));
 
     promise.resolve(null);
+  }
+
+  @ReactMethod
+  public void setSessionId(String sessionId) {
+    CrashReporter currentCrashReporter = crashReporter;
+
+    if (currentCrashReporter != null) {
+      currentCrashReporter.updateSessionId(sessionId);
+    }
+  }
+
+  @ReactMethod
+  public void setGlobalAttributes(ReadableMap attributeMap) {
+    CrashReporter currentCrashReporter = crashReporter;
+
+    if (currentCrashReporter != null) {
+      currentCrashReporter.updateGlobalAttributes(attributesFromMap(attributeMap));
+    }
   }
 
   @NonNull
@@ -173,9 +213,7 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
   }
 
   @NonNull
-  private Attributes attributesFromMap(SpanMapReader mapReader) {
-    ReadableMap attributeMap = mapReader.getAttributes();
-
+  private Attributes attributesFromMap(@Nullable ReadableMap attributeMap) {
     if (attributeMap == null) {
       return Attributes.empty();
     }

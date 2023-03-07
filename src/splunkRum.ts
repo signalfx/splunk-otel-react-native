@@ -28,42 +28,65 @@ import { SimpleSpanProcessor } from '@opentelemetry/sdk-trace-base';
 import { _globalThis } from '@opentelemetry/core';
 import {
   initializeNativeSdk,
-  ReactNativeConfiguration,
   NativeSdKConfiguration,
-} from './index';
+  setNativeSessionId,
+  testNativeCrash,
+  AppStartInfo,
+} from './native';
 import ReacNativeSpanExporter from './exporting';
 import GlobalAttributeAppender from './globalAttributeAppender';
 import { instrumentXHR } from './instrumentations/xhr';
 import { instrumentErrors, reportError } from './instrumentations/errors';
-import { setGlobalAttributes } from './globalAttributes';
+import { getResource, setGlobalAttributes } from './globalAttributes';
 import { LOCATION_LATITUDE, LOCATION_LONGITUDE } from './splunkAttributeNames';
-import { _generatenewSessionId } from './session';
+import { getSessionId, _generatenewSessionId } from './session';
+import { Platform } from 'react-native';
+
+export interface ReactNativeConfiguration {
+  realm?: string;
+  beaconEndpoint: string;
+  rumAccessToken: string;
+  applicationName: string;
+  environment?: string;
+  appStartEnabled?: boolean;
+  debug?: boolean;
+}
 
 interface SplunkRumType {
-  appStart?: Span;
+  appStartSpan?: Span | undefined;
   appStartEnd: number | null;
   finishAppStart: () => void;
   init: (options: ReactNativeConfiguration) => SplunkRumType | undefined;
   provider?: WebTracerProvider;
   _generatenewSessionId: () => void;
+  _testNativeCrash: () => void;
   reportError: (err: any, isFatal?: boolean) => void;
   setGlobalAttributes: (attributes: Attributes) => void;
   updateLocation: (latitude: number, longitude: number) => void;
 }
+
 const DEFAULT_CONFIG = {
-  appStart: true,
+  appStartEnabled: true,
 };
+
+let appStartInfo: AppStartInfo | null = null;
+let isInitialized = false;
 
 export const SplunkRum: SplunkRumType = {
   appStartEnd: null,
   finishAppStart() {
-    if (this.appStart && this.appStart.isRecording()) {
-      this.appStart.end();
+    if (this.appStartSpan && this.appStartSpan.isRecording()) {
+      this.appStartSpan.end();
     } else {
       this.appStartEnd = Date.now();
+      diag.debug('AppStart: end called without start');
     }
   },
   init(configugration: ReactNativeConfiguration) {
+    if (isInitialized) {
+      console.warn('Multiple init calls');
+      return;
+    }
     //by default wants to use otlp
     if (!('OTEL_TRACES_EXPORTER' in _globalThis)) {
       (_globalThis as any).OTEL_TRACES_EXPORTER = 'none';
@@ -120,6 +143,7 @@ export const SplunkRum: SplunkRumType = {
       nativeSdkConf.beaconEndpoint = config.beaconEndpoint;
     }
     nativeSdkConf.rumAccessToken = config.rumAccessToken;
+    nativeSdkConf.globalAttributes = { ...getResource() };
 
     diag.debug(
       'Initializing with: ',
@@ -128,23 +152,30 @@ export const SplunkRum: SplunkRumType = {
       nativeSdkConf.rumAccessToken
     );
 
-    initializeNativeSdk(nativeSdkConf).then((appStart) => {
-      diag.debug('AppStart: native module start', appStart);
-      //TODO refactor appStart
-      if (config.appStart) {
+    //TODO probs do not send appStartInfo like this
+    initializeNativeSdk(nativeSdkConf).then((nativeAppStart) => {
+      appStartInfo = nativeAppStart;
+      if (Platform.OS === 'ios') {
+        appStartInfo.isColdStart = appStartInfo.isColdStart || true;
+        appStartInfo.appStart =
+          appStartInfo.appStart || appStartInfo.moduleStart;
+      }
+      setNativeSessionId(getSessionId());
+
+      if (config.appStartEnabled) {
         const tracer = provider.getTracer('AppStart');
         const nativeInitEnd = Date.now();
 
-        this.appStart = tracer.startSpan('AppStart', {
-          startTime: Date.now(),
+        this.appStartSpan = tracer.startSpan('AppStart', {
+          startTime: appStartInfo.appStart,
           attributes: {
             'component': 'appstart',
-            'start.type': 'cold',
+            'start.type': appStartInfo.isColdStart ? 'cold' : 'warm',
           },
         });
 
         //FIXME no need to have native init span probably
-        const ctx = trace.setSpan(context.active(), this.appStart);
+        const ctx = trace.setSpan(context.active(), this.appStartSpan);
         context.with(ctx, () => {
           tracer
             .startSpan('nativeInit', { startTime: nativeInit })
@@ -154,33 +185,17 @@ export const SplunkRum: SplunkRumType = {
             .end(clientInitEnd);
         });
 
-        const defaultAppStartEnd = Date.now();
         if (this.appStartEnd !== null) {
-          diag.debug('AppStart: real end');
-          this.appStart.end(this.appStartEnd);
-        } else {
-          setTimeout(() => {
-            //FIXME temp
-            if (this.appStart && this.appStart.isRecording()) {
-              if (this.appStartEnd) {
-                this.appStart.end(this.appStartEnd);
-                diag.debug('AppStart: real end in timeout');
-              } else {
-                this.appStart.end(defaultAppStartEnd);
-                diag.debug(
-                  'AppStart: timeout end',
-                  new Date(defaultAppStartEnd)
-                );
-              }
-            }
-          }, 5000);
+          diag.debug('AppStart: using manual end');
+          this.appStartSpan.end(this.appStartEnd);
         }
       }
     });
-
+    isInitialized = true;
     return this;
   },
   _generatenewSessionId: _generatenewSessionId,
+  _testNativeCrash: testNativeCrash,
   reportError: reportError,
   setGlobalAttributes: setGlobalAttributes,
   updateLocation: updateLocation,

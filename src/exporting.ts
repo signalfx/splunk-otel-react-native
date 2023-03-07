@@ -22,7 +22,7 @@ import {
   hrTimeToMilliseconds,
 } from '@opentelemetry/core';
 import { Platform } from 'react-native';
-import { exportSpanToNative } from './index';
+import { exportSpanToNative } from './native';
 import { toZipkinSpan } from './zipkintransform';
 export default class ReacNativeSpanExporter implements SpanExporter {
   export(
@@ -61,7 +61,6 @@ export default class ReacNativeSpanExporter implements SpanExporter {
       attributes: span.attributes,
       ...spanContext,
     };
-    nSpan.attributes._splunk_operation = span.name;
     diag.debug('Exporting:toNativeSpan: ', nSpan.name, span.duration);
     return nSpan;
   }

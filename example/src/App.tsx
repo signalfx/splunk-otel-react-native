@@ -22,23 +22,36 @@ import {
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './Home';
 import Details from './Details';
-import { startNavigationTracking } from '@splunk/otel-react-native';
+import {
+  OtelWrapper,
+  startNavigationTracking,
+} from '@splunk/otel-react-native';
+
+const RumConfig = {
+  // realm: 'us0',
+  beaconEndpoint: 'http://192.168.1.136:53820/zipkindump',
+  applicationName: 'appStartTestAndroid',
+  rumAccessToken: 'tests',
+  debug: true,
+};
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   const navigationRef = useNavigationContainerRef();
   return (
-    <NavigationContainer
-      ref={navigationRef}
-      onReady={() => {
-        startNavigationTracking(navigationRef);
-      }}
-    >
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={Details} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <OtelWrapper configuration={RumConfig}>
+      <NavigationContainer
+        ref={navigationRef}
+        onReady={() => {
+          startNavigationTracking(navigationRef);
+        }}
+      >
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Details" component={Details} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </OtelWrapper>
   );
 }

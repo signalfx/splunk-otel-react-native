@@ -14,14 +14,17 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-
-fileprivate var spanExporter: SpanToDiskExporter?
+fileprivate var spanExporter: SpanExporter = NoopExporter()
 
 @objc(SplunkOtelReactNative)
 class SplunkOtelReactNative: NSObject {
   private var appStartTime = Date()
   @objc(initialize:withResolver:withRejecter:)
   func initialize(config: Dictionary<String, Any>, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
+      let db = SpanDb()
+      spanExporter = SpanToDiskExporter(spanDb: db)
+      initializeCrashReporting(exporter: spanExporter)
+
       print("Default appStartTime \(appStartTime)")
       do {
           appStartTime = try processStartTime()
@@ -46,25 +49,53 @@ class SplunkOtelReactNative: NSObject {
       var beaconWithAuth = beaconUrl!
       beaconWithAuth += "?auth=" + auth!
 
-      let db = SpanDb()
-      spanExporter = SpanToDiskExporter(spanDb: db)
-
       SpanFromDiskExport.start(spanDb: db, endpoint: beaconWithAuth)
 
-      resolve(appStartTime.timeIntervalSince1970 * 1000)
+      resolve(@{
+          @"moduleStart": [NSNumber numberWithDouble:(appStartTime.timeIntervalSince1970 * 1000)],
+      })
     }
 
     @objc(export:withResolver:withRejecter:)
     func export(spans: Array<Dictionary<String, Any>>, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
-        if spanExporter == nil {
-            resolve(false)
-            return
+        resolve(spanExporter.export(spans: spans))
+    }
+
+    @objc(nativeCrash)
+    func nativeCrash() -> Void {
+        print("Native crash")
+        let x: Int? = nil
+        print(x! as Any);
+    }
+
+    @objc(setSessionId:withResolver:withRejecter:)
+    func setSessionId(id: String, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
+        Globals.setSessionId(id)
+        updateCrashReportSessionId(id)
+        resolve(true)
+    }
+
+    @objc(setGlobalAttributes:withResolver:withRejecter:)
+    func setGlobalAttributes(attributes: Dictionary<String, Any>, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
+        let newAttribs: [String:String] = attributes.compactMapValues { v in
+            switch v {
+            case is String:
+                return v as! String
+            case is Bool:
+                return (v as! Bool).description
+            case is Double:
+                return (v as! Double).description
+            case is Int:
+                return (v as! Int).description
+            default:
+                return nil
+            }
         }
 
-        let exporter = spanExporter!
-        resolve(exporter.export(spans: spans))
+        Globals.setGlobalAttributes(newAttribs)
+        resolve(true)
     }
-    
+
     private func processStartTime() throws -> Date {
         let name = "kern.proc.pid"
         var len: size_t = 4

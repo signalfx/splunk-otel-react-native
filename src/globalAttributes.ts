@@ -19,6 +19,7 @@ import type { Attributes } from '@opentelemetry/api';
 import type { ResourceAttributes } from '@opentelemetry/resources';
 import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
 import { getSessionId } from './session';
+import { setNativeGlobalAttributes } from './native';
 
 let globalAttributes: Attributes = {};
 
@@ -31,7 +32,7 @@ const OS_TYPE = 'os.type';
 const OS_VERSION = 'os.version';
 
 // just for future where there may be a way to use proper resource
-function getResource(): ResourceAttributes {
+export function getResource(): ResourceAttributes {
   let resourceAttrs = {
     // ...SDK_INFO,
     [SemanticResourceAttributes.TELEMETRY_SDK_NAME]:
@@ -65,6 +66,7 @@ globalAttributes = {
 //screen.name
 export function setGlobalAttributes(attrs: object) {
   globalAttributes = Object.assign(globalAttributes, attrs);
+  setNativeGlobalAttributes(globalAttributes);
 }
 
 export function getGlobalAttributes(): Attributes {

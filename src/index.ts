@@ -1,5 +1,5 @@
 /*
-Copyright 2022 Splunk Inc.
+Copyright 2023 Splunk Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -14,50 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import { NativeModules, Platform } from 'react-native';
-
-const LINKING_ERROR =
-  `The package 'splunk-otel-react-native' doesn't seem to be linked. Make sure: \n\n` +
-  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
-  '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo Go\n';
-
-const SplunkOtelReactNative = NativeModules.SplunkOtelReactNative
-  ? NativeModules.SplunkOtelReactNative
-  : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
-
-export interface ReactNativeConfiguration {
-  realm?: string;
-  beaconEndpoint: string;
-  rumAccessToken: string;
-  applicationName: string;
-  environment?: string;
-  appStart?: boolean;
-  debug?: boolean;
-}
-
-export interface NativeSdKConfiguration {
-  beaconEndpoint?: string;
-  rumAccessToken?: string;
-}
-//TODO should probably not export this
-export function initializeNativeSdk(
-  config: NativeSdKConfiguration
-): Promise<Object> {
-  return SplunkOtelReactNative.initialize(config);
-}
-
-export function exportSpanToNative(span: object): Promise<null> {
-  return SplunkOtelReactNative.export(span);
-}
-
 // TODO workaround for otel which uses timeOrigin
 if (!global.performance.timeOrigin) {
   (global as any).performance.timeOrigin = Date.now() - performance.now();
@@ -65,3 +21,4 @@ if (!global.performance.timeOrigin) {
 
 export * from './splunkRum';
 export * from './trackNavigation';
+export * from './OtelWrapper';

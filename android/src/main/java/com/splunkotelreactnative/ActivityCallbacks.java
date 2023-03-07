@@ -2,62 +2,60 @@ package com.splunkotelreactnative;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import java.util.concurrent.atomic.AtomicReference;
-
 public class ActivityCallbacks implements Application.ActivityLifecycleCallbacks {
+  private boolean isRegisteredForLifecycleCallbacks;
 
-  private AtomicReference<String> initialAppActivity;
-  private AppStart appStart;
-
-  public ActivityCallbacks(AtomicReference<String>  initialAppActivity, AppStart appStart) {
-    this.initialAppActivity = initialAppActivity;
-    this.appStart = appStart;
-  }
-
-  @Override
-  public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle savedInstanceState) {
-    initialAppActivity.set("TODO");
-    Log.d("ActivityCallbacks", "onActivityCreated");
-    if (savedInstanceState == null) {
-      appStart.setType("cold");
-    } else {
-      appStart.setType("warm");
+  public void registerActivityLifecycleCallbacks(Context context) {
+    // Make sure the callback is registered only once.
+    if (isRegisteredForLifecycleCallbacks) {
+      return;
+    }
+    Context appContext = context.getApplicationContext();
+    if (appContext instanceof Application) {
+      ((Application) appContext).registerActivityLifecycleCallbacks(this);
+      isRegisteredForLifecycleCallbacks = true;
     }
   }
 
   @Override
+  public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle savedInstanceState) {
+    boolean isColdStart = savedInstanceState == null;
+    Log.d("SplunkRNRum", "onActivityCreated: " + isColdStart);
+    AppStartTracker.getInstance().setColdStart(isColdStart);
+  }
+
+  @Override
   public void onActivityStarted(@NonNull Activity activity) {
-    Log.d("ActivityCallbacks", "onActivityStarted");
   }
 
   @Override
   public void onActivityResumed(@NonNull Activity activity) {
-    Log.d("ActivityCallbacks", "onActivityResumed");
+    String simpleName = activity.getClass().getSimpleName();
+    Log.d("SplunkRNRum", "onActivityResumed: " + simpleName);
   }
 
   @Override
   public void onActivityPaused(@NonNull Activity activity) {
-    Log.d("ActivityCallbacks", "onActivityPaused");
   }
 
   @Override
   public void onActivityStopped(@NonNull Activity activity) {
-    Log.d("ActivityCallbacks", "onActivityStopped");
+
   }
 
   @Override
-  public void onActivitySaveInstanceState(@NonNull Activity activity, @NonNull Bundle bundle) {
-    Log.d("ActivityCallbacks", "onActivitySaveInstanceState");
+  public void onActivitySaveInstanceState(@NonNull Activity activity, @NonNull Bundle outState) {
+
   }
 
   @Override
   public void onActivityDestroyed(@NonNull Activity activity) {
-    Log.d("ActivityCallbacks", "onActivityDestroyed");
   }
 }

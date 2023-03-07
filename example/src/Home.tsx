@@ -14,22 +14,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, Button } from 'react-native';
 import { trace, context } from '@opentelemetry/api';
-import { Rum } from '../index';
+import { SplunkRum } from '@splunk/otel-react-native';
 
-export default function Home({ navigation }) {
-  const [data, setData] = useState([]);
-  const [isLoading, setLoading] = useState(false);
+export default function Home({ navigation }: { navigation: any }) {
   const tracer = trace.getTracer('home');
-
-  useEffect(() => {
-    setTimeout(() => {
-      console.log('APP:useEffect');
-      Rum.finishAppStart();
-    }, 3431);
-  }, []);
 
   const createSpan = () => {
     const parent = tracer.startSpan('clickToFetch');
@@ -48,14 +39,11 @@ export default function Home({ navigation }) {
   };
 
   const rnFetch = async () => {
-    // setLoading(true);
     try {
       const url = 'http://pmrum3.o11ystore.com/product/L9ECAV7KIM';
       await fetch(url);
     } catch (error) {
       console.error(error);
-    } finally {
-      // setLoading(false);
     }
   };
 
@@ -83,8 +71,8 @@ export default function Home({ navigation }) {
       <Button title="Nested fetch custom span" onPress={createSpan} />
       <Button title="RN fetch GET" onPress={rnFetch} />
       <Button title="Workflow span" onPress={workflowSpan} />
-      <Button title="New session" onPress={Rum._generatenewSessionId} />
-      <Text>{isLoading && 'Loading'}</Text>
+      <Button title="New session" onPress={SplunkRum._generatenewSessionId} />
+      <Button title="Crash" onPress={SplunkRum._testNativeCrash} />
       <Button title="JS error" onPress={throwError} />
     </View>
   );
