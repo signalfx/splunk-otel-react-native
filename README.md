@@ -4,7 +4,7 @@
 
 ## Overview
 
-This library lets you autoinstrument React Native applications. 
+This library lets you autoinstrument React Native applications. Minimum supported React Native version is 0.65. Older versions may also work.
 
 > ⚠ Expo isn't supported yet.
 
@@ -71,7 +71,7 @@ export default function App() {
 
 ## Data collection
 
-The library exports data using the Zipkin exporter. Adding your own exporters and processors isn't supported yet. 
+The library exports data using the Zipkin exporter. Adding your own exporters and processors isn't supported yet.
 
 Supported features:
 
