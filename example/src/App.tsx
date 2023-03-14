@@ -26,13 +26,15 @@ import {
   OtelWrapper,
   startNavigationTracking,
 } from '@splunk/otel-react-native';
+import type { ReactNativeConfiguration } from '@splunk/otel-react-native';
 
-const RumConfig = {
+const RumConfig: ReactNativeConfiguration = {
   // realm: 'us0',
   beaconEndpoint: 'http://192.168.1.136:53820/zipkindump',
-  applicationName: 'appStartTestAndroid',
+  applicationName: 'ignoreUrlsTest',
   rumAccessToken: 'tests',
   debug: true,
+  ignoreUrls: ['http://pmrum3.o11ystore.com/product/OLJCESPC7Z'],
 };
 
 const Stack = createNativeStackNavigator();

@@ -14,18 +14,30 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import React from 'react';
-import { View, Text, Button } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
 export default function Details() {
+  const [customUrl, setCustomUrl] = useState(
+    'http://pmrum3.o11ystore.com/product/OLJCESPC7Z'
+  );
+
   const rnFetch = async () => {
     try {
       const url = 'http://pmrum3.o11ystore.com/';
       await fetch(url);
     } catch (error) {
       console.error(error);
-    } finally {
-      // yo
+    }
+  };
+  const customFetch = async () => {
+    try {
+      console.log('custom fetch with: ', customUrl);
+      if (customUrl) {
+        await fetch(customUrl);
+      }
+    } catch (error) {
+      console.error(error);
     }
   };
 
@@ -39,6 +51,21 @@ export default function Details() {
       <Text>Details Screen</Text>
       <Button title="RN fetch GET" onPress={rnFetch} />
       <Button title="JS error" onPress={throwError} />
+      <TextInput
+        style={styles.input}
+        onChangeText={setCustomUrl}
+        value={customUrl}
+      />
+      <Button title="Fetch custom" onPress={customFetch} />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
+});
