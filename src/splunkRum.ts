@@ -44,15 +44,21 @@ import { Platform } from 'react-native';
 
 export interface ReactNativeConfiguration {
   realm?: string;
-  beaconEndpoint: string;
+  beaconEndpoint?: string;
   rumAccessToken: string;
   applicationName: string;
   environment?: string;
   appStartEnabled?: boolean;
   debug?: boolean;
+  /**
+   * URLs that partially match any regex in ignoreUrls will not be traced.
+   * In addition, URLs that are _exact matches_ of strings in ignoreUrls will
+   * also not be traced.
+   */
+  ignoreUrls?: Array<string | RegExp>;
 }
 
-interface SplunkRumType {
+export interface SplunkRumType {
   appStartSpan?: Span | undefined;
   appStartEnd: number | null;
   finishAppStart: () => void;
@@ -129,7 +135,7 @@ export const SplunkRum: SplunkRumType = {
     this.provider = provider;
     const clientInitEnd = Date.now();
 
-    instrumentXHR();
+    instrumentXHR({ ignoreUrls: config.ignoreUrls });
     instrumentErrors();
 
     const nativeInit = Date.now();
@@ -152,7 +158,7 @@ export const SplunkRum: SplunkRumType = {
       nativeSdkConf.rumAccessToken
     );
 
-    //TODO probs do not send appStartInfo like this
+    //TODO do not send appStartInfo in init response
     initializeNativeSdk(nativeSdkConf).then((nativeAppStart) => {
       appStartInfo = nativeAppStart;
       if (Platform.OS === 'ios') {

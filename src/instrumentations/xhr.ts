@@ -14,14 +14,19 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import { trace, Attributes } from '@opentelemetry/api';
+import { trace, Attributes, diag } from '@opentelemetry/api';
+import { isUrlIgnored } from '@opentelemetry/core';
 import { SemanticAttributes } from '@opentelemetry/semantic-conventions';
 import { captureTraceParent } from '../serverTiming';
 import { COMPONENT } from '../splunkAttributeNames';
 
 const ATTRIBUTE_PROP = '_splunkXHRAttributes';
 
-export function instrumentXHR() {
+interface XhrConfig {
+  ignoreUrls: Array<string | RegExp> | undefined;
+}
+
+export function instrumentXHR(config: XhrConfig) {
   const originalOpen = XMLHttpRequest.prototype.open;
   const originalSend = XMLHttpRequest.prototype.send;
   const tracer = trace.getTracer('xhr');
@@ -39,8 +44,12 @@ export function instrumentXHR() {
       [SemanticAttributes.HTTP_URL]: args[1],
       [COMPONENT]: 'http',
     };
-
-    this[ATTRIBUTE_PROP] = attributes;
+    diag.debug(`XHR url: ${args[1]}, ignoreUrls: ${config.ignoreUrls}`);
+    if (isUrlIgnored(args[1], config.ignoreUrls)) {
+      diag.debug('XHR: ignoring span as url matches ignored url');
+    } else {
+      this[ATTRIBUTE_PROP] = attributes;
+    }
 
     originalOpen.apply(this, args);
   };

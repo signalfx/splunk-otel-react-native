@@ -23,12 +23,19 @@ type Props = PropsWithChildren<{
   configuration: ReactNativeConfiguration;
 }>;
 
+let isInitialized = false;
+
 export const OtelWrapper: React.FC<Props> = ({ children, configuration }) => {
   useEffect(() => {
     SplunkRum.finishAppStart();
   }, []);
 
-  SplunkRum.init(configuration);
+  if (!isInitialized) {
+    SplunkRum.init(configuration);
+    isInitialized = true;
+  } else {
+    console.log('Already initialized');
+  }
 
   return <>{children}</>;
 };
