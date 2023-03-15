@@ -50,10 +50,8 @@ class SplunkOtelReactNative: NSObject {
       beaconWithAuth += "?auth=" + auth!
 
       SpanFromDiskExport.start(spanDb: db, endpoint: beaconWithAuth)
-
-      resolve(@{
-          @"moduleStart": [NSNumber numberWithDouble:(appStartTime.timeIntervalSince1970 * 1000)],
-      })
+            
+      resolve(["moduleStart": appStartTime.timeIntervalSince1970 * 1000])
     }
 
     @objc(export:withResolver:withRejecter:)
