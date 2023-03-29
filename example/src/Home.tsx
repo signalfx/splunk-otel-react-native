@@ -65,6 +65,7 @@ export default function Home({ navigation }: { navigation: any }) {
   return (
     <View style={styles.container}>
       <Button
+        testID="myTestId"
         title="Go to Details Screen"
         onPress={() => navigation.navigate('Details')}
       />
