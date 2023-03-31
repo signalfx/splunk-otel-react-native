@@ -5,13 +5,41 @@ on:
     branches:
       - '*'
 
+variables:
+  ANDROID_COMPILE_SDK: "33"
+  ANDROID_BUILD_TOOLS: "34.0.3"
+  ANDROID_COMMAND_LINE_TOOLS: "9477386"
+
+.prepare-android-environment:
+  before_script:
+    - apt-get --quiet update --yes
+    - apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
+    - wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/commandlinetools-linux-${ANDROID_COMMAND_LINE_TOOLS}_latest.zip
+    - unzip -d android-sdk-linux android-sdk.zip
+    - echo y | android-sdk-linux/cmdline-tools/bin/sdkmanager --sdk_root=. "platforms;android-${ANDROID_COMPILE_SDK}" >/dev/null
+    - echo y | android-sdk-linux/cmdline-tools/bin/sdkmanager --sdk_root=. "platform-tools" >/dev/null
+    - echo y | android-sdk-linux/cmdline-tools/bin/sdkmanager --sdk_root=. "build-tools;${ANDROID_BUILD_TOOLS}" >/dev/null
+    - export ANDROID_SDK_ROOT=$PWD
+    - export PATH=$PATH:$PWD/platform-tools/
+    # temporarily disable checking for EPIPE error and use yes to accept all licenses
+    - set +o pipefail
+    - yes | android-sdk-linux/cmdline-tools/bin/sdkmanager --sdk_root=. --licenses
+    - set -o pipefail
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
       uses: actions/checkout@v2
-
+    - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+    - name: Set up JDK 11 for running Gradle
+        uses: actions/setup-java@v3.11.0
+        with:
+          distribution: adopt
+          java-version: 11
+    - extends: .prepare-android-environment
     - name: Run Hello World
       run: echo "Hello World"
