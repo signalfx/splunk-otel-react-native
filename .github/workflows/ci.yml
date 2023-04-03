@@ -25,8 +25,8 @@ jobs:
           export ANDROID_BUILD_TOOLS=34.0.3
           export ANDROID_COMMAND_LINE_TOOLS=9477386
 
-          apt-get --quiet update --yes
-          apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
+          sudo apt-get --quiet update --yes
+          sudo apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
           wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/commandlinetools-linux-${ANDROID_COMMAND_LINE_TOOLS}_latest.zip
           unzip -d android-sdk-linux android-sdk.zip
           echo y | android-sdk-linux/cmdline-tools/bin/sdkmanager --sdk_root=. "platforms;android-${ANDROID_COMPILE_SDK}" >/dev/null
