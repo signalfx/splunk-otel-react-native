@@ -5,11 +5,6 @@ on:
     branches:
       - '*'
 
-variables:
-  ANDROID_COMPILE_SDK: "33"
-  ANDROID_BUILD_TOOLS: "34.0.3"
-  ANDROID_COMMAND_LINE_TOOLS: "9477386"
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,6 +21,10 @@ jobs:
           java-version: 11
       - name: Prepare Android environment
         run: |
+          export ANDROID_COMPILE_SDK=33
+          export ANDROID_BUILD_TOOLS=34.0.3
+          export ANDROID_COMMAND_LINE_TOOLS=9477386
+
           apt-get --quiet update --yes
           apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
           wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/commandlinetools-linux-${ANDROID_COMMAND_LINE_TOOLS}_latest.zip
