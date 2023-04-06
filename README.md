@@ -77,7 +77,9 @@ Supported features:
 
 - Autoinstrumented HTTP requests
 - Autoinstrumented JS Error tracking
+- Autoinstrumented navigation tracking for react-navigation
 - Custom instrumentation using Opentelemetry
+- Capturing native crashes
 
 For more information about how this library uses Opentelemetry and about future plans check [CONTRIBUTING.md](CONTRIBUTING.md#Opentelemetry).
 
