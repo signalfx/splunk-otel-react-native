@@ -38,5 +38,5 @@ jobs:
           set +o pipefail
           yes | android-sdk-linux/cmdline-tools/bin/sdkmanager --sdk_root=. --licenses
           set -o pipefail
-      - name: Run Hello World
-        run: echo "Hello World"
+      - name: Build android
+        run: cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug
