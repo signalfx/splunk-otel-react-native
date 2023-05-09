@@ -6,8 +6,8 @@ on:
       - '*'
 
 jobs:
-  build:
-    runs-on: macos-latest
+  build-android:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -40,4 +40,20 @@ jobs:
           yes | android-sdk-linux/cmdline-tools/bin/sdkmanager --sdk_root=. --licenses
           set -o pipefail
       - name: Build android
-        run: cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug
+        run: cd example/android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug
+  build-ios:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    - run: npm ci
+    - name: Set up JDK 11 for running Gradle
+      uses: actions/setup-java@v3.11.0
+      with:
+        distribution: adopt
+        java-version: 11
+    - name: Build ios
+      run: cd example/ios && xcodebuild -workspace SplunkOtelReactNativeExample.xcworkspace -scheme SplunkOtelReactNativeExample -configuration Debug CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
