@@ -15,6 +15,7 @@ jobs:
           node-version: '18'
           cache: 'npm'
       - run: npm ci
+      - run: npm run bootstrap
       - name: Set up JDK 11 for running Gradle
         uses: actions/setup-java@v3.11.0
         with:
@@ -40,9 +41,7 @@ jobs:
           yes | android-sdk-linux/cmdline-tools/bin/sdkmanager --sdk_root=. --licenses
           set -o pipefail
       - name: Build android
-        run: |
-          cd example/android
-          ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug
+        run: cd example/android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug
   build-ios:
     runs-on: macos-latest
     steps:
@@ -57,6 +56,6 @@ jobs:
         distribution: adopt
         java-version: 11
     - run: npm ci
-    - run: pod install --project-directory=example/ios
+    - run: npm run bootstrap
     - name: Build ios
       run: cd example/ios && xcodebuild -workspace SplunkOtelReactNativeExample.xcworkspace -scheme SplunkOtelReactNativeExample -configuration Debug CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
