@@ -48,11 +48,6 @@ jobs:
       with:
         node-version: '18'
         cache: 'npm'
-    - name: Set up JDK 11 for running Gradle
-      uses: actions/setup-java@v3.11.0
-      with:
-        distribution: adopt
-        java-version: 11
     - run: npm ci
     - run: npm run bootstrap
     - name: Build ios
