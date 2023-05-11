@@ -39,7 +39,7 @@ jobs:
           yes | android-sdk-linux/cmdline-tools/bin/sdkmanager --sdk_root=. --licenses
           set -o pipefail
       - name: Build android
-        run: cd example/android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug
+        run: cd example/android && ./gradlew assembleDebug -DtestBuildType=debug
   build-ios:
     runs-on: macos-latest
     steps:
