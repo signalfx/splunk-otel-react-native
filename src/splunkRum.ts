@@ -50,6 +50,8 @@ export interface ReactNativeConfiguration {
   environment?: string;
   appStartEnabled?: boolean;
   debug?: boolean;
+  /** Sets attributes added to every Span. */
+  globalAttributes?: Attributes;
   /**
    * URLs that partially match any regex in ignoreUrls will not be traced.
    * In addition, URLs that are _exact matches_ of strings in ignoreUrls will
@@ -208,7 +210,9 @@ export const SplunkRum: SplunkRumType = {
 };
 
 function addGlobalAttributesFromConf(config: ReactNativeConfiguration) {
-  const confAttributes: Attributes = {};
+  const confAttributes: Attributes = {
+    ...config.globalAttributes,
+  };
   confAttributes.app = config.applicationName;
 
   if (config.environment) {
