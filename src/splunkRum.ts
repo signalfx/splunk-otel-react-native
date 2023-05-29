@@ -51,9 +51,7 @@ export interface ReactNativeConfiguration {
   appStartEnabled?: boolean;
   debug?: boolean;
   /** Sets attributes added to every Span. */
-  globalAttributes?: {
-    [attributeKey: string]: string;
-  };
+  globalAttributes?: Attributes;
   /**
    * URLs that partially match any regex in ignoreUrls will not be traced.
    * In addition, URLs that are _exact matches_ of strings in ignoreUrls will

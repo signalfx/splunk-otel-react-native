@@ -36,6 +36,7 @@ const RumConfig: ReactNativeConfiguration = {
   debug: true,
   globalAttributes: {
     globalAttr1: '42',
+    globalAttr2: 42,
   },
   ignoreUrls: ['http://pmrum3.o11ystore.com/product/OLJCESPC7Z'],
 };
