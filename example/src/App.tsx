@@ -29,11 +29,15 @@ import {
 import type { ReactNativeConfiguration } from '@splunk/otel-react-native';
 
 const RumConfig: ReactNativeConfiguration = {
-  // realm: 'us0',
-  beaconEndpoint: 'http://192.168.1.136:53820/zipkindump',
-  applicationName: 'ignoreUrlsTest',
-  rumAccessToken: 'tests',
+  realm: 'us0',
+  // beaconEndpoint: 'http://192.168.1.137:53820/zipkindump',
+  applicationName: 'ReactNativeExample',
+  rumAccessToken: '',
   debug: true,
+  globalAttributes: {
+    globalAttr1: '42',
+    globalAttr2: 42,
+  },
   ignoreUrls: ['http://pmrum3.o11ystore.com/product/OLJCESPC7Z'],
 };
 

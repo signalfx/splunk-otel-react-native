@@ -72,7 +72,12 @@ export default function Home({ navigation }: { navigation: any }) {
       <Button title="RN fetch GET" onPress={rnFetch} />
       <Button title="Workflow span" onPress={workflowSpan} />
       <Button title="New session" onPress={SplunkRum._generatenewSessionId} />
-      <Button title="Crash" onPress={SplunkRum._testNativeCrash} />
+      <Button
+        testID="crashButton"
+        accessibilityLabel="crashButton"
+        title="Crash"
+        onPress={SplunkRum._testNativeCrash}
+      />
       <Button title="JS error" onPress={throwError} />
     </View>
   );
