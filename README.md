@@ -4,8 +4,8 @@
 
 ## Overview
 
-This library lets you autoinstrument React Native applications. Minimum supported React Native version is 0.67.
-To instrument applications running on React Native versions lower than 0.67, see [Instrument lower versions](instrument-lower-versions).
+This library lets you autoinstrument React Native applications. Minimum supported React Native version is 0.68.
+To instrument applications running on React Native versions lower than 0.68, see [Instrument lower versions](instrument-lower-versions).
 
 ## Get started
 
@@ -44,7 +44,7 @@ const Rum = SplunkRum.init({
 
 ### Instrument lower versions
 
-To instrument applications running on React Native versions lower than 0.67, edit your `metro.config.js` file to force metro to use browser specific packages. For example:
+To instrument applications running on React Native versions lower than 0.68, edit your `metro.config.js` file to force metro to use browser specific packages. For example:
 
 ```js
 const defaultResolver = require('metro-resolver');
