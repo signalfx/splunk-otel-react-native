@@ -4,9 +4,8 @@
 
 ## Overview
 
-This library lets you autoinstrument React Native applications. Minimum supported React Native version is 0.65. Older versions may also work.
-
-> ⚠ Expo isn't supported yet.
+This library lets you autoinstrument React Native applications. Minimum supported React Native version is 0.67.
+To instrument applications running on React Native versions lower than 0.67, see [Instrument lower versions](instrument-lower-versions).
 
 ## Get started
 
@@ -38,10 +37,54 @@ const Rum = SplunkRum.init({
 3. Customize the initialization parameters to specify:
 
 - `realm`: The Splunk Observability Cloud realm of your organization. For example, `us0`.
-- `rumAuth`: Your Splunk RUM authentication token. You can find or generate the token [here](https://app.signalfx.com/o11y/#/organization/current?selectedKeyValue=sf_section:accesstokens). Notice that RUM and APM authentication tokens are different.
-- `app`: Name of your application. Set it to distinguish your app from others in Splunk Observability Cloud.
+- `rumAccessToken`: Your Splunk RUM authentication token. You can find or generate the token [here](https://app.signalfx.com/o11y/#/organization/current?selectedKeyValue=sf_section:accesstokens). Notice that RUM and APM authentication tokens are different.
+- `applicationName`: Name of your application. Set it to distinguish your app from others in Splunk Observability Cloud.
 
-> If needed, you can set a different target URL by specifying a value for `beaconUrl`. Setting a different beacon URL overrides the `realm` setting.
+> If needed, you can set a different target URL by specifying a value for `beaconEndpoint`. Setting a different beacon URL overrides the `realm` setting.
+
+### Instrument lower versions
+
+To instrument applications running on React Native versions lower than 0.67, edit your `metro.config.js` file to force metro to use browser specific packages. For example:
+
+```js
+const defaultResolver = require('metro-resolver');
+
+module.exports = {
+  resolver: {
+    resolveRequest: (context, realModuleName, platform, moduleName) => {
+      const resolved = defaultResolver.resolve(
+        {
+          ...context,
+          resolveRequest: null,
+        },
+        moduleName,
+        platform,
+      );
+
+      if (
+        resolved.type === 'sourceFile' &&
+        resolved.filePath.includes('@opentelemetry')
+      ) {
+        resolved.filePath = resolved.filePath.replace(
+          'platform\\node',
+          'platform\\browser',
+        );
+        return resolved;
+      }
+
+      return resolved;
+    },
+  },
+  transformer: {
+    getTransformOptions: async () => ({
+      transform: {
+        experimentalImportSupport: false,
+        inlineRequires: true,
+      },
+    }),
+  },
+};
+```
 
 ## View navigation
 
@@ -78,6 +121,7 @@ Supported features:
 - Autoinstrumented HTTP requests
 - Autoinstrumented JS Error tracking
 - Autoinstrumented navigation tracking for react-navigation
+- Session tracking
 - Custom instrumentation using Opentelemetry
 - Capturing native crashes
 
@@ -85,7 +129,7 @@ For more information about how this library uses Opentelemetry and about future 
 
 ## License
 
-Copyright 2022 Splunk Inc.
+Copyright 2023 Splunk Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
