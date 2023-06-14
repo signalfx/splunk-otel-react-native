@@ -5,7 +5,7 @@
 ## Overview
 
 This library lets you autoinstrument React Native applications. Minimum supported React Native version is 0.68.
-To instrument applications running on React Native versions lower than 0.68, see [Instrument lower versions](instrument-lower-versions).
+To instrument applications running on React Native versions lower than 0.68, see [Instrument lower versions](#instrument-lower-versions).
 
 ## Get started
 
