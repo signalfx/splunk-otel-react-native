@@ -20,6 +20,7 @@ import type { ResourceAttributes } from '@opentelemetry/resources';
 import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
 import { getSessionId } from './session';
 import { setNativeGlobalAttributes } from './native';
+import { VERSION } from './version';
 
 let globalAttributes: Attributes = {};
 
@@ -37,9 +38,9 @@ export function getResource(): ResourceAttributes {
     // ...SDK_INFO,
     [SemanticResourceAttributes.TELEMETRY_SDK_NAME]:
       '@splunk/otel-react-native',
-    [SemanticResourceAttributes.TELEMETRY_SDK_VERSION]: '0.2.0',
+    [SemanticResourceAttributes.TELEMETRY_SDK_VERSION]: VERSION,
     // Splunk specific attributes
-    'splunk.rumVersion': '0.2.0',
+    'splunk.rumVersion': VERSION,
   };
 
   if (Platform.OS === 'ios') {
