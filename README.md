@@ -4,7 +4,7 @@
 
 ## Overview
 
-This library lets you autoinstrument React Native applications. Minimum supported React Native version is 0.67. For using with older versions see here.
+This library lets you autoinstrument React Native applications. Minimum supported React Native version is 0.67. For using with older versions see [here](#older-versions).
 
 
 ## Get started
@@ -42,7 +42,7 @@ const Rum = SplunkRum.init({
 
 > If needed, you can set a different target URL by specifying a value for `beaconEndpoint`. Setting a different beacon URL overrides the `realm` setting.
 
-4. Versions pre 0.67
+## Older versions
 Opentelemetry-js uses browser fields in package.json to override some platform specific behaviour. Metro doesn't seem to support this in earlier versions so we need to override it ourselves in metro.config.js. Example configuration file:
 
 ```js
