@@ -33,13 +33,17 @@ const localCapabilities = {
 
 const sauceLabsCapabilities = {
   'platformName': 'Android',
-  'appium:app': 'storage:90fff4b7-390e-495e-98a4-f2eef1d41cef',
+  // 'appium:app': 'storage:90fff4b7-390e-495e-98a4-f2eef1d41cef',
+  'appium:app': 'storage:9ebe6c99-079a-472a-96b1-a688c19f0540',
   'appium:deviceName': 'Google Pixel 5 GoogleAPI Emulator',
   'appium:deviceOrientation': 'portrait',
   'appium:platformVersion': '12.0',
+  // 'appium:tunnelIdentifier': 'e982920442c6402b9d84d418c7d39afd',
   'appium:automationName': 'UiAutomator2',
   'sauce:options': {
     appiumVersion: '2.0.0-beta56',
+    tunnelName: 'sso-splunk.saucelabs.com-mhennoch_tunnel_name',
+    extendedDebugging: true,
     // build: '<your build id>',
     // name: '<your test name>',
   },
@@ -65,15 +69,15 @@ const wdOpts = {
 
 console.log('wdOpts', wdOpts);
 
-// async function runTest() {
-//   const driver = await remote(wdOpts);
-//   try {
-//     const button = await driver.$('~crashButton');
-//     await button.waitForExist({ timeout: 2000 });
-//   } finally {
-//     await driver.pause(3000);
-//     await driver.deleteSession();
-//   }
-// }
+async function runTest() {
+  const driver = await remote(wdOpts);
+  try {
+    const button = await driver.$('~crashButton');
+    await button.waitForExist({ timeout: 2000 });
+  } finally {
+    await driver.pause(3000);
+    await driver.deleteSession();
+  }
+}
 
-// runTest().catch(console.error);
+runTest().catch(console.error);
