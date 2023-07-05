@@ -34,7 +34,7 @@ const localCapabilities = {
 const sauceLabsCapabilities = {
   'platformName': 'Android',
   // 'appium:app': 'storage:90fff4b7-390e-495e-98a4-f2eef1d41cef',
-  'appium:app': 'storage:9ebe6c99-079a-472a-96b1-a688c19f0540',
+  'appium:app': 'storage:6542e795-3a5b-457a-a5de-3d488892e851',
   'appium:deviceName': 'Google Pixel 5 GoogleAPI Emulator',
   'appium:deviceOrientation': 'portrait',
   'appium:platformVersion': '12.0',
