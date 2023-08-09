@@ -66,19 +66,21 @@ export default function Home({ navigation }: { navigation: any }) {
     <View style={styles.container}>
       <Button
         title="Go to Details Screen"
+        accessibilityLabel="goToDetailScreen"
+        testID="goToDetailScreen"
         onPress={() => navigation.navigate('Details')}
       />
       <Button title="Nested fetch custom span" onPress={createSpan} />
-      <Button title="RN fetch GET" onPress={rnFetch} />
+      <Button title="RN fetch GET" onPress={rnFetch} accessibilityLabel="fetch" testID="fetch"/>
       <Button title="Workflow span" onPress={workflowSpan} />
-      <Button title="New session" onPress={SplunkRum._generatenewSessionId} />
+      <Button title="New session" onPress={SplunkRum._generatenewSessionId} accessibilityLabel="newSession" testID="newSession"/>
       <Button
-        testID="crashButton"
-        accessibilityLabel="crashButton"
+        accessibilityLabel="crash"
+        testID="crash"
         title="Crash"
         onPress={SplunkRum._testNativeCrash}
       />
-      <Button title="JS error" onPress={throwError} />
+      <Button title="JS error" onPress={throwError} testID="crash"/>
     </View>
   );
 }

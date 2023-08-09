@@ -15,7 +15,8 @@ limitations under the License.
 */
 
 const { remote } = require('webdriverio');
-const { join } = require('path');
+//requir devServer.js
+const {getDevServer} = require('../devServer/devServer');
 
 const localCapabilities = {
   'platformName': 'Android',
@@ -33,16 +34,14 @@ const localCapabilities = {
 
 const sauceLabsCapabilities = {
   'platformName': 'Android',
-  // 'appium:app': 'storage:90fff4b7-390e-495e-98a4-f2eef1d41cef',
   'appium:app': 'storage:6542e795-3a5b-457a-a5de-3d488892e851',
   'appium:deviceName': 'Google Pixel 5 GoogleAPI Emulator',
   'appium:deviceOrientation': 'portrait',
   'appium:platformVersion': '12.0',
-  // 'appium:tunnelIdentifier': 'e982920442c6402b9d84d418c7d39afd',
   'appium:automationName': 'UiAutomator2',
   'sauce:options': {
     appiumVersion: '2.0.0-beta56',
-    tunnelName: 'sso-splunk.saucelabs.com-mhennoch_tunnel_name',
+    tunnelIdentifier: 'sso-splunk.saucelabs.com-mhennoch_tunnel_name',
     extendedDebugging: true,
     // build: '<your build id>',
     // name: '<your test name>',
@@ -56,26 +55,25 @@ const wdOpts = {
   hostname: 'ondemand.us-west-1.saucelabs.com',
   port: 443,
   baseUrl: 'wd/hub',
-  // services: [
-  //   'appium',
-  //   {
-  //     command: 'appium',
-  //   },
-  // ],
-  // port: parseInt(process.env.APPIUM_PORT, 10) || 4723,
-  // logLevel: 'info',
   capabilities: sauceLabsCapabilities,
 };
 
 console.log('wdOpts', wdOpts);
 
 async function runTest() {
+  // const devServer = getDevServer({ port: 53820 });
+  
   const driver = await remote(wdOpts);
   try {
     const button = await driver.$('~crashButton');
     await button.waitForExist({ timeout: 2000 });
   } finally {
     await driver.pause(3000);
+    // const spans = devServer.getSpans();
+    // console.log('SPANS', spans.length);
+    // spans.forEach((span) => {
+    //   console.log('span', span);
+    // });
     await driver.deleteSession();
   }
 }

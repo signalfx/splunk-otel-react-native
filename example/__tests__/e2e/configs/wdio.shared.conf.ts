@@ -23,8 +23,8 @@ export const config: MobileConfig = {
   // Specify Test Files
   // ==================
   //
-  specs: ['./__tests__/e2e/specs/*.spec.ts'],
-
+  // specs: ['./__tests__/e2e/specs/*.spec.ts'],
+  specs: ['../specs/*.spec.ts'],
   // ============
   // Capabilities
   // ============

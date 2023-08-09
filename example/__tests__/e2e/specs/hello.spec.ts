@@ -14,48 +14,18 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-// describe('First test', () => {
-//   it('Show show main screen', async () => {
-//     console.log('Hello world!');
+describe('First test', () => {
+  it('Show show main screen', async () => {
+    console.log('Hello world!');
 
-//     // // Test actions
-//     // await driver.pause(2000); // Example pause
+    // // Test actions
+    // await driver.pause(2000); // Example pause
 
-//     // const element = await driver.$('com.example.app:id/buttonId'); // Replace with your element selector
-//     // await element.click();
+    // const element = await driver.$('com.example.app:id/buttonId'); // Replace with your element selector
+    // await element.click();
 
-//     // // Add more test actions as needed
+    // // Add more test actions as needed
 
-//     // console.log('Test successful!');
-//   });
-// });
-
-import { remote } from 'webdriverio';
-
-const capabilities = {
-  'platformName': 'Android',
-  'appium:automationName': 'UiAutomator2',
-  'appium:deviceName': 'Android',
-  'appium:appPackage': 'com.android.settings',
-  'appium:appActivity': '.Settings',
-};
-
-const wdOpts = {
-  host: process.env.APPIUM_HOST || 'localhost',
-  port: 4723,
-  logLevel: 'info',
-  capabilities,
-};
-
-async function runTest() {
-  const driver = await remote(wdOpts as any);
-  try {
-    const batteryItem = await driver.$('//*[@text="Battery"]');
-    await batteryItem.click();
-  } finally {
-    await driver.pause(1000);
-    await driver.deleteSession();
-  }
-}
-
-runTest().catch(console.error);
+    // console.log('Test successful!');
+  });
+});
