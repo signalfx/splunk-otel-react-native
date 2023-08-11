@@ -49,14 +49,29 @@ export default function Details() {
     // eslint-disable-next-line react-native/no-inline-styles
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Details Screen</Text>
-      <Button title="RN fetch GET" onPress={rnFetch} accessibilityLabel="goToHomeScreen" testID="goToHomeScreen"/>
-      <Button title="JS error" onPress={throwError} accessibilityLabel="jsError" testID="jsError"/>
+      <Button
+        title="RN fetch GET"
+        onPress={rnFetch}
+        accessibilityLabel="fetch"
+        testID="fetch"
+      />
+      <Button
+        title="JS error"
+        onPress={throwError}
+        accessibilityLabel="jsError"
+        testID="jsError"
+      />
       <TextInput
         style={styles.input}
         onChangeText={setCustomUrl}
         value={customUrl}
       />
-      <Button title="Fetch custom" onPress={customFetch} accessibilityLabel="fetchCustom" testID="fetchCustom"/>
+      <Button
+        title="Fetch custom"
+        onPress={customFetch}
+        accessibilityLabel="fetchCustom"
+        testID="fetchCustom"
+      />
     </View>
   );
 }
