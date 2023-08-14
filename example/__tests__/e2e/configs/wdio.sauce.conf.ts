@@ -22,7 +22,9 @@ export const config: Options.Testrunner = {
   user: process.env.SAUCE_USERNAME,
   key: process.env.SAUCE_ACCESS_KEY,
   region: 'us',
-  maxInstances: 4, //not sure how much sauce allows us
+  // We can't start more than one devServer and not sure how to differentiate between tests spans
+  // if we have only one server.
+  maxInstances: 1,
   services: ['sauce'],
   capabilities: [
     {
@@ -33,8 +35,8 @@ export const config: Options.Testrunner = {
       'appium:deviceName': 'Google Pixel 5 GoogleAPI Emulator',
       'sauce:options': {
         appiumVersion: '2.0.0-beta56',
-        tunnelIdentifier: 'sso-splunk.saucelabs.com-mhennoch_tunnel_name',
-        extendedDebugging: true,
+        tunnelIdentifier: process.env.SAUCE_TUNNEL_ID,
+        // extendedDebugging: true,
       },
     },
   ],
