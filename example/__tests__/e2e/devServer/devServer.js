@@ -87,6 +87,16 @@ function getDevServer(options) {
     res.status(201).end();
   });
 
+  app.get('/some-data', (req, res) => {
+    console.log('Devserver get');
+    
+    res.send({
+      key1: 'value1',
+      key2: 'value2',
+      key3: 'value3',
+    });
+  });
+
   http.createServer({}, app).listen(port, () => {
     console.log(`Listening... ${port}`);
   });
