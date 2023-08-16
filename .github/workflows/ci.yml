@@ -55,7 +55,7 @@ jobs:
           yes | android-sdk-linux/cmdline-tools/bin/sdkmanager --sdk_root=. --licenses
           set -o pipefail
       - name: Build release version
-          run: cd example && npm run build.release
+        run: cd example && npm run build.release
       - name: Upload apk to saucelabs
         run: |
           curl -u "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" --location \
