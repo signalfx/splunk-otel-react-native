@@ -54,6 +54,8 @@ jobs:
           set +o pipefail
           yes | android-sdk-linux/cmdline-tools/bin/sdkmanager --sdk_root=. --licenses
           set -o pipefail
+      - name: Link react to avoid duplication
+        run: cd example && npm link ../node_modules/react
       - name: Build release version
         run: cd example && npm run build.release
       - name: Upload apk to saucelabs
