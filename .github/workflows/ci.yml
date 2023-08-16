@@ -63,7 +63,7 @@ jobs:
           --form 'payload=@"example/android/app/build/outputs/apk/release/app-release.apk"' \
           --form 'name="app-release.apk"'
       - name: Run tests
-        run: npm run wdio.sauce
+        run: cd example && npm run wdio.sauce
   # build-ios:
   #   runs-on: macos-latest
   #   steps:

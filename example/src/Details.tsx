@@ -24,7 +24,7 @@ export default function Details() {
 
   const rnFetch = async () => {
     try {
-      const url = 'http://pmrum3.o11ystore.com/';
+      const url = 'https://www.splunk.com/';
       await fetch(url);
     } catch (error) {
       console.error(error);

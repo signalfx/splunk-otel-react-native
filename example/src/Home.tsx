@@ -40,7 +40,7 @@ export default function Home({ navigation }: { navigation: any }) {
 
   const rnFetch = async () => {
     try {
-      const url = 'http://pmrum3.o11ystore.com/product/L9ECAV7KIM';
+      const url = 'https://www.splunk.com/';
       await fetch(url);
     } catch (error) {
       console.error(error);
