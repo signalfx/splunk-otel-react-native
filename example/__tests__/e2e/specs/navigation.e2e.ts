@@ -27,17 +27,27 @@ describe('Navigation', () => {
     devServer.clearSpans();
   });
 
+  after(() => {
+    console.log('after navigation test');
+    devServer.clearSpans();
+  });
+
   it('should set correct screen names', async () => {
     const navigationButton = await driver.$('~goToDetailScreen');
     await navigationButton.waitForDisplayed({ timeout: 10000 });
+    devServer.clearSpans();
+    await navigationButton.click();
+
+    const fetch = await driver.$('~fetchCustom');
+    await fetch.waitForDisplayed({ timeout: 10000 });
 
     const createSpan = await devServer.findSpan(
       (span) => span.tags.component === 'ui'
     );
+
     console.log(createSpan);
+    console.log('all spans', devServer.getSpans());
     expect(createSpan).toBeDefined();
-    // find first screen Create span
-    // cliick on goToDetailScreen
-    // find second screen Create span
+    expect(createSpan.tags['screen.name']).toBe('Details');
   });
 });

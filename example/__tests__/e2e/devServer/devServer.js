@@ -60,7 +60,7 @@ function getDevServer(options) {
     if (ellapsedTime > 5000) {
       console.error('Listing recorded spans for your convenience.');
       console.error(spans);
-      return null;
+      return undefined;
     }
 
     const span = spans.find(filter);

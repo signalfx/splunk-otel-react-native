@@ -31,7 +31,9 @@ export const config: Options.Testrunner = {
       'platformName': 'Android',
       'appium:automationName': 'UiAutomator2',
       'appium:platformVersion': '12.0',
-      'appium:app': 'storage:06b4566e-dd9c-4763-8080-9a1dafa7c85f',
+      // 'appium:app': 'storage:06b4566e-dd9c-4763-8080-9a1dafa7c85f', // by fileID
+      // by name, takes latest version
+      'appium:app': 'storage:filename=app-release.apk',
       'appium:deviceName': 'Google Pixel 5 GoogleAPI Emulator',
       'sauce:options': {
         appiumVersion: '2.0.0-beta56',

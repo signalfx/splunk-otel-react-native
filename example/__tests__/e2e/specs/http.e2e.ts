@@ -28,6 +28,11 @@ describe('Http request', () => {
     devServer.clearSpans();
   });
 
+  after(() => {
+    console.log('after');
+    devServer.clearSpans();
+  });
+
   it('should exist and have http attributes', async () => {
     const fetchButton = await driver.$('~fetch');
     await fetchButton.waitForDisplayed({ timeout: 10000 });
