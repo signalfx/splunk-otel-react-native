@@ -40,7 +40,6 @@ jobs:
           export ANDROID_COMPILE_SDK=33
           export ANDROID_BUILD_TOOLS=33.0.1
           export ANDROID_COMMAND_LINE_TOOLS=9477386
-
           sudo apt-get --quiet update --yes
           sudo apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
           wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/commandlinetools-linux-${ANDROID_COMMAND_LINE_TOOLS}_latest.zip
