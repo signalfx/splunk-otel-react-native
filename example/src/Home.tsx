@@ -40,13 +40,12 @@ export default function Home({ navigation }: { navigation: any }) {
 
   const rnFetch = async () => {
     try {
-      const url = 'https://www.splunk.com/';
+      const url = 'https://raw.githubusercontent.com/signalfx/splunk-otel-react-native/main/package.json';
       await fetch(url);
     } catch (error) {
       console.error(error);
     }
   };
-
   const throwError = () => {
     console.log('CLIENT:throwError');
     throw new Error('my nice custom error');

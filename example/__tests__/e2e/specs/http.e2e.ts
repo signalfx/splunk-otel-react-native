@@ -45,7 +45,7 @@ describe('Http request', () => {
     expect(fetchSpan.tags['http.method']).toBe('GET');
     expect(fetchSpan.tags['http.status_code']).toBe('200.0');
     expect(fetchSpan.tags['http.url']).toBe(
-      'http://pmrum3.o11ystore.com/product/L9ECAV7KIM'
+      'https://raw.githubusercontent.com/signalfx/splunk-otel-react-native/main/package.json'
     );
   });
 });
