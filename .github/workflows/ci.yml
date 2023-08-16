@@ -60,7 +60,7 @@ jobs:
         run: |
           curl -u "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" --location \
           --request POST 'https://api.us-west-1.saucelabs.com/v1/storage/upload' \
-          --form 'payload=@"android/app/build/outputs/apk/release/app-release.apk"' \
+          --form 'payload=@"example/android/app/build/outputs/apk/release/app-release.apk"' \
           --form 'name="app-release.apk"'
       - name: Run tests
         run: npm run wdio.sauce
