@@ -23,6 +23,7 @@ jobs:
           username: ${{ secrets.SAUCE_USERNAME }}
           accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
           tunnelName: ${{ secrets.SAUCE_TUNNEL_ID }}
+          noSSLBumpDomains: all
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
