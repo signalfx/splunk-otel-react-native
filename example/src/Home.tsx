@@ -46,6 +46,18 @@ export default function Home({ navigation }: { navigation: any }) {
       console.error(error);
     }
   };
+  
+  const fetchJSON = async () => {
+    try {
+      const url = 'https://dog-api.kinduff.com/api/facts';
+      const res = await fetch(url);
+      const json = res.json();
+      console.log('json: ', json);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const throwError = () => {
     console.log('CLIENT:throwError');
     throw new Error('my nice custom error');
@@ -75,6 +87,12 @@ export default function Home({ navigation }: { navigation: any }) {
         onPress={rnFetch}
         accessibilityLabel="fetch"
         testID="fetch"
+      />
+      <Button
+        title="fetch JSON"
+        onPress={fetchJSON}
+        accessibilityLabel="fetchJSON"
+        testID="fetchJSON"
       />
       <Button title="Workflow span" onPress={workflowSpan} />
       <Button
