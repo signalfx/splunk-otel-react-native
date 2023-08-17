@@ -30,7 +30,7 @@ import type { ReactNativeConfiguration } from '@splunk/otel-react-native';
 
 const RumConfig: ReactNativeConfiguration = {
   // realm: 'us0',
-  // works in android emulator
+  // localhost for saucelabs, 10.0.2.2 for local
   // beaconEndpoint: 'http://10.0.2.2:53820/zipkindump',
   beaconEndpoint: 'http://localhost:53820/zipkindump',
   applicationName: 'ReactNativeExampleTest3',

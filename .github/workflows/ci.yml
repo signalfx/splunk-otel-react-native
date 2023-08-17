@@ -1,11 +1,7 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - '*'
-# on:
-#   pull_request:
+  pull_request:
 
 jobs:
   android-integration-tests:
@@ -66,16 +62,16 @@ jobs:
           --form 'name="app-release.apk"'
       - name: Run tests
         run: cd example && npm run wdio.sauce
-  # build-ios:
-  #   runs-on: macos-latest
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #   - uses: actions/setup-node@v3
-  #     with:
-  #       node-version: '18'
-  #       cache: 'npm'
-  #   - run: npm ci
-  #   - run: npm run bootstrap
-  #   - name: Build ios
-  #     run: cd example/ios && xcodebuild -workspace SplunkOtelReactNativeExample.xcworkspace -scheme SplunkOtelReactNativeExample -configuration Debug CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
+  build-ios:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run bootstrap
+    - name: Build ios
+      run: cd example/ios && xcodebuild -workspace SplunkOtelReactNativeExample.xcworkspace -scheme SplunkOtelReactNativeExample -configuration Debug CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
 
