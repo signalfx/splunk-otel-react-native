@@ -40,8 +40,19 @@ export default function Home({ navigation }: { navigation: any }) {
 
   const rnFetch = async () => {
     try {
-      const url = 'http://pmrum3.o11ystore.com/product/L9ECAV7KIM';
+      const url = 'https://raw.githubusercontent.com/signalfx/splunk-otel-react-native/main/package.json';
       await fetch(url);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
+  const fetchJSON = async () => {
+    try {
+      const url = 'https://dog-api.kinduff.com/api/facts';
+      const res = await fetch(url);
+      const json = res.json();
+      console.log('json: ', json);
     } catch (error) {
       console.error(error);
     }
@@ -66,14 +77,42 @@ export default function Home({ navigation }: { navigation: any }) {
     <View style={styles.container}>
       <Button
         title="Go to Details Screen"
+        accessibilityLabel="goToDetailScreen"
+        testID="goToDetailScreen"
         onPress={() => navigation.navigate('Details')}
       />
       <Button title="Nested fetch custom span" onPress={createSpan} />
-      <Button title="RN fetch GET" onPress={rnFetch} />
+      <Button
+        title="RN fetch GET"
+        onPress={rnFetch}
+        accessibilityLabel="fetch"
+        testID="fetch"
+      />
+      <Button
+        title="fetch JSON"
+        onPress={fetchJSON}
+        accessibilityLabel="fetchJSON"
+        testID="fetchJSON"
+      />
       <Button title="Workflow span" onPress={workflowSpan} />
-      <Button title="New session" onPress={SplunkRum._generatenewSessionId} />
-      <Button title="Crash" onPress={SplunkRum._testNativeCrash} />
-      <Button title="JS error" onPress={throwError} />
+      <Button
+        title="New session"
+        onPress={SplunkRum._generatenewSessionId}
+        accessibilityLabel="newSession"
+        testID="newSession"
+      />
+      <Button
+        accessibilityLabel="crash"
+        testID="crash"
+        title="Crash"
+        onPress={SplunkRum._testNativeCrash}
+      />
+      <Button
+        title="JS error"
+        onPress={throwError}
+        testID="jsError"
+        accessibilityLabel="jsError"
+      />
     </View>
   );
 }

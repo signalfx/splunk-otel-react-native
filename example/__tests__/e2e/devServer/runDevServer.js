@@ -1,5 +1,5 @@
 /*
-Copyright 2022 Splunk Inc.
+Copyright 2023 Splunk Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -14,4 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-it.todo('write a test');
+const { getDevServer } = require('./devServer');
+
+getDevServer({ port: 53820 });

@@ -4,9 +4,22 @@ on:
   pull_request:
 
 jobs:
-  build-android:
+  android-integration-tests:
     runs-on: ubuntu-latest
+    permissions: read-all
+    environment: integration
+    env:
+      SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+      SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+      SAUCE_TUNNEL_ID: ${{ secrets.SAUCE_TUNNEL_ID }}
     steps:
+      - name: Setup sauce connect
+        uses: saucelabs/sauce-connect-action@v2
+        with:
+          username: ${{ secrets.SAUCE_USERNAME }}
+          accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
+          tunnelName: ${{ secrets.SAUCE_TUNNEL_ID }}
+          noSSLBumpDomains: all
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
@@ -24,7 +37,6 @@ jobs:
           export ANDROID_COMPILE_SDK=33
           export ANDROID_BUILD_TOOLS=33.0.1
           export ANDROID_COMMAND_LINE_TOOLS=9477386
-
           sudo apt-get --quiet update --yes
           sudo apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
           wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/commandlinetools-linux-${ANDROID_COMMAND_LINE_TOOLS}_latest.zip
@@ -38,8 +50,18 @@ jobs:
           set +o pipefail
           yes | android-sdk-linux/cmdline-tools/bin/sdkmanager --sdk_root=. --licenses
           set -o pipefail
-      - name: Build android
-        run: cd example/android && ./gradlew assembleDebug -DtestBuildType=debug
+      - name: Link react to avoid duplication
+        run: cd example && npm link ../node_modules/react
+      - name: Build release version
+        run: cd example && npm run build.release
+      - name: Upload apk to saucelabs
+        run: |
+          curl -u "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" --location \
+          --request POST 'https://api.us-west-1.saucelabs.com/v1/storage/upload' \
+          --form 'payload=@"example/android/app/build/outputs/apk/release/app-release.apk"' \
+          --form 'name="app-release.apk"'
+      - name: Run tests
+        run: cd example && npm run wdio.sauce
   build-ios:
     runs-on: macos-latest
     steps:
@@ -52,3 +74,4 @@ jobs:
     - run: npm run bootstrap
     - name: Build ios
       run: cd example/ios && xcodebuild -workspace SplunkOtelReactNativeExample.xcworkspace -scheme SplunkOtelReactNativeExample -configuration Debug CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
+

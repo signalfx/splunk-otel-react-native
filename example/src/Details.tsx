@@ -24,7 +24,7 @@ export default function Details() {
 
   const rnFetch = async () => {
     try {
-      const url = 'http://pmrum3.o11ystore.com/';
+      const url = 'https://www.splunk.com/';
       await fetch(url);
     } catch (error) {
       console.error(error);
@@ -49,14 +49,29 @@ export default function Details() {
     // eslint-disable-next-line react-native/no-inline-styles
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Details Screen</Text>
-      <Button title="RN fetch GET" onPress={rnFetch} />
-      <Button title="JS error" onPress={throwError} />
+      <Button
+        title="RN fetch GET"
+        onPress={rnFetch}
+        accessibilityLabel="fetch"
+        testID="fetch"
+      />
+      <Button
+        title="JS error"
+        onPress={throwError}
+        accessibilityLabel="jsError"
+        testID="jsError"
+      />
       <TextInput
         style={styles.input}
         onChangeText={setCustomUrl}
         value={customUrl}
       />
-      <Button title="Fetch custom" onPress={customFetch} />
+      <Button
+        title="Fetch custom"
+        onPress={customFetch}
+        accessibilityLabel="fetchCustom"
+        testID="fetchCustom"
+      />
     </View>
   );
 }
