@@ -32,8 +32,6 @@ export const config: Options.Testrunner = {
       'appium:automationName': 'UiAutomator2',
       'appium:platformVersion': '12.0',
       // 'appium:app': 'storage:c5dc8f50-2769-4c61-8325-45112301e80f', // by fileID
-      // 'appium:appPackage': 'com.splunkotelreactnativeexample',
-      // 'appium:appActivity': 'com.splunkotelreactnativeexample.MainActivity',
       // by name, takes latest version
       'appium:app': 'storage:filename=app-release.apk',
       'appium:deviceName': 'Google Pixel 5 GoogleAPI Emulator',

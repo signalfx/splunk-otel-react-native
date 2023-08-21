@@ -41,7 +41,6 @@ describe('Http request', () => {
     const fetchSpan = await devServer.findSpan(
       (span) => span.tags.component === 'http'
     );
-    console.log(fetchSpan);
     expect(fetchSpan).toBeDefined();
     expect(fetchSpan.tags['http.method']).toBe('GET');
     expect(fetchSpan.tags['http.status_code']).toBe('200.0');
