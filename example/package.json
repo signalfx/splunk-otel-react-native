@@ -3,7 +3,8 @@
   "version": "1.1.4",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
+    "android-default": "react-native run-android",
+    "android": "react-native run-android --appId com.splunkotelreactnativeexample.debug",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "pods": "pod-install --quiet",

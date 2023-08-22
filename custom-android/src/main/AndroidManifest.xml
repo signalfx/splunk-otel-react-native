@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.splunkotelreactnative">
+  <application>
+    <provider
+      android:name=".SplunkPerfProvider"
+      android:authorities="${applicationId}.SplunkPerfProvider"
+      android:initOrder="200"
+      android:exported="false"/>
+  </application>
+</manifest>
