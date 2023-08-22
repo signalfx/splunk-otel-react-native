@@ -21,21 +21,18 @@ module.exports = {
   dependencies: {
     [pak.name]: {
       root: path.join(__dirname, '..'),
-    },
-    platforms: {
-      android: {
-        sourceDir:
-          'C:\\Users\\Marten\\Repos\\splunk\\react-native\\splunk-otel-react-native\\custom-android',
-        packageImportPath:
+      platforms: {
+        android: {
+          sourceDir: path.join(__dirname, '../custom-android'),
+          packageImportPath:
           'import com.splunkotelreactnative.SplunkOtelReactNativePackage;',
-        packageInstance: 'new SplunkOtelReactNativePackage()',
-        buildTypes: [],
-        libraryName: 'SplunkOtelReactNative',
-        componentDescriptors: [],
-        androidMkPath:
-          'C:\\Users\\Marten\\Repos\\splunk\\react-native\\splunk-otel-react-native\\custom-android\\build\\generated\\source\\codegen\\jni\\Android.mk',
-        cmakeListsPath:
-          'C:/Users/Marten/Repos/splunk/react-native/splunk-otel-react-native/custom-android/build/generated/source/codegen/jni/CMakeLists.txt',
+          packageInstance: 'new SplunkOtelReactNativePackage()',
+          buildTypes: [],
+          libraryName: 'SplunkOtelReactNative',
+          componentDescriptors: [],
+          androidMkPath: path.join(__dirname, '../custom-android/build/generated/source/codegen/jni/Android.mk'),
+          cmakeListsPath: path.join(__dirname, '../custom-android/build/generated/source/codegen/jni/CMakeLists.txt'),
+        },
       },
     },
   },
