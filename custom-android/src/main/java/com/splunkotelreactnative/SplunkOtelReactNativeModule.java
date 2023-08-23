@@ -17,6 +17,9 @@ limitations under the License.
 
 package com.splunkotelreactnative;
 
+import static io.opentelemetry.context.Context.root;
+
+import android.app.Application;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -28,35 +31,40 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.module.annotations.ReactModule;
-import com.splunkotelreactnative.crash.CrashEventAttributeExtractor;
-import com.splunkotelreactnative.crash.CrashReporter;
+import com.splunk.rum.SplunkRum;
+import com.splunk.rum.SplunkRumBuilder;
 
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import io.opentelemetry.api.common.Attributes;
 import io.opentelemetry.api.common.AttributesBuilder;
+import io.opentelemetry.api.trace.Span;
+import io.opentelemetry.api.trace.SpanBuilder;
 import io.opentelemetry.api.trace.SpanContext;
 import io.opentelemetry.api.trace.SpanKind;
 import io.opentelemetry.api.trace.TraceFlags;
 import io.opentelemetry.api.trace.TraceState;
-import io.opentelemetry.exporter.zipkin.ZipkinSpanExporterBuilder;
+import io.opentelemetry.api.trace.Tracer;
+import io.opentelemetry.context.Scope;
 import io.opentelemetry.sdk.trace.data.StatusData;
-import io.opentelemetry.sdk.trace.export.SpanExporter;
 
 @ReactModule(name = SplunkOtelReactNativeModule.NAME)
 public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
   public static final String NAME = "SplunkOtelReactNative";
 
   private final long moduleStartTime;
-  private volatile SpanExporter exporter;
-  private volatile CrashReporter crashReporter;
+  private final Application application;
+  private SplunkRum splunkRum;
 
   public SplunkOtelReactNativeModule(ReactApplicationContext reactContext) {
     super(reactContext);
+    this.application = (Application) reactContext.getApplicationContext();
     this.moduleStartTime = System.currentTimeMillis();
   }
 
@@ -77,18 +85,18 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
       reportFailure(promise, "Initialize: cannot construct exporter, endpoint or token missing");
       return;
     }
+    SplunkRumBuilder builder = SplunkRum.builder();
 
-    String endpointWithAuthentication = beaconEndpoint + "?auth=" + accessToken;
+    builder.setBeaconEndpoint(beaconEndpoint);
+    builder.setRumAccessToken(accessToken);
+    builder.setApplicationName("AndroidSdkRnTestApp");
+    builder.enableDebug();
+    builder.enableDiskBuffering();
+    builder.setDeploymentEnvironment("dev");
+    builder.disableSlowRenderingDetection(); //if true crashes app right now
+    builder.enableReactNativeSupport();
+    splunkRum = builder.build(this.application);
 
-    exporter = new CrashEventAttributeExtractor(new ZipkinSpanExporterBuilder()
-      .setEndpoint(endpointWithAuthentication)
-      .setEncoder(new CustomZipkinEncoder())
-      .build());
-
-    crashReporter = new CrashReporter(exporter,
-      attributesFromMap(mapReader.getGlobalAttributes()), getReactApplicationContext());
-
-    crashReporter.install();
 
     WritableMap appStartInfo = Arguments.createMap();
     double appStart = (double) SplunkPerfProvider.getAppStartTime();
@@ -112,16 +120,7 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void export(ReadableMap spanMap, Promise promise) {
-    //log hello export
-    Log.d("SplunkOtel", "Hello from custom SplunkOtelReactNativeModule export");
-    SpanExporter currentExporter = exporter;
     SpanMapReader mapReader = new SpanMapReader(spanMap);
-
-    if (currentExporter == null) {
-      reportFailure(promise, "Export: exporter not initialized");
-      return;
-    }
-
     SpanContext context = contextFromMap(mapReader);
 
     if (!context.isValid()) {
@@ -139,29 +138,44 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
 
     Attributes attributes = attributesFromMap(mapReader.getAttributes());
 
-    ReactSpanData spanData = new ReactSpanData(spanProperties, attributes, context, parentContext,
-      Collections.emptyList());
-    currentExporter.export(Collections.singleton(spanData));
+    if (splunkRum != null) {
+      Log.d("splunkRUMRN", "Exporting span w name: " + spanProperties.name);
+      Tracer tracer = splunkRum.getOpenTelemetry().getTracer("splunk-rn-android");
+
+      try (Scope ignored = Span.wrap(parentContext).storeInContext(root()).makeCurrent()) {
+        SpanBuilder builder = tracer.spanBuilder(spanProperties.name);
+        Span span = builder.setStartTimestamp(spanProperties.startEpochNanos, TimeUnit.NANOSECONDS)
+          .startSpan();
+
+        span.setAllAttributes(attributes);
+        // Android SDK will remove prefixed attributes and override IDs with them
+        span.setAttribute("_reactnative_spanId", context.getSpanId());
+        span.setAttribute("_reactnative_traceId", context.getTraceId());
+        span.setAttribute("isRNSpan", true);
+
+        span.end(spanProperties.endEpochNanos, TimeUnit.NANOSECONDS);
+      }
+    }
 
     promise.resolve(null);
   }
 
   @ReactMethod
   public void setSessionId(String sessionId) {
-    CrashReporter currentCrashReporter = crashReporter;
-
-    if (currentCrashReporter != null) {
-      currentCrashReporter.updateSessionId(sessionId);
-    }
+//    CrashReporter currentCrashReporter = crashReporter;
+//
+//    if (currentCrashReporter != null) {
+//      currentCrashReporter.updateSessionId(sessionId);
+//    }
   }
 
   @ReactMethod
   public void setGlobalAttributes(ReadableMap attributeMap) {
-    CrashReporter currentCrashReporter = crashReporter;
-
-    if (currentCrashReporter != null) {
-      currentCrashReporter.updateGlobalAttributes(attributesFromMap(attributeMap));
-    }
+//    CrashReporter currentCrashReporter = crashReporter;
+//
+//    if (currentCrashReporter != null) {
+//      currentCrashReporter.updateGlobalAttributes(attributesFromMap(attributeMap));
+//    }
   }
 
   @NonNull

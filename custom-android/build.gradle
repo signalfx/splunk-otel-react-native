@@ -5,7 +5,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:7.2.1'
+    classpath 'com.android.tools.build:gradle:7.4.1'
   }
 }
 
@@ -124,13 +124,11 @@ repositories {
 
 
 dependencies {
-    //noinspection GradleDynamicVersion
+  //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
-  implementation "io.opentelemetry:opentelemetry-sdk:1.22.0"
-  implementation "io.opentelemetry:opentelemetry-semconv:1.22.0-alpha"
-  implementation "io.opentelemetry:opentelemetry-exporter-zipkin:1.22.0"
-  implementation "io.zipkin.reporter2:zipkin-sender-okhttp3:2.16.3"
-// From node_modules
+  implementation ("com.splunk:splunk-otel-android:1.0.0")
+  implementation ("io.opentelemetry:opentelemetry-sdk")
+  implementation("io.opentelemetry:opentelemetry-semconv")
 }
 
 if (isNewArchitectureEnabled()) {
