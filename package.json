@@ -32,7 +32,8 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepare": "bob build",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build",
-    "bootstrap": "npm --prefix example install && npm --prefix example run pods"
+    "bootstrap": "npm --prefix example install && npm --prefix example run pods",
+    "version:check": "node scripts/version-check.mjs"
   },
   "keywords": [
     "react-native",
