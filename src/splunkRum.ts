@@ -58,6 +58,7 @@ export interface ReactNativeConfiguration {
    * also not be traced.
    */
   ignoreUrls?: Array<string | RegExp>;
+  interactionsEnabled?: boolean | undefined;
 }
 
 export interface SplunkRumType {
