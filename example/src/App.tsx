@@ -31,7 +31,7 @@ import Config from 'react-native-config';
 
 const RumConfig: ReactNativeConfiguration = {
   // realm: 'us0',
-  beaconEndpoint: Config.BEACON_ENDPOINT || 'http://10.0.2.2:53821/zipkindump',
+  beaconEndpoint: Config.BEACON_ENDPOINT || 'http://10.0.2.2:53820/zipkindump',
   applicationName: 'ReactNativeExampleTest3',
   rumAccessToken: '',
   debug: true,
