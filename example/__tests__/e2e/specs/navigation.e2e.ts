@@ -27,11 +27,6 @@ describe('Navigation', () => {
     devServer.clearSpans();
   });
 
-  after(() => {
-    console.log('after navigation test');
-    devServer.clearSpans();
-  });
-
   it('should set correct screen names', async () => {
     const navigationButton = await driver.$('~goToDetailScreen');
     await navigationButton.waitForDisplayed({ timeout: 10000 });
@@ -45,8 +40,6 @@ describe('Navigation', () => {
       (span) => span.tags.component === 'ui'
     );
 
-    console.log(createSpan);
-    console.log('all spans', devServer.getSpans());
     expect(createSpan).toBeDefined();
     expect(createSpan.tags['screen.name']).toBe('Details');
   });

@@ -24,12 +24,6 @@ describe('Http request', () => {
   });
 
   beforeEach(() => {
-    console.log('beforeEach');
-    devServer.clearSpans();
-  });
-
-  after(() => {
-    console.log('after');
     devServer.clearSpans();
   });
 
