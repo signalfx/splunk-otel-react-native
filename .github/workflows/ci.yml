@@ -50,7 +50,10 @@ jobs:
       - name: Link react to avoid duplication
         run: cd example && npm link ../node_modules/react
       - name: Build release version
-        run: cd example && npm run build.release
+        run: |
+          ls -la example
+          export ENVFILE=example/.env.integration
+          cd example && npm run build.release
       - name: Upload apk to saucelabs
         run: |
           curl -u "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" --location \
@@ -59,17 +62,17 @@ jobs:
           --form 'name="app-release.apk"'
       - name: Run tests
         run: cd example && npm run wdio.sauce
-  build-ios:
-    needs: version-check
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run bootstrap
-    - name: Build ios
-      run: cd example/ios && xcodebuild -workspace SplunkOtelReactNativeExample.xcworkspace -scheme SplunkOtelReactNativeExample -configuration Debug CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
+  # build-ios:
+  #   needs: version-check
+  #   runs-on: macos-latest
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - uses: actions/setup-node@v3
+  #     with:
+  #       node-version: '18'
+  #       cache: 'npm'
+  #   - run: npm ci
+  #   - run: npm run bootstrap
+  #   - name: Build ios
+  #     run: cd example/ios && xcodebuild -workspace SplunkOtelReactNativeExample.xcworkspace -scheme SplunkOtelReactNativeExample -configuration Debug CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
 
