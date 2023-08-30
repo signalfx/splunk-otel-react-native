@@ -51,8 +51,7 @@ jobs:
         run: cd example && npm link ../node_modules/react
       - name: Build release version
         run: |
-          ls -la example
-          export ENVFILE=example/.env.integration
+          export ENVFILE=../.env.integration
           cd example && npm run build.release
       - name: Upload apk to saucelabs
         run: |
