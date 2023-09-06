@@ -127,6 +127,25 @@ export const SplunkRum: SplunkRumType = {
       return;
     }
 
+    const nativeSdkConf: NativeSdKConfiguration = {};
+    if (config.realm) {
+      nativeSdkConf.beaconEndpoint = `https://rum-ingest.${config.realm}.signalfx.com/v1/rum`;
+    }
+
+    if (config.beaconEndpoint) {
+      if (!config.beaconEndpoint.startsWith('https') && !config.allowInsecureBeacon) {
+        diag.error('Not using https is unsafe, if you want to force it use allowInsecureBeacon option.');
+        return;
+      }
+      if (config.realm) {
+        diag.warn('SplunkRum: Realm value ignored (beaconEndpoint has been specified)');
+      }
+      nativeSdkConf.beaconEndpoint = config.beaconEndpoint;
+    }
+
+    nativeSdkConf.rumAccessToken = config.rumAccessToken;
+    nativeSdkConf.globalAttributes = { ...getResource() };
+
     addGlobalAttributesFromConf(config);
     const provider = new WebTracerProvider({});
     provider.addSpanProcessor(new GlobalAttributeAppender());
@@ -142,21 +161,7 @@ export const SplunkRum: SplunkRumType = {
     instrumentErrors();
 
     const nativeInit = Date.now();
-    const nativeSdkConf: NativeSdKConfiguration = {};
-
-    if (config.realm) {
-      nativeSdkConf.beaconEndpoint = `https://rum-ingest.${config.realm}.signalfx.com/v1/rum`;
-    }
-
-    if (config.beaconEndpoint) {
-      nativeSdkConf.beaconEndpoint = config.beaconEndpoint;
-      if (config.realm) {
-        diag.warn('SplunkRum: Realm value ignored (beaconEndpoint has been specified)');
-      }
-    }
-
-    nativeSdkConf.rumAccessToken = config.rumAccessToken;
-    nativeSdkConf.globalAttributes = { ...getResource() };
+    
 
     diag.debug(
       'Initializing with: ',
