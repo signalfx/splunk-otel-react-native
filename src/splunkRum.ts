@@ -47,7 +47,8 @@ export interface ReactNativeConfiguration {
   beaconEndpoint?: string;
   rumAccessToken: string;
   applicationName: string;
-  environment?: string;
+  deploymentEnvironment?: string;
+  allowInsecureBeacon?: boolean;
   appStartEnabled?: boolean;
   debug?: boolean;
   /** Sets attributes added to every Span. */
@@ -91,15 +92,6 @@ export const SplunkRum: SplunkRumType = {
     }
   },
   init(configugration: ReactNativeConfiguration) {
-    if (isInitialized) {
-      console.warn('Multiple init calls');
-      return;
-    }
-    //by default wants to use otlp
-    if (!('OTEL_TRACES_EXPORTER' in _globalThis)) {
-      (_globalThis as any).OTEL_TRACES_EXPORTER = 'none';
-    }
-
     const config = {
       ...DEFAULT_CONFIG,
       ...configugration,
@@ -109,6 +101,15 @@ export const SplunkRum: SplunkRumType = {
       new DiagConsoleLogger(),
       config?.debug ? DiagLogLevel.DEBUG : DiagLogLevel.ERROR
     );
+
+    if (isInitialized) {
+      diag.warn('SplunkRum already init()ed.');
+      return;
+    }
+    //by default wants to use otlp
+    if (!('OTEL_TRACES_EXPORTER' in _globalThis)) {
+      (_globalThis as any).OTEL_TRACES_EXPORTER = 'none';
+    }
 
     const clientInit = Date.now();
     if (!config.applicationName) {
@@ -149,7 +150,11 @@ export const SplunkRum: SplunkRumType = {
 
     if (config.beaconEndpoint) {
       nativeSdkConf.beaconEndpoint = config.beaconEndpoint;
+      if (config.realm) {
+        diag.warn('SplunkRum: Realm value ignored (beaconEndpoint has been specified)');
+      }
     }
+
     nativeSdkConf.rumAccessToken = config.rumAccessToken;
     nativeSdkConf.globalAttributes = { ...getResource() };
 
@@ -157,7 +162,7 @@ export const SplunkRum: SplunkRumType = {
       'Initializing with: ',
       config.applicationName,
       nativeSdkConf.beaconEndpoint,
-      nativeSdkConf.rumAccessToken
+      nativeSdkConf.rumAccessToken?.substring(0, 5),
     );
 
     //TODO do not send appStartInfo in init response
@@ -215,8 +220,8 @@ function addGlobalAttributesFromConf(config: ReactNativeConfiguration) {
   };
   confAttributes.app = config.applicationName;
 
-  if (config.environment) {
-    confAttributes['deployment.environment'] = config.environment;
+  if (config.deploymentEnvironment) {
+    confAttributes['deployment.environment'] = config.deploymentEnvironment;
   }
 
   setGlobalAttributes(confAttributes);
