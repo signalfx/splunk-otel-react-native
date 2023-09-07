@@ -33,6 +33,7 @@ const RumConfig: ReactNativeConfiguration = {
   // realm: 'us0',
   beaconEndpoint: Config.BEACON_ENDPOINT,
   applicationName: 'ReactNativeExampleTest4',
+  allowInsecureBeacon: true,
   rumAccessToken: '',
   debug: true,
   globalAttributes: {
