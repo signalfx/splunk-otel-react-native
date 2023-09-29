@@ -70,3 +70,4 @@ lib/
 /ios/Pods
 
 *.tgz
+.env
