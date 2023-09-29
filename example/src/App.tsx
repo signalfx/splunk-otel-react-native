@@ -41,7 +41,7 @@ const RumConfig: ReactNativeConfiguration = {
     globalAttr2: 42,
   },
   ignoreUrls: ['http://pmrum3.o11ystore.com/product/OLJCESPC7Z'],
-  interactionsEnabled: true,
+  interactionsEnabled: false,
 };
 
 const Stack = createNativeStackNavigator();

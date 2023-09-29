@@ -32,7 +32,7 @@ const TouchBoundary: React.FC = ({ children }) => {
   const _onTouchStart = (event: GestureResponderEvent) => {
     // console.log('TouchBoundary onTouchStart', event);
     const names = getComponentTreeNames(event);
-    console.log('names', names);
+    // console.log('names', names);
   };
 
   function getComponentTreeNames(e) {
