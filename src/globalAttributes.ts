@@ -21,6 +21,7 @@ import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions'
 import { getSessionId } from './session';
 import { setNativeGlobalAttributes } from './native';
 import { VERSION } from './version';
+import { SCREEN_NAME } from './splunkAttributeNames';
 
 let globalAttributes: Attributes = {};
 
@@ -35,6 +36,7 @@ const OS_VERSION = 'os.version';
 // just for future where there may be a way to use proper resource
 export function getResource(): ResourceAttributes {
   let resourceAttrs = {
+    [SCREEN_NAME]: 'unknown',
     // ...SDK_INFO,
     [SemanticResourceAttributes.TELEMETRY_SDK_NAME]:
       '@splunk/otel-react-native',
