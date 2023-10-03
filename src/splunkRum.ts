@@ -161,7 +161,6 @@ export const SplunkRum: SplunkRumType = {
     instrumentErrors();
 
     const nativeInit = Date.now();
-    
 
     diag.debug(
       'Initializing with: ',
@@ -179,7 +178,8 @@ export const SplunkRum: SplunkRumType = {
           appStartInfo.appStart || appStartInfo.moduleStart;
       }
       setNativeSessionId(getSessionId());
-
+      // make sure native crashreporter has correct attributes
+      setGlobalAttributes({});
       if (config.appStartEnabled) {
         const tracer = provider.getTracer('AppStart');
         const nativeInitEnd = Date.now();
@@ -194,12 +194,13 @@ export const SplunkRum: SplunkRumType = {
 
         //FIXME no need to have native init span probably
         const ctx = trace.setSpan(context.active(), this.appStartSpan);
+
         context.with(ctx, () => {
           tracer
-            .startSpan('nativeInit', { startTime: nativeInit })
+            .startSpan('SplunkRum.nativeInit', { startTime: nativeInit })
             .end(nativeInitEnd);
           tracer
-            .startSpan('clientInit', { startTime: clientInit })
+            .startSpan('SplunkRum.jsInit', { startTime: clientInit })
             .end(clientInitEnd);
         });
 
