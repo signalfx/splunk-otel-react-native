@@ -30,19 +30,19 @@ export function reportError(err: any, isFatal?: boolean) {
   const msg = err.message || err.toString();
 
   const attributes = {
-    'error.isFatal': isFatal,
-    'error.message': limitLen(msg, MESSAGE_LIMIT),
-    'error.object': useful(err.name)
+    'exception.isFatal': isFatal,
+    'exception.message': limitLen(msg, MESSAGE_LIMIT),
+    'exception.object': useful(err.name)
       ? err.name
       : err.constructor && err.constructor.name
       ? err.constructor.name
       : 'Error',
-    'error': true, //TODO do we use this?
+    'exception': true, //TODO do we use this?
     'component': 'error',
   };
 
   if (err.stack && useful(err.stack)) {
-    (attributes as any)['error.stack'] = limitLen(
+    (attributes as any)['exception.stacktrace'] = limitLen(
       err.stack.toString(),
       STACK_LIMIT
     );
