@@ -69,7 +69,7 @@ android {
     ndkVersion rootProject.ext.ndkVersion
 
     compileSdkVersion rootProject.ext.compileSdkVersion
-
+    namespace "com.splunkotelreactnativeexample"
     defaultConfig {
         applicationId "com.splunkotelreactnativeexample"
         minSdkVersion rootProject.ext.minSdkVersion
