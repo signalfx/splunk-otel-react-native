@@ -47,8 +47,6 @@ jobs:
           export ANDROID_COMPILE_SDK=33
           export ANDROID_BUILD_TOOLS=33.0.1
           export ANDROID_COMMAND_LINE_TOOLS=9477386
-      - name: Link react to avoid duplication
-        run: cd example && npm link ../node_modules/react
       - name: Build release version
         run: |
           export ENVFILE=../.env.integration
