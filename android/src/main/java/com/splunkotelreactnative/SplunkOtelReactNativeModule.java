@@ -17,6 +17,7 @@ limitations under the License.
 
 package com.splunkotelreactnative;
 
+import android.content.ContextWrapper;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -32,6 +33,7 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.module.annotations.ReactModule;
 import com.splunkotelreactnative.crash.CrashEventAttributeExtractor;
 import com.splunkotelreactnative.crash.CrashReporter;
+import com.splunkotelreactnative.exporter.disk.DiskBufferingExporterFactory;
 
 import java.util.Collections;
 import java.util.Iterator;
@@ -79,10 +81,8 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
 
     String endpointWithAuthentication = beaconEndpoint + "?auth=" + accessToken;
 
-    exporter = new CrashEventAttributeExtractor(new ZipkinSpanExporterBuilder()
-      .setEndpoint(endpointWithAuthentication)
-      .setEncoder(new CustomZipkinEncoder())
-      .build());
+    exporter = createExporter(endpointWithAuthentication, getReactApplicationContext(),
+      mapReader.getDiskCachingEnabled(), mapReader.getMaxStorageUseMb());
 
     crashReporter = new CrashReporter(exporter,
       attributesFromMap(mapReader.getGlobalAttributes()), getReactApplicationContext());
@@ -175,6 +175,18 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
       TraceFlags.fromByte(traceFlagsNumeric.byteValue()) : TraceFlags.getSampled();
 
     return SpanContext.create(traceId, spanId, traceFlags, TraceState.getDefault());
+  }
+
+  @NonNull
+  private SpanExporter createExporter(String endpoint, ContextWrapper application,
+                                      boolean diskCachingEnabled, int maxStorageUseMb) {
+    if (!diskCachingEnabled) {
+      return new CrashEventAttributeExtractor(new ZipkinSpanExporterBuilder()
+        .setEndpoint(endpoint)
+        .setEncoder(new CustomZipkinEncoder())
+        .build());
+    }
+    return DiskBufferingExporterFactory.setupDiskBuffering(endpoint, application, maxStorageUseMb);
   }
 
   @NonNull

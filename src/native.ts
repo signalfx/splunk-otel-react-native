@@ -38,6 +38,7 @@ export interface NativeSdKConfiguration {
   beaconEndpoint?: string;
   rumAccessToken?: string;
   globalAttributes?: object;
+  enableDiskCaching?: boolean;
 }
 
 export type AppStartInfo = {

@@ -50,6 +50,7 @@ export interface ReactNativeConfiguration {
   deploymentEnvironment?: string;
   allowInsecureBeacon?: boolean;
   appStartEnabled?: boolean;
+  enableDiskCaching?: boolean;
   debug?: boolean;
   /** Sets attributes added to every Span. */
   globalAttributes?: Attributes;
@@ -76,6 +77,7 @@ export interface SplunkRumType {
 
 const DEFAULT_CONFIG = {
   appStartEnabled: true,
+  enableDiskCaching: true,
 };
 
 let appStartInfo: AppStartInfo | null = null;
@@ -144,6 +146,7 @@ export const SplunkRum: SplunkRumType = {
     }
 
     nativeSdkConf.rumAccessToken = config.rumAccessToken;
+    nativeSdkConf.enableDiskCaching = config.enableDiskCaching;
     nativeSdkConf.globalAttributes = { ...getResource() };
 
     addGlobalAttributesFromConf(config);
@@ -167,6 +170,7 @@ export const SplunkRum: SplunkRumType = {
       config.applicationName,
       nativeSdkConf.beaconEndpoint,
       nativeSdkConf.rumAccessToken?.substring(0, 5),
+      nativeSdkConf.enableDiskCaching
     );
 
     //TODO do not send appStartInfo in init response

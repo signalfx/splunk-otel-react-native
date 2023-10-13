@@ -30,17 +30,15 @@ import type { ReactNativeConfiguration } from '@splunk/otel-react-native';
 import Config from 'react-native-config';
 
 const RumConfig: ReactNativeConfiguration = {
-  // realm: 'us0',
-  beaconEndpoint: Config.BEACON_ENDPOINT,
-  applicationName: 'ReactNativeExampleTest4',
-  allowInsecureBeacon: true,
-  rumAccessToken: '',
+  realm: 'eu0',
+  // beaconEndpoint: Config.BEACON_ENDPOINT,
+  applicationName: 'RnDiskCache',
+  rumAccessToken: 'iSb9fND7j5yjW5cGIH2J-g',
   debug: true,
   globalAttributes: {
     globalAttr1: '42',
     globalAttr2: 42,
   },
-  ignoreUrls: ['http://pmrum3.o11ystore.com/product/OLJCESPC7Z'],
 };
 
 const Stack = createNativeStackNavigator();
