@@ -183,7 +183,7 @@ export const SplunkRum: SplunkRumType = {
       config.applicationName,
       nativeSdkConf.beaconEndpoint,
       nativeSdkConf.rumAccessToken?.substring(0, 5),
-      nativeSdkConf.enableDiskCaching
+      nativeSdkConf.enableDiskBuffering
     );
 
     //TODO do not send appStartInfo in init response
