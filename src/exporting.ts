@@ -22,7 +22,7 @@ import {
   hrTimeToMilliseconds,
 } from '@opentelemetry/core';
 import { Platform } from 'react-native';
-import { exportSpanToNative } from './native';
+import { exportSpansToNative } from './native';
 import { toZipkinSpan } from './zipkintransform';
 export default class ReacNativeSpanExporter implements SpanExporter {
   export(
@@ -31,11 +31,9 @@ export default class ReacNativeSpanExporter implements SpanExporter {
   ): void {
     //FIXME unify this so ios and android are the same
     if (Platform.OS === 'ios') {
-      exportSpanToNative(spans.map(this.toZipkin));
+      exportSpansToNative(spans.map(this.toZipkin));
     } else {
-      spans.forEach((span) => {
-        exportSpanToNative(this.toNativeSpan(span));
-      });
+      exportSpansToNative(spans.map(this.toNativeSpan));
     }
     resultCallback({ code: ExportResultCode.SUCCESS });
   }

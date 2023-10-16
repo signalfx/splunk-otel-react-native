@@ -25,10 +25,9 @@ class SplunkOtelReactNative: NSObject {
       spanExporter = SpanToDiskExporter(spanDb: db)
       initializeCrashReporting(exporter: spanExporter)
 
-      print("Default appStartTime \(appStartTime)")
       do {
           appStartTime = try processStartTime()
-          print("Processed appStartTime \(appStartTime)")
+          print("Process appStartTime \(appStartTime)")
       } catch {
           // ignore
       }
@@ -50,7 +49,7 @@ class SplunkOtelReactNative: NSObject {
       beaconWithAuth += "?auth=" + auth!
 
       SpanFromDiskExport.start(spanDb: db, endpoint: beaconWithAuth)
-            
+
       resolve(["moduleStart": appStartTime.timeIntervalSince1970 * 1000])
     }
 

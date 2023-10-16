@@ -20,6 +20,8 @@ package com.splunkotelreactnative;
 import com.facebook.react.bridge.ReadableMap;
 
 public class ConfigMapReader extends MapReader {
+  private static final boolean DEFAULT_ENABLE_DISK_BUFFERING = false;
+  private static final int DEFAULT_MAX_STORAGE_USE_MB = 25;
   private final ReadableMap map;
 
   public ConfigMapReader(ReadableMap map) {
@@ -34,6 +36,16 @@ public class ConfigMapReader extends MapReader {
     return Keys.RUM_ACCESS_TOKEN.get(map);
   }
 
+  public boolean getEnableDiskBuffering() {
+    Boolean value = Keys.ENABLE_DISK_BUFFERING.get(map);
+    return value != null ? value : DEFAULT_ENABLE_DISK_BUFFERING;
+  }
+
+  public int getMaxStorageUseMb() {
+    Long value = Keys.MAX_STORAGE_USE_MB.getLong(map);
+    return value != null ? value.intValue() : DEFAULT_MAX_STORAGE_USE_MB;
+  }
+
   public ReadableMap getGlobalAttributes() {
     return ConfigMapReader.Keys.GLOBAL_ATTRIBUTES.getMap(map);
   }
@@ -41,6 +53,9 @@ public class ConfigMapReader extends MapReader {
   private interface Keys {
     StringKey BEACON_ENDPOINT = new StringKey("beaconEndpoint");
     StringKey RUM_ACCESS_TOKEN = new StringKey("rumAccessToken");
+    BooleanKey ENABLE_DISK_BUFFERING = new BooleanKey("enableDiskBuffering");
+
+    NumberKey MAX_STORAGE_USE_MB = new NumberKey("limitDiskUsageMegabytes");
     MapKey GLOBAL_ATTRIBUTES = new MapKey("globalAttributes");
   }
 }

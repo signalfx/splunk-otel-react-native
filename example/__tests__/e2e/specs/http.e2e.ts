@@ -29,7 +29,7 @@ describe('Http request', () => {
 
   it('should exist and have http attributes', async () => {
     const fetchButton = await driver.$('~fetch');
-    await fetchButton.waitForDisplayed({ timeout: 10000 });
+    await fetchButton.waitForDisplayed({ timeout: 15000 });
     await fetchButton.click();
 
     const fetchSpan = await devServer.findSpan(

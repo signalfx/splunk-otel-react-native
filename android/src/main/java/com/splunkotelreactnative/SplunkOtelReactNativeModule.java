@@ -17,6 +17,7 @@ limitations under the License.
 
 package com.splunkotelreactnative;
 
+import android.content.ContextWrapper;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -27,14 +28,18 @@ import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.module.annotations.ReactModule;
 import com.splunkotelreactnative.crash.CrashEventAttributeExtractor;
 import com.splunkotelreactnative.crash.CrashReporter;
+import com.splunkotelreactnative.exporter.disk.DiskBufferingExporterFactory;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import io.opentelemetry.api.common.Attributes;
@@ -44,6 +49,7 @@ import io.opentelemetry.api.trace.SpanKind;
 import io.opentelemetry.api.trace.TraceFlags;
 import io.opentelemetry.api.trace.TraceState;
 import io.opentelemetry.exporter.zipkin.ZipkinSpanExporterBuilder;
+import io.opentelemetry.sdk.trace.data.SpanData;
 import io.opentelemetry.sdk.trace.data.StatusData;
 import io.opentelemetry.sdk.trace.export.SpanExporter;
 
@@ -79,10 +85,8 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
 
     String endpointWithAuthentication = beaconEndpoint + "?auth=" + accessToken;
 
-    exporter = new CrashEventAttributeExtractor(new ZipkinSpanExporterBuilder()
-      .setEndpoint(endpointWithAuthentication)
-      .setEncoder(new CustomZipkinEncoder())
-      .build());
+    exporter = createExporter(endpointWithAuthentication, getReactApplicationContext(),
+      mapReader.getEnableDiskBuffering(), mapReader.getMaxStorageUseMb());
 
     crashReporter = new CrashReporter(exporter,
       attributesFromMap(mapReader.getGlobalAttributes()), getReactApplicationContext());
@@ -110,38 +114,46 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void export(ReadableMap spanMap, Promise promise) {
+  public void export(ReadableArray spanMaps, Promise promise) {
     SpanExporter currentExporter = exporter;
-    SpanMapReader mapReader = new SpanMapReader(spanMap);
 
     if (currentExporter == null) {
       reportFailure(promise, "Export: exporter not initialized");
       return;
     }
 
-    SpanContext context = contextFromMap(mapReader);
+    List<SpanData> spanDataList = new ArrayList<>();
 
-    if (!context.isValid()) {
-      reportFailure(promise, "Export: trace or span ID not provided");
-      return;
+    for (int i = 0; i < spanMaps.size(); i++) {
+      ReadableMap spanMap = spanMaps.getMap(i);
+      SpanMapReader mapReader = new SpanMapReader(spanMap);
+
+      SpanContext context = contextFromMap(mapReader);
+      if (!context.isValid()) {
+        reportFailure(promise, "Export: trace or span ID not provided");
+        return;
+      }
+
+      SpanContext parentContext = parentContextFromMap(mapReader, context);
+      ReactSpanProperties spanProperties = propertiesFromMap(mapReader);
+
+      if (spanProperties == null) {
+        reportFailure(promise, "Export: missing name, start or end time");
+        return;
+      }
+
+      Attributes attributes = attributesFromMap(mapReader.getAttributes());
+      ReactSpanData spanData = new ReactSpanData(spanProperties, attributes, context, parentContext,
+        Collections.emptyList());
+
+      spanDataList.add(spanData);
     }
 
-    SpanContext parentContext = parentContextFromMap(mapReader, context);
-    ReactSpanProperties spanProperties = propertiesFromMap(mapReader);
-
-    if (spanProperties == null) {
-      reportFailure(promise, "Export: missing name, start or end time");
-      return;
-    }
-
-    Attributes attributes = attributesFromMap(mapReader.getAttributes());
-
-    ReactSpanData spanData = new ReactSpanData(spanProperties, attributes, context, parentContext,
-      Collections.emptyList());
-    currentExporter.export(Collections.singleton(spanData));
+    currentExporter.export(spanDataList);
 
     promise.resolve(null);
   }
+
 
   @ReactMethod
   public void setSessionId(String sessionId) {
@@ -175,6 +187,18 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
       TraceFlags.fromByte(traceFlagsNumeric.byteValue()) : TraceFlags.getSampled();
 
     return SpanContext.create(traceId, spanId, traceFlags, TraceState.getDefault());
+  }
+
+  @NonNull
+  private SpanExporter createExporter(String endpoint, ContextWrapper application,
+                                      boolean enableDiskBuffering, int maxStorageUseMb) {
+    if (!enableDiskBuffering) {
+      return new CrashEventAttributeExtractor(new ZipkinSpanExporterBuilder()
+        .setEndpoint(endpoint)
+        .setEncoder(new CustomZipkinEncoder())
+        .build());
+    }
+    return DiskBufferingExporterFactory.setupDiskBuffering(endpoint, application, maxStorageUseMb);
   }
 
   @NonNull

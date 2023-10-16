@@ -24,7 +24,7 @@ import {
   DiagLogLevel,
 } from '@opentelemetry/api';
 import { WebTracerProvider } from '@opentelemetry/sdk-trace-web';
-import { SimpleSpanProcessor } from '@opentelemetry/sdk-trace-base';
+import { BatchSpanProcessor } from '@opentelemetry/sdk-trace-base';
 import { _globalThis } from '@opentelemetry/core';
 import {
   initializeNativeSdk,
@@ -50,6 +50,10 @@ export interface ReactNativeConfiguration {
   deploymentEnvironment?: string;
   allowInsecureBeacon?: boolean;
   appStartEnabled?: boolean;
+  enableDiskBuffering?: boolean;
+  limitDiskUsageMegabytes?: number;
+  bufferTimeout?: number;
+  bufferSize?: number;
   debug?: boolean;
   /** Sets attributes added to every Span. */
   globalAttributes?: Attributes;
@@ -76,6 +80,7 @@ export interface SplunkRumType {
 
 const DEFAULT_CONFIG = {
   appStartEnabled: true,
+  enableDiskBuffering: true,
 };
 
 let appStartInfo: AppStartInfo | null = null;
@@ -133,26 +138,37 @@ export const SplunkRum: SplunkRumType = {
     }
 
     if (config.beaconEndpoint) {
-      if (!config.beaconEndpoint.startsWith('https') && !config.allowInsecureBeacon) {
-        diag.error('Not using https is unsafe, if you want to force it use allowInsecureBeacon option.');
+      if (
+        !config.beaconEndpoint.startsWith('https') &&
+        !config.allowInsecureBeacon
+      ) {
+        diag.error(
+          'Not using https is unsafe, if you want to force it use allowInsecureBeacon option.'
+        );
         return;
       }
       if (config.realm) {
-        diag.warn('SplunkRum: Realm value ignored (beaconEndpoint has been specified)');
+        diag.warn(
+          'SplunkRum: Realm value ignored (beaconEndpoint has been specified)'
+        );
       }
       nativeSdkConf.beaconEndpoint = config.beaconEndpoint;
     }
 
     nativeSdkConf.rumAccessToken = config.rumAccessToken;
+    nativeSdkConf.enableDiskBuffering = config.enableDiskBuffering;
+    nativeSdkConf.limitDiskUsageMegabytes = config.limitDiskUsageMegabytes;
     nativeSdkConf.globalAttributes = { ...getResource() };
 
     addGlobalAttributesFromConf(config);
     const provider = new WebTracerProvider({});
     provider.addSpanProcessor(new GlobalAttributeAppender());
     provider.addSpanProcessor(
-      new SimpleSpanProcessor(new ReacNativeSpanExporter())
+      new BatchSpanProcessor(new ReacNativeSpanExporter(), {
+        scheduledDelayMillis: config.bufferTimeout || 3000,
+        maxExportBatchSize: config.bufferSize || 20,
+      })
     );
-
     provider.register({});
     this.provider = provider;
     const clientInitEnd = Date.now();
@@ -167,6 +183,7 @@ export const SplunkRum: SplunkRumType = {
       config.applicationName,
       nativeSdkConf.beaconEndpoint,
       nativeSdkConf.rumAccessToken?.substring(0, 5),
+      nativeSdkConf.enableDiskBuffering
     );
 
     //TODO do not send appStartInfo in init response
