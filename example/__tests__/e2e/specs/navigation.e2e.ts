@@ -29,12 +29,17 @@ describe('Navigation', () => {
 
   it('should set correct screen names', async () => {
     const navigationButton = await driver.$('~goToDetailScreen');
-    await navigationButton.waitForDisplayed({ timeout: 10000 });
+    await navigationButton.waitForDisplayed({ timeout: 10000, interval: 1500 });
+    // get rid of initial Created span from Home screen
+    const homeCreateSpan = await devServer.findSpan(
+      (span) => span.tags.component === 'ui'
+    );
+    expect(homeCreateSpan).toBeDefined();
     devServer.clearSpans();
-    await navigationButton.click();
 
+    await navigationButton.click();
     const fetch = await driver.$('~fetchCustom');
-    await fetch.waitForDisplayed({ timeout: 10000 });
+    await fetch.waitForDisplayed({ timeout: 10000, interval: 1500 });
 
     const createSpan = await devServer.findSpan(
       (span) => span.tags.component === 'ui'

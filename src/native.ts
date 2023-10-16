@@ -38,7 +38,8 @@ export interface NativeSdKConfiguration {
   beaconEndpoint?: string;
   rumAccessToken?: string;
   globalAttributes?: object;
-  enableDiskCaching?: boolean;
+  enableDiskBuffering?: boolean;
+  limitDiskUsageMegabytes?: number;
 }
 
 export type AppStartInfo = {
@@ -53,8 +54,8 @@ export function initializeNativeSdk(
   return SplunkOtelReactNative.initialize(config);
 }
 
-export function exportSpanToNative(span: object): Promise<null> {
-  return SplunkOtelReactNative.export(span);
+export function exportSpansToNative(spans: object[]): Promise<null> {
+  return SplunkOtelReactNative.export(spans);
 }
 
 export function setNativeSessionId(id: string): Promise<boolean> {
