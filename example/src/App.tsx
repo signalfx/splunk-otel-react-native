@@ -30,10 +30,10 @@ import type { ReactNativeConfiguration } from '@splunk/otel-react-native';
 import Config from 'react-native-config';
 
 const RumConfig: ReactNativeConfiguration = {
-  realm: 'eu0',
-  // beaconEndpoint: Config.BEACON_ENDPOINT,
-  applicationName: 'RnDiskCache',
-  rumAccessToken: 'iSb9fND7j5yjW5cGIH2J-g',
+  beaconEndpoint: Config.BEACON_ENDPOINT,
+  applicationName: 'RnExample',
+  allowInsecureBeacon: true,
+  rumAccessToken: '',
   debug: true,
   globalAttributes: {
     globalAttr1: '42',
