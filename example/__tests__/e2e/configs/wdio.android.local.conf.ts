@@ -21,7 +21,7 @@ export const config: Options.Testrunner = {
   ...baseConfig,
   maxInstances: 1, // unless you have more emulators
   hostname: process.env.APPIUM_HOST || '127.0.0.1',
-  port: parseInt(process.env.APPIUM_PORT, 10) || 4723,
+  port: parseInt(process.env.APPIUM_PORT || '4723', 10),
   capabilities: [
     {
       'platformName': 'Android',
