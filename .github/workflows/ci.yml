@@ -71,7 +71,7 @@ jobs:
     - run: npm ci
     - run: npm run bootstrap
     - name: Build ios
-      run: npm run build.ios.release
+      run: cd example && npm run build.ios.release
     - run: ls -la example/ios/build/
     - run: ls -la example/ios/build/Build/Release
 
