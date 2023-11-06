@@ -20,7 +20,7 @@ let devServer: any = null;
 
 describe('Http request', () => {
   before(() => {
-    devServer = getDevServer({ port: 53821 });
+    devServer = getDevServer({ port: 53820 });
   });
 
   beforeEach(() => {
@@ -38,7 +38,7 @@ describe('Http request', () => {
     expect(fetchSpan).toBeDefined();
     expect(fetchSpan.tags['http.method']).toBe('GET');
     // FIXME android status code is 200.0 and ios 200
-    //expect(fetchSpan.tags['http.status_code']).toBe('200');
+    expect(fetchSpan.tags['http.status_code']).toBe('200');
     expect(fetchSpan.tags['http.url']).toBe(
       'https://raw.githubusercontent.com/signalfx/splunk-otel-react-native/main/package.json'
     );

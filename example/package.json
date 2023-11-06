@@ -8,7 +8,7 @@
     "start": "react-native start",
     "pods": "pod-install --quiet",
     "devserver": "node __tests__/e2e/devserver/runDevServer.js",
-    "build.ios.release": "react-native run-ios --mode Release",
+    "build.ios.release": "react-native run-ios --mode Release  --buildFolder ios/build/Release",
     "build.release.install": "react-native run-android --variant=release",
     "build.release": "cd android && ./gradlew assembleRelease",
     "wdio.android.local": "wdio run __tests__/e2e/configs/wdio.android.local.conf.ts",

@@ -20,7 +20,7 @@ let devServer: any = null;
 
 describe('Navigation', () => {
   before(() => {
-    devServer = getDevServer({ port: 53821 });
+    devServer = getDevServer({ port: 53820 });
   });
 
   beforeEach(() => {
