@@ -83,23 +83,14 @@ jobs:
           curl -L https://saucelabs.com/downloads/sc-$SC_VERSION-osx.zip -o $SC_DIR/sc-$SC_VERSION-osx.zip
           unzip $SC_DIR/sc-$SC_VERSION-osx.zip -d $SC_DIR
           mv $SC_DIR/sc-$SC_VERSION-osx $SC_DIR/sc-$SC_VERSION-linux
-      - name: Check sc binary
-        run: ls $RUNNER_TOOL_CACHE/sc/4.9.1/x64
-      - run: ls $RUNNER_TOOL_CACHE/sc/4.9.1/x64/sc-4.9.1-linux
-      
-    # - name: Setup sauce connect
-    #   uses: saucelabs/sauce-connect-action@v2
-    #   with:
-    #     username: ${{ secrets.SAUCE_USERNAME }}
-    #     accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
-    #     tunnelName: ${{ secrets.SAUCE_TUNNEL_ID }}
-    #     noSSLBumpDomains: all
-    #     scVersion: '4.9.1'
-    # - uses: actions/checkout@v3
-    # - uses: actions/setup-node@v3
-    #   with:
-    #     node-version: '18'
-    #     cache: 'npm'
+      - name: Setup sauce connect
+        uses: saucelabs/sauce-connect-action@v2
+        with:
+          username: ${{ secrets.SAUCE_USERNAME }}
+          accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
+          tunnelName: ${{ secrets.SAUCE_TUNNEL_ID }}
+          noSSLBumpDomains: all
+          scVersion: '4.9.1'
     # - run: npm ci
     # - run: npm run bootstrap
     # - name: Build iOS
