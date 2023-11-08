@@ -96,6 +96,7 @@ jobs:
       - run: npm run bootstrap
       - name: Build iOS
         run: |
+          export ENVFILE=../.env.integration && \
           cd example/ios && \
           xcodebuild \
             -workspace SplunkOtelReactNativeExample.xcworkspace \
