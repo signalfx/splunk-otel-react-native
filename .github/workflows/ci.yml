@@ -92,28 +92,28 @@ jobs:
           tunnelName: ${{ secrets.SAUCE_TUNNEL_ID }}
           noSSLBumpDomains: all
           scVersion: '4.9.1'
-    # - run: npm ci
-    # - run: npm run bootstrap
-    # - name: Build iOS
-    #   run: |
-    #     cd example/ios && \
-    #     xcodebuild \
-    #       -workspace SplunkOtelReactNativeExample.xcworkspace \
-    #       -scheme SplunkOtelReactNativeExample \
-    #       -derivedDataPath './iosSimBuild' \
-    #       -sdk iphonesimulator \
-    #       -arch x86_64 \
-    #       -configuration Release \
-    #       CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
-    # - name: Zip iOS build
-    #   run: |
-    #     cd example/ios/iosSimBuild/Build/Products/Release-iphonesimulator && \
-    #     zip -r SplunkOtelReactNativeExample.zip SplunkOtelReactNativeExample.app
-    # - name: Upload zip to saucelabs
-    #   run: |
-    #     curl -u "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" --location \
-    #     --request POST 'https://api.us-west-1.saucelabs.com/v1/storage/upload' \
-    #     --form 'payload=@"example/ios/iosSimBuild/Build/Products/Release-iphonesimulator/SplunkOtelReactNativeExample.zip"' \
-    #     --form 'name="SplunkOtelReactNativeExample.zip"'
-    # - name: Run tests
-    #   run: cd example && npm run wdio.ios.sauce
+      - run: npm ci
+      - run: npm run bootstrap
+      - name: Build iOS
+        run: |
+          cd example/ios && \
+          xcodebuild \
+            -workspace SplunkOtelReactNativeExample.xcworkspace \
+            -scheme SplunkOtelReactNativeExample \
+            -derivedDataPath './iosSimBuild' \
+            -sdk iphonesimulator \
+            -arch x86_64 \
+            -configuration Release \
+            CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+      - name: Zip iOS build
+        run: |
+          cd example/ios/iosSimBuild/Build/Products/Release-iphonesimulator && \
+          zip -r SplunkOtelReactNativeExample.zip SplunkOtelReactNativeExample.app
+      - name: Upload zip to saucelabs
+        run: |
+          curl -u "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" --location \
+          --request POST 'https://api.us-west-1.saucelabs.com/v1/storage/upload' \
+          --form 'payload=@"example/ios/iosSimBuild/Build/Products/Release-iphonesimulator/SplunkOtelReactNativeExample.zip"' \
+          --form 'name="SplunkOtelReactNativeExample.zip"'
+      - name: Run tests
+        run: cd example && npm run wdio.ios.sauce
