@@ -80,6 +80,7 @@ jobs:
           SC_ARCH="x64"
           SC_DIR="$RUNNER_TOOL_CACHE/sc/$SC_VERSION/$SC_ARCH"
           mkdir -p $SC_DIR
+          mkdir -p $SC_DIR.complete
           curl -L https://saucelabs.com/downloads/sc-$SC_VERSION-osx.zip -o $SC_DIR/sc-$SC_VERSION-osx.zip
           unzip $SC_DIR/sc-$SC_VERSION-osx.zip -d $SC_DIR
           mv $SC_DIR/sc-$SC_VERSION-osx $SC_DIR/sc-$SC_VERSION-linux
