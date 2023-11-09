@@ -32,7 +32,7 @@ describe('Navigation', () => {
     await navigationButton.waitForDisplayed({ timeout: 10000, interval: 1500 });
     // get rid of initial Created span from Home screen
     const homeCreateSpan = await devServer.findSpan(
-      (span) => span.tags.component === 'ui'
+      (span: { tags: { component: string; }; }) => span.tags.component === 'ui'
     );
     expect(homeCreateSpan).toBeDefined();
     devServer.clearSpans();
@@ -42,7 +42,7 @@ describe('Navigation', () => {
     await fetch.waitForDisplayed({ timeout: 10000, interval: 1500 });
 
     const createSpan = await devServer.findSpan(
-      (span) => span.tags.component === 'ui'
+      (span: { tags: { component: string; }; }) => span.tags.component === 'ui'
     );
 
     expect(createSpan).toBeDefined();

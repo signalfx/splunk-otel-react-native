@@ -71,3 +71,4 @@ lib/
 
 *.tgz
 .env
+iosSimBuild/

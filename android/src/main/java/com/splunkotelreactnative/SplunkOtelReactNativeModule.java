@@ -248,7 +248,12 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
       if (value instanceof String) {
         builder.put(entry.getKey(), (String) value);
       } else if (value instanceof Number) {
-        builder.put(entry.getKey(), ((Number) value).doubleValue());
+        // TODO fix this
+        if (entry.getKey().equals("http.status_code")) {
+          builder.put(entry.getKey(), ((Number) value).intValue());
+        } else {
+          builder.put(entry.getKey(), ((Number) value).doubleValue());
+        }
       }
     }
 

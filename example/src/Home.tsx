@@ -15,9 +15,10 @@ limitations under the License.
 */
 
 import React from 'react';
-import { StyleSheet, View, Button } from 'react-native';
+import { StyleSheet, View, Button, Text } from 'react-native';
 import { trace, context } from '@opentelemetry/api';
 import { SplunkRum } from '@splunk/otel-react-native';
+import Config from 'react-native-config';
 
 export default function Home({ navigation }: { navigation: any }) {
   const tracer = trace.getTracer('home');
@@ -75,6 +76,7 @@ export default function Home({ navigation }: { navigation: any }) {
 
   return (
     <View style={styles.container}>
+      <Text>{Config.BEACON_ENDPOINT}</Text>
       <Button
         title="Go to Details Screen"
         accessibilityLabel="goToDetailScreen"
