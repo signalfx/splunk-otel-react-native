@@ -30,7 +30,7 @@ import type { ReactNativeConfiguration } from '@splunk/otel-react-native';
 import Config from 'react-native-config';
 
 const RumConfig: ReactNativeConfiguration = {
-  beaconEndpoint: Config.BEACON_ENDPOINT,
+  beaconEndpoint: 'http://localhost:53820/zipkindump',
   applicationName: 'RnExample',
   allowInsecureBeacon: true,
   rumAccessToken: '',
