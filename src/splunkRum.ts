@@ -52,6 +52,7 @@ export interface ReactNativeConfiguration {
   appStartEnabled?: boolean;
   enableDiskBuffering?: boolean;
   limitDiskUsageMegabytes?: number;
+  truncationCheckpoint?: number;
   bufferTimeout?: number;
   bufferSize?: number;
   debug?: boolean;

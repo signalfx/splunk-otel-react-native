@@ -34,9 +34,13 @@ class SpanDb {
     private var sizeStmt_: OpaquePointer?
     private var initialized: Bool = false
 
-    init(path: String? = nil) {
-        self.databasePath = path ?? SpanDb.makeDatabasePath() ?? ":memory:"
-
+    init(enableDiskBuffering: Bool, path: String? = nil) {
+        if enableDiskBuffering {
+            self.databasePath = path ?? SpanDb.makeDatabasePath() ?? ":memory:"
+        } else {
+            self.databasePath = ":memory:"
+        }
+        
         var status = sqlite3_open(databasePath, &db_)
 
         if status != SQLITE_OK {

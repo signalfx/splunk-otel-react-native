@@ -21,8 +21,12 @@ class SplunkOtelReactNative: NSObject {
   private var appStartTime = Date()
   @objc(initialize:withResolver:withRejecter:)
   func initialize(config: Dictionary<String, Any>, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
-      let db = SpanDb()
-      spanExporter = SpanToDiskExporter(spanDb: db)
+      let enableDiskBuffering = config["enableDiskBuffering"] as? Bool ?? true 
+      let limitDiskUsageMegabytes = config["limitDiskUsageMegabytes"] as? Int64 ?? 25
+      let truncationCheckpoint = config["truncationCheckpoint"] as? Int64 ?? 512
+        
+      let db = SpanDb(enableDiskBuffering: enableDiskBuffering)
+      spanExporter = SpanToDiskExporter(spanDb: db, limitDiskUsageMegabytes: limitDiskUsageMegabytes, truncationCheckpoint: truncationCheckpoint)
       initializeCrashReporting(exporter: spanExporter)
 
       do {
