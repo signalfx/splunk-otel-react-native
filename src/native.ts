@@ -40,6 +40,7 @@ export interface NativeSdKConfiguration {
   globalAttributes?: object;
   enableDiskBuffering?: boolean;
   limitDiskUsageMegabytes?: number;
+  truncationCheckpoint?: number;
 }
 
 export type AppStartInfo = {
