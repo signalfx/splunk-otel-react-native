@@ -1,6 +1,6 @@
 # Splunk Distribution of OpenTelemetry for React Native
 
-> :construction: This distribution is currently in beta. Don’t use it in production environments without extensive prior testing. Some features might not be supported or might have constrained capabilities.
+> :construction: Splunk React Native instrumentation distribution is currently in BETA. By using this package in production-grade environments, users accept all limitations of beta maturity software, including the possibility of breaking changes introduced in any release. Limited support will be provided to active Splunk Observability Cloud customers.
 
 ## Overview
 
