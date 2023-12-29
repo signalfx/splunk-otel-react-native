@@ -51,7 +51,8 @@ class SplunkOtelReactNative: NSObject {
       }
       var beaconWithAuth = beaconUrl!
       beaconWithAuth += "?auth=" + auth!
-
+    
+      initializeNetworkTypeMonitoring()
       SpanFromDiskExport.start(spanDb: db, endpoint: beaconWithAuth)
 
       resolve(["moduleStart": appStartTime.timeIntervalSince1970 * 1000])
