@@ -17,6 +17,7 @@ limitations under the License.
 
 package com.splunkotelreactnative;
 
+import android.app.Application;
 import android.content.ContextWrapper;
 import android.util.Log;
 
@@ -35,6 +36,9 @@ import com.facebook.react.module.annotations.ReactModule;
 import com.splunkotelreactnative.crash.CrashEventAttributeExtractor;
 import com.splunkotelreactnative.crash.CrashReporter;
 import com.splunkotelreactnative.exporter.disk.DiskBufferingExporterFactory;
+import com.splunkotelreactnative.exporter.network.CurrentNetwork;
+import com.splunkotelreactnative.exporter.network.CurrentNetworkAttributesExtractor;
+import com.splunkotelreactnative.exporter.network.CurrentNetworkProvider;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -60,6 +64,7 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
   private final long moduleStartTime;
   private volatile SpanExporter exporter;
   private volatile CrashReporter crashReporter;
+  private CurrentNetworkProvider currentNetworkProvider;
 
   public SplunkOtelReactNativeModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -84,6 +89,8 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
     }
 
     String endpointWithAuthentication = beaconEndpoint + "?auth=" + accessToken;
+
+    currentNetworkProvider = CurrentNetworkProvider.createAndStart((Application) getReactApplicationContext().getApplicationContext());
 
     exporter = createExporter(endpointWithAuthentication, getReactApplicationContext(),
       mapReader.getEnableDiskBuffering(), mapReader.getMaxStorageUseMb());
@@ -124,6 +131,11 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
 
     List<SpanData> spanDataList = new ArrayList<>();
 
+    CurrentNetwork network = currentNetworkProvider.refreshNetworkStatus();
+    CurrentNetworkAttributesExtractor networkAttributesExtractor = new CurrentNetworkAttributesExtractor();
+    Attributes networkAttributes = networkAttributesExtractor.extract(network);
+    setGlobalAttributes(networkAttributes);
+
     for (int i = 0; i < spanMaps.size(); i++) {
       ReadableMap spanMap = spanMaps.getMap(i);
       SpanMapReader mapReader = new SpanMapReader(spanMap);
@@ -142,7 +154,7 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
         return;
       }
 
-      Attributes attributes = attributesFromMap(mapReader.getAttributes());
+      Attributes attributes = attributesFromMap(mapReader.getAttributes()).toBuilder().putAll(networkAttributes).build();
       ReactSpanData spanData = new ReactSpanData(spanProperties, attributes, context, parentContext,
         Collections.emptyList());
 
@@ -166,10 +178,15 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void setGlobalAttributes(ReadableMap attributeMap) {
+    Attributes attributesFromMap = attributesFromMap(attributeMap);
+    setGlobalAttributes(attributesFromMap);
+  }
+
+  private void setGlobalAttributes(Attributes attributes) {
     CrashReporter currentCrashReporter = crashReporter;
 
     if (currentCrashReporter != null) {
-      currentCrashReporter.updateGlobalAttributes(attributesFromMap(attributeMap));
+      currentCrashReporter.updateGlobalAttributes(attributes);
     }
   }
 
@@ -198,7 +215,7 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
         .setEncoder(new CustomZipkinEncoder())
         .build());
     }
-    return DiskBufferingExporterFactory.setupDiskBuffering(endpoint, application, maxStorageUseMb);
+    return DiskBufferingExporterFactory.setupDiskBuffering(endpoint, application, maxStorageUseMb, currentNetworkProvider);
   }
 
   @NonNull
