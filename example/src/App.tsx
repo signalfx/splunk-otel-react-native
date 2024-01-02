@@ -24,21 +24,30 @@ import Home from './Home';
 import Details from './Details';
 import {
   OtelWrapper,
+  SplunkRum,
   startNavigationTracking,
 } from '@splunk/otel-react-native';
 import type { ReactNativeConfiguration } from '@splunk/otel-react-native';
 import Config from 'react-native-config';
+import Geolocation from '@react-native-community/geolocation';
+
+Geolocation.getCurrentPosition((info) => {
+  console.log(info);
+  SplunkRum.updateLocation(info.coords.latitude, info.coords.longitude);
+});
 
 const RumConfig: ReactNativeConfiguration = {
   //TODO fix config setting for iOS in inegration tests
-  beaconEndpoint: Config.BEACON_ENDPOINT || 'http://localhost:53820/zipkindump',
-  applicationName: 'RnExample',
+  //beaconEndpoint: Config.BEACON_ENDPOINT || 'http://localhost:53820/zipkindump',
+  realm: 'eu0',
+  applicationName: 'RnExampleAndroidWithLocation',
   allowInsecureBeacon: true,
-  rumAccessToken: '',
+  rumAccessToken: 'iSb9fND7j5yjW5cGIH2J-g',
   debug: true,
   globalAttributes: {
-    globalAttr1: '42',
-    globalAttr2: 42,
+    'app.version': '1.1.5',
+    'globalAttr1': '42',
+    'globalAttr2': 42,
   },
 };
 
