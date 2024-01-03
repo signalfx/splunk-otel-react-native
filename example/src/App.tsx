@@ -38,11 +38,10 @@ Geolocation.getCurrentPosition((info) => {
 
 const RumConfig: ReactNativeConfiguration = {
   //TODO fix config setting for iOS in inegration tests
-  //beaconEndpoint: Config.BEACON_ENDPOINT || 'http://localhost:53820/zipkindump',
-  realm: 'eu0',
-  applicationName: 'RnExampleAndroidWithLocation',
+  beaconEndpoint: Config.BEACON_ENDPOINT || 'http://localhost:53820/zipkindump',
+  applicationName: 'RnExample',
   allowInsecureBeacon: true,
-  rumAccessToken: 'iSb9fND7j5yjW5cGIH2J-g',
+  rumAccessToken: '',
   debug: true,
   globalAttributes: {
     'app.version': '1.1.5',
