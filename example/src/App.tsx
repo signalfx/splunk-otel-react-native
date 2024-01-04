@@ -29,12 +29,6 @@ import {
 } from '@splunk/otel-react-native';
 import type { ReactNativeConfiguration } from '@splunk/otel-react-native';
 import Config from 'react-native-config';
-import Geolocation from '@react-native-community/geolocation';
-
-Geolocation.getCurrentPosition((info) => {
-  console.log(info);
-  SplunkRum.updateLocation(info.coords.latitude, info.coords.longitude);
-});
 
 const RumConfig: ReactNativeConfiguration = {
   //TODO fix config setting for iOS in inegration tests
