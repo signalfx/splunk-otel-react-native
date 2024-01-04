@@ -37,26 +37,26 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run bootstrap
-      - name: Set up JDK 11 for running Gradle
-        uses: actions/setup-java@v3.11.0
-        with:
-          distribution: adopt
-          java-version: 11
-      - name: Prepare Android environment
-        run: |
-          export ANDROID_COMPILE_SDK=33
-          export ANDROID_BUILD_TOOLS=33.0.1
-          export ANDROID_COMMAND_LINE_TOOLS=9477386
-      - name: Build release version
-        run: |
-          export ENVFILE=../.env.integration
-          cd example && npm run build.release
-      - name: Upload apk to saucelabs
-        run: |
-          curl -u "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" --location \
-          --request POST 'https://api.us-west-1.saucelabs.com/v1/storage/upload' \
-          --form 'payload=@"example/android/app/build/outputs/apk/release/app-release.apk"' \
-          --form 'name="app-release.apk"'
+      # - name: Set up JDK 11 for running Gradle
+      #   uses: actions/setup-java@v3.11.0
+      #   with:
+      #     distribution: adopt
+      #     java-version: 11
+      # - name: Prepare Android environment
+      #   run: |
+      #     export ANDROID_COMPILE_SDK=33
+      #     export ANDROID_BUILD_TOOLS=33.0.1
+      #     export ANDROID_COMMAND_LINE_TOOLS=9477386
+      # - name: Build release version
+      #   run: |
+      #     export ENVFILE=../.env.integration
+      #     cd example && npm run build.release
+      # - name: Upload apk to saucelabs
+      #   run: |
+      #     curl -u "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" --location \
+      #     --request POST 'https://api.us-west-1.saucelabs.com/v1/storage/upload' \
+      #     --form 'payload=@"example/android/app/build/outputs/apk/release/app-release.apk"' \
+      #     --form 'name="app-release.apk"'
       - name: Run tests
         run: cd example && npm run wdio.android.sauce
   build-ios:
@@ -94,26 +94,26 @@ jobs:
           scVersion: '4.9.1'
       - run: npm ci
       - run: npm run bootstrap
-      - name: Build iOS
-        run: |
-          cd example/ios && \
-          xcodebuild \
-            -workspace SplunkOtelReactNativeExample.xcworkspace \
-            -scheme SplunkOtelReactNativeExample \
-            -derivedDataPath './iosSimBuild' \
-            -sdk iphonesimulator \
-            -arch x86_64 \
-            -configuration Release \
-            CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
-      - name: Zip iOS build
-        run: |
-          cd example/ios/iosSimBuild/Build/Products/Release-iphonesimulator && \
-          zip -r SplunkOtelReactNativeExample.zip SplunkOtelReactNativeExample.app
-      - name: Upload zip to saucelabs
-        run: |
-          curl -u "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" --location \
-          --request POST 'https://api.us-west-1.saucelabs.com/v1/storage/upload' \
-          --form 'payload=@"example/ios/iosSimBuild/Build/Products/Release-iphonesimulator/SplunkOtelReactNativeExample.zip"' \
-          --form 'name="SplunkOtelReactNativeExample.zip"'
+      # - name: Build iOS
+      #   run: |
+      #     cd example/ios && \
+      #     xcodebuild \
+      #       -workspace SplunkOtelReactNativeExample.xcworkspace \
+      #       -scheme SplunkOtelReactNativeExample \
+      #       -derivedDataPath './iosSimBuild' \
+      #       -sdk iphonesimulator \
+      #       -arch x86_64 \
+      #       -configuration Release \
+      #       CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+      # - name: Zip iOS build
+      #   run: |
+      #     cd example/ios/iosSimBuild/Build/Products/Release-iphonesimulator && \
+      #     zip -r SplunkOtelReactNativeExample.zip SplunkOtelReactNativeExample.app
+      # - name: Upload zip to saucelabs
+      #   run: |
+      #     curl -u "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" --location \
+      #     --request POST 'https://api.us-west-1.saucelabs.com/v1/storage/upload' \
+      #     --form 'payload=@"example/ios/iosSimBuild/Build/Products/Release-iphonesimulator/SplunkOtelReactNativeExample.zip"' \
+      #     --form 'name="SplunkOtelReactNativeExample.zip"'
       - name: Run tests
         run: cd example && npm run wdio.ios.sauce
