@@ -35,6 +35,7 @@ export const config: Options.Testrunner = {
       'appium:deviceName': 'iPhone Instant Simulator',
       'appium:automationName': 'XCUITest',
       'appium:app': 'storage:filename=SplunkOtelReactNativeExample.zip',
+      'appium:autoAcceptAlerts': true,
       'sauce:options': {
         tunnelIdentifier: process.env.SAUCE_TUNNEL_ID,
       },

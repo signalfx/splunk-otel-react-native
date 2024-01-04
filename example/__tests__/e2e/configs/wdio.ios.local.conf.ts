@@ -28,6 +28,7 @@ export const config: Options.Testrunner = {
       'appium:deviceName': 'iPhone 15 Pro',
       'appium:platformVersion': '17.0',
       'appium:automationName': 'XCUITest',
+      'appium:autoAcceptAlerts': true,
       //TODO find local app file
       'appium:app': 'SplunkOtelReactNativeExample.app'
     },
