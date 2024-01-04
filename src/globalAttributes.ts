@@ -67,6 +67,7 @@ globalAttributes = {
 //currently used for:
 //splunk.rumSessionId
 //screen.name
+//geolocation
 export function setGlobalAttributes(attrs: object) {
   globalAttributes = Object.assign(globalAttributes, attrs);
   setNativeGlobalAttributes(globalAttributes);

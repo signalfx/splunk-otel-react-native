@@ -63,12 +63,38 @@ class SpanToDiskExporter : SpanExporter {
     public func export(_ zipkinSpans: [ZipkinSpan]) -> Bool {
         let globalAttribs = Globals.getGlobalAttributes()
         let sessionId = Globals.getSessionId()
+        
+        let networkInfo = getNetworkInfo()
 
         for span in zipkinSpans {
             if span.tags["splunk.rumSessionId"] == nil && !sessionId.isEmpty {
                 span.tags["splunk.rumSessionId"] = sessionId
             }
 
+            if networkInfo.hostConnectionType != nil {
+                span.tags["net.host.connection.type"] = networkInfo.hostConnectionType!
+            }
+
+            if networkInfo.hostConnectionSubType != nil {
+                span.tags["net.host.connection.subtype"] = networkInfo.hostConnectionSubType!
+            }
+
+            if networkInfo.carrierName != nil {
+                span.tags["net.host.carrier.name"] = networkInfo.carrierName!
+            }
+
+            if networkInfo.carrierCountryCode != nil {
+                span.tags["net.host.carrier.mcc"] = networkInfo.carrierCountryCode!
+            }
+
+            if networkInfo.carrierNetworkCode != nil {
+                span.tags["net.host.carrier.mnc"] = networkInfo.carrierNetworkCode!
+            }
+
+            if networkInfo.carrierIsoCountryCode != nil {
+                span.tags["net.host.carrier.icc"] = networkInfo.carrierIsoCountryCode!
+            }
+            
             for (key, attrib) in globalAttribs {
                 if span.tags[key] == nil {
                     span.tags[key] = attrib

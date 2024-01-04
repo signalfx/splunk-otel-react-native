@@ -18,9 +18,7 @@ import zipkin2.reporter.Sender;
 import zipkin2.reporter.okhttp3.OkHttpSender;
 
 public class DiskBufferingExporterFactory {
-  public static SpanExporter setupDiskBuffering(String endpoint, ContextWrapper application, int maxStorageUseMb) {
-    CurrentNetworkProvider currentNetworkProvider = CurrentNetworkProvider.createAndStart((Application) application.getApplicationContext());
-
+  public static SpanExporter setupDiskBuffering(String endpoint, ContextWrapper application, int maxStorageUseMb, CurrentNetworkProvider currentNetworkProvider) {
     Sender sender = OkHttpSender.newBuilder().endpoint(endpoint).build();
     File spanFilesPath = FileUtils.getSpansDirectory(application);
     BandwidthTracker bandwidthTracker = new BandwidthTracker();

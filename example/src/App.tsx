@@ -24,6 +24,7 @@ import Home from './Home';
 import Details from './Details';
 import {
   OtelWrapper,
+  SplunkRum,
   startNavigationTracking,
 } from '@splunk/otel-react-native';
 import type { ReactNativeConfiguration } from '@splunk/otel-react-native';
@@ -37,8 +38,9 @@ const RumConfig: ReactNativeConfiguration = {
   rumAccessToken: '',
   debug: true,
   globalAttributes: {
-    globalAttr1: '42',
-    globalAttr2: 42,
+    'app.version': '1.1.5',
+    'globalAttr1': '42',
+    'globalAttr2': 42,
   },
 };
 
