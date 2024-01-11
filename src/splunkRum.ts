@@ -156,10 +156,14 @@ export const SplunkRum: SplunkRumType = {
       nativeSdkConf.beaconEndpoint = config.beaconEndpoint;
     }
 
+    const sessionId = getSessionId();
     nativeSdkConf.rumAccessToken = config.rumAccessToken;
     nativeSdkConf.enableDiskBuffering = config.enableDiskBuffering;
     nativeSdkConf.limitDiskUsageMegabytes = config.limitDiskUsageMegabytes;
-    nativeSdkConf.globalAttributes = { ...getResource() };
+    nativeSdkConf.globalAttributes = { 
+      ...getResource(), 
+      'splunk.rumSessionId': sessionId,
+    };
 
     addGlobalAttributesFromConf(config);
     const provider = new WebTracerProvider({});
