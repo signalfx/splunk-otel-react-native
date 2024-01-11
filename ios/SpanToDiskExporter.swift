@@ -16,6 +16,7 @@ limitations under the License.
 */
 
 import Foundation
+import DeviceKit
 
 /*
 Copyright 2022 Splunk Inc.
@@ -39,6 +40,7 @@ class SpanToDiskExporter : SpanExporter {
     let maxFileSizeBytes: Int64
     // Count of spans to insert before checking whether truncation is necessary
     let truncationCheckpoint: Int64
+    let deviceModel: String
     private var totalSpansInserted: Int64 = 0
     private var checkpointCounter: Int64 = 0
 
@@ -46,6 +48,7 @@ class SpanToDiskExporter : SpanExporter {
         self.db = spanDb
         self.maxFileSizeBytes = limitDiskUsageMegabytes * 1024 * 1024
         self.truncationCheckpoint = truncationCheckpoint
+        self.deviceModel = Device.current.description
     }
 
     public func shutdown() {}
@@ -70,6 +73,10 @@ class SpanToDiskExporter : SpanExporter {
             if span.tags["splunk.rumSessionId"] == nil && !sessionId.isEmpty {
                 span.tags["splunk.rumSessionId"] = sessionId
             }
+
+            if span.tags["device.model.name"] == nil {
+                span.tags["device.model.name"] = self.deviceModel
+            }            
 
             if networkInfo.hostConnectionType != nil {
                 span.tags["net.host.connection.type"] = networkInfo.hostConnectionType!

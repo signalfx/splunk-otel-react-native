@@ -1,9 +1,13 @@
 package com.splunkotelreactnative.crash;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.splunkotelreactnative.ReactSpanData;
 import com.splunkotelreactnative.ReactSpanProperties;
+import com.splunkotelreactnative.exporter.network.CurrentNetwork;
+import com.splunkotelreactnative.exporter.network.CurrentNetworkAttributesExtractor;
+import com.splunkotelreactnative.exporter.network.CurrentNetworkProvider;
 
 import java.util.Collections;
 import java.util.List;
@@ -27,6 +31,7 @@ import io.opentelemetry.semconv.trace.attributes.SemanticAttributes;
 
 public class CrashReporter {
   private final SpanExporter exporter;
+  private final CurrentNetworkProvider currentNetworkProvider;
   private volatile Attributes globalAttributes;
   private volatile String sessionId;
   private final RuntimeDetailsExtractor runtimeDetailsExtractor;
@@ -34,9 +39,10 @@ public class CrashReporter {
   private final AnchoredClock clock;
   private final IdGenerator idGenerator;
 
-  public CrashReporter(SpanExporter exporter, Attributes globalAttributes, Context context) {
+  public CrashReporter(SpanExporter exporter, CurrentNetworkProvider currentNetworkProvider, Attributes globalAttributes, Context context) {
     this.exporter = exporter;
     this.globalAttributes = globalAttributes;
+    this.currentNetworkProvider = currentNetworkProvider;
     this.runtimeDetailsExtractor = RuntimeDetailsExtractor.create(context);
     this.clock = AnchoredClock.create(Clock.getDefault());
     this.idGenerator = IdGenerator.random();
@@ -112,6 +118,11 @@ public class CrashReporter {
       ? CrashReporterAttributes.COMPONENT_CRASH
       : CrashReporterAttributes.COMPONENT_ERROR;
     attributes.put(CrashReporterAttributes.COMPONENT_KEY, component);
+
+    CurrentNetwork network = currentNetworkProvider.refreshNetworkStatus();
+    CurrentNetworkAttributesExtractor networkAttributesExtractor = new CurrentNetworkAttributesExtractor();
+    Attributes networkAttributes = networkAttributesExtractor.extract(network);
+    attributes.putAll(networkAttributes);
 
     return attributes.build();
   }

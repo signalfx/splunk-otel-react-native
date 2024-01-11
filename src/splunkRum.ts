@@ -156,12 +156,23 @@ export const SplunkRum: SplunkRumType = {
       nativeSdkConf.beaconEndpoint = config.beaconEndpoint;
     }
 
+    const sessionId = getSessionId();
     nativeSdkConf.rumAccessToken = config.rumAccessToken;
     nativeSdkConf.enableDiskBuffering = config.enableDiskBuffering;
     nativeSdkConf.limitDiskUsageMegabytes = config.limitDiskUsageMegabytes;
-    nativeSdkConf.globalAttributes = { ...getResource() };
+    nativeSdkConf.globalAttributes = {
+      ...getResource(),
+      ...config.globalAttributes,
+      'splunk.rumSessionId': sessionId,
+      app: config.applicationName,
+    };
 
-    addGlobalAttributesFromConf(config);
+    if (config.deploymentEnvironment) {
+      nativeSdkConf.globalAttributes['deployment.environment'] = config.deploymentEnvironment;
+    }
+    // make sure native crashreporter has correct attributes
+    setGlobalAttributes(nativeSdkConf.globalAttributes);
+
     const provider = new WebTracerProvider({});
     provider.addSpanProcessor(new GlobalAttributeAppender());
     provider.addSpanProcessor(
@@ -196,8 +207,7 @@ export const SplunkRum: SplunkRumType = {
           appStartInfo.appStart || appStartInfo.moduleStart;
       }
       setNativeSessionId(getSessionId());
-      // make sure native crashreporter has correct attributes
-      setGlobalAttributes({});
+
       if (config.appStartEnabled) {
         const tracer = provider.getTracer('AppStart');
         const nativeInitEnd = Date.now();
@@ -237,19 +247,6 @@ export const SplunkRum: SplunkRumType = {
   setGlobalAttributes: setGlobalAttributes,
   updateLocation: updateLocation,
 };
-
-function addGlobalAttributesFromConf(config: ReactNativeConfiguration) {
-  const confAttributes: Attributes = {
-    ...config.globalAttributes,
-  };
-  confAttributes.app = config.applicationName;
-
-  if (config.deploymentEnvironment) {
-    confAttributes['deployment.environment'] = config.deploymentEnvironment;
-  }
-
-  setGlobalAttributes(confAttributes);
-}
 
 function updateLocation(latitude: number, longitude: number) {
   setGlobalAttributes({

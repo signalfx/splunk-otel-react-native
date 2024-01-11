@@ -24,7 +24,7 @@ class SplunkOtelReactNative: NSObject {
       let enableDiskBuffering = config["enableDiskBuffering"] as? Bool ?? true 
       let limitDiskUsageMegabytes = config["limitDiskUsageMegabytes"] as? Int64 ?? 25
       let truncationCheckpoint = config["truncationCheckpoint"] as? Int64 ?? 512
-        
+          
       let db = SpanDb(enableDiskBuffering: enableDiskBuffering)
       spanExporter = SpanToDiskExporter(spanDb: db, limitDiskUsageMegabytes: limitDiskUsageMegabytes, truncationCheckpoint: truncationCheckpoint)
       initializeCrashReporting(exporter: spanExporter)
@@ -76,10 +76,15 @@ class SplunkOtelReactNative: NSObject {
         updateCrashReportSessionId(id)
         resolve(true)
     }
-
+    
     @objc(setGlobalAttributes:withResolver:withRejecter:)
     func setGlobalAttributes(attributes: Dictionary<String, Any>, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
-        let newAttribs: [String:String] = attributes.compactMapValues { v in
+        setGlobalAttributesInternally(attributes: attributes)
+        resolve(true)
+    }
+
+    private func setGlobalAttributesInternally(attributes: Dictionary<String, Any>) {
+        let newAttribs: [String: String] = attributes.compactMapValues { v in
             switch v {
             case is String:
                 return v as! String
@@ -95,7 +100,6 @@ class SplunkOtelReactNative: NSObject {
         }
 
         Globals.setGlobalAttributes(newAttribs)
-        resolve(true)
     }
 
     private func processStartTime() throws -> Date {
