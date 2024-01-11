@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 import Foundation
-import DeviceKit
 
 // Zipkin conversion code modified from https://github.com/open-telemetry/opentelemetry-swift/blob/main/Sources/Exporters/Zipkin/Implementation/ZipkinConversionExtension.swift
 
@@ -129,8 +128,6 @@ struct ZipkinTransform {
                     break
             }
         }
-
-        tags["device.model.name"] = Device.current.description
 
         return ZipkinSpan(traceId: traceId,
                           parentId: parentId,

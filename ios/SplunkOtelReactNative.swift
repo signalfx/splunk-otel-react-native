@@ -24,11 +24,7 @@ class SplunkOtelReactNative: NSObject {
       let enableDiskBuffering = config["enableDiskBuffering"] as? Bool ?? true 
       let limitDiskUsageMegabytes = config["limitDiskUsageMegabytes"] as? Int64 ?? 25
       let truncationCheckpoint = config["truncationCheckpoint"] as? Int64 ?? 512
-            
-    // Set global attributes otherwise crashes won't have it
-    let globalAttributes = config["globalAttributes"] as? Dictionary<String, Any> ?? [:]
-    setGlobalAttributesInternally(attributes: globalAttributes)
-
+          
       let db = SpanDb(enableDiskBuffering: enableDiskBuffering)
       spanExporter = SpanToDiskExporter(spanDb: db, limitDiskUsageMegabytes: limitDiskUsageMegabytes, truncationCheckpoint: truncationCheckpoint)
       initializeCrashReporting(exporter: spanExporter)
