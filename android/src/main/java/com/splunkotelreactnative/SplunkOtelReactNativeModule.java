@@ -95,7 +95,7 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
     exporter = createExporter(endpointWithAuthentication, getReactApplicationContext(),
       mapReader.getEnableDiskBuffering(), mapReader.getMaxStorageUseMb());
 
-    crashReporter = new CrashReporter(exporter,
+    crashReporter = new CrashReporter(exporter, currentNetworkProvider,
       attributesFromMap(mapReader.getGlobalAttributes()), getReactApplicationContext());
 
     crashReporter.install();
@@ -134,7 +134,6 @@ public class SplunkOtelReactNativeModule extends ReactContextBaseJavaModule {
     CurrentNetwork network = currentNetworkProvider.refreshNetworkStatus();
     CurrentNetworkAttributesExtractor networkAttributesExtractor = new CurrentNetworkAttributesExtractor();
     Attributes networkAttributes = networkAttributesExtractor.extract(network);
-    setGlobalAttributes(networkAttributes);
 
     for (int i = 0; i < spanMaps.size(); i++) {
       ReadableMap spanMap = spanMaps.getMap(i);

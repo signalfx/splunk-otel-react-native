@@ -207,7 +207,7 @@ export const SplunkRum: SplunkRumType = {
           appStartInfo.appStart || appStartInfo.moduleStart;
       }
       setNativeSessionId(getSessionId());
-      
+
       if (config.appStartEnabled) {
         const tracer = provider.getTracer('AppStart');
         const nativeInitEnd = Date.now();
