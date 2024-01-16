@@ -191,8 +191,8 @@ export function toZipkinSpan(span: ReadableSpan, serviceName: string): Span {
     name: span.name,
     id: span.spanContext().spanId,
     kind: ZIPKIN_SPAN_KIND_MAPPING[span.kind],
-    timestamp: hrTimeToMicroseconds(span.startTime),
-    duration: hrTimeToMicroseconds(span.duration),
+    timestamp: hrTimeToMicroseconds(span.startTime) | 0,
+    duration: hrTimeToMicroseconds(span.duration) | 0,
     localEndpoint: { serviceName },
     tags: _toZipkinTags(span.attributes, span.status), //omitted span.resource
     annotations: span.events.length
