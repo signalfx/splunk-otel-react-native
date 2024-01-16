@@ -111,6 +111,8 @@ struct ZipkinTransform {
         let spanId = otelSpan["id"] as? String ?? "0000000000000000"
         let name = otelSpan["name"] as? String ?? "unknown"
         let jsTags = otelSpan["tags"] as? Dictionary<String, Any> ?? [:]
+        let timestamp = anyToUInt64(otelSpan["timestamp"])
+        let duration = anyToUInt64(otelSpan["duration"])
 
         var tags: Dictionary<String, String> = [:]
 
@@ -134,8 +136,8 @@ struct ZipkinTransform {
                           id: spanId,
                           kind: otelSpan["kind"] as? String,
                           name: name,
-                          timestamp: otelSpan["timestamp"] as? UInt64 ?? 0,
-                          duration: otelSpan["duration"] as? UInt64 ?? 0,
+                          timestamp: timestamp,
+                          duration: duration,
                           remoteEndpoint: nil,
                           annotations: [],
                           tags: tags)
@@ -153,5 +155,20 @@ extension ZipkinSpan {
     
     func addEvent(name: String, timestamp: Date) {
         self.annotations.append(ZipkinAnnotation(timestamp: UInt64(timestamp.timeIntervalSince1970 * 1e6), value: name))
+    }
+}
+
+fileprivate func anyToUInt64(_ v: Any?) -> UInt64 {
+    if v == nil {
+        return 0
+    }
+
+    switch v {
+    case is Double:
+        return UInt64(v as! Double)
+    case is Int:
+        return UInt64(v as! Int)
+    default:
+        return 0
     }
 }
