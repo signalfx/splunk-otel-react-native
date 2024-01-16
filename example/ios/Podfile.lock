@@ -497,7 +497,7 @@ PODS:
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
   - SocketRocket (0.6.1)
-  - splunk-otel-react-native (0.3.0):
+  - splunk-otel-react-native (0.3.1):
     - DeviceKit (~> 4.0)
     - PLCrashReporter (~> 1.11)
     - React-Core
@@ -739,10 +739,10 @@ SPEC CHECKSUMS:
   ReactCommon: 91ece8350ebb3dd2be9cef662abd78b6948233c0
   RNScreens: 3c2d122f5e08c192e254c510b212306da97d2581
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  splunk-otel-react-native: a9aa98bc64460b78fb470365cc465cdd7feba82b
+  splunk-otel-react-native: 1e84229010d68b5e9ca1f7e48414a7c678444fa3
   Yoga: 86fed2e4d425ee4c6eab3813ba1791101ee153c6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 43525f2fc52f01068fed659b4b70dfe433901dd5
+PODFILE CHECKSUM: 5009b8cc36e00dbdd65a448c2f8e5dfab9669070
 
 COCOAPODS: 1.11.3
