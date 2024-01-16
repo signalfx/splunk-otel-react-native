@@ -165,9 +165,17 @@ fileprivate func anyToUInt64(_ v: Any?) -> UInt64 {
 
     switch v {
     case is Double:
-        return UInt64(v as! Double)
+        let doubleValue = v as! Double
+        if (doubleValue >= 0.0) {
+            return UInt64(doubleValue)
+        }
+        return 0
     case is Int:
-        return UInt64(v as! Int)
+        let intValue = v as! Int
+        if (intValue >= 0) {
+            return UInt64(intValue)
+        }
+        return 0
     default:
         return 0
     }
