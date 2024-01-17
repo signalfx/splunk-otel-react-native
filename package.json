@@ -1,6 +1,6 @@
 {
   "name": "@splunk/otel-react-native",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Splunk distribution of Open Telemetry for react native.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
