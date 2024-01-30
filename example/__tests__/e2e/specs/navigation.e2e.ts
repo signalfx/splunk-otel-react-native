@@ -49,5 +49,6 @@ describe('Navigation', () => {
     expect(createSpan.tags['screen.name']).toBe('Details');
     expect(createSpan.tags['app']).toBe('RnExample');
     expect(createSpan.tags['device.model.name']).toBeDefined();
+    expect(createSpan.tags['splunk.rumSessionId']).toBeDefined();
   });
 });

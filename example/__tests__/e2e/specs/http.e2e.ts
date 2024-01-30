@@ -42,5 +42,6 @@ describe('Http request', () => {
     expect(fetchSpan.tags['http.url']).toBe(
       'https://raw.githubusercontent.com/signalfx/splunk-otel-react-native/main/package.json'
     );
+    expect(fetchSpan.tags['splunk.rumSessionId']).toBeDefined();
   });
 });
