@@ -7,6 +7,9 @@
 This library lets you autoinstrument React Native applications. Minimum supported React Native version is 0.68.
 To instrument applications running on React Native versions lower than 0.68, see [Instrument lower versions](#instrument-lower-versions).
 
+> [!IMPORTANT]
+> This library instruments React Native applications for Android and iOS devices. For React web instrumentation, see the [splunk-otel-js-web](https://github.com/signalfx/splunk-otel-js-web) project.
+
 ## Get started
 
 To instrument your React Native application, follow these steps.
