@@ -15,10 +15,12 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/signalfx/splunk-otel-react-native.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"
+  s.resource_bundles = {'SplunkOtelReactNative' => ['ios/PrivacyInfo.xcprivacy']}
 
   s.dependency "React-Core"
   s.dependency "DeviceKit", "~> 4.0"
   s.dependency "PLCrashReporter", "~> 1.11"
+  
 
   # Don't install the dependencies when we run `pod install` in the old architecture.
   if ENV['RCT_NEW_ARCH_ENABLED'] == '1' then

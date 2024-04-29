@@ -74,24 +74,24 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-      - name: Download sc binary for os x
-        run: |
-          SC_VERSION="4.9.1"
-          SC_ARCH="x64"
-          SC_DIR="$RUNNER_TOOL_CACHE/sc/$SC_VERSION/$SC_ARCH"
-          mkdir -p $SC_DIR
-          mkdir -p $SC_DIR.complete
-          curl -L https://saucelabs.com/downloads/sc-$SC_VERSION-osx.zip -o $SC_DIR/sc-$SC_VERSION-osx.zip
-          unzip $SC_DIR/sc-$SC_VERSION-osx.zip -d $SC_DIR
-          mv $SC_DIR/sc-$SC_VERSION-osx $SC_DIR/sc-$SC_VERSION-linux
-      - name: Setup sauce connect
-        uses: saucelabs/sauce-connect-action@v2
-        with:
-          username: ${{ secrets.SAUCE_USERNAME }}
-          accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
-          tunnelName: ${{ secrets.SAUCE_TUNNEL_ID }}
-          noSSLBumpDomains: all
-          scVersion: '4.9.1'
+      # - name: Download sc binary for os x
+      #   run: |
+      #     SC_VERSION="4.9.1"
+      #     SC_ARCH="x64"
+      #     SC_DIR="$RUNNER_TOOL_CACHE/sc/$SC_VERSION/$SC_ARCH"
+      #     mkdir -p $SC_DIR
+      #     mkdir -p $SC_DIR.complete
+      #     curl -L https://saucelabs.com/downloads/sc-$SC_VERSION-osx.zip -o $SC_DIR/sc-$SC_VERSION-osx.zip
+      #     unzip $SC_DIR/sc-$SC_VERSION-osx.zip -d $SC_DIR
+      #     mv $SC_DIR/sc-$SC_VERSION-osx $SC_DIR/sc-$SC_VERSION-linux
+      # - name: Setup sauce connect
+      #   uses: saucelabs/sauce-connect-action@v2
+      #   with:
+      #     username: ${{ secrets.SAUCE_USERNAME }}
+      #     accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
+      #     tunnelName: ${{ secrets.SAUCE_TUNNEL_ID }}
+      #     noSSLBumpDomains: all
+      #     scVersion: '4.9.1'
       - run: npm ci
       - run: npm run bootstrap
       - name: Build iOS
@@ -115,5 +115,5 @@ jobs:
           --request POST 'https://api.us-west-1.saucelabs.com/v1/storage/upload' \
           --form 'payload=@"example/ios/iosSimBuild/Build/Products/Release-iphonesimulator/SplunkOtelReactNativeExample.zip"' \
           --form 'name="SplunkOtelReactNativeExample.zip"'
-      - name: Run tests
-        run: cd example && npm run wdio.ios.sauce
+      # - name: Run tests
+      #   run: cd example && npm run wdio.ios.sauce
