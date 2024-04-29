@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* SplunkOtelReactNative.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* SplunkOtelReactNative.m */; };
-		F4FF95D7245B92E800C19C63 /*  SplunkOtelReactNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  SplunkOtelReactNative.swift */; };
+		F4FF95D7245B92E800C19C63 /* SplunkOtelReactNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* SplunkOtelReactNative.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,6 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E1F23E72BDFC497001FA2C8 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		134814201AA4EA6300B7C361 /* libSplunkOtelReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSplunkOtelReactNative.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5891CC2AC0600A0062D /* SplunkOtelReactNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplunkOtelReactNative.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* SplunkOtelReactNative-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SplunkOtelReactNative-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -52,6 +52,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				0E1F23E72BDFC497001FA2C8 /* PrivacyInfo.xcprivacy */,
 				F4FF95D6245B92E800C19C63 /* SplunkOtelReactNative.swift */,
 				B3E7B5891CC2AC0600A0062D /* SplunkOtelReactNative.m */,
 				F4FF95D5245B92E700C19C63 /* SplunkOtelReactNative-Bridging-Header.h */,
@@ -117,7 +118,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4FF95D7245B92E800C19C63 /* SplunkOtelReactNative.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* SplunkOtelReactNative.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
