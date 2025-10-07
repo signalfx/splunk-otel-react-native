@@ -1,0 +1,119 @@
+name: CI
+
+on:
+  pull_request:
+
+jobs:
+  version-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      - run: npm run version:check
+  android-integration-tests:
+    needs: version-check
+    runs-on: ubuntu-latest
+    permissions: read-all
+    environment: integration
+    env:
+      SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+      SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+      SAUCE_TUNNEL_ID: ${{ secrets.SAUCE_TUNNEL_ID }}
+    steps:
+      - name: Setup sauce connect
+        uses: saucelabs/sauce-connect-action@v2
+        with:
+          username: ${{ secrets.SAUCE_USERNAME }}
+          accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
+          tunnelName: ${{ secrets.SAUCE_TUNNEL_ID }}
+          noSSLBumpDomains: all
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run bootstrap
+      - name: Set up JDK 11 for running Gradle
+        uses: actions/setup-java@v3.11.0
+        with:
+          distribution: adopt
+          java-version: 11
+      - name: Prepare Android environment
+        run: |
+          export ANDROID_COMPILE_SDK=33
+          export ANDROID_BUILD_TOOLS=33.0.1
+          export ANDROID_COMMAND_LINE_TOOLS=9477386
+      - name: Build release version
+        run: |
+          export ENVFILE=../.env.integration
+          cd example && npm run build.release
+      - name: Upload apk to saucelabs
+        run: |
+          curl -u "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" --location \
+          --request POST 'https://api.us-west-1.saucelabs.com/v1/storage/upload' \
+          --form 'payload=@"example/android/app/build/outputs/apk/release/app-release.apk"' \
+          --form 'name="app-release.apk"'
+      - name: Run tests
+        run: cd example && npm run wdio.android.sauce
+  build-ios:
+    needs: version-check
+    runs-on: macos-latest
+    permissions: read-all
+    environment: integration
+    env:
+      SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+      SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+      SAUCE_TUNNEL_ID: ${{ secrets.SAUCE_TUNNEL_ID }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      # - name: Download sc binary for os x
+      #   run: |
+      #     SC_VERSION="4.9.1"
+      #     SC_ARCH="x64"
+      #     SC_DIR="$RUNNER_TOOL_CACHE/sc/$SC_VERSION/$SC_ARCH"
+      #     mkdir -p $SC_DIR
+      #     mkdir -p $SC_DIR.complete
+      #     curl -L https://saucelabs.com/downloads/sc-$SC_VERSION-osx.zip -o $SC_DIR/sc-$SC_VERSION-osx.zip
+      #     unzip $SC_DIR/sc-$SC_VERSION-osx.zip -d $SC_DIR
+      #     mv $SC_DIR/sc-$SC_VERSION-osx $SC_DIR/sc-$SC_VERSION-linux
+      # - name: Setup sauce connect
+      #   uses: saucelabs/sauce-connect-action@v2
+      #   with:
+      #     username: ${{ secrets.SAUCE_USERNAME }}
+      #     accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
+      #     tunnelName: ${{ secrets.SAUCE_TUNNEL_ID }}
+      #     noSSLBumpDomains: all
+      #     scVersion: '4.9.1'
+      - run: npm ci
+      - run: npm run bootstrap
+      - name: Build iOS
+        run: |
+          cd example/ios && \
+          xcodebuild \
+            -workspace SplunkOtelReactNativeExample.xcworkspace \
+            -scheme SplunkOtelReactNativeExample \
+            -derivedDataPath './iosSimBuild' \
+            -sdk iphonesimulator \
+            -arch x86_64 \
+            -configuration Release \
+            CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+      - name: Zip iOS build
+        run: |
+          cd example/ios/iosSimBuild/Build/Products/Release-iphonesimulator && \
+          zip -r SplunkOtelReactNativeExample.zip SplunkOtelReactNativeExample.app
+      - name: Upload zip to saucelabs
+        run: |
+          curl -u "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" --location \
+          --request POST 'https://api.us-west-1.saucelabs.com/v1/storage/upload' \
+          --form 'payload=@"example/ios/iosSimBuild/Build/Products/Release-iphonesimulator/SplunkOtelReactNativeExample.zip"' \
+          --form 'name="SplunkOtelReactNativeExample.zip"'
+      # - name: Run tests
+      #   run: cd example && npm run wdio.ios.sauce

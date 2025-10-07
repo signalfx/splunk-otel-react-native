@@ -1,0 +1,39 @@
+default:
+  image: 'cimg/node:lts'
+
+stages:
+  - setup
+  - build
+  - release
+
+# add cache
+npm_install:
+  stage: setup
+  script:
+    - npm ci --include=dev
+    
+build_artifacts:
+  stage: build
+  only:
+  - /^v[0-9]+\..*/
+  artifacts:
+    paths:
+      - dist/
+  script:
+    - npm ci --include=dev
+    - if [ ! -d "dist" ]; then mkdir dist; fi
+    - npm pack --pack-destination dist
+    - shasum -a 256 dist/* > dist/checksums.txt
+
+release_npm:
+  artifacts:
+    paths:
+      - dist/
+  stage: release
+  only:
+    - /^v[0-9]+\..*/
+  script:
+    - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+    - for f in dist/*.tgz; do npm publish ./$f; done;
+    - rm -f ~/.npmrc
+    
