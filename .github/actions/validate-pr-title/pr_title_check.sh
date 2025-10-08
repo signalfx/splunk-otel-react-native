@@ -6,7 +6,7 @@ echo "DEBUG: PR_AUTHOR='$PR_AUTHOR'"
 echo "DEBUG: PR_TITLE='$PR_TITLE'"
 
 # List of authors to skip
-SKIP_AUTHORS=("renovate[bot]" "renovate-bot")
+SKIP_AUTHORS=("renovate[bot]" "renovate-bot" "dependabot[bot]")
 
 for author in "${SKIP_AUTHORS[@]}"; do
   if [[ "$PR_AUTHOR" == "$author" ]]; then
