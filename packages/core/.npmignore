@@ -1,0 +1,11 @@
+example
+**/__tests__
+ios/build
+android/build
+.DS_Store
+.git
+.github
+*.log
+coverage
+node_modules
+
