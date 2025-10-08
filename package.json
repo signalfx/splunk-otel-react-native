@@ -12,6 +12,7 @@
     "build:ios": "yarn workspace splunk-otel-react-native-example build:ios",
     "reset": "yarn workspace splunk-otel-react-native-example start --reset-cache",
     "build": "yarn workspace @splunk/otel-react-native build",
+    "prepare": "yarn workspace @splunk/otel-react-native build",
     "clean": "del-cli example/android/build example/android/app/build example/ios/build packages/core/lib",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "typecheck": "yarn workspace @splunk/otel-react-native typecheck",
