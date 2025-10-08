@@ -12,6 +12,7 @@
     "example/android/**/build",
     "example/ios/build",
     "lib",
-    "packages/**/lib"
+    "packages/**/lib",
+    "**/__tests__/**"
   ]
 }
