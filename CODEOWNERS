@@ -1,0 +1,7 @@
+# Global Owners:
+# All files in the repository require review by the MRUM React Native maintainers.
+* @signalfx/mrum-react-native-maintainers
+
+# CODEOWNERS File:
+# Changes to this CODEOWNERS file specifically require approval from MRUM React Native admins.
+.github/CODEOWNERS @signalfx/mrum-react-native-admins
