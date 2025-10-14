@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "paths": {
+      "@splunk/otel-react-native": ["./packages/core/src/index"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "example/node_modules",
+    "example/android/**/build",
+    "example/ios/build",
+    "lib",
+    "packages/**/lib",
+    "**/__tests__/**"
+  ]
+}
