@@ -25,6 +25,11 @@ def getExtOrIntegerDefault(name) {
   return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties["SplunkOtelReactNative_" + name]).toInteger()
 }
 
+// Helper to detect whether New Architecture is enabled
+def isNewArchitectureEnabled() {
+  return project.hasProperty('newArchEnabled') && project.getProperties().get('newArchEnabled') == 'true'
+}
+
 android {
   namespace "com.splunk.otel.reactnative"
 
@@ -33,6 +38,7 @@ android {
   defaultConfig {
     minSdkVersion getExtOrIntegerDefault("minSdkVersion")
     targetSdkVersion getExtOrIntegerDefault("targetSdkVersion")
+    buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
   }
 
   buildFeatures {
@@ -56,10 +62,17 @@ android {
 
   sourceSets {
     main {
-      java.srcDirs += [
-        "generated/java",
-        "generated/jni"
-      ]
+      if (isNewArchitectureEnabled()) {
+        java.srcDirs += [
+          "generated/java",
+          "generated/jni",
+          "src/newarch/kotlin"
+        ]
+      } else {
+        java.srcDirs += [
+          "src/oldarch/kotlin"
+        ]
+      }
     }
   }
 }

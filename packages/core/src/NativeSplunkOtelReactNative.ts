@@ -1,7 +1,18 @@
-import { TurboModuleRegistry, type TurboModule } from 'react-native';
+import {
+  TurboModuleRegistry,
+  NativeModules,
+  type TurboModule,
+} from 'react-native';
 
 export interface Spec extends TurboModule {
-  multiply(a: number, b: number): number;
+  multiply(a: number, b: number): Promise<number>;
 }
 
-export default TurboModuleRegistry.getEnforcing<Spec>('SplunkOtelReactNative');
+const Turbo = TurboModuleRegistry.get<Spec>('SplunkOtelReactNative');
+const Legacy = (NativeModules as any).SplunkOtelReactNative as Spec | undefined;
+
+if (!Turbo && !Legacy) {
+  throw new Error('Native module SplunkOtelReactNative is not linked.');
+}
+
+export default (Turbo ?? Legacy)!;

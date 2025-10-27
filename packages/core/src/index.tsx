@@ -1,5 +1,6 @@
 import SplunkOtelReactNative from './NativeSplunkOtelReactNative';
 
-export function multiply(a: number, b: number): number {
-  return SplunkOtelReactNative.multiply(a, b) + 16;
+export async function multiply(a: number, b: number): Promise<number> {
+  const result = await SplunkOtelReactNative.multiply(a, b);
+  return result + 16;
 }
