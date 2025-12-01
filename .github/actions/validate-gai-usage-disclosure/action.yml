@@ -10,4 +10,4 @@ runs:
       env:
         PR_BODY: ${{ github.event.pull_request.body }}
         PR_AUTHOR: ${{ github.event.pull_request.user.login }}
-      run: bash ./.github/actions/validate-gai-usage-disclosure/gai_usage_disclosure_check.sh
+      run: bash ./.github/actions/validate-gai-usage-disclosure/gai-usage-disclosure-check.sh
