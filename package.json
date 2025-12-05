@@ -64,6 +64,9 @@
   "engines": {
     "node": ">=22"
   },
+  "resolutions": {
+    "js-yaml": "3.14.2"
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
