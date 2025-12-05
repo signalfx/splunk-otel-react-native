@@ -1,0 +1,9 @@
+version: 3
+project:
+  name: splunk-otel-react-native
+
+# Exclude the example test application; the production agent code (packages/core)
+# that we release remains in scope for FOSSA scanning.
+paths:
+  exclude:
+    - example
