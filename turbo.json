@@ -3,23 +3,34 @@
   "globalDependencies": [".nvmrc", ".yarnrc.yml"],
   "globalEnv": ["NODE_ENV"],
   "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**/*.ts", "src/**/*.tsx", "package.json", "tsconfig*.json"],
+      "outputs": ["lib/**", "plugin/build/**"]
+    },
     "build:android": {
-      "env": ["ANDROID_HOME", "ORG_GRADLE_PROJECT_newArchEnabled"],
+      "dependsOn": ["build"],
+      "env": [
+        "ANDROID_HOME",
+        "ORG_GRADLE_PROJECT_newArchEnabled",
+        "JAVA_OPTS"
+      ],
       "inputs": [
         "package.json",
-        "android",
-        "!android/build",
-        "src/*.ts",
-        "src/*.tsx",
+        "android/**",
+        "!android/build/**",
+        "src/**/*.ts",
+        "src/**/*.tsx",
         "example/package.json",
-        "example/android",
-        "!example/android/.gradle",
-        "!example/android/build",
-        "!example/android/app/build"
+        "example/android/**",
+        "!example/android/.gradle/**",
+        "!example/android/build/**",
+        "!example/android/app/build/**"
       ],
-      "outputs": []
+      "outputs": ["example/android/app/build/outputs/**"]
     },
     "build:ios": {
+      "dependsOn": ["build"],
       "env": [
         "RCT_NEW_ARCH_ENABLED",
         "RCT_USE_RN_DEP",
@@ -28,14 +39,29 @@
       "inputs": [
         "package.json",
         "*.podspec",
-        "ios",
-        "src/*.ts",
-        "src/*.tsx",
+        "ios/**",
+        "!ios/build/**",
+        "src/**/*.ts",
+        "src/**/*.tsx",
         "example/package.json",
-        "example/ios",
-        "!example/ios/build",
-        "!example/ios/Pods"
+        "example/ios/**",
+        "!example/ios/build/**",
+        "!example/ios/Pods/**"
       ],
+      "outputs": ["example/ios/build/**"]
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "inputs": ["src/**/*.ts", "src/**/*.tsx", "src/**/__tests__/**"],
+      "outputs": ["coverage/**"]
+    },
+    "lint": {
+      "inputs": ["**/*.ts", "**/*.tsx", "**/*.js", "eslint.config.mjs"],
+      "outputs": []
+    },
+    "typecheck": {
+      "dependsOn": ["build"],
+      "inputs": ["src/**/*.ts", "src/**/*.tsx", "tsconfig*.json"],
       "outputs": []
     }
   }
