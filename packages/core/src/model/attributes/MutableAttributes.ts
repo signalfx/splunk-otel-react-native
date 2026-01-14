@@ -294,14 +294,33 @@ export class MutableAttributes {
   /**
    * Updates attributes using a mutator function.
    *
-   * Fetches current attributes, applies the mutator, and sets the result.
+   * Fetches current attributes, applies the mutator, and replaces all
+   * attributes with the result. Keys present in current but missing from
+   * the mutator's return value will be removed.
    *
    * @param mutator - Function that receives current attributes and returns updated ones.
+   *
+   * @example Remove an attribute
+   * ```typescript
+   * await attrs.update((current) => {
+   *   const { keyToRemove, ...rest } = current;
+   *   return rest;
+   * });
+   * ```
    */
   async update(mutator: (current: Attributes) => Attributes): Promise<void> {
     const current = await this.getAll();
     const updated = mutator(current);
 
+    // Find keys that were removed by the mutator
+    const currentKeys = Object.keys(current);
+    const updatedKeys = new Set(Object.keys(updated));
+    const removedKeys = currentKeys.filter((key) => !updatedKeys.has(key));
+
+    // Remove keys that are no longer present
+    await Promise.all(removedKeys.map((key) => this.remove(key)));
+
+    // Set the updated attributes
     await this.setAll(updated);
   }
 }

@@ -38,9 +38,71 @@ const SplunkWebViewMock = () => {
   return null;
 };
 
-// Mock SplunkRum API
-const SplunkRumMock = {
-  install: jest.fn().mockResolvedValue(undefined),
+const globalAttributesMock = {
+  setValue: jest.fn().mockResolvedValue(undefined),
+  setString: jest.fn().mockResolvedValue(undefined),
+  setBoolean: jest.fn().mockResolvedValue(undefined),
+  setNumber: jest.fn().mockResolvedValue(undefined),
+  setArray: jest.fn().mockResolvedValue(undefined),
+  getValue: jest.fn().mockResolvedValue(undefined),
+  getString: jest.fn().mockResolvedValue(undefined),
+  getBoolean: jest.fn().mockResolvedValue(undefined),
+  getNumber: jest.fn().mockResolvedValue(undefined),
+  getArray: jest.fn().mockResolvedValue(undefined),
+  setAll: jest.fn().mockResolvedValue(0),
+  setAllInNamespace: jest.fn().mockResolvedValue(0),
+  remove: jest.fn().mockResolvedValue(undefined),
+  removeAll: jest.fn().mockResolvedValue(undefined),
+  contains: jest.fn().mockResolvedValue(false),
+  getAll: jest.fn().mockResolvedValue({}),
+  keys: jest.fn().mockResolvedValue([]),
+  values: jest.fn().mockResolvedValue([]),
+  size: jest.fn().mockResolvedValue(0),
+  update: jest.fn().mockResolvedValue(undefined),
+};
+
+const sessionMock = {
+  state: jest.fn().mockResolvedValue({
+    id: 'test-session-id',
+    samplingRate: 1.0,
+  }),
+};
+
+const userPreferencesMock = {
+  setTrackingMode: jest.fn().mockResolvedValue(undefined),
+};
+
+const userMock = {
+  preferences: userPreferencesMock,
+  state: jest.fn().mockResolvedValue({
+    trackingMode: 'ANONYMOUS_TRACKING',
+  }),
+};
+
+const customTrackingMock = {
+  trackCustomEvent: jest.fn().mockResolvedValue(undefined),
+  startWorkflow: jest
+    .fn()
+    .mockResolvedValue({ end: jest.fn().mockResolvedValue(undefined) }),
+};
+
+const splunkRumInstanceMock = {
+  globalAttributes: globalAttributesMock,
+  session: sessionMock,
+  user: userMock,
+  customTracking: customTrackingMock,
+  get state() {
+    return Promise.resolve({
+      appName: 'test-app',
+      appVersion: '1.0.0',
+      deploymentEnvironment: 'test',
+      status: { type: 'Running' },
+      endpoint: { trace: 'https://test.example.com' },
+      isDebugLoggingEnabled: false,
+      instrumentedProcessName: null,
+      deferredUntilForeground: false,
+    });
+  },
   getState: jest.fn().mockResolvedValue({
     appName: 'test-app',
     appVersion: '1.0.0',
@@ -51,38 +113,16 @@ const SplunkRumMock = {
     instrumentedProcessName: null,
     deferredUntilForeground: false,
   }),
-  session: {
-    getState: jest.fn().mockResolvedValue({
-      id: 'test-session-id',
-      samplingRate: 1.0,
-    }),
-  },
-  user: {
-    getState: jest.fn().mockResolvedValue({
-      trackingMode: 'ANONYMOUS_TRACKING',
-    }),
-    setTrackingMode: jest.fn().mockResolvedValue(undefined),
-  },
-  globalAttributes: {
-    set: jest.fn().mockResolvedValue(undefined),
-    get: jest.fn().mockResolvedValue(null),
-    remove: jest.fn().mockResolvedValue(null),
-    removeAll: jest.fn().mockResolvedValue(undefined),
-    contains: jest.fn().mockResolvedValue(false),
-    getAll: jest.fn().mockResolvedValue({}),
-    keys: jest.fn().mockResolvedValue([]),
-    values: jest.fn().mockResolvedValue([]),
-    size: jest.fn().mockResolvedValue(0),
-  },
-  customTracking: {
-    trackEvent: jest.fn().mockResolvedValue(undefined),
-    startWorkflow: jest
-      .fn()
-      .mockResolvedValue({ end: jest.fn().mockResolvedValue(undefined) }),
+  integrateWebViewWithBrowserRum: jest.fn().mockResolvedValue(undefined),
+};
+
+const SplunkRumMock = {
+  install: jest.fn().mockResolvedValue(undefined),
+  get instance() {
+    return splunkRumInstanceMock;
   },
 };
 
-// Mock module configuration classes
 class ModuleConfigurationMock {
   constructor(name, isEnabled = true) {
     this.name = name;
@@ -101,7 +141,6 @@ const createModuleConfigMock = (name) => {
   };
 };
 
-// Special case for SlowRenderingModuleConfiguration with extra parameter
 class SlowRenderingModuleConfigurationMock extends ModuleConfigurationMock {
   constructor(isEnabled = true, intervalMilliseconds = 1000) {
     super('slowRendering', isEnabled);
@@ -118,21 +157,114 @@ class SlowRenderingModuleConfigurationMock extends ModuleConfigurationMock {
   }
 }
 
-// Mock MutableAttributes
 class MutableAttributesMock {
   constructor() {
     this._attributes = {};
   }
-  set(key, value) {
-    this._attributes[key] = value;
-    return this;
+
+  async setValue(key, value) {
+    if (value === null) {
+      delete this._attributes[key];
+    } else {
+      this._attributes[key] = value;
+    }
   }
-  remove(key) {
+
+  async setString(key, value) {
+    return this.setValue(key, value);
+  }
+
+  async setBoolean(key, value) {
+    return this.setValue(key, value);
+  }
+
+  async setNumber(key, value) {
+    return this.setValue(key, value);
+  }
+
+  async setArray(key, value) {
+    return this.setValue(key, value);
+  }
+
+  async getValue(key) {
+    return this._attributes[key];
+  }
+
+  async getString(key) {
+    return this._attributes[key];
+  }
+
+  async getBoolean(key) {
+    return this._attributes[key];
+  }
+
+  async getNumber(key) {
+    return this._attributes[key];
+  }
+
+  async getArray(key) {
+    return this._attributes[key];
+  }
+
+  async setAll(attributes) {
+    Object.assign(this._attributes, attributes);
+    return Object.keys(attributes).length;
+  }
+
+  async setAllInNamespace(namespace, attributes) {
+    const prefixed = {};
+
+    for (const [key, value] of Object.entries(attributes)) {
+      prefixed[`${namespace}.${key}`] = value;
+    }
+
+    Object.assign(this._attributes, prefixed);
+    return Object.keys(attributes).length;
+  }
+
+  async remove(key) {
+    const prev = this._attributes[key];
     delete this._attributes[key];
-    return this;
+    return prev;
   }
-  toObject() {
+
+  async removeAll() {
+    this._attributes = {};
+  }
+
+  async contains(key) {
+    return key in this._attributes;
+  }
+
+  async getAll() {
     return { ...this._attributes };
+  }
+
+  async keys() {
+    return Object.keys(this._attributes);
+  }
+
+  async values() {
+    return Object.values(this._attributes);
+  }
+
+  async size() {
+    return Object.keys(this._attributes).length;
+  }
+
+  async update(mutator) {
+    const current = await this.getAll();
+    const updated = mutator(current);
+
+    const currentKeys = Object.keys(current);
+    const updatedKeys = new Set(Object.keys(updated));
+    for (const key of currentKeys) {
+      if (!updatedKeys.has(key)) {
+        await this.remove(key);
+      }
+    }
+
+    await this.setAll(updated);
   }
 }
 
