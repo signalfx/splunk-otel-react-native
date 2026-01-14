@@ -79,7 +79,6 @@ android {
 }
 
 repositories {
-  mavenLocal()
   mavenCentral()
   google()
   maven { url "https://splunk.jfrog.io/splunk/splunk-rum-android-releases" }
@@ -91,6 +90,6 @@ dependencies {
   implementation "com.facebook.react:react-android"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-  implementation("com.splunk:splunk-otel-android:2.1.1-LOCAL-SNAPSHOT")
+  implementation("com.splunk:splunk-otel-android:2.1.1")
   coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
 }

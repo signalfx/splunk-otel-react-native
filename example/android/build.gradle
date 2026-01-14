@@ -6,10 +6,9 @@ buildscript {
         targetSdkVersion = 36
         ndkVersion = "27.1.12297006"
         kotlinVersion = "2.1.20"
-        splunkRumVersion = "2.1.1-LOCAL-SNAPSHOT"
+        splunkRumVersion = "2.1.1"
     }
     repositories {
-        mavenLocal()
         google()
         mavenCentral()
         // Splunk RUM plugins repository
@@ -28,7 +27,6 @@ buildscript {
 
 allprojects {
     repositories {
-        mavenLocal()
         google()
         mavenCentral()
         maven { url "https://splunk.jfrog.io/splunk/splunk-rum-android-releases" }
