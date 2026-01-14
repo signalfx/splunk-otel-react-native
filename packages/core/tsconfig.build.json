@@ -4,7 +4,7 @@
     "noEmit": false,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "declarationMap": false,
+    "declarationMap": true,
     "outDir": "lib/typescript"
   },
   "include": ["src/**/*"],
