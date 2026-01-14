@@ -214,16 +214,8 @@ jobs:
           fi
           xcodebuild -version
 
-      - name: Cache CocoaPods
-        if: env.turbo_cache_hit != 1
-        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
-        with:
-          path: |
-            example/ios/Pods
-            ~/Library/Caches/CocoaPods
-          key: ${{ runner.os }}-pods-${{ matrix.arch }}-dynamic-v2-${{ hashFiles('example/ios/Podfile.lock', 'example/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-pods-${{ matrix.arch }}-dynamic-v2-
+      # CocoaPods cache disabled - need fresh pod install with USE_FRAMEWORKS=dynamic bcs of our SPM SDK
+      # TODO: Re-enable caching once Podfile.lock is regenerated with dynamic frameworks
 
       - name: Set architecture in Podfile
         if: env.turbo_cache_hit != 1
@@ -241,6 +233,8 @@ jobs:
         run: |
           rm -rf example/ios/Pods
           rm -rf example/ios/build
+          rm -rf ~/Library/Caches/CocoaPods
+          rm -f example/ios/Podfile.lock
 
       - name: Install CocoaPods
         if: env.turbo_cache_hit != 1
