@@ -215,10 +215,9 @@ jobs:
           path: |
             example/ios/Pods
             ~/Library/Caches/CocoaPods
-          key: ${{ runner.os }}-pods-${{ matrix.arch }}-dynamic-${{ hashFiles('example/ios/Podfile.lock', 'example/Gemfile.lock') }}
+          key: ${{ runner.os }}-pods-${{ matrix.arch }}-dynamic-v2-${{ hashFiles('example/ios/Podfile.lock', 'example/Gemfile.lock') }}
           restore-keys: |
-            ${{ runner.os }}-pods-${{ matrix.arch }}-dynamic-
-            ${{ runner.os }}-pods-${{ matrix.arch }}-
+            ${{ runner.os }}-pods-${{ matrix.arch }}-dynamic-v2-
 
       - name: Set architecture in Podfile
         if: env.turbo_cache_hit != 1
@@ -230,6 +229,12 @@ jobs:
           fi
           echo "Architecture setting:"
           head -1 example/ios/Podfile
+
+      - name: Clean Pods (ensure fresh dynamic framework build)
+        if: env.turbo_cache_hit != 1
+        run: |
+          rm -rf example/ios/Pods
+          rm -rf example/ios/build
 
       - name: Install CocoaPods
         if: env.turbo_cache_hit != 1
