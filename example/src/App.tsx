@@ -35,7 +35,7 @@ import { runApiAssertionTests, type ApiTestReport } from './ApiAssertions';
 const config: AgentConfiguration = {
   endpoint: {
     realm: 'mon0',
-    rumAccessToken: 'jzn-AT776tR8NvkgXSbQ5g',
+    rumAccessToken: 'TOKEN',
   },
   appName: 'Splunk RN Test App',
   deploymentEnvironment: 'dev',

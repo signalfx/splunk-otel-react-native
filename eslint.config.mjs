@@ -24,6 +24,15 @@ export default defineConfig([
     },
   },
   {
-    ignores: ['node_modules/', 'lib/', 'packages/**/lib/', '**/__tests__/**'],
+    ignores: [
+      'node_modules/',
+      'lib/',
+      'packages/**/lib/',
+      'packages/**/plugin/build/',
+      '**/__tests__/**',
+      '**/jest.setup.js',
+      'native-android-sdk/',
+      'native-ios-sdk/',
+    ],
   },
 ]);
