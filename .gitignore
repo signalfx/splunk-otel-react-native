@@ -87,3 +87,6 @@ nitrogen/
 
 native-android-sdk/
 native-ios-sdk/
+
+# Local config with secrets (use config.local.template.ts as reference)
+example/src/config.local.ts

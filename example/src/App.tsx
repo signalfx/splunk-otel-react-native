@@ -30,17 +30,20 @@ import { TestCategory, MobilePlatform, type TestAction } from './types';
 import { TestActionsWidget, StatusBar } from './components';
 import { NativeTestBridge } from './NativeTestBridge';
 import { runApiAssertionTests, type ApiTestReport } from './ApiAssertions';
+import { config as appConfig, isConfigValid } from './config';
 
-// Configuration
-const config: AgentConfiguration = {
+console.log(`[Config] Valid: ${isConfigValid()}`);
+
+// SDK Configuration using external config
+const agentConfig: AgentConfiguration = {
   endpoint: {
-    realm: 'mon0',
-    rumAccessToken: 'TOKEN',
+    realm: appConfig.realm,
+    rumAccessToken: appConfig.rumAccessToken,
   },
-  appName: 'Splunk RN Test App',
-  deploymentEnvironment: 'dev',
+  appName: appConfig.appName,
+  deploymentEnvironment: appConfig.deploymentEnvironment,
   appVersion: '1.0.0',
-  enableDebugLogging: true,
+  enableDebugLogging: appConfig.enableDebugLogging,
   globalAttributes: {
     'app.type': 'test',
     'app.framework': 'react-native',
@@ -383,7 +386,7 @@ export default function App() {
 
   return (
     <SplunkRumProvider
-      agentConfiguration={config}
+      agentConfiguration={agentConfig}
       modules={modules}
       onReady={onReady}
       setGlobalAttributes={{ 'app.init': 'provider' }}

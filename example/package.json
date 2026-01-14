@@ -27,6 +27,7 @@
     "@react-native/metro-config": "0.81.1",
     "@react-native/typescript-config": "0.81.1",
     "@types/react": "^19.1.0",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "react-native-builder-bob": "^0.40.13",
     "react-native-monorepo-config": "^0.1.9"
   },

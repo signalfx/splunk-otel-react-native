@@ -4192,6 +4192,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-plugin-transform-inline-environment-variables@npm:^0.4.4":
+  version: 0.4.4
+  resolution: "babel-plugin-transform-inline-environment-variables@npm:0.4.4"
+  checksum: fa361287411301237fd8ce332aff4f8e8ccb8db30e87a2ddc7224c8bf7cd792eda47aca24dc2e09e70bce4c027bc8cbe22f4999056be37a25d2472945df21ef5
+  languageName: node
+  linkType: hard
+
 "babel-preset-current-node-syntax@npm:^1.0.0":
   version: 1.2.0
   resolution: "babel-preset-current-node-syntax@npm:1.2.0"
@@ -11122,6 +11129,7 @@ __metadata:
     "@react-native/typescript-config": 0.81.1
     "@splunk/otel-react-native": "workspace:*"
     "@types/react": ^19.1.0
+    babel-plugin-transform-inline-environment-variables: ^0.4.4
     react: 19.1.0
     react-native: 0.81.1
     react-native-builder-bob: ^0.40.13

@@ -149,6 +149,10 @@ jobs:
       - name: Build example app for Android (${{ matrix.arch }})
         env:
           JAVA_OPTS: "-XX:MaxHeapSize=6g"
+          # Splunk configuration (injected via babel at build time)
+          SPLUNK_REALM: ${{ secrets.SPLUNK_REALM }}
+          SPLUNK_RUM_ACCESS_TOKEN: ${{ secrets.SPLUNK_RUM_ACCESS_TOKEN }}
+          SPLUNK_ENVIRONMENT: ci
         run: |
           yarn turbo run build:android --cache-dir="${{ env.TURBO_CACHE_DIR }}"
 
@@ -235,6 +239,11 @@ jobs:
           RCT_NEW_ARCH_ENABLED=${{ matrix.new_arch_enabled }} bundle exec pod install --project-directory=ios
 
       - name: Build example app for iOS (${{ matrix.arch }})
+        env:
+          # Splunk configuration (injected via babel at build time)
+          SPLUNK_REALM: ${{ secrets.SPLUNK_REALM }}
+          SPLUNK_RUM_ACCESS_TOKEN: ${{ secrets.SPLUNK_RUM_ACCESS_TOKEN }}
+          SPLUNK_ENVIRONMENT: ci
         run: |
           yarn turbo run build:ios --cache-dir="${{ env.TURBO_CACHE_DIR }}"
 
