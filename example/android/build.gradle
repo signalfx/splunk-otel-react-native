@@ -6,15 +6,34 @@ buildscript {
         targetSdkVersion = 36
         ndkVersion = "27.1.12297006"
         kotlinVersion = "2.1.20"
+        splunkRumVersion = "2.1.1-LOCAL-SNAPSHOT"
     }
     repositories {
+        mavenLocal()
         google()
         mavenCentral()
+        // Splunk RUM plugins repository
+        maven { url "https://splunk.jfrog.io/splunk/splunk-rum-android-releases" }
     }
     dependencies {
         classpath("com.android.tools.build:gradle")
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+
+        // Splunk RUM auto-instrumentation plugins
+        classpath("com.splunk:rum-okhttp3-auto-plugin:${splunkRumVersion}")
+        classpath("com.splunk:rum-httpurlconnection-auto-plugin:${splunkRumVersion}")
+    }
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+        maven { url "https://splunk.jfrog.io/splunk/splunk-rum-android-releases" }
+        maven { url "https://central.sonatype.com/repository/maven-snapshots" }
+        maven { url "https://www.jitpack.io" }
     }
 }
 
