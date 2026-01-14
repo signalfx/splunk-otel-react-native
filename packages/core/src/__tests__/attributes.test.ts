@@ -14,14 +14,121 @@
  * limitations under the License.
  */
 
-import {
-  MutableAttributes,
-} from '../model/attributes/MutableAttributes';
+import { MutableAttributes } from '../model/attributes/MutableAttributes';
+import NativeModule from '../specs/NativeSplunkOtelReactNative';
+
+const mockNative = NativeModule as jest.Mocked<typeof NativeModule>;
 
 describe('MutableAttributes', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('exposes basic methods', () => {
     const attrs = new MutableAttributes();
     expect(typeof attrs.setString).toBe('function');
     expect(typeof attrs.getAll).toBe('function');
+    expect(typeof attrs.update).toBe('function');
+  });
+
+  describe('update()', () => {
+    it('calls setAll with mutator result', async () => {
+      const attrs = new MutableAttributes();
+
+      mockNative.globalAttributesGetAll.mockResolvedValueOnce({
+        existingKey: 'existingValue',
+      });
+
+      await attrs.update((current) => ({
+        ...current,
+        newKey: 'newValue',
+      }));
+
+      expect(mockNative.globalAttributesSetAll).toHaveBeenCalledWith({
+        existingKey: 'existingValue',
+        newKey: 'newValue',
+      });
+    });
+
+    it('removes keys that mutator deletes', async () => {
+      const attrs = new MutableAttributes();
+
+      mockNative.globalAttributesGetAll.mockResolvedValueOnce({
+        keepMe: 'value1',
+        deleteMe: 'value2',
+        alsoDeleteMe: 'value3',
+      });
+
+      await attrs.update((current) => {
+        const { deleteMe, alsoDeleteMe, ...rest } = current;
+        void deleteMe;
+        void alsoDeleteMe;
+        return rest;
+      });
+
+      expect(mockNative.globalAttributesRemove).toHaveBeenCalledWith(
+        'deleteMe'
+      );
+      expect(mockNative.globalAttributesRemove).toHaveBeenCalledWith(
+        'alsoDeleteMe'
+      );
+      expect(mockNative.globalAttributesRemove).toHaveBeenCalledTimes(2);
+
+      expect(mockNative.globalAttributesSetAll).toHaveBeenCalledWith({
+        keepMe: 'value1',
+      });
+    });
+
+    it('does not call remove when no keys are deleted', async () => {
+      const attrs = new MutableAttributes();
+
+      mockNative.globalAttributesGetAll.mockResolvedValueOnce({
+        key1: 'value1',
+      });
+
+      await attrs.update((current) => ({
+        ...current,
+        key2: 'value2',
+      }));
+
+      expect(mockNative.globalAttributesRemove).not.toHaveBeenCalled();
+
+      expect(mockNative.globalAttributesSetAll).toHaveBeenCalledWith({
+        key1: 'value1',
+        key2: 'value2',
+      });
+    });
+
+    it('handles empty initial attributes', async () => {
+      const attrs = new MutableAttributes();
+
+      mockNative.globalAttributesGetAll.mockResolvedValueOnce({});
+
+      await attrs.update(() => ({
+        newKey: 'newValue',
+      }));
+
+      expect(mockNative.globalAttributesRemove).not.toHaveBeenCalled();
+      expect(mockNative.globalAttributesSetAll).toHaveBeenCalledWith({
+        newKey: 'newValue',
+      });
+    });
+
+    it('handles mutator returning empty object (removes all)', async () => {
+      const attrs = new MutableAttributes();
+
+      mockNative.globalAttributesGetAll.mockResolvedValueOnce({
+        key1: 'value1',
+        key2: 'value2',
+      });
+
+      await attrs.update(() => ({}));
+
+      expect(mockNative.globalAttributesRemove).toHaveBeenCalledWith('key1');
+      expect(mockNative.globalAttributesRemove).toHaveBeenCalledWith('key2');
+      expect(mockNative.globalAttributesRemove).toHaveBeenCalledTimes(2);
+
+      expect(mockNative.globalAttributesSetAll).toHaveBeenCalledWith({});
+    });
   });
 });
