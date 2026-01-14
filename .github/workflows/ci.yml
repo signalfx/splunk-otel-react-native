@@ -165,15 +165,19 @@ jobs:
         include:
           - arch: old
             new_arch_enabled: '0'
+            # TODO: Prebuilt RNCore causes linking errors with USE_FRAMEWORKS=dynamic on old arch
+            # Re-test after RN updates to see if this can be enabled
+            use_prebuilt_rncore: '0'
           - arch: new
             new_arch_enabled: '1'
+            use_prebuilt_rncore: '1'
 
     env:
       XCODE_VERSION: '16.2'
       TURBO_CACHE_DIR: .turbo/ios-${{ matrix.arch }}
       RCT_NEW_ARCH_ENABLED: ${{ matrix.new_arch_enabled }}
       RCT_USE_RN_DEP: 1
-      RCT_USE_PREBUILT_RNCORE: 1
+      RCT_USE_PREBUILT_RNCORE: ${{ matrix.use_prebuilt_rncore }}
       USE_FRAMEWORKS: dynamic
 
     steps:
