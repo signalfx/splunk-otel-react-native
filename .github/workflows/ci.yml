@@ -1,9 +1,8 @@
 name: CI
 on:
   push:
-    branches: [main, develop, feature/**, fix/**, release/**]
+    branches: [main, develop, feature/next-gen]
   pull_request:
-    branches: [main, develop, feature/**, fix/**, release/**]
   merge_group:
     types:
       - checks_requested
