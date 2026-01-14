@@ -119,13 +119,12 @@ jobs:
 
       - name: Setup Android SDK
         if: env.turbo_cache_hit != 1
-        uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407 # v3.2.2
-
-      - name: Finalize Android SDK
-        if: env.turbo_cache_hit != 1
         run: |
-          yes | sdkmanager --licenses || true
-          sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+          echo "ANDROID_HOME: $ANDROID_HOME"
+          echo "ANDROID_SDK_ROOT: $ANDROID_SDK_ROOT"
+          
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
 
       - name: Cache Gradle
         if: env.turbo_cache_hit != 1
@@ -202,11 +201,18 @@ jobs:
             echo "turbo_cache_hit=1" >> $GITHUB_ENV
           fi
 
-      - name: Use appropriate Xcode version
+      - name: Select Xcode version
         if: env.turbo_cache_hit != 1
-        uses: maxim-lobanov/setup-xcode@60606e260d2fc5762a71e64e74b2174e8ea3c8bd # v1.6.0
-        with:
-          xcode-version: ${{ env.XCODE_VERSION }}
+        run: |
+          XCODE_PATH="/Applications/Xcode_${{ env.XCODE_VERSION }}.app"
+          if [[ -d "$XCODE_PATH" ]]; then
+            sudo xcode-select -s "$XCODE_PATH/Contents/Developer"
+          else
+            echo "Available Xcode versions:"
+            ls -la /Applications/ | grep Xcode
+            echo "Using default Xcode"
+          fi
+          xcodebuild -version
 
       - name: Cache CocoaPods
         if: env.turbo_cache_hit != 1
