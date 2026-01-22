@@ -105,6 +105,9 @@ class SplunkOtelReactNativeModule(reactContext: ReactApplicationContext) :
   override fun customEndWorkflow(handle: Double, promise: Promise) =
     implementation.customEndWorkflow(handle, promise)
 
+  override fun navigationTrack(screenName: String, promise: Promise) =
+    implementation.navigationTrack(screenName, promise)
+
   override fun integrateWebViewWithBrowserRum(viewTag: Double, promise: Promise) =
     implementation.integrateWebViewWithBrowserRum(viewTag, promise)
 

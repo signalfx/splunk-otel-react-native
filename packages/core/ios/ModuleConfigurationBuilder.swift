@@ -31,6 +31,9 @@ import SplunkSlowFrameDetector
 #if canImport(SplunkNetwork)
 import SplunkNetwork
 #endif
+#if canImport(SplunkCrashReports)
+import SplunkCrashReports
+#endif
 
 /// Builds module configurations received from React Native.
 enum ModuleConfigurationBuilder {
@@ -61,6 +64,13 @@ enum ModuleConfigurationBuilder {
         let conf = InteractionsConfiguration(isEnabled: enabled)
         result.append(conf)
         #endif
+      case "crash":
+        #if canImport(SplunkCrashReports)
+        let enabled = (attrs["enabled"] as NSString?)?.boolValue ?? true
+
+        let conf = CrashReportsConfiguration(isEnabled: enabled)
+        result.append(conf)
+        #endif
       case "networkMonitor":
         #if canImport(SplunkNetworkMonitor)
         let enabled = (attrs["enabled"] as NSString?)?.boolValue ?? true
@@ -75,7 +85,7 @@ enum ModuleConfigurationBuilder {
         let conf = SlowFrameDetectorConfiguration(isEnabled: enabled)
         result.append(conf)
         #endif
-      case "urlSession":
+      case "networkInstrumentation":
         #if canImport(SplunkNetwork)
         let enabled = (attrs["enabled"] as NSString?)?.boolValue ?? true
         var ignoreURLs: IgnoreURLs?

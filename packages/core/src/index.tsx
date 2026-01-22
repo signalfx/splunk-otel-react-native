@@ -28,7 +28,7 @@ export type {
 export { ModuleConfiguration } from './model/modules/ModuleConfiguration';
 export { AnrModuleConfiguration } from './model/modules/AnrModuleConfiguration';
 export { ApplicationLifecycleModuleConfiguration } from './model/modules/ApplicationLifecycleModuleConfiguration';
-export { CrashModuleConfiguration } from './model/modules/CrashModuleConfiguration';
+export { CrashReportsModuleConfiguration } from './model/modules/CrashReportsModuleConfiguration';
 export { HttpURLModuleConfiguration } from './model/modules/HttpURLModuleConfiguration';
 export { InteractionsModuleConfiguration } from './model/modules/InteractionsModuleConfiguration';
 export { NavigationModuleConfiguration } from './model/modules/NavigationModuleConfiguration';
@@ -37,7 +37,7 @@ export { OkHttp3AutoModuleConfiguration } from './model/modules/OkHttp3AutoModul
 export { OkHttp3ManualModuleConfiguration } from './model/modules/OkHttp3ManualModuleConfiguration';
 export { SlowRenderingModuleConfiguration } from './model/modules/SlowRenderingModuleConfiguration';
 export { StartupModuleConfiguration } from './model/modules/StartupModuleConfiguration';
-export { UrlSessionModuleConfiguration } from './model/modules/UrlSessionModuleConfiguration';
+export { NetworkInstrumentationModuleConfiguration } from './model/modules/NetworkInstrumentationModuleConfiguration';
 export { MutableAttributes } from './model/attributes/MutableAttributes';
 export { SplunkWebView } from './components/SplunkWebView';
 export type { SplunkWebViewProps } from './components/SplunkWebView';

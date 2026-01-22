@@ -21,6 +21,7 @@ import type { SplunkRumState } from './State';
 import { Session } from './Session';
 import { User } from './User';
 import { CustomTracking } from './CustomTracking';
+import { Navigation } from './Navigation';
 import { MutableAttributes } from '../model/attributes/MutableAttributes';
 import {
   toNativeAgentConfiguration,
@@ -131,6 +132,13 @@ export class SplunkRum {
    * Corresponds to native `CustomTracking` on both platforms.
    */
   readonly customTracking = new CustomTracking();
+
+  /**
+   * Navigation tracking.
+   *
+   * Manually track screen transitions when automatic detection is unavailable.
+   */
+  readonly navigation = new Navigation();
 
   /**
    * Integrates a WebView with Browser RUM.

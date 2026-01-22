@@ -137,6 +137,9 @@ export interface Spec extends TurboModule {
   customStartWorkflow(name: string): Promise<number>;
   customEndWorkflow(handle: number): Promise<void>;
 
+  // Navigation
+  navigationTrack(screenName: string): Promise<void>;
+
   // WebView integration
   integrateWebViewWithBrowserRum(viewTag: number): Promise<void>;
 }

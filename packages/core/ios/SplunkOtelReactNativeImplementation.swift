@@ -26,6 +26,7 @@ public class SplunkOtelReactNativeImplementation: NSObject {
   private let customTrackingHandler = CustomTrackingHandler()
   private let userSessionHandler = UserSessionHandler()
   private let webViewHandler = WebViewHandler(bridge: nil)
+  private let navigationHandler = NavigationHandler()
 
   /// Sets the React Native bridge for handlers that require it.
   @objc
@@ -245,5 +246,14 @@ public class SplunkOtelReactNativeImplementation: NSObject {
                                                         resolve: @escaping RCTPromiseResolveBlock,
                                                         reject: @escaping RCTPromiseRejectBlock) {
     webViewHandler.integrateWithBrowserRum(viewTag, resolve: resolve, reject: reject)
+  }
+
+  // MARK: - Navigation
+
+  @objc
+  public func navigationTrackWithScreenName(_ screenName: NSString,
+                                             resolve: @escaping RCTPromiseResolveBlock,
+                                             reject: @escaping RCTPromiseRejectBlock) {
+    navigationHandler.track(screenName, resolve: resolve, reject: reject)
   }
 }

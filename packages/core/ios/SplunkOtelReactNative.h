@@ -140,6 +140,11 @@ NS_ASSUME_NONNULL_BEGIN
                   resolve:(RCTPromiseResolveBlock)resolve
                    reject:(RCTPromiseRejectBlock)reject;
 
+// Navigation
+- (void)navigationTrack:(NSString *)screenName
+                resolve:(RCTPromiseResolveBlock)resolve
+                 reject:(RCTPromiseRejectBlock)reject;
+
 // WebView Integration
 - (void)integrateWebViewWithBrowserRum:(double)viewTag
                                resolve:(RCTPromiseResolveBlock)resolve

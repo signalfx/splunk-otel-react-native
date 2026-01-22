@@ -17,11 +17,11 @@
 import { ModuleConfiguration } from './ModuleConfiguration';
 
 /**
- * **iOS only.** URLSession network instrumentation configuration.
+ * **iOS only.** Network instrumentation configuration.
  *
  * Instruments `URLSession` requests for distributed tracing.
  */
-export class UrlSessionModuleConfiguration extends ModuleConfiguration {
+export class NetworkInstrumentationModuleConfiguration extends ModuleConfiguration {
   /**
    * @param isEnabled - Whether instrumentation is enabled. Defaults to `true`.
    * @param ignoreURLs - Regex pattern(s) for URLs to exclude from tracing.
@@ -34,7 +34,7 @@ export class UrlSessionModuleConfiguration extends ModuleConfiguration {
     super();
   }
 
-  readonly name = 'urlSession';
+  readonly name = 'networkInstrumentation';
 
   toNative() {
     const attrs: Record<string, string> = { enabled: String(this.isEnabled) };

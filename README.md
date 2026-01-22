@@ -149,7 +149,7 @@ Control which features are enabled by passing module configurations:
 
 ```tsx
 import {
-  CrashModuleConfiguration,
+  CrashReportsModuleConfiguration,
   NetworkMonitorModuleConfiguration,
   InteractionsModuleConfiguration,
   SlowRenderingModuleConfiguration,
@@ -165,7 +165,7 @@ import {
     },
   }}
   modules={[
-    new CrashModuleConfiguration(true),  // Enable crash reporting
+    new CrashReportsModuleConfiguration(true),  // Enable crash reporting
     new NetworkMonitorModuleConfiguration(false),  // Disable network monitoring
     new InteractionsModuleConfiguration(true),  // Enable user interactions
     new SlowRenderingModuleConfiguration(true, 1000),  // Enabled, check every 1s (Android)

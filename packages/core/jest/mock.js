@@ -86,11 +86,16 @@ const customTrackingMock = {
     .mockResolvedValue({ end: jest.fn().mockResolvedValue(undefined) }),
 };
 
+const navigationMock = {
+  track: jest.fn().mockResolvedValue(undefined),
+};
+
 const splunkRumInstanceMock = {
   globalAttributes: globalAttributesMock,
   session: sessionMock,
   user: userMock,
   customTracking: customTrackingMock,
+  navigation: navigationMock,
   get state() {
     return Promise.resolve({
       appName: 'test-app',
@@ -277,7 +282,7 @@ module.exports = {
   ApplicationLifecycleModuleConfiguration: createModuleConfigMock(
     'applicationLifecycle'
   ),
-  CrashModuleConfiguration: createModuleConfigMock('crash'),
+  CrashReportsModuleConfiguration: createModuleConfigMock('crash'),
   HttpURLModuleConfiguration: createModuleConfigMock('httpUrl'),
   InteractionsModuleConfiguration: createModuleConfigMock('interactions'),
   NavigationModuleConfiguration: createModuleConfigMock('navigation'),
@@ -286,6 +291,8 @@ module.exports = {
   OkHttp3ManualModuleConfiguration: createModuleConfigMock('okHttp3Manual'),
   SlowRenderingModuleConfiguration: SlowRenderingModuleConfigurationMock,
   StartupModuleConfiguration: createModuleConfigMock('startup'),
-  UrlSessionModuleConfiguration: createModuleConfigMock('urlSession'),
+  NetworkInstrumentationModuleConfiguration: createModuleConfigMock(
+    'networkInstrumentation'
+  ),
   MutableAttributes: MutableAttributesMock,
 };

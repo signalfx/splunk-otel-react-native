@@ -24,6 +24,7 @@ import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.UiThreadUtil
 import com.splunk.rum.integration.agent.api.SplunkRum
+import com.splunk.rum.integration.navigation.extension.navigation
 
 class SplunkOtelReactNativeImplementation(private val reactContext: ReactApplicationContext) {
 
@@ -133,6 +134,17 @@ class SplunkOtelReactNativeImplementation(private val reactContext: ReactApplica
 
   fun customEndWorkflow(handle: Double, promise: Promise) =
     customTrackingHandler.endWorkflow(handle, promise)
+
+  // MARK: - Navigation
+
+  fun navigationTrack(screenName: String, promise: Promise) {
+    try {
+      SplunkRum.instance.navigation.track(screenName)
+      promise.resolve(null)
+    } catch (t: Throwable) {
+      promise.reject("E_NAVIGATION_TRACK", t)
+    }
+  }
 
   // MARK: - WebView
 

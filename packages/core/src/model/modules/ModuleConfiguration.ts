@@ -25,7 +25,7 @@
  * @example
  * ```typescript
  * await SplunkRum.install(config, [
- *   new CrashModuleConfiguration(true),
+ *   new CrashReportsModuleConfiguration(true),
  *   new SlowRenderingModuleConfiguration(true, 1000),
  *   new NetworkMonitorModuleConfiguration(false),
  * ]);

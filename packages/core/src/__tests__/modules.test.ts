@@ -14,26 +14,26 @@
  * limitations under the License.
  */
 
-import { UrlSessionModuleConfiguration } from '../model/modules/UrlSessionModuleConfiguration';
+import { NetworkInstrumentationModuleConfiguration } from '../model/modules/NetworkInstrumentationModuleConfiguration';
 
 describe('ModuleConfiguration toNative (iOS specific)', () => {
-  it('UrlSessionModuleConfiguration maps enabled and ignoreURLs (string)', () => {
-    const cfg = new UrlSessionModuleConfiguration(true, '.*\\.png$');
+  it('NetworkInstrumentationModuleConfiguration maps enabled and ignoreURLs (string)', () => {
+    const cfg = new NetworkInstrumentationModuleConfiguration(true, '.*\\.png$');
 
     expect(cfg.toNative()).toEqual({
-      name: 'urlSession',
+      name: 'networkInstrumentation',
       attributes: { enabled: 'true', ignoreURLs: '.*\\.png$' },
     });
   });
 
-  it('UrlSessionModuleConfiguration maps ignoreURLs array into OR regex', () => {
-    const cfg = new UrlSessionModuleConfiguration(true, [
+  it('NetworkInstrumentationModuleConfiguration maps ignoreURLs array into OR regex', () => {
+    const cfg = new NetworkInstrumentationModuleConfiguration(true, [
       '.*\\.png$',
       '.*/health$',
     ]);
 
     expect(cfg.toNative()).toEqual({
-      name: 'urlSession',
+      name: 'networkInstrumentation',
       attributes: { enabled: 'true', ignoreURLs: '.*\\.png$|.*/health$' },
     });
   });

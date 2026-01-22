@@ -20,6 +20,7 @@ import com.facebook.react.bridge.ReadableArray
 import com.splunk.rum.integration.agent.common.module.ModuleConfiguration
 import com.splunk.rum.integration.anr.AnrModuleConfiguration
 import com.splunk.rum.integration.applicationlifecycle.ApplicationLifecycleModuleConfiguration
+import com.splunk.rum.integration.crash.CrashModuleConfiguration
 import com.splunk.rum.integration.httpurlconnection.auto.HttpURLModuleConfiguration
 import com.splunk.rum.integration.interactions.InteractionsModuleConfiguration
 import com.splunk.rum.integration.navigation.NavigationModuleConfiguration
@@ -47,6 +48,7 @@ object ModuleConfigurationBuilder {
         "startup" -> list += StartupModuleConfiguration()
         "anr" -> list += AnrModuleConfiguration(attrs?.getString("enabled")?.toBooleanStrictOrNull() ?: true)
         "applicationLifecycle" -> list += ApplicationLifecycleModuleConfiguration(attrs?.getString("enabled")?.toBooleanStrictOrNull() ?: true)
+        "crash" -> list += CrashModuleConfiguration(attrs?.getString("enabled")?.toBooleanStrictOrNull() ?: true)
         "httpURLConnection" -> list += HttpURLModuleConfiguration(
           attrs?.getString("enabled")?.toBooleanStrictOrNull() ?: true,
           splitCsv(attrs?.getString("requestHeaders")),

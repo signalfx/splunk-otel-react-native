@@ -14,24 +14,22 @@
  * limitations under the License.
  */
 
-import { ModuleConfiguration } from './ModuleConfiguration';
+import { SplunkNativeBridge as Native } from '../sdk/SplunkNativeBridge';
 
 /**
- * Crash reporting configuration.
+ * Navigation tracking.
  *
- * Captures unhandled exceptions and crashes.
+ * Manually track screen transitions when automatic detection is unavailable.
  */
-export class CrashModuleConfiguration extends ModuleConfiguration {
+export class Navigation {
   /**
-   * @param isEnabled - Whether crash reporting is enabled. Defaults to `true`.
+   * Tracks a screen navigation event.
+   *
+   * Creates a span representing the screen view.
+   *
+   * @param screenName - Name of the screen being navigated to.
    */
-  constructor(public isEnabled: boolean = true) {
-    super();
-  }
-
-  readonly name = 'crash';
-
-  toNative() {
-    return { name: this.name, attributes: { enabled: String(this.isEnabled) } };
+  async track(screenName: string): Promise<void> {
+    return Native.navigationTrack(screenName);
   }
 }
