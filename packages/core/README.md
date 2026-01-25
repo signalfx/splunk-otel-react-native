@@ -97,6 +97,38 @@ cd ios && pod install && cd ..
 
 3. **Android Setup:**
 
+Enable core library desugaring in your android/app/build.gradle:
+
+```groovy
+android {
+  compileOptions {
+    // Flag to enable support for the new language APIs
+    // For AGP 4.1+
+    isCoreLibraryDesugaringEnabled = true
+    // For AGP 4.0
+    // coreLibraryDesugaringEnabled = true
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  kotlinOptions {
+    // If this setting is present, jvmTarget must be "1.8"
+    jvmTarget = "1.8"
+  }
+}
+dependencies {
+  // For AGP 8+
+  coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.1.5"
+  // For AGP 7.4+
+  // coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.3")
+  // For AGP 7.3
+  // coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.2.3")
+  // For AGP 4.0 to 7.2
+  // coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.9")
+}
+```
+
+Ensure minSdkVersion is 24 or higher.
+
 The Maven repository is automatically configured. No additional setup required.
 
 ## Quick Start
