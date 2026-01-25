@@ -26,7 +26,8 @@
       "types": "./jest/mock.d.ts",
       "default": "./jest/mock.js"
     },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./app.plugin.js": "./app.plugin.js"
   },
   "files": [
     "src/**",
@@ -47,8 +48,8 @@
     "!**/.*"
   ],
   "scripts": {
-    "prepare": "NODE_OPTIONS='--experimental-require-module' bob build && yarn build:plugin",
-    "build": "NODE_OPTIONS='--experimental-require-module' bob build && yarn build:plugin",
+    "prepare": "node --experimental-require-module ./node_modules/react-native-builder-bob/bin/bob build && yarn build:plugin",
+    "build": "node --experimental-require-module ./node_modules/react-native-builder-bob/bin/bob build && yarn build:plugin",
     "build:plugin": "tsc --project plugin/tsconfig.json",
     "clean:plugin": "del-cli plugin/build",
     "prepublishOnly": "yarn typecheck && yarn test",
@@ -79,7 +80,8 @@
   },
   "homepage": "https://github.com/signalfx/splunk-otel-react-native#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
     "@expo/config-plugins": "^9.0.0",
