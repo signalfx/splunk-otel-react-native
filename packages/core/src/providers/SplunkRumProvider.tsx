@@ -97,6 +97,9 @@ export const SplunkRumProvider: FC<Props> = ({
         await SplunkRum.install(agentConfiguration, modules);
       } catch (error) {
         console.error('Error installing Splunk RUM', error);
+
+        isInitializing.current = false;
+        return;
       }
 
       const rum = SplunkRum.instance;

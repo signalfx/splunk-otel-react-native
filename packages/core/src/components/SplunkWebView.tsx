@@ -134,7 +134,7 @@ export function SplunkWebView(props: SplunkWebViewProps): ReactElement {
   const webViewRef = externalRef ?? internalRef;
   const isIntegrated = useRef(false);
 
-  // Reset integration flag when component remounts, TODO double check with Android re-renders
+  // Reset integration flag when component remounts
   useEffect(() => {
     return () => {
       isIntegrated.current = false;

@@ -80,7 +80,6 @@ enum AttributeConverter {
       if let b = element as? Bool { return .bool(b) }
       if let n = element as? NSNumber {
 
-        // TODO: reconsider this helper hack after settling on new arch types
         if CFNumberIsFloatType(n) {
           return .double(n.doubleValue)
         } else {

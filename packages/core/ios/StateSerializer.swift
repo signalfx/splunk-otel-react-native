@@ -31,7 +31,7 @@ enum StateSerializer {
 
       switch cause {
       case .notInstalled: reason = "NotInstalled"
-      case .unsupportedPlatform: reason = "UnsupportedOsVersion"
+      case .unsupportedPlatform: reason = "UnsupportedPlatform"
       case .sampledOut: reason = "SampledOut"
       }
 

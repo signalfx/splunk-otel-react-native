@@ -215,10 +215,10 @@ Add custom attributes to all telemetry:
 import { SplunkRum } from '@splunk/otel-react-native';
 
 // Set a single attribute
-await SplunkRum.globalAttributes.set('user.id', '12345');
+await SplunkRum.instance.globalAttributes.set('user.id', '12345');
 
 // Set multiple attributes
-await SplunkRum.globalAttributes.set({
+await SplunkRum.instance.globalAttributes.set({
   'app.version': '1.2.3',
   'user.tier': 'premium',
 });
@@ -232,7 +232,7 @@ Control user session tracking:
 import { SplunkRum } from '@splunk/otel-react-native';
 
 // Set tracking mode
-await SplunkRum.user.setTrackingMode('ANONYMOUS_TRACKING');
+await SplunkRum.instance.user.setTrackingMode('ANONYMOUS_TRACKING');
 ```
 
 ### Custom Events
@@ -243,13 +243,13 @@ Track custom events:
 import { SplunkRum } from '@splunk/otel-react-native';
 
 // Track a simple event
-await SplunkRum.customTracking.trackEvent('purchase_completed', {
+await SplunkRum.instance.customTracking.trackCustomEvent('purchase_completed', {
   'product.id': 'abc123',
   'product.price': 99.99,
 });
 
 // Track a workflow with duration
-const workflow = await SplunkRum.customTracking.startWorkflow('checkout');
+const workflow = await SplunkRum.instance.customTracking.startWorkflow('checkout');
 // ... perform checkout steps ...
 await workflow.end();
 ```
