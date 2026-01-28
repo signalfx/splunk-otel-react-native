@@ -14,6 +14,9 @@
     "build": "yarn workspace @splunk/otel-react-native build",
     "prepare": "yarn workspace @splunk/otel-react-native build",
     "clean": "del-cli example/android/build example/android/app/build example/ios/build packages/core/lib",
+    "clean:all": "del-cli example/android/build example/android/app/build example/android/.gradle example/ios/build example/ios/Pods packages/core/android/build packages/core/ios/build packages/core/lib",
+    "arch:new": "./scripts/set-arch.sh new",
+    "arch:old": "./scripts/set-arch.sh old",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "typecheck": "yarn workspace @splunk/otel-react-native typecheck",
     "test": "yarn workspace @splunk/otel-react-native test",
@@ -60,6 +63,10 @@
     "example",
     "packages/*"
   ],
+  "resolutions": {
+    "react": "19.1.0",
+    "react-native": "0.81.1"
+  },
   "packageManager": "yarn@3.6.1",
   "engines": {
     "node": ">=22"

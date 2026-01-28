@@ -3,80 +3,120 @@
   "version": "0.1.0",
   "description": "Splunk distribution of Open Telemetry for React Native",
   "main": "./lib/module/index.js",
+  "module": "./lib/module/index.js",
   "react-native": "./src/index.tsx",
+  "source": "./src/index.tsx",
   "types": "./lib/typescript/src/index.d.ts",
+  "sideEffects": false,
   "exports": {
     ".": {
       "source": "./src/index.tsx",
       "react-native": "./src/index.tsx",
-      "types": "./lib/typescript/src/index.d.ts",
+      "import": {
+        "types": "./lib/typescript/src/index.d.ts",
+        "default": "./lib/module/index.js"
+      },
+      "require": {
+        "types": "./lib/typescript/src/index.d.ts",
+        "default": "./lib/module/index.js"
+      },
       "default": "./lib/module/index.js"
     },
-    "./package.json": "./package.json"
+    "./jest": {
+      "types": "./jest/mock.d.ts",
+      "default": "./jest/mock.js"
+    },
+    "./package.json": "./package.json",
+    "./app.plugin.js": "./app.plugin.js"
   },
   "files": [
-    "src",
-    "lib",
-    "android",
-    "ios",
+    "src/**",
+    "lib/**",
+    "jest/**",
+    "android/build.gradle",
+    "android/gradle.properties",
+    "android/src/**",
+    "ios/**/*.{h,m,mm,swift}",
+    "plugin/build/**",
+    "app.plugin.js",
     "*.podspec",
-    "package.json",
-    "!ios/build",
-    "!android/build",
-    "!android/gradle",
-    "!android/gradlew",
-    "!android/gradlew.bat",
-    "!android/local.properties",
+    "LICENSE",
+    "README.md",
     "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__",
     "!**/.*"
   ],
   "scripts": {
-    "prepare": "bob build",
-    "build": "bob build",
+    "prepare": "node --experimental-require-module ./node_modules/react-native-builder-bob/bin/bob build && yarn build:plugin",
+    "build": "node --experimental-require-module ./node_modules/react-native-builder-bob/bin/bob build && yarn build:plugin",
+    "build:plugin": "tsc --project plugin/tsconfig.json",
+    "clean:plugin": "del-cli plugin/build",
+    "prepublishOnly": "yarn typecheck && yarn test",
     "test": "jest",
-    "typecheck": "tsc",
+    "typecheck": "tsc && tsc --project plugin/tsconfig.json --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "clean": "del-cli android/build ios/build lib"
+    "clean": "del-cli android/build ios/build lib plugin/build"
   },
   "keywords": [
     "react-native",
+    "expo",
+    "expo-plugin",
     "ios",
-    "android"
+    "android",
+    "opentelemetry",
+    "observability",
+    "rum",
+    "splunk"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/signalfx/splunk-otel-react-native.git"
   },
   "author": "Splunk Observability MRUM Team",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/signalfx/splunk-otel-react-native/issues"
   },
   "homepage": "https://github.com/signalfx/splunk-otel-react-native#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
+    "@expo/config-plugins": "^9.0.0",
+    "@opentelemetry/api": "^1.9.0",
     "@react-native/babel-preset": "0.81.1",
     "@types/jest": "^29.5.14",
     "@types/react": "^19.1.0",
     "jest": "^29.7.0",
     "react": "19.1.0",
     "react-native": "0.81.1",
-    "react-native-builder-bob": "^0.40.13",
+    "react-native-builder-bob": "^0.40.17",
     "typescript": "^5.9.2"
   },
   "engines": {
     "node": ">=22"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
+    "@expo/config-plugins": ">=7.0.0",
+    "@opentelemetry/api": "^1.4.0",
+    "react": ">=18.2.0",
+    "react-native": ">=0.75.0 <1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@expo/config-plugins": {
+      "optional": true
+    },
+    "@opentelemetry/api": {
+      "optional": true
+    }
   },
   "jest": {
     "preset": "react-native",
+    "setupFiles": [
+      "./jest.setup.js"
+    ],
     "modulePathIgnorePatterns": [
       "<rootDir>/lib/"
     ]

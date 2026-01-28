@@ -8,6 +8,12 @@ const singletons = ['react', 'react-native'];
 /** @type {import('@react-native/metro-config').MetroConfig} */
 const defaultConfig = getDefaultConfig(__dirname);
 
+// Block React/React Native from SDK's node_modules to prevent duplicate React
+const escapedSdkPath = sdk.replace(/[/\\]/g, '[/\\\\]');
+const sdkReactBlockList = new RegExp(
+  `${escapedSdkPath}[/\\\\]node_modules[/\\\\](react|react-native)[/\\\\].*`
+);
+
 const config = {
   watchFolders: [sdk],
   resolver: {
@@ -19,6 +25,7 @@ const config = {
       acc[name] = path.join(__dirname, 'node_modules', name);
       return acc;
     }, {}),
+    blockList: [sdkReactBlockList],
   },
 };
 
