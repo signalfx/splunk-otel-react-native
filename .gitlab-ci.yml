@@ -1,39 +1,37 @@
 default:
-  image: 'cimg/node:lts'
+  image: 'node:22'
 
 stages:
-  - setup
   - build
   - release
 
-# add cache
-npm_install:
-  stage: setup
-  script:
-    - npm ci --include=dev
-    
 build_artifacts:
   stage: build
   only:
-  - /^v[0-9]+\..*/
+    - /^v\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/
   artifacts:
     paths:
       - dist/
   script:
-    - npm ci --include=dev
-    - if [ ! -d "dist" ]; then mkdir dist; fi
-    - npm pack --pack-destination dist
-    - shasum -a 256 dist/* > dist/checksums.txt
+    - corepack enable
+    - yarn install --immutable
+    - yarn workspace @splunk/otel-react-native build
+    - rm -rf dist
+    - mkdir -p dist
+    - npm pack --ignore-scripts ./packages/core --pack-destination dist
+    - sha256sum dist/*.tgz > dist/checksums.txt
 
 release_npm:
+  stage: release
+  only:
+    - /^v\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/
+  dependencies:
+    - build_artifacts
   artifacts:
     paths:
       - dist/
-  stage: release
-  only:
-    - /^v[0-9]+\..*/
   script:
     - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-    - for f in dist/*.tgz; do npm publish ./$f; done;
+    - for f in dist/*.tgz; do if [ -n "$NPM_TAG" ]; then npm publish "$f" --tag "$NPM_TAG"; else npm publish "$f"; fi; done
     - rm -f ~/.npmrc
     
