@@ -25,6 +25,9 @@ release_npm:
   stage: release
   only:
     - /^v\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/
+  needs:
+    - job: build_artifacts
+      artifacts: true
   dependencies:
     - build_artifacts
   artifacts:
@@ -32,6 +35,6 @@ release_npm:
       - dist/
   script:
     - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-    - for f in dist/*.tgz; do if [ -n "$NPM_TAG" ]; then npm publish "$f" --tag "$NPM_TAG"; else npm publish "$f"; fi; done
+    - for f in ./dist/*.tgz; do if [ ! -f "$f" ]; then echo "No tarballs found in dist/"; ls -la dist || true; exit 1; fi; if [ -n "$NPM_TAG" ]; then npm publish "$f" --tag "$NPM_TAG"; else npm publish "$f"; fi; done
     - rm -f ~/.npmrc
     
