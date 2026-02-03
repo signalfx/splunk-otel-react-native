@@ -189,7 +189,7 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
         platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
         onTap: async () => {
           try {
-            const response = await fetch('https://httpbin.org/get');
+            const response = await fetch('https://cloudkart.o11ytest.com/');
             const status = response.status;
             Alert.alert('Fetch', `Request completed with status: ${status}`);
           } catch (e: any) {
@@ -255,6 +255,8 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
               'event.number': eventNumber,
               'event.source': 'test_app',
               'event.timestamp': Date.now(),
+              'workflow.name': 'Custom Error' + eventNumber,
+              'error': true,
             }
           );
           Alert.alert('Custom Event', `Event #${eventNumber} tracked`);

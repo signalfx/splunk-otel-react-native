@@ -186,7 +186,7 @@ class SplunkTestModule(reactContext: ReactApplicationContext) :
     fun testOkHttpGet(url: String?, promise: Promise) {
         executor.execute {
             try {
-                val targetUrl = url ?: "https://httpbin.org/get"
+                val targetUrl = url ?: "https://mockhttp.org/headers"
                 val request = buildRandomOkHttpRequest(targetUrl)
                 
                 // Use OkHttp client - automatically instrumented by gradle plugin
@@ -205,12 +205,12 @@ class SplunkTestModule(reactContext: ReactApplicationContext) :
     private fun buildRandomOkHttpRequest(defaultUrl: String): Request {
         return when (Random.nextInt(3)) {
             0 -> Request.Builder()
-                .url("https://publicobject.com/helloworld.txt")
+                .url("https://mockhttp.org/#tag/images/GET/image")
                 .get()
                 .addCommonHeaders()
                 .build()
             1 -> Request.Builder()
-                .url("https://httpbin.org/status/404")
+                .url("https://mockhttp.org/#tag/status-codes/GET/status/{code}?")
                 .get()
                 .addCommonHeaders()
                 .build()
@@ -221,7 +221,7 @@ class SplunkTestModule(reactContext: ReactApplicationContext) :
                 """.trimIndent()
                 
                 Request.Builder()
-                    .url("https://api.github.com/markdown/raw")
+                    .url("https://mockhttp.org/#tag/response-formats/GET/plain")
                     .post(markdown.toRequestBody("text/plain; charset=utf-8".toMediaType()))
                     .addCommonHeaders()
                     .header("Content-Type", "text/plain; charset=utf-8")
@@ -242,7 +242,7 @@ class SplunkTestModule(reactContext: ReactApplicationContext) :
         executor.execute {
             var connection: HttpURLConnection? = null
             try {
-                val targetUrl = url ?: "https://httpbin.org/status/201"
+                val targetUrl = url ?: "https://mockhttp.org/#tag/http-methods/GET/get"
                 connection = URL(targetUrl).openConnection() as HttpURLConnection
                 connection.setRequestProperty("Accept", "application/json")
 
