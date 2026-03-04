@@ -79,10 +79,14 @@ object ModuleConfigurationBuilder {
             if (!interval.isNullOrEmpty() && interval.startsWith("PT")) Duration.parse(interval) else Duration.ofSeconds(1)
           }
         )
-        "sessionReplay" -> list += SessionReplayModuleConfiguration(
-          attrs?.getString("enabled")?.toBooleanStrictOrNull() ?: true,
-          attrs?.getString("samplingRate")?.toFloatOrNull() ?: 1.0f,
-        )
+        "sessionReplay" -> try {
+          list += SessionReplayModuleConfiguration(
+            attrs?.getString("enabled")?.toBooleanStrictOrNull() ?: true,
+            attrs?.getString("samplingRate")?.toFloatOrNull() ?: 1.0f,
+          )
+        } catch (_: NoClassDefFoundError) {
+          // session-replay RN package not installed - just skip
+        }
       }
     }
 

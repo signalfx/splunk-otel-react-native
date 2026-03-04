@@ -104,6 +104,9 @@ dependencies {
   implementation("com.splunk:rum-integration-okhttp3-manual:$splunkSdkVersion")
   implementation("com.splunk:rum-integration-slowrendering:$splunkSdkVersion")
   implementation("com.splunk:rum-integration-startup:$splunkSdkVersion")
+  implementation("com.splunk:rum-integration-webview:$splunkSdkVersion")
+
+  compileOnly("com.splunk:rum-integration-sessionreplay:$splunkSdkVersion")
 
   coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
 }
