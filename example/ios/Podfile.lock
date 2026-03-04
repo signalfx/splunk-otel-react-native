@@ -2400,7 +2400,35 @@ PODS:
     - SocketRocket
     - Yoga
   - SocketRocket (0.7.1)
-  - SplunkOtelReactNative (0.1.0):
+  - SplunkOtelReactNative (1.0.0-alpha.1):
+    - boost
+    - DoubleConversion
+    - fast_float
+    - fmt
+    - glog
+    - hermes-engine
+    - RCT-Folly
+    - RCT-Folly/Fabric
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - SocketRocket
+    - Yoga
+  - SplunkSessionReplay (1.0.0-alpha.1):
     - boost
     - DoubleConversion
     - fast_float
@@ -2506,6 +2534,7 @@ DEPENDENCIES:
   - RNScreens (from `../node_modules/react-native-screens`)
   - SocketRocket (~> 0.7.1)
   - SplunkOtelReactNative (from `../../packages/core`)
+  - SplunkSessionReplay (from `../../packages/session-replay`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -2660,6 +2689,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-screens"
   SplunkOtelReactNative:
     :path: "../../packages/core"
+  SplunkSessionReplay:
+    :path: "../../packages/session-replay"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -2737,7 +2768,8 @@ SPEC CHECKSUMS:
   ReactCommon: e5df435ef0892875b7d503fbe3ec73a1a3712049
   RNScreens: d6413aeb1878cdafd3c721e2c5218faf5d5d3b13
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
-  SplunkOtelReactNative: a31970af3856befa93cebd14c8636cfeb4f34fba
+  SplunkOtelReactNative: ed387d38d61c0026f300dba50a2e4bfbed0237b1
+  SplunkSessionReplay: 498b00110a72e688b9d6c3e547f28273fa83f412
   Yoga: f95f7e60346fa6828def95fbe5017346ccc8940e
 
 PODFILE CHECKSUM: 7f31263341f4edec7ef232484fd0cd5bdb43f74a
