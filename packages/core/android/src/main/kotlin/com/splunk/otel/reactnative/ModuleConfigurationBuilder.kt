@@ -27,6 +27,7 @@ import com.splunk.rum.integration.navigation.NavigationModuleConfiguration
 import com.splunk.rum.integration.networkmonitor.NetworkMonitorModuleConfiguration
 import com.splunk.rum.integration.okhttp3.auto.OkHttp3AutoModuleConfiguration
 import com.splunk.rum.integration.okhttp3.manual.OkHttp3ManualModuleConfiguration
+import com.splunk.rum.integration.sessionreplay.SessionReplayModuleConfiguration
 import com.splunk.rum.integration.slowrendering.SlowRenderingModuleConfiguration
 import com.splunk.rum.integration.startup.StartupModuleConfiguration
 import java.time.Duration
@@ -77,6 +78,10 @@ object ModuleConfigurationBuilder {
             @Suppress("NewApi")
             if (!interval.isNullOrEmpty() && interval.startsWith("PT")) Duration.parse(interval) else Duration.ofSeconds(1)
           }
+        )
+        "sessionReplay" -> list += SessionReplayModuleConfiguration(
+          attrs?.getString("enabled")?.toBooleanStrictOrNull() ?: true,
+          attrs?.getString("samplingRate")?.toFloatOrNull() ?: 1.0f,
         )
       }
     }

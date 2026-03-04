@@ -34,6 +34,9 @@ import SplunkNetwork
 #if canImport(SplunkCrashReports)
 import SplunkCrashReports
 #endif
+#if canImport(SplunkSessionReplayProxy)
+import SplunkSessionReplayProxy
+#endif
 
 /// Builds module configurations received from React Native.
 enum ModuleConfigurationBuilder {
@@ -94,6 +97,14 @@ enum ModuleConfigurationBuilder {
         }
 
         let conf = NetworkInstrumentationConfiguration(isEnabled: enabled, ignoreURLs: ignoreURLs)
+        result.append(conf)
+        #endif
+      case "sessionReplay":
+        #if canImport(SplunkSessionReplayProxy)
+
+        // tODO: this is a hack to get the session replay configuration auto-linked in the ppol
+        // even tho it does not need the real configuration object. The proxy does not expose a public constructor - this is a native issue.
+        let conf = unsafeBitCast((), to: SessionReplayConfiguration.self)
         result.append(conf)
         #endif
       default:

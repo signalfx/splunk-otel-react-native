@@ -38,6 +38,7 @@ export { OkHttp3ManualModuleConfiguration } from './model/modules/OkHttp3ManualM
 export { SlowRenderingModuleConfiguration } from './model/modules/SlowRenderingModuleConfiguration';
 export { StartupModuleConfiguration } from './model/modules/StartupModuleConfiguration';
 export { NetworkInstrumentationModuleConfiguration } from './model/modules/NetworkInstrumentationModuleConfiguration';
+export { SessionReplayModuleConfiguration } from './model/modules/SessionReplayModuleConfiguration';
 export { MutableAttributes } from './model/attributes/MutableAttributes';
 export { SplunkWebView } from './components/SplunkWebView';
 export type { SplunkWebViewProps } from './components/SplunkWebView';

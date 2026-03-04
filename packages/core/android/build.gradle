@@ -85,11 +85,25 @@ repositories {
 }
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
+def splunkSdkVersion = getExtOrDefault("splunkSdkVersion")
 
 dependencies {
   implementation "com.facebook.react:react-android"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-  implementation("com.splunk:splunk-otel-android:2.1.4")
+  implementation("com.splunk:rum-integration-agent-api:$splunkSdkVersion")
+  implementation("com.splunk:rum-integration-anr:$splunkSdkVersion")
+  implementation("com.splunk:rum-integration-applicationlifecycle:$splunkSdkVersion")
+  implementation("com.splunk:rum-integration-crash:$splunkSdkVersion")
+  implementation("com.splunk:rum-integration-customtracking:$splunkSdkVersion")
+  implementation("com.splunk:rum-integration-httpurlconnection-auto:$splunkSdkVersion")
+  implementation("com.splunk:rum-integration-interactions:$splunkSdkVersion")
+  implementation("com.splunk:rum-integration-navigation:$splunkSdkVersion")
+  implementation("com.splunk:rum-integration-networkmonitor:$splunkSdkVersion")
+  implementation("com.splunk:rum-integration-okhttp3-auto:$splunkSdkVersion")
+  implementation("com.splunk:rum-integration-okhttp3-manual:$splunkSdkVersion")
+  implementation("com.splunk:rum-integration-slowrendering:$splunkSdkVersion")
+  implementation("com.splunk:rum-integration-startup:$splunkSdkVersion")
+
   coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
 }
