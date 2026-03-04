@@ -3418,6 +3418,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@splunk/otel-session-replay-react-native@workspace:*, @splunk/otel-session-replay-react-native@workspace:packages/session-replay":
+  version: 0.0.0-use.local
+  resolution: "@splunk/otel-session-replay-react-native@workspace:packages/session-replay"
+  dependencies:
+    "@react-native/babel-preset": 0.81.1
+    "@splunk/otel-react-native": "workspace:*"
+    "@types/react": ^19.1.0
+    react: 19.1.0
+    react-native: 0.81.1
+    react-native-builder-bob: ^0.40.17
+    typescript: ^5.9.2
+  peerDependencies:
+    "@splunk/otel-react-native": ">=1.0.0-alpha.1"
+    react: ">=18.2.0"
+    react-native: ">=0.75.0 <1.0.0"
+  languageName: unknown
+  linkType: soft
+
 "@tootallnate/quickjs-emscripten@npm:^0.23.0":
   version: 0.23.0
   resolution: "@tootallnate/quickjs-emscripten@npm:0.23.0"
@@ -11306,6 +11324,7 @@ __metadata:
     "@react-navigation/native": ^7.0.0
     "@react-navigation/native-stack": ^7.0.0
     "@splunk/otel-react-native": "workspace:*"
+    "@splunk/otel-session-replay-react-native": "workspace:*"
     "@types/react": ^19.1.0
     babel-plugin-transform-inline-environment-variables: ^0.4.4
     react: 19.1.0
