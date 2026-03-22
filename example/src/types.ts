@@ -7,6 +7,7 @@ export enum TestCategory {
   Network = 'network',
   Session = 'session',
   GlobalAttributes = 'globalAttributes',
+  EndpointConfiguration = 'endpointConfiguration',
   ApiTests = 'apiTests',
 }
 
@@ -46,5 +47,6 @@ export const categoryLabels: Record<TestCategory, string> = {
   [TestCategory.Network]: 'Network',
   [TestCategory.Session]: 'Session',
   [TestCategory.GlobalAttributes]: 'Global Attributes',
+  [TestCategory.EndpointConfiguration]: 'Endpoint Configuration',
   [TestCategory.ApiTests]: 'API Tests',
 };

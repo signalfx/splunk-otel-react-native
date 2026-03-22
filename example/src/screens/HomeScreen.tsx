@@ -12,7 +12,8 @@ import {
 import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { SplunkRum } from '@splunk/otel-react-native';
+import { SplunkRum, type EndpointConfiguration } from '@splunk/otel-react-native';
+import { config as appConfig } from '../config';
 
 import { TestCategory, MobilePlatform, type TestAction } from '../types';
 import { TestActionsWidget, StatusBar } from '../components';
@@ -320,6 +321,76 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
           );
           const user = await SplunkRum.instance.user.state();
           Alert.alert('User Tracking', `Mode set to: ${user.trackingMode}`);
+        },
+      },
+
+      // Endpoint Configuration
+      {
+        id: 'endpoint-set-realm',
+        title: 'Set Endpoint (Realm)',
+        description: 'Configure endpoint using realm via preferences',
+        category: TestCategory.EndpointConfiguration,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          const endpoint: EndpointConfiguration = {
+            realm: appConfig.realm,
+            rumAccessToken: appConfig.rumAccessToken,
+          };
+          await SplunkRum.instance.preferences.setEndpointConfiguration(
+            endpoint
+          );
+          Alert.alert(
+            'Endpoint Set',
+            `Realm: ${appConfig.realm}\nData will now be sent.`
+          );
+        },
+      },
+      {
+        id: 'endpoint-set-custom',
+        title: 'Set Endpoint (Custom URL)',
+        description: 'Configure endpoint using custom trace URL',
+        category: TestCategory.EndpointConfiguration,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkRum.instance.preferences.setEndpointConfiguration({
+            trace: 'https://custom-collector.example.com/v1/traces',
+          });
+          Alert.alert('Endpoint Set', 'Custom trace URL configured.');
+        },
+      },
+      {
+        id: 'endpoint-clear',
+        title: 'Clear Endpoint',
+        description: 'Clear the endpoint to stop sending data',
+        category: TestCategory.EndpointConfiguration,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkRum.instance.preferences.setEndpointConfiguration(null);
+          Alert.alert('Endpoint Cleared', 'Data will be buffered locally.');
+        },
+      },
+      {
+        id: 'endpoint-check-state',
+        title: 'Check Endpoint State',
+        description: 'Read current endpoint from agent state',
+        category: TestCategory.EndpointConfiguration,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          const state = await SplunkRum.instance.getState();
+          const ep = state.endpoint;
+          if (!ep) {
+            Alert.alert('Endpoint State', 'No endpoint configured.');
+          } else if ('realm' in ep) {
+            Alert.alert(
+              'Endpoint State',
+              `Realm: ${ep.realm}\nToken: ${ep.rumAccessToken.substring(0, 8)}...`
+            );
+          } else {
+            Alert.alert(
+              'Endpoint State',
+              `Trace: ${ep.trace}\nReplay: ${ep.sessionReplay ?? 'none'}`
+            );
+          }
         },
       },
 
