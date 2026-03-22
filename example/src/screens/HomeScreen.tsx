@@ -12,7 +12,10 @@ import {
 import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { SplunkRum, type EndpointConfiguration } from '@splunk/otel-react-native';
+import {
+  SplunkRum,
+  type EndpointConfiguration,
+} from '@splunk/otel-react-native';
 import { config as appConfig } from '../config';
 
 import { TestCategory, MobilePlatform, type TestAction } from '../types';
