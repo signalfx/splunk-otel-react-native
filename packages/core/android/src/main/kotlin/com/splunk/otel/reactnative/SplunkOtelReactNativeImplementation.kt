@@ -52,6 +52,19 @@ class SplunkOtelReactNativeImplementation(private val reactContext: ReactApplica
     }
   }
 
+  // MARK: - Preferences
+
+  fun setEndpointConfiguration(endpoint: ReadableMap?, promise: Promise) {
+    try {
+      val config = endpoint?.let { AgentConfigurationBuilder.buildEndpoint(it) }
+      SplunkRum.instance.preferences.endpointConfiguration = config
+      promise.resolve(null)
+    } catch (t: Throwable) {
+      Log.e(TAG, "setEndpointConfiguration() - failed", t)
+      promise.reject("E_SET_ENDPOINT", t)
+    }
+  }
+
   companion object {
     private const val TAG = "SplunkOtelRN"
     const val NAME = "SplunkOtelReactNative"

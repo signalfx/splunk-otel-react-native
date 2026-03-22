@@ -56,6 +56,25 @@ public class SplunkOtelReactNativeImplementation: NSObject {
     }
   }
 
+  // MARK: - Preferences
+
+  @objc
+  public func setEndpointConfiguration(_ endpoint: NSDictionary?,
+                                        resolve: @escaping RCTPromiseResolveBlock,
+                                        reject: @escaping RCTPromiseRejectBlock) {
+    do {
+      if let endpointDict = endpoint, !(endpointDict is NSNull) {
+        let config = try AgentConfigurationBuilder.buildEndpoint(from: endpointDict)
+        SplunkRum.shared.preferences.endpointConfiguration = config
+      } else {
+        SplunkRum.shared.preferences.endpointConfiguration = nil
+      }
+      resolve(nil)
+    } catch {
+      reject("set_endpoint_error", "\(error)", error)
+    }
+  }
+
   // MARK: - State / Session / User
 
   @objc

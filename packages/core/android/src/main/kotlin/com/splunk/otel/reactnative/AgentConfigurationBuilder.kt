@@ -28,12 +28,8 @@ import java.net.URL
  */
 object AgentConfigurationBuilder {
 
-  fun build(map: ReadableMap): AgentConfiguration {
-    val endpointMapAny = map.getMap("endpoint")
-      ?: throw IllegalArgumentException("endpoint is required")
-    val endpointMap = endpointMapAny as ReadableMap
-
-    val endpoint = if (endpointMap.hasKey("realm")) {
+  fun buildEndpoint(endpointMap: ReadableMap): EndpointConfiguration {
+    return if (endpointMap.hasKey("realm")) {
       EndpointConfiguration(endpointMap.getString("realm")!!, endpointMap.getString("rumAccessToken")!!)
     } else if (endpointMap.hasKey("trace")) {
       val traceStr = endpointMap.getString("trace")
@@ -46,6 +42,14 @@ object AgentConfigurationBuilder {
       if (sr != null) EndpointConfiguration(trace, sr) else EndpointConfiguration(trace)
     } else {
       throw IllegalArgumentException("endpoint must specify either realm/rumAccessToken or trace")
+    }
+  }
+
+  fun build(map: ReadableMap): AgentConfiguration {
+    val endpoint = if (map.hasKey("endpoint") && !map.isNull("endpoint")) {
+      buildEndpoint(map.getMap("endpoint")!!)
+    } else {
+      null
     }
 
     val appName = map.getString("appName") ?: ""

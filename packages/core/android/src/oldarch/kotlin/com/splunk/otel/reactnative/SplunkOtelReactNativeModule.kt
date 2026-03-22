@@ -37,6 +37,10 @@ class SplunkOtelReactNativeModule(reactContext: ReactApplicationContext) :
     implementation.install(configuration, modules, promise)
 
   @ReactMethod
+  fun setEndpointConfiguration(endpoint: ReadableMap?, promise: Promise) =
+    implementation.setEndpointConfiguration(endpoint, promise)
+
+  @ReactMethod
   fun getState(promise: Promise) = implementation.getState(promise)
 
   @ReactMethod

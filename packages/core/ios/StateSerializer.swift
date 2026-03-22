@@ -50,7 +50,9 @@ enum StateSerializer {
     ]
   }
 
-  static func serializeEndpoint(_ ep: EndpointConfiguration) -> [String: Any] {
+  static func serializeEndpoint(_ ep: EndpointConfiguration?) -> Any {
+    guard let ep = ep else { return NSNull() }
+
     if let realm = ep.realm, let token = ep.rumAccessToken {
       return ["realm": realm, "rumAccessToken": token]
     }

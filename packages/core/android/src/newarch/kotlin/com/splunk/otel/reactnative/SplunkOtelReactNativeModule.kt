@@ -33,6 +33,9 @@ class SplunkOtelReactNativeModule(reactContext: ReactApplicationContext) :
   override fun install(configuration: ReadableMap, modules: ReadableArray, promise: Promise) =
     implementation.install(configuration, modules, promise)
 
+  override fun setEndpointConfiguration(endpoint: ReadableMap?, promise: Promise) =
+    implementation.setEndpointConfiguration(endpoint, promise)
+
   override fun getState(promise: Promise) = implementation.getState(promise)
 
   override fun getSessionState(promise: Promise) = implementation.getSessionState(promise)

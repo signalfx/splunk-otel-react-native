@@ -37,6 +37,11 @@ NS_ASSUME_NONNULL_BEGIN
         resolve:(RCTPromiseResolveBlock)resolve
          reject:(RCTPromiseRejectBlock)reject;
 
+// Preferences
+- (void)setEndpointConfiguration:(nullable NSDictionary *)endpoint
+                         resolve:(RCTPromiseResolveBlock)resolve
+                          reject:(RCTPromiseRejectBlock)reject;
+
 // State
 - (void)getState:(RCTPromiseResolveBlock)resolve
           reject:(RCTPromiseRejectBlock)reject;
