@@ -15,6 +15,10 @@ import {
   OkHttp3AutoModuleConfiguration,
   OkHttp3ManualModuleConfiguration,
   NetworkInstrumentationModuleConfiguration,
+  ATTR_RN_FRAMEWORK_VERSION,
+  ATTR_RN_SDK_VERSION,
+  getReactNativeVersion,
+  getSdkVersion,
 } from '@splunk/otel-react-native';
 
 import { RootNavigator } from './navigation/RootNavigator';
@@ -37,6 +41,8 @@ const agentConfig: AgentConfiguration = {
   globalAttributes: {
     'app.type': 'test',
     'app.framework': 'react-native',
+    [ATTR_RN_FRAMEWORK_VERSION]: getReactNativeVersion(),
+    [ATTR_RN_SDK_VERSION]: getSdkVersion(),
   },
   user: { trackingMode: 'NO_TRACKING' },
   session: { samplingRate: 1.0 },
