@@ -59,6 +59,15 @@ public class SplunkOtelReactNativeImplementation: NSObject {
   // MARK: - Preferences
 
   @objc
+  public func getEndpointConfiguration(_ resolve: @escaping RCTPromiseResolveBlock,
+                                        reject: @escaping RCTPromiseRejectBlock) {
+    let ep = SplunkRum.shared.preferences.endpointConfiguration
+    let serialized = StateSerializer.serializeEndpoint(ep)
+
+    resolve(serialized is NSNull ? nil : serialized)
+  }
+
+  @objc
   public func setEndpointConfiguration(_ endpoint: NSDictionary?,
                                         resolve: @escaping RCTPromiseResolveBlock,
                                         reject: @escaping RCTPromiseRejectBlock) {

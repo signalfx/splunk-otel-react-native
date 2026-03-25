@@ -23,6 +23,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.UiThreadUtil
+import com.facebook.react.bridge.WritableNativeMap
 import com.splunk.rum.integration.agent.api.SplunkRum
 import com.splunk.rum.integration.navigation.extension.navigation
 
@@ -54,13 +55,44 @@ class SplunkOtelReactNativeImplementation(private val reactContext: ReactApplica
 
   // MARK: - Preferences
 
+  fun getEndpointConfiguration(promise: Promise) {
+    try {
+      val ep = SplunkRum.instance.preferences.endpointConfiguration
+      
+      if (ep != null) {
+        val map = WritableNativeMap()
+
+        if (ep.realm != null) {
+          map.putString("realm", ep.realm)
+          map.putString("rumAccessToken", ep.rumAccessToken)
+        } else {
+          map.putString("trace", ep.traceEndpoint.toString())
+
+          if (ep.sessionReplayEndpoint != null) {
+            map.putString("sessionReplay", ep.sessionReplayEndpoint.toString())
+          }
+        }
+
+        promise.resolve(map)
+      } else {
+        promise.resolve(null)
+      }
+    } catch (t: Throwable) {
+      Log.e(TAG, "getEndpointConfiguration() - failed", t)
+
+      promise.reject("E_GET_ENDPOINT", t)
+    }
+  }
+
   fun setEndpointConfiguration(endpoint: ReadableMap?, promise: Promise) {
     try {
       val config = endpoint?.let { AgentConfigurationBuilder.buildEndpoint(it) }
       SplunkRum.instance.preferences.endpointConfiguration = config
+
       promise.resolve(null)
     } catch (t: Throwable) {
       Log.e(TAG, "setEndpointConfiguration() - failed", t)
+
       promise.reject("E_SET_ENDPOINT", t)
     }
   }

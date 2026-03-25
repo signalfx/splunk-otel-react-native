@@ -16,10 +16,13 @@
 
 import { AgentPreferences } from '../api/AgentPreferences';
 
+const mockGetEndpointConfiguration = jest.fn().mockResolvedValue(null);
 const mockSetEndpointConfiguration = jest.fn().mockResolvedValue(undefined);
 
 jest.mock('../sdk/SplunkNativeBridge', () => ({
   SplunkNativeBridge: {
+    getEndpointConfiguration: (...args: unknown[]) =>
+      mockGetEndpointConfiguration(...args),
     setEndpointConfiguration: (...args: unknown[]) =>
       mockSetEndpointConfiguration(...args),
   },
@@ -30,46 +33,96 @@ describe('AgentPreferences', () => {
 
   beforeEach(() => {
     preferences = new AgentPreferences();
+
+    mockGetEndpointConfiguration.mockClear();
     mockSetEndpointConfiguration.mockClear();
   });
 
-  it('calls native bridge with realm endpoint', async () => {
-    await preferences.setEndpointConfiguration({
-      realm: 'us0',
-      rumAccessToken: 'my-token',
+  describe('getEndpointConfiguration', () => {
+    it('returns undefined when native returns null', async () => {
+      mockGetEndpointConfiguration.mockResolvedValue(null);
+
+      const result = await preferences.getEndpointConfiguration();
+
+      expect(result).toBeUndefined();
+      expect(mockGetEndpointConfiguration).toHaveBeenCalled();
     });
 
-    expect(mockSetEndpointConfiguration).toHaveBeenCalledWith({
-      realm: 'us0',
-      rumAccessToken: 'my-token',
+    it('converts realm endpoint from native', async () => {
+      mockGetEndpointConfiguration.mockResolvedValue({
+        realm: 'us0',
+        rumAccessToken: 'tok',
+      });
+
+      const result = await preferences.getEndpointConfiguration();
+
+      expect(result).toEqual({ realm: 'us0', rumAccessToken: 'tok' });
+    });
+
+    it('converts trace endpoint from native', async () => {
+      mockGetEndpointConfiguration.mockResolvedValue({
+        trace: 'https://t.example.com',
+        sessionReplay: 'https://sr.example.com',
+      });
+
+      const result = await preferences.getEndpointConfiguration();
+
+      expect(result).toEqual({
+        trace: 'https://t.example.com',
+        sessionReplay: 'https://sr.example.com',
+      });
+    });
+
+    it('converts trace-only endpoint from native', async () => {
+      mockGetEndpointConfiguration.mockResolvedValue({
+        trace: 'https://t.example.com',
+      });
+
+      const result = await preferences.getEndpointConfiguration();
+
+      expect(result).toEqual({ trace: 'https://t.example.com' });
     });
   });
 
-  it('calls native bridge with custom trace endpoint', async () => {
-    await preferences.setEndpointConfiguration({
-      trace: 'https://traces.example.com',
-      sessionReplay: 'https://logs.example.com',
+  describe('setEndpointConfiguration', () => {
+    it('calls native bridge with realm endpoint', async () => {
+      await preferences.setEndpointConfiguration({
+        realm: 'us0',
+        rumAccessToken: 'my-token',
+      });
+
+      expect(mockSetEndpointConfiguration).toHaveBeenCalledWith({
+        realm: 'us0',
+        rumAccessToken: 'my-token',
+      });
     });
 
-    expect(mockSetEndpointConfiguration).toHaveBeenCalledWith({
-      trace: 'https://traces.example.com',
-      sessionReplay: 'https://logs.example.com',
+    it('calls native bridge with custom trace endpoint', async () => {
+      await preferences.setEndpointConfiguration({
+        trace: 'https://traces.example.com',
+        sessionReplay: 'https://logs.example.com',
+      });
+
+      expect(mockSetEndpointConfiguration).toHaveBeenCalledWith({
+        trace: 'https://traces.example.com',
+        sessionReplay: 'https://logs.example.com',
+      });
     });
-  });
 
-  it('calls native bridge with trace-only endpoint', async () => {
-    await preferences.setEndpointConfiguration({
-      trace: 'https://traces.example.com',
+    it('calls native bridge with trace-only endpoint', async () => {
+      await preferences.setEndpointConfiguration({
+        trace: 'https://traces.example.com',
+      });
+
+      expect(mockSetEndpointConfiguration).toHaveBeenCalledWith({
+        trace: 'https://traces.example.com',
+      });
     });
 
-    expect(mockSetEndpointConfiguration).toHaveBeenCalledWith({
-      trace: 'https://traces.example.com',
+    it('calls native bridge with null to clear endpoint', async () => {
+      await preferences.setEndpointConfiguration(null);
+
+      expect(mockSetEndpointConfiguration).toHaveBeenCalledWith(null);
     });
-  });
-
-  it('calls native bridge with null to clear endpoint', async () => {
-    await preferences.setEndpointConfiguration(null);
-
-    expect(mockSetEndpointConfiguration).toHaveBeenCalledWith(null);
   });
 });

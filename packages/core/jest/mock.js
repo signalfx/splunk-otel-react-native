@@ -91,6 +91,7 @@ const navigationMock = {
 };
 
 const agentPreferencesMock = {
+  getEndpointConfiguration: jest.fn().mockResolvedValue(undefined),
   setEndpointConfiguration: jest.fn().mockResolvedValue(undefined),
 };
 
@@ -280,6 +281,7 @@ class MutableAttributesMock {
 
 class AgentPreferencesMock {
   constructor() {
+    this.getEndpointConfiguration = jest.fn().mockResolvedValue(undefined);
     this.setEndpointConfiguration = jest.fn().mockResolvedValue(undefined);
   }
 }

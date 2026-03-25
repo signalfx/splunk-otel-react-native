@@ -120,6 +120,21 @@ RCT_EXPORT_METHOD(install:(NSDictionary *)configuration
 #pragma mark - Preferences
 
 #ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(getEndpointConfiguration,
+                 getEndpointConfigurationWithResolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self getEndpointConfiguration:resolve reject:reject];
+}
+#endif
+
+- (void)getEndpointConfiguration:(RCTPromiseResolveBlock)resolve
+                          reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl getEndpointConfiguration:resolve reject:reject];
+}
+
+#ifndef RCT_NEW_ARCH_ENABLED
 RCT_REMAP_METHOD(setEndpointConfiguration,
                  setEndpointConfigurationEndpoint:(nullable NSDictionary *)endpoint
                  resolver:(RCTPromiseResolveBlock)resolve

@@ -96,6 +96,7 @@ export interface Spec extends TurboModule {
   ): Promise<void>;
 
   // Preferences
+  getEndpointConfiguration(): Promise<NativeEndpoint | null>;
   setEndpointConfiguration(
     endpoint: { [key: string]: unknown } | null
   ): Promise<void>;

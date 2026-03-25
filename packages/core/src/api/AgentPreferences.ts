@@ -16,7 +16,7 @@
 
 import type { EndpointConfiguration } from '../model/configuration/EndpointConfiguration';
 import { SplunkNativeBridge as Native } from '../sdk/SplunkNativeBridge';
-import { toNativeEndpoint } from '../bridge/converters';
+import { toNativeEndpoint, fromNativeEndpoint } from '../bridge/converters';
 
 /**
  * Agent preferences for runtime configuration.
@@ -38,12 +38,26 @@ import { toNativeEndpoint } from '../bridge/converters';
  * });
  * ```
  *
+ * @example Reading the current endpoint
+ * ```typescript
+ * const endpoint = await SplunkRum.instance.preferences.getEndpointConfiguration();
+ * ```
+ *
  * @example Clearing the endpoint
  * ```typescript
  * await SplunkRum.instance.preferences.setEndpointConfiguration(null);
  * ```
  */
 export class AgentPreferences {
+  /**
+   * Returns the current endpoint configuration, or `undefined` when
+   * no endpoint has been configured.
+   */
+  async getEndpointConfiguration(): Promise<EndpointConfiguration | undefined> {
+    const native = await Native.getEndpointConfiguration();
+    return fromNativeEndpoint(native);
+  }
+
   /**
    * Sets the endpoint configuration for the RUM agent.
    *
@@ -56,7 +70,6 @@ export class AgentPreferences {
     endpoint: EndpointConfiguration | null
   ): Promise<void> {
     const native = endpoint ? toNativeEndpoint(endpoint) : null;
-
     return Native.setEndpointConfiguration(native);
   }
 }
