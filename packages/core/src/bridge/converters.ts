@@ -26,6 +26,12 @@ import type {
   NativeState,
   NativeAttributes,
 } from '../specs/NativeSplunkOtelReactNative';
+import {
+  ATTR_RN_FRAMEWORK_VERSION,
+  ATTR_RN_SDK_VERSION,
+  getReactNativeVersion,
+  getSdkVersion,
+} from '../version';
 
 export function toNativeEndpoint(
   endpoint: EndpointConfiguration
@@ -49,8 +55,11 @@ export function toNativeAgentConfiguration(
     deploymentEnvironment: configuration.deploymentEnvironment,
     appVersion: configuration.appVersion ?? null,
     enableDebugLogging: !!configuration.enableDebugLogging,
-    globalAttributes: (configuration.globalAttributes ??
-      {}) as Attributes as NativeAttributes,
+    globalAttributes: {
+      ...(configuration.globalAttributes ?? {}),
+      [ATTR_RN_FRAMEWORK_VERSION]: getReactNativeVersion(),
+      [ATTR_RN_SDK_VERSION]: getSdkVersion(),
+    } as Attributes as NativeAttributes,
     user: { trackingMode: configuration.user?.trackingMode ?? null },
     session: { samplingRate: configuration.session?.samplingRate ?? 1 },
     instrumentedProcessName: configuration.instrumentedProcessName ?? null,
