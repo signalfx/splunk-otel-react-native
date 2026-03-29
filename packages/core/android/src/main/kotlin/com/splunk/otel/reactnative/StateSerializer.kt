@@ -51,17 +51,22 @@ object StateSerializer {
 
     map.putMap("status", statusMap)
 
-    val endpointMap = WritableNativeMap()
     val ep = state.endpointConfiguration
-
-    if (ep?.realm != null) {
-      endpointMap.putString("realm", ep.realm)
-      endpointMap.putString("rumAccessToken", ep.rumAccessToken)
+    if (ep != null) {
+      val endpointMap = WritableNativeMap()
+      if (ep.realm != null) {
+        endpointMap.putString("realm", ep.realm)
+        endpointMap.putString("rumAccessToken", ep.rumAccessToken)
+      } else {
+        endpointMap.putString("trace", ep.traceEndpoint.toString())
+        if (ep.sessionReplayEndpoint != null) {
+          endpointMap.putString("sessionReplay", ep.sessionReplayEndpoint.toString())
+        }
+      }
+      map.putMap("endpoint", endpointMap)
     } else {
-      endpointMap.putString("trace", ep?.traceEndpoint?.toString())
-      if (ep?.sessionReplayEndpoint != null) endpointMap.putString("sessionReplay", ep.sessionReplayEndpoint.toString())
+      map.putNull("endpoint")
     }
-    map.putMap("endpoint", endpointMap)
 
     return map
   }

@@ -90,7 +90,13 @@ const navigationMock = {
   track: jest.fn().mockResolvedValue(undefined),
 };
 
+const agentPreferencesMock = {
+  getEndpointConfiguration: jest.fn().mockResolvedValue(undefined),
+  setEndpointConfiguration: jest.fn().mockResolvedValue(undefined),
+};
+
 const splunkRumInstanceMock = {
+  preferences: agentPreferencesMock,
   globalAttributes: globalAttributesMock,
   session: sessionMock,
   user: userMock,
@@ -273,10 +279,18 @@ class MutableAttributesMock {
   }
 }
 
+class AgentPreferencesMock {
+  constructor() {
+    this.getEndpointConfiguration = jest.fn().mockResolvedValue(undefined);
+    this.setEndpointConfiguration = jest.fn().mockResolvedValue(undefined);
+  }
+}
+
 module.exports = {
   SplunkRum: SplunkRumMock,
   SplunkRumProvider: SplunkRumProviderMock,
   SplunkWebView: SplunkWebViewMock,
+  AgentPreferences: AgentPreferencesMock,
   ModuleConfiguration: ModuleConfigurationMock,
   AnrModuleConfiguration: createModuleConfigMock('anr'),
   ApplicationLifecycleModuleConfiguration: createModuleConfigMock(
