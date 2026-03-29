@@ -42,3 +42,12 @@ export { NetworkInstrumentationModuleConfiguration } from './model/modules/Netwo
 export { MutableAttributes } from './model/attributes/MutableAttributes';
 export { SplunkWebView } from './components/SplunkWebView';
 export type { SplunkWebViewProps } from './components/SplunkWebView';
+export {
+  SDK_VERSION,
+  ATTR_RN_FRAMEWORK_VERSION,
+  ATTR_RN_SDK_VERSION,
+  getReactNativeVersion,
+  getSdkVersion,
+  getSdkVersionInfo,
+} from './version';
+export type { SdkVersionInfo } from './version';

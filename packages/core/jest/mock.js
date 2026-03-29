@@ -286,11 +286,22 @@ class AgentPreferencesMock {
   }
 }
 
+const SDK_VERSION = '0.1.0';
+
 module.exports = {
   SplunkRum: SplunkRumMock,
   SplunkRumProvider: SplunkRumProviderMock,
   SplunkWebView: SplunkWebViewMock,
   AgentPreferences: AgentPreferencesMock,
+  SDK_VERSION,
+  ATTR_RN_FRAMEWORK_VERSION: 'splunk.app.framework.rn.version',
+  ATTR_RN_SDK_VERSION: 'rum.sdk.rn.version',
+  getReactNativeVersion: jest.fn().mockReturnValue('0.81.1'),
+  getSdkVersion: jest.fn().mockReturnValue(SDK_VERSION),
+  getSdkVersionInfo: jest.fn().mockReturnValue({
+    reactNativeVersion: '0.81.1',
+    sdkVersion: SDK_VERSION,
+  }),
   ModuleConfiguration: ModuleConfigurationMock,
   AnrModuleConfiguration: createModuleConfigMock('anr'),
   ApplicationLifecycleModuleConfiguration: createModuleConfigMock(
