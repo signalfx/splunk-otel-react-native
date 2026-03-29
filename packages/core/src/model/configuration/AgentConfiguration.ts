@@ -27,8 +27,10 @@ export interface AgentConfiguration {
    * Endpoint configuration defining URLs to the instrumentation collector.
    *
    * Use realm-based or custom URL configuration.
+   * When omitted, the agent starts without an endpoint and buffers data
+   * until one is configured via `SplunkRum.instance.preferences.endpointConfiguration`.
    */
-  endpoint: EndpointConfiguration;
+  endpoint?: EndpointConfiguration;
 
   /**
    * Application name displayed in the RUM dashboard.

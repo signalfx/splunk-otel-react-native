@@ -41,7 +41,7 @@ export type NativeSession = {
 };
 
 export type NativeAgentConfiguration = {
-  endpoint: NativeEndpoint;
+  endpoint: NativeEndpoint | null;
   appName: string;
   deploymentEnvironment: string;
   appVersion: string | null;
@@ -75,7 +75,7 @@ export type NativeState = {
   appVersion: string;
   deploymentEnvironment: string;
   status: NativeStatus;
-  endpoint: NativeEndpoint;
+  endpoint: NativeEndpoint | null;
   isDebugLoggingEnabled: boolean;
   instrumentedProcessName: string | null;
   deferredUntilForeground: boolean;
@@ -93,6 +93,12 @@ export interface Spec extends TurboModule {
   install(
     configuration: { [key: string]: unknown },
     modules: Array<{ [key: string]: unknown }>
+  ): Promise<void>;
+
+  // Preferences
+  getEndpointConfiguration(): Promise<NativeEndpoint | null>;
+  setEndpointConfiguration(
+    endpoint: { [key: string]: unknown } | null
   ): Promise<void>;
 
   // State and user/session

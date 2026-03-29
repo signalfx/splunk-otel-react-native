@@ -16,6 +16,7 @@
 
 export { SplunkRum } from './api/SplunkRum';
 export { SplunkRumProvider } from './providers/SplunkRumProvider';
+export { AgentPreferences } from './api/AgentPreferences';
 export type { AgentConfiguration } from './model/configuration/AgentConfiguration';
 export type { EndpointConfiguration } from './model/configuration/EndpointConfiguration';
 export type {

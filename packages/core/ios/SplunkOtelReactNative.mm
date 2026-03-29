@@ -117,6 +117,40 @@ RCT_EXPORT_METHOD(install:(NSDictionary *)configuration
   [self installWithConfiguration:configuration modules:modules resolve:resolve reject:reject];
 }
 
+#pragma mark - Preferences
+
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(getEndpointConfiguration,
+                 getEndpointConfigurationWithResolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self getEndpointConfiguration:resolve reject:reject];
+}
+#endif
+
+- (void)getEndpointConfiguration:(RCTPromiseResolveBlock)resolve
+                          reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl getEndpointConfiguration:resolve reject:reject];
+}
+
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(setEndpointConfiguration,
+                 setEndpointConfigurationEndpoint:(nullable NSDictionary *)endpoint
+                 resolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self setEndpointConfiguration:endpoint resolve:resolve reject:reject];
+}
+#endif
+
+- (void)setEndpointConfiguration:(nullable NSDictionary *)endpoint
+                         resolve:(RCTPromiseResolveBlock)resolve
+                          reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl setEndpointConfiguration:endpoint resolve:resolve reject:reject];
+}
+
 #pragma mark - State / Session / User
 
 #ifndef RCT_NEW_ARCH_ENABLED
