@@ -18,11 +18,42 @@ import React from 'react';
 import { SplunkRumProvider } from '../providers/SplunkRumProvider';
 
 describe('SplunkRumProvider', () => {
-  it('returns a React element', () => {
+  it('returns a React element with endpoint', () => {
     const element = (
       <SplunkRumProvider
         agentConfiguration={{
           endpoint: { trace: 't' },
+          appName: 'app',
+          deploymentEnvironment: 'prod',
+        }}
+      >
+        <></>
+      </SplunkRumProvider>
+    );
+
+    expect(React.isValidElement(element)).toBe(true);
+  });
+
+  it('returns a React element without endpoint', () => {
+    const element = (
+      <SplunkRumProvider
+        agentConfiguration={{
+          appName: 'app',
+          deploymentEnvironment: 'prod',
+        }}
+      >
+        <></>
+      </SplunkRumProvider>
+    );
+
+    expect(React.isValidElement(element)).toBe(true);
+  });
+
+  it('returns a React element with realm endpoint', () => {
+    const element = (
+      <SplunkRumProvider
+        agentConfiguration={{
+          endpoint: { realm: 'us0', rumAccessToken: 'tok' },
           appName: 'app',
           deploymentEnvironment: 'prod',
         }}

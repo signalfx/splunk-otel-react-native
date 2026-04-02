@@ -22,6 +22,7 @@ import { Session } from './Session';
 import { User } from './User';
 import { CustomTracking } from './CustomTracking';
 import { Navigation } from './Navigation';
+import { AgentPreferences } from './AgentPreferences';
 import { MutableAttributes } from '../model/attributes/MutableAttributes';
 import {
   toNativeAgentConfiguration,
@@ -35,16 +36,27 @@ import {
  * Use `SplunkRum.install()` to initialize the SDK, then access features
  * via `SplunkRum.instance`.
  *
- * @example Basic usage
+ * @example Basic usage with endpoint
  * ```typescript
  * await SplunkRum.install({
  *   endpoint: { realm: 'us0', rumAccessToken: 'YOUR_TOKEN' },
  *   appName: 'MyApp',
  *   deploymentEnvironment: 'production',
  * });
+ * ```
  *
- * // Access SDK features
- * await SplunkRum.instance.globalAttributes.setString('user.tier', 'premium');
+ * @example Deferred endpoint configuration
+ * ```typescript
+ * await SplunkRum.install({
+ *   appName: 'MyApp',
+ *   deploymentEnvironment: 'production',
+ * });
+ *
+ * // Configure endpoint later via preferences
+ * await SplunkRum.instance.preferences.setEndpointConfiguration({
+ *   realm: 'us0',
+ *   rumAccessToken: 'YOUR_TOKEN',
+ * });
  * ```
  */
 export class SplunkRum {
@@ -87,6 +99,13 @@ export class SplunkRum {
 
     return this._instance!;
   }
+
+  /**
+   * Agent preferences for runtime configuration.
+   *
+   * Allows configuring settings like endpoint after initialization.
+   */
+  readonly preferences = new AgentPreferences();
 
   /**
    * Global attributes sent with all signals.
