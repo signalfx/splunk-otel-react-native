@@ -101,10 +101,10 @@ enum ModuleConfigurationBuilder {
         #endif
       case "sessionReplay":
         #if canImport(SplunkSessionReplayProxy)
+        let enabled = (attrs["enabled"] as NSString?)?.boolValue ?? true
+        let samplingRate = (attrs["samplingRate"] as NSString?)?.doubleValue
 
-        // tODO: this is a hack to get the session replay configuration auto-linked in the ppol
-        // even tho it does not need the real configuration object. The proxy does not expose a public constructor - this is a native issue.
-        let conf = unsafeBitCast((), to: SessionReplayConfiguration.self)
+        let conf = SessionReplayConfiguration(enabled: enabled, samplingRate: samplingRate)
         result.append(conf)
         #endif
       default:

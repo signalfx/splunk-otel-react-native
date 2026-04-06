@@ -3,13 +3,9 @@
   "pins" : [
     {
       "identity" : "opentelemetry-swift-core",
-      "identity" : "opentelemetry-swift-core",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/open-telemetry/opentelemetry-swift-core",
-      "location" : "https://github.com/open-telemetry/opentelemetry-swift-core",
       "state" : {
-        "revision" : "240c8d5e36c3c7b774ed961325369f0b1f2c965f",
-        "version" : "2.3.0"
         "revision" : "240c8d5e36c3c7b774ed961325369f0b1f2c965f",
         "version" : "2.3.0"
       }
@@ -19,8 +15,6 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/microsoft/plcrashreporter",
       "state" : {
-        "revision" : "8c61e5e38e9f737dd68512ed1ea5ab081244ad65",
-        "version" : "1.12.0"
         "revision" : "8c61e5e38e9f737dd68512ed1ea5ab081244ad65",
         "version" : "1.12.0"
       }
