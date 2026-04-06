@@ -71,11 +71,11 @@
   "devDependencies": {
     "@react-native/babel-preset": "0.81.1",
     "@splunk/otel-react-native": "workspace:*",
-    "@types/react": "^19.1.0",
+    "@types/react": "19.2.0",
     "react": "19.1.0",
     "react-native": "0.81.1",
-    "react-native-builder-bob": "^0.40.17",
-    "typescript": "^5.9.2"
+    "react-native-builder-bob": "0.40.17",
+    "typescript": "5.9.3"
   },
   "engines": {
     "node": ">=22"
