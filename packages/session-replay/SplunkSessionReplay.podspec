@@ -19,10 +19,12 @@ Pod::Spec.new do |s|
 
   s.swift_version = "5.9"
 
-  # SplunkAgent is resolved via SPM by the core pod (SplunkOtelReactNative) - we're linking here only through the dep chain.
+  # SplunkAgent is resolved via SPM by the core pod (SplunkOtelReactNative) - we link through the dep chain & re-introduce .swiftmodule discovery.
+  spm_build_dir = "\"${SYMROOT}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}\""
   s.pod_target_xcconfig = {
     "DEFINES_MODULE" => "YES",
-    "FRAMEWORK_SEARCH_PATHS" => "$(inherited) \"${SYMROOT}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/PackageFrameworks\""
+    "SWIFT_INCLUDE_PATHS" => "$(inherited) #{spm_build_dir}/ #{spm_build_dir}/PackageFrameworks",
+    "FRAMEWORK_SEARCH_PATHS" => "$(inherited) #{spm_build_dir}/PackageFrameworks"
   }
 
   s.dependency "React-Core"
