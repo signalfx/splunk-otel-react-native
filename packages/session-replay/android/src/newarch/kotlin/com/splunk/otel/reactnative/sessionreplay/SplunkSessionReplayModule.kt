@@ -18,6 +18,7 @@ package com.splunk.otel.reactnative.sessionreplay
 
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.module.annotations.ReactModule
 
 @ReactModule(name = SplunkSessionReplayModule.NAME)
@@ -31,6 +32,18 @@ class SplunkSessionReplayModule(reactContext: ReactApplicationContext) :
   override fun start(promise: Promise) = implementation.start(promise)
 
   override fun stop(promise: Promise) = implementation.stop(promise)
+
+  override fun getState(promise: Promise) = implementation.getState(promise)
+
+  override fun getPreferences(promise: Promise) = implementation.getPreferences(promise)
+
+  override fun setPreferences(renderingMode: String?, promise: Promise) =
+    implementation.setPreferences(renderingMode, promise)
+
+  override fun getRecordingMask(promise: Promise) = implementation.getRecordingMask(promise)
+
+  override fun setRecordingMask(mask: ReadableMap?, promise: Promise) =
+    implementation.setRecordingMask(mask, promise)
 
   companion object {
     const val NAME = "SplunkSessionReplay"

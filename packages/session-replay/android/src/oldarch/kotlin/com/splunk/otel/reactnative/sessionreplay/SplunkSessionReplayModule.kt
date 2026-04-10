@@ -20,6 +20,7 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.module.annotations.ReactModule
 
 @ReactModule(name = SplunkSessionReplayModule.NAME)
@@ -35,6 +36,23 @@ class SplunkSessionReplayModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   fun stop(promise: Promise) = implementation.stop(promise)
+
+  @ReactMethod
+  fun getState(promise: Promise) = implementation.getState(promise)
+
+  @ReactMethod
+  fun getPreferences(promise: Promise) = implementation.getPreferences(promise)
+
+  @ReactMethod
+  fun setPreferences(renderingMode: String?, promise: Promise) =
+    implementation.setPreferences(renderingMode, promise)
+
+  @ReactMethod
+  fun getRecordingMask(promise: Promise) = implementation.getRecordingMask(promise)
+
+  @ReactMethod
+  fun setRecordingMask(mask: ReadableMap?, promise: Promise) =
+    implementation.setRecordingMask(mask, promise)
 
   companion object {
     const val NAME = "SplunkSessionReplay"
