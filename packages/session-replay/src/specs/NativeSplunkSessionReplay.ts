@@ -20,11 +20,40 @@ import {
   type TurboModule,
 } from 'react-native';
 
+export type NativeSessionReplayState = {
+  status: string;
+  isRecording: boolean;
+  renderingMode: string;
+  samplingRate: number;
+};
+
+export type NativeMaskElement = {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  type: string;
+};
+
+export type NativeRecordingMask = {
+  elements: NativeMaskElement[];
+};
+
 export interface Spec extends TurboModule {
   readonly getConstants: () => {};
 
   start(): Promise<void>;
   stop(): Promise<void>;
+
+  getState(): Promise<NativeSessionReplayState>;
+
+  getPreferences(): Promise<{ renderingMode: string | null }>;
+  setPreferences(renderingMode: string | null): Promise<void>;
+
+  getRecordingMask(): Promise<NativeRecordingMask | null>;
+  setRecordingMask(
+    mask: { elements: Array<{ [key: string]: unknown }> } | null
+  ): Promise<void>;
 }
 
 const Turbo = TurboModuleRegistry.get<Spec>('SplunkSessionReplay');
