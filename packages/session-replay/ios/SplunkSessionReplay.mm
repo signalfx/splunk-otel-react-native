@@ -87,4 +87,89 @@ RCT_REMAP_METHOD(stop,
   [self.impl stopWithResolve:resolve reject:reject];
 }
 
+#pragma mark - State
+
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(getState,
+                 getStateWithResolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self getState:resolve reject:reject];
+}
+#endif
+
+- (void)getState:(RCTPromiseResolveBlock)resolve
+          reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl getStateWithResolve:resolve reject:reject];
+}
+
+#pragma mark - Preferences
+
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(getPreferences,
+                 getPreferencesWithResolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self getPreferences:resolve reject:reject];
+}
+#endif
+
+- (void)getPreferences:(RCTPromiseResolveBlock)resolve
+                reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl getPreferencesWithResolve:resolve reject:reject];
+}
+
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(setPreferences,
+                 setPreferencesRenderingMode:(nullable NSString *)renderingMode
+                 resolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self setPreferences:renderingMode resolve:resolve reject:reject];
+}
+#endif
+
+- (void)setPreferences:(nullable NSString *)renderingMode
+               resolve:(RCTPromiseResolveBlock)resolve
+                reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl setPreferencesWithRenderingMode:renderingMode resolve:resolve reject:reject];
+}
+
+#pragma mark - Recording Mask
+
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(getRecordingMask,
+                 getRecordingMaskWithResolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self getRecordingMask:resolve reject:reject];
+}
+#endif
+
+- (void)getRecordingMask:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl getRecordingMaskWithResolve:resolve reject:reject];
+}
+
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(setRecordingMask,
+                 setRecordingMaskMask:(nullable NSDictionary *)mask
+                 resolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self setRecordingMask:mask resolve:resolve reject:reject];
+}
+#endif
+
+- (void)setRecordingMask:(nullable NSDictionary *)mask
+                 resolve:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl setRecordingMaskWithMask:mask resolve:resolve reject:reject];
+}
+
 @end
