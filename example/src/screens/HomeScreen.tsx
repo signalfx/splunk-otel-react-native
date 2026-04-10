@@ -16,6 +16,11 @@ import {
   SplunkRum,
   type EndpointConfiguration,
 } from '@splunk/otel-react-native';
+import {
+  SplunkSessionReplay,
+  RenderingMode,
+  MaskType,
+} from '@splunk/otel-session-replay-react-native';
 import { config as appConfig } from '../config';
 
 import { TestCategory, MobilePlatform, type TestAction } from '../types';
@@ -394,6 +399,157 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
               `Trace: ${ep.trace}\nReplay: ${ep.sessionReplay ?? 'none'}`
             );
           }
+        },
+      },
+
+      // Session Replay
+      {
+        id: 'sr-state',
+        title: 'Get Replay State',
+        description: 'Display current session replay status and configuration',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          const state = await SplunkSessionReplay.instance.getState();
+          Alert.alert(
+            'Session Replay State',
+            `Status: ${state.status}\nRecording: ${state.isRecording}\nMode: ${state.renderingMode}\nSampling: ${state.samplingRate}`
+          );
+        },
+      },
+      {
+        id: 'sr-start',
+        title: 'Start Recording',
+        description: 'Start session replay recording',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkSessionReplay.instance.start();
+          const state = await SplunkSessionReplay.instance.getState();
+          Alert.alert('Session Replay', `Recording: ${state.isRecording}`);
+        },
+      },
+      {
+        id: 'sr-stop',
+        title: 'Stop Recording',
+        description: 'Stop session replay recording',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkSessionReplay.instance.stop();
+          const state = await SplunkSessionReplay.instance.getState();
+          Alert.alert('Session Replay', `Status: ${state.status}`);
+        },
+      },
+      {
+        id: 'sr-prefs-get',
+        title: 'Get Preferences',
+        description: 'Display current rendering mode preference',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          const prefs = await SplunkSessionReplay.instance.getPreferences();
+          Alert.alert(
+            'Replay Preferences',
+            `Rendering Mode: ${prefs.renderingMode ?? '(default)'}`
+          );
+        },
+      },
+      {
+        id: 'sr-prefs-wireframe',
+        title: 'Set Wireframe Mode',
+        description: 'Switch rendering to wireframe only',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkSessionReplay.instance.setPreferences({
+            renderingMode: RenderingMode.WIREFRAME_ONLY,
+          });
+          Alert.alert('Replay Preferences', 'Set to wireframe only');
+        },
+      },
+      {
+        id: 'sr-prefs-native',
+        title: 'Set Native Mode',
+        description: 'Switch rendering to native (screenshot + wireframe)',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkSessionReplay.instance.setPreferences({
+            renderingMode: RenderingMode.NATIVE,
+          });
+          Alert.alert('Replay Preferences', 'Set to native');
+        },
+      },
+      {
+        id: 'sr-prefs-clear',
+        title: 'Clear Preferences',
+        description: 'Reset rendering mode to default',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkSessionReplay.instance.setPreferences({
+            renderingMode: undefined,
+          });
+          Alert.alert('Replay Preferences', 'Rendering mode cleared');
+        },
+      },
+      {
+        id: 'sr-mask-set',
+        title: 'Set Recording Mask',
+        description:
+          'Mask a 200x100 area at (50, 200) with a 60x40 erasing hole',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkSessionReplay.instance.setRecordingMask({
+            elements: [
+              {
+                rect: { x: 50, y: 200, width: 200, height: 100 },
+                type: MaskType.COVERING,
+              },
+              {
+                rect: { x: 80, y: 220, width: 60, height: 40 },
+                type: MaskType.ERASING,
+              },
+            ],
+          });
+          Alert.alert('Recording Mask', 'Mask set (covering + erasing hole)');
+        },
+      },
+      {
+        id: 'sr-mask-get',
+        title: 'Get Recording Mask',
+        description: 'Display current recording mask elements',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          const mask = await SplunkSessionReplay.instance.getRecordingMask();
+          if (!mask) {
+            Alert.alert('Recording Mask', 'No mask set');
+          } else {
+            const desc = mask.elements
+              .map(
+                (e) =>
+                  `${e.type}: (${e.rect.x}, ${e.rect.y}) ${e.rect.width}x${e.rect.height}`
+              )
+              .join('\n');
+            Alert.alert(
+              'Recording Mask',
+              `${mask.elements.length} element(s):\n${desc}`
+            );
+          }
+        },
+      },
+      {
+        id: 'sr-mask-clear',
+        title: 'Clear Recording Mask',
+        description: 'Remove the recording mask',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkSessionReplay.instance.setRecordingMask(null);
+          Alert.alert('Recording Mask', 'Mask cleared');
         },
       },
 

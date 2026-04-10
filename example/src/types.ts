@@ -8,6 +8,7 @@ export enum TestCategory {
   Session = 'session',
   GlobalAttributes = 'globalAttributes',
   EndpointConfiguration = 'endpointConfiguration',
+  SessionReplay = 'sessionReplay',
   ApiTests = 'apiTests',
 }
 
@@ -48,5 +49,6 @@ export const categoryLabels: Record<TestCategory, string> = {
   [TestCategory.Session]: 'Session',
   [TestCategory.GlobalAttributes]: 'Global Attributes',
   [TestCategory.EndpointConfiguration]: 'Endpoint Configuration',
+  [TestCategory.SessionReplay]: 'Session Replay',
   [TestCategory.ApiTests]: 'API Tests',
 };
