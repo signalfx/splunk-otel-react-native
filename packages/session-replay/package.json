@@ -42,7 +42,8 @@
   "scripts": {
     "prepare": "node --experimental-require-module ./node_modules/react-native-builder-bob/bin/bob build",
     "build": "node --experimental-require-module ./node_modules/react-native-builder-bob/bin/bob build",
-    "prepublishOnly": "yarn typecheck",
+    "prepublishOnly": "yarn typecheck && yarn test",
+    "test": "jest",
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli android/build ios/build lib"
@@ -74,6 +75,8 @@
     "@types/react": "19.2.0",
     "react": "19.1.0",
     "react-native": "0.81.1",
+    "@types/jest": "29.5.14",
+    "jest": "29.7.0",
     "react-native-builder-bob": "0.40.17",
     "typescript": "5.9.3"
   },
@@ -110,6 +113,15 @@
     "android": {
       "javaPackageName": "com.splunk.otel.reactnative.sessionreplay"
     }
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFiles": [
+      "./jest.setup.js"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/lib/"
+    ]
   },
   "create-react-native-library": {
     "languages": "kotlin-objc",
