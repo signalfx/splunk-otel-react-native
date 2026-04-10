@@ -14,12 +14,15 @@
  * limitations under the License.
  */
 
-export { SplunkSessionReplay } from './SessionReplay';
-export { RenderingMode, SessionReplayStatus, MaskType } from './model';
-export type {
-  MaskRect,
-  MaskElement,
-  RecordingMask,
-  SessionReplayState,
-  SessionReplayPreferences,
-} from './model';
+import type { RenderingMode } from './RenderingMode';
+
+/**
+ * User-preferred session replay configuration.
+ *
+ * Setting a property to `undefined` / `null` clears the preference,
+ * falling back to the default or server-configured value.
+ */
+export interface SessionReplayPreferences {
+  /** Preferred rendering mode, or `undefined` for no preference. */
+  renderingMode?: RenderingMode;
+}

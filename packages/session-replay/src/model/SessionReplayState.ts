@@ -14,12 +14,19 @@
  * limitations under the License.
  */
 
-export { SplunkSessionReplay } from './SessionReplay';
-export { RenderingMode, SessionReplayStatus, MaskType } from './model';
-export type {
-  MaskRect,
-  MaskElement,
-  RecordingMask,
-  SessionReplayState,
-  SessionReplayPreferences,
-} from './model';
+import type { SessionReplayStatus } from './SessionReplayStatus';
+import type { RenderingMode } from './RenderingMode';
+
+/**
+ * Read-only snapshot of the session replay module's current state.
+ */
+export interface SessionReplayState {
+  /** Current recording status. */
+  status: SessionReplayStatus;
+  /** Whether the module is actively recording. */
+  isRecording: boolean;
+  /** The effective rendering mode. */
+  renderingMode: RenderingMode;
+  /** The sampling rate applied at install time, in the [0, 1] range. */
+  samplingRate: number;
+}

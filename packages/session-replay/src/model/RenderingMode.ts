@@ -14,12 +14,21 @@
  * limitations under the License.
  */
 
-export { SplunkSessionReplay } from './SessionReplay';
-export { RenderingMode, SessionReplayStatus, MaskType } from './model';
-export type {
-  MaskRect,
-  MaskElement,
-  RecordingMask,
-  SessionReplayState,
-  SessionReplayPreferences,
-} from './model';
+/**
+ * Determines how session replay captures and renders screen content.
+ *
+ * @example
+ * ```typescript
+ * import { RenderingMode } from '@splunk/otel-session-replay-react-native';
+ *
+ * await SplunkSessionReplay.instance.setPreferences({
+ *   renderingMode: RenderingMode.WIREFRAME_ONLY,
+ * });
+ * ```
+ */
+export enum RenderingMode {
+  /** Screenshot-based recording with wireframe overlay. */
+  NATIVE = 'native',
+  /** Wireframe representation only; no screen images are captured. */
+  WIREFRAME_ONLY = 'wireframeOnly',
+}

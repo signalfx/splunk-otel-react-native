@@ -15,17 +15,36 @@
  */
 
 import Native from './specs/NativeSplunkSessionReplay';
+import type { SessionReplayState } from './model/SessionReplayState';
+import type { SessionReplayPreferences } from './model/SessionReplayPreferences';
+import type { RecordingMask } from './model/RecordingMask';
+import {
+  fromNativeState,
+  fromNativePreferences,
+  fromNativeRecordingMask,
+  toNativeRenderingMode,
+  toNativeRecordingMask,
+} from './bridge/converters';
 
 /**
  * Session Replay singleton API.
  *
- * TODO mooooore API
+ * Provides control over session replay recording, including
+ * start/stop, state inspection, preferences, and recording masks.
+ *
+ * Requires `@splunk/otel-react-native` to be installed first via
+ * {@link SplunkRum.install} with a
+ * {@link SessionReplayModuleConfiguration} in the modules array.
  *
  * @example
  * ```typescript
  * import { SplunkSessionReplay } from '@splunk/otel-session-replay-react-native';
  *
  * await SplunkSessionReplay.instance.start();
+ *
+ * const state = await SplunkSessionReplay.instance.getState();
+ * console.log(state.status, state.isRecording);
+ *
  * await SplunkSessionReplay.instance.stop();
  * ```
  */
@@ -54,5 +73,55 @@ export class SplunkSessionReplay {
    */
   stop(): Promise<void> {
     return Native.stop();
+  }
+
+  /**
+   * Returns a snapshot of the current session replay state.
+   *
+   * The state includes the recording status, effective rendering mode,
+   * and the sampling rate applied at install time.
+   */
+  async getState(): Promise<SessionReplayState> {
+    const native = await Native.getState();
+    return fromNativeState(native);
+  }
+
+  /**
+   * Returns the current session replay preferences.
+   */
+  async getPreferences(): Promise<SessionReplayPreferences> {
+    const native = await Native.getPreferences();
+    return fromNativePreferences(native);
+  }
+
+  /**
+   * Updates session replay preferences.
+   *
+   * Pass `undefined` for {@link SessionReplayPreferences.renderingMode}
+   * to clear the preference and fall back to the default.
+   */
+  setPreferences(preferences: SessionReplayPreferences): Promise<void> {
+    return Native.setPreferences(
+      toNativeRenderingMode(preferences.renderingMode)
+    );
+  }
+
+  /**
+   * Returns the current recording mask, or `null` if none is set.
+   */
+  async getRecordingMask(): Promise<RecordingMask | null> {
+    const native = await Native.getRecordingMask();
+    return fromNativeRecordingMask(native);
+  }
+
+  /**
+   * Sets or clears the recording mask.
+   *
+   * Pass `null` to remove any previously set mask.
+   *
+   * @param mask - The recording mask to apply, or `null` to clear.
+   */
+  setRecordingMask(mask: RecordingMask | null): Promise<void> {
+    return Native.setRecordingMask(toNativeRecordingMask(mask));
   }
 }

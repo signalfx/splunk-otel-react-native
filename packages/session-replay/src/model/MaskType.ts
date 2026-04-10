@@ -14,12 +14,16 @@
  * limitations under the License.
  */
 
-export { SplunkSessionReplay } from './SessionReplay';
-export { RenderingMode, SessionReplayStatus, MaskType } from './model';
-export type {
-  MaskRect,
-  MaskElement,
-  RecordingMask,
-  SessionReplayState,
-  SessionReplayPreferences,
-} from './model';
+/**
+ * Describes the type of a recording mask element.
+ *
+ * Elements are layered by array index (lowest to highest).
+ * A {@link MaskType.COVERING} element hides a screen area, while
+ * an {@link MaskType.ERASING} element reveals a previously covered area.
+ */
+export enum MaskType {
+  /** Covers the area, hiding its content in the replay. */
+  COVERING = 'covering',
+  /** Erases (reveals) the area, undoing a lower-layer covering mask. */
+  ERASING = 'erasing',
+}
