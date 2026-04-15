@@ -22,6 +22,16 @@ import { SplunkNativeBridge as Native } from '../sdk/SplunkNativeBridge';
  */
 export class UserPreferences {
   /**
+   * Returns the current user tracking mode.
+   *
+   * @returns The active tracking mode: `NO_TRACKING` or `ANONYMOUS_TRACKING`.
+   */
+  async getTrackingMode(): Promise<UserTrackingMode> {
+    const state = await Native.getUserState();
+    return state.trackingMode;
+  }
+
+  /**
    * Sets user tracking mode.
    *
    * @param mode - Tracking mode or `null` to reset.
