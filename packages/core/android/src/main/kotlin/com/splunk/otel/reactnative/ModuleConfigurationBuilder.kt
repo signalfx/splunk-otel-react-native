@@ -82,7 +82,7 @@ object ModuleConfigurationBuilder {
         "sessionReplay" -> try {
           list += SessionReplayModuleConfiguration(
             attrs?.getString("enabled")?.toBooleanStrictOrNull() ?: true,
-            attrs?.getString("samplingRate")?.toFloatOrNull() ?: 1.0f,
+            attrs?.getString("samplingRate")?.toFloatOrNull() ?: 0.2f,
           )
         } catch (_: NoClassDefFoundError) {
           // session-replay RN package not installed - just skip

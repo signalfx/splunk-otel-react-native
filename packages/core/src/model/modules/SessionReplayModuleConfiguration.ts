@@ -34,11 +34,11 @@ export class SessionReplayModuleConfiguration extends ModuleConfiguration {
 
   /**
    * @param isEnabled - Whether session replay recording starts automatically after install.
-   * @param samplingRate - Sampling rate between 0.0 and 1.0. Default is 1.0 (100%).
+   * @param samplingRate - Sampling rate between 0.0 and 1.0. Default is 0.2 (20%).
    */
   constructor(
     public readonly isEnabled: boolean = true,
-    public readonly samplingRate: number = 1.0
+    public readonly samplingRate: number = 0.2
   ) {
     super();
   }
