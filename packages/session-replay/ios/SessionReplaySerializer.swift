@@ -70,10 +70,10 @@ enum SessionReplaySerializer {
     guard let elementsArray = dict["elements"] as? [[String: Any]] else { return nil }
 
     let elements: [MaskElement] = elementsArray.compactMap { item in
-      guard let x = item["x"] as? CGFloat,
-            let y = item["y"] as? CGFloat,
-            let width = item["width"] as? CGFloat,
-            let height = item["height"] as? CGFloat else {
+      guard let x = (item["x"] as? NSNumber)?.doubleValue,
+            let y = (item["y"] as? NSNumber)?.doubleValue,
+            let width = (item["width"] as? NSNumber)?.doubleValue,
+            let height = (item["height"] as? NSNumber)?.doubleValue else {
         return nil
       }
 
