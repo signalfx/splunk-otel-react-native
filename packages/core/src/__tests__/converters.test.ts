@@ -19,6 +19,7 @@ import {
   toNativeAgentConfiguration,
   fromNativeState,
   fromNativeEndpoint,
+  clampSamplingRate,
 } from '../bridge/converters';
 import type { NativeState } from '../specs/NativeSplunkOtelReactNative';
 import {
@@ -266,6 +267,36 @@ describe('bridge/converters', () => {
       expect(state.endpoint).toBeUndefined();
     });
 
+    it('clamps session sampling rate above 1', () => {
+      const cfg = toNativeAgentConfiguration({
+        appName: 'app',
+        deploymentEnvironment: 'prod',
+        session: { samplingRate: 5.0 },
+      });
+
+      expect(cfg.session.samplingRate).toBe(1);
+    });
+
+    it('clamps session sampling rate below 0', () => {
+      const cfg = toNativeAgentConfiguration({
+        appName: 'app',
+        deploymentEnvironment: 'prod',
+        session: { samplingRate: -0.5 },
+      });
+
+      expect(cfg.session.samplingRate).toBe(0);
+    });
+
+    it('preserves valid session sampling rate', () => {
+      const cfg = toNativeAgentConfiguration({
+        appName: 'app',
+        deploymentEnvironment: 'prod',
+        session: { samplingRate: 0.75 },
+      });
+
+      expect(cfg.session.samplingRate).toBe(0.75);
+    });
+
     it('maps Running status', () => {
       const native: NativeState = {
         appName: 'myApp',
@@ -291,6 +322,24 @@ describe('bridge/converters', () => {
         realm: 'eu0',
         rumAccessToken: 'x',
       });
+    });
+  });
+
+  describe('clampSamplingRate', () => {
+    it('clamps values above 1 to 1', () => {
+      expect(clampSamplingRate(1.5)).toBe(1);
+      expect(clampSamplingRate(100)).toBe(1);
+    });
+
+    it('clamps values below 0 to 0', () => {
+      expect(clampSamplingRate(-0.1)).toBe(0);
+      expect(clampSamplingRate(-100)).toBe(0);
+    });
+
+    it('preserves values in [0, 1]', () => {
+      expect(clampSamplingRate(0)).toBe(0);
+      expect(clampSamplingRate(0.5)).toBe(0.5);
+      expect(clampSamplingRate(1)).toBe(1);
     });
   });
 });
