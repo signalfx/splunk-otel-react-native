@@ -25,7 +25,6 @@ enum SessionReplaySerializer {
     return [
       "status": serializeStatus(state.status),
       "isRecording": state.isRecording,
-      "renderingMode": serializeRenderingMode(state.renderingMode),
       "samplingRate": state.samplingRate
     ]
   }
@@ -47,33 +46,6 @@ enum SessionReplaySerializer {
       case .disabledBySampling: return "disabledBySampling"
       }
     }
-  }
-
-  // MARK: - Rendering Mode
-
-  static func serializeRenderingMode(_ mode: RenderingMode) -> String {
-    switch mode {
-    case .native: return "native"
-    case .wireframeOnly: return "wireframeOnly"
-    }
-  }
-
-  static func deserializeRenderingMode(_ value: String?) -> RenderingMode? {
-    guard let value else { return nil }
-
-    switch value {
-    case "native": return .native
-    case "wireframeOnly": return .wireframeOnly
-    default: return nil
-    }
-  }
-
-  // MARK: - Preferences
-
-  static func serializePreferences(_ prefs: any SessionReplayModulePreferences) -> [String: Any?] {
-    return [
-      "renderingMode": prefs.renderingMode.map { serializeRenderingMode($0) }
-    ]
   }
 
   // MARK: - Recording Mask

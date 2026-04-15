@@ -16,13 +16,10 @@
 
 import Native from './specs/NativeSplunkSessionReplay';
 import type { SessionReplayState } from './model/SessionReplayState';
-import type { SessionReplayPreferences } from './model/SessionReplayPreferences';
 import type { RecordingMask } from './model/RecordingMask';
 import {
   fromNativeState,
-  fromNativePreferences,
   fromNativeRecordingMask,
-  toNativeRenderingMode,
   toNativeRecordingMask,
 } from './bridge/converters';
 
@@ -30,7 +27,7 @@ import {
  * Session Replay singleton API.
  *
  * Provides control over session replay recording, including
- * start/stop, state inspection, preferences, and recording masks.
+ * start/stop, state inspection, and recording masks.
  *
  * Requires `@splunk/otel-react-native` to be installed first via
  * {@link SplunkRum.install} with a
@@ -78,32 +75,12 @@ export class SplunkSessionReplay {
   /**
    * Returns a snapshot of the current session replay state.
    *
-   * The state includes the recording status, effective rendering mode,
-   * and the sampling rate applied at install time.
+   * The state includes the recording status and the sampling rate
+   * applied at install time.
    */
   async getState(): Promise<SessionReplayState> {
     const native = await Native.getState();
     return fromNativeState(native);
-  }
-
-  /**
-   * Returns the current session replay preferences.
-   */
-  async getPreferences(): Promise<SessionReplayPreferences> {
-    const native = await Native.getPreferences();
-    return fromNativePreferences(native);
-  }
-
-  /**
-   * Updates session replay preferences.
-   *
-   * Pass `undefined` for {@link SessionReplayPreferences.renderingMode}
-   * to clear the preference and fall back to the default.
-   */
-  setPreferences(preferences: SessionReplayPreferences): Promise<void> {
-    return Native.setPreferences(
-      toNativeRenderingMode(preferences.renderingMode)
-    );
   }
 
   /**

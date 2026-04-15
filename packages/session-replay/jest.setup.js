@@ -23,13 +23,8 @@ jest.mock('./src/specs/NativeSplunkSessionReplay', () => ({
     getState: jest.fn().mockResolvedValue({
       status: 'notStarted',
       isRecording: false,
-      renderingMode: 'native',
       samplingRate: 1.0,
     }),
-    getPreferences: jest.fn().mockResolvedValue({
-      renderingMode: null,
-    }),
-    setPreferences: jest.fn().mockResolvedValue(undefined),
     getRecordingMask: jest.fn().mockResolvedValue(null),
     setRecordingMask: jest.fn().mockResolvedValue(undefined),
   },

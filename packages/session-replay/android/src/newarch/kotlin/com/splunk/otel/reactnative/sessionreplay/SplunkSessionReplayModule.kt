@@ -35,11 +35,6 @@ class SplunkSessionReplayModule(reactContext: ReactApplicationContext) :
 
   override fun getState(promise: Promise) = implementation.getState(promise)
 
-  override fun getPreferences(promise: Promise) = implementation.getPreferences(promise)
-
-  override fun setPreferences(renderingMode: String?, promise: Promise) =
-    implementation.setPreferences(renderingMode, promise)
-
   override fun getRecordingMask(promise: Promise) = implementation.getRecordingMask(promise)
 
   override fun setRecordingMask(mask: ReadableMap?, promise: Promise) =

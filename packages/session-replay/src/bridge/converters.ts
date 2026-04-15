@@ -20,10 +20,8 @@ import type {
   NativeMaskElement,
 } from '../specs/NativeSplunkSessionReplay';
 import { SessionReplayStatus } from '../model/SessionReplayStatus';
-import { RenderingMode } from '../model/RenderingMode';
 import { MaskType } from '../model/MaskType';
 import type { SessionReplayState } from '../model/SessionReplayState';
-import type { SessionReplayPreferences } from '../model/SessionReplayPreferences';
 import type { RecordingMask, MaskElement } from '../model/RecordingMask';
 
 const STATUS_MAP: Record<string, SessionReplayStatus> = {
@@ -39,11 +37,6 @@ const STATUS_MAP: Record<string, SessionReplayStatus> = {
   belowMinSdkVersion: SessionReplayStatus.NOT_RECORDING_BELOW_MIN_SDK_VERSION,
 };
 
-const RENDERING_MODE_MAP: Record<string, RenderingMode> = {
-  native: RenderingMode.NATIVE,
-  wireframeOnly: RenderingMode.WIREFRAME_ONLY,
-};
-
 const MASK_TYPE_MAP: Record<string, MaskType> = {
   covering: MaskType.COVERING,
   erasing: MaskType.ERASING,
@@ -57,26 +50,8 @@ export function fromNativeState(
       STATUS_MAP[native.status] ??
       SessionReplayStatus.NOT_RECORDING_NOT_STARTED,
     isRecording: native.isRecording,
-    renderingMode:
-      RENDERING_MODE_MAP[native.renderingMode] ?? RenderingMode.NATIVE,
     samplingRate: native.samplingRate,
   };
-}
-
-export function fromNativePreferences(native: {
-  renderingMode: string | null;
-}): SessionReplayPreferences {
-  return {
-    renderingMode: native.renderingMode
-      ? RENDERING_MODE_MAP[native.renderingMode]
-      : undefined,
-  };
-}
-
-export function toNativeRenderingMode(
-  mode: RenderingMode | undefined
-): string | null {
-  return mode ?? null;
 }
 
 function fromNativeMaskElement(native: NativeMaskElement): MaskElement {
@@ -95,7 +70,6 @@ export function fromNativeRecordingMask(
   native: NativeRecordingMask | null
 ): RecordingMask | null {
   if (!native) return null;
-
   return { elements: native.elements.map(fromNativeMaskElement) };
 }
 
@@ -113,6 +87,5 @@ export function toNativeRecordingMask(
   mask: RecordingMask | null
 ): NativeRecordingMask | null {
   if (!mask) return null;
-
   return { elements: mask.elements.map(toNativeMaskElement) };
 }

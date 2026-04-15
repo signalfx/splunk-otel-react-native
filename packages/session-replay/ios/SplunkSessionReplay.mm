@@ -104,40 +104,6 @@ RCT_REMAP_METHOD(getState,
   [self.impl getStateWithResolve:resolve reject:reject];
 }
 
-#pragma mark - Preferences
-
-#ifndef RCT_NEW_ARCH_ENABLED
-RCT_REMAP_METHOD(getPreferences,
-                 getPreferencesWithResolver:(RCTPromiseResolveBlock)resolve
-                 rejecter:(RCTPromiseRejectBlock)reject)
-{
-  [self getPreferences:resolve reject:reject];
-}
-#endif
-
-- (void)getPreferences:(RCTPromiseResolveBlock)resolve
-                reject:(RCTPromiseRejectBlock)reject
-{
-  [self.impl getPreferencesWithResolve:resolve reject:reject];
-}
-
-#ifndef RCT_NEW_ARCH_ENABLED
-RCT_REMAP_METHOD(setPreferences,
-                 setPreferencesRenderingMode:(nullable NSString *)renderingMode
-                 resolver:(RCTPromiseResolveBlock)resolve
-                 rejecter:(RCTPromiseRejectBlock)reject)
-{
-  [self setPreferences:renderingMode resolve:resolve reject:reject];
-}
-#endif
-
-- (void)setPreferences:(nullable NSString *)renderingMode
-               resolve:(RCTPromiseResolveBlock)resolve
-                reject:(RCTPromiseRejectBlock)reject
-{
-  [self.impl setPreferencesWithRenderingMode:renderingMode resolve:resolve reject:reject];
-}
-
 #pragma mark - Recording Mask
 
 #ifndef RCT_NEW_ARCH_ENABLED

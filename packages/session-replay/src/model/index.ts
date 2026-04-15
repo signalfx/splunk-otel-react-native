@@ -14,9 +14,7 @@
  * limitations under the License.
  */
 
-export { RenderingMode } from './RenderingMode';
 export { SessionReplayStatus } from './SessionReplayStatus';
 export { MaskType } from './MaskType';
 export type { MaskRect, MaskElement, RecordingMask } from './RecordingMask';
 export type { SessionReplayState } from './SessionReplayState';
-export type { SessionReplayPreferences } from './SessionReplayPreferences';

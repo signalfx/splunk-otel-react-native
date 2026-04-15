@@ -16,13 +16,10 @@
 
 import {
   fromNativeState,
-  fromNativePreferences,
   fromNativeRecordingMask,
-  toNativeRenderingMode,
   toNativeRecordingMask,
 } from '../bridge/converters';
 import { SessionReplayStatus } from '../model/SessionReplayStatus';
-import { RenderingMode } from '../model/RenderingMode';
 import { MaskType } from '../model/MaskType';
 
 describe('converters', () => {
@@ -31,30 +28,26 @@ describe('converters', () => {
       const state = fromNativeState({
         status: 'recording',
         isRecording: true,
-        renderingMode: 'native',
         samplingRate: 1.0,
       });
 
       expect(state).toEqual({
         status: SessionReplayStatus.RECORDING,
         isRecording: true,
-        renderingMode: RenderingMode.NATIVE,
         samplingRate: 1.0,
       });
     });
 
-    it('maps notStarted state with wireframeOnly mode', () => {
+    it('maps notStarted state', () => {
       const state = fromNativeState({
         status: 'notStarted',
         isRecording: false,
-        renderingMode: 'wireframeOnly',
         samplingRate: 0.5,
       });
 
       expect(state).toEqual({
         status: SessionReplayStatus.NOT_RECORDING_NOT_STARTED,
         isRecording: false,
-        renderingMode: RenderingMode.WIREFRAME_ONLY,
         samplingRate: 0.5,
       });
     });
@@ -90,7 +83,6 @@ describe('converters', () => {
         const state = fromNativeState({
           status: native,
           isRecording: false,
-          renderingMode: 'native',
           samplingRate: 1.0,
         });
         expect(state.status).toBe(expected);
@@ -101,54 +93,10 @@ describe('converters', () => {
       const state = fromNativeState({
         status: 'unknownFutureStatus',
         isRecording: false,
-        renderingMode: 'native',
         samplingRate: 1.0,
       });
 
       expect(state.status).toBe(SessionReplayStatus.NOT_RECORDING_NOT_STARTED);
-    });
-
-    it('falls back to native for unknown rendering mode', () => {
-      const state = fromNativeState({
-        status: 'recording',
-        isRecording: true,
-        renderingMode: 'unknownMode',
-        samplingRate: 1.0,
-      });
-
-      expect(state.renderingMode).toBe(RenderingMode.NATIVE);
-    });
-  });
-
-  describe('fromNativePreferences', () => {
-    it('maps rendering mode', () => {
-      expect(fromNativePreferences({ renderingMode: 'native' })).toEqual({
-        renderingMode: RenderingMode.NATIVE,
-      });
-      expect(
-        fromNativePreferences({ renderingMode: 'wireframeOnly' })
-      ).toEqual({
-        renderingMode: RenderingMode.WIREFRAME_ONLY,
-      });
-    });
-
-    it('maps null rendering mode to undefined', () => {
-      expect(fromNativePreferences({ renderingMode: null })).toEqual({
-        renderingMode: undefined,
-      });
-    });
-  });
-
-  describe('toNativeRenderingMode', () => {
-    it('passes through mode string', () => {
-      expect(toNativeRenderingMode(RenderingMode.NATIVE)).toBe('native');
-      expect(toNativeRenderingMode(RenderingMode.WIREFRAME_ONLY)).toBe(
-        'wireframeOnly'
-      );
-    });
-
-    it('maps undefined to null', () => {
-      expect(toNativeRenderingMode(undefined)).toBeNull();
     });
   });
 

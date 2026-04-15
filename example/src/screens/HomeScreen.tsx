@@ -18,7 +18,6 @@ import {
 } from '@splunk/otel-react-native';
 import {
   SplunkSessionReplay,
-  RenderingMode,
   MaskType,
 } from '@splunk/otel-session-replay-react-native';
 import { config as appConfig } from '../config';
@@ -413,7 +412,7 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
           const state = await SplunkSessionReplay.instance.getState();
           Alert.alert(
             'Session Replay State',
-            `Status: ${state.status}\nRecording: ${state.isRecording}\nMode: ${state.renderingMode}\nSampling: ${state.samplingRate}`
+            `Status: ${state.status}\nRecording: ${state.isRecording}\nSampling: ${state.samplingRate}`
           );
         },
       },
@@ -439,59 +438,6 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
           await SplunkSessionReplay.instance.stop();
           const state = await SplunkSessionReplay.instance.getState();
           Alert.alert('Session Replay', `Status: ${state.status}`);
-        },
-      },
-      {
-        id: 'sr-prefs-get',
-        title: 'Get Preferences',
-        description: 'Display current rendering mode preference',
-        category: TestCategory.SessionReplay,
-        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
-        onTap: async () => {
-          const prefs = await SplunkSessionReplay.instance.getPreferences();
-          Alert.alert(
-            'Replay Preferences',
-            `Rendering Mode: ${prefs.renderingMode ?? '(default)'}`
-          );
-        },
-      },
-      {
-        id: 'sr-prefs-wireframe',
-        title: 'Set Wireframe Mode',
-        description: 'Switch rendering to wireframe only',
-        category: TestCategory.SessionReplay,
-        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
-        onTap: async () => {
-          await SplunkSessionReplay.instance.setPreferences({
-            renderingMode: RenderingMode.WIREFRAME_ONLY,
-          });
-          Alert.alert('Replay Preferences', 'Set to wireframe only');
-        },
-      },
-      {
-        id: 'sr-prefs-native',
-        title: 'Set Native Mode',
-        description: 'Switch rendering to native (screenshot + wireframe)',
-        category: TestCategory.SessionReplay,
-        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
-        onTap: async () => {
-          await SplunkSessionReplay.instance.setPreferences({
-            renderingMode: RenderingMode.NATIVE,
-          });
-          Alert.alert('Replay Preferences', 'Set to native');
-        },
-      },
-      {
-        id: 'sr-prefs-clear',
-        title: 'Clear Preferences',
-        description: 'Reset rendering mode to default',
-        category: TestCategory.SessionReplay,
-        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
-        onTap: async () => {
-          await SplunkSessionReplay.instance.setPreferences({
-            renderingMode: undefined,
-          });
-          Alert.alert('Replay Preferences', 'Rendering mode cleared');
         },
       },
       {

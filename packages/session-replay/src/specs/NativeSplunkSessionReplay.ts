@@ -23,7 +23,6 @@ import {
 export type NativeSessionReplayState = {
   status: string;
   isRecording: boolean;
-  renderingMode: string;
   samplingRate: number;
 };
 
@@ -46,9 +45,6 @@ export interface Spec extends TurboModule {
   stop(): Promise<void>;
 
   getState(): Promise<NativeSessionReplayState>;
-
-  getPreferences(): Promise<{ renderingMode: string | null }>;
-  setPreferences(renderingMode: string | null): Promise<void>;
 
   getRecordingMask(): Promise<NativeRecordingMask | null>;
   setRecordingMask(

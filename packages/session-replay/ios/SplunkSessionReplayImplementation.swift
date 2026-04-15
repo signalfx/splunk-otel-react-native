@@ -28,7 +28,6 @@ public class SplunkSessionReplayImplementation: NSObject {
   public func start(resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) {
     onMainThread {
       SplunkRum.shared.sessionReplay.start()
-
       resolve(nil)
     }
   }
@@ -37,7 +36,6 @@ public class SplunkSessionReplayImplementation: NSObject {
   public func stop(resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) {
     onMainThread {
       SplunkRum.shared.sessionReplay.stop()
-
       resolve(nil)
     }
   }
@@ -47,26 +45,7 @@ public class SplunkSessionReplayImplementation: NSObject {
   @objc
   public func getState(resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) {
     let state = SplunkRum.shared.sessionReplay.state
-
     resolve(SessionReplaySerializer.serializeState(state))
-  }
-
-  // MARK: - Preferences
-
-  @objc
-  public func getPreferences(resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) {
-    let prefs = SplunkRum.shared.sessionReplay.preferences
-    resolve(SessionReplaySerializer.serializePreferences(prefs))
-  }
-
-  @objc
-  public func setPreferences(renderingMode: NSString?,
-                             resolve: @escaping RCTPromiseResolveBlock,
-                             reject: @escaping RCTPromiseRejectBlock) {
-    let mode = SessionReplaySerializer.deserializeRenderingMode(renderingMode as String?)
-    SplunkRum.shared.sessionReplay.preferences.renderingMode = mode
-
-    resolve(nil)
   }
 
   // MARK: - Recording Mask
@@ -77,7 +56,6 @@ public class SplunkSessionReplayImplementation: NSObject {
       resolve(nil)
       return
     }
-
     resolve(SessionReplaySerializer.serializeRecordingMask(mask))
   }
 
@@ -90,7 +68,6 @@ public class SplunkSessionReplayImplementation: NSObject {
     } else {
       SplunkRum.shared.sessionReplay.recordingMask = nil
     }
-
     resolve(nil)
   }
 

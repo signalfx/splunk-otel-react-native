@@ -21,7 +21,6 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
 import com.splunk.rum.integration.sessionreplay.api.RecordingMask
-import com.splunk.rum.integration.sessionreplay.api.RenderingMode
 import com.splunk.rum.integration.sessionreplay.api.State
 import com.splunk.rum.integration.sessionreplay.api.Status
 
@@ -33,7 +32,7 @@ internal object SessionReplaySerializer {
     return WritableNativeMap().apply {
       putString("status", serializeStatus(state.status))
       putBoolean("isRecording", state.status.isRecording)
-      putString("renderingMode", serializeRenderingMode(state.renderingMode))
+      
       putDouble("samplingRate", state.samplingRate.toDouble())
     }
   }
@@ -50,35 +49,6 @@ internal object SessionReplaySerializer {
         Status.NotRecording.Cause.BELOW_MIN_SDK_VERSION -> "belowMinSdkVersion"
         Status.NotRecording.Cause.STORAGE_LIMIT_REACHED -> "storageLimitReached"
         Status.NotRecording.Cause.DISABLED_BY_SAMPLING -> "disabledBySampling"
-      }
-    }
-  }
-
-  // MARK: - Rendering Mode
-
-  fun serializeRenderingMode(mode: RenderingMode): String {
-    return when (mode) {
-      RenderingMode.NATIVE -> "native"
-      RenderingMode.WIREFRAME_ONLY -> "wireframeOnly"
-    }
-  }
-
-  fun deserializeRenderingMode(value: String?): RenderingMode? {
-    return when (value) {
-      "native" -> RenderingMode.NATIVE
-      "wireframeOnly" -> RenderingMode.WIREFRAME_ONLY
-      else -> null
-    }
-  }
-
-  // MARK: - Preferences
-
-  fun serializePreferences(renderingMode: RenderingMode?): WritableNativeMap {
-    return WritableNativeMap().apply {
-      if (renderingMode != null) {
-        putString("renderingMode", serializeRenderingMode(renderingMode))
-      } else {
-        putNull("renderingMode")
       }
     }
   }
@@ -130,7 +100,7 @@ internal object SessionReplaySerializer {
       } else {
         RecordingMask.Element.Type.COVERING
       }
-      
+
       RecordingMask.Element(Rect(x, y, x + width, y + height), maskType)
     }
 

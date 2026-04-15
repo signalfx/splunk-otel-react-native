@@ -63,29 +63,6 @@ class SplunkSessionReplayImplementation {
     }
   }
 
-  // MARK: - Preferences
-
-  fun getPreferences(promise: Promise) {
-    try {
-      val mode = SessionReplay.instance.preferences.renderingMode
-      promise.resolve(SessionReplaySerializer.serializePreferences(mode))
-    } catch (t: Throwable) {
-      Log.e(TAG, "getPreferences() - failed", t)
-      promise.reject("E_SESSION_REPLAY_PREFS", t)
-    }
-  }
-
-  fun setPreferences(renderingMode: String?, promise: Promise) {
-    try {
-      SessionReplay.instance.preferences.renderingMode =
-        SessionReplaySerializer.deserializeRenderingMode(renderingMode)
-      promise.resolve(null)
-    } catch (t: Throwable) {
-      Log.e(TAG, "setPreferences() - failed", t)
-      promise.reject("E_SESSION_REPLAY_PREFS", t)
-    }
-  }
-
   // MARK: - Recording Mask
 
   fun getRecordingMask(promise: Promise) {

@@ -15,11 +15,10 @@
  */
 
 export { SplunkSessionReplay } from './SessionReplay';
-export { RenderingMode, SessionReplayStatus, MaskType } from './model';
+export { SessionReplayStatus, MaskType } from './model';
 export type {
   MaskRect,
   MaskElement,
   RecordingMask,
   SessionReplayState,
-  SessionReplayPreferences,
 } from './model';
