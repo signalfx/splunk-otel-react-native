@@ -2,20 +2,23 @@ const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
 const path = require('path');
 
 const root = path.resolve(__dirname, '..');
-const sdk = path.resolve(root, 'packages', 'core'); // core package dir
+const corePackage = path.resolve(root, 'packages', 'core');
+const sessionReplayPackage = path.resolve(root, 'packages', 'session-replay');
 const singletons = ['react', 'react-native'];
 
 /** @type {import('@react-native/metro-config').MetroConfig} */
 const defaultConfig = getDefaultConfig(__dirname);
 
-// Block React/React Native from SDK's node_modules to prevent duplicate React
-const escapedSdkPath = sdk.replace(/[/\\]/g, '[/\\\\]');
-const sdkReactBlockList = new RegExp(
-  `${escapedSdkPath}[/\\\\]node_modules[/\\\\](react|react-native)[/\\\\].*`
-);
+// Block React/React Native from SDK packages' node_modules to prevent duplicates
+function buildBlockList(pkgPath) {
+  const escaped = pkgPath.replace(/[/\\]/g, '[/\\\\]');
+  return new RegExp(
+    `${escaped}[/\\\\]node_modules[/\\\\](react|react-native)[/\\\\].*`
+  );
+}
 
 const config = {
-  watchFolders: [sdk],
+  watchFolders: [corePackage, sessionReplayPackage],
   resolver: {
     ...defaultConfig.resolver,
     unstable_enableSymlinks: true,
@@ -25,7 +28,10 @@ const config = {
       acc[name] = path.join(__dirname, 'node_modules', name);
       return acc;
     }, {}),
-    blockList: [sdkReactBlockList],
+    blockList: [
+      buildBlockList(corePackage),
+      buildBlockList(sessionReplayPackage),
+    ],
   },
 };
 

@@ -4,6 +4,7 @@ import { enableScreens } from 'react-native-screens';
 import {
   SplunkRumProvider,
   StartupModuleConfiguration,
+  SessionReplayModuleConfiguration,
   type AgentConfiguration,
   ApplicationLifecycleModuleConfiguration,
   InteractionsModuleConfiguration,
@@ -16,6 +17,8 @@ import {
   OkHttp3ManualModuleConfiguration,
   NetworkInstrumentationModuleConfiguration,
 } from '@splunk/otel-react-native';
+
+import { SplunkSessionReplay } from '@splunk/otel-session-replay-react-native';
 
 import { RootNavigator } from './navigation/RootNavigator';
 import { config as appConfig, isConfigValid } from './config';
@@ -66,6 +69,7 @@ const modules = [
     ['Server', 'Content-Type']
   ),
   new NetworkInstrumentationModuleConfiguration(true),
+  new SessionReplayModuleConfiguration(true, 1.0),
 ];
 
 export default function App() {
@@ -75,6 +79,9 @@ export default function App() {
     try {
       setInstalled(true);
       console.log('[App] SDK initialized successfully');
+
+      await SplunkSessionReplay.instance.start();
+      console.log('[App] Session Replay started');
     } catch (e: any) {
       console.error('[App] SDK initialization error:', e?.message ?? String(e));
     }

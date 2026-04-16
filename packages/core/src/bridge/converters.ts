@@ -63,7 +63,11 @@ export function toNativeAgentConfiguration(
       [ATTR_RN_SDK_VERSION]: getSdkVersion(),
     } as Attributes as NativeAttributes,
     user: { trackingMode: configuration.user?.trackingMode ?? null },
-    session: { samplingRate: configuration.session?.samplingRate ?? 1 },
+    session: {
+      samplingRate: clampSamplingRate(
+        configuration.session?.samplingRate ?? 1.0
+      ),
+    },
     instrumentedProcessName: configuration.instrumentedProcessName ?? null,
     deferredUntilForeground: !!configuration.deferredUntilForeground,
   };
@@ -120,4 +124,9 @@ export function fromNativeState(native: NativeState): SplunkRumState {
     instrumentedProcessName: native.instrumentedProcessName ?? null,
     deferredUntilForeground: !!native.deferredUntilForeground,
   };
+}
+
+/** Clamps a sampling rate to the valid [0, 1] range. */
+export function clampSamplingRate(rate: number): number {
+  return Math.min(1, Math.max(0, rate));
 }

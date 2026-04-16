@@ -1,3 +1,7 @@
 *.pbxproj -text
 # specific for windows script files
 *.bat text eol=crlf
+
+# Prevent silent lockfile corruption during git merges.
+# Forces manual conflict resolution to ensure lockfile integrity.
+yarn.lock merge=binary linguist-generated
