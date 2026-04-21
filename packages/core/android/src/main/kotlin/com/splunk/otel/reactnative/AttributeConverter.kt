@@ -104,6 +104,25 @@ object AttributeConverter {
     return arr
   }
 
+  fun putDynamicToMutableAttributes(
+    ga: com.splunk.rum.integration.agent.common.attributes.MutableAttributes,
+    key: String,
+    value: Any?
+  ) {
+    when (value) {
+      null -> Unit
+      is String -> ga[key] = value
+      is Boolean -> ga[key] = value
+      is Int -> ga[key] = value.toLong()
+      is Double -> {
+        val l = value.toLong()
+        if (value == l.toDouble()) ga[key] = l else ga[key] = value
+      }
+      is ReadableArray -> setArrayToMutableAttributes(ga, key, value)
+      else -> Unit
+    }
+  }
+
   fun setArrayToMutableAttributes(
     ga: com.splunk.rum.integration.agent.common.attributes.MutableAttributes,
     key: String,
