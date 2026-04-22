@@ -4,9 +4,9 @@
 
 * TBD
 
-## 1.0.0-dev.1
+## 1.0.0-alpha.1
 
-* Test release of the new, alpha version of the SDK
+* An alpha release of the new, next-generation Splunk OTel SDK
 
 ### Added
 * Modular feature configuration via `ModuleConfiguration` classes (ANR, crash reports, network, navigation, startup, etc.).
@@ -32,6 +32,10 @@
 ### Fixed
 * Improved type safety, initialization ordering, and state API consistency.
 * Improved overall stability by utilising native Splunk OTel SDKs.
+
+## 1.0.0-dev.1
+
+* Test release of the new, alpha version of the SDK
 
 ## 0.3.4
 
