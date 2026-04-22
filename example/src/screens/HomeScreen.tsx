@@ -12,7 +12,15 @@ import {
 import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { SplunkRum } from '@splunk/otel-react-native';
+import {
+  SplunkRum,
+  type EndpointConfiguration,
+} from '@splunk/otel-react-native';
+import {
+  SplunkSessionReplay,
+  MaskType,
+} from '@splunk/otel-session-replay-react-native';
+import { config as appConfig } from '../config';
 
 import { TestCategory, MobilePlatform, type TestAction } from '../types';
 import { TestActionsWidget, StatusBar } from '../components';
@@ -320,6 +328,174 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
           );
           const user = await SplunkRum.instance.user.state();
           Alert.alert('User Tracking', `Mode set to: ${user.trackingMode}`);
+        },
+      },
+
+      // Endpoint Configuration
+      {
+        id: 'endpoint-set-realm',
+        title: 'Set Endpoint (Realm)',
+        description: 'Configure endpoint using realm via preferences',
+        category: TestCategory.EndpointConfiguration,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          const endpoint: EndpointConfiguration = {
+            realm: appConfig.realm,
+            rumAccessToken: appConfig.rumAccessToken,
+          };
+          await SplunkRum.instance.preferences.setEndpointConfiguration(
+            endpoint
+          );
+          Alert.alert(
+            'Endpoint Set',
+            `Realm: ${appConfig.realm}\nData will now be sent.`
+          );
+        },
+      },
+      {
+        id: 'endpoint-set-custom',
+        title: 'Set Endpoint (Custom URL)',
+        description: 'Configure endpoint using custom trace URL',
+        category: TestCategory.EndpointConfiguration,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkRum.instance.preferences.setEndpointConfiguration({
+            trace: 'https://custom-collector.example.com/v1/traces',
+          });
+          Alert.alert('Endpoint Set', 'Custom trace URL configured.');
+        },
+      },
+      {
+        id: 'endpoint-clear',
+        title: 'Clear Endpoint',
+        description: 'Clear the endpoint to stop sending data',
+        category: TestCategory.EndpointConfiguration,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkRum.instance.preferences.setEndpointConfiguration(null);
+          Alert.alert('Endpoint Cleared', 'Data will be buffered locally.');
+        },
+      },
+      {
+        id: 'endpoint-check-state',
+        title: 'Check Endpoint State',
+        description: 'Read current endpoint from agent state',
+        category: TestCategory.EndpointConfiguration,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          const state = await SplunkRum.instance.getState();
+          const ep = state.endpoint;
+          if (!ep) {
+            Alert.alert('Endpoint State', 'No endpoint configured.');
+          } else if ('realm' in ep) {
+            Alert.alert(
+              'Endpoint State',
+              `Realm: ${ep.realm}\nToken: ${ep.rumAccessToken.substring(0, 8)}...`
+            );
+          } else {
+            Alert.alert(
+              'Endpoint State',
+              `Trace: ${ep.trace}\nReplay: ${ep.sessionReplay ?? 'none'}`
+            );
+          }
+        },
+      },
+
+      // Session Replay
+      {
+        id: 'sr-state',
+        title: 'Get Replay State',
+        description: 'Display current session replay status and configuration',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          const state = await SplunkSessionReplay.instance.getState();
+          Alert.alert(
+            'Session Replay State',
+            `Status: ${state.status}\nRecording: ${state.isRecording}\nSampling: ${state.samplingRate}`
+          );
+        },
+      },
+      {
+        id: 'sr-start',
+        title: 'Start Recording',
+        description: 'Start session replay recording',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkSessionReplay.instance.start();
+          const state = await SplunkSessionReplay.instance.getState();
+          Alert.alert('Session Replay', `Recording: ${state.isRecording}`);
+        },
+      },
+      {
+        id: 'sr-stop',
+        title: 'Stop Recording',
+        description: 'Stop session replay recording',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkSessionReplay.instance.stop();
+          const state = await SplunkSessionReplay.instance.getState();
+          Alert.alert('Session Replay', `Status: ${state.status}`);
+        },
+      },
+      {
+        id: 'sr-mask-set',
+        title: 'Set Recording Mask',
+        description:
+          'Mask a 200x100 area at (50, 200) with a 60x40 erasing hole',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkSessionReplay.instance.setRecordingMask({
+            elements: [
+              {
+                rect: { x: 50, y: 200, width: 200, height: 100 },
+                type: MaskType.COVERING,
+              },
+              {
+                rect: { x: 80, y: 220, width: 60, height: 40 },
+                type: MaskType.ERASING,
+              },
+            ],
+          });
+          Alert.alert('Recording Mask', 'Mask set (covering + erasing hole)');
+        },
+      },
+      {
+        id: 'sr-mask-get',
+        title: 'Get Recording Mask',
+        description: 'Display current recording mask elements',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          const mask = await SplunkSessionReplay.instance.getRecordingMask();
+          if (!mask) {
+            Alert.alert('Recording Mask', 'No mask set');
+          } else {
+            const desc = mask.elements
+              .map(
+                (e) =>
+                  `${e.type}: (${e.rect.x}, ${e.rect.y}) ${e.rect.width}x${e.rect.height}`
+              )
+              .join('\n');
+            Alert.alert(
+              'Recording Mask',
+              `${mask.elements.length} element(s):\n${desc}`
+            );
+          }
+        },
+      },
+      {
+        id: 'sr-mask-clear',
+        title: 'Clear Recording Mask',
+        description: 'Remove the recording mask',
+        category: TestCategory.SessionReplay,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkSessionReplay.instance.setRecordingMask(null);
+          Alert.alert('Recording Mask', 'Mask cleared');
         },
       },
 

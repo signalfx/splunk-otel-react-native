@@ -20,6 +20,7 @@ import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableType
 import com.facebook.react.bridge.WritableNativeArray
+import com.splunk.rum.integration.agent.common.attributes.MutableAttributes
 import io.opentelemetry.api.common.AttributeKey
 import io.opentelemetry.api.common.Attributes
 import io.opentelemetry.api.common.AttributesBuilder
@@ -104,8 +105,27 @@ object AttributeConverter {
     return arr
   }
 
+  fun putDynamicToMutableAttributes(
+    ga: MutableAttributes,
+    key: String,
+    value: Any?
+  ) {
+    when (value) {
+      null -> Unit
+      is String -> ga[key] = value
+      is Boolean -> ga[key] = value
+      is Int -> ga[key] = value.toLong()
+      is Double -> {
+        val l = value.toLong()
+        if (value == l.toDouble()) ga[key] = l else ga[key] = value
+      }
+      is ReadableArray -> setArrayToMutableAttributes(ga, key, value)
+      else -> Unit
+    }
+  }
+
   fun setArrayToMutableAttributes(
-    ga: com.splunk.rum.integration.agent.common.attributes.MutableAttributes,
+    ga: MutableAttributes,
     key: String,
     arr: ReadableArray
   ) {

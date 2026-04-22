@@ -34,6 +34,9 @@ import SplunkNetwork
 #if canImport(SplunkCrashReports)
 import SplunkCrashReports
 #endif
+#if canImport(SplunkSessionReplayProxy)
+import SplunkSessionReplayProxy
+#endif
 
 /// Builds module configurations received from React Native.
 enum ModuleConfigurationBuilder {
@@ -94,6 +97,14 @@ enum ModuleConfigurationBuilder {
         }
 
         let conf = NetworkInstrumentationConfiguration(isEnabled: enabled, ignoreURLs: ignoreURLs)
+        result.append(conf)
+        #endif
+      case "sessionReplay":
+        #if canImport(SplunkSessionReplayProxy)
+        let enabled = (attrs["enabled"] as NSString?)?.boolValue ?? true
+        let samplingRate = (attrs["samplingRate"] as NSString?)?.doubleValue
+
+        let conf = SessionReplayConfiguration(enabled: enabled, samplingRate: samplingRate)
         result.append(conf)
         #endif
       default:

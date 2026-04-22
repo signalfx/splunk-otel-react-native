@@ -15,10 +15,12 @@ build_artifacts:
   script:
     - corepack enable
     - yarn install --immutable
-    - yarn workspace @splunk/otel-react-native build
+    - yarn build
     - rm -rf dist
     - mkdir -p dist
     - npm pack --ignore-scripts ./packages/core --pack-destination dist
+    - npm pack --ignore-scripts ./packages/session-replay --pack-destination dist
+    - ls -la dist/
     - sha256sum dist/*.tgz > dist/checksums.txt
 
 release_npm:

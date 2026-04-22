@@ -20,6 +20,8 @@ export const TestActionsComponent: React.FC<TestActionsComponentProps> = ({
       [TestCategory.Network]: [],
       [TestCategory.Session]: [],
       [TestCategory.GlobalAttributes]: [],
+      [TestCategory.EndpointConfiguration]: [],
+      [TestCategory.SessionReplay]: [],
       [TestCategory.ApiTests]: [],
     };
 
@@ -38,6 +40,8 @@ export const TestActionsComponent: React.FC<TestActionsComponentProps> = ({
     TestCategory.Navigation,
     TestCategory.CustomTracking,
     TestCategory.Session,
+    TestCategory.EndpointConfiguration,
+    TestCategory.SessionReplay,
     TestCategory.GlobalAttributes,
   ];
 

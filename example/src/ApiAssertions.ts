@@ -229,6 +229,31 @@ export async function runApiAssertionTests(): Promise<ApiTestReport> {
       'size should be 0 after removeAll()'
     );
 
+    console.log('[API Test] Testing Endpoint Preferences...');
+
+    // Verify preferences API exists
+    assertions.assert(
+      sdk.preferences !== undefined && sdk.preferences !== null,
+      'Preferences',
+      'preferences object should be available'
+    );
+
+    assertions.assert(
+      typeof sdk.preferences.setEndpointConfiguration === 'function',
+      'Preferences',
+      'setEndpointConfiguration should be a function'
+    );
+
+    // Read current endpoint from state
+    const currentEndpoint = state.endpoint;
+    assertions.assert(
+      currentEndpoint === undefined ||
+        ('realm' in currentEndpoint && currentEndpoint.realm.length > 0) ||
+        ('trace' in currentEndpoint && currentEndpoint.trace.length > 0),
+      'Preferences',
+      `endpoint should be undefined or have valid config (got: ${JSON.stringify(currentEndpoint)})`
+    );
+
     console.log('[API Test] Testing Custom Tracking...');
 
     // Track event - should not throw

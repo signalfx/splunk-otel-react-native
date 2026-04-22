@@ -16,6 +16,7 @@
 
 export { SplunkRum } from './api/SplunkRum';
 export { SplunkRumProvider } from './providers/SplunkRumProvider';
+export { AgentPreferences } from './api/AgentPreferences';
 export type { AgentConfiguration } from './model/configuration/AgentConfiguration';
 export type { EndpointConfiguration } from './model/configuration/EndpointConfiguration';
 export type {
@@ -38,6 +39,16 @@ export { OkHttp3ManualModuleConfiguration } from './model/modules/OkHttp3ManualM
 export { SlowRenderingModuleConfiguration } from './model/modules/SlowRenderingModuleConfiguration';
 export { StartupModuleConfiguration } from './model/modules/StartupModuleConfiguration';
 export { NetworkInstrumentationModuleConfiguration } from './model/modules/NetworkInstrumentationModuleConfiguration';
+export { SessionReplayModuleConfiguration } from './model/modules/SessionReplayModuleConfiguration';
 export { MutableAttributes } from './model/attributes/MutableAttributes';
 export { SplunkWebView } from './components/SplunkWebView';
 export type { SplunkWebViewProps } from './components/SplunkWebView';
+export {
+  SDK_VERSION,
+  ATTR_RN_FRAMEWORK_VERSION,
+  ATTR_RN_SDK_VERSION,
+  getReactNativeVersion,
+  getSdkVersion,
+  getSdkVersionInfo,
+} from './version';
+export type { SdkVersionInfo } from './version';

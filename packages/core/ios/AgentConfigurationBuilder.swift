@@ -21,10 +21,12 @@ import SplunkAgent
 enum AgentConfigurationBuilder {
 
   static func build(from dict: NSDictionary) throws -> AgentConfiguration {
-    guard let endpointAny = dict.object(forKey: "endpoint"), !(endpointAny is NSNull) else {
-      throw NSError(domain: "splunk.rn", code: 1, userInfo: [NSLocalizedDescriptionKey: "Missing endpoint in configuration"])
+    let endpoint: EndpointConfiguration?
+    if let endpointAny = dict.object(forKey: "endpoint"), !(endpointAny is NSNull) {
+      endpoint = try buildEndpoint(from: endpointAny as? NSDictionary ?? NSDictionary())
+    } else {
+      endpoint = nil
     }
-    let endpoint = try buildEndpoint(from: endpointAny as? NSDictionary ?? NSDictionary())
 
     guard let appName = dict.object(forKey: "appName") as? String,
           let env = dict.object(forKey: "deploymentEnvironment") as? String else {

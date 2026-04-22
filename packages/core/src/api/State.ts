@@ -47,8 +47,8 @@ export interface SplunkRumState {
   deploymentEnvironment: string;
   /** Current agent status. */
   status: SplunkRumStatus;
-  /** Configured endpoint. */
-  endpoint: EndpointConfiguration;
+  /** Configured endpoint, or `undefined` when no endpoint has been set. */
+  endpoint?: EndpointConfiguration;
   /** Whether debug logging is enabled. */
   isDebugLoggingEnabled: boolean;
   /** Instrumented process name. **Android only.** */

@@ -26,6 +26,12 @@ import type {
   NativeState,
   NativeAttributes,
 } from '../specs/NativeSplunkOtelReactNative';
+import {
+  ATTR_RN_FRAMEWORK_VERSION,
+  ATTR_RN_SDK_VERSION,
+  getReactNativeVersion,
+  getSdkVersion,
+} from '../version';
 
 export function toNativeEndpoint(
   endpoint: EndpointConfiguration
@@ -44,15 +50,24 @@ export function toNativeAgentConfiguration(
   configuration: AgentConfiguration
 ): NativeAgentConfiguration {
   return {
-    endpoint: toNativeEndpoint(configuration.endpoint),
+    endpoint: configuration.endpoint
+      ? toNativeEndpoint(configuration.endpoint)
+      : null,
     appName: configuration.appName,
     deploymentEnvironment: configuration.deploymentEnvironment,
     appVersion: configuration.appVersion ?? null,
     enableDebugLogging: !!configuration.enableDebugLogging,
-    globalAttributes: (configuration.globalAttributes ??
-      {}) as Attributes as NativeAttributes,
+    globalAttributes: {
+      ...(configuration.globalAttributes ?? {}),
+      [ATTR_RN_FRAMEWORK_VERSION]: getReactNativeVersion(),
+      [ATTR_RN_SDK_VERSION]: getSdkVersion(),
+    } as Attributes as NativeAttributes,
     user: { trackingMode: configuration.user?.trackingMode ?? null },
-    session: { samplingRate: configuration.session?.samplingRate ?? 1 },
+    session: {
+      samplingRate: clampSamplingRate(
+        configuration.session?.samplingRate ?? 1.0
+      ),
+    },
     instrumentedProcessName: configuration.instrumentedProcessName ?? null,
     deferredUntilForeground: !!configuration.deferredUntilForeground,
   };
@@ -66,18 +81,24 @@ export function toNativeModules(
   return modules.map((m) => m.toNative());
 }
 
-export function fromNativeEndpoint(ep: NativeEndpoint): EndpointConfiguration {
-  if (ep && ep.realm) {
+export function fromNativeEndpoint(
+  ep: NativeEndpoint | null | undefined
+): EndpointConfiguration | undefined {
+  if (!ep) return undefined;
+
+  if (ep.realm) {
     return {
       realm: String(ep.realm),
       rumAccessToken: String(ep.rumAccessToken ?? ''),
     };
   }
 
+  if (!ep.trace) return undefined;
+
   return {
-    trace: String(ep?.trace ?? ''),
+    trace: String(ep.trace),
     sessionReplay:
-      ep?.sessionReplay != null ? String(ep.sessionReplay) : undefined,
+      ep.sessionReplay != null ? String(ep.sessionReplay) : undefined,
   };
 }
 
@@ -98,9 +119,14 @@ export function fromNativeState(native: NativeState): SplunkRumState {
     appVersion: String(native.appVersion ?? ''),
     deploymentEnvironment: String(native.deploymentEnvironment ?? ''),
     status,
-    endpoint: fromNativeEndpoint(native.endpoint),
+    endpoint: fromNativeEndpoint(native.endpoint) ?? undefined,
     isDebugLoggingEnabled: !!native.isDebugLoggingEnabled,
     instrumentedProcessName: native.instrumentedProcessName ?? null,
     deferredUntilForeground: !!native.deferredUntilForeground,
   };
+}
+
+/** Clamps a sampling rate to the valid [0, 1] range. */
+export function clampSamplingRate(rate: number): number {
+  return Math.min(1, Math.max(0, rate));
 }

@@ -1,5 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { View, Text, StyleSheet, Platform } from 'react-native';
+import {
+  getReactNativeVersion,
+  getSdkVersion,
+} from '@splunk/otel-react-native';
 
 interface DeviceInfo {
   platform: string;
@@ -15,6 +19,9 @@ export const DeviceInfoHeader: React.FC = () => {
     system: `${Platform.OS} ${Platform.Version}`,
   });
 
+  const sdkVersion = useMemo(() => getSdkVersion(), []);
+  const rnVersion = useMemo(() => getReactNativeVersion(), []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(new Date());
@@ -23,7 +30,6 @@ export const DeviceInfoHeader: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    // Get device info
     if (Platform.OS === 'android') {
       setDeviceInfo({
         platform: 'Android',
@@ -49,9 +55,14 @@ export const DeviceInfoHeader: React.FC = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.time}>{formatTime(time)}</Text>
-      <Text style={styles.info} numberOfLines={1}>
-        {deviceInfo.platform} • {deviceInfo.device} • {deviceInfo.system}
-      </Text>
+      <View style={styles.rightColumn}>
+        <Text style={styles.info} numberOfLines={1}>
+          {deviceInfo.platform} • {deviceInfo.device} • {deviceInfo.system}
+        </Text>
+        <Text style={styles.versionInfo} numberOfLines={1}>
+          SDK {sdkVersion} • RN {rnVersion}
+        </Text>
+      </View>
     </View>
   );
 };
@@ -61,7 +72,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingVertical: 10,
+    paddingVertical: 8,
     backgroundColor: '#F8F9FA',
     borderBottomWidth: 1,
     borderBottomColor: '#E0E0E0',
@@ -72,10 +83,19 @@ const styles = StyleSheet.create({
     color: '#1A1A2E',
     fontVariant: ['tabular-nums'],
   },
-  info: {
+  rightColumn: {
     flex: 1,
+    alignItems: 'flex-end',
+  },
+  info: {
     fontSize: 13,
     color: '#607D8B',
     textAlign: 'right',
+  },
+  versionInfo: {
+    fontSize: 11,
+    color: '#90A4AE',
+    textAlign: 'right',
+    marginTop: 2,
   },
 });
