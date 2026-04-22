@@ -22,7 +22,6 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
 import com.splunk.rum.integration.agent.api.SplunkRum
-import io.opentelemetry.api.common.Attributes
 
 /**
  * Handles all global attributes operations.
@@ -144,13 +143,13 @@ class GlobalAttributesHandler {
 
   fun setAll(map: ReadableMap, promise: Promise) {
     try {
-      val attributes = AttributeConverter.buildAttributesFromMap(map)
-      SplunkRum.instance.globalAttributes.setAll(attributes)
-
-      val it = map.keySetIterator()
+      val ga = SplunkRum.instance.globalAttributes
       var count = 0
 
-      while (it.hasNextKey()) { it.nextKey(); count++ }
+      map.entryIterator.forEachRemaining { entry ->
+        AttributeConverter.putDynamicToMutableAttributes(ga, entry.key, entry.value)
+        count++
+      }
 
       promise.resolve(count)
     } catch (t: Throwable) {
@@ -160,17 +159,13 @@ class GlobalAttributesHandler {
 
   fun setAllInNameSpace(nameSpace: String, map: ReadableMap, promise: Promise) {
     try {
-      val builder = Attributes.builder()
-      map.entryIterator.forEachRemaining { entry ->
-        AttributeConverter.putDynamic(builder, "$nameSpace.${entry.key}", entry.value)
-      }
-
-      SplunkRum.instance.globalAttributes.setAll(builder.build())
-
-      val it = map.keySetIterator()
+      val ga = SplunkRum.instance.globalAttributes
       var count = 0
 
-      while (it.hasNextKey()) { it.nextKey(); count++ }
+      map.entryIterator.forEachRemaining { entry ->
+        AttributeConverter.putDynamicToMutableAttributes(ga, "$nameSpace.${entry.key}", entry.value)
+        count++
+      }
 
       promise.resolve(count)
     } catch (t: Throwable) {

@@ -18,10 +18,12 @@ import {
   FullScreenModalScreen,
   ModalInfoScreen,
 } from '../screens/ModalScreens';
+import { SessionReplayLabScreen } from '../screens/SessionReplayLabScreen';
 import type {
   NavigationStackParamList,
   ProfileStackParamList,
   RootStackParamList,
+  SessionReplayStackParamList,
   TabParamList,
   TestsStackParamList,
 } from './types';
@@ -35,6 +37,8 @@ const Tab = createBottomTabNavigator<TabParamList>();
 const TestsStack = createNativeStackNavigator<TestsStackParamList>();
 const NavigationStack = createNativeStackNavigator<NavigationStackParamList>();
 const ProfileStack = createNativeStackNavigator<ProfileStackParamList>();
+const SessionReplayStack =
+  createNativeStackNavigator<SessionReplayStackParamList>();
 
 const TestsStackNavigator = ({ installed }: RootNavigatorProps) => (
   <TestsStack.Navigator screenOptions={{ headerShown: false }}>
@@ -94,11 +98,26 @@ const ProfileStackNavigator = () => (
   </ProfileStack.Navigator>
 );
 
+const SessionReplayStackNavigator = () => (
+  <SessionReplayStack.Navigator>
+    <SessionReplayStack.Screen
+      name="SessionReplayLab"
+      component={SessionReplayLabScreen}
+      options={{ title: 'Session Replay Lab' }}
+    />
+  </SessionReplayStack.Navigator>
+);
+
 const MainTabs = ({ installed }: RootNavigatorProps) => (
   <Tab.Navigator screenOptions={{ headerShown: false }}>
     <Tab.Screen name="TestsTab" options={{ title: 'Tests' }}>
       {() => <TestsStackNavigator installed={installed} />}
     </Tab.Screen>
+    <Tab.Screen
+      name="SessionReplayTab"
+      component={SessionReplayStackNavigator}
+      options={{ title: 'Replay' }}
+    />
     <Tab.Screen
       name="NavigationTab"
       component={NavigationStackNavigator}

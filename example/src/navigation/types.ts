@@ -18,8 +18,15 @@ export type ProfileStackParamList = {
   ProfilePreferences: { origin: string };
 };
 
+export type SessionReplayStackParamList = {
+  SessionReplayLab: undefined;
+};
+
 export type TabParamList = {
   TestsTab: NavigatorScreenParams<TestsStackParamList> | undefined;
+  SessionReplayTab:
+    | NavigatorScreenParams<SessionReplayStackParamList>
+    | undefined;
   NavigationTab: NavigatorScreenParams<NavigationStackParamList> | undefined;
   ProfileTab: NavigatorScreenParams<ProfileStackParamList> | undefined;
 };

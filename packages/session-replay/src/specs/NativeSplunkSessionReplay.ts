@@ -47,9 +47,7 @@ export interface Spec extends TurboModule {
   getState(): Promise<NativeSessionReplayState>;
 
   getRecordingMask(): Promise<NativeRecordingMask | null>;
-  setRecordingMask(
-    mask: { elements: Array<{ [key: string]: unknown }> } | null
-  ): Promise<void>;
+  setRecordingMask(mask: { [key: string]: unknown } | null): Promise<void>;
 }
 
 const Turbo = TurboModuleRegistry.get<Spec>('SplunkSessionReplay');

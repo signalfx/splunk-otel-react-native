@@ -44,31 +44,40 @@ public class SplunkSessionReplayImplementation: NSObject {
 
   @objc
   public func getState(resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) {
-    let state = SplunkRum.shared.sessionReplay.state
-    resolve(SessionReplaySerializer.serializeState(state))
+    onMainThread {
+      let state = SplunkRum.shared.sessionReplay.state
+      resolve(SessionReplaySerializer.serializeState(state))
+    }
   }
 
   // MARK: - Recording Mask
 
   @objc
   public func getRecordingMask(resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) {
-    guard let mask = SplunkRum.shared.sessionReplay.recordingMask else {
-      resolve(nil)
-      return
+    onMainThread {
+      guard let mask = SplunkRum.shared.sessionReplay.recordingMask else {
+        resolve(nil)
+        return
+      }
+      resolve(SessionReplaySerializer.serializeRecordingMask(mask))
     }
-    resolve(SessionReplaySerializer.serializeRecordingMask(mask))
   }
 
   @objc
   public func setRecordingMask(mask: NSDictionary?,
                                resolve: @escaping RCTPromiseResolveBlock,
                                reject: @escaping RCTPromiseRejectBlock) {
-    if let maskDict = mask, !(maskDict is NSNull) {
-      SplunkRum.shared.sessionReplay.recordingMask = SessionReplaySerializer.deserializeRecordingMask(maskDict)
+    let deserialized: RecordingMask?
+    if let maskDict = mask {
+      deserialized = SessionReplaySerializer.deserializeRecordingMask(maskDict)
     } else {
-      SplunkRum.shared.sessionReplay.recordingMask = nil
+      deserialized = nil
     }
-    resolve(nil)
+
+    onMainThread {
+      SplunkRum.shared.sessionReplay.recordingMask = deserialized
+      resolve(nil)
+    }
   }
 
   // MARK: - Helpers

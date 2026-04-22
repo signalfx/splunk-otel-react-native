@@ -21,6 +21,7 @@ export const TestActionsComponent: React.FC<TestActionsComponentProps> = ({
       [TestCategory.Session]: [],
       [TestCategory.GlobalAttributes]: [],
       [TestCategory.EndpointConfiguration]: [],
+      [TestCategory.SessionReplay]: [],
       [TestCategory.ApiTests]: [],
     };
 
@@ -40,6 +41,7 @@ export const TestActionsComponent: React.FC<TestActionsComponentProps> = ({
     TestCategory.CustomTracking,
     TestCategory.Session,
     TestCategory.EndpointConfiguration,
+    TestCategory.SessionReplay,
     TestCategory.GlobalAttributes,
   ];
 

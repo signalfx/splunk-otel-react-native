@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   # SPM dependency for native iOS SDK
   spm_dependency(s,  
      url: 'https://github.com/signalfx/splunk-otel-ios.git', 
-     requirement: { kind: 'exactVersion', version: '2.2.1' },
+     requirement: { kind: 'exactVersion', version: '2.2.2' },
      products: ['SplunkAgent']
   )
 
