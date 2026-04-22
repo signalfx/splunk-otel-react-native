@@ -18,8 +18,8 @@
     "arch:new": "./scripts/set-arch.sh new",
     "arch:old": "./scripts/set-arch.sh old",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "typecheck": "yarn workspace @splunk/otel-react-native typecheck",
-    "test": "yarn workspace @splunk/otel-react-native test",
+    "typecheck": "yarn workspace @splunk/otel-react-native typecheck && yarn workspace @splunk/otel-session-replay-react-native typecheck",
+    "test": "yarn workspace @splunk/otel-react-native test && yarn workspace @splunk/otel-session-replay-react-native test",
     "release": "release-it --only-version"
   },
   "keywords": [
@@ -32,7 +32,7 @@
     "url": "git+https://github.com/signalfx/splunk-otel-react-native.git"
   },
   "author": "Splunk Observability MRUM Team",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/signalfx/splunk-otel-react-native/issues"
   },

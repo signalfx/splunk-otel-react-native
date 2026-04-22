@@ -6,7 +6,7 @@ pre-commit:
       run: npx eslint {staged_files}
     types:
       glob: "*.{js,ts,jsx,tsx}"
-      run: yarn workspace @splunk/otel-react-native tsc -p tsconfig.test.json && yarn workspace @splunk/otel-react-native typecheck
+      run: yarn workspace @splunk/otel-react-native tsc -p tsconfig.test.json && yarn workspace @splunk/otel-react-native typecheck && yarn workspace @splunk/otel-session-replay-react-native typecheck
 commit-msg:
   parallel: true
   commands:

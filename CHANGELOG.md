@@ -4,6 +4,32 @@
 
 * TBD
 
+## 1.0.0
+
+First stable release of the Splunk Distribution of OpenTelemetry for React Native.
+
+### `@splunk/otel-react-native`
+
+#### Added
+* `AgentPreferences` API for server-driven agent configuration.
+* SDK and React Native framework version attributes (`rum.sdk.rn.version`, `splunk.app.framework.rn.version`) on all telemetry.
+* `SessionReplayModuleConfiguration` for configuring Session Replay from the core package.
+* Endpoint configuration is now optional.
+
+#### Changed
+* Ingest URLs updated from `*.signalfx.com` to `*.observability.splunkcloud.com`.
+* Native Splunk OTel SDKs updated to `2.2.2`.
+
+#### Fixed
+* Global attributes not being applied correctly on Android.
+
+### `@splunk/otel-session-replay-react-native` (new)
+
+#### Added
+* Initial release of the Session Replay add-on package.
+* `SplunkSessionReplay` API: `start`, `stop`, `getState`, `getRecordingMask`, `setRecordingMask`.
+* Android and iOS native session replay via Splunk native SDKs.
+
 ## 1.0.0-alpha.1
 
 * An alpha release of the new, next-generation Splunk OTel SDK

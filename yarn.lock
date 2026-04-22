@@ -3432,7 +3432,7 @@ __metadata:
     react-native-builder-bob: 0.40.17
     typescript: 5.9.3
   peerDependencies:
-    "@splunk/otel-react-native": ">=1.0.0-alpha.1"
+    "@splunk/otel-react-native": ">=1.0.0"
     react: ">=18.2.0"
     react-native: ">=0.75.0 <1.0.0"
   languageName: unknown
