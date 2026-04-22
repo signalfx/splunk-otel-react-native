@@ -3,9 +3,6 @@
 [![npm version](https://badge.fury.io/js/@splunk%2Fotel-react-native.svg)](https://badge.fury.io/js/@splunk%2Fotel-react-native)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-> [!IMPORTANT]
-> Splunk React Native instrumentation distribution is in alpha state and subject to the terms at  https://www.splunk.com/en_us/legal/pre-release-agreement-for-hosted-services.html.
-
 ## Overview
 
 The Splunk Distribution of OpenTelemetry for React Native provides automatic instrumentation for React Native applications running on Android and iOS devices. This library captures telemetry data including:
