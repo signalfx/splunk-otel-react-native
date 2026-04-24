@@ -41,13 +41,14 @@ body:
   - type: textarea
     id: affected-devices
     attributes:
-      label: 4. Affected Devices / Android Versions
+      label: 4. Affected Devices / OS Versions
       description: |
         Please specify the device(s) and Android/iOS version(s) where you observed the issue.
+        Include React Native version if relevant.
         Example:
-        - Device: Google Pixel 6, Android Version: 13 (API 33)
-        - Device: iPhone 13, iOS Version: 15
-      placeholder: e.g., Google Pixel 6 (Android 13), Samsung Galaxy S22 (Android 12)
+        - Device: Google Pixel 6, Android Version: 13 (API 33), React Native: 0.73.x
+        - Device: iPhone 13, iOS Version: 15, React Native: 0.73.x
+      placeholder: e.g., Google Pixel 6 (Android 13), iPhone 13 (iOS 15), React Native 0.7x
     validations:
       required: false
 
