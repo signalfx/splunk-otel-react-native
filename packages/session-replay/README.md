@@ -5,6 +5,11 @@
 
 Session Replay add-on for the [Splunk Distribution of OpenTelemetry for React Native](https://github.com/signalfx/splunk-otel-react-native). Captures visual replays of user sessions on Android and iOS.
 
+## Documentation
+
+- [Install the Splunk RUM React Native Agent](https://help.splunk.com/en/splunk-observability-cloud/manage-data/available-data-sources/supported-integrations-in-splunk-observability-cloud/rum-instrumentation/instrument-mobile-and-web-applications-for-splunk-real-user-monitoring-rum/instrument-react-native-agent-applications-for-splunk-rum/install-the-splunk-rum-react-native-agent)
+- [Record React Native Sessions](https://help.splunk.com/en/splunk-observability-cloud/monitor-end-user-experience/real-user-monitoring/replay-user-sessions/record-react-native-sessions)
+
 ## Requirements
 
 - [`@splunk/otel-react-native`](https://www.npmjs.com/package/@splunk/otel-react-native) >= 1.0.0 (installed and initialized)
