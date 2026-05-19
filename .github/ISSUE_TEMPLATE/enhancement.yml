@@ -1,5 +1,5 @@
 name: Enhancement / Feature Request
-description: Submit an enhancement or feature request for the splunk-otel-android Agent.
+description: Submit an enhancement or feature request for the splunk-otel-react-native Agent.
 title: "Short descriptive title of the enhancement/feature request"
 labels: ["enhancement"]
 assignees:

@@ -1,1 +1,8 @@
 blank_issues_enabled: false
+contact_links:
+  - name: Splunk RUM for React Native — Installation & Configuration
+    url: https://help.splunk.com/en/splunk-observability-cloud/manage-data/new-splunk-rum-agents/splunk-rum-react-native-agent/install-the-splunk-rum-react-native-agent
+    about: Setup, configuration, and usage documentation for the SDK.
+  - name: Splunk RUM for React Native — Troubleshooting
+    url: https://help.splunk.com/en/splunk-observability-cloud/manage-data/new-splunk-rum-agents/splunk-rum-react-native-agent/troubleshoot-react-native-instrumentation
+    about: Common issues and how to resolve them before filing a bug.
