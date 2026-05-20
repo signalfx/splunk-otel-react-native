@@ -33,6 +33,7 @@ export default defineConfig([
       '**/jest.setup.js',
       'native-android-sdk/',
       'native-ios-sdk/',
+      'packages/core/ios/frameworks/',
     ],
   },
 ]);

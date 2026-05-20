@@ -1,0 +1,153 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkOpenTelemetryBackgroundExporter
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import CiscoDiskStorage
+import CiscoEncryption
+import Foundation
+import OpenTelemetryApi
+import OpenTelemetrySdk
+import SplunkCommon
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum SplunkAttributeValue : Swift.Equatable, Swift.CustomStringConvertible, Swift.Hashable {
+  case string(Swift.String)
+  case bool(Swift.Bool)
+  case int(Swift.Int)
+  case double(Swift.Double)
+  case data(Foundation.Data)
+  @available(*, deprecated, message: "replaced by .array(AttributeArray)")
+  case stringArray([Swift.String])
+  @available(*, deprecated, message: "replaced by .array(AttributeArray)")
+  case boolArray([Swift.Bool])
+  @available(*, deprecated, message: "replaced by .array(AttributeArray)")
+  case intArray([Swift.Int])
+  @available(*, deprecated, message: "replaced by .array(AttributeArray)")
+  case doubleArray([Swift.Double])
+  case array(OpenTelemetryApi.AttributeArray)
+  case set(OpenTelemetryApi.AttributeSet)
+  public var description: Swift.String {
+    get
+  }
+  public init?(_ value: Any)
+  public static func == (a: SplunkOpenTelemetryBackgroundExporter.SplunkAttributeValue, b: SplunkOpenTelemetryBackgroundExporter.SplunkAttributeValue) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension SplunkOpenTelemetryBackgroundExporter.SplunkAttributeValue {
+  public init(_ value: Swift.String)
+  public init(_ value: Swift.Bool)
+  public init(_ value: Swift.Int)
+  public init(_ value: Swift.Double)
+  public init(_ value: Foundation.Data)
+  public init(_ value: [Swift.String])
+  public init(_ value: [Swift.Int])
+  public init(_ value: [Swift.Double])
+  public init(_ value: [Swift.Bool])
+  public init(_ value: OpenTelemetryApi.AttributeArray)
+  public init(_ value: OpenTelemetryApi.AttributeSet)
+}
+extension SplunkOpenTelemetryBackgroundExporter.SplunkAttributeValue : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SplunkReadableLogRecord : Swift.Codable {
+  public init(resource: OpenTelemetrySdk.Resource, instrumentationScopeInfo: OpenTelemetrySdk.InstrumentationScopeInfo, timestamp: Foundation.Date, observedTimestamp: Foundation.Date? = nil, spanContext: OpenTelemetryApi.SpanContext? = nil, severity: OpenTelemetryApi.Severity? = nil, body: SplunkOpenTelemetryBackgroundExporter.SplunkAttributeValue? = nil, attributes: [Swift.String : SplunkOpenTelemetryBackgroundExporter.SplunkAttributeValue])
+  public var resource: OpenTelemetrySdk.Resource {
+    get
+  }
+  public var instrumentationScopeInfo: OpenTelemetrySdk.InstrumentationScopeInfo {
+    get
+  }
+  public var timestamp: Foundation.Date {
+    get
+  }
+  public var observedTimestamp: Foundation.Date? {
+    get
+  }
+  public var spanContext: OpenTelemetryApi.SpanContext? {
+    get
+  }
+  public var severity: OpenTelemetryApi.Severity? {
+    get
+  }
+  public var body: SplunkOpenTelemetryBackgroundExporter.SplunkAttributeValue?
+  public var attributes: [Swift.String : SplunkOpenTelemetryBackgroundExporter.SplunkAttributeValue]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers public class OTLPBackgroundHTTPLogExporterBinary : SplunkOpenTelemetryBackgroundExporter.OTLPBackgroundHTTPBaseExporter {
+  public func export(logRecords: [SplunkOpenTelemetryBackgroundExporter.SplunkReadableLogRecord], explicitTimeout: Foundation.TimeInterval? = nil) -> OpenTelemetrySdk.ExportResult
+  override public init(endpoint: Foundation.URL?, config: SplunkOpenTelemetryBackgroundExporter.OTLPExporterConfiguration = super, qosConfig: SplunkOpenTelemetryBackgroundExporter.SessionQOSConfiguration, envVarHeaders: [(Swift.String, Swift.String)]? = super, headers: [Swift.String : Swift.String] = super, diskStorage: any CiscoDiskStorage.DiskStorage = super, fileType: Swift.String? = nil, performStalledUploadCheck: Swift.Bool = super)
+  @objc deinit
+}
+extension SplunkOpenTelemetryBackgroundExporter.SplunkAttributeValue {
+  public init(otelAttributeValue attributeValue: OpenTelemetryApi.AttributeValue)
+}
+extension SplunkOpenTelemetryBackgroundExporter.SplunkAttributeValue {
+  public init(eventAttributeValue attributeValue: SplunkCommon.EventAttributeValue)
+}
+@_inheritsConvenienceInitializers public class OTLPBackgroundHTTPLogExporter : SplunkOpenTelemetryBackgroundExporter.OTLPBackgroundHTTPBaseExporter, OpenTelemetrySdk.LogRecordExporter {
+  public func export(logRecords: [OpenTelemetrySdk.ReadableLogRecord], explicitTimeout: Foundation.TimeInterval? = nil) -> OpenTelemetrySdk.ExportResult
+  public func forceFlush(explicitTimeout _: Foundation.TimeInterval?) -> OpenTelemetrySdk.ExportResult
+  public func shutdown(explicitTimeout _: Foundation.TimeInterval? = nil)
+  override public init(endpoint: Foundation.URL?, config: SplunkOpenTelemetryBackgroundExporter.OTLPExporterConfiguration = super, qosConfig: SplunkOpenTelemetryBackgroundExporter.SessionQOSConfiguration, envVarHeaders: [(Swift.String, Swift.String)]? = super, headers: [Swift.String : Swift.String] = super, diskStorage: any CiscoDiskStorage.DiskStorage = super, fileType: Swift.String? = nil, performStalledUploadCheck: Swift.Bool = super)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class OTLPBackgroundHTTPMetricExporter : SplunkOpenTelemetryBackgroundExporter.OTLPBackgroundHTTPBaseExporter, OpenTelemetrySdk.MetricExporter {
+  public func export(metrics: [OpenTelemetrySdk.MetricData]) -> OpenTelemetrySdk.ExportResult
+  public func flush() -> OpenTelemetrySdk.ExportResult
+  public func shutdown() -> OpenTelemetrySdk.ExportResult
+  public func getAggregationTemporality(for _: OpenTelemetrySdk.InstrumentType) -> OpenTelemetrySdk.AggregationTemporality
+  override public init(endpoint: Foundation.URL?, config: SplunkOpenTelemetryBackgroundExporter.OTLPExporterConfiguration = super, qosConfig: SplunkOpenTelemetryBackgroundExporter.SessionQOSConfiguration, envVarHeaders: [(Swift.String, Swift.String)]? = super, headers: [Swift.String : Swift.String] = super, diskStorage: any CiscoDiskStorage.DiskStorage = super, fileType: Swift.String? = nil, performStalledUploadCheck: Swift.Bool = super)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class OTLPBackgroundHTTPTraceExporter : SplunkOpenTelemetryBackgroundExporter.OTLPBackgroundHTTPBaseExporter, OpenTelemetrySdk.SpanExporter {
+  public func export(spans: [OpenTelemetrySdk.SpanData], explicitTimeout: Foundation.TimeInterval? = nil) -> OpenTelemetrySdk.SpanExporterResultCode
+  public func flush(explicitTimeout _: Foundation.TimeInterval? = nil) -> OpenTelemetrySdk.SpanExporterResultCode
+  public func shutdown(explicitTimeout _: Foundation.TimeInterval? = nil)
+  override public init(endpoint: Foundation.URL?, config: SplunkOpenTelemetryBackgroundExporter.OTLPExporterConfiguration = super, qosConfig: SplunkOpenTelemetryBackgroundExporter.SessionQOSConfiguration, envVarHeaders: [(Swift.String, Swift.String)]? = super, headers: [Swift.String : Swift.String] = super, diskStorage: any CiscoDiskStorage.DiskStorage = super, fileType: Swift.String? = nil, performStalledUploadCheck: Swift.Bool = super)
+  @objc deinit
+}
+public struct OTLPExporterConfiguration {
+  public static let defaultTimeoutInterval: Swift.Double
+  public let timeout: Foundation.TimeInterval
+  public init(timeout: Foundation.TimeInterval = defaultTimeoutInterval)
+}
+public enum OTLPHTTPHeaders {
+  public static let userAgentKey: Swift.String
+  public static var userAgent: Swift.String {
+    get
+  }
+}
+public enum OTLPEnvVarHeaders {
+  public static var attributes: [(Swift.String, Swift.String)]? {
+    get
+  }
+}
+public struct SessionQOSConfiguration {
+  public let allowsCellularAccess: Swift.Bool
+  public let allowsConstrainedNetworkAccess: Swift.Bool
+  public let allowsExpensiveNetworkAccess: Swift.Bool
+  public init(allowsCellularAccess: Swift.Bool = true, allowsConstrainedNetworkAccess: Swift.Bool = true, allowsExpensiveNetworkAccess: Swift.Bool = true)
+}
+public class OTLPBackgroundHTTPBaseExporter {
+  public var isPendingEndpoint: Swift.Bool {
+    get
+  }
+  public init(endpoint: Foundation.URL?, config: SplunkOpenTelemetryBackgroundExporter.OTLPExporterConfiguration = OTLPExporterConfiguration(), qosConfig: SplunkOpenTelemetryBackgroundExporter.SessionQOSConfiguration, envVarHeaders: [(Swift.String, Swift.String)]? = OTLPEnvVarHeaders.attributes, headers: [Swift.String : Swift.String] = [:], diskStorage: any CiscoDiskStorage.DiskStorage = FilesystemDiskStorage(
+            prefix: FilesystemPrefix(module: "OTLPBackgroundExporter"),
+            rules: Rules(
+                relativeUsedSize: 0.2,
+                absoluteUsedSize: .init(value: 200, unit: .megabytes)
+            ),
+            encryption: NoneEncryption()
+        ), fileType: Swift.String? = nil, performStalledUploadCheck: Swift.Bool = true)
+  @objc deinit
+  public func setEndpoint(_ newEndpoint: Foundation.URL, headers newHeaders: [Swift.String : Swift.String]? = nil)
+  public func clearEndpoint()
+}

@@ -1,0 +1,1475 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "SplunkAppStart",
+    "printedName": "SplunkAppStart",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppStartType",
+        "printedName": "AppStartType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "cold",
+            "printedName": "cold",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SplunkAppStart.AppStartType.Type) -> SplunkAppStart.AppStartType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppStartType",
+                    "printedName": "SplunkAppStart.AppStartType",
+                    "usr": "s:14SplunkAppStart0bC4TypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SplunkAppStart.AppStartType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AppStartType",
+                        "printedName": "SplunkAppStart.AppStartType",
+                        "usr": "s:14SplunkAppStart0bC4TypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14SplunkAppStart0bC4TypeO4coldyA2CmF",
+            "mangledName": "$s14SplunkAppStart0bC4TypeO4coldyA2CmF",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "warm",
+            "printedName": "warm",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SplunkAppStart.AppStartType.Type) -> SplunkAppStart.AppStartType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppStartType",
+                    "printedName": "SplunkAppStart.AppStartType",
+                    "usr": "s:14SplunkAppStart0bC4TypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SplunkAppStart.AppStartType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AppStartType",
+                        "printedName": "SplunkAppStart.AppStartType",
+                        "usr": "s:14SplunkAppStart0bC4TypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14SplunkAppStart0bC4TypeO4warmyA2CmF",
+            "mangledName": "$s14SplunkAppStart0bC4TypeO4warmyA2CmF",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hot",
+            "printedName": "hot",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SplunkAppStart.AppStartType.Type) -> SplunkAppStart.AppStartType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppStartType",
+                    "printedName": "SplunkAppStart.AppStartType",
+                    "usr": "s:14SplunkAppStart0bC4TypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SplunkAppStart.AppStartType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AppStartType",
+                        "printedName": "SplunkAppStart.AppStartType",
+                        "usr": "s:14SplunkAppStart0bC4TypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14SplunkAppStart0bC4TypeO3hotyA2CmF",
+            "mangledName": "$s14SplunkAppStart0bC4TypeO3hotyA2CmF",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SplunkAppStart.AppStartType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppStartType",
+                    "printedName": "SplunkAppStart.AppStartType",
+                    "usr": "s:14SplunkAppStart0bC4TypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14SplunkAppStart0bC4TypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s14SplunkAppStart0bC4TypeO8rawValueACSgSS_tcfc",
+            "moduleName": "SplunkAppStart",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SplunkAppStart0bC4TypeO8rawValueSSvp",
+            "mangledName": "$s14SplunkAppStart0bC4TypeO8rawValueSSvp",
+            "moduleName": "SplunkAppStart",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SplunkAppStart0bC4TypeO8rawValueSSvg",
+                "mangledName": "$s14SplunkAppStart0bC4TypeO8rawValueSSvg",
+                "moduleName": "SplunkAppStart",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14SplunkAppStart0bC4TypeO",
+        "mangledName": "$s14SplunkAppStart0bC4TypeO",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppStart",
+        "printedName": "AppStart",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sharedState",
+            "printedName": "sharedState",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnownedStorage",
+                "printedName": "(any SplunkCommon.AgentSharedState)?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SplunkAppStart0bC0C11sharedState0A6Common011AgentSharedE0_pSgvp",
+            "mangledName": "$s14SplunkAppStart0bC0C11sharedState0A6Common011AgentSharedE0_pSgvp",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "ownership": 2,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any SplunkCommon.AgentSharedState)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AgentSharedState",
+                        "printedName": "any SplunkCommon.AgentSharedState",
+                        "usr": "s:12SplunkCommon16AgentSharedStateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SplunkAppStart0bC0C11sharedState0A6Common011AgentSharedE0_pSgvg",
+                "mangledName": "$s14SplunkAppStart0bC0C11sharedState0A6Common011AgentSharedE0_pSgvg",
+                "moduleName": "SplunkAppStart",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any SplunkCommon.AgentSharedState)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AgentSharedState",
+                        "printedName": "any SplunkCommon.AgentSharedState",
+                        "usr": "s:12SplunkCommon16AgentSharedStateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SplunkAppStart0bC0C11sharedState0A6Common011AgentSharedE0_pSgvs",
+                "mangledName": "$s14SplunkAppStart0bC0C11sharedState0A6Common011AgentSharedE0_pSgvs",
+                "moduleName": "SplunkAppStart",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SplunkAppStart0bC0C11sharedState0A6Common011AgentSharedE0_pSgvM",
+                "mangledName": "$s14SplunkAppStart0bC0C11sharedState0A6Common011AgentSharedE0_pSgvM",
+                "moduleName": "SplunkAppStart",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppStart",
+                "printedName": "SplunkAppStart.AppStart",
+                "usr": "s:14SplunkAppStart0bC0C"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14SplunkAppStart0bC0CACycfc",
+            "mangledName": "$s14SplunkAppStart0bC0CACycfc",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "Required",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "startDetection",
+            "printedName": "startDetection()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SplunkAppStart0bC0C14startDetectionyyF",
+            "mangledName": "$s14SplunkAppStart0bC0C14startDetectionyyF",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopDetection",
+            "printedName": "stopDetection()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SplunkAppStart0bC0C13stopDetectionyyF",
+            "mangledName": "$s14SplunkAppStart0bC0C13stopDetectionyyF",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reportAgentInitialize",
+            "printedName": "reportAgentInitialize(start:end:events:configurationSettings:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Foundation.Date]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SplunkAppStart0bC0C21reportAgentInitialize5start3end6events21configurationSettingsy10Foundation4DateV_AKSDySSAKGSDyS2SGtF",
+            "mangledName": "$s14SplunkAppStart0bC0C21reportAgentInitialize5start3end6events21configurationSettingsy10Foundation4DateV_AKSDySSAKGSDyS2SGtF",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "track",
+            "printedName": "track(didBecomeActive:didFinishLaunching:willEnterForeground:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SplunkAppStart0bC0C5track15didBecomeActive0E15FinishLaunching19willEnterForegroundy10Foundation4DateV_AJSgAKtF",
+            "mangledName": "$s14SplunkAppStart0bC0C5track15didBecomeActive0E15FinishLaunching19willEnterForegroundy10Foundation4DateV_AJSgAKtF",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "install",
+            "printedName": "install(with:remoteConfiguration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SplunkCommon.ModuleConfiguration)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ModuleConfiguration",
+                    "printedName": "any SplunkCommon.ModuleConfiguration",
+                    "usr": "s:12SplunkCommon19ModuleConfigurationP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SplunkCommon.RemoteModuleConfiguration)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RemoteModuleConfiguration",
+                    "printedName": "any SplunkCommon.RemoteModuleConfiguration",
+                    "usr": "s:12SplunkCommon25RemoteModuleConfigurationP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SplunkAppStart0bC0C7install4with19remoteConfigurationy0A6Common06ModuleG0_pSg_AG06RemoteiG0_pSgtF",
+            "mangledName": "$s14SplunkAppStart0bC0C7install4with19remoteConfigurationy0A6Common06ModuleG0_pSg_AG06RemoteiG0_pSgtF",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteData",
+            "printedName": "deleteData(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ModuleEventMetadata",
+                "printedName": "any SplunkCommon.ModuleEventMetadata",
+                "usr": "s:12SplunkCommon19ModuleEventMetadataP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SplunkAppStart0bC0C10deleteData3fory0A6Common19ModuleEventMetadata_p_tF",
+            "mangledName": "$s14SplunkAppStart0bC0C10deleteData3fory0A6Common19ModuleEventMetadata_p_tF",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onPublish",
+            "printedName": "onPublish(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SplunkAppStart.AppStartMetadata, SplunkAppStart.AppStartData) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(SplunkAppStart.AppStartMetadata, SplunkAppStart.AppStartData)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AppStartMetadata",
+                        "printedName": "SplunkAppStart.AppStartMetadata",
+                        "usr": "s:14SplunkAppStart0bC8MetadataV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AppStartData",
+                        "printedName": "SplunkAppStart.AppStartData",
+                        "usr": "s:14SplunkAppStart0bC4DataV"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SplunkAppStart0bC0C9onPublish4datayyAA0bC8MetadataV_AA0bC4DataVtc_tF",
+            "mangledName": "$s14SplunkAppStart0bC0C9onPublish4datayyAA0bC8MetadataV_AA0bC4DataVtc_tF",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14SplunkAppStart0bC0C",
+        "mangledName": "$s14SplunkAppStart0bC0C",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Module",
+            "printedName": "Module",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Configuration",
+                "printedName": "Configuration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppStartConfiguration",
+                    "printedName": "SplunkAppStart.AppStartConfiguration",
+                    "usr": "s:14SplunkAppStart0bC13ConfigurationV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "RemoteConfiguration",
+                "printedName": "RemoteConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppStartRemoteConfiguration",
+                    "printedName": "SplunkAppStart.AppStartRemoteConfiguration",
+                    "usr": "s:14SplunkAppStart0bC19RemoteConfigurationV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "EventMetadata",
+                "printedName": "EventMetadata",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppStartMetadata",
+                    "printedName": "SplunkAppStart.AppStartMetadata",
+                    "usr": "s:14SplunkAppStart0bC8MetadataV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "EventData",
+                "printedName": "EventData",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppStartData",
+                    "printedName": "SplunkAppStart.AppStartData",
+                    "usr": "s:14SplunkAppStart0bC4DataV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:12SplunkCommon6ModuleP",
+            "mangledName": "$s12SplunkCommon6ModuleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart"
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppStartData",
+        "printedName": "AppStartData",
+        "declKind": "Struct",
+        "usr": "s:14SplunkAppStart0bC4DataV",
+        "mangledName": "$s14SplunkAppStart0bC4DataV",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleEventData",
+            "printedName": "ModuleEventData",
+            "usr": "s:12SplunkCommon15ModuleEventDataP",
+            "mangledName": "$s12SplunkCommon15ModuleEventDataP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppStartMetadata",
+        "printedName": "AppStartMetadata",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SplunkAppStart0bC8MetadataV9timestamp10Foundation4DateVvp",
+            "mangledName": "$s14SplunkAppStart0bC8MetadataV9timestamp10Foundation4DateVvp",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SplunkAppStart0bC8MetadataV9timestamp10Foundation4DateVvg",
+                "mangledName": "$s14SplunkAppStart0bC8MetadataV9timestamp10Foundation4DateVvg",
+                "moduleName": "SplunkAppStart",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SplunkAppStart0bC8MetadataV9timestamp10Foundation4DateVvs",
+                "mangledName": "$s14SplunkAppStart0bC8MetadataV9timestamp10Foundation4DateVvs",
+                "moduleName": "SplunkAppStart",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SplunkAppStart0bC8MetadataV9timestamp10Foundation4DateVvM",
+                "mangledName": "$s14SplunkAppStart0bC8MetadataV9timestamp10Foundation4DateVvM",
+                "moduleName": "SplunkAppStart",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AppStartMetadata",
+                "printedName": "SplunkAppStart.AppStartMetadata",
+                "usr": "s:14SplunkAppStart0bC8MetadataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AppStartMetadata",
+                "printedName": "SplunkAppStart.AppStartMetadata",
+                "usr": "s:14SplunkAppStart0bC8MetadataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SplunkAppStart0bC8MetadataV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s14SplunkAppStart0bC8MetadataV2eeoiySbAC_ACtFZ",
+            "moduleName": "SplunkAppStart",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14SplunkAppStart0bC8MetadataV",
+        "mangledName": "$s14SplunkAppStart0bC8MetadataV",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleEventMetadata",
+            "printedName": "ModuleEventMetadata",
+            "usr": "s:12SplunkCommon19ModuleEventMetadataP",
+            "mangledName": "$s12SplunkCommon19ModuleEventMetadataP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppStartConfiguration",
+        "printedName": "AppStartConfiguration",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SplunkAppStart0bC13ConfigurationV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s14SplunkAppStart0bC13ConfigurationV6encode2toys7Encoder_p_tKF",
+            "moduleName": "SplunkAppStart",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14SplunkAppStart0bC13ConfigurationV",
+        "mangledName": "$s14SplunkAppStart0bC13ConfigurationV",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleConfiguration",
+            "printedName": "ModuleConfiguration",
+            "usr": "s:12SplunkCommon19ModuleConfigurationP",
+            "mangledName": "$s12SplunkCommon19ModuleConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkAppStart"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppStartRemoteConfiguration",
+        "printedName": "AppStartRemoteConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "enabled",
+            "printedName": "enabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SplunkAppStart0bC19RemoteConfigurationV7enabledSbvp",
+            "mangledName": "$s14SplunkAppStart0bC19RemoteConfigurationV7enabledSbvp",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SplunkAppStart0bC19RemoteConfigurationV7enabledSbvg",
+                "mangledName": "$s14SplunkAppStart0bC19RemoteConfigurationV7enabledSbvg",
+                "moduleName": "SplunkAppStart",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SplunkAppStart0bC19RemoteConfigurationV7enabledSbvs",
+                "mangledName": "$s14SplunkAppStart0bC19RemoteConfigurationV7enabledSbvs",
+                "moduleName": "SplunkAppStart",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SplunkAppStart0bC19RemoteConfigurationV7enabledSbvM",
+                "mangledName": "$s14SplunkAppStart0bC19RemoteConfigurationV7enabledSbvM",
+                "moduleName": "SplunkAppStart",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SplunkAppStart.AppStartRemoteConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppStartRemoteConfiguration",
+                    "printedName": "SplunkAppStart.AppStartRemoteConfiguration",
+                    "usr": "s:14SplunkAppStart0bC19RemoteConfigurationV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14SplunkAppStart0bC19RemoteConfigurationV4fromACSg10Foundation4DataV_tcfc",
+            "mangledName": "$s14SplunkAppStart0bC19RemoteConfigurationV4fromACSg10Foundation4DataV_tcfc",
+            "moduleName": "SplunkAppStart",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14SplunkAppStart0bC19RemoteConfigurationV",
+        "mangledName": "$s14SplunkAppStart0bC19RemoteConfigurationV",
+        "moduleName": "SplunkAppStart",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "RemoteModuleConfiguration",
+            "printedName": "RemoteModuleConfiguration",
+            "usr": "s:12SplunkCommon25RemoteModuleConfigurationP",
+            "mangledName": "$s12SplunkCommon25RemoteModuleConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAppStart\/Sources\/SplunkAppStart\/AppStart.swift",
+      "kind": "StringLiteral",
+      "offset": 1802,
+      "length": 10,
+      "value": "\"AppStart\""
+    },
+    {
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAppStart\/Sources\/SplunkAppStart\/AppStart.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2350,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAppStart\/Sources\/SplunkAppStart\/AppStart.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2617,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAppStart\/Sources\/SplunkAppStart\/AppStart.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2767,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAppStart\/Sources\/SplunkAppStart\/AppStart.swift",
+      "kind": "FloatLiteral",
+      "offset": 3117,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAppStart\/Sources\/SplunkAppStart\/Destination\/DebugDestination.swift",
+      "kind": "StringLiteral",
+      "offset": 1016,
+      "length": 10,
+      "value": "\"AppStart\""
+    }
+  ]
+}

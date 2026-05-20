@@ -1,0 +1,3 @@
+framework module CiscoEncryption {
+  header "CiscoEncryption-Swift.h"
+}

@@ -1,0 +1,55 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkAppStart
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+@_spi(SplunkInternal) import SplunkCommon
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum AppStartType : Swift.String {
+  case cold
+  case warm
+  case hot
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+final public class AppStart {
+  unowned final public var sharedState: (any SplunkCommon.AgentSharedState)?
+  required public init()
+  final public func startDetection()
+  final public func stopDetection()
+  final public func reportAgentInitialize(start: Foundation.Date, end: Foundation.Date, events: [Swift.String : Foundation.Date], configurationSettings: [Swift.String : Swift.String])
+  final public func track(didBecomeActive: Foundation.Date, didFinishLaunching: Foundation.Date?, willEnterForeground: Foundation.Date?)
+  @objc deinit
+}
+public struct AppStartData : SplunkCommon.ModuleEventData {
+}
+public struct AppStartMetadata : SplunkCommon.ModuleEventMetadata {
+  public var timestamp: Foundation.Date
+  public static func == (a: SplunkAppStart.AppStartMetadata, b: SplunkAppStart.AppStartMetadata) -> Swift.Bool
+}
+extension SplunkAppStart.AppStart : SplunkCommon.Module {
+  public typealias Configuration = SplunkAppStart.AppStartConfiguration
+  public typealias RemoteConfiguration = SplunkAppStart.AppStartRemoteConfiguration
+  public typealias EventMetadata = SplunkAppStart.AppStartMetadata
+  public typealias EventData = SplunkAppStart.AppStartData
+  final public func install(with _: (any SplunkCommon.ModuleConfiguration)?, remoteConfiguration _: (any SplunkCommon.RemoteModuleConfiguration)?)
+  final public func deleteData(for _: any SplunkCommon.ModuleEventMetadata)
+  final public func onPublish(data _: @escaping (SplunkAppStart.AppStartMetadata, SplunkAppStart.AppStartData) -> Swift.Void)
+}
+public struct AppStartConfiguration : SplunkCommon.ModuleConfiguration {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct AppStartRemoteConfiguration : SplunkCommon.RemoteModuleConfiguration {
+  public var enabled: Swift.Bool
+  public init?(from data: Foundation.Data)
+}
+extension SplunkAppStart.AppStartType : Swift.Equatable {}
+extension SplunkAppStart.AppStartType : Swift.Hashable {}
+extension SplunkAppStart.AppStartType : Swift.RawRepresentable {}

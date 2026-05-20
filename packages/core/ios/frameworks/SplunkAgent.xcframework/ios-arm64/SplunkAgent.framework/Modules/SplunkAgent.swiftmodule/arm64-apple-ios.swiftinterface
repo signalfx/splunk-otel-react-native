@@ -1,0 +1,664 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkAgent
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Combine
+import CoreGraphics
+import Foundation
+import OpenTelemetryApi
+import OpenTelemetrySdk
+import QuartzCore
+import Swift
+import SwiftUI
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension SplunkAgent.MutableAttributes : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension SplunkAgent.MutableAttributes : Swift.Equatable {
+  public static func == (lhs: SplunkAgent.MutableAttributes, rhs: SplunkAgent.MutableAttributes) -> Swift.Bool
+}
+public struct AgentConfiguration : Swift.Codable, Swift.Equatable {
+  public let endpoint: SplunkAgent.EndpointConfiguration?
+  public let appName: Swift.String
+  public let deploymentEnvironment: Swift.String
+  public var appVersion: Swift.String
+  public var enableDebugLogging: Swift.Bool
+  public var globalAttributes: SplunkAgent.MutableAttributes
+  public var spanInterceptor: ((OpenTelemetrySdk.SpanData) -> OpenTelemetrySdk.SpanData?)?
+  public var user: SplunkAgent.UserConfiguration
+  public var session: SplunkAgent.SessionConfiguration
+  public init(endpoint: SplunkAgent.EndpointConfiguration? = nil, appName: Swift.String, deploymentEnvironment: Swift.String)
+  @discardableResult
+  public func appVersion(_ appVersion: Swift.String) -> SplunkAgent.AgentConfiguration
+  @discardableResult
+  public func enableDebugLogging(_ enableDebugLogging: Swift.Bool) -> SplunkAgent.AgentConfiguration
+  @discardableResult
+  public func userConfiguration(_ userConfiguration: SplunkAgent.UserConfiguration) -> SplunkAgent.AgentConfiguration
+  @discardableResult
+  public func sessionConfiguration(_ sessionConfiguration: SplunkAgent.SessionConfiguration) -> SplunkAgent.AgentConfiguration
+  @discardableResult
+  public func globalAttributes(_ globalAttributes: SplunkAgent.MutableAttributes) -> SplunkAgent.AgentConfiguration
+  @discardableResult
+  public func spanInterceptor(_ spanInterceptor: ((OpenTelemetrySdk.SpanData) -> OpenTelemetrySdk.SpanData?)?) -> SplunkAgent.AgentConfiguration
+  public static func == (lhs: SplunkAgent.AgentConfiguration, rhs: SplunkAgent.AgentConfiguration) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers final public class AgentPreferences {
+  @objc deinit
+}
+extension SplunkAgent.AgentPreferences {
+  final public var endpointConfiguration: SplunkAgent.EndpointConfiguration? {
+    get
+    set
+  }
+  @discardableResult
+  final public func endpointConfiguration(_ endpoint: SplunkAgent.EndpointConfiguration) -> SplunkAgent.AgentPreferences
+}
+public struct EndpointConfiguration : Swift.Codable, Swift.Equatable {
+  public let realm: Swift.String?
+  public let rumAccessToken: Swift.String?
+  public let traceEndpoint: Foundation.URL?
+  public let sessionReplayEndpoint: Foundation.URL?
+  public init(realm: Swift.String, rumAccessToken: Swift.String)
+  public init(trace: Foundation.URL, sessionReplay: Foundation.URL? = nil)
+  public static func == (a: SplunkAgent.EndpointConfiguration, b: SplunkAgent.EndpointConfiguration) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension SplunkAgent.EndpointConfiguration : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class RuntimeState : Combine.ObservableObject {
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+extension SplunkAgent.RuntimeState {
+  final public var status: SplunkAgent.Status {
+    get
+  }
+  final public var appName: Swift.String {
+    get
+  }
+  final public var appVersion: Swift.String {
+    get
+  }
+  final public var endpointConfiguration: SplunkAgent.EndpointConfiguration? {
+    get
+  }
+  final public var deploymentEnvironment: Swift.String {
+    get
+  }
+  final public var isDebugLoggingEnabled: Swift.Bool {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class Session {
+  final public var state: SplunkAgent.SessionState {
+    get
+  }
+  @objc deinit
+}
+extension SplunkAgent.Session {
+  final public var metadata: Swift.String? {
+    get
+  }
+}
+extension SplunkAgent.Session {
+  public static let sessionWillResetNotification: Foundation.Notification.Name
+  public static let sessionDidResetNotification: Foundation.Notification.Name
+}
+extension SplunkAgent.Session {
+  final public func sessionId(for timestamp: Foundation.Date) -> Swift.String?
+}
+@_hasMissingDesignatedInitializers final public class SessionState {
+  @objc deinit
+}
+extension SplunkAgent.SessionState {
+  final public var id: Swift.String {
+    get
+  }
+  final public var start: Swift.Int64 {
+    get
+  }
+  final public var lastActivity: Swift.Int64 {
+    get
+  }
+  final public var samplingRate: Swift.Double {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class User {
+  final public var preferences: SplunkAgent.UserPreferences {
+    get
+  }
+  final public var state: SplunkAgent.UserState {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class UserPreferences {
+  @objc deinit
+}
+extension SplunkAgent.UserPreferences {
+  final public var trackingMode: SplunkAgent.UserTrackingMode {
+    get
+    set
+  }
+  @discardableResult
+  final public func trackingMode(_ trackingMode: SplunkAgent.UserTrackingMode) -> SplunkAgent.UserPreferences
+}
+@_hasMissingDesignatedInitializers final public class UserState {
+  @objc deinit
+}
+extension SplunkAgent.UserState {
+  final public var trackingMode: SplunkAgent.UserTrackingMode {
+    get
+  }
+}
+extension SplunkAgent.SplunkRum {
+  @available(*, deprecated, renamed: "SplunkRum.shared.customTracking.trackError(_:)", message: "This method will be removed in a later version.")
+  public static func reportError(string: Swift.String)
+  @available(*, deprecated, renamed: "SplunkRum.shared.customTracking.trackError(_:)", message: "This method will be removed in a later version.")
+  public static func reportError(error: any Swift.Error)
+  @available(*, deprecated, renamed: "SplunkRum.shared.customTracking.trackException(_:)", message: "This method will be removed in a later version.")
+  public static func reportError(exception: Foundation.NSException)
+  @available(*, deprecated, renamed: "SplunkRum.shared.customTracking.trackCustomEvent(_:_:)", message: "This method will be removed in a later version.")
+  public static func reportEvent(name: Swift.String, attributes: Foundation.NSDictionary)
+}
+extension SplunkAgent.SplunkRum {
+  @available(*, deprecated, renamed: "SplunkRum.shared.navigation.track(screen:)", message: "This method will be removed in a later version.")
+  public static func setScreenName(_ name: Swift.String)
+  @available(*, deprecated, message: "This method will be removed in a later version.")
+  public static func addScreenNameChangeCallback(_ callback: ((Swift.String) -> Swift.Void)?)
+}
+extension SplunkAgent.SplunkRum {
+  @available(*, deprecated, message: "This function will be removed in a later version. Use the new `SplunkRum.shared.session.state.id` API instead.")
+  public static func getSessionId() -> Swift.String
+  @available(*, deprecated, message: "This function will be removed in a later version. Use the new `SplunkRum.shared.state.status` API instead.")
+  public static func isInitialized() -> Swift.Bool
+  @available(*, deprecated, message: "This function will be removed in a later version. Use the new `SplunkRum.shared.globalAttributes` API instead.")
+  public static func setGlobalAttributes(_ attributes: [Swift.String : Any])
+  @available(*, deprecated, message: "This function will be removed in a later version. Use the new `SplunkRum.shared.globalAttributes` API instead.")
+  public static func removeGlobalAttribute(_ key: Swift.String)
+  @available(*, deprecated, message: "This function will be removed in a later version.")
+  public static func debugLog(_ msg: Swift.String)
+}
+extension SplunkAgent.SplunkRum {
+  @available(*, deprecated, renamed: "SplunkRum.shared.webView.integrateWithBrowserRum(_:)", message: "This method will be removed in a later version.")
+  public static func integrateWithBrowserRum(_ webView: WebKit.WKWebView)
+}
+@available(*, deprecated, message: "The SplunkRumBuilder class is no longer supported and will be removed in a later version.\nUse the `SplunkRum.install(with:moduleConfigurations:)` API instead.")
+public class SplunkRumBuilder {
+  @available(*, deprecated, message: "This initializer will be removed in a later version.\nUse the `SplunkRum.install(with:moduleConfigurations:)` API instead.")
+  public init(beaconUrl: Swift.String, rumAuth: Swift.String)
+  @available(*, deprecated, message: "This initializer will be removed in a later version.\nUse the `SplunkRum.install(with:moduleConfigurations:)` API instead.")
+  public init(realm: Swift.String, rumAuth: Swift.String)
+  @available(*, deprecated, message: "This builder method will be removed in a later version.\nUse `AgentConfiguration` `enableDebugLogging` instead.")
+  @discardableResult
+  public func debug(enabled: Swift.Bool) -> SplunkAgent.SplunkRumBuilder
+  @available(*, deprecated, message: "This builder method will be removed in a later version.\nUse `AgentConfiguration` `deploymentEnvironment` instead.")
+  @discardableResult
+  public func deploymentEnvironment(environment: Swift.String) -> SplunkAgent.SplunkRumBuilder
+  @available(*, deprecated, message: "This builder method will be removed in a later version.\nUse `AgentConfiguration` `SessionConfiguration` instead.")
+  @discardableResult
+  public func sessionSamplingRatio(samplingRatio: Swift.Double) -> SplunkAgent.SplunkRumBuilder
+  @available(*, deprecated, message: "This builder method will be removed in a later version.\nUse `AgentConfiguration` `appName` instead.")
+  @discardableResult
+  public func setApplicationName(_ appName: Swift.String) -> SplunkAgent.SplunkRumBuilder
+  @available(*, deprecated, message: "This builder method is a no-op and will be removed in a later version.")
+  @discardableResult
+  public func enableDiskCache(enabled _: Swift.Bool) -> SplunkAgent.SplunkRumBuilder
+  @available(*, deprecated, message: "This builder method will be removed in a later version.\nUse `AgentConfiguration` `MutableAttributes` instead.")
+  @discardableResult
+  public func globalAttributes(globalAttributes: [Swift.String : Any]) -> SplunkAgent.SplunkRumBuilder
+  @available(*, deprecated, message: "This builder method will be removed in a later version.\nUse `agentInstance.navigation.preferences.enableAutomatedTracking` instead.")
+  @discardableResult
+  public func showVCInstrumentation(_ show: Swift.Bool) -> SplunkAgent.SplunkRumBuilder
+  @available(*, deprecated, message: "This builder method will be removed in a later version. Use the `NavigationModule` configuration instead.")
+  @discardableResult
+  public func screenNameSpans(enabled: Swift.Bool) -> SplunkAgent.SplunkRumBuilder
+  @available(*, deprecated, message: "This builder method will be removed in a later version. Use the `SlowFrameDetectorModule` configuration instead.")
+  public func slowRenderingDetectionEnabled(_ isEnabled: Swift.Bool) -> SplunkAgent.SplunkRumBuilder
+  @available(*, deprecated, message: "This configuration has been discontinued and has no effect. Thresholds are now managed automatically.")
+  @discardableResult
+  public func slowFrameDetectionThresholdMs(thresholdMs: Swift.Double) -> SplunkAgent.SplunkRumBuilder
+  @available(*, deprecated, message: "This configuration has been discontinued and has no effect. Thresholds are now managed automatically.")
+  @discardableResult
+  public func frozenFrameDetectionThresholdMs(thresholdMs: Swift.Double) -> SplunkAgent.SplunkRumBuilder
+  @available(*, deprecated, message: "This builder method will be removed in a later version. Use the `NetworkInstrumentationModule` configuration instead.")
+  @discardableResult
+  public func networkInstrumentation(enabled: Swift.Bool) -> SplunkAgent.SplunkRumBuilder
+  @available(*, deprecated, message: "This builder method will be removed in a later version. Use the `NetworkInstrumentationConfiguration` instead.")
+  @discardableResult
+  public func ignoreURLs(ignoreURLs: Foundation.NSRegularExpression?) -> SplunkAgent.SplunkRumBuilder
+  @available(*, deprecated, message: "This builder method will be removed in a later version.\nUse the `SplunkRum.install(with:moduleConfigurations:)` API instead.")
+  @discardableResult
+  public func build() -> Swift.Bool
+  @objc deinit
+}
+public enum AgentConfigurationError : Swift.Error, Swift.Equatable {
+  case invalidEndpoint(supplied: SplunkAgent.EndpointConfiguration?)
+  case invalidAppName(supplied: Swift.String?)
+  case invalidRumAccessToken(supplied: Swift.String?)
+  case invalidDeploymentEnvironment(supplied: Swift.String?)
+  public static func == (a: SplunkAgent.AgentConfigurationError, b: SplunkAgent.AgentConfigurationError) -> Swift.Bool
+}
+extension SplunkAgent.AgentConfigurationError : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension SplunkAgent.AgentConfigurationError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public class MutableAttributes {
+  public init()
+  public init(dictionary: [Swift.String : OpenTelemetryApi.AttributeValue])
+  public init(attributeSet: OpenTelemetryApi.AttributeSet)
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+}
+extension SplunkAgent.MutableAttributes {
+  public subscript(key: Swift.String) -> OpenTelemetryApi.AttributeValue? {
+    get
+    set
+  }
+  public subscript(string key: Swift.String) -> Swift.String? {
+    get
+    set
+  }
+  public subscript(bool key: Swift.String) -> Swift.Bool? {
+    get
+    set
+  }
+  public subscript(int key: Swift.String) -> Swift.Int? {
+    get
+    set
+  }
+  public subscript(double key: Swift.String) -> Swift.Double? {
+    get
+    set
+  }
+  public subscript(array key: Swift.String) -> OpenTelemetryApi.AttributeArray? {
+    get
+    set
+  }
+  public subscript(set key: Swift.String) -> OpenTelemetryApi.AttributeSet? {
+    get
+    set
+  }
+}
+extension SplunkAgent.MutableAttributes {
+  public func getValue(for key: Swift.String) -> OpenTelemetryApi.AttributeValue?
+  public func getString(for key: Swift.String) -> Swift.String?
+  public func getBool(for key: Swift.String) -> Swift.Bool?
+  public func getInt(for key: Swift.String) -> Swift.Int?
+  public func getDouble(for key: Swift.String) -> Swift.Double?
+  public func getArray(for key: Swift.String) -> OpenTelemetryApi.AttributeArray?
+  public func getSet(for key: Swift.String) -> OpenTelemetryApi.AttributeSet?
+  public func setValue(_ value: OpenTelemetryApi.AttributeValue, for key: Swift.String)
+  public func setString(_ string: Swift.String, for key: Swift.String)
+  public func setBool(_ bool: Swift.Bool, for key: Swift.String)
+  public func setInt(_ int: Swift.Int, for key: Swift.String)
+  public func setDouble(_ double: Swift.Double, for key: Swift.String)
+  public func setArray(_ array: OpenTelemetryApi.AttributeArray, for key: Swift.String)
+  public func setSet(_ attributeSet: OpenTelemetryApi.AttributeSet, for key: Swift.String)
+}
+extension SplunkAgent.MutableAttributes {
+  @discardableResult
+  public func addDictionary(_ dictionary: [Swift.String : OpenTelemetryApi.AttributeValue]) -> Swift.Int
+  @discardableResult
+  public func addDictionary(_ dictionary: [Swift.String : OpenTelemetryApi.AttributeValue], intoNamespace namespace: Swift.String) -> Swift.Int
+  @discardableResult
+  public func addAttributeSet(_ attributeSet: OpenTelemetryApi.AttributeSet) -> Swift.Int
+  @discardableResult
+  public func addAttributeSet(_ attributeSet: OpenTelemetryApi.AttributeSet, intoNamespace namespace: Swift.String) -> Swift.Int
+}
+extension SplunkAgent.MutableAttributes {
+  @discardableResult
+  public func remove(for key: Swift.String) -> OpenTelemetryApi.AttributeValue?
+  public func removeAll()
+  public func contains(key: Swift.String) -> Swift.Bool
+  public func getAll() -> [Swift.String : OpenTelemetryApi.AttributeValue]
+  public func getAllKeys() -> [Swift.String]
+  public func getAllValues() -> [OpenTelemetryApi.AttributeValue]
+  public func count() -> Swift.Int
+  public var all: [Swift.String : Any] {
+    get
+  }
+}
+extension SplunkAgent.MutableAttributes : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public struct SessionConfiguration : Swift.Codable, Swift.Equatable {
+  public var samplingRate: Swift.Double
+  public init()
+  public init(samplingRate: Swift.Double)
+  public static func == (a: SplunkAgent.SessionConfiguration, b: SplunkAgent.SessionConfiguration) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum Status : Swift.Equatable {
+  case running
+  case notRunning(SplunkAgent.Status.Cause)
+  public enum Cause {
+    case notInstalled
+    case unsupportedPlatform
+    case sampledOut
+    public static func == (a: SplunkAgent.Status.Cause, b: SplunkAgent.Status.Cause) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static func == (a: SplunkAgent.Status, b: SplunkAgent.Status) -> Swift.Bool
+}
+extension SplunkAgent.Status.Cause : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct UserConfiguration : Swift.Codable, Swift.Equatable {
+  public var trackingMode: SplunkAgent.UserTrackingMode
+  public init()
+  public init(trackingMode: SplunkAgent.UserTrackingMode)
+  public static func == (a: SplunkAgent.UserConfiguration, b: SplunkAgent.UserConfiguration) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum UserTrackingMode : Swift.Codable, Swift.Equatable {
+  case noTracking
+  case anonymousTracking
+  public static func == (a: SplunkAgent.UserTrackingMode, b: SplunkAgent.UserTrackingMode) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension SplunkAgent.UserTrackingMode {
+  public static let `default`: SplunkAgent.UserTrackingMode
+}
+public protocol AppStartModule {
+}
+public protocol CustomTrackingModule {
+  @discardableResult
+  func trackCustomEvent(_ name: Swift.String, _ attributes: SplunkAgent.MutableAttributes) -> any SplunkAgent.CustomTrackingModule
+  @discardableResult
+  func trackError(_ message: Swift.String, _ attributes: SplunkAgent.MutableAttributes) -> any SplunkAgent.CustomTrackingModule
+  @discardableResult
+  func trackError(_ error: any Swift.Error, _ attributes: SplunkAgent.MutableAttributes) -> any SplunkAgent.CustomTrackingModule
+  @discardableResult
+  func trackException(_ exception: Foundation.NSException, _ attributes: SplunkAgent.MutableAttributes) -> any SplunkAgent.CustomTrackingModule
+  func trackWorkflow(_ workflowName: Swift.String) -> any OpenTelemetryApi.Span
+  @discardableResult
+  func trackCustomEvent(_ name: Swift.String) -> any SplunkAgent.CustomTrackingModule
+  @discardableResult
+  func trackError(_ message: Swift.String) -> any SplunkAgent.CustomTrackingModule
+  @discardableResult
+  func trackError(_ error: any Swift.Error) -> any SplunkAgent.CustomTrackingModule
+  @discardableResult
+  func trackException(_ exception: Foundation.NSException) -> any SplunkAgent.CustomTrackingModule
+}
+@_hasMissingDesignatedInitializers final public class NavigationPreferences : SplunkAgent.NavigationModulePreferences, Swift.Codable {
+  final public var enableAutomatedTracking: Swift.Bool? {
+    get
+    set
+  }
+  @discardableResult
+  final public func enableAutomatedTracking(_ enable: Swift.Bool?) -> any SplunkAgent.NavigationModulePreferences
+  @objc deinit
+  final public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension SplunkAgent.NavigationPreferences {
+  convenience public init(enableAutomatedTracking: Swift.Bool?)
+}
+@_hasMissingDesignatedInitializers final public class NavigationState : SplunkAgent.NavigationModuleState {
+  final public var isAutomatedTrackingEnabled: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class NavigationNonOperationalState : SplunkAgent.NavigationModuleState {
+  final public var isAutomatedTrackingEnabled: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+public protocol NavigationModule : Combine.ObservableObject {
+  var preferences: any SplunkAgent.NavigationModulePreferences { get set }
+  @discardableResult
+  func preferences(_ preferences: any SplunkAgent.NavigationModulePreferences) -> any SplunkAgent.NavigationModule
+  var state: any SplunkAgent.NavigationModuleState { get }
+  @discardableResult
+  func track(screen name: Swift.String) -> any SplunkAgent.NavigationModule
+}
+public protocol NavigationModulePreferences {
+  var enableAutomatedTracking: Swift.Bool? { get set }
+  @discardableResult
+  func enableAutomatedTracking(_ enable: Swift.Bool?) -> any SplunkAgent.NavigationModulePreferences
+  init(enableAutomatedTracking: Swift.Bool?)
+}
+public protocol NavigationModuleState {
+  var isAutomatedTrackingEnabled: Swift.Bool { get }
+}
+@_hasMissingDesignatedInitializers final public class SessionReplayPreferences : SplunkAgent.SessionReplayModulePreferences, Swift.Codable {
+  final public var renderingMode: SplunkAgent.RenderingMode? {
+    get
+    set
+  }
+  @discardableResult
+  final public func renderingMode(_ renderingMode: SplunkAgent.RenderingMode?) -> any SplunkAgent.SessionReplayModulePreferences
+  @objc deinit
+  final public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension SplunkAgent.SessionReplayPreferences {
+  convenience public init(renderingMode: SplunkAgent.RenderingMode)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var splunkRumId: Swift.String? {
+    get
+    set
+  }
+}
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func sessionReplaySensitive(_ sensitive: Swift.Bool = true) -> some SwiftUICore.View
+  
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var srSensitive: Swift.Bool? {
+    get
+    set
+  }
+}
+public protocol SessionReplayModule : Combine.ObservableObject {
+  var sensitivity: any SplunkAgent.SessionReplayModuleSensitivity { get }
+  var customIdentifiers: any SplunkAgent.SessionReplayModuleCustomId { get }
+  var state: any SplunkAgent.SessionReplayModuleState { get }
+  var preferences: any SplunkAgent.SessionReplayModulePreferences { get set }
+  @discardableResult
+  func preferences(_ preferences: any SplunkAgent.SessionReplayModulePreferences) -> any SplunkAgent.SessionReplayModule
+  @discardableResult
+  func start() -> any SplunkAgent.SessionReplayModule
+  @discardableResult
+  func stop() -> any SplunkAgent.SessionReplayModule
+  var recordingMask: SplunkAgent.RecordingMask? { get set }
+  @discardableResult
+  func recordingMask(_ recordingMask: SplunkAgent.RecordingMask?) -> any SplunkAgent.SessionReplayModule
+}
+public protocol SessionReplayModuleCustomId : AnyObject {
+  subscript(_: UIKit.UIView) -> Swift.String? { get set }
+  @discardableResult
+  func set(_ view: UIKit.UIView, _ customId: Swift.String?) -> any SplunkAgent.SessionReplayModuleCustomId
+}
+public protocol SessionReplayModulePreferences {
+  var renderingMode: SplunkAgent.RenderingMode? { get set }
+  @discardableResult
+  func renderingMode(_ renderingMode: SplunkAgent.RenderingMode?) -> any SplunkAgent.SessionReplayModulePreferences
+  init(renderingMode: SplunkAgent.RenderingMode)
+}
+public protocol SessionReplayModuleSensitivity : AnyObject {
+  subscript(_: UIKit.UIView) -> Swift.Bool? { get set }
+  @discardableResult
+  func set(_ view: UIKit.UIView, _ sensitive: Swift.Bool?) -> any SplunkAgent.SessionReplayModuleSensitivity
+  subscript(_: UIKit.UIView.Type) -> Swift.Bool? { get set }
+  @discardableResult
+  func set(_ viewClass: UIKit.UIView.Type, _ sensitive: Swift.Bool?) -> any SplunkAgent.SessionReplayModuleSensitivity
+}
+public protocol SessionReplayModuleState {
+  var status: SplunkAgent.SessionReplayStatus { get }
+  var isRecording: Swift.Bool { get }
+  var renderingMode: SplunkAgent.RenderingMode { get }
+  var samplingRate: Swift.Double { get }
+}
+public struct MaskElement : Swift.Codable, Swift.Equatable {
+  public enum MaskType : Swift.Int, Swift.Codable {
+    case covering
+    case erasing
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public let rect: CoreFoundation.CGRect
+  public let type: SplunkAgent.MaskElement.MaskType
+  public init(rect: CoreFoundation.CGRect, type: SplunkAgent.MaskElement.MaskType = .covering)
+  public static func == (a: SplunkAgent.MaskElement, b: SplunkAgent.MaskElement) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RecordingMask : Swift.Codable, Swift.Equatable {
+  public var elements: [SplunkAgent.MaskElement]
+  public init(elements: [SplunkAgent.MaskElement] = [])
+  public static func == (a: SplunkAgent.RecordingMask, b: SplunkAgent.RecordingMask) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum RenderingMode : Swift.Equatable, Swift.Codable {
+  case native
+  case wireframeOnly
+  public static func == (a: SplunkAgent.RenderingMode, b: SplunkAgent.RenderingMode) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension SplunkAgent.RenderingMode {
+  public static let `default`: SplunkAgent.RenderingMode
+}
+public enum SessionReplayStatus : Swift.Equatable {
+  case recording
+  case notRecording(SplunkAgent.SessionReplayStatus.Cause)
+  public enum Cause {
+    case notStarted
+    case stopped
+    case internalError
+    case swiftUIPreviewContext
+    case unsupportedPlatform
+    case storageLimitReached
+    case disabledBySampling
+    public static func == (a: SplunkAgent.SessionReplayStatus.Cause, b: SplunkAgent.SessionReplayStatus.Cause) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static func == (a: SplunkAgent.SessionReplayStatus, b: SplunkAgent.SessionReplayStatus) -> Swift.Bool
+}
+public protocol SlowFrameDetectorModule {
+  var state: any SplunkAgent.SlowFrameDetectorModuleState { get }
+}
+public protocol SlowFrameDetectorModuleState {
+  var isEnabled: Swift.Bool { get }
+}
+public protocol WebViewInstrumentationModule {
+  func integrateWithBrowserRum(_ view: WebKit.WKWebView)
+}
+extension SplunkAgent.SplunkRum {
+  public func updateEndpoint(_ endpoint: SplunkAgent.EndpointConfiguration) throws
+  public func disableEndpoint()
+}
+@_hasMissingDesignatedInitializers public class SplunkRum : Combine.ObservableObject {
+  public static var shared: SplunkAgent.SplunkRum {
+    get
+  }
+  public var user: SplunkAgent.User {
+    get
+  }
+  public var session: SplunkAgent.Session {
+    get
+  }
+  public var preferences: SplunkAgent.AgentPreferences {
+    get
+  }
+  public var globalAttributes: SplunkAgent.MutableAttributes {
+    get
+  }
+  public var state: SplunkAgent.RuntimeState {
+    get
+  }
+  public var openTelemetry: OpenTelemetryApi.OpenTelemetry {
+    get
+  }
+  public var sessionReplay: any SplunkAgent.SessionReplayModule {
+    get
+  }
+  public var customTracking: any SplunkAgent.CustomTrackingModule {
+    get
+  }
+  public var navigation: any SplunkAgent.NavigationModule {
+    get
+  }
+  public var slowFrameDetector: any SplunkAgent.SlowFrameDetectorModule {
+    get
+  }
+  public var webViewNativeBridge: any SplunkAgent.WebViewInstrumentationModule {
+    get
+  }
+  public static func install(with configuration: SplunkAgent.AgentConfiguration, moduleConfigurations: [Any]? = nil) throws -> SplunkAgent.SplunkRum
+  public static let version: Swift.String
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class SplunkAgentResources : ObjectiveC.NSObject {
+  @objc final public class var bundle: Foundation.Bundle {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension SplunkAgent.Status.Cause : Swift.Equatable {}
+extension SplunkAgent.Status.Cause : Swift.Hashable {}
+extension SplunkAgent.UserTrackingMode : Swift.Hashable {}
+extension SplunkAgent.MaskElement.MaskType : Swift.Equatable {}
+extension SplunkAgent.MaskElement.MaskType : Swift.Hashable {}
+extension SplunkAgent.MaskElement.MaskType : Swift.RawRepresentable {}
+extension SplunkAgent.RenderingMode : Swift.Hashable {}
+extension SplunkAgent.SessionReplayStatus.Cause : Swift.Equatable {}
+extension SplunkAgent.SessionReplayStatus.Cause : Swift.Hashable {}

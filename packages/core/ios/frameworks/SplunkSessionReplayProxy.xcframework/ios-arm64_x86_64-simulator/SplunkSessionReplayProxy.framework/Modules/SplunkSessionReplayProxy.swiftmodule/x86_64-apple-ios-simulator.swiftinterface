@@ -1,0 +1,36 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkSessionReplayProxy
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import CiscoSessionReplay
+import Foundation
+import SplunkCommon
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension Foundation.Data : SplunkCommon.ModuleEventData {
+}
+extension CiscoSessionReplay.Metadata : SplunkCommon.ModuleEventMetadata {
+  public var timestamp: Foundation.Date {
+    get
+  }
+}
+public struct SessionReplayConfiguration : SplunkCommon.ModuleConfiguration {
+  public var enabled: Swift.Bool
+  public var samplingRate: Swift.Double?
+  public init(enabled: Swift.Bool = true, samplingRate: Swift.Double? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct SessionReplayRemoteConfiguration : SplunkCommon.RemoteModuleConfiguration {
+  public var enabled: Swift.Bool
+  public init?(from data: Foundation.Data)
+}
+extension CiscoSessionReplay.SessionReplay : SplunkCommon.Module {
+  public typealias Configuration = SplunkSessionReplayProxy.SessionReplayConfiguration
+  public typealias RemoteConfiguration = SplunkSessionReplayProxy.SessionReplayRemoteConfiguration
+  public typealias EventMetadata = CiscoSessionReplay.Metadata
+  public typealias EventData = Foundation.Data
+  final public func install(with _: (any SplunkCommon.ModuleConfiguration)?, remoteConfiguration _: (any SplunkCommon.RemoteModuleConfiguration)?)
+  final public func deleteData(for metadata: any SplunkCommon.ModuleEventMetadata)
+}

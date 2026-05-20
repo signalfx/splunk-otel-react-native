@@ -165,8 +165,6 @@ jobs:
         include:
           - arch: old
             new_arch_enabled: '0'
-            # TODO: Prebuilt RNCore causes linking errors with USE_FRAMEWORKS=dynamic on old arch
-            # Re-test after RN updates to see if this can be enabled
             use_prebuilt_rncore: '0'
           - arch: new
             new_arch_enabled: '1'
@@ -178,7 +176,6 @@ jobs:
       RCT_NEW_ARCH_ENABLED: ${{ matrix.new_arch_enabled }}
       RCT_USE_RN_DEP: 1
       RCT_USE_PREBUILT_RNCORE: ${{ matrix.use_prebuilt_rncore }}
-      USE_FRAMEWORKS: dynamic
 
     steps:
       - name: Checkout
@@ -217,9 +214,6 @@ jobs:
           fi
           xcodebuild -version
 
-      # CocoaPods cache disabled - need fresh pod install with USE_FRAMEWORKS=dynamic bcs of our SPM SDK
-      # TODO: Re-enable caching once Podfile.lock is regenerated with dynamic frameworks
-
       - name: Set architecture in Podfile
         if: env.turbo_cache_hit != 1
         run: |
@@ -231,12 +225,11 @@ jobs:
           echo "Architecture setting:"
           head -1 example/ios/Podfile
 
-      - name: Clean Pods (ensure fresh dynamic framework build)
+      - name: Clean Pods
         if: env.turbo_cache_hit != 1
         run: |
           rm -rf example/ios/Pods
           rm -rf example/ios/build
-          rm -rf ~/Library/Caches/CocoaPods
           rm -f example/ios/Podfile.lock
 
       - name: Install CocoaPods
@@ -245,7 +238,7 @@ jobs:
           cd example
           bundle install
           bundle exec pod repo update --verbose
-          RCT_NEW_ARCH_ENABLED=${{ matrix.new_arch_enabled }} USE_FRAMEWORKS=dynamic bundle exec pod install --project-directory=ios
+          RCT_NEW_ARCH_ENABLED=${{ matrix.new_arch_enabled }} bundle exec pod install --project-directory=ios
 
       - name: Build example app for iOS (${{ matrix.arch }})
         env:

@@ -1,0 +1,3 @@
+framework module CiscoSwizzling {
+  header "CiscoSwizzling-Swift.h"
+}

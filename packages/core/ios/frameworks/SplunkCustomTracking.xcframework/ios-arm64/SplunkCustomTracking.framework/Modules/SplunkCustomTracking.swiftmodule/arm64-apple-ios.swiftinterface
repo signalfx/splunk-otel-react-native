@@ -1,0 +1,88 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkCustomTracking
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import CiscoLogger
+import Foundation
+import OpenTelemetryApi
+import SplunkCommon
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension SplunkCustomTracking.CustomTrackingInternal {
+  final public func track(_ event: SplunkCustomTracking.SplunkTrackableEvent)
+  final public func track(_ issue: any SplunkCustomTracking.SplunkTrackableIssue, _ attributes: [Swift.String : SplunkCommon.EventAttributeValue])
+  final public func track(_ workflowName: Swift.String) -> any OpenTelemetryApi.Span
+}
+public struct CustomTrackingMetadata : SplunkCommon.ModuleEventMetadata {
+  public var timestamp: Foundation.Date
+  public static func == (a: SplunkCustomTracking.CustomTrackingMetadata, b: SplunkCustomTracking.CustomTrackingMetadata) -> Swift.Bool
+}
+public struct CustomTrackingData : SplunkCommon.ModuleEventData {
+  public let name: Swift.String
+  public let component: Swift.String
+  public let attributes: [Swift.String : SplunkCommon.EventAttributeValue]
+  public init(name: Swift.String, component: Swift.String, attributes: [Swift.String : SplunkCommon.EventAttributeValue])
+}
+final public class CustomTrackingInternal {
+  public static var instance: SplunkCustomTracking.CustomTrackingInternal
+  unowned final public var sharedState: (any SplunkCommon.AgentSharedState)?
+  final public var onPublishBlock: ((SplunkCustomTracking.CustomTrackingMetadata, SplunkCustomTracking.CustomTrackingData) -> Swift.Void)?
+  required public init()
+  @objc deinit
+}
+public struct Stacktrace {
+}
+extension SplunkCustomTracking.Stacktrace {
+  public var formatted: Swift.String {
+    get
+  }
+}
+extension SplunkCustomTracking.CustomTrackingInternal : SplunkCommon.Module {
+  public typealias Configuration = SplunkCustomTracking.CustomTrackingConfiguration
+  public typealias RemoteConfiguration = SplunkCustomTracking.CustomTrackingRemoteConfiguration
+  public typealias EventMetadata = SplunkCustomTracking.CustomTrackingMetadata
+  public typealias EventData = SplunkCustomTracking.CustomTrackingData
+  final public func install(with _: (any SplunkCommon.ModuleConfiguration)?, remoteConfiguration _: (any SplunkCommon.RemoteModuleConfiguration)?)
+  final public func onPublish(data: @escaping (SplunkCustomTracking.CustomTrackingMetadata, SplunkCustomTracking.CustomTrackingData) -> Swift.Void)
+  final public func deleteData(for _: any SplunkCommon.ModuleEventMetadata)
+}
+public struct CustomTrackingConfiguration : SplunkCommon.ModuleConfiguration {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct CustomTrackingRemoteConfiguration : SplunkCommon.RemoteModuleConfiguration {
+  public var enabled: Swift.Bool
+  public init?(from data: Foundation.Data)
+}
+public protocol SplunkTrackable {
+  var timestamp: Foundation.Date { get }
+  func toAttributesDictionary() -> [Swift.String : SplunkCommon.EventAttributeValue]
+}
+public struct SplunkTrackableEvent : SplunkCustomTracking.SplunkTrackable {
+  public var timestamp: Foundation.Date
+  public var timestampEnd: Foundation.Date?
+  public var eventName: Swift.String
+  public var attributes: [Swift.String : SplunkCommon.EventAttributeValue]
+  public init(eventName: Swift.String, attributes: [Swift.String : SplunkCommon.EventAttributeValue] = [:])
+  public func toAttributesDictionary() -> [Swift.String : SplunkCommon.EventAttributeValue]
+}
+public protocol SplunkTrackableIssue : SplunkCustomTracking.SplunkTrackable {
+  var message: Swift.String { get }
+  var exceptionType: Swift.String { get }
+  var stacktrace: SplunkCustomTracking.Stacktrace? { get }
+}
+extension SplunkCustomTracking.SplunkTrackableIssue {
+  public func toAttributesDictionary() -> [Swift.String : SplunkCommon.EventAttributeValue]
+}
+public struct SplunkIssue : SplunkCustomTracking.SplunkTrackableIssue {
+  public let message: Swift.String
+  public let exceptionType: Swift.String
+  public let timestamp: Foundation.Date
+  public var stacktrace: SplunkCustomTracking.Stacktrace?
+  public let exceptionCode: SplunkCommon.EventAttributeValue?
+  public let codeNamespace: Swift.String?
+  public init(from message: Swift.String)
+  public init(from error: any Swift.Error)
+  public init(from exception: Foundation.NSException)
+}

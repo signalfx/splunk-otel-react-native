@@ -1,0 +1,34 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CiscoRuntimeCache
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import CiscoLogger
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public actor RuntimeCache<T> where T : Swift.Sendable {
+  final public let name: Swift.String?
+  public var count: Swift.Int {
+    get
+  }
+  public init(name: Swift.String? = nil, poolName: Swift.String, garbageCollectionCount: Swift.Int)
+  nonisolated public func append(value: T?, for owner: Swift.AnyObject) async
+  nonisolated public func append(value: T?, for owner: Swift.AnyObject, with identifier: Swift.ObjectIdentifier) async
+  public func reset()
+  nonisolated public func value(for owner: Swift.AnyObject) async -> T?
+  public func value(for identifier: Swift.ObjectIdentifier) -> T?
+  nonisolated public func readValue(for owner: Swift.AnyObject, orGenerate value: () -> T?) async -> T?
+  public func requestGarbageCollection(force: Swift.Bool = false)
+  @objc deinit
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  @_semantics("defaultActor") nonisolated final public var unownedExecutor: _Concurrency.UnownedSerialExecutor {
+    get
+  }
+}
+extension CiscoRuntimeCache.RuntimeCache : @preconcurrency Swift.CustomReflectable {
+  public var customMirror: Swift.Mirror {
+    get
+  }
+}

@@ -95,7 +95,7 @@ set_ios_arch() {
 install_pods() {
     print_status "Installing iOS pods..."
     cd "$EXAMPLE_DIR/ios"
-    USE_FRAMEWORKS=dynamic bundle exec pod install || USE_FRAMEWORKS=dynamic pod install
+    bundle exec pod install || pod install
     cd "$ROOT_DIR"
 }
 

@@ -1,0 +1,3 @@
+framework module CiscoCommon {
+  header "CiscoCommon-Swift.h"
+}

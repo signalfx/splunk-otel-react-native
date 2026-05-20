@@ -1,0 +1,146 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkCommon
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import OpenTelemetryApi
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol AgentSharedState : AnyObject, Swift.Sendable {
+  var sessionId: Swift.String { get }
+  var agentVersion: Swift.String { get }
+  func applicationState(for timestamp: Foundation.Date) -> Swift.String?
+}
+public protocol ActivityTracker {
+  func trackActivity(at date: Foundation.Date)
+}
+public protocol AgentEvent {
+  var domain: Swift.String { get }
+  var name: Swift.String { get }
+  var instrumentationScope: Swift.String { get }
+  var component: Swift.String { get }
+  var sessionId: Swift.String? { get set }
+  var timestamp: Foundation.Date? { get set }
+  var attributes: [Swift.String : SplunkCommon.EventAttributeValue]? { get set }
+  var body: SplunkCommon.EventAttributeValue? { get set }
+}
+public enum EventAttributeValue : Swift.Equatable, Swift.Hashable {
+  case string(Swift.String)
+  case int(Swift.Int)
+  case double(Swift.Double)
+  case data(Foundation.Data)
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: SplunkCommon.EventAttributeValue, b: SplunkCommon.EventAttributeValue) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension SplunkCommon.EventAttributeValue {
+  public init(_ value: Swift.String)
+  public init(_ value: Swift.Int)
+  public init(_ value: Swift.Double)
+  public init(_ value: Foundation.Data)
+}
+public protocol LogEventProcessor {
+  func sendEvent(_: any SplunkCommon.AgentEvent, completion: @escaping (Swift.Bool) -> Swift.Void)
+  func sendEvent(event: any SplunkCommon.AgentEvent, immediateProcessing: Swift.Bool, completion: @escaping (Swift.Bool) -> Swift.Void)
+}
+public protocol TraceProcessor {
+}
+public protocol ModuleEventData {
+}
+public protocol ModuleEventMetadata : Swift.Equatable {
+  var timestamp: Foundation.Date { get }
+}
+public protocol Module {
+  associatedtype Configuration : SplunkCommon.ModuleConfiguration
+  associatedtype RemoteConfiguration : SplunkCommon.RemoteModuleConfiguration
+  associatedtype EventMetadata : SplunkCommon.ModuleEventMetadata
+  associatedtype EventData : SplunkCommon.ModuleEventData
+  init()
+  func install(with configuration: (any SplunkCommon.ModuleConfiguration)?, remoteConfiguration: (any SplunkCommon.RemoteModuleConfiguration)?)
+  func onPublish(data: @escaping (Self.EventMetadata, Self.EventData) -> Swift.Void)
+  func deleteData(for metadata: any SplunkCommon.ModuleEventMetadata)
+}
+public protocol ModuleConfiguration : Swift.Encodable {
+}
+public protocol RemoteModuleConfiguration {
+  var enabled: Swift.Bool { get }
+  init?(from data: Foundation.Data)
+}
+public protocol PackageIdentification {
+  static var `default`: Swift.String { get }
+  static func `default`(named: Swift.String) -> Swift.String
+}
+extension SplunkCommon.PackageIdentifier {
+  public static func instance(named: Swift.String = "default") -> Swift.String
+  public static func nonOperationalInstance(named: Swift.String = "default") -> Swift.String
+}
+public struct PackageIdentifier : SplunkCommon.PackageIdentification {
+  public static var `default`: Swift.String
+  public static func `default`(named: Swift.String) -> Swift.String
+}
+public protocol AgentPersistentCache<Element> : Swift.Sendable {
+  associatedtype Element : Swift.Decodable, Swift.Encodable, Swift.Sendable
+  var uniqueCacheName: Swift.String { get }
+  var maximumCapacity: Swift.Int { get }
+  var maximumLifetime: Foundation.TimeInterval? { get }
+  var isRestored: Swift.Bool { get async }
+  var keys: [Swift.String] { get async }
+  var values: [Self.Element] { get async }
+  func elements(from start: Foundation.Date?, to end: Foundation.Date?) async -> [Swift.String : Self.Element]
+  func value(forKey key: Swift.String) async throws -> Self.Element?
+  func update(_ element: Self.Element, forKey key: Swift.String) async throws
+  func remove(forKey key: Swift.String) async throws
+  func sync() async throws
+}
+@_hasMissingDesignatedInitializers final public class DefaultPersistentCache<Element> : SplunkCommon.AgentPersistentCache where Element : Swift.Decodable, Element : Swift.Encodable, Element : Swift.Equatable, Element : Swift.Sendable {
+  final public let uniqueCacheName: Swift.String
+  final public let maximumCapacity: Swift.Int
+  final public let maximumLifetime: Foundation.TimeInterval?
+  final public var isRestored: Swift.Bool {
+    get async
+  }
+  final public var keys: [Swift.String] {
+    get async
+  }
+  final public var values: [Element] {
+    get async
+  }
+  convenience public init(uniqueCacheName: Swift.String, maximumCapacity: Swift.Int? = nil, maximumLifetime: Foundation.TimeInterval? = nil)
+  final public func elements(from start: Foundation.Date? = nil, to end: Foundation.Date? = nil) async -> [Swift.String : Element]
+  final public func value(forKey key: Swift.String) async throws -> Element?
+  final public func update(_ element: Element, forKey key: Swift.String) async throws
+  final public func remove(forKey key: Swift.String) async throws
+  final public func sync() async throws
+  @objc deinit
+}
+public protocol AgentResources {
+  var appName: Swift.String { get }
+  var appVersion: Swift.String { get }
+  var appBuild: Swift.String { get }
+  var appDeploymentEnvironment: Swift.String { get }
+  var agentHybridType: Swift.String? { get }
+  var agentVersion: Swift.String { get }
+  var deviceModelIdentifier: Swift.String { get }
+  var deviceManufacturer: Swift.String { get }
+  var deviceID: Swift.String { get }
+  var osName: Swift.String { get }
+  var osVersion: Swift.String { get }
+  var osDescription: Swift.String { get }
+  var osType: Swift.String { get }
+}
+public protocol RuntimeAttributes : AnyObject {
+  var all: [Swift.String : Any] { get }
+}
+@_spi(SplunkInternal) extension OpenTelemetryApi.Span {
+  @_spi(SplunkInternal) public func clearAndSetAttribute(key: Swift.String, value: OpenTelemetryApi.AttributeValue)
+  @_spi(SplunkInternal) public func clearAndSetAttribute(key: Swift.String, value: Any)
+  @_spi(SplunkInternal) public func clearAndSetAttribute<T>(key: T, value: OpenTelemetryApi.AttributeValue) where T : Swift.RawRepresentable, T.RawValue == Swift.String
+  @_spi(SplunkInternal) public func clearAndSetAttribute<T>(key: T, value: Any) where T : Swift.RawRepresentable, T.RawValue == Swift.String
+}

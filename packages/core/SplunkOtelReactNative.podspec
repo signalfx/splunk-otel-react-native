@@ -12,27 +12,52 @@ Pod::Spec.new do |s|
 
   s.platforms    = { :ios => "15.0" }
   s.source       = { :git => "" }
-  s.static_framework = false
 
   s.source_files = "ios/**/*.{h,m,mm,swift,cpp}"
+  s.exclude_files = ["ios/frameworks/*.xcframework/**/*.h"]
   s.private_header_files = "ios/**/*.h"
+
+  s.preserve_paths = [
+    "ios/*.xcframework",
+    "ios/**/*.h",
+    "ios/*.xcframework/**/*.h"
+  ]
 
   s.swift_version = "5.9"
 
-  # SPM dependency for native iOS SDK
-  spm_dependency(s,  
-     url: 'https://github.com/signalfx/splunk-otel-ios.git', 
-     requirement: { kind: 'exactVersion', version: '2.2.2' },
-     products: ['SplunkAgent']
-  )
+  s.vendored_frameworks =
+    "ios/frameworks/SplunkAgent.xcframework",
+    "ios/frameworks/SplunkAgentObjC.xcframework",
+    "ios/frameworks/SplunkAppStart.xcframework",
+    "ios/frameworks/SplunkAppState.xcframework",
+    "ios/frameworks/SplunkCommon.xcframework",
+    "ios/frameworks/SplunkCrashReports.xcframework",
+    "ios/frameworks/SplunkCustomTracking.xcframework",
+    "ios/frameworks/SplunkInteractions.xcframework",
+    "ios/frameworks/SplunkNavigation.xcframework",
+    "ios/frameworks/SplunkNetwork.xcframework",
+    "ios/frameworks/SplunkNetworkMonitor.xcframework",
+    "ios/frameworks/SplunkOpenTelemetry.xcframework",
+    "ios/frameworks/SplunkOpenTelemetryBackgroundExporter.xcframework",
+    "ios/frameworks/SplunkSessionReplayProxy.xcframework",
+    "ios/frameworks/SplunkSlowFrameDetector.xcframework",
+    "ios/frameworks/SplunkWebView.xcframework",
+    "ios/frameworks/OpenTelemetryApi.xcframework",
+    "ios/frameworks/OpenTelemetrySdk.xcframework",
+    "ios/frameworks/CrashReporter.xcframework",
+    "ios/frameworks/CiscoCommon.xcframework",
+    "ios/frameworks/CiscoDiskStorage.xcframework",
+    "ios/frameworks/CiscoEncryption.xcframework",
+    "ios/frameworks/CiscoInstanceManager.xcframework",
+    "ios/frameworks/CiscoInteractions.xcframework",
+    "ios/frameworks/CiscoLogger.xcframework",
+    "ios/frameworks/CiscoRuntimeCache.xcframework",
+    "ios/frameworks/CiscoSessionReplay.xcframework",
+    "ios/frameworks/CiscoSwizzling.xcframework"
 
-  # This is required to make transitive SPM dependencies (e.g. OpenTelemetryApi through our agent) available
-  # by providing these extended search paths (RN's spm_dependency helper only adds the root build-products dir to
-  # SWIFT_INCLUDE_PATHS).
-  # It's mirrored in session-replay aswell.
   s.pod_target_xcconfig = {
     "DEFINES_MODULE" => "YES",
-    "FRAMEWORK_SEARCH_PATHS" => "$(inherited) \"${SYMROOT}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/PackageFrameworks\""
+    "SWIFT_VERSION" => "5.0"
   }
 
   s.dependency "React-Core"

@@ -1,0 +1,3 @@
+framework module SplunkSessionReplayProxy {
+  header "SplunkSessionReplayProxy-Swift.h"
+}

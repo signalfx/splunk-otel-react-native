@@ -37,6 +37,7 @@
     "android/gradle.properties",
     "android/src/**",
     "ios/**/*.{h,m,mm,swift}",
+    "ios/frameworks/*.xcframework/**",
     "plugin/build/**",
     "app.plugin.js",
     "*.podspec",
