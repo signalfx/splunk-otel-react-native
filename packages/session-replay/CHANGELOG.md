@@ -4,6 +4,10 @@
 
 * TBD
 
+## 1.0.1
+
+* Version bump in sync with `@splunk/otel-react-native`.
+
 ## 1.0.0
 
 Initial release of `@splunk/otel-session-replay-react-native`.
