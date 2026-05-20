@@ -1,0 +1,3 @@
+framework module SplunkAppState {
+  header "SplunkAppState-Swift.h"
+}

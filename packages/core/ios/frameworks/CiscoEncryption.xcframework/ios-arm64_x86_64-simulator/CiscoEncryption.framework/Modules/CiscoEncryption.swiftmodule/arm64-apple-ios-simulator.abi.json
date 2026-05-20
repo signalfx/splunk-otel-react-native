@@ -1,0 +1,758 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "CiscoEncryption",
+    "printedName": "CiscoEncryption",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoEncryption"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DefaultEncryption",
+        "printedName": "DefaultEncryption",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(keychainManager:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultEncryption",
+                "printedName": "CiscoEncryption.DefaultEncryption",
+                "usr": "s:15CiscoEncryption07DefaultB0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeychainManager",
+                "printedName": "any CiscoEncryption.KeychainManager",
+                "hasDefaultArg": true,
+                "usr": "s:15CiscoEncryption15KeychainManagerP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15CiscoEncryption07DefaultB0C15keychainManagerAcA08KeychainE0_p_tcfc",
+            "mangledName": "$s15CiscoEncryption07DefaultB0C15keychainManagerAcA08KeychainE0_p_tcfc",
+            "moduleName": "CiscoEncryption",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encrypt",
+            "printedName": "encrypt(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15CiscoEncryption07DefaultB0C7encrypt4data10Foundation4DataVAH_tKF",
+            "mangledName": "$s15CiscoEncryption07DefaultB0C7encrypt4data10Foundation4DataVAH_tKF",
+            "moduleName": "CiscoEncryption",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "decrypt",
+            "printedName": "decrypt(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15CiscoEncryption07DefaultB0C7decrypt4data10Foundation4DataVAH_tKF",
+            "mangledName": "$s15CiscoEncryption07DefaultB0C7decrypt4data10Foundation4DataVAH_tKF",
+            "moduleName": "CiscoEncryption",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:15CiscoEncryption07DefaultB0C",
+        "mangledName": "$s15CiscoEncryption07DefaultB0C",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Encryption",
+            "printedName": "Encryption",
+            "usr": "s:15CiscoEncryption0B0P",
+            "mangledName": "$s15CiscoEncryption0B0P"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "CiscoEncryption"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DefaultKeychainManager",
+        "printedName": "DefaultKeychainManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "defaultKeySize",
+            "printedName": "defaultKeySize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15CiscoEncryption22DefaultKeychainManagerC14defaultKeySizeSivpZ",
+            "mangledName": "$s15CiscoEncryption22DefaultKeychainManagerC14defaultKeySizeSivpZ",
+            "moduleName": "CiscoEncryption",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15CiscoEncryption22DefaultKeychainManagerC14defaultKeySizeSivgZ",
+                "mangledName": "$s15CiscoEncryption22DefaultKeychainManagerC14defaultKeySizeSivgZ",
+                "moduleName": "CiscoEncryption",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(for:in:keySize:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultKeychainManager",
+                "printedName": "CiscoEncryption.DefaultKeychainManager",
+                "usr": "s:15CiscoEncryption22DefaultKeychainManagerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15CiscoEncryption22DefaultKeychainManagerC3for2in7keySizeACSS_SSSitcfc",
+            "mangledName": "$s15CiscoEncryption22DefaultKeychainManagerC3for2in7keySizeACSS_SSSitcfc",
+            "moduleName": "CiscoEncryption",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "loadKey",
+            "printedName": "loadKey()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15CiscoEncryption22DefaultKeychainManagerC7loadKey10Foundation4DataVyKF",
+            "mangledName": "$s15CiscoEncryption22DefaultKeychainManagerC7loadKey10Foundation4DataVyKF",
+            "moduleName": "CiscoEncryption",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:15CiscoEncryption22DefaultKeychainManagerC",
+        "mangledName": "$s15CiscoEncryption22DefaultKeychainManagerC",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "KeychainManager",
+            "printedName": "KeychainManager",
+            "usr": "s:15CiscoEncryption15KeychainManagerP",
+            "mangledName": "$s15CiscoEncryption15KeychainManagerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InMemoryKeychainManager",
+        "printedName": "InMemoryKeychainManager",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "loadKey",
+            "printedName": "loadKey()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15CiscoEncryption23InMemoryKeychainManagerC7loadKey10Foundation4DataVyKF",
+            "mangledName": "$s15CiscoEncryption23InMemoryKeychainManagerC7loadKey10Foundation4DataVyKF",
+            "moduleName": "CiscoEncryption",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:15CiscoEncryption23InMemoryKeychainManagerC",
+        "mangledName": "$s15CiscoEncryption23InMemoryKeychainManagerC",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "KeychainManager",
+            "printedName": "KeychainManager",
+            "usr": "s:15CiscoEncryption15KeychainManagerP",
+            "mangledName": "$s15CiscoEncryption15KeychainManagerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KeychainManager",
+        "printedName": "KeychainManager",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "loadKey",
+            "printedName": "loadKey()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15CiscoEncryption15KeychainManagerP7loadKey10Foundation4DataVyKF",
+            "mangledName": "$s15CiscoEncryption15KeychainManagerP7loadKey10Foundation4DataVyKF",
+            "moduleName": "CiscoEncryption",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoEncryption.KeychainManager>",
+            "sugared_genericSig": "<Self where Self : CiscoEncryption.KeychainManager>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:15CiscoEncryption15KeychainManagerP",
+        "mangledName": "$s15CiscoEncryption15KeychainManagerP",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Encryption",
+        "printedName": "Encryption",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "encrypt",
+            "printedName": "encrypt(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15CiscoEncryption0B0P7encrypt4data10Foundation4DataVAH_tKF",
+            "mangledName": "$s15CiscoEncryption0B0P7encrypt4data10Foundation4DataVAH_tKF",
+            "moduleName": "CiscoEncryption",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoEncryption.Encryption>",
+            "sugared_genericSig": "<Self where Self : CiscoEncryption.Encryption>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "decrypt",
+            "printedName": "decrypt(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15CiscoEncryption0B0P7decrypt4data10Foundation4DataVAH_tKF",
+            "mangledName": "$s15CiscoEncryption0B0P7decrypt4data10Foundation4DataVAH_tKF",
+            "moduleName": "CiscoEncryption",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoEncryption.Encryption>",
+            "sugared_genericSig": "<Self where Self : CiscoEncryption.Encryption>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:15CiscoEncryption0B0P",
+        "mangledName": "$s15CiscoEncryption0B0P",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NoneEncryption",
+        "printedName": "NoneEncryption",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "encrypt",
+            "printedName": "encrypt(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15CiscoEncryption04NoneB0C7encrypt4data10Foundation4DataVAH_tKF",
+            "mangledName": "$s15CiscoEncryption04NoneB0C7encrypt4data10Foundation4DataVAH_tKF",
+            "moduleName": "CiscoEncryption",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "decrypt",
+            "printedName": "decrypt(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15CiscoEncryption04NoneB0C7decrypt4data10Foundation4DataVAH_tKF",
+            "mangledName": "$s15CiscoEncryption04NoneB0C7decrypt4data10Foundation4DataVAH_tKF",
+            "moduleName": "CiscoEncryption",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NoneEncryption",
+                "printedName": "CiscoEncryption.NoneEncryption",
+                "usr": "s:15CiscoEncryption04NoneB0C"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15CiscoEncryption04NoneB0CACycfc",
+            "mangledName": "$s15CiscoEncryption04NoneB0CACycfc",
+            "moduleName": "CiscoEncryption",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:15CiscoEncryption04NoneB0C",
+        "mangledName": "$s15CiscoEncryption04NoneB0C",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Encryption",
+            "printedName": "Encryption",
+            "usr": "s:15CiscoEncryption0B0P",
+            "mangledName": "$s15CiscoEncryption0B0P"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoEncryption",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoEncryption\/Sources\/DefaultEncryption\/KeychainManager\/DefaultKeychainManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 410,
+      "length": 3,
+      "value": "256"
+    },
+    {
+      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoEncryption\/Sources\/DefaultEncryption\/KeychainManager\/DefaultKeychainManager.swift",
+      "kind": "StringLiteral",
+      "offset": 894,
+      "length": 20,
+      "value": "\"com.cisco.security\""
+    },
+    {
+      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoEncryption\/Sources\/DefaultEncryption\/KeychainManager\/DefaultKeychainManager.swift",
+      "kind": "StringLiteral",
+      "offset": 945,
+      "length": 15,
+      "value": "\"encryptionKey\""
+    }
+  ]
+}

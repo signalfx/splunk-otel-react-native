@@ -1,0 +1,63 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkNetworkMonitor
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import CoreTelephony
+import Foundation
+import Network
+@_spi(SplunkInternal) import SplunkCommon
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct NetworkMonitorData : SplunkCommon.ModuleEventData {
+}
+public struct NetworkMonitorMetadata : SplunkCommon.ModuleEventMetadata {
+  public var timestamp: Foundation.Date
+  public var eventName: Swift.String
+  public static func == (a: SplunkNetworkMonitor.NetworkMonitorMetadata, b: SplunkNetworkMonitor.NetworkMonitorMetadata) -> Swift.Bool
+}
+extension SplunkNetworkMonitor.NetworkMonitor : SplunkCommon.Module {
+  public typealias Configuration = SplunkNetworkMonitor.NetworkMonitorConfiguration
+  public typealias RemoteConfiguration = SplunkNetworkMonitor.NetworkMonitorRemoteConfiguration
+  public typealias EventMetadata = SplunkNetworkMonitor.NetworkMonitorMetadata
+  public typealias EventData = SplunkNetworkMonitor.NetworkMonitorData
+  public func install(with configuration: (any SplunkCommon.ModuleConfiguration)?, remoteConfiguration: (any SplunkCommon.RemoteModuleConfiguration)?)
+  public func deleteData(for metadata: any SplunkCommon.ModuleEventMetadata)
+  public func onPublish(data: @escaping (SplunkNetworkMonitor.NetworkMonitorMetadata, SplunkNetworkMonitor.NetworkMonitorData) -> Swift.Void)
+}
+public struct NetworkMonitorConfiguration : SplunkCommon.ModuleConfiguration {
+  public var isEnabled: Swift.Bool
+  public init(isEnabled: Swift.Bool)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct NetworkMonitorRemoteConfiguration : SplunkCommon.RemoteModuleConfiguration {
+  public var enabled: Swift.Bool
+  public init?(from data: Foundation.Data)
+}
+public enum ConnectionType : Swift.String {
+  case wifi
+  case cellular
+  case wiredEthernet
+  case vpn
+  case other
+  case unavailable
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class NetworkMonitor {
+  unowned public var sharedState: (any SplunkCommon.AgentSharedState)?
+  public static let shared: SplunkNetworkMonitor.NetworkMonitor
+  public typealias NetworkStatusChangeHandler = (_ isConnected: Swift.Bool, _ connectionType: SplunkNetworkMonitor.ConnectionType, _ radioType: Swift.String?) -> Swift.Void
+  public var statusChangeHandler: SplunkNetworkMonitor.NetworkMonitor.NetworkStatusChangeHandler?
+  required public init()
+  @objc deinit
+  public func startDetection()
+  public func stopDetection()
+}
+extension SplunkNetworkMonitor.ConnectionType : Swift.Equatable {}
+extension SplunkNetworkMonitor.ConnectionType : Swift.Hashable {}
+extension SplunkNetworkMonitor.ConnectionType : Swift.RawRepresentable {}

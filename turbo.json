@@ -34,8 +34,7 @@
       "env": [
         "RCT_NEW_ARCH_ENABLED",
         "RCT_USE_RN_DEP",
-        "RCT_USE_PREBUILT_RNCORE",
-        "USE_FRAMEWORKS"
+        "RCT_USE_PREBUILT_RNCORE"
       ],
       "inputs": [
         "package.json",

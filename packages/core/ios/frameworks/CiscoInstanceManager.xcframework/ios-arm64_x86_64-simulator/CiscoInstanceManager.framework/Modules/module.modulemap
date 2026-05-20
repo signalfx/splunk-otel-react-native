@@ -1,0 +1,3 @@
+framework module CiscoInstanceManager {
+  header "CiscoInstanceManager-Swift.h"
+}

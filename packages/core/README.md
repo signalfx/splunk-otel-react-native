@@ -22,7 +22,7 @@ The Splunk Distribution of OpenTelemetry for React Native provides automatic ins
 
 - React Native >= 0.75.0
 - React >= 18.2.0
-- iOS >= 15.0 (with `USE_FRAMEWORKS=dynamic` in Podfile - required for SPM)
+- iOS >= 15.0
 - Android minSdkVersion >= 24
 
 ## Installation
@@ -49,21 +49,12 @@ npx expo install @splunk/otel-react-native
 }
 ```
 
-3. **(iOS only)** Add `USE_FRAMEWORKS=dynamic` to your `ios/Podfile`:
-
-```ruby
-# Required for SPM dependencies
-ENV['USE_FRAMEWORKS'] = 'dynamic'
-```
-
-4. Run prebuild and build your development client:
+3. Run prebuild and build your development client:
 
 ```bash
 npx expo prebuild
 npx expo run:ios  # or npx expo run:android
 ```
-
-> **Note:** For iOS, `USE_FRAMEWORKS=dynamic` is required due to SPM dependencies. If you run `expo prebuild` without this, add it to the generated `ios/Podfile` and run `cd ios && pod install && cd ..`
 
 ### For Bare React Native Projects
 
@@ -75,22 +66,11 @@ npm install @splunk/otel-react-native
 yarn add @splunk/otel-react-native
 ```
 
-2. **iOS Setup (REQUIRED):**
-
-Due to Swift Package Manager (SPM) dependencies, you **must** use dynamic frameworks. Add this to your `ios/Podfile` before `pod install`:
-
-```ruby
-# Required for SPM dependencies
-ENV['USE_FRAMEWORKS'] = 'dynamic'
-```
-
-Then install pods:
+2. **iOS Setup:**
 
 ```bash
 cd ios && pod install && cd ..
 ```
-
-> **Note:** `USE_FRAMEWORKS=dynamic` is required because this SDK uses SPM dependencies for the native iOS SDK, which is a limitation of SPM support in React Native. See [React Native PR #44627](https://github.com/facebook/react-native/pull/44627) for more details.
 
 3. **Android Setup:**
 
@@ -294,11 +274,9 @@ jest.mock('@splunk/otel-react-native', () =>
    - Make sure you've run `pod install` (iOS) or rebuilt the app (Android)
    - For Expo, ensure you've run `expo prebuild`
 
-2. **iOS build errors: "Module 'SplunkOtel' not found" or SPM-related errors**
-   - **Solution:** Add `ENV['USE_FRAMEWORKS'] = 'dynamic'` to your `ios/Podfile` before running `pod install`
-   - This is **required** for SPM dependencies to work with React Native
-   - After adding, run: `cd ios && pod install --repo-update && cd ..`
-   - Clean build if needed: `cd ios && rm -rf build Pods && pod install && cd ..`
+2. **iOS build errors: "Module 'SplunkOtel' not found"**
+   - Run: `cd ios && rm -rf build Pods Podfile.lock && pod install && cd ..`
+   - Ensure you're using iOS 15.0+ as minimum deployment target
 
 3. **Expo Go not supported**
    - This SDK requires custom native code and doesn't work with Expo Go
@@ -306,7 +284,6 @@ jest.mock('@splunk/otel-react-native', () =>
 
 4. **Build errors on iOS**
    - Ensure you're using iOS 15.0+ as minimum deployment target
-   - Verify `USE_FRAMEWORKS=dynamic` is set in Podfile
    - Clean build folder: `cd ios && rm -rf build && cd ..`
 
 ## Contributing

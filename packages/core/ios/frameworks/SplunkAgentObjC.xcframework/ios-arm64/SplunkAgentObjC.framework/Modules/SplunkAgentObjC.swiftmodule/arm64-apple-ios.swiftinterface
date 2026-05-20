@@ -1,0 +1,473 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkAgentObjC
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import OpenTelemetryApi
+import SplunkAgent
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc(SPLKAttributeValue) @objcMembers final public class AttributeValueObjC : ObjectiveC.NSObject {
+  @objc final public let type: SplunkAgentObjC.AttributeValueTypeObjC
+  @objc(initWithBool:) convenience public init(value: Swift.Bool)
+  @objc public init(boolNumber: Foundation.NSNumber)
+  @objc(initWithDouble:) convenience public init(value: Swift.Double)
+  @objc public init(doubleNumber: Foundation.NSNumber)
+  @objc(initWithInteger:) convenience public init(value: Swift.Int)
+  @objc public init(integerNumber: Foundation.NSNumber)
+  @objc(initWithString:) public init(value: Swift.String)
+  @objc final public var asBoolNumber: Foundation.NSNumber? {
+    @objc get
+  }
+  @objc final public var asDoubleNumber: Foundation.NSNumber? {
+    @objc get
+  }
+  @objc final public var asIntegerNumber: Foundation.NSNumber? {
+    @objc get
+  }
+  @objc final public var asString: Foundation.NSString? {
+    @objc get
+  }
+  @objc public static func attributeWithBool(_ value: Swift.Bool) -> SplunkAgentObjC.AttributeValueObjC
+  @objc public static func attributeWithDouble(_ value: Swift.Double) -> SplunkAgentObjC.AttributeValueObjC
+  @objc public static func attributeWithInteger(_ value: Swift.Int) -> SplunkAgentObjC.AttributeValueObjC
+  @objc public static func attributeWithString(_ value: Swift.String) -> SplunkAgentObjC.AttributeValueObjC
+  @objc deinit
+}
+extension SplunkAgentObjC.AttributeValueObjC {
+  @objc override final public var description: Swift.String {
+    @objc get
+  }
+  @objc override final public var debugDescription: Swift.String {
+    @objc get
+  }
+}
+@objc(SPLKAttributeValueType) public enum AttributeValueTypeObjC : Swift.Int {
+  case bool
+  case double
+  case integer
+  case string
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension SplunkAgentObjC.AttributeValueTypeObjC : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(SPLKSessionConfiguration) final public class SessionConfigurationObjC : ObjectiveC.NSObject {
+  @objc final public var samplingRate: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc override convenience dynamic public init()
+  @objc convenience public init(samplingRate: Swift.Double)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(SPLKStatus) final public class StatusObjC : ObjectiveC.NSObject {
+  @objc public static let running: Foundation.NSNumber
+  @objc public static let notRunningNotInstalled: Foundation.NSNumber
+  @objc public static let notRunningUnsupportedPlatform: Foundation.NSNumber
+  @objc public static let notRunningSampledOut: Foundation.NSNumber
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(SPLKUserConfiguration) final public class UserConfigurationObjC : ObjectiveC.NSObject {
+  @objc final public var trackingMode: Foundation.NSNumber {
+    @objc get
+    @objc set
+  }
+  @objc override convenience dynamic public init()
+  @objc convenience public init(trackingMode: Foundation.NSNumber)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(SPLKUserTrackingMode) final public class UserTrackingModeObjC : ObjectiveC.NSObject {
+  @objc public static let noTracking: Foundation.NSNumber
+  @objc public static let anonymousTracking: Foundation.NSNumber
+  @objc deinit
+}
+@objc extension SplunkAgentObjC.UserTrackingModeObjC {
+  @objc(defaultTracking) public static var `default`: Foundation.NSNumber
+}
+@_inheritsConvenienceInitializers @objc(SPLKCrashReportsConfiguration) @objcMembers final public class CrashReportsConfigurationObjC : SplunkAgentObjC.ModuleConfigurationObjC {
+  @objc dynamic public init()
+  @objc(initWithEnabled:) public init(isEnabled: Swift.Bool)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKCustomTrackingModule) final public class CustomTrackingModuleObjC : ObjectiveC.NSObject {
+  @discardableResult
+  @objc final public func trackCustomEvent(name: Swift.String, attributes: [Swift.String : SplunkAgentObjC.AttributeValueObjC]) -> SplunkAgentObjC.CustomTrackingModuleObjC
+  @discardableResult
+  @objc(trackErrorMessage:attributes:) final public func trackErrorMessage(message: Swift.String, attributes: [Swift.String : SplunkAgentObjC.AttributeValueObjC]) -> SplunkAgentObjC.CustomTrackingModuleObjC
+  @discardableResult
+  @objc(trackError:attributes:) final public func trackError(error: Foundation.NSError, attributes: [Swift.String : SplunkAgentObjC.AttributeValueObjC]) -> SplunkAgentObjC.CustomTrackingModuleObjC
+  @discardableResult
+  @objc(trackException:attributes:) final public func trackException(exception: Foundation.NSException, attributes: [Swift.String : SplunkAgentObjC.AttributeValueObjC]) -> SplunkAgentObjC.CustomTrackingModuleObjC
+  @discardableResult
+  @objc final public func trackCustomEvent(name: Swift.String) -> SplunkAgentObjC.CustomTrackingModuleObjC
+  @discardableResult
+  @objc(trackErrorMessage:) final public func trackErrorMessage(message: Swift.String) -> SplunkAgentObjC.CustomTrackingModuleObjC
+  @discardableResult
+  @objc(trackError:) final public func trackError(error: Foundation.NSError) -> SplunkAgentObjC.CustomTrackingModuleObjC
+  @discardableResult
+  @objc(trackException:) final public func trackException(exception: Foundation.NSException) -> SplunkAgentObjC.CustomTrackingModuleObjC
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(SPLKInteractionsConfiguration) @objcMembers final public class InteractionsConfigurationObjC : SplunkAgentObjC.ModuleConfigurationObjC {
+  @objc dynamic public init()
+  @objc(initWithEnabled:) public init(isEnabled: Swift.Bool)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKInteractionsModule) final public class InteractionsModuleObjC : ObjectiveC.NSObject {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(SPLKNavigationConfiguration) @objcMembers final public class NavigationConfigurationObjC : SplunkAgentObjC.ModuleConfigurationObjC {
+  @objc final public var enableAutomatedTracking: Swift.Bool
+  @objc dynamic public init()
+  @objc(initWithEnabled:) convenience public init(isEnabled: Swift.Bool)
+  @objc(initWithEnabled:automatedTracking:) public init(isEnabled: Swift.Bool, enableAutomatedTracking: Swift.Bool)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKNavigationModule) final public class NavigationModuleObjC : ObjectiveC.NSObject {
+  @objc final public var preferences: SplunkAgentObjC.NavigationModulePreferencesObjC {
+    @objc get
+    @objc set
+  }
+  @objc final public var state: SplunkAgentObjC.NavigationModuleStateObjC {
+    @objc get
+  }
+  @discardableResult
+  @objc(trackScreen:) final public func track(screen name: Swift.String) -> SplunkAgentObjC.NavigationModuleObjC
+  @objc deinit
+}
+@objc(SPLKNavigationModulePreferences) final public class NavigationModulePreferencesObjC : ObjectiveC.NSObject {
+  @objc final public var enableAutomatedTracking: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public init(enableAutomatedTracking: Swift.Bool)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKNavigationModuleState) final public class NavigationModuleStateObjC : ObjectiveC.NSObject {
+  @objc final public var isAutomatedTrackingEnabled: Swift.Bool {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(SPLKNetworkMonitorConfiguration) @objcMembers final public class NetworkMonitorConfigurationObjC : SplunkAgentObjC.ModuleConfigurationObjC {
+  @objc dynamic public init()
+  @objc(initWithEnabled:) public init(isEnabled: Swift.Bool)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(SPLKNetworkInstrumentationConfiguration) @objcMembers final public class NetworkInstrumentationConfigurationObjC : SplunkAgentObjC.ModuleConfigurationObjC {
+  @objc final public var ignoreURLs: Foundation.NSRegularExpression?
+  @objc final public var capturedRequestHeaders: [Swift.String]?
+  @objc final public var capturedResponseHeaders: [Swift.String]?
+  @objc dynamic public init()
+  @objc(initWithEnabled:) public init(isEnabled: Swift.Bool)
+  @objc(initWithEnabled:ignoreURLs:) public init(isEnabled: Swift.Bool, ignoreURLs: Foundation.NSRegularExpression?)
+  @objc(initWithEnabled:ignoreURLs:capturedRequestHeaders:capturedResponseHeaders:) public init(isEnabled: Swift.Bool, ignoreURLs: Foundation.NSRegularExpression?, capturedRequestHeaders: [Swift.String]?, capturedResponseHeaders: [Swift.String]?)
+  @objc deinit
+}
+@objc extension UIKit.UIView {
+  @objc(splk_splunkRumID) @_Concurrency.MainActor @preconcurrency dynamic public var splunkCustomId: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+@objc extension UIKit.UIView {
+  @objc(splk_srSensitive) @_Concurrency.MainActor @preconcurrency dynamic public var splunkSensitive: Foundation.NSNumber? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(SPLKSessionReplayConfiguration) @objcMembers final public class SessionReplayConfigurationObjC : SplunkAgentObjC.ModuleConfigurationObjC {
+  @objc final public var samplingRate: Foundation.NSNumber?
+  @objc dynamic public init()
+  @objc(initWithEnabled:) public init(isEnabled: Swift.Bool)
+  @objc(initWithEnabled:samplingRate:) public init(isEnabled: Swift.Bool, samplingRate: Foundation.NSNumber?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKSessionReplayModuleCustomID) final public class SessionReplayModuleCustomIdObjC : ObjectiveC.NSObject {
+  @objc(customIDForView:) final public func customId(for view: UIKit.UIView) -> Swift.String?
+  @objc(setCustomID:forView:) final public func setCustomId(_ customId: Swift.String?, for view: UIKit.UIView)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKSessionReplayModule) final public class SessionReplayModuleObjC : ObjectiveC.NSObject {
+  @objc final public var sensitivity: SplunkAgentObjC.SessionReplayModuleSensitivityObjC {
+    @objc get
+  }
+  @objc final public var customIdentifiers: SplunkAgentObjC.SessionReplayModuleCustomIdObjC {
+    @objc get
+  }
+  @objc final public var state: SplunkAgentObjC.SessionReplayModuleStateObjC {
+    @objc get
+  }
+  @objc final public var preferences: SplunkAgentObjC.SessionReplayModulePreferencesObjC {
+    @objc get
+  }
+  @objc final public func start()
+  @objc final public func stop()
+  @objc final public var recordingMask: SplunkAgentObjC.RecordingMaskObjC? {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKSessionReplayModulePreferences) final public class SessionReplayModulePreferencesObjC : ObjectiveC.NSObject {
+  @objc final public var renderingMode: Foundation.NSNumber? {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKSessionReplayModuleSensitivity) final public class SessionReplayModuleSensitivityObjC : ObjectiveC.NSObject {
+  @objc(sensitivityForView:) final public func sensitivity(for view: UIKit.UIView) -> Foundation.NSNumber?
+  @objc(setSensitivity:forView:) final public func setSensitivity(_ sensitive: Foundation.NSNumber?, for view: UIKit.UIView)
+  @objc(sensitivityForViewClass:) final public func sensitivity(for viewClass: UIKit.UIView.Type) -> Foundation.NSNumber?
+  @objc(setSensitivity:forViewClass:) final public func setSensitivity(_ sensitive: Foundation.NSNumber?, for viewClass: UIKit.UIView.Type)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKSessionReplayModuleState) final public class SessionReplayModuleStateObjC : ObjectiveC.NSObject {
+  @objc final public var status: Foundation.NSNumber {
+    @objc get
+  }
+  @objc final public var isRecording: Swift.Bool {
+    @objc get
+  }
+  @objc final public var renderingMode: Foundation.NSNumber {
+    @objc get
+  }
+  @objc final public var samplingRate: Swift.Double {
+    @objc get
+  }
+  @objc deinit
+}
+@objc(SPLKMaskElement) @objcMembers final public class MaskElementObjC : ObjectiveC.NSObject {
+  @objc final public let rect: CoreFoundation.CGRect
+  @objc final public let type: SplunkAgentObjC.MaskTypeObjC
+  @objc public init(rect: CoreFoundation.CGRect, maskElementType: SplunkAgentObjC.MaskTypeObjC = .covering)
+  @objc deinit
+}
+@objc(SPLKMaskElementType) public enum MaskTypeObjC : Swift.Int {
+  case covering
+  case erasing
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(SPLKRecordingMask) @objcMembers final public class RecordingMaskObjC : ObjectiveC.NSObject {
+  @objc final public let elements: [SplunkAgentObjC.MaskElementObjC]
+  @objc public init(elements: [SplunkAgentObjC.MaskElementObjC] = [])
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(SPLKRenderingMode) final public class RenderingModeObjC : ObjectiveC.NSObject {
+  @objc public static let native: Foundation.NSNumber
+  @objc public static let wireframeOnly: Foundation.NSNumber
+  @objc deinit
+}
+@objc extension SplunkAgentObjC.RenderingModeObjC {
+  @objc(defaultRenderingMode) public static let `default`: Foundation.NSNumber
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(SPLKSessionReplayStatus) final public class SessionReplayStatusObjC : ObjectiveC.NSObject {
+  @objc public static let recording: Foundation.NSNumber
+  @objc public static let notRecordingNotStarted: Foundation.NSNumber
+  @objc public static let notRecordingUnsupportedPlatform: Foundation.NSNumber
+  @objc public static let notRecordingSwiftUIPreviewContext: Foundation.NSNumber
+  @objc public static let notRecordingStopped: Foundation.NSNumber
+  @objc public static let notRecordingInternalError: Foundation.NSNumber
+  @objc public static let notRecordingStorageLimitReached: Foundation.NSNumber
+  @objc public static let notRecordingDisabledBySampling: Foundation.NSNumber
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(SPLKModuleConfiguration) @objcMembers public class ModuleConfigurationObjC : ObjectiveC.NSObject {
+  @objc public var isEnabled: Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(SPLKSlowFrameDetectorConfiguration) @objcMembers final public class SlowFrameDetectorConfigurationObjC : SplunkAgentObjC.ModuleConfigurationObjC {
+  @objc dynamic public init()
+  @objc(initWithEnabled:) public init(isEnabled: Swift.Bool)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKSlowFrameDetectorModule) final public class SlowFrameDetectorModuleObjC : ObjectiveC.NSObject {
+  @objc final public var isEnabled: Swift.Bool {
+    @objc get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKWebViewInstrumentationModule) final public class WebViewModuleObjC : ObjectiveC.NSObject {
+  @objc(integrateWithBrowserRumView:) final public func integrateWithBrowserRum(view: WebKit.WKWebView)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKAgentConfiguration) final public class AgentConfigurationObjC : ObjectiveC.NSObject {
+  @objc final public let endpoint: SplunkAgentObjC.EndpointConfigurationObjC?
+  @objc final public let appName: Swift.String
+  @objc final public let deploymentEnvironment: Swift.String
+  @objc final public var appVersion: Swift.String
+  @objc final public var enableDebugLogging: Swift.Bool
+  @objc final public var globalAttributes: [Swift.String : SplunkAgentObjC.AttributeValueObjC]
+  @objc final public var user: SplunkAgentObjC.UserConfigurationObjC
+  @objc final public var session: SplunkAgentObjC.SessionConfigurationObjC
+  @objc convenience public init(endpoint: SplunkAgentObjC.EndpointConfigurationObjC?, appName: Swift.String, deploymentEnvironment: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKAgentPreferences) final public class AgentPreferencesObjC : ObjectiveC.NSObject {
+  @objc final public var endpointConfiguration: SplunkAgentObjC.EndpointConfigurationObjC? {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKEndpointConfiguration) final public class EndpointConfigurationObjC : ObjectiveC.NSObject {
+  @objc final public var realm: Swift.String? {
+    @objc get
+  }
+  @objc final public var rumAccessToken: Swift.String? {
+    @objc get
+  }
+  @objc final public var traceEndpoint: Foundation.URL? {
+    @objc get
+  }
+  @objc final public var sessionReplayEndpoint: Foundation.URL? {
+    @objc get
+  }
+  @objc convenience public init(realm: Swift.String, rumAccessToken: Swift.String)
+  @objc convenience public init(trace: Foundation.URL, sessionReplay: Foundation.URL? = nil)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKState) final public class RuntimeStateObjC : ObjectiveC.NSObject {
+  @objc final public var status: Foundation.NSNumber {
+    @objc get
+  }
+  @objc final public var appName: Swift.String {
+    @objc get
+  }
+  @objc final public var appVersion: Swift.String {
+    @objc get
+  }
+  @objc final public var endpointConfiguration: SplunkAgentObjC.EndpointConfigurationObjC? {
+    @objc get
+  }
+  @objc final public var deploymentEnvironment: Swift.String {
+    @objc get
+  }
+  @objc final public var isDebugLoggingEnabled: Swift.Bool {
+    @objc get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKSession) final public class SessionObjC : ObjectiveC.NSObject {
+  @objc final public var state: SplunkAgentObjC.SessionStateObjC {
+    @objc get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKSessionState) final public class SessionStateObjC : ObjectiveC.NSObject {
+  @objc(sessionID) final public var id: Swift.String {
+    @objc get
+  }
+  @objc final public var start: Swift.Int64 {
+    @objc get
+  }
+  @objc final public var lastActivity: Swift.Int64 {
+    @objc get
+  }
+  @objc final public var samplingRate: Swift.Double {
+    @objc get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKUser) final public class UserObjC : ObjectiveC.NSObject {
+  @objc final public var preferences: SplunkAgentObjC.UserPreferencesObjC {
+    @objc get
+  }
+  @objc final public var state: SplunkAgentObjC.UserStateObjC {
+    @objc get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKUserPreferences) final public class UserPreferencesObjC : ObjectiveC.NSObject {
+  @objc final public var trackingMode: Foundation.NSNumber {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(SPLKUserState) final public class UserStateObjC : ObjectiveC.NSObject {
+  @objc final public var trackingMode: Foundation.NSNumber {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(SPLKAgent) final public class SplunkRumObjC : ObjectiveC.NSObject {
+  @objc public static var shared: SplunkAgentObjC.SplunkRumObjC {
+    get
+  }
+  @objc final public var user: SplunkAgentObjC.UserObjC {
+    @objc get
+  }
+  @objc final public var session: SplunkAgentObjC.SessionObjC {
+    @objc get
+  }
+  @objc final public var preferences: SplunkAgentObjC.AgentPreferencesObjC {
+    @objc get
+  }
+  @objc final public var globalAttributes: [Swift.String : SplunkAgentObjC.AttributeValueObjC] {
+    @objc get
+    @objc set
+  }
+  @objc final public var state: SplunkAgentObjC.RuntimeStateObjC {
+    @objc get
+  }
+  @objc final public var sessionReplay: SplunkAgentObjC.SessionReplayModuleObjC {
+    @objc get
+  }
+  @objc final public var customTracking: SplunkAgentObjC.CustomTrackingModuleObjC {
+    @objc get
+  }
+  @objc final public var navigation: SplunkAgentObjC.NavigationModuleObjC {
+    @objc get
+  }
+  @objc final public var slowFrameDetector: SplunkAgentObjC.SlowFrameDetectorModuleObjC {
+    @objc get
+  }
+  @objc final public var webViewNativeBridge: SplunkAgentObjC.WebViewModuleObjC {
+    @objc get
+  }
+  @objc public static func install(with configuration: SplunkAgentObjC.AgentConfigurationObjC) throws -> SplunkAgentObjC.SplunkRumObjC
+  @objc public static func install(with configuration: SplunkAgentObjC.AgentConfigurationObjC, moduleConfigurations: [SplunkAgentObjC.ModuleConfigurationObjC]?) throws -> SplunkAgentObjC.SplunkRumObjC
+  @objc public static var agentVersion: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(STSAgentTesting) @objcMembers public class AgentTestingObjC : ObjectiveC.NSObject {
+  @objc public static func buildTestConfiguration() -> SplunkAgentObjC.AgentConfigurationObjC
+  @objc public static func buildTestAgent(with configuration: SplunkAgentObjC.AgentConfigurationObjC?, testNamed named: Swift.String? = nil) -> SplunkAgentObjC.SplunkRumObjC
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class SplunkAgentObjCResources : ObjectiveC.NSObject {
+  @objc final public class var bundle: Foundation.Bundle {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension SplunkAgentObjC.AttributeValueTypeObjC : Swift.Equatable {}
+extension SplunkAgentObjC.AttributeValueTypeObjC : Swift.Hashable {}
+extension SplunkAgentObjC.AttributeValueTypeObjC : Swift.RawRepresentable {}
+extension SplunkAgentObjC.MaskTypeObjC : Swift.Equatable {}
+extension SplunkAgentObjC.MaskTypeObjC : Swift.Hashable {}
+extension SplunkAgentObjC.MaskTypeObjC : Swift.RawRepresentable {}

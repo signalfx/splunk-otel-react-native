@@ -1,0 +1,3 @@
+framework module CiscoSessionReplay {
+  header "CiscoSessionReplay-Swift.h"
+}

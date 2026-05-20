@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-* TBD
+### Changed
+* **iOS: Removed `USE_FRAMEWORKS=dynamic` requirement.** The native iOS SDK is now distributed as vendored xcframeworks instead of being resolved via SPM at `pod install` time. This means the SDK now works with any CocoaPods linkage mode, including `use_frameworks! :linkage => :static` (required by Firebase, Adobe AEP, and similar dependencies). No Podfile changes are needed to integrate the SDK.
 
 ## 1.0.0
 

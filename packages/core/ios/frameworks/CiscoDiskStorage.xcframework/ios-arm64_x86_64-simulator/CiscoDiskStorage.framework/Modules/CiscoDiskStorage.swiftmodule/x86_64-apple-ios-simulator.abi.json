@@ -1,0 +1,2873 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "CiscoDiskStorage",
+    "printedName": "CiscoDiskStorage",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DiskStorage",
+        "printedName": "DiskStorage",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "statistics",
+            "printedName": "statistics",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any CiscoDiskStorage.Statistics)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Statistics",
+                    "printedName": "any CiscoDiskStorage.Statistics",
+                    "usr": "s:16CiscoDiskStorage10StatisticsP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage0bC0P10statisticsAA10Statistics_pSgvp",
+            "mangledName": "$s16CiscoDiskStorage0bC0P10statisticsAA10Statistics_pSgvp",
+            "moduleName": "CiscoDiskStorage",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any CiscoDiskStorage.Statistics)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Statistics",
+                        "printedName": "any CiscoDiskStorage.Statistics",
+                        "usr": "s:16CiscoDiskStorage10StatisticsP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage0bC0P10statisticsAA10Statistics_pSgvg",
+                "mangledName": "$s16CiscoDiskStorage0bC0P10statisticsAA10Statistics_pSgvg",
+                "moduleName": "CiscoDiskStorage",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoDiskStorage.DiskStorage>",
+                "sugared_genericSig": "<Self where Self : CiscoDiskStorage.DiskStorage>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "insert",
+            "printedName": "insert(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyBuilder",
+                "printedName": "CiscoDiskStorage.KeyBuilder",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage0bC0P6insert_6forKeyyqd___AA0F7BuilderCtKSeRd__SERd__lF",
+            "mangledName": "$s16CiscoDiskStorage0bC0P6insert_6forKeyyqd___AA0F7BuilderCtKSeRd__SERd__lF",
+            "moduleName": "CiscoDiskStorage",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : CiscoDiskStorage.DiskStorage, τ_1_0 : Swift.Decodable, τ_1_0 : Swift.Encodable>",
+            "sugared_genericSig": "<Self, T where Self : CiscoDiskStorage.DiskStorage, T : Swift.Decodable, T : Swift.Encodable>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "read",
+            "printedName": "read(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_1_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyBuilder",
+                "printedName": "CiscoDiskStorage.KeyBuilder",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage0bC0P4read6forKeyqd__SgAA0F7BuilderC_tKSeRd__SERd__lF",
+            "mangledName": "$s16CiscoDiskStorage0bC0P4read6forKeyqd__SgAA0F7BuilderC_tKSeRd__SERd__lF",
+            "moduleName": "CiscoDiskStorage",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : CiscoDiskStorage.DiskStorage, τ_1_0 : Swift.Decodable, τ_1_0 : Swift.Encodable>",
+            "sugared_genericSig": "<Self, T where Self : CiscoDiskStorage.DiskStorage, T : Swift.Decodable, T : Swift.Encodable>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "update",
+            "printedName": "update(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyBuilder",
+                "printedName": "CiscoDiskStorage.KeyBuilder",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage0bC0P6update_6forKeyyqd___AA0F7BuilderCtKSeRd__SERd__lF",
+            "mangledName": "$s16CiscoDiskStorage0bC0P6update_6forKeyyqd___AA0F7BuilderCtKSeRd__SERd__lF",
+            "moduleName": "CiscoDiskStorage",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : CiscoDiskStorage.DiskStorage, τ_1_0 : Swift.Decodable, τ_1_0 : Swift.Encodable>",
+            "sugared_genericSig": "<Self, T where Self : CiscoDiskStorage.DiskStorage, T : Swift.Decodable, T : Swift.Encodable>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "delete",
+            "printedName": "delete(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyBuilder",
+                "printedName": "CiscoDiskStorage.KeyBuilder",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage0bC0P6delete6forKeyyAA0F7BuilderC_tKF",
+            "mangledName": "$s16CiscoDiskStorage0bC0P6delete6forKeyyAA0F7BuilderC_tKF",
+            "moduleName": "CiscoDiskStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoDiskStorage.DiskStorage>",
+            "sugared_genericSig": "<Self where Self : CiscoDiskStorage.DiskStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "list",
+            "printedName": "list(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[CiscoDiskStorage.ItemInfo]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ItemInfo",
+                    "printedName": "CiscoDiskStorage.ItemInfo",
+                    "usr": "s:16CiscoDiskStorage8ItemInfoV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyBuilder",
+                "printedName": "CiscoDiskStorage.KeyBuilder",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage0bC0P4list6forKeySayAA8ItemInfoVGAA0F7BuilderC_tKF",
+            "mangledName": "$s16CiscoDiskStorage0bC0P4list6forKeySayAA8ItemInfoVGAA0F7BuilderC_tKF",
+            "moduleName": "CiscoDiskStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoDiskStorage.DiskStorage>",
+            "sugared_genericSig": "<Self where Self : CiscoDiskStorage.DiskStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finalDestination",
+            "printedName": "finalDestination(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyBuilder",
+                "printedName": "CiscoDiskStorage.KeyBuilder",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage0bC0P16finalDestination6forKey10Foundation3URLVAA0G7BuilderC_tKF",
+            "mangledName": "$s16CiscoDiskStorage0bC0P16finalDestination6forKey10Foundation3URLVAA0G7BuilderC_tKF",
+            "moduleName": "CiscoDiskStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoDiskStorage.DiskStorage>",
+            "sugared_genericSig": "<Self where Self : CiscoDiskStorage.DiskStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "checkRules",
+            "printedName": "checkRules()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage0bC0P10checkRulesyyKF",
+            "mangledName": "$s16CiscoDiskStorage0bC0P10checkRulesyyKF",
+            "moduleName": "CiscoDiskStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoDiskStorage.DiskStorage>",
+            "sugared_genericSig": "<Self where Self : CiscoDiskStorage.DiskStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16CiscoDiskStorage0bC0P",
+        "mangledName": "$s16CiscoDiskStorage0bC0P",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DefaultPrefix",
+        "printedName": "DefaultPrefix",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "separator",
+            "printedName": "separator",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage13DefaultPrefixV9separatorSSvpZ",
+            "mangledName": "$s16CiscoDiskStorage13DefaultPrefixV9separatorSSvpZ",
+            "moduleName": "CiscoDiskStorage",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage13DefaultPrefixV9separatorSSvgZ",
+                "mangledName": "$s16CiscoDiskStorage13DefaultPrefixV9separatorSSvgZ",
+                "moduleName": "CiscoDiskStorage",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "components",
+            "printedName": "components",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage13DefaultPrefixV10componentsSaySSGvp",
+            "mangledName": "$s16CiscoDiskStorage13DefaultPrefixV10componentsSaySSGvp",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage13DefaultPrefixV10componentsSaySSGvg",
+                "mangledName": "$s16CiscoDiskStorage13DefaultPrefixV10componentsSaySSGvg",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "path",
+            "printedName": "path",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage13DefaultPrefixV4pathSSvp",
+            "mangledName": "$s16CiscoDiskStorage13DefaultPrefixV4pathSSvp",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage13DefaultPrefixV4pathSSvg",
+                "mangledName": "$s16CiscoDiskStorage13DefaultPrefixV4pathSSvg",
+                "moduleName": "CiscoDiskStorage",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(path:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultPrefix",
+                "printedName": "CiscoDiskStorage.DefaultPrefix",
+                "usr": "s:16CiscoDiskStorage13DefaultPrefixV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16CiscoDiskStorage13DefaultPrefixV4pathACSS_tcfc",
+            "mangledName": "$s16CiscoDiskStorage13DefaultPrefixV4pathACSS_tcfc",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(components:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultPrefix",
+                "printedName": "CiscoDiskStorage.DefaultPrefix",
+                "usr": "s:16CiscoDiskStorage13DefaultPrefixV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16CiscoDiskStorage13DefaultPrefixV10componentsACSaySSG_tcfc",
+            "mangledName": "$s16CiscoDiskStorage13DefaultPrefixV10componentsACSaySSG_tcfc",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16CiscoDiskStorage13DefaultPrefixV",
+        "mangledName": "$s16CiscoDiskStorage13DefaultPrefixV",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Prefix",
+            "printedName": "Prefix",
+            "usr": "s:16CiscoDiskStorage6PrefixP",
+            "mangledName": "$s16CiscoDiskStorage6PrefixP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoEncryption",
+        "printedName": "CiscoEncryption",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FilesystemDiskStorage",
+        "printedName": "FilesystemDiskStorage",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "statistics",
+            "printedName": "statistics",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any CiscoDiskStorage.Statistics)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Statistics",
+                    "printedName": "any CiscoDiskStorage.Statistics",
+                    "usr": "s:16CiscoDiskStorage10StatisticsP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage010FilesystembC0C10statisticsAA10Statistics_pSgvp",
+            "mangledName": "$s16CiscoDiskStorage010FilesystembC0C10statisticsAA10Statistics_pSgvp",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any CiscoDiskStorage.Statistics)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Statistics",
+                        "printedName": "any CiscoDiskStorage.Statistics",
+                        "usr": "s:16CiscoDiskStorage10StatisticsP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage010FilesystembC0C10statisticsAA10Statistics_pSgvg",
+                "mangledName": "$s16CiscoDiskStorage010FilesystembC0C10statisticsAA10Statistics_pSgvg",
+                "moduleName": "CiscoDiskStorage",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(prefix:rules:encryption:useFileExtension:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FilesystemDiskStorage",
+                "printedName": "CiscoDiskStorage.FilesystemDiskStorage",
+                "usr": "s:16CiscoDiskStorage010FilesystembC0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Prefix",
+                "printedName": "any CiscoDiskStorage.Prefix",
+                "usr": "s:16CiscoDiskStorage6PrefixP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Rules",
+                "printedName": "CiscoDiskStorage.Rules",
+                "usr": "s:16CiscoDiskStorage5RulesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encryption",
+                "printedName": "any CiscoEncryption.Encryption",
+                "hasDefaultArg": true,
+                "usr": "s:15CiscoEncryption0B0P"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16CiscoDiskStorage010FilesystembC0C6prefix5rules10encryption16useFileExtensionAcA6Prefix_p_AA5RulesV0A10Encryption0M0_pSbtcfc",
+            "mangledName": "$s16CiscoDiskStorage010FilesystembC0C6prefix5rules10encryption16useFileExtensionAcA6Prefix_p_AA5RulesV0A10Encryption0M0_pSbtcfc",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "insert",
+            "printedName": "insert(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyBuilder",
+                "printedName": "CiscoDiskStorage.KeyBuilder",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage010FilesystembC0C6insert_6forKeyyx_AA0G7BuilderCtKSeRzSERzlF",
+            "mangledName": "$s16CiscoDiskStorage010FilesystembC0C6insert_6forKeyyx_AA0G7BuilderCtKSeRzSERzlF",
+            "moduleName": "CiscoDiskStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "read",
+            "printedName": "read(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyBuilder",
+                "printedName": "CiscoDiskStorage.KeyBuilder",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage010FilesystembC0C4read6forKeyxSgAA0G7BuilderC_tKSeRzSERzlF",
+            "mangledName": "$s16CiscoDiskStorage010FilesystembC0C4read6forKeyxSgAA0G7BuilderC_tKSeRzSERzlF",
+            "moduleName": "CiscoDiskStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "update",
+            "printedName": "update(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyBuilder",
+                "printedName": "CiscoDiskStorage.KeyBuilder",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage010FilesystembC0C6update_6forKeyyx_AA0G7BuilderCtKSeRzSERzlF",
+            "mangledName": "$s16CiscoDiskStorage010FilesystembC0C6update_6forKeyyx_AA0G7BuilderCtKSeRzSERzlF",
+            "moduleName": "CiscoDiskStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "delete",
+            "printedName": "delete(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyBuilder",
+                "printedName": "CiscoDiskStorage.KeyBuilder",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage010FilesystembC0C6delete6forKeyyAA0G7BuilderC_tKF",
+            "mangledName": "$s16CiscoDiskStorage010FilesystembC0C6delete6forKeyyAA0G7BuilderC_tKF",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "list",
+            "printedName": "list(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[CiscoDiskStorage.ItemInfo]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ItemInfo",
+                    "printedName": "CiscoDiskStorage.ItemInfo",
+                    "usr": "s:16CiscoDiskStorage8ItemInfoV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyBuilder",
+                "printedName": "CiscoDiskStorage.KeyBuilder",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage010FilesystembC0C4list6forKeySayAA8ItemInfoVGAA0G7BuilderC_tKF",
+            "mangledName": "$s16CiscoDiskStorage010FilesystembC0C4list6forKeySayAA8ItemInfoVGAA0G7BuilderC_tKF",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finalDestination",
+            "printedName": "finalDestination(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyBuilder",
+                "printedName": "CiscoDiskStorage.KeyBuilder",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage010FilesystembC0C16finalDestination6forKey10Foundation3URLVAA0H7BuilderC_tKF",
+            "mangledName": "$s16CiscoDiskStorage010FilesystembC0C16finalDestination6forKey10Foundation3URLVAA0H7BuilderC_tKF",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "checkRules",
+            "printedName": "checkRules()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage010FilesystembC0C10checkRulesyyKF",
+            "mangledName": "$s16CiscoDiskStorage010FilesystembC0C10checkRulesyyKF",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16CiscoDiskStorage010FilesystembC0C",
+        "mangledName": "$s16CiscoDiskStorage010FilesystembC0C",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "DiskStorage",
+            "printedName": "DiskStorage",
+            "usr": "s:16CiscoDiskStorage0bC0P",
+            "mangledName": "$s16CiscoDiskStorage0bC0P"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FilesystemPrefix",
+        "printedName": "FilesystemPrefix",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "separator",
+            "printedName": "separator",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage16FilesystemPrefixV9separatorSSvpZ",
+            "mangledName": "$s16CiscoDiskStorage16FilesystemPrefixV9separatorSSvpZ",
+            "moduleName": "CiscoDiskStorage",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage16FilesystemPrefixV9separatorSSvgZ",
+                "mangledName": "$s16CiscoDiskStorage16FilesystemPrefixV9separatorSSvgZ",
+                "moduleName": "CiscoDiskStorage",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "components",
+            "printedName": "components",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage16FilesystemPrefixV10componentsSaySSGvp",
+            "mangledName": "$s16CiscoDiskStorage16FilesystemPrefixV10componentsSaySSGvp",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage16FilesystemPrefixV10componentsSaySSGvg",
+                "mangledName": "$s16CiscoDiskStorage16FilesystemPrefixV10componentsSaySSGvg",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage16FilesystemPrefixV10componentsSaySSGvs",
+                "mangledName": "$s16CiscoDiskStorage16FilesystemPrefixV10componentsSaySSGvs",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage16FilesystemPrefixV10componentsSaySSGvM",
+                "mangledName": "$s16CiscoDiskStorage16FilesystemPrefixV10componentsSaySSGvM",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "path",
+            "printedName": "path",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage16FilesystemPrefixV4pathSSvp",
+            "mangledName": "$s16CiscoDiskStorage16FilesystemPrefixV4pathSSvp",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage16FilesystemPrefixV4pathSSvg",
+                "mangledName": "$s16CiscoDiskStorage16FilesystemPrefixV4pathSSvg",
+                "moduleName": "CiscoDiskStorage",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(module:version:instance:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FilesystemPrefix",
+                "printedName": "CiscoDiskStorage.FilesystemPrefix",
+                "usr": "s:16CiscoDiskStorage16FilesystemPrefixV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16CiscoDiskStorage16FilesystemPrefixV6module7version8instanceACSS_SiSStcfc",
+            "mangledName": "$s16CiscoDiskStorage16FilesystemPrefixV6module7version8instanceACSS_SiSStcfc",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16CiscoDiskStorage16FilesystemPrefixV",
+        "mangledName": "$s16CiscoDiskStorage16FilesystemPrefixV",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Prefix",
+            "printedName": "Prefix",
+            "usr": "s:16CiscoDiskStorage6PrefixP",
+            "mangledName": "$s16CiscoDiskStorage6PrefixP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Statistics",
+        "printedName": "Statistics",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "freeSpace",
+            "printedName": "freeSpace",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Measurement",
+                "printedName": "Foundation.Measurement<Foundation.UnitInformationStorage>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UnitInformationStorage",
+                    "printedName": "Foundation.UnitInformationStorage",
+                    "usr": "c:objc(cs)NSUnitInformationStorage"
+                  }
+                ],
+                "usr": "s:10Foundation11MeasurementV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage10StatisticsP9freeSpace10Foundation11MeasurementVySo017NSUnitInformationC0CGvp",
+            "mangledName": "$s16CiscoDiskStorage10StatisticsP9freeSpace10Foundation11MeasurementVySo017NSUnitInformationC0CGvp",
+            "moduleName": "CiscoDiskStorage",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Measurement",
+                    "printedName": "Foundation.Measurement<Foundation.UnitInformationStorage>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UnitInformationStorage",
+                        "printedName": "Foundation.UnitInformationStorage",
+                        "usr": "c:objc(cs)NSUnitInformationStorage"
+                      }
+                    ],
+                    "usr": "s:10Foundation11MeasurementV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage10StatisticsP9freeSpace10Foundation11MeasurementVySo017NSUnitInformationC0CGvg",
+                "mangledName": "$s16CiscoDiskStorage10StatisticsP9freeSpace10Foundation11MeasurementVySo017NSUnitInformationC0CGvg",
+                "moduleName": "CiscoDiskStorage",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoDiskStorage.Statistics>",
+                "sugared_genericSig": "<Self where Self : CiscoDiskStorage.Statistics>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "size",
+            "printedName": "size",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Measurement",
+                "printedName": "Foundation.Measurement<Foundation.UnitInformationStorage>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UnitInformationStorage",
+                    "printedName": "Foundation.UnitInformationStorage",
+                    "usr": "c:objc(cs)NSUnitInformationStorage"
+                  }
+                ],
+                "usr": "s:10Foundation11MeasurementV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage10StatisticsP4size10Foundation11MeasurementVySo017NSUnitInformationC0CGvp",
+            "mangledName": "$s16CiscoDiskStorage10StatisticsP4size10Foundation11MeasurementVySo017NSUnitInformationC0CGvp",
+            "moduleName": "CiscoDiskStorage",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Measurement",
+                    "printedName": "Foundation.Measurement<Foundation.UnitInformationStorage>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UnitInformationStorage",
+                        "printedName": "Foundation.UnitInformationStorage",
+                        "usr": "c:objc(cs)NSUnitInformationStorage"
+                      }
+                    ],
+                    "usr": "s:10Foundation11MeasurementV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage10StatisticsP4size10Foundation11MeasurementVySo017NSUnitInformationC0CGvg",
+                "mangledName": "$s16CiscoDiskStorage10StatisticsP4size10Foundation11MeasurementVySo017NSUnitInformationC0CGvg",
+                "moduleName": "CiscoDiskStorage",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoDiskStorage.Statistics>",
+                "sugared_genericSig": "<Self where Self : CiscoDiskStorage.Statistics>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "filesCount",
+            "printedName": "filesCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage10StatisticsP10filesCountSivp",
+            "mangledName": "$s16CiscoDiskStorage10StatisticsP10filesCountSivp",
+            "moduleName": "CiscoDiskStorage",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage10StatisticsP10filesCountSivg",
+                "mangledName": "$s16CiscoDiskStorage10StatisticsP10filesCountSivg",
+                "moduleName": "CiscoDiskStorage",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoDiskStorage.Statistics>",
+                "sugared_genericSig": "<Self where Self : CiscoDiskStorage.Statistics>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16CiscoDiskStorage10StatisticsP",
+        "mangledName": "$s16CiscoDiskStorage10StatisticsP",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Prefix",
+        "printedName": "Prefix",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "separator",
+            "printedName": "separator",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage6PrefixP9separatorSSvpZ",
+            "mangledName": "$s16CiscoDiskStorage6PrefixP9separatorSSvpZ",
+            "moduleName": "CiscoDiskStorage",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage6PrefixP9separatorSSvgZ",
+                "mangledName": "$s16CiscoDiskStorage6PrefixP9separatorSSvgZ",
+                "moduleName": "CiscoDiskStorage",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoDiskStorage.Prefix>",
+                "sugared_genericSig": "<Self where Self : CiscoDiskStorage.Prefix>",
+                "static": true,
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "components",
+            "printedName": "components",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage6PrefixP10componentsSaySSGvp",
+            "mangledName": "$s16CiscoDiskStorage6PrefixP10componentsSaySSGvp",
+            "moduleName": "CiscoDiskStorage",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage6PrefixP10componentsSaySSGvg",
+                "mangledName": "$s16CiscoDiskStorage6PrefixP10componentsSaySSGvg",
+                "moduleName": "CiscoDiskStorage",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoDiskStorage.Prefix>",
+                "sugared_genericSig": "<Self where Self : CiscoDiskStorage.Prefix>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "path",
+            "printedName": "path",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage6PrefixP4pathSSvp",
+            "mangledName": "$s16CiscoDiskStorage6PrefixP4pathSSvp",
+            "moduleName": "CiscoDiskStorage",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage6PrefixP4pathSSvg",
+                "mangledName": "$s16CiscoDiskStorage6PrefixP4pathSSvg",
+                "moduleName": "CiscoDiskStorage",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoDiskStorage.Prefix>",
+                "sugared_genericSig": "<Self where Self : CiscoDiskStorage.Prefix>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16CiscoDiskStorage6PrefixP",
+        "mangledName": "$s16CiscoDiskStorage6PrefixP",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Rules",
+        "printedName": "Rules",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Rules",
+                "printedName": "CiscoDiskStorage.Rules",
+                "usr": "s:16CiscoDiskStorage5RulesV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage5RulesV7defaultACvpZ",
+            "mangledName": "$s16CiscoDiskStorage5RulesV7defaultACvpZ",
+            "moduleName": "CiscoDiskStorage",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Rules",
+                    "printedName": "CiscoDiskStorage.Rules",
+                    "usr": "s:16CiscoDiskStorage5RulesV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage5RulesV7defaultACvgZ",
+                "mangledName": "$s16CiscoDiskStorage5RulesV7defaultACvgZ",
+                "moduleName": "CiscoDiskStorage",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(relativeUsedSize:absoluteUsedSize:relativeFreeSize:absoluteFreeSize:maximumFileAge:maximumFilesCount:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Rules",
+                "printedName": "CiscoDiskStorage.Rules",
+                "usr": "s:16CiscoDiskStorage5RulesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Measurement<Foundation.UnitInformationStorage>?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Measurement",
+                    "printedName": "Foundation.Measurement<Foundation.UnitInformationStorage>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UnitInformationStorage",
+                        "printedName": "Foundation.UnitInformationStorage",
+                        "usr": "c:objc(cs)NSUnitInformationStorage"
+                      }
+                    ],
+                    "usr": "s:10Foundation11MeasurementV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Measurement<Foundation.UnitInformationStorage>?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Measurement",
+                    "printedName": "Foundation.Measurement<Foundation.UnitInformationStorage>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UnitInformationStorage",
+                        "printedName": "Foundation.UnitInformationStorage",
+                        "usr": "c:objc(cs)NSUnitInformationStorage"
+                      }
+                    ],
+                    "usr": "s:10Foundation11MeasurementV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16CiscoDiskStorage5RulesV16relativeUsedSize08absolutefG00e4FreeG00hiG014maximumFileAge0J10FilesCountACSdSg_10Foundation11MeasurementVySo017NSUnitInformationC0CGSgAjqJSiSgtcfc",
+            "mangledName": "$s16CiscoDiskStorage5RulesV16relativeUsedSize08absolutefG00e4FreeG00hiG014maximumFileAge0J10FilesCountACSdSg_10Foundation11MeasurementVySo017NSUnitInformationC0CGSgAjqJSiSgtcfc",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16CiscoDiskStorage5RulesV",
+        "mangledName": "$s16CiscoDiskStorage5RulesV",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ItemInfo",
+        "printedName": "ItemInfo",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "key",
+            "printedName": "key",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage8ItemInfoV3keySSvp",
+            "mangledName": "$s16CiscoDiskStorage8ItemInfoV3keySSvp",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage8ItemInfoV3keySSvg",
+                "mangledName": "$s16CiscoDiskStorage8ItemInfoV3keySSvg",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "size",
+            "printedName": "size",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Measurement",
+                "printedName": "Foundation.Measurement<Foundation.UnitInformationStorage>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UnitInformationStorage",
+                    "printedName": "Foundation.UnitInformationStorage",
+                    "usr": "c:objc(cs)NSUnitInformationStorage"
+                  }
+                ],
+                "usr": "s:10Foundation11MeasurementV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage8ItemInfoV4size10Foundation11MeasurementVySo017NSUnitInformationC0CGvp",
+            "mangledName": "$s16CiscoDiskStorage8ItemInfoV4size10Foundation11MeasurementVySo017NSUnitInformationC0CGvp",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Measurement",
+                    "printedName": "Foundation.Measurement<Foundation.UnitInformationStorage>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UnitInformationStorage",
+                        "printedName": "Foundation.UnitInformationStorage",
+                        "usr": "c:objc(cs)NSUnitInformationStorage"
+                      }
+                    ],
+                    "usr": "s:10Foundation11MeasurementV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage8ItemInfoV4size10Foundation11MeasurementVySo017NSUnitInformationC0CGvg",
+                "mangledName": "$s16CiscoDiskStorage8ItemInfoV4size10Foundation11MeasurementVySo017NSUnitInformationC0CGvg",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage8ItemInfoV9timestamp10Foundation4DateVvp",
+            "mangledName": "$s16CiscoDiskStorage8ItemInfoV9timestamp10Foundation4DateVvp",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage8ItemInfoV9timestamp10Foundation4DateVvg",
+                "mangledName": "$s16CiscoDiskStorage8ItemInfoV9timestamp10Foundation4DateVvg",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "url",
+            "printedName": "url",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage8ItemInfoV3url10Foundation3URLVvp",
+            "mangledName": "$s16CiscoDiskStorage8ItemInfoV3url10Foundation3URLVvp",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage8ItemInfoV3url10Foundation3URLVvg",
+                "mangledName": "$s16CiscoDiskStorage8ItemInfoV3url10Foundation3URLVvg",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16CiscoDiskStorage8ItemInfoV",
+        "mangledName": "$s16CiscoDiskStorage8ItemInfoV",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KeyBuilder",
+        "printedName": "KeyBuilder",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "ContentType",
+            "printedName": "ContentType",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "json",
+                "printedName": "json",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CiscoDiskStorage.KeyBuilder.ContentType.Type) -> CiscoDiskStorage.KeyBuilder.ContentType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ContentType",
+                        "printedName": "CiscoDiskStorage.KeyBuilder.ContentType",
+                        "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CiscoDiskStorage.KeyBuilder.ContentType.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ContentType",
+                            "printedName": "CiscoDiskStorage.KeyBuilder.ContentType",
+                            "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO4jsonyA2EmF",
+                "mangledName": "$s16CiscoDiskStorage10KeyBuilderC11ContentTypeO4jsonyA2EmF",
+                "moduleName": "CiscoDiskStorage",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "jpeg",
+                "printedName": "jpeg",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CiscoDiskStorage.KeyBuilder.ContentType.Type) -> CiscoDiskStorage.KeyBuilder.ContentType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ContentType",
+                        "printedName": "CiscoDiskStorage.KeyBuilder.ContentType",
+                        "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CiscoDiskStorage.KeyBuilder.ContentType.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ContentType",
+                            "printedName": "CiscoDiskStorage.KeyBuilder.ContentType",
+                            "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO4jpegyA2EmF",
+                "mangledName": "$s16CiscoDiskStorage10KeyBuilderC11ContentTypeO4jpegyA2EmF",
+                "moduleName": "CiscoDiskStorage",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "forced",
+                "printedName": "forced",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CiscoDiskStorage.KeyBuilder.ContentType.Type) -> (Swift.String) -> CiscoDiskStorage.KeyBuilder.ContentType",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String) -> CiscoDiskStorage.KeyBuilder.ContentType",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ContentType",
+                            "printedName": "CiscoDiskStorage.KeyBuilder.ContentType",
+                            "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CiscoDiskStorage.KeyBuilder.ContentType.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ContentType",
+                            "printedName": "CiscoDiskStorage.KeyBuilder.ContentType",
+                            "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO6forcedyAESScAEmF",
+                "mangledName": "$s16CiscoDiskStorage10KeyBuilderC11ContentTypeO6forcedyAESScAEmF",
+                "moduleName": "CiscoDiskStorage",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO",
+            "mangledName": "$s16CiscoDiskStorage10KeyBuilderC11ContentTypeO",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "key",
+            "printedName": "key",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage10KeyBuilderC3keySSvp",
+            "mangledName": "$s16CiscoDiskStorage10KeyBuilderC3keySSvp",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC3keySSvg",
+                "mangledName": "$s16CiscoDiskStorage10KeyBuilderC3keySSvg",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC3keySSvs",
+                "mangledName": "$s16CiscoDiskStorage10KeyBuilderC3keySSvs",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC3keySSvM",
+                "mangledName": "$s16CiscoDiskStorage10KeyBuilderC3keySSvM",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "parrentKeyBuilder",
+            "printedName": "parrentKeyBuilder",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CiscoDiskStorage.KeyBuilder?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyBuilder",
+                    "printedName": "CiscoDiskStorage.KeyBuilder",
+                    "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage10KeyBuilderC07parrentdE0ACSgvp",
+            "mangledName": "$s16CiscoDiskStorage10KeyBuilderC07parrentdE0ACSgvp",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CiscoDiskStorage.KeyBuilder?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KeyBuilder",
+                        "printedName": "CiscoDiskStorage.KeyBuilder",
+                        "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC07parrentdE0ACSgvg",
+                "mangledName": "$s16CiscoDiskStorage10KeyBuilderC07parrentdE0ACSgvg",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CiscoDiskStorage.KeyBuilder?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KeyBuilder",
+                        "printedName": "CiscoDiskStorage.KeyBuilder",
+                        "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC07parrentdE0ACSgvs",
+                "mangledName": "$s16CiscoDiskStorage10KeyBuilderC07parrentdE0ACSgvs",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC07parrentdE0ACSgvM",
+                "mangledName": "$s16CiscoDiskStorage10KeyBuilderC07parrentdE0ACSgvM",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "contentType",
+            "printedName": "contentType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CiscoDiskStorage.KeyBuilder.ContentType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ContentType",
+                    "printedName": "CiscoDiskStorage.KeyBuilder.ContentType",
+                    "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16CiscoDiskStorage10KeyBuilderC11contentTypeAC07ContentG0OSgvp",
+            "mangledName": "$s16CiscoDiskStorage10KeyBuilderC11contentTypeAC07ContentG0OSgvp",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CiscoDiskStorage.KeyBuilder.ContentType?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ContentType",
+                        "printedName": "CiscoDiskStorage.KeyBuilder.ContentType",
+                        "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC11contentTypeAC07ContentG0OSgvg",
+                "mangledName": "$s16CiscoDiskStorage10KeyBuilderC11contentTypeAC07ContentG0OSgvg",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CiscoDiskStorage.KeyBuilder.ContentType?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ContentType",
+                        "printedName": "CiscoDiskStorage.KeyBuilder.ContentType",
+                        "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC11contentTypeAC07ContentG0OSgvs",
+                "mangledName": "$s16CiscoDiskStorage10KeyBuilderC11contentTypeAC07ContentG0OSgvs",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC11contentTypeAC07ContentG0OSgvM",
+                "mangledName": "$s16CiscoDiskStorage10KeyBuilderC11contentTypeAC07ContentG0OSgvM",
+                "moduleName": "CiscoDiskStorage",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:parrentKeyBuilder:contentType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "KeyBuilder",
+                "printedName": "CiscoDiskStorage.KeyBuilder",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CiscoDiskStorage.KeyBuilder?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyBuilder",
+                    "printedName": "CiscoDiskStorage.KeyBuilder",
+                    "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CiscoDiskStorage.KeyBuilder.ContentType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ContentType",
+                    "printedName": "CiscoDiskStorage.KeyBuilder.ContentType",
+                    "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16CiscoDiskStorage10KeyBuilderC_07parrentdE011contentTypeACSS_ACSgAC07ContentH0OSgtcfc",
+            "mangledName": "$s16CiscoDiskStorage10KeyBuilderC_07parrentdE011contentTypeACSS_ACSgAC07ContentH0OSgtcfc",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "append",
+            "printedName": "append(_:contentType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "KeyBuilder",
+                "printedName": "CiscoDiskStorage.KeyBuilder",
+                "usr": "s:16CiscoDiskStorage10KeyBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CiscoDiskStorage.KeyBuilder.ContentType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ContentType",
+                    "printedName": "CiscoDiskStorage.KeyBuilder.ContentType",
+                    "usr": "s:16CiscoDiskStorage10KeyBuilderC11ContentTypeO"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16CiscoDiskStorage10KeyBuilderC6append_11contentTypeACSS_AC07ContentH0OSgtF",
+            "mangledName": "$s16CiscoDiskStorage10KeyBuilderC6append_11contentTypeACSS_AC07ContentH0OSgtF",
+            "moduleName": "CiscoDiskStorage",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16CiscoDiskStorage10KeyBuilderC",
+        "mangledName": "$s16CiscoDiskStorage10KeyBuilderC",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoDiskStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoDiskStorage\/Sources\/Writer\/FilesystemWriter\/Statistics\/FilesystemStatisticsManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 884,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoDiskStorage\/Sources\/Models\/Prefix\/DefaultPrefix.swift",
+      "kind": "StringLiteral",
+      "offset": 234,
+      "length": 3,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoDiskStorage\/Sources\/FilesystemDiskStorage\/FilesystemDiskStorage.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1000,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoDiskStorage\/Sources\/Models\/Prefix\/FilesystemPrefix.swift",
+      "kind": "StringLiteral",
+      "offset": 449,
+      "length": 3,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoDiskStorage\/Sources\/Models\/Prefix\/FilesystemPrefix.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1063,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoDiskStorage\/Sources\/Models\/Prefix\/FilesystemPrefix.swift",
+      "kind": "StringLiteral",
+      "offset": 1085,
+      "length": 9,
+      "value": "\"default\""
+    },
+    {
+      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoDiskStorage\/Sources\/Statistics\/DiskStorageStatistics.swift",
+      "kind": "BooleanLiteral",
+      "offset": 391,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

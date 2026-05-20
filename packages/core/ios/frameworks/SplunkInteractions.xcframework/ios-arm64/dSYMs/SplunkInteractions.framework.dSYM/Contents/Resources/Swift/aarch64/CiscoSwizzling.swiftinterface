@@ -1,0 +1,242 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CiscoSwizzling
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import CiscoCommon
+import Foundation
+import QuartzCore
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol ActionEvent : Swift.Sendable {
+  var timestamp: Foundation.Date { get }
+}
+public enum NavigationActionEventType : Swift.Sendable {
+  case viewDidLoad
+  case viewDidAppear
+  case viewDidDisappear
+  case viewWillTransition
+  case viewDidTransition
+  case willTransitionToTraitCollection
+  case didTransitionToTraitCollection
+  case navigationControllerWillShow
+  case navigationControllerDidShow
+  public static func == (a: CiscoSwizzling.NavigationActionEventType, b: CiscoSwizzling.NavigationActionEventType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol NavigationActionEvent : CiscoSwizzling.ActionEvent {
+  var controllerTypeName: Swift.String { get }
+  var controllerIdentifier: Swift.ObjectIdentifier { get }
+  var navigationControllerIdentifier: Swift.ObjectIdentifier? { get }
+  var type: CiscoSwizzling.NavigationActionEventType { get }
+  var viewFrame: CoreFoundation.CGRect? { get }
+}
+extension CiscoSwizzling.NavigationActionEvent {
+  public var navigationControllerIdentifier: Swift.ObjectIdentifier? {
+    get
+  }
+}
+public enum PresentationActionEventType : Swift.Sendable {
+  case presentationWillBegin
+  case presentationDidEnd
+  case dismissalWillBegin
+  case dismissalDidEnd
+  public static func == (a: CiscoSwizzling.PresentationActionEventType, b: CiscoSwizzling.PresentationActionEventType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol PresentationActionEvent : CiscoSwizzling.ActionEvent {
+  var presentationControllerIdentifier: Swift.ObjectIdentifier { get }
+  var presentedControllerTypeName: Swift.String { get }
+  var presentedControllerIdentifier: Swift.ObjectIdentifier { get }
+  var presentingControllerTypeName: Swift.String { get }
+  var presentingControllerIdentifier: Swift.ObjectIdentifier { get }
+  var type: CiscoSwizzling.PresentationActionEventType { get }
+  var completed: Swift.Bool? { get }
+}
+public enum LayoutUpdateActionEventType : Swift.Sendable {
+  case setNeedsLayout
+  case setNeedsDisplay
+  case didAddSubview
+  case willRemoveSubview
+  case addAnimation
+  case removeAnimation
+  case removeAllAnimations
+  public static func == (a: CiscoSwizzling.LayoutUpdateActionEventType, b: CiscoSwizzling.LayoutUpdateActionEventType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol LayoutUpdateActionEvent : CiscoSwizzling.ActionEvent {
+  var type: CiscoSwizzling.LayoutUpdateActionEventType { get }
+  var viewIdentifier: Swift.ObjectIdentifier? { get }
+  var viewType: Swift.String? { get }
+  var viewFrame: CoreFoundation.CGRect? { get }
+  var parentViewsTypes: [any Swift.AnyObject.Type]? { get }
+  var parentWindowIdentifier: Swift.ObjectIdentifier? { get }
+  var windowIsActive: Swift.Bool { get }
+}
+public enum InteractionsActionEventType : Swift.Sendable {
+  case sendEvent
+  case interactWithElement
+  case enterFocus
+  case leaveFocus
+  case selectRow
+  case actionTriggered
+  case keyboardShow
+  case keyboardHide
+  public static func == (a: CiscoSwizzling.InteractionsActionEventType, b: CiscoSwizzling.InteractionsActionEventType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol InteractionsActionEvent : CiscoSwizzling.ActionEvent {
+  var type: CiscoSwizzling.InteractionsActionEventType { get }
+  var interactionEvent: CiscoSwizzling.InteractionData { get }
+}
+public protocol NetworkingActionEvent : CiscoSwizzling.ActionEvent {
+  var response: Foundation.URLResponse? { get }
+  var responseData: Foundation.Data? { get }
+}
+@_Concurrency.MainActor public protocol Swizzling {
+  @_Concurrency.MainActor static var navigation: _Concurrency.AsyncStream<any CiscoSwizzling.NavigationActionEvent> { get throws }
+  @_Concurrency.MainActor static var presentation: _Concurrency.AsyncStream<any CiscoSwizzling.PresentationActionEvent> { get throws }
+  @_Concurrency.MainActor static var layout: _Concurrency.AsyncStream<any CiscoSwizzling.LayoutUpdateActionEvent> { get throws }
+  @_Concurrency.MainActor static var networking: _Concurrency.AsyncStream<any CiscoSwizzling.NetworkingActionEvent> { get throws }
+  @_Concurrency.MainActor static var interactions: _Concurrency.AsyncStream<any CiscoSwizzling.InteractionsActionEvent> { get throws }
+}
+public struct TouchData : Swift.Sendable {
+  public enum Phase : Swift.Int, Swift.Sendable {
+    case began
+    case moved
+    case stationary
+    case ended
+    case cancelled
+    case regionEntered
+    case regionMoved
+    case regionExited
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum GestureType : Swift.Sendable {
+    case pinch
+    case rotation
+    case tap
+    case doubleTap
+    case longPress
+    public static func == (a: CiscoSwizzling.TouchData.GestureType, b: CiscoSwizzling.TouchData.GestureType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum InteractionPointerType : Swift.Sendable {
+    case finger
+    case mouse
+    case stylus
+    case touchpad
+    public static func == (a: CiscoSwizzling.TouchData.InteractionPointerType, b: CiscoSwizzling.TouchData.InteractionPointerType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let touchIdentifier: Swift.ObjectIdentifier
+  public let timestamp: Foundation.Date
+  public let phase: CiscoSwizzling.TouchData.Phase
+  public let locationInWindow: CoreFoundation.CGPoint?
+  public let previousLocationInWindow: CoreFoundation.CGPoint?
+  public let tapCount: Swift.Int
+  public let viewIdentifier: Swift.ObjectIdentifier?
+  public let windowIdentifier: Swift.ObjectIdentifier?
+  public let handledGestureType: CiscoSwizzling.TouchData.GestureType?
+  public let interactionPointerType: CiscoSwizzling.TouchData.InteractionPointerType
+  public init(touchIdentifier: Swift.ObjectIdentifier, timestamp: Foundation.Date, phase: CiscoSwizzling.TouchData.Phase, locationInWindow: CoreFoundation.CGPoint?, previousLocationInWindow: CoreFoundation.CGPoint?, tapCount: Swift.Int, viewIdentifier: Swift.ObjectIdentifier?, windowIdentifier: Swift.ObjectIdentifier?, handledGestureType: CiscoSwizzling.TouchData.GestureType?, interactionPointerType: CiscoSwizzling.TouchData.InteractionPointerType)
+  @_Concurrency.MainActor public init(from touch: UIKit.UITouch, in window: UIKit.UIWindow?, handledGestureType: CiscoSwizzling.TouchData.GestureType? = nil, timestamp: Foundation.Date)
+}
+public struct InteractionData : Swift.Sendable {
+  public enum EventType : Swift.Int, Swift.Sendable {
+    case touches
+    case motion
+    case remoteControl
+    case presses
+    case scroll
+    case hover
+    case transform
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public let onElementIdentifier: Swift.ObjectIdentifier?
+  public let onElementViewHierarchy: CiscoSwizzling.ViewNode?
+  public let inWindow: Swift.ObjectIdentifier?
+  public let actionString: Swift.String?
+  public let eventTouches: [CiscoSwizzling.TouchData]?
+  public let eventType: CiscoSwizzling.InteractionData.EventType?
+  public let timestamp: Foundation.Date
+  public let keyboardFrame: CoreFoundation.CGRect?
+  public init(onElementIdentifier: Swift.ObjectIdentifier?, onElementViewHierarchy: CiscoSwizzling.ViewNode?, inWindow: Swift.ObjectIdentifier? = nil, actionString: Swift.String? = nil, eventTouches: [CiscoSwizzling.TouchData]? = nil, eventType: CiscoSwizzling.InteractionData.EventType? = nil, timestamp: Foundation.Date, keyboardFrame: CoreFoundation.CGRect? = nil)
+}
+extension CiscoSwizzling.DefaultSwizzling : CiscoSwizzling.Swizzling {
+  @_Concurrency.MainActor public static var navigation: _Concurrency.AsyncStream<any CiscoSwizzling.NavigationActionEvent> {
+    get throws
+  }
+  @_Concurrency.MainActor public static var presentation: _Concurrency.AsyncStream<any CiscoSwizzling.PresentationActionEvent> {
+    get throws
+  }
+  @_Concurrency.MainActor public static var layout: _Concurrency.AsyncStream<any CiscoSwizzling.LayoutUpdateActionEvent> {
+    get throws
+  }
+  @_Concurrency.MainActor public static var networking: _Concurrency.AsyncStream<any CiscoSwizzling.NetworkingActionEvent> {
+    get throws
+  }
+  @_Concurrency.MainActor public static var interactions: _Concurrency.AsyncStream<any CiscoSwizzling.InteractionsActionEvent> {
+    get throws
+  }
+}
+@_hasMissingDesignatedInitializers final public class ViewNode : Swift.Sendable, Swift.CustomDebugStringConvertible {
+  final public let viewTypeName: Swift.String
+  final public let viewId: Swift.ObjectIdentifier
+  final public let indexPath: Foundation.IndexPath?
+  final public let superViewNode: CiscoSwizzling.ViewNode?
+  final public var debugDescription: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @_Concurrency.MainActor final public class DefaultSwizzling {
+  @objc deinit
+}
+extension CiscoSwizzling.NavigationActionEventType : Swift.Equatable {}
+extension CiscoSwizzling.NavigationActionEventType : Swift.Hashable {}
+extension CiscoSwizzling.PresentationActionEventType : Swift.Equatable {}
+extension CiscoSwizzling.PresentationActionEventType : Swift.Hashable {}
+extension CiscoSwizzling.LayoutUpdateActionEventType : Swift.Equatable {}
+extension CiscoSwizzling.LayoutUpdateActionEventType : Swift.Hashable {}
+extension CiscoSwizzling.InteractionsActionEventType : Swift.Equatable {}
+extension CiscoSwizzling.InteractionsActionEventType : Swift.Hashable {}
+extension CiscoSwizzling.TouchData.Phase : Swift.Equatable {}
+extension CiscoSwizzling.TouchData.Phase : Swift.Hashable {}
+extension CiscoSwizzling.TouchData.Phase : Swift.RawRepresentable {}
+extension CiscoSwizzling.TouchData.GestureType : Swift.Equatable {}
+extension CiscoSwizzling.TouchData.GestureType : Swift.Hashable {}
+extension CiscoSwizzling.TouchData.InteractionPointerType : Swift.Equatable {}
+extension CiscoSwizzling.TouchData.InteractionPointerType : Swift.Hashable {}
+extension CiscoSwizzling.InteractionData.EventType : Swift.Equatable {}
+extension CiscoSwizzling.InteractionData.EventType : Swift.Hashable {}
+extension CiscoSwizzling.InteractionData.EventType : Swift.RawRepresentable {}
+extension CiscoSwizzling.DefaultSwizzling : Swift.Sendable {}

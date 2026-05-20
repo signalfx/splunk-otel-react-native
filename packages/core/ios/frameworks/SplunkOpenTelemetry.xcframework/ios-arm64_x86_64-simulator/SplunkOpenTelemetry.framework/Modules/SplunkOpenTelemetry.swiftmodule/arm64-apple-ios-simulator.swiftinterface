@@ -1,0 +1,85 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkOpenTelemetry
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import OpenTelemetryApi
+import OpenTelemetrySdk
+import SplunkCommon
+import SplunkOpenTelemetryBackgroundExporter
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class OTLPLogToSpanEventProcessor : SplunkCommon.LogEventProcessor {
+  required public init(with _: Foundation.URL?, resources: any SplunkCommon.AgentResources, debugEnabled: Swift.Bool)
+  public func sendEvent(_ event: any SplunkCommon.AgentEvent, completion: @escaping (Swift.Bool) -> Swift.Void)
+  public func sendEvent(event: any SplunkCommon.AgentEvent, immediateProcessing: Swift.Bool, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
+public class OTLPSessionReplayEventProcessor : SplunkCommon.LogEventProcessor {
+  required public init(with sessionReplayEndpoint: Foundation.URL?, resources: any SplunkCommon.AgentResources, runtimeAttributes: any SplunkCommon.RuntimeAttributes, globalAttributes _: @escaping () -> [Swift.String : OpenTelemetryApi.AttributeValue], debugEnabled: Swift.Bool, accessToken: Swift.String? = nil)
+  public func setEndpoint(_ newEndpoint: Foundation.URL, accessToken: Swift.String? = nil)
+  public func clearEndpoint()
+  public func sendEvent(_ event: any SplunkCommon.AgentEvent, completion: @escaping (Swift.Bool) -> Swift.Void)
+  public func sendEvent(event: any SplunkCommon.AgentEvent, immediateProcessing: Swift.Bool, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
+public class OTLPAttributesLogRecordProcessor : OpenTelemetrySdk.LogRecordProcessor {
+  public init(proxy: any OpenTelemetrySdk.LogRecordProcessor, with runtimeAttributes: any SplunkCommon.RuntimeAttributes, activityTracker: any SplunkCommon.ActivityTracker)
+  public func onEmit(logRecord: OpenTelemetrySdk.ReadableLogRecord)
+  public func shutdown(explicitTimeout: Foundation.TimeInterval?) -> OpenTelemetrySdk.ExportResult
+  public func forceFlush(explicitTimeout: Foundation.TimeInterval?) -> OpenTelemetrySdk.ExportResult
+  @objc deinit
+}
+public class OTLPGlobalAttributesLogRecordProcessor : OpenTelemetrySdk.LogRecordProcessor {
+  public init(proxy: any OpenTelemetrySdk.LogRecordProcessor, with globalAttributes: @escaping () -> [Swift.String : OpenTelemetryApi.AttributeValue])
+  public func onEmit(logRecord: OpenTelemetrySdk.ReadableLogRecord)
+  public func forceFlush(explicitTimeout: Foundation.TimeInterval?) -> OpenTelemetrySdk.ExportResult
+  public func shutdown(explicitTimeout: Foundation.TimeInterval?) -> OpenTelemetrySdk.ExportResult
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class OTLPLogToSpanExporter : OpenTelemetrySdk.LogRecordExporter {
+  public func export(logRecords: [OpenTelemetrySdk.ReadableLogRecord], explicitTimeout _: Foundation.TimeInterval?) -> OpenTelemetrySdk.ExportResult
+  public func shutdown(explicitTimeout _: Foundation.TimeInterval?)
+  public func forceFlush(explicitTimeout _: Foundation.TimeInterval?) -> OpenTelemetrySdk.ExportResult
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class OTel {
+  public static let version: Swift.String
+  @objc deinit
+}
+public typealias SplunkSpanInterceptor = (OpenTelemetrySdk.SpanData) -> OpenTelemetrySdk.SpanData?
+public class OLTPAttributesSpanProcessor : OpenTelemetrySdk.SpanProcessor {
+  final public let isStartRequired: Swift.Bool
+  final public let isEndRequired: Swift.Bool
+  public init(with runtimeAttributes: any SplunkCommon.RuntimeAttributes, activityTracker: any SplunkCommon.ActivityTracker)
+  public func onStart(parentContext _: OpenTelemetryApi.SpanContext?, span: any OpenTelemetrySdk.ReadableSpan)
+  public func onEnd(span _: any OpenTelemetrySdk.ReadableSpan)
+  public func shutdown(explicitTimeout _: Foundation.TimeInterval?)
+  public func forceFlush(timeout _: Foundation.TimeInterval?)
+  @objc deinit
+}
+public class OTLPGlobalAttributesSpanProcessor : OpenTelemetrySdk.SpanProcessor {
+  public init(with globalAttributes: @escaping () -> [Swift.String : OpenTelemetryApi.AttributeValue])
+  public var isStartRequired: Swift.Bool {
+    get
+  }
+  public var isEndRequired: Swift.Bool {
+    get
+  }
+  public func onStart(parentContext _: OpenTelemetryApi.SpanContext?, span: any OpenTelemetrySdk.ReadableSpan)
+  public func onEnd(span _: any OpenTelemetrySdk.ReadableSpan)
+  public func shutdown(explicitTimeout _: Foundation.TimeInterval?)
+  public func forceFlush(timeout _: Foundation.TimeInterval?)
+  @objc deinit
+}
+public class OTLPTraceProcessor : SplunkCommon.TraceProcessor {
+  required public init(with tracesEndpoint: Foundation.URL?, resources: any SplunkCommon.AgentResources, runtimeAttributes: any SplunkCommon.RuntimeAttributes, globalAttributes: @escaping () -> [Swift.String : OpenTelemetryApi.AttributeValue], debugEnabled: Swift.Bool, spanInterceptor: SplunkOpenTelemetry.SplunkSpanInterceptor?, accessToken: Swift.String? = nil, activityTracker: any SplunkCommon.ActivityTracker)
+  public func setEndpoint(_ newEndpoint: Foundation.URL, accessToken: Swift.String? = nil)
+  public func clearEndpoint()
+  @objc deinit
+}
+extension OpenTelemetryApi.AttributeValue {
+  public init(_ eventAttributeValue: SplunkCommon.EventAttributeValue)
+}
