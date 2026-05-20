@@ -56,7 +56,7 @@
     "eslint-plugin-prettier": "5.5.4",
     "prettier": "3.6.2",
     "release-it": "19.0.5",
-    "turbo": "2.5.8",
+    "turbo": "2.9.14",
     "typescript": "5.9.3"
   },
   "workspaces": [
