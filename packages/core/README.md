@@ -3,6 +3,11 @@
 [![npm version](https://badge.fury.io/js/@splunk%2Fotel-react-native.svg)](https://badge.fury.io/js/@splunk%2Fotel-react-native)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
+## Documentation
+
+- [Install the Splunk RUM React Native Agent](https://help.splunk.com/en/splunk-observability-cloud/manage-data/available-data-sources/supported-integrations-in-splunk-observability-cloud/rum-instrumentation/instrument-mobile-and-web-applications-for-splunk-real-user-monitoring-rum/instrument-react-native-agent-applications-for-splunk-rum/install-the-splunk-rum-react-native-agent)
+- [Troubleshoot React Native Instrumentation](https://help.splunk.com/en/splunk-observability-cloud/manage-data/available-data-sources/supported-integrations-in-splunk-observability-cloud/rum-instrumentation/instrument-mobile-and-web-applications-for-splunk-real-user-monitoring-rum/instrument-react-native-agent-applications-for-splunk-rum/troubleshoot-react-native-instrumentation)
+
 ## Overview
 
 The Splunk Distribution of OpenTelemetry for React Native provides automatic instrumentation for React Native applications running on Android and iOS devices. This library captures telemetry data including:
