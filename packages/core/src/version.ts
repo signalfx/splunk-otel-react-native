@@ -19,7 +19,7 @@ import { Platform } from 'react-native';
 /**
  * The version of the `@splunk/otel-react-native` SDK package.
  */
-export const SDK_VERSION = '1.0.0';
+export const SDK_VERSION = '1.0.1';
 
 /**
  * OTel attribute key for the React Native framework version used by the app.

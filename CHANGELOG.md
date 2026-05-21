@@ -4,6 +4,15 @@
 
 * TBD
 
+## 1.0.1
+
+### `@splunk/otel-react-native`
+
+#### Changed
+* **iOS: Removed `USE_FRAMEWORKS=dynamic` requirement.** The native iOS SDK is now distributed as vendored xcframeworks instead of being resolved via SPM at `pod install` time. This means the SDK now works with any CocoaPods linkage mode, including `use_frameworks! :linkage => :static` (required by Firebase, Adobe AEP, and similar dependencies). No Podfile changes are needed to integrate the SDK.
+
+* **iOS Bumped native iOS Splunk RUM SDK to 2.2.3**, which fixes an App Store validation failure (`Validation failed (409) CFBundleIdentifier Collision`) that prevented users from uploading their apps.
+
 ## 1.0.0
 
 First stable release of the Splunk Distribution of OpenTelemetry for React Native.
