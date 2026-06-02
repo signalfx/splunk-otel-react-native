@@ -342,4 +342,5 @@ describe('bridge/converters', () => {
       expect(clampSamplingRate(1)).toBe(1);
     });
   });
+
 });

@@ -82,7 +82,10 @@ export class SplunkRum {
     modules?: ModuleConfiguration[]
   ): Promise<void> {
     const nativeConfig = toNativeAgentConfiguration(configuration);
-    const nativeModules = toNativeModules(modules);
+    const nativeModules = toNativeModules(
+      modules,
+      !!configuration.enableDebugLogging
+    );
 
     await Native.install(nativeConfig, nativeModules);
 

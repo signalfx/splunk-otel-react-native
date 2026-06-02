@@ -14,7 +14,11 @@
  * limitations under the License.
  */
 
-import { ModuleConfiguration } from './ModuleConfiguration';
+import {
+  ModuleConfiguration,
+  type ToNativeOptions,
+} from './ModuleConfiguration';
+import { sanitizeAndJoinHeaders } from './headers/sanitizeHeaderNames';
 
 /**
  * **Android only.** OkHttp3 manual instrumentation configuration.
@@ -24,24 +28,44 @@ import { ModuleConfiguration } from './ModuleConfiguration';
  */
 export class OkHttp3ManualModuleConfiguration extends ModuleConfiguration {
   /**
-   * @param requestHeaders - Request header names to capture in spans.
-   * @param responseHeaders - Response header names to capture in spans.
+   * @param capturedRequestHeaders - HTTP request header names to capture as span attributes.
+   *   Matching headers are added as `http.request.header.<lowercased-name>`.
+   *   Names are trimmed; empty, invalid (non-RFC 7230), and duplicate entries
+   *   are discarded.
+   *
+   *   **Security:** do not capture headers that carry credentials or session
+   *   material (for example `Authorization`, `Proxy-Authorization`, `Cookie`).
+   * @param capturedResponseHeaders - HTTP response header names to capture as span attributes.
+   *   Matching headers are added as `http.response.header.<lowercased-name>`.
+   *   Names are trimmed; empty, invalid (non-RFC 7230), and duplicate entries
+   *   are discarded.
+   *
+   *   **Security:** avoid capturing `Set-Cookie` or `Set-Cookie2`.
    */
   constructor(
-    public requestHeaders: string[] = [],
-    public responseHeaders: string[] = []
+    public capturedRequestHeaders: string[] = [],
+    public capturedResponseHeaders: string[] = []
   ) {
     super();
   }
 
   readonly name = 'okHttp3-manual';
 
-  toNative() {
+  toNative(options?: ToNativeOptions) {
+    const debug = options?.debugLogging ?? false;
     return {
       name: this.name,
       attributes: {
-        requestHeaders: this.requestHeaders.join(', '),
-        responseHeaders: this.responseHeaders.join(', '),
+        requestHeaders: sanitizeAndJoinHeaders(
+          this.capturedRequestHeaders,
+          'OkHttp3ManualModuleConfiguration.capturedRequestHeaders',
+          debug
+        ),
+        responseHeaders: sanitizeAndJoinHeaders(
+          this.capturedResponseHeaders,
+          'OkHttp3ManualModuleConfiguration.capturedResponseHeaders',
+          debug
+        ),
       },
     };
   }

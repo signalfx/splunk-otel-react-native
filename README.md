@@ -189,6 +189,44 @@ import {
 </SplunkRumProvider>;
 ```
 
+### Network Header Capture
+
+Capture specific HTTP request and response headers as span attributes. Captured headers appear as `http.request.header.<name>` and `http.response.header.<name>` on network spans.
+
+```tsx
+import {
+  NetworkInstrumentationModuleConfiguration,
+  HttpURLModuleConfiguration,
+  OkHttp3AutoModuleConfiguration,
+} from '@splunk/otel-react-native';
+
+const modules = [
+  // iOS — URLSession instrumentation
+  new NetworkInstrumentationModuleConfiguration(
+    true,       // enabled
+    undefined,  // ignoreURLs
+    ['Content-Type', 'Accept'],                   // capturedRequestHeaders
+    ['Content-Type', 'Content-Encoding', 'Server'] // capturedResponseHeaders
+  ),
+  // Android — HttpURLConnection instrumentation
+  new HttpURLModuleConfiguration(
+    true,
+    ['Content-Type', 'Accept'],
+    ['Content-Type', 'Content-Encoding', 'Server']
+  ),
+  // Android — OkHttp3 instrumentation
+  new OkHttp3AutoModuleConfiguration(
+    true,
+    ['Content-Type', 'Accept'],
+    ['Content-Type', 'Content-Encoding', 'Server']
+  ),
+];
+```
+
+Header names are validated against RFC 7230 before being forwarded to the native agent. Invalid, empty, and duplicate entries are silently dropped (or logged via `console.warn` when `enableDebugLogging` is set in the agent configuration).
+
+> **Security:** Do not capture headers that carry credentials or session material (for example `Authorization`, `Cookie`, `Set-Cookie`).
+
 ### Global Attributes
 
 Add custom attributes to all telemetry:

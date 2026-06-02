@@ -43,7 +43,7 @@ export class SessionReplayModuleConfiguration extends ModuleConfiguration {
     super();
   }
 
-  toNative(): { name: string; attributes: Record<string, string> } {
+  toNative() {
     const clampedRate = Math.min(1, Math.max(0, this.samplingRate));
 
     return {

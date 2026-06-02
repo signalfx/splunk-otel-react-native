@@ -74,11 +74,12 @@ export function toNativeAgentConfiguration(
 }
 
 export function toNativeModules(
-  modules?: ModuleConfiguration[]
+  modules?: ModuleConfiguration[],
+  debugLogging: boolean = false
 ): NativeModuleConfigurations {
   if (!modules || modules.length === 0) return [];
 
-  return modules.map((m) => m.toNative());
+  return modules.map((m) => m.toNative({ debugLogging }));
 }
 
 export function fromNativeEndpoint(

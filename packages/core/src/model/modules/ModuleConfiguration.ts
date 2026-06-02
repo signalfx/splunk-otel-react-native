@@ -31,10 +31,17 @@
  * ]);
  * ```
  */
+export interface ToNativeOptions {
+  debugLogging?: boolean;
+}
+
 export abstract class ModuleConfiguration {
   /** Module identifier used internally. */
   abstract readonly name: string;
 
   /** Converts configuration to native format. */
-  abstract toNative(): { name: string; attributes: Record<string, string> };
+  abstract toNative(options?: ToNativeOptions): {
+    name: string;
+    attributes: Record<string, string>;
+  };
 }

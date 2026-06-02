@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-* TBD
+### Added
+* **HTTP header capture for Network instrumentation.** `NetworkInstrumentationModuleConfiguration`, `HttpURLModuleConfiguration` and `OkHttp3AutoModuleConfiguration` now accepts `requestHeaders` and `responseHeaders` to capture specific HTTP headers as span attributes (`http.request.header.<name>` / `http.response.header.<name>`). All the headers undergo RFC 7230 header name sanitization.
 
 ## 1.0.1
 
