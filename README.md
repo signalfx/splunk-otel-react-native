@@ -205,8 +205,8 @@ const modules = [
   new NetworkInstrumentationModuleConfiguration(
     true,       // enabled
     undefined,  // ignoreURLs
-    ['Content-Type', 'Accept'],                   // request headers to capture
-    ['Content-Type', 'Content-Encoding', 'Server'] // response headers to capture
+    ['Content-Type', 'Accept'],                   // capturedRequestHeaders
+    ['Content-Type', 'Content-Encoding', 'Server'] // capturedResponseHeaders
   ),
   // Android — HttpURLConnection instrumentation
   new HttpURLModuleConfiguration(
@@ -223,7 +223,7 @@ const modules = [
 ];
 ```
 
-Header names are validated against RFC 7230 before being forwarded to the native agent. Invalid, empty, and duplicate entries are silently dropped (or logged via `console.warn` when debug logging is enabled).
+Header names are validated against RFC 7230 before being forwarded to the native agent. Invalid, empty, and duplicate entries are silently dropped (or logged via `console.warn` when `enableDebugLogging` is set in the agent configuration).
 
 > **Security:** Do not capture headers that carry credentials or session material (for example `Authorization`, `Cookie`, `Set-Cookie`).
 

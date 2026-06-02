@@ -14,7 +14,10 @@
  * limitations under the License.
  */
 
-import { ModuleConfiguration } from './ModuleConfiguration';
+import {
+  ModuleConfiguration,
+  type ToNativeOptions,
+} from './ModuleConfiguration';
 import { sanitizeAndJoinHeaders } from './headers/sanitizeHeaderNames';
 
 /**
@@ -27,7 +30,7 @@ export class NetworkInstrumentationModuleConfiguration extends ModuleConfigurati
    * @param isEnabled - Whether instrumentation is enabled. Defaults to `true`.
    * @param ignoreURLs - Regex pattern(s) for URLs to exclude from tracing.
    *   Can be a single regex string or array of patterns (joined with `|`).
-   * @param requestHeaders - HTTP request header names to capture as span attributes.
+   * @param capturedRequestHeaders - HTTP request header names to capture as span attributes.
    *   Matching headers from outgoing requests are added to the HTTP span as
    *   `http.request.header.<lowercased-name>`. Header matching is case-insensitive.
    *   Names are trimmed; empty entries, entries that are not valid RFC 7230 header
@@ -36,7 +39,7 @@ export class NetworkInstrumentationModuleConfiguration extends ModuleConfigurati
    *   **Security:** do not capture headers that carry credentials or session
    *   material (for example `Authorization`, `Proxy-Authorization`, `Cookie`).
    *   Their values would be persisted verbatim in telemetry.
-   * @param responseHeaders - HTTP response header names to capture as span attributes.
+   * @param capturedResponseHeaders - HTTP response header names to capture as span attributes.
    *   Matching headers from incoming responses are added to the HTTP span as
    *   `http.response.header.<lowercased-name>`. Header matching is case-insensitive.
    *   Names are trimmed; empty entries, entries that are not valid RFC 7230 header
@@ -49,21 +52,20 @@ export class NetworkInstrumentationModuleConfiguration extends ModuleConfigurati
    *   Note: multi-value headers are comma-joined by the native agent. Avoid
    *   capturing headers whose values may contain commas (for example, `Set-Cookie`)
    *   because their original structure cannot be reliably reconstructed.
-   * @param debugLogging - Pass `true` to log sanitization warnings. Defaults to `false`.
    */
   constructor(
     public isEnabled: boolean = true,
     public ignoreURLs?: string | string[],
-    public requestHeaders: string[] = [],
-    public responseHeaders: string[] = [],
-    private debugLogging: boolean = false
+    public capturedRequestHeaders: string[] = [],
+    public capturedResponseHeaders: string[] = []
   ) {
     super();
   }
 
   readonly name = 'networkInstrumentation';
 
-  toNative() {
+  toNative(options?: ToNativeOptions) {
+    const debug = options?.debugLogging ?? false;
     const attrs: Record<string, string> = { enabled: String(this.isEnabled) };
     if (this.ignoreURLs) {
       attrs.ignoreURLs = Array.isArray(this.ignoreURLs)
@@ -72,22 +74,18 @@ export class NetworkInstrumentationModuleConfiguration extends ModuleConfigurati
     }
 
     const req = sanitizeAndJoinHeaders(
-      this.requestHeaders,
-      'NetworkInstrumentationModuleConfiguration.requestHeaders',
-      this.debugLogging
+      this.capturedRequestHeaders,
+      'NetworkInstrumentationModuleConfiguration.capturedRequestHeaders',
+      debug
     );
-    if (req.length > 0) {
-      attrs.requestHeaders = req;
-    }
+    if (req) attrs.requestHeaders = req;
 
     const res = sanitizeAndJoinHeaders(
-      this.responseHeaders,
-      'NetworkInstrumentationModuleConfiguration.responseHeaders',
-      this.debugLogging
+      this.capturedResponseHeaders,
+      'NetworkInstrumentationModuleConfiguration.capturedResponseHeaders',
+      debug
     );
-    if (res.length > 0) {
-      attrs.responseHeaders = res;
-    }
+    if (res) attrs.responseHeaders = res;
 
     return { name: this.name, attributes: attrs };
   }

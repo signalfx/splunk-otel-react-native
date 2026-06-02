@@ -14,7 +14,10 @@
  * limitations under the License.
  */
 
-import { ModuleConfiguration } from './ModuleConfiguration';
+import {
+  ModuleConfiguration,
+  type ToNativeOptions,
+} from './ModuleConfiguration';
 import { sanitizeAndJoinHeaders } from './headers/sanitizeHeaderNames';
 
 /**
@@ -25,44 +28,43 @@ import { sanitizeAndJoinHeaders } from './headers/sanitizeHeaderNames';
  */
 export class OkHttp3ManualModuleConfiguration extends ModuleConfiguration {
   /**
-   * @param requestHeaders - HTTP request header names to capture as span attributes.
+   * @param capturedRequestHeaders - HTTP request header names to capture as span attributes.
    *   Matching headers are added as `http.request.header.<lowercased-name>`.
    *   Names are trimmed; empty, invalid (non-RFC 7230), and duplicate entries
    *   are discarded.
    *
    *   **Security:** do not capture headers that carry credentials or session
    *   material (for example `Authorization`, `Proxy-Authorization`, `Cookie`).
-   * @param responseHeaders - HTTP response header names to capture as span attributes.
+   * @param capturedResponseHeaders - HTTP response header names to capture as span attributes.
    *   Matching headers are added as `http.response.header.<lowercased-name>`.
    *   Names are trimmed; empty, invalid (non-RFC 7230), and duplicate entries
    *   are discarded.
    *
    *   **Security:** avoid capturing `Set-Cookie` or `Set-Cookie2`.
-   * @param debugLogging - Pass `true` to log sanitization warnings. Defaults to `false`.
    */
   constructor(
-    public requestHeaders: string[] = [],
-    public responseHeaders: string[] = [],
-    private debugLogging: boolean = false
+    public capturedRequestHeaders: string[] = [],
+    public capturedResponseHeaders: string[] = []
   ) {
     super();
   }
 
   readonly name = 'okHttp3-manual';
 
-  toNative() {
+  toNative(options?: ToNativeOptions) {
+    const debug = options?.debugLogging ?? false;
     return {
       name: this.name,
       attributes: {
         requestHeaders: sanitizeAndJoinHeaders(
-          this.requestHeaders,
-          'OkHttp3ManualModuleConfiguration.requestHeaders',
-          this.debugLogging
+          this.capturedRequestHeaders,
+          'OkHttp3ManualModuleConfiguration.capturedRequestHeaders',
+          debug
         ),
         responseHeaders: sanitizeAndJoinHeaders(
-          this.responseHeaders,
-          'OkHttp3ManualModuleConfiguration.responseHeaders',
-          this.debugLogging
+          this.capturedResponseHeaders,
+          'OkHttp3ManualModuleConfiguration.capturedResponseHeaders',
+          debug
         ),
       },
     };

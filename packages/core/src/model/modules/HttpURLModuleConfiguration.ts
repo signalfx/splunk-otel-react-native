@@ -14,7 +14,10 @@
  * limitations under the License.
  */
 
-import { ModuleConfiguration } from './ModuleConfiguration';
+import {
+  ModuleConfiguration,
+  type ToNativeOptions,
+} from './ModuleConfiguration';
 import { sanitizeAndJoinHeaders } from './headers/sanitizeHeaderNames';
 
 /**
@@ -25,46 +28,45 @@ import { sanitizeAndJoinHeaders } from './headers/sanitizeHeaderNames';
 export class HttpURLModuleConfiguration extends ModuleConfiguration {
   /**
    * @param isEnabled - Whether instrumentation is enabled. Defaults to `true`.
-   * @param requestHeaders - HTTP request header names to capture as span attributes.
+   * @param capturedRequestHeaders - HTTP request header names to capture as span attributes.
    *   Matching headers are added as `http.request.header.<lowercased-name>`.
    *   Names are trimmed; empty, invalid (non-RFC 7230), and duplicate entries
    *   are discarded.
    *
    *   **Security:** do not capture headers that carry credentials or session
    *   material (for example `Authorization`, `Proxy-Authorization`, `Cookie`).
-   * @param responseHeaders - HTTP response header names to capture as span attributes.
+   * @param capturedResponseHeaders - HTTP response header names to capture as span attributes.
    *   Matching headers are added as `http.response.header.<lowercased-name>`.
    *   Names are trimmed; empty, invalid (non-RFC 7230), and duplicate entries
    *   are discarded.
    *
    *   **Security:** avoid capturing `Set-Cookie` or `Set-Cookie2`.
-   * @param debugLogging - Pass `true` to log sanitization warnings. Defaults to `false`.
    */
   constructor(
     public isEnabled: boolean = true,
-    public requestHeaders: string[] = [],
-    public responseHeaders: string[] = [],
-    private debugLogging: boolean = false
+    public capturedRequestHeaders: string[] = [],
+    public capturedResponseHeaders: string[] = []
   ) {
     super();
   }
 
   readonly name = 'httpURLConnection';
 
-  toNative() {
+  toNative(options?: ToNativeOptions) {
+    const debug = options?.debugLogging ?? false;
     return {
       name: this.name,
       attributes: {
         enabled: String(this.isEnabled),
         requestHeaders: sanitizeAndJoinHeaders(
-          this.requestHeaders,
-          'HttpURLModuleConfiguration.requestHeaders',
-          this.debugLogging
+          this.capturedRequestHeaders,
+          'HttpURLModuleConfiguration.capturedRequestHeaders',
+          debug
         ),
         responseHeaders: sanitizeAndJoinHeaders(
-          this.responseHeaders,
-          'HttpURLModuleConfiguration.responseHeaders',
-          this.debugLogging
+          this.capturedResponseHeaders,
+          'HttpURLModuleConfiguration.capturedResponseHeaders',
+          debug
         ),
       },
     };
