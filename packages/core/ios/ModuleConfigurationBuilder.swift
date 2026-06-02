@@ -95,8 +95,15 @@ enum ModuleConfigurationBuilder {
         if let pattern = attrs["ignoreURLs"], !pattern.isEmpty {
           ignoreURLs = IgnoreURLs(containing: try? NSRegularExpression(pattern: pattern))
         }
+        let requestHeaders = splitCsv(attrs["requestHeaders"])
+        let responseHeaders = splitCsv(attrs["responseHeaders"])
 
-        let conf = NetworkInstrumentationConfiguration(isEnabled: enabled, ignoreURLs: ignoreURLs)
+        let conf = NetworkInstrumentationConfiguration(
+          isEnabled: enabled,
+          ignoreURLs: ignoreURLs,
+          capturedRequestHeaders: requestHeaders.isEmpty ? nil : requestHeaders,
+          capturedResponseHeaders: responseHeaders.isEmpty ? nil : responseHeaders
+        )
         result.append(conf)
         #endif
       case "sessionReplay":
@@ -114,5 +121,10 @@ enum ModuleConfigurationBuilder {
     }
 
     return result
+  }
+
+  private static func splitCsv(_ csv: String?) -> [String] {
+    guard let csv, !csv.isEmpty else { return [] }
+    return csv.components(separatedBy: ",").map { $0.trimmingCharacters(in: .whitespaces) }.filter { !$0.isEmpty }
   }
 }

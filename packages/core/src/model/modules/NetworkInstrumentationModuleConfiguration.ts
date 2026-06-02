@@ -15,6 +15,7 @@
  */
 
 import { ModuleConfiguration } from './ModuleConfiguration';
+import { sanitizeAndJoinHeaders } from './sanitizeHeaderNames';
 
 /**
  * **iOS only.** Network instrumentation configuration.
@@ -26,10 +27,36 @@ export class NetworkInstrumentationModuleConfiguration extends ModuleConfigurati
    * @param isEnabled - Whether instrumentation is enabled. Defaults to `true`.
    * @param ignoreURLs - Regex pattern(s) for URLs to exclude from tracing.
    *   Can be a single regex string or array of patterns (joined with `|`).
+   * @param requestHeaders - HTTP request header names to capture as span attributes.
+   *   Matching headers from outgoing requests are added to the HTTP span as
+   *   `http.request.header.<lowercased-name>`. Header matching is case-insensitive.
+   *   Names are trimmed; empty entries, entries that are not valid RFC 7230 header
+   *   tokens, and case-insensitive duplicates are discarded.
+   *
+   *   **Security:** do not capture headers that carry credentials or session
+   *   material (for example `Authorization`, `Proxy-Authorization`, `Cookie`).
+   *   Their values would be persisted verbatim in telemetry.
+   * @param responseHeaders - HTTP response header names to capture as span attributes.
+   *   Matching headers from incoming responses are added to the HTTP span as
+   *   `http.response.header.<lowercased-name>`. Header matching is case-insensitive.
+   *   Names are trimmed; empty entries, entries that are not valid RFC 7230 header
+   *   tokens, and case-insensitive duplicates are discarded.
+   *
+   *   **Security:** avoid capturing headers that carry session material such
+   *   as `Set-Cookie` or `Set-Cookie2` to prevent leaking session identifiers
+   *   into telemetry.
+   *
+   *   Note: multi-value headers are comma-joined by the native agent. Avoid
+   *   capturing headers whose values may contain commas (for example, `Set-Cookie`)
+   *   because their original structure cannot be reliably reconstructed.
+   * @param debugLogging - Pass `true` to log sanitization warnings. Defaults to `false`.
    */
   constructor(
     public isEnabled: boolean = true,
-    public ignoreURLs?: string | string[]
+    public ignoreURLs?: string | string[],
+    public requestHeaders: string[] = [],
+    public responseHeaders: string[] = [],
+    private debugLogging: boolean = false
   ) {
     super();
   }
@@ -43,6 +70,25 @@ export class NetworkInstrumentationModuleConfiguration extends ModuleConfigurati
         ? this.ignoreURLs.join('|')
         : this.ignoreURLs;
     }
+
+    const req = sanitizeAndJoinHeaders(
+      this.requestHeaders,
+      'NetworkInstrumentationModuleConfiguration.requestHeaders',
+      this.debugLogging
+    );
+    if (req.length > 0) {
+      attrs.requestHeaders = req;
+    }
+
+    const res = sanitizeAndJoinHeaders(
+      this.responseHeaders,
+      'NetworkInstrumentationModuleConfiguration.responseHeaders',
+      this.debugLogging
+    );
+    if (res.length > 0) {
+      attrs.responseHeaders = res;
+    }
+
     return { name: this.name, attributes: attrs };
   }
 }
