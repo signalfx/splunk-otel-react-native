@@ -56,19 +56,24 @@ const modules = [
   new AnrModuleConfiguration(true),
   new HttpURLModuleConfiguration(
     true,
-    ['Content-Type', 'Accept'],
-    ['Server', 'Content-Type']
+    ['Content-Type', 'Accept', 'Content-Encoding'],
+    ['Server', 'Content-Type', 'Content-Encoding']
   ),
   new OkHttp3AutoModuleConfiguration(
     true,
-    ['Content-Type', 'Accept'],
-    ['Server', 'Content-Type']
+    ['Content-Type', 'Accept', 'Content-Encoding'],
+    ['Server', 'Content-Type', 'Content-Encoding']
   ),
   new OkHttp3ManualModuleConfiguration(
-    ['Content-Type', 'Accept'],
-    ['Server', 'Content-Type']
+    ['Content-Type', 'Accept', 'Content-Encoding'],
+    ['Server', 'Content-Type', 'Content-Encoding']
   ),
-  new NetworkInstrumentationModuleConfiguration(true),
+  new NetworkInstrumentationModuleConfiguration(
+    true,
+    undefined,
+    ['Content-Type', 'Accept', 'Content-Encoding'],
+    ['Content-Type', 'Content-Encoding', 'Server']
+  ),
   new SessionReplayModuleConfiguration(true, 1.0),
 ];
 

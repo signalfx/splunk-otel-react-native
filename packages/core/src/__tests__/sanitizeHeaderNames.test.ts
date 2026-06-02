@@ -17,7 +17,7 @@
 import {
   sanitizeHeaderNames,
   sanitizeAndJoinHeaders,
-} from '../model/modules/sanitizeHeaderNames';
+} from '../model/modules/headers/sanitizeHeaderNames';
 
 describe('sanitizeHeaderNames', () => {
   let warnSpy: jest.SpyInstance;

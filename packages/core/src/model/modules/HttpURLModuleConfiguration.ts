@@ -15,7 +15,7 @@
  */
 
 import { ModuleConfiguration } from './ModuleConfiguration';
-import { sanitizeAndJoinHeaders } from './sanitizeHeaderNames';
+import { sanitizeAndJoinHeaders } from './headers/sanitizeHeaderNames';
 
 /**
  * **Android only.** HttpURLConnection instrumentation configuration.

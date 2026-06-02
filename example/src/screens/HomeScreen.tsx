@@ -191,17 +191,75 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
       },
       {
         id: 'network-fetch',
-        title: 'Fetch API Request',
+        title: 'Fetch GET Request',
         description: 'Network request via JS fetch API',
         category: TestCategory.Network,
         platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
         onTap: async () => {
           try {
-            const response = await fetch('https://httpbin.org/get');
-            const status = response.status;
-            Alert.alert('Fetch', `Request completed with status: ${status}`);
+            const response = await fetch(
+              'https://jsonplaceholder.typicode.com/posts/1'
+            );
+            const encoding = response.headers.get('content-encoding') ?? 'none';
+            Alert.alert(
+              'Fetch GET',
+              `Status: ${response.status}\nContent-Encoding: ${encoding}\nCheck span for http.request.method=GET`
+            );
           } catch (e: any) {
             Alert.alert('Fetch Error', e?.message ?? String(e));
+          }
+        },
+      },
+      {
+        id: 'network-gzip',
+        title: 'Fetch (gzip response)',
+        description:
+          'Request gzip-encoded response to verify Content-Encoding capture',
+        category: TestCategory.Network,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          try {
+            const response = await fetch(
+              'https://jsonplaceholder.typicode.com/posts',
+              {
+                headers: { 'Accept-Encoding': 'gzip' },
+              }
+            );
+            const encoding = response.headers.get('content-encoding') ?? 'none';
+            Alert.alert(
+              'Gzip Fetch',
+              `Status: ${response.status}\nContent-Encoding: ${encoding}\nCheck span for http.response.header.content-encoding`
+            );
+          } catch (e: any) {
+            Alert.alert('Gzip Fetch Error', e?.message ?? String(e));
+          }
+        },
+      },
+      {
+        id: 'network-post',
+        title: 'Fetch POST Request',
+        description: 'POST request to verify http.request.method capture',
+        category: TestCategory.Network,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          try {
+            const response = await fetch(
+              'https://jsonplaceholder.typicode.com/posts',
+              {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  title: 'test',
+                  body: 'method-capture',
+                }),
+              }
+            );
+            Alert.alert(
+              'POST Fetch',
+              `Status: ${response.status}\nCheck span for http.request.method=POST`
+            );
+          } catch (e: any) {
+            Alert.alert('POST Fetch Error', e?.message ?? String(e));
           }
         },
       },

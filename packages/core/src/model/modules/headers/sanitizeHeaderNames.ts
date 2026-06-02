@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Splunk Inc.
+ * Copyright 2026 Splunk Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,15 +14,44 @@
  * limitations under the License.
  */
 
-/**
- * HTTP header field-name token characters per RFC 7230 section 3.2.6.
- *
- * ```
- * tchar = "!" / "#" / "$" / "%" / "&" / "'" / "*" / "+" / "-" / "." /
- *         "^" / "_" / "`" / "|" / "~" / DIGIT / ALPHA
- * ```
- */
+/** RFC 7230 section 3.2.6 `tchar` — valid HTTP header field-name characters. */
 const HTTP_HEADER_TOKEN = /^[A-Za-z0-9!#$%&'*+\-.^_`|~]+$/;
+
+type DropReason = 'empty' | 'invalid' | 'duplicate';
+
+function dropMessage(
+  reason: DropReason,
+  index: number,
+  source: string
+): string {
+  switch (reason) {
+    case 'empty':
+      return `SplunkRum: ignoring empty HTTP header name at index ${index} in ${source}.`;
+    case 'invalid':
+      return (
+        `SplunkRum: ignoring invalid HTTP header name at index ${index} ` +
+        `in ${source}. Header names must be RFC 7230 tokens. ` +
+        `The provided value is not included to avoid ` +
+        `leaking potentially sensitive data; check your configuration.`
+      );
+    case 'duplicate':
+      return (
+        `SplunkRum: ignoring duplicate HTTP header name at index ${index} ` +
+        `in ${source} (case-insensitive match).`
+      );
+  }
+}
+
+function warn(
+  debugLogging: boolean,
+  reason: DropReason,
+  index: number,
+  source: string
+) {
+  if (debugLogging) {
+    console.warn(dropMessage(reason, index, source));
+  }
+}
 
 /**
  * Normalizes a list of HTTP header names before forwarding to the native agent.
@@ -44,49 +73,31 @@ export function sanitizeHeaderNames(
   source: string,
   debugLogging: boolean
 ): string[] {
-  const sanitized: string[] = [];
   const seen = new Set<string>();
 
-  for (let i = 0; i < names.length; i++) {
-    const trimmed = names[i]!.trim();
+  return names.reduce<string[]>((acc, raw, i) => {
+    const trimmed = raw.trim();
 
-    if (trimmed.length === 0) {
-      if (debugLogging) {
-        console.warn(
-          `SplunkRum: ignoring empty HTTP header name at index ${i} in ${source}.`
-        );
-      }
-      continue;
+    if (!trimmed) {
+      warn(debugLogging, 'empty', i, source);
+      return acc;
     }
 
     if (!HTTP_HEADER_TOKEN.test(trimmed)) {
-      if (debugLogging) {
-        console.warn(
-          `SplunkRum: ignoring invalid HTTP header name at index ${i} ` +
-            `(length ${trimmed.length}) in ${source}. Header names must be ` +
-            `RFC 7230 tokens. The provided value is not included to avoid ` +
-            `leaking potentially sensitive data; check your configuration.`
-        );
-      }
-      continue;
+      warn(debugLogging, 'invalid', i, source);
+      return acc;
     }
 
     const key = trimmed.toLowerCase();
     if (seen.has(key)) {
-      if (debugLogging) {
-        console.warn(
-          `SplunkRum: ignoring duplicate HTTP header name at index ${i} ` +
-            `in ${source} (case-insensitive match).`
-        );
-      }
-      continue;
+      warn(debugLogging, 'duplicate', i, source);
+      return acc;
     }
 
     seen.add(key);
-    sanitized.push(trimmed);
-  }
-
-  return sanitized;
+    acc.push(trimmed);
+    return acc;
+  }, []);
 }
 
 /**
