@@ -286,7 +286,7 @@ class AgentPreferencesMock {
   }
 }
 
-const SDK_VERSION = '1.0.1';
+const SDK_VERSION = '1.0.2';
 
 module.exports = {
   SplunkRum: SplunkRumMock,

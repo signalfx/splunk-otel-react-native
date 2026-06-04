@@ -2400,7 +2400,7 @@ PODS:
     - SocketRocket
     - Yoga
   - SocketRocket (0.7.1)
-  - SplunkOtelReactNative (1.0.1):
+  - SplunkOtelReactNative (1.0.2):
     - boost
     - DoubleConversion
     - fast_float
@@ -2428,7 +2428,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
     - Yoga
-  - SplunkSessionReplay (1.0.1):
+  - SplunkSessionReplay (1.0.2):
     - boost
     - DoubleConversion
     - fast_float
@@ -2769,8 +2769,8 @@ SPEC CHECKSUMS:
   ReactCommon: ce5d4226dfaf9d5dacbef57b4528819e39d3a120
   RNScreens: ffbb0296608eb3560de641a711bbdb663ed1f6b4
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
-  SplunkOtelReactNative: 4f319e00fc5a95f974d13dae52243417100d9a36
-  SplunkSessionReplay: 7f90f6da47c703fb5d5149419123e0db28de2d87
+  SplunkOtelReactNative: ca97b48cc3f6041141551f3cd6220fcedf1c8df8
+  SplunkSessionReplay: 7e993e3cdebddc2cc1116c4cb1fe4a885911898e
   Yoga: 11c9686a21e2cd82a094a723649d9f4507200fb0
 
 PODFILE CHECKSUM: 4b57837b118ccf8bb79f0ba5fb9a62ae622806c8
