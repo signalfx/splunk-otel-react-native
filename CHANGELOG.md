@@ -2,10 +2,14 @@
 
 ## Unreleased
 
+* TBD
+
+## 1.0.2
+
 ### `@splunk/otel-react-native`
 
 #### Added
-* **HTTP header capture for Network instrumentation.** `NetworkInstrumentationModuleConfiguration`, `HttpURLModuleConfiguration` and `OkHttp3AutoModuleConfiguration` now accepts `requestHeaders` and `responseHeaders` to capture specific HTTP headers as span attributes (`http.request.header.<name>` / `http.response.header.<name>`). All the headers undergo RFC 7230 header name sanitization.
+* **HTTP header capture for Network instrumentation.** `NetworkInstrumentationModuleConfiguration`, `HttpURLModuleConfiguration` and `OkHttp3AutoModuleConfiguration` now accept `capturedRequestHeaders` and `capturedResponseHeaders` to capture specific HTTP headers as span attributes (`http.request.header.<name>` / `http.response.header.<name>`). All the headers undergo RFC 7230 header name sanitization.
 
 ## 1.0.1
 
