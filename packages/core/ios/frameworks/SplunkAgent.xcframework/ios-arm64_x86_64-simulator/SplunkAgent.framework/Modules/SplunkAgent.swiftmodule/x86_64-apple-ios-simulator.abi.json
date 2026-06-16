@@ -918,7 +918,8 @@
         "declKind": "Import",
         "moduleName": "SplunkAgent",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "SPIAccessControl"
         ]
       },
       {
@@ -1016,6 +1017,16 @@
         "moduleName": "SplunkAgent",
         "declAttributes": [
           "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
           "RawDocComment"
         ]
       },
@@ -9906,6 +9917,44 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "AccessControl",
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SplunkNavigation",
         "printedName": "SplunkNavigation",
         "declKind": "Import",
@@ -10243,91 +10292,6 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "NavigationState",
-        "printedName": "NavigationState",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "isAutomatedTrackingEnabled",
-            "printedName": "isAutomatedTrackingEnabled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11SplunkAgent15NavigationStateC26isAutomatedTrackingEnabledSbvp",
-            "mangledName": "$s11SplunkAgent15NavigationStateC26isAutomatedTrackingEnabledSbvp",
-            "moduleName": "SplunkAgent",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11SplunkAgent15NavigationStateC26isAutomatedTrackingEnabledSbvg",
-                "mangledName": "$s11SplunkAgent15NavigationStateC26isAutomatedTrackingEnabledSbvg",
-                "moduleName": "SplunkAgent",
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:11SplunkAgent15NavigationStateC",
-        "mangledName": "$s11SplunkAgent15NavigationStateC",
-        "moduleName": "SplunkAgent",
-        "declAttributes": [
-          "Final",
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "NavigationModuleState",
-            "printedName": "NavigationModuleState",
-            "usr": "s:11SplunkAgent21NavigationModuleStateP",
-            "mangledName": "$s11SplunkAgent21NavigationModuleStateP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
         "kind": "Import",
         "name": "CiscoLogger",
         "printedName": "CiscoLogger",
@@ -10360,88 +10324,13 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "NavigationNonOperationalState",
-        "printedName": "NavigationNonOperationalState",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "isAutomatedTrackingEnabled",
-            "printedName": "isAutomatedTrackingEnabled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11SplunkAgent29NavigationNonOperationalStateC26isAutomatedTrackingEnabledSbvp",
-            "mangledName": "$s11SplunkAgent29NavigationNonOperationalStateC26isAutomatedTrackingEnabledSbvp",
-            "moduleName": "SplunkAgent",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11SplunkAgent29NavigationNonOperationalStateC26isAutomatedTrackingEnabledSbvg",
-                "mangledName": "$s11SplunkAgent29NavigationNonOperationalStateC26isAutomatedTrackingEnabledSbvg",
-                "moduleName": "SplunkAgent",
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:11SplunkAgent29NavigationNonOperationalStateC",
-        "mangledName": "$s11SplunkAgent29NavigationNonOperationalStateC",
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
         "moduleName": "SplunkAgent",
         "declAttributes": [
-          "Final",
-          "AccessControl",
           "RawDocComment"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "NavigationModuleState",
-            "printedName": "NavigationModuleState",
-            "usr": "s:11SplunkAgent21NavigationModuleStateP",
-            "mangledName": "$s11SplunkAgent21NavigationModuleStateP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
         ]
       },
       {
@@ -10651,6 +10540,65 @@
             "declKind": "Func",
             "usr": "s:11SplunkAgent16NavigationModuleP5track6screenAaB_pSS_tF",
             "mangledName": "$s11SplunkAgent16NavigationModuleP5track6screenAaB_pSS_tF",
+            "moduleName": "SplunkAgent",
+            "genericSig": "<τ_0_0 where τ_0_0 : SplunkAgent.NavigationModule>",
+            "sugared_genericSig": "<Self where Self : SplunkAgent.NavigationModule>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "track",
+            "printedName": "track(screen:attributes:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationModule",
+                "printedName": "any SplunkAgent.NavigationModule",
+                "usr": "s:11SplunkAgent16NavigationModuleP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SplunkAgent16NavigationModuleP5track6screen10attributesAaB_pSS_SDySSypGSgtF",
+            "mangledName": "$s11SplunkAgent16NavigationModuleP5track6screen10attributesAaB_pSS_SDySSypGSgtF",
             "moduleName": "SplunkAgent",
             "genericSig": "<τ_0_0 where τ_0_0 : SplunkAgent.NavigationModule>",
             "sugared_genericSig": "<Self where Self : SplunkAgent.NavigationModule>",
@@ -16918,6 +16866,202 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "View",
+        "printedName": "View",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "trackScreen",
+            "printedName": "trackScreen(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftUI4ViewP11SplunkAgentE11trackScreenyQrSSF",
+            "mangledName": "$s7SwiftUI4ViewP11SplunkAgentE11trackScreenyQrSSF",
+            "moduleName": "SplunkAgent",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<Self where Self : SwiftUI.View>",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trackScreen",
+            "printedName": "trackScreen(_:attributes:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftUI4ViewP11SplunkAgentE11trackScreen_10attributesQrSS_SDySSypGSgtF",
+            "mangledName": "$s7SwiftUI4ViewP11SplunkAgentE11trackScreen_10attributesQrSS_SDySSypGSgtF",
+            "moduleName": "SplunkAgent",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<Self where Self : SwiftUI.View>",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sessionReplaySensitive",
+            "printedName": "sessionReplaySensitive(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftUI4ViewP11SplunkAgentE22sessionReplaySensitiveyQrSbF",
+            "mangledName": "$s7SwiftUI4ViewP11SplunkAgentE22sessionReplaySensitiveyQrSbF",
+            "moduleName": "SplunkAgent",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<Self where Self : SwiftUI.View>",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:7SwiftUI4ViewP",
+        "mangledName": "$s7SwiftUI4ViewP",
+        "moduleName": "SwiftUICore",
+        "genericSig": "<τ_0_0.Body : SwiftUI.View>",
+        "sugared_genericSig": "<Self.Body : SwiftUI.View>",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "Preconcurrency",
+          "TypeEraser",
+          "TypeEraser",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "Custom"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "UIView",
         "printedName": "UIView",
         "children": [
@@ -17252,95 +17396,6 @@
             "printedName": "UITraitChangeObservable",
             "usr": "s:5UIKit23UITraitChangeObservableP",
             "mangledName": "$s5UIKit23UITraitChangeObservableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "View",
-        "printedName": "View",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "sessionReplaySensitive",
-            "printedName": "sessionReplaySensitive(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "OpaqueTypeArchetype",
-                "printedName": "some SwiftUI.View",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "View",
-                    "printedName": "SwiftUI.View",
-                    "usr": "s:7SwiftUI4ViewP"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:7SwiftUI4ViewP11SplunkAgentE22sessionReplaySensitiveyQrSbF",
-            "mangledName": "$s7SwiftUI4ViewP11SplunkAgentE22sessionReplaySensitiveyQrSbF",
-            "moduleName": "SplunkAgent",
-            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
-            "sugared_genericSig": "<Self where Self : SwiftUI.View>",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:7SwiftUI4ViewP",
-        "mangledName": "$s7SwiftUI4ViewP",
-        "moduleName": "SwiftUICore",
-        "genericSig": "<τ_0_0.Body : SwiftUI.View>",
-        "sugared_genericSig": "<Self.Body : SwiftUI.View>",
-        "intro_Macosx": "10.15",
-        "intro_iOS": "13.0",
-        "intro_tvOS": "13.0",
-        "intro_watchOS": "6.0",
-        "declAttributes": [
-          "Preconcurrency",
-          "TypeEraser",
-          "TypeEraser",
-          "OriginallyDefinedIn",
-          "OriginallyDefinedIn",
-          "OriginallyDefinedIn",
-          "OriginallyDefinedIn",
-          "Available",
-          "Available",
-          "Available",
-          "Available",
-          "Custom"
-        ],
-        "isExternal": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
           }
         ]
       }
@@ -17694,9 +17749,16 @@
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/SplunkRum+Modules.swift",
       "kind": "Array",
-      "offset": 6169,
+      "offset": 6191,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Runtime Attributes\/CurrentScreenName.swift",
+      "kind": "StringLiteral",
+      "offset": 937,
+      "length": 9,
+      "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
@@ -17960,9 +18022,9 @@
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/SplunkRum.swift",
       "kind": "StringLiteral",
-      "offset": 12273,
+      "offset": 12158,
       "length": 7,
-      "value": "\"2.2.3\""
+      "value": "\"2.3.0\""
     },
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",

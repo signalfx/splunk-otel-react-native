@@ -42,7 +42,7 @@
 		</data>
 		<key>ios-arm64/dSYMs/SplunkOpenTelemetryBackgroundExporter.framework.dSYM/Contents/Resources/DWARF/SplunkOpenTelemetryBackgroundExporter</key>
 		<data>
-		HbdQyH7c2G0AUm3mfV33D7JnThw=
+		easYxiCC6zVGLJ2DIKZUfoId7k0=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkOpenTelemetryBackgroundExporter.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkOpenTelemetryBackgroundExporter.yml</key>
 		<data>
@@ -126,7 +126,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkOpenTelemetryBackgroundExporter.framework.dSYM/Contents/Resources/DWARF/SplunkOpenTelemetryBackgroundExporter</key>
 		<data>
-		ox1xL+6B1wbWLloCLkwPdLBMAso=
+		Ln/xch/Uhxaz63lrsAazILNwjb8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkOpenTelemetryBackgroundExporter.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkOpenTelemetryBackgroundExporter.yml</key>
 		<data>
@@ -246,7 +246,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sScRrmAD3nwPlWx/lYhBLv5HjyCicwFAjY3lBun4hAo=
+			QLz3noMdgyDkGr2iAjTBhMYhuzMOP4fD5+JagWbFiro=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkOpenTelemetryBackgroundExporter.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkOpenTelemetryBackgroundExporter.yml</key>
@@ -393,7 +393,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			c/C+1WqTP+kWxHyOO1OV/r4N91QCBek/oDoIUHLgzoc=
+			/DGgwjz4etvGXkm25PxKJbnbRTJekrXx86iq90o3G/c=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkOpenTelemetryBackgroundExporter.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkOpenTelemetryBackgroundExporter.yml</key>

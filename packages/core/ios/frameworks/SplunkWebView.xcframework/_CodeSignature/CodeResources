@@ -6,7 +6,7 @@
 	<dict>
 		<key>ios-arm64/SplunkWebView.framework/Headers/SplunkWebView-Swift.h</key>
 		<data>
-		Q5cs/sVMGK+htmSBbNa3YXcvQRc=
+		+FtFJd+HnlVaprvSm2Orc+k4BY4=
 		</data>
 		<key>ios-arm64/SplunkWebView.framework/Info.plist</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>ios-arm64/SplunkWebView.framework/Modules/SplunkWebView.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		mIoTyO9vEyMyIlI+TpB5X6yt6rs=
+		2L49PaECdxn1ZwMqSqHSdhsNhPg=
 		</data>
 		<key>ios-arm64/SplunkWebView.framework/Modules/SplunkWebView.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>ios-arm64/SplunkWebView.framework/SplunkWebView</key>
 		<data>
-		HFzFe5K9FrFtAiGBgeOaaI+GVNw=
+		GDRVy3nx26DvvrmpS/eQ4Yl6KVE=
 		</data>
 		<key>ios-arm64/SplunkWebView.framework/WebViewBridgeScript.js</key>
 		<data>
-		krLtWfxOJpsSjl7TDDZNmJtIeNo=
+		UNcZ3qHGtRvXfHUMvy5IOKveo28=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkWebView.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>ios-arm64/dSYMs/SplunkWebView.framework.dSYM/Contents/Resources/DWARF/SplunkWebView</key>
 		<data>
-		9ZqBC70Q7c+FLDEizCEqspuNvXo=
+		jDIjmRPwobqwUrS2bvtjEGX0Je0=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkWebView.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkWebView.yml</key>
 		<data>
-		rk9s2RD2tDwQN3Ma6jQh6K8s5Kk=
+		sHz0p3T32bS1DqxdQPwuLe95Cto=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkWebView.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoLogger.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/Headers/SplunkWebView-Swift.h</key>
 		<data>
-		Xts0YA2G3YKcbvaoX2IHR9VrNjc=
+		UluQ1pINyykgwfaWd2YXWPOWqAY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/Info.plist</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/Modules/SplunkWebView.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		IM6uUmm0bJoSLFghB+cTmL1enFo=
+		UQwfan854KV7lqeT19GdrNjTOEA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/Modules/SplunkWebView.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/Modules/SplunkWebView.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		7Dqwxn4lxTlSHvrPFUl//gc8fOc=
+		OKCvewCZGovVZyZ08RiYi+aeyZY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/Modules/SplunkWebView.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
@@ -102,15 +102,15 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/SplunkWebView</key>
 		<data>
-		uOroYhTHkGK8gVkUH39yU6UrKtc=
+		5k5GK8R/UY6LaK4SdiCr2AQEXsg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/WebViewBridgeScript.js</key>
 		<data>
-		krLtWfxOJpsSjl7TDDZNmJtIeNo=
+		UNcZ3qHGtRvXfHUMvy5IOKveo28=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/_CodeSignature/CodeResources</key>
 		<data>
-		sp534ytJiTQFQoiRDBSdAI60wgg=
+		recjprK8NgBq/eOEACUiRj+QDKQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkWebView.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -118,15 +118,15 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkWebView.framework.dSYM/Contents/Resources/DWARF/SplunkWebView</key>
 		<data>
-		vi5aWYaTP05O4nJ6umLCQ7zDXDc=
+		DCQIMPzVisbm53UbgjoAZzbZnlA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkWebView.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkWebView.yml</key>
 		<data>
-		C/Ei9zdGj9F5OTx5rsAzjSQ/h/0=
+		8h8ut3yozYr9OwRXqmULQ1HB6/k=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkWebView.framework.dSYM/Contents/Resources/Relocations/x86_64/SplunkWebView.yml</key>
 		<data>
-		nICuJI1YiX+6J76Bd8Wz6phqlgw=
+		w/iHapC8TDcLJEuH8iMjejCSTGw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkWebView.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoLogger.swiftinterface</key>
 		<data>
@@ -143,7 +143,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nneVfXO/aPSxn0Nn0+vADupDzuCsquLPArm7d1yoUJc=
+			67szTJJm3S9iwBq4ST2y0cPNmer9qYhrj/nrti9qq8E=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkWebView.framework/Info.plist</key>
@@ -171,7 +171,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oijJi4blH3kWcr979RKb7E24JEMXdAkI1xbpJPN2300=
+			84DGnALUy9dGE3pt0yeLejxr6dKMr9CQ7h7VibP/ry8=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkWebView.framework/Modules/SplunkWebView.swiftmodule/arm64-apple-ios.swiftinterface</key>
@@ -192,14 +192,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Rl8++mZcmeECbHxv9Apqml6wTn5TfC/isuOq0nfzhJU=
+			y1iUVFUe9zje29Oy8gHjBJV72RKY86LYs+JTpx7Jq+Q=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkWebView.framework/WebViewBridgeScript.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+BORo8YssBJtb6HXKJb4robBI77fsnDo7BrGnFgHbYk=
+			Bxpl2GJpufLee5UgVvUJg+PG28roz0yS10zlP76wNz0=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkWebView.framework.dSYM/Contents/Info.plist</key>
@@ -213,14 +213,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TAgmKahY2gardfuH8GafKjVUZZouxJNLYmFbD9jNjgo=
+			q+5KUrUA0s7EfQ3wlFIkA89tyLxAOMLzRgMF7/PRUCQ=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkWebView.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkWebView.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8NUKMDSsgpea8ACGLynXGyssHRq3EqmupL+DGQRtdv0=
+			V9uDXeutF+faFJ79JVQvWcGMyAdUblxnzsYs1s1exDg=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkWebView.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoLogger.swiftinterface</key>
@@ -234,7 +234,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oe+OOE0+p/CUdDU8dFcc2V4EQJ4O8y+nmXknqw3/aDo=
+			cgi6sNZ70psGrk2ImfnWY1MwHaAWLopAUrFhYhGbLGw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/Info.plist</key>
@@ -262,7 +262,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oBeCZoBXz2P1ZPVfVXhiKJ9hEDPA27kgInD2DXdbZF8=
+			cVdNzyhwpQBRvELvH8wmMsQXnDDu0E7trL68mWJeUlM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/Modules/SplunkWebView.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
@@ -290,7 +290,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hXMyUxZkoG80kRxVU6yxDtRawqN8zdsv3OmzIsd1nAQ=
+			8x1Ecbsxata/CupqPLMP+jOHSMe/DiBArk3bQTWW9zY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/Modules/SplunkWebView.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
@@ -311,21 +311,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wSc1OI5pNTgTceN0cRD1aLv3OeSuDEMCv9caa/5PFvA=
+			lgputCVBmfJLNR7rRdOHktiDK+su78F2VXaqhWLHfpQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/WebViewBridgeScript.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+BORo8YssBJtb6HXKJb4robBI77fsnDo7BrGnFgHbYk=
+			Bxpl2GJpufLee5UgVvUJg+PG28roz0yS10zlP76wNz0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gE8wk6p4jTGcV5bw6h3/ypW/H73vRwBAEyVY8iMLuLM=
+			gJmXa+q6vnfxk3zyYRjig17whSR5qrC0d+2D+GrEWl0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkWebView.framework.dSYM/Contents/Info.plist</key>
@@ -339,21 +339,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AXJknIkJC+iGHDRRX40OUx4AlZBKMvtUwkXlHeIDomA=
+			nZGkakcEqmBNoHtyzA+f3OUxb3rA/bdLaOx38RLN9po=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkWebView.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkWebView.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qz2gdNP7kidpdoG/YuG1GFYuoRpZpOx14BBNDnnznAQ=
+			k5r2vyNHkqQHkMDut/YsH0qaT3rwDxgsYYrghgCv9UU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkWebView.framework.dSYM/Contents/Resources/Relocations/x86_64/SplunkWebView.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V/ppgqzXLwohO8ZgbR8z4Ewk9eMBg0nUiecf+rfPVQk=
+			5upljxoRusXFouIacUuF2wkm+Ohr5Glp2xqRN30GbS0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkWebView.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoLogger.swiftinterface</key>

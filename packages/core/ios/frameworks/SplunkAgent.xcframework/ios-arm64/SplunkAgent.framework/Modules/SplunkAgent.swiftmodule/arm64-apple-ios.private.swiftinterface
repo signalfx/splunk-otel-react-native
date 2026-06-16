@@ -442,17 +442,11 @@ public protocol CustomTrackingModule {
 extension SplunkAgent.NavigationPreferences {
   convenience public init(enableAutomatedTracking: Swift.Bool?)
 }
-@_hasMissingDesignatedInitializers final public class NavigationState : SplunkAgent.NavigationModuleState {
-  final public var isAutomatedTrackingEnabled: Swift.Bool {
-    get
-  }
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers final public class NavigationNonOperationalState : SplunkAgent.NavigationModuleState {
-  final public var isAutomatedTrackingEnabled: Swift.Bool {
-    get
-  }
-  @objc deinit
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func trackScreen(_ name: Swift.String) -> some SwiftUICore.View
+  
+  @_Concurrency.MainActor @preconcurrency public func trackScreen(_ name: Swift.String, attributes: [Swift.String : Any]?) -> some SwiftUICore.View
+  
 }
 public protocol NavigationModule : Combine.ObservableObject {
   var preferences: any SplunkAgent.NavigationModulePreferences { get set }
@@ -461,6 +455,8 @@ public protocol NavigationModule : Combine.ObservableObject {
   var state: any SplunkAgent.NavigationModuleState { get }
   @discardableResult
   func track(screen name: Swift.String) -> any SplunkAgent.NavigationModule
+  @discardableResult
+  func track(screen name: Swift.String, attributes: [Swift.String : Any]?) -> any SplunkAgent.NavigationModule
 }
 public protocol NavigationModulePreferences {
   var enableAutomatedTracking: Swift.Bool? { get set }

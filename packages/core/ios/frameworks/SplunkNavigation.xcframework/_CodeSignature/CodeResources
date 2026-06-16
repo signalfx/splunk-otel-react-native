@@ -14,19 +14,19 @@
 		</data>
 		<key>ios-arm64/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		URZmsgex8OxO1c1S7/GBBKcjKhg=
+		H90IHRBn1eS4q6yst1NEx8MzqEg=
 		</data>
 		<key>ios-arm64/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		wuR+EfxiGa9Z1IDbfFIaYJLFsRM=
+		TsI2NoX20LgrY4YkJoa2eDxYvpA=
 		</data>
 		<key>ios-arm64/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		e3/PN9LKvUQcste/OuTuHtAFmPc=
+		VBe1Wab3PfOiIjwniAQiSDc5Iuk=
 		</data>
 		<key>ios-arm64/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		qtiLqSamdArMBEl9FjMO3BPd0YY=
+		XSHDrFNcW04tipctaAbz1nXRZjU=
 		</data>
 		<key>ios-arm64/SplunkNavigation.framework/Modules/module.modulemap</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>ios-arm64/SplunkNavigation.framework/SplunkNavigation</key>
 		<data>
-		KqgwIgfKdlEBHoqLi6wqHhGyvr8=
+		f0byu6CXo7RvM4doBOyPLiBbRNo=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkNavigation.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>ios-arm64/dSYMs/SplunkNavigation.framework.dSYM/Contents/Resources/DWARF/SplunkNavigation</key>
 		<data>
-		TnWfj39cdwECA7HIA+9bHgH4zRQ=
+		8BVc0yRuLyzDU1aNq/GZycPmtUk=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkNavigation.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkNavigation.yml</key>
 		<data>
-		EpLXBSCWJhMNqng5eETvwLagjyY=
+		h/vbXhz3hZO/cFsHyw7rogStCqE=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkNavigation.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoLogger.swiftinterface</key>
 		<data>
@@ -70,35 +70,35 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		URZmsgex8OxO1c1S7/GBBKcjKhg=
+		H90IHRBn1eS4q6yst1NEx8MzqEg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		3k2rK9LmjCgopHmKRSJd/ubOBD8=
+		XQYqwJrfuBP2ehPG/5MS2ntbxxA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		4RkYEcMKSyKMhhPv0zLHE3UPUnA=
+		XwB2VLOYxsIknGKr1kgg1jJcA34=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		3lyBxLFGMz/hauTLjt16Netvzac=
+		DT2oVao7BVhvSSosNePtxVSqsis=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		URZmsgex8OxO1c1S7/GBBKcjKhg=
+		H90IHRBn1eS4q6yst1NEx8MzqEg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		omUl8KL6niQhr3CIHMhjE2DnuwM=
+		thlFRtXZC6vDJA/eHRqReVctw9I=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Y7yh0tiCBdjDRDlTwwDs9YyK+fQ=
+		pu14Ew5AUcBrcBCQiOHJAyXo2OA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		XOLdQVZ8a+ShwJEq2axPfPA3kMw=
+		yv3foohuTkoJMNd4xkm7o4zaFXQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/module.modulemap</key>
 		<data>
@@ -106,11 +106,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/SplunkNavigation</key>
 		<data>
-		ASaM3Z/eLKmgovsiwlpVQNgZoDY=
+		uUpyVpS52K77wSg/vq/1rFe57qY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/_CodeSignature/CodeResources</key>
 		<data>
-		E3D8Vb3II88BZ0jrV58qWeI5bHs=
+		0lpqy3wrSJcAODW1rV6GLbbgsaM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNavigation.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -118,15 +118,15 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNavigation.framework.dSYM/Contents/Resources/DWARF/SplunkNavigation</key>
 		<data>
-		u5W+Nd/DiIJEbPkQDqTp/np5keY=
+		2JL57dAC50nj28BsNA3FHrNsSxM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNavigation.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkNavigation.yml</key>
 		<data>
-		LKpHqFlKRrBHvUVObTWM7vgWY0Y=
+		SsXHc7S/Q9xj3dnd1luIvXfa75c=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNavigation.framework.dSYM/Contents/Resources/Relocations/x86_64/SplunkNavigation.yml</key>
 		<data>
-		4pVDRfmHzbgaM7b+EmWjEP4wT3A=
+		GGdWaPVx4p1DAFWUAmRcI0WDX/A=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNavigation.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoLogger.swiftinterface</key>
 		<data>
@@ -173,28 +173,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J0DyH2CWB1KP/AM55c5wvra/cXekXh4AGeWMXhNPNOE=
+			17/o/mwocp5936rSx0VS+0AMxTWqT/2L39znlLmGPxs=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HbxCZJG7yXyC8A6t8PnZZ4eIWj27Ro6bMDcqzf7m6cE=
+			a471vxzzArmoZgK1kWWdJPI6e738Vck3oRKs2bE8NIo=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			L9FK/VMvr0x+ev0WobUBgunr37tCpqg3L2XwYsRUCoA=
+			5zBvMapsRbcd+VjasdP2STteLP8xzLlgLttgWEfi9AM=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qYdAWv6hkYooCQpil7YOKKZpyXkeTYQTXfKToNTvJqo=
+			m0NGTd1poC97gTqjitRnJxsld2L+fKAZOuYLV+pukqw=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkNavigation.framework/Modules/module.modulemap</key>
@@ -208,7 +208,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f7x0asYdWLUHcWhOaBTD/M3fqqflxJrx2EvVAiDaRpc=
+			7oPD5USlS7YlXadB1wU46QSD2OUVaalOqwAthtzKsik=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkNavigation.framework.dSYM/Contents/Info.plist</key>
@@ -222,14 +222,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0DQjqW+9lMC7CKO65rRpZlNqcVbpd6NxZSEOc9Gh4U8=
+			1HMtN5IK4NZOgMYwIONgc3/uWdqd/q+qT3ZBUVPkcio=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkNavigation.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkNavigation.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ysk8o+dwOaeLeYTzHWFOx8MdXTLZYXydBC6nlItN1Q0=
+			5uAKmoOo2Pa6QeoWWZAfIR37DmKJVkwk76TwpaWaRSs=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkNavigation.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoLogger.swiftinterface</key>
@@ -271,56 +271,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J0DyH2CWB1KP/AM55c5wvra/cXekXh4AGeWMXhNPNOE=
+			17/o/mwocp5936rSx0VS+0AMxTWqT/2L39znlLmGPxs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Af/QFCZrZ1/j1yj34uefBuGAOwsd0WmRtq/XDRdFlX4=
+			Qz1cN5R0zbwFlcJgTAdg4KejcJFzXX19DMVC2PNx/Ko=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QxxXDdaFO07KAnAV/axv/TSeImPRm5hB78CArJfxiTA=
+			5204OZq6ONuAZK1do/xsgkgM+hFhjGDiL/JocZHb7AY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			j3HrUKyE1K3r+C3fJNVk91ZDcif52OXFxTdC9vfgZzY=
+			GDksnpwwsgzG5SjleuVgr4IBNMM7gfkwgvyUUuCZ1I8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J0DyH2CWB1KP/AM55c5wvra/cXekXh4AGeWMXhNPNOE=
+			17/o/mwocp5936rSx0VS+0AMxTWqT/2L39znlLmGPxs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6B6MAJ9u3jdgvD1CBrFJnjrZHzhAd6Yg8NmiAL3bvAw=
+			vWRMRhVuqII7Nd8300R0ebHJP8dcE7IGrkRv88OGVb8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+83D7byIA5NGRiKbLYpThJjKMSaVcYvrF1fbZeyNBzE=
+			WQXpjsP5cpPHOX9enhmqK4J3d+lIAQ/JZAFGMZT7Y9s=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/SplunkNavigation.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NWU7/vW5NNxn+SomiB1S7XBCN1wmhZ3iGpW80Y40Slg=
+			pV5x2e6Zn/qLbcOi15YEiMq4bQR9POBdQ5nGnAbQa44=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/Modules/module.modulemap</key>
@@ -334,14 +334,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9PHUnPINELTl1ax7/O5suqpx3iMHcQt9ZZzVw03E4Fk=
+			qrZMnURgvYiP2qm0skv569Ow4F2DHSK1yffJLqXak0g=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNavigation.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RXkBCsMlf4sJ9y6kBV6RSPi7oHEc8h5hsAHcxmM0Hcw=
+			ACYcOQYYQCOn4s3H8QUFkvv2diP7oJ2GTMAaqYneakw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNavigation.framework.dSYM/Contents/Info.plist</key>
@@ -355,21 +355,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			R0RlwcxpbwO1NAeSBZ1EhEfrq0L1Uhl11Eqch3QP7qM=
+			vmItGiRyyMM47q77XTG8E78LMbqow/WForj3DJZ2kAA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNavigation.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkNavigation.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VxHD0qlLFwSD/4Mp66DLlUaZ8NJHvSp/qZvS4un7dFo=
+			MUGbbKqayHC9w36hYYkFZsyeklRNsBDyhESiMLg8FUo=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNavigation.framework.dSYM/Contents/Resources/Relocations/x86_64/SplunkNavigation.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9zy927JwZ8+LWhjiQ8ccBn/RYYqye7xMeQ83GPqjAZ4=
+			ZNhkA8eB+4BJJUKfngp1u7eSW+ObJIEXQq/3+AU/y1E=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNavigation.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoLogger.swiftinterface</key>

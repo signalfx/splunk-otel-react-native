@@ -23,9 +23,15 @@ import SplunkAgent
 @objc(NavigationHandler)
 public class NavigationHandler: NSObject {
   public func track(_ screenName: NSString,
+                    attributes: NSDictionary,
                     resolve: @escaping RCTPromiseResolveBlock,
                     reject: @escaping RCTPromiseRejectBlock) {
-    _ = SplunkRum.shared.navigation.track(screen: screenName as String)
+    // `navigation.track(screen:attributes:)` takes a `[String: Any]?` and
+    // performs its own attribute conversion + reserved-key stripping, mirroring
+    // the public SwiftUI `.trackScreen(_:attributes:)` API. The bridged
+    // NSDictionary already holds NSString/NSNumber/NSArray values.
+    let attrs = attributes as? [String: Any]
+    _ = SplunkRum.shared.navigation.track(screen: screenName as String, attributes: attrs)
     resolve(nil)
   }
 }

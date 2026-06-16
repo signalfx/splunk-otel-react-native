@@ -50,7 +50,7 @@ public class OTLPGlobalAttributesLogRecordProcessor : OpenTelemetrySdk.LogRecord
   @objc deinit
 }
 public typealias SplunkSpanInterceptor = (OpenTelemetrySdk.SpanData) -> OpenTelemetrySdk.SpanData?
-public class OLTPAttributesSpanProcessor : OpenTelemetrySdk.SpanProcessor {
+public class OTLPAttributesSpanProcessor : OpenTelemetrySdk.SpanProcessor {
   final public let isStartRequired: Swift.Bool
   final public let isEndRequired: Swift.Bool
   public init(with runtimeAttributes: any SplunkCommon.RuntimeAttributes, activityTracker: any SplunkCommon.ActivityTracker)

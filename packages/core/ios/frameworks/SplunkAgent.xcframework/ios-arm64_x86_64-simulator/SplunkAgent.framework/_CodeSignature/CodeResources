@@ -14,43 +14,43 @@
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		xH04Ej7M6QXw3ttXHbRuXWrf3II=
+		jc5sMeWPMgU1/rhlev4p5fTwXYk=
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		HQmnjv5hql9kYJUG1flcIxFg0Xo=
+		ShxgHd6yEkdc0eM1q3Ybq0IVWKY=
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		gqd+z0KDWlmwlWjm8Wqc4mmfQzI=
+		49IGK9PIRqGTTzv0qLV8XLfxp7E=
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		gQU532tQ6SL4p76cisvAtRJWNj8=
+		+EsSKqAQ3Uc48Hhf9Drk4cMdqbo=
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		7j9tVBhUZ2LvU6T0JDBfjTNqdZ0=
+		9CW4Fu85l/jzc6qNuNU1Aim3I40=
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		xH04Ej7M6QXw3ttXHbRuXWrf3II=
+		jc5sMeWPMgU1/rhlev4p5fTwXYk=
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		IciEaHucH8FjB6TG4u45uXcGqWQ=
+		KFA/NY6OHWqrMjcpXUnmhCbPmKA=
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		2pYfJ/96xlUJvsmFB91ZHfy+0CA=
+		5NjkcwIUDoxS9rmbs15KssANeEw=
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		txbcsN1r+aC4SBcK7D31RQvpacw=
+		tMkmiObNHlzAqkxMrsT9sN+hPJ8=
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		EM8S0eCclpIHZ/34AMnoUV/9MXE=
+		nZ9hw2gVN43k/fbXIp8erFrGxaY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -78,70 +78,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SGTAi/y5x54VdnspVifbCWgmq7VEB1XHwWxsll5CkBA=
+			7aa4xL5ulNvm9srWFZDIJ16eLUo3P9id3XuZr0vgeeo=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgent.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UcREjg3QxRhROpDlMqIEAi+hkTledA82truS1MJROA0=
+			gCJxRVkrZ6u5/ODSLh0gowxkjcZnma7XTG4GGy1O9FA=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgent.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			axyfNxN0jHnh6alOOWbF/8RtCYU1xIlbNWv4KZ5vGMc=
+			VMn9QTEgsEi6s1a+578aarIDDrixKNv602PYeihE52o=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgent.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eYNGK7HtSUxXgxckMJh8yhV9+ycLG9a1nTDa+qPsf60=
+			/vLrKJEEuG9aFoQFrgK0jWJWbRM+9EWqPMm6SK9VuQo=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgent.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			a+UxPzKvemOEvAiqin9unWRGjevW9/ri5hzVAdE2Xm4=
+			80oDfkIh5j1MFVfMem6k+WYMfTEz3bJfb45OjnTBey4=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SGTAi/y5x54VdnspVifbCWgmq7VEB1XHwWxsll5CkBA=
+			7aa4xL5ulNvm9srWFZDIJ16eLUo3P9id3XuZr0vgeeo=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zDaN8kK++OkWgz34t1TW08pcpjePJRxR9U/UhfA5QaE=
+			FTnHb6bo0iyxWsShZp+8Acnue5XU2G/l04URQ3azoYs=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/6DhDBy7WTZ52o1t6i3s95fmC/zkAWBDFL4YTIbv15I=
+			UxNcm7b+YKKcWVyNFHSBQxjuCvSq+Qg1RMpMy0+rF5U=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wBXcOoSSCRa9IKGCancshdyJzP/ykQoco1SmuWWy11U=
+			Mhse9a4YsaSLQrYR0q+ikJojGjtOveFuZatRSo0CsWI=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mL/8wXDjJHYxa4k1uRnkSv8zIu+KbYvDV08yKaom084=
+			p7kt+15DHm70d0iK3rOs271+GgJ87bOOh+e4scW/NpU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

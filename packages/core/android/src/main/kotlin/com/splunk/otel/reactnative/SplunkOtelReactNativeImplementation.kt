@@ -182,9 +182,10 @@ class SplunkOtelReactNativeImplementation(private val reactContext: ReactApplica
 
   // MARK: - Navigation
 
-  fun navigationTrack(screenName: String, promise: Promise) {
+  fun navigationTrack(screenName: String, attributes: ReadableMap, promise: Promise) {
     try {
-      SplunkRum.instance.navigation.track(screenName)
+      val attrs = AttributeConverter.buildAttributesFromMap(attributes)
+      SplunkRum.instance.navigation.track(screenName, attrs)
       promise.resolve(null)
     } catch (t: Throwable) {
       promise.reject("E_NAVIGATION_TRACK", t)

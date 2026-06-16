@@ -42,7 +42,7 @@
 		</data>
 		<key>ios-arm64/dSYMs/SplunkSlowFrameDetector.framework.dSYM/Contents/Resources/DWARF/SplunkSlowFrameDetector</key>
 		<data>
-		HL5FvAc4J0qQB+ihke3n7nxt7ho=
+		3tFS80PS8dHX6Ffwo1DQXb8dusA=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkSlowFrameDetector.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkSlowFrameDetector.yml</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkSlowFrameDetector.framework.dSYM/Contents/Resources/DWARF/SplunkSlowFrameDetector</key>
 		<data>
-		KYu7XCI/HAGQhxSCdIODxucVY6M=
+		XDTl4iXfLO7QAWnXmAsZRN1wlF0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkSlowFrameDetector.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkSlowFrameDetector.yml</key>
 		<data>
@@ -198,7 +198,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JAIHOwf0tgBxHmAKwn7ZRgbbv89O5wXwjisuuQM+a3I=
+			5KSFI/k8JVoUNh6sXNwZRS0xC7n/XQOa595/m0m/fJk=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkSlowFrameDetector.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkSlowFrameDetector.yml</key>
@@ -317,7 +317,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f+7DDeHA+04TIOMqTVZz3TdctRnf43lV6LwdPZ8M1bA=
+			wjjEZ+s85DAEcvLqkPXdx46LTI/MYmUBFdeYYIQC8zU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkSlowFrameDetector.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkSlowFrameDetector.yml</key>
