@@ -84,6 +84,7 @@ const customTrackingMock = {
   startWorkflow: jest
     .fn()
     .mockResolvedValue({ end: jest.fn().mockResolvedValue(undefined) }),
+  trackError: jest.fn().mockResolvedValue(undefined),
 };
 
 const navigationMock = {
