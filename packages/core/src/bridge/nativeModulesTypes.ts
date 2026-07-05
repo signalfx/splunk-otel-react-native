@@ -52,4 +52,16 @@ export interface SplunkNativeModuleType extends Spec {
   ): Promise<number>;
 
   customTrackEvent(name: string, attributes: Attributes): Promise<void>;
+
+  reportError(
+    type: string,
+    message: string,
+    stacktrace: string,
+    attributes: Attributes,
+    framesJson: string,
+    source: string,
+    handled: boolean,
+    timestampMs: number,
+    sourceMapIdsJson: string
+  ): Promise<void>;
 }

@@ -17,6 +17,8 @@
 export { SplunkRum } from './api/SplunkRum';
 export { SplunkRumProvider } from './providers/SplunkRumProvider';
 export { AgentPreferences } from './api/AgentPreferences';
+export { ErrorSource } from './api/CustomTracking';
+export type { ReportErrorOptions } from './api/CustomTracking';
 export type { AgentConfiguration } from './model/configuration/AgentConfiguration';
 export type { EndpointConfiguration } from './model/configuration/EndpointConfiguration';
 export type {
