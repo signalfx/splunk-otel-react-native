@@ -99,10 +99,15 @@ export interface ReactNavigationIntegration {
   /**
    * Starts tracking a `react-navigation` container.
    *
-   * Can be called at any time. If the container is not ready yet, the initial
-   * screen is captured from its `ready` event (or `isReady()`), so registration
-   * does not have to happen inside the container's `onReady` callback. Only one
-   * container is tracked at a time. Registering a new one replaces the previous.
+   * Pass the ref from `useNavigationContainerRef()` /
+   * `createNavigationContainerRef()` (recommended) or a ref object holding the
+   * container. With those refs, registration may happen before the container is
+   * ready: the initial screen is then captured from its `ready` event (or
+   * `isReady()`), so it need not be called from `onReady`. A plain
+   * `useRef(null)` only resolves once the container has mounted, so register it
+   * from `onReady`. If no usable container is found, a warning is logged and
+   * nothing is tracked. Only one container is tracked at a time. Registering a
+   * new one replaces the previous.
    */
   registerNavigationContainer(container: SplunkNavigationContainer): void;
 
@@ -193,62 +198,69 @@ export function reactNavigationIntegration(
   // (2) viewNamePredicate (returning null/undefined/'' suppresses),
   // (3) shouldTrackView (false suppresses),
   // (4) attributesFromRoute, then native track().
+  // The whole body is guarded: consumer-supplied predicates and the bridge call
+  // must never throw into react-navigation's event dispatch (or the app's
+  // onReady, which triggers the initial capture). A buggy predicate should
+  // disable tracking for that event, not crash the host app.
   const emit = (route: SplunkRoute): void => {
-    const defaultName = route.name;
-
-    let name: string | null | undefined = defaultName;
-    if (options.viewNamePredicate) {
-      name = options.viewNamePredicate(route, defaultName);
-    }
-    if (name == null || name === '') {
-      return;
-    }
-
-    if (options.shouldTrackView && !options.shouldTrackView(route)) {
-      return;
-    }
-
-    const attributes = options.attributesFromRoute?.(route);
-
-    // Fire-and-forget - we do not want to throw into app code.
     try {
+      const defaultName = route.name;
+
+      let name: string | null | undefined = defaultName;
+      if (options.viewNamePredicate) {
+        name = options.viewNamePredicate(route, defaultName);
+      }
+      if (name == null || name === '') {
+        return;
+      }
+
+      if (options.shouldTrackView && !options.shouldTrackView(route)) {
+        return;
+      }
+
+      const attributes = options.attributesFromRoute?.(route);
+
       const result = SplunkRum.instance.navigation.track(name, attributes);
       if (result && typeof result.catch === 'function') {
         result.catch(() => {});
       }
     } catch {
-      // ignore
+      // A consumer predicate or the bridge threw; swallow so navigation
+      // tracking is best-effort and never destabilizes the app.
     }
   };
 
+  // Invoked from react-navigation's 'state'/'ready' events and from the initial
+  // capture in register(). Fully guarded so nothing escapes into the caller.
   const handleStateChange = (): void => {
-    if (!container) {
-      return;
-    }
-
-    let route: RouteLike | undefined;
     try {
-      route = container.getCurrentRoute();
+      if (!container) {
+        return;
+      }
+
+      const route = container.getCurrentRoute();
+      if (!route || typeof route.name !== 'string') {
+        return;
+      }
+
+      // Dedup by the focused route's key (falls back to name). This suppresses
+      // param-only updates and no-op back navigations to the same screen (to
+      // mirror our native Agents).
+      const key = route.key ?? route.name;
+      if (key === lastRouteKey) {
+        return;
+      }
+      lastRouteKey = key;
+
+      emit({
+        name: route.name,
+        key: route.key,
+        params: route.params as Record<string, unknown> | undefined,
+      });
     } catch {
-      route = undefined;
+      // getCurrentRoute() or downstream threw; never propagate into the
+      // navigation event dispatch.
     }
-    if (!route || typeof route.name !== 'string') {
-      return;
-    }
-
-    // Dedup by the focused route's key (falls back to name). This suppresses
-    // param-only updates and no-op back navigations to the same screen (to mirror our native Agents).
-    const key = route.key ?? route.name;
-    if (key === lastRouteKey) {
-      return;
-    }
-    lastRouteKey = key;
-
-    emit({
-      name: route.name,
-      key: route.key,
-      params: route.params as Record<string, unknown> | undefined,
-    });
   };
 
   // Subscribes to a container event, tolerating containers/mocks that do not

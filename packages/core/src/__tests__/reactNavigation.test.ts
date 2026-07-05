@@ -204,6 +204,39 @@ describe('reactNavigationIntegration', () => {
     expect(trackSpy).not.toHaveBeenCalled();
   });
 
+  it('never propagates a throwing predicate into the navigation dispatch', () => {
+    const c = fakeContainer({ name: 'Home', key: 'Home-1' });
+    const boom = () => {
+      throw new Error('consumer predicate blew up');
+    };
+
+    const integration = reactNavigationIntegration({
+      viewNamePredicate: boom as never,
+    });
+
+    // Initial capture (called synchronously here) must not throw.
+    expect(() => integration.registerNavigationContainer(c)).not.toThrow();
+
+    // A subsequent state change firing our listener must not throw either.
+    c._set({ name: 'Detail', key: 'Detail-1' });
+    expect(() => c._emit()).not.toThrow();
+
+    expect(trackSpy).not.toHaveBeenCalled();
+  });
+
+  it('isolates a throwing attributesFromRoute', () => {
+    const c = fakeContainer({ name: 'Home', key: 'Home-1' });
+
+    const integration = reactNavigationIntegration({
+      attributesFromRoute: () => {
+        throw new Error('attr resolver blew up');
+      },
+    });
+
+    expect(() => integration.registerNavigationContainer(c)).not.toThrow();
+    expect(trackSpy).not.toHaveBeenCalled();
+  });
+
   it('passes attributes from attributesFromRoute', () => {
     const c = fakeContainer({ name: 'Detail', key: 'k', params: { id: 42 } });
 
