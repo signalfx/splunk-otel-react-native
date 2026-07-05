@@ -13,6 +13,7 @@ import _SwiftConcurrencyShims
 extension SplunkCustomTracking.CustomTrackingInternal {
   final public func track(_ event: SplunkCustomTracking.SplunkTrackableEvent)
   final public func track(_ issue: any SplunkCustomTracking.SplunkTrackableIssue, _ attributes: [Swift.String : SplunkCommon.EventAttributeValue])
+  final public func trackError(_ issue: any SplunkCustomTracking.SplunkTrackableIssue, _ attributes: [Swift.String : SplunkCommon.EventAttributeValue])
   final public func track(_ workflowName: Swift.String) -> any OpenTelemetryApi.Span
 }
 public struct CustomTrackingMetadata : SplunkCommon.ModuleEventMetadata {
@@ -85,4 +86,11 @@ public struct SplunkIssue : SplunkCustomTracking.SplunkTrackableIssue {
   public init(from message: Swift.String)
   public init(from error: any Swift.Error)
   public init(from exception: Foundation.NSException)
+}
+public struct SplunkExplicitIssue : SplunkCustomTracking.SplunkTrackableIssue {
+  public let message: Swift.String
+  public let exceptionType: Swift.String
+  public let timestamp: Foundation.Date
+  public var stacktrace: SplunkCustomTracking.Stacktrace?
+  public init(typeName: Swift.String, message: Swift.String, stacktrace: Swift.String?)
 }

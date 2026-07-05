@@ -1473,8 +1473,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "OLTPAttributesSpanProcessor",
-        "printedName": "OLTPAttributesSpanProcessor",
+        "name": "OTLPAttributesSpanProcessor",
+        "printedName": "OTLPAttributesSpanProcessor",
         "children": [
           {
             "kind": "Var",
@@ -1489,8 +1489,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC15isStartRequiredSbvp",
-            "mangledName": "$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC15isStartRequiredSbvp",
+            "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC15isStartRequiredSbvp",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC15isStartRequiredSbvp",
             "moduleName": "SplunkOpenTelemetry",
             "declAttributes": [
               "HasInitialValue",
@@ -1515,8 +1515,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC15isStartRequiredSbvg",
-                "mangledName": "$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC15isStartRequiredSbvg",
+                "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC15isStartRequiredSbvg",
+                "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC15isStartRequiredSbvg",
                 "moduleName": "SplunkOpenTelemetry",
                 "implicit": true,
                 "declAttributes": [
@@ -1539,8 +1539,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC13isEndRequiredSbvp",
-            "mangledName": "$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC13isEndRequiredSbvp",
+            "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC13isEndRequiredSbvp",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC13isEndRequiredSbvp",
             "moduleName": "SplunkOpenTelemetry",
             "declAttributes": [
               "HasInitialValue",
@@ -1564,8 +1564,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC13isEndRequiredSbvg",
-                "mangledName": "$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC13isEndRequiredSbvg",
+                "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC13isEndRequiredSbvg",
+                "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC13isEndRequiredSbvg",
                 "moduleName": "SplunkOpenTelemetry",
                 "implicit": true,
                 "declAttributes": [
@@ -1582,9 +1582,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "OLTPAttributesSpanProcessor",
-                "printedName": "SplunkOpenTelemetry.OLTPAttributesSpanProcessor",
-                "usr": "s:19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC"
+                "name": "OTLPAttributesSpanProcessor",
+                "printedName": "SplunkOpenTelemetry.OTLPAttributesSpanProcessor",
+                "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC"
               },
               {
                 "kind": "TypeNominal",
@@ -1600,8 +1600,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC4with15activityTrackerAC0A6Common17RuntimeAttributes_p_AF08ActivityI0_ptcfc",
-            "mangledName": "$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC4with15activityTrackerAC0A6Common17RuntimeAttributes_p_AF08ActivityI0_ptcfc",
+            "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC4with15activityTrackerAC0A6Common17RuntimeAttributes_p_AF08ActivityI0_ptcfc",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC4with15activityTrackerAC0A6Common17RuntimeAttributes_p_AF08ActivityI0_ptcfc",
             "moduleName": "SplunkOpenTelemetry",
             "declAttributes": [
               "AccessControl",
@@ -1641,8 +1641,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC7onStart13parentContext4spany0bC3Api0eJ0VSg_0bC3Sdk08ReadableE0_ptF",
-            "mangledName": "$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC7onStart13parentContext4spany0bC3Api0eJ0VSg_0bC3Sdk08ReadableE0_ptF",
+            "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC7onStart13parentContext4spany0bC3Api0eJ0VSg_0bC3Sdk08ReadableE0_ptF",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC7onStart13parentContext4spany0bC3Api0eJ0VSg_0bC3Sdk08ReadableE0_ptF",
             "moduleName": "SplunkOpenTelemetry",
             "declAttributes": [
               "AccessControl",
@@ -1668,8 +1668,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC5onEnd4spany0bC3Sdk08ReadableE0_p_tF",
-            "mangledName": "$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC5onEnd4spany0bC3Sdk08ReadableE0_p_tF",
+            "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC5onEnd4spany0bC3Sdk08ReadableE0_p_tF",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC5onEnd4spany0bC3Sdk08ReadableE0_p_tF",
             "moduleName": "SplunkOpenTelemetry",
             "declAttributes": [
               "AccessControl"
@@ -1702,8 +1702,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC8shutdown15explicitTimeoutySdSg_tF",
-            "mangledName": "$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC8shutdown15explicitTimeoutySdSg_tF",
+            "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC8shutdown15explicitTimeoutySdSg_tF",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC8shutdown15explicitTimeoutySdSg_tF",
             "moduleName": "SplunkOpenTelemetry",
             "declAttributes": [
               "AccessControl"
@@ -1736,8 +1736,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC10forceFlush7timeoutySdSg_tF",
-            "mangledName": "$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC10forceFlush7timeoutySdSg_tF",
+            "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC10forceFlush7timeoutySdSg_tF",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC10forceFlush7timeoutySdSg_tF",
             "moduleName": "SplunkOpenTelemetry",
             "declAttributes": [
               "AccessControl"
@@ -1746,8 +1746,8 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC",
-        "mangledName": "$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC",
+        "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC",
+        "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC",
         "moduleName": "SplunkOpenTelemetry",
         "declAttributes": [
           "AccessControl",
@@ -2592,98 +2592,98 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerLogExporter.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerLogExporter.swift",
       "kind": "Array",
       "offset": 780,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerLogExporter.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerLogExporter.swift",
       "kind": "StringLiteral",
       "offset": 949,
       "length": 15,
       "value": "\"OpenTelemetry\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerSpanExporter.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerSpanExporter.swift",
       "kind": "Array",
       "offset": 766,
       "length": 72,
       "value": "[\"component\", \"screen.name\", \"session.id\"]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerSpanExporter.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerSpanExporter.swift",
       "kind": "StringLiteral",
       "offset": 1001,
       "length": 15,
       "value": "\"OpenTelemetry\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPLogToSpanEventProcessor.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPLogToSpanEventProcessor.swift",
       "kind": "StringLiteral",
       "offset": 1131,
       "length": 25,
       "value": "\"LogToSpanEventProcessor\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPSessionReplayEventProcessor.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPSessionReplayEventProcessor.swift",
       "kind": "StringLiteral",
       "offset": 1983,
       "length": 15,
       "value": "\"OpenTelemetry\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPSessionReplayEventProcessor.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPSessionReplayEventProcessor.swift",
       "kind": "StringLiteral",
       "offset": 2141,
       "length": 29,
       "value": "\"SessionReplayEventProcessor\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/LogToSpanExporter\/OTLPLogToSpanExporter.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/LogToSpanExporter\/OTLPLogToSpanExporter.swift",
       "kind": "StringLiteral",
       "offset": 923,
       "length": 22,
       "value": "\"Log to Span Exporter\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/OTel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/OTel.swift",
       "kind": "StringLiteral",
       "offset": 615,
       "length": 12,
       "value": "\"OTel 0.0.1\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OLTPAttributesSpanProcessor.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPAttributesSpanProcessor.swift",
       "kind": "BooleanLiteral",
       "offset": 1035,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OLTPAttributesSpanProcessor.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPAttributesSpanProcessor.swift",
       "kind": "BooleanLiteral",
       "offset": 1072,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Stdout Exporters\/SplunkStdoutLogExporter.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Stdout Exporters\/SplunkStdoutLogExporter.swift",
       "kind": "StringLiteral",
       "offset": 969,
       "length": 15,
       "value": "\"OpenTelemetry\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Stdout Exporters\/SplunkStdoutSpanExporter.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Stdout Exporters\/SplunkStdoutSpanExporter.swift",
       "kind": "StringLiteral",
       "offset": 954,
       "length": 15,
       "value": "\"OpenTelemetry\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Utils\/Foundation\/Date+Formatting.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Utils\/Foundation\/Date+Formatting.swift",
       "kind": "IntegerLiteral",
       "offset": 838,
       "length": 1,

@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/jc69/Library/Developer/Xcode/DerivedData/SessionReplay-egtwpchkntjoimdkedupzfucklws/Build/Intermediates.noindex/ArchiveIntermediates/CiscoLogger/InstallationBuildProductsLocation/Library/Frameworks/CiscoLogger.framework/CiscoLogger'
+binary-path:     '/Users/budim/Library/Developer/Xcode/DerivedData/SessionReplay-femojjjhctvkhhhhdbiywmwyidbw/Build/Intermediates.noindex/ArchiveIntermediates/CiscoLogger/InstallationBuildProductsLocation/Library/Frameworks/CiscoLogger.framework/CiscoLogger'
 relocations:
   - { offset: 0x2CA69, size: 0x8, addend: 0x0, symName: _CiscoLoggerVersionString, symObjAddr: 0x0, symBinAddr: 0x12680, symSize: 0x0 }
   - { offset: 0x2CAA0, size: 0x8, addend: 0x0, symName: _CiscoLoggerVersionNumber, symObjAddr: 0x38, symBinAddr: 0x126B8, symSize: 0x0 }

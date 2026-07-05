@@ -5576,112 +5576,112 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsDetector\/InteractionsDetector+Touch.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsDetector\/InteractionsDetector+Touch.swift",
       "kind": "IntegerLiteral",
       "offset": 4199,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsDetector\/InteractionsDetector+Touch.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsDetector\/InteractionsDetector+Touch.swift",
       "kind": "IntegerLiteral",
       "offset": 4332,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsDetector\/InteractionsDetector+Touch.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsDetector\/InteractionsDetector+Touch.swift",
       "kind": "IntegerLiteral",
       "offset": 4372,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsDetector\/InteractionsDetector+Touch.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsDetector\/InteractionsDetector+Touch.swift",
       "kind": "IntegerLiteral",
       "offset": 5025,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsDetector\/InteractionsDetector+Touch.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsDetector\/InteractionsDetector+Touch.swift",
       "kind": "IntegerLiteral",
       "offset": 5396,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/Models\/Public\/InteractionEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/Models\/Public\/InteractionEvent.swift",
       "kind": "StringLiteral",
       "offset": 1789,
       "length": 66,
       "value": "\"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-\""
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/Models\/Public\/InteractionEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/Models\/Public\/InteractionEvent.swift",
       "kind": "IntegerLiteral",
       "offset": 4186,
       "length": 2,
       "value": "21"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsDetector\/LazyGesturesEvaluator.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsDetector\/LazyGesturesEvaluator.swift",
       "kind": "Array",
       "offset": 1444,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsSampler\/DefaultInteractionsSampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsSampler\/DefaultInteractionsSampler.swift",
       "kind": "FloatLiteral",
       "offset": 230,
       "length": 4,
       "value": "30.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsSampler\/DefaultInteractionsSampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsSampler\/DefaultInteractionsSampler.swift",
       "kind": "FloatLiteral",
       "offset": 283,
       "length": 4,
       "value": "30.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsSampler\/DefaultInteractionsSampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsSampler\/DefaultInteractionsSampler.swift",
       "kind": "FloatLiteral",
       "offset": 333,
       "length": 4,
       "value": "30.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsSampler\/DefaultInteractionsSampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsSampler\/DefaultInteractionsSampler.swift",
       "kind": "FloatLiteral",
       "offset": 383,
       "length": 4,
       "value": "30.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/Models\/Internal\/InteractionTouchData.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/Models\/Internal\/InteractionTouchData.swift",
       "kind": "IntegerLiteral",
       "offset": 153,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/Models\/Internal\/InteractionTouchData.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/Models\/Internal\/InteractionTouchData.swift",
       "kind": "IntegerLiteral",
       "offset": 159,
       "length": 4,
       "value": "9999"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/Models\/Internal\/InteractionTouchData.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/Models\/Internal\/InteractionTouchData.swift",
       "kind": "Array",
       "offset": 346,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsDetector\/InteractionsDetector.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoInteractions\/Sources\/InteractionsDetector\/InteractionsDetector.swift",
       "kind": "Dictionary",
       "offset": 637,
       "length": 3,

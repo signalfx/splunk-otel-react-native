@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/jc69/Library/Developer/Xcode/DerivedData/SessionReplay-egtwpchkntjoimdkedupzfucklws/Build/Intermediates.noindex/ArchiveIntermediates/CiscoSessionReplay/InstallationBuildProductsLocation/Library/Frameworks/CiscoSessionReplay.framework/CiscoSessionReplay'
+binary-path:     '/Users/budim/Library/Developer/Xcode/DerivedData/SessionReplay-femojjjhctvkhhhhdbiywmwyidbw/Build/Intermediates.noindex/ArchiveIntermediates/CiscoSessionReplay/InstallationBuildProductsLocation/Library/Frameworks/CiscoSessionReplay.framework/CiscoSessionReplay'
 relocations:
   - { offset: 0x7AFC3, size: 0x8, addend: 0x0, symName: _CiscoSessionReplayVersionString, symObjAddr: 0x0, symBinAddr: 0xD27C0, symSize: 0x0 }
   - { offset: 0x7AFFA, size: 0x8, addend: 0x0, symName: _CiscoSessionReplayVersionNumber, symObjAddr: 0x40, symBinAddr: 0xD2800, symSize: 0x0 }

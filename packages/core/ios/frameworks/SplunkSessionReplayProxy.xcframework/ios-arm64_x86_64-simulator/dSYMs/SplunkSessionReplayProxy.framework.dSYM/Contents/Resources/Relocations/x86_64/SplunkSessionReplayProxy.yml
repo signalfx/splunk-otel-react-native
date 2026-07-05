@@ -1,6 +1,6 @@
 ---
 triple:          'x86_64-apple-darwin'
-binary-path:     '/Users/jc69/Library/Developer/Xcode/DerivedData/SplunkAgentXCFrameworks-bnxxucyrilvdowgazrqfdklbnqhg/Build/Intermediates.noindex/ArchiveIntermediates/SplunkSessionReplayProxy/InstallationBuildProductsLocation/Library/Frameworks/SplunkSessionReplayProxy.framework/SplunkSessionReplayProxy'
+binary-path:     '/Users/budim/Library/Developer/Xcode/DerivedData/SplunkAgentXCFrameworks-hgsygarymeusfmetozfuhcpftltz/Build/Intermediates.noindex/ArchiveIntermediates/SplunkSessionReplayProxy/InstallationBuildProductsLocation/Library/Frameworks/SplunkSessionReplayProxy.framework/SplunkSessionReplayProxy'
 relocations:
   - { offset: 0x2AFDB, size: 0x8, addend: 0x0, symName: _SplunkSessionReplayProxyVersionString, symObjAddr: 0x0, symBinAddr: 0x5360, symSize: 0x0 }
   - { offset: 0x2B012, size: 0x8, addend: 0x0, symName: _SplunkSessionReplayProxyVersionNumber, symObjAddr: 0x50, symBinAddr: 0x53B0, symSize: 0x0 }
@@ -130,12 +130,12 @@ relocations:
   - { offset: 0x2CB20, size: 0x8, addend: 0x0, symName: '_$s24SplunkSessionReplayProxy0bC19RemoteConfigurationV4fromACSg10Foundation4DataV_tcfC', symObjAddr: 0xAE0, symBinAddr: 0x2060, symSize: 0xB0 }
   - { offset: 0x2CB71, size: 0x8, addend: 0x0, symName: '_$s24SplunkSessionReplayProxy0bC19RemoteConfigurationV0A6Common0e6ModuleF0AadEP4fromxSg10Foundation4DataV_tcfCTW', symObjAddr: 0xC10, symBinAddr: 0x2180, symSize: 0x10 }
   - { offset: 0x2CB85, size: 0x8, addend: 0x0, symName: '_$s18CiscoSessionReplay0bC0C06SplunkbC5ProxyE7install4with19remoteConfigurationy0D6Common06ModuleI0_pSg_AH06RemotekI0_pSgtF', symObjAddr: 0xC20, symBinAddr: 0x2190, symSize: 0x20 }
-  - { offset: 0x2CBDD, size: 0x8, addend: 0x0, symName: '_$s18CiscoSessionReplay0bC0C06SplunkbC5ProxyE10deleteData3fory0D6Common19ModuleEventMetadata_p_tF', symObjAddr: 0xC40, symBinAddr: 0x21B0, symSize: 0x110 }
-  - { offset: 0x2CC3B, size: 0x8, addend: 0x0, symName: '_$s18CiscoSessionReplay0bC0C12SplunkCommon6Module0dbC5ProxyAdEPxycfCTW', symObjAddr: 0xF40, symBinAddr: 0x24B0, symSize: 0x30 }
-  - { offset: 0x2CC9F, size: 0x8, addend: 0x0, symName: '_$s18CiscoSessionReplay0bC0C12SplunkCommon6Module0dbC5ProxyAdEP7install4with19remoteConfigurationyAD0fK0_pSg_AD06RemotefK0_pSgtFTW', symObjAddr: 0xF70, symBinAddr: 0x24E0, symSize: 0x20 }
-  - { offset: 0x2CCD4, size: 0x8, addend: 0x0, symName: '_$s18CiscoSessionReplay0bC0C12SplunkCommon6Module0dbC5ProxyAdEP9onPublish4datayy13EventMetadataQz_0K4DataQztc_tFTW', symObjAddr: 0xF90, symBinAddr: 0x2500, symSize: 0x60 }
-  - { offset: 0x2CCE8, size: 0x8, addend: 0x0, symName: '_$s18CiscoSessionReplay0bC0C12SplunkCommon6Module0dbC5ProxyAdEP10deleteData3foryAD0F13EventMetadata_p_tFTW', symObjAddr: 0xFF0, symBinAddr: 0x2560, symSize: 0x20 }
-  - { offset: 0x2CCFC, size: 0x8, addend: 0x0, symName: '_$s24SplunkSessionReplayProxy0bC19RemoteConfigurationV8MRUMRootV4fromAEs7Decoder_p_tKcfCTf4nd_n', symObjAddr: 0x1360, symBinAddr: 0x28C0, symSize: 0x110 }
-  - { offset: 0x2CD1F, size: 0x8, addend: 0x0, symName: '_$s24SplunkSessionReplayProxy0bC19RemoteConfigurationV0F0V4fromAEs7Decoder_p_tKcfCTf4nd_n', symObjAddr: 0x1470, symBinAddr: 0x29D0, symSize: 0x110 }
-  - { offset: 0x2CD42, size: 0x8, addend: 0x0, symName: '_$s24SplunkSessionReplayProxy0bC19RemoteConfigurationV4RootV4fromAEs7Decoder_p_tKcfCTf4nd_n', symObjAddr: 0x1580, symBinAddr: 0x2AE0, symSize: 0x110 }
+  - { offset: 0x2CBEF, size: 0x8, addend: 0x0, symName: '_$s18CiscoSessionReplay0bC0C06SplunkbC5ProxyE10deleteData3fory0D6Common19ModuleEventMetadata_p_tF', symObjAddr: 0xC40, symBinAddr: 0x21B0, symSize: 0x110 }
+  - { offset: 0x2CC4D, size: 0x8, addend: 0x0, symName: '_$s18CiscoSessionReplay0bC0C12SplunkCommon6Module0dbC5ProxyAdEPxycfCTW', symObjAddr: 0xF40, symBinAddr: 0x24B0, symSize: 0x30 }
+  - { offset: 0x2CC76, size: 0x8, addend: 0x0, symName: '_$s18CiscoSessionReplay0bC0C12SplunkCommon6Module0dbC5ProxyAdEP7install4with19remoteConfigurationyAD0fK0_pSg_AD06RemotefK0_pSgtFTW', symObjAddr: 0xF70, symBinAddr: 0x24E0, symSize: 0x20 }
+  - { offset: 0x2CC95, size: 0x8, addend: 0x0, symName: '_$s18CiscoSessionReplay0bC0C12SplunkCommon6Module0dbC5ProxyAdEP9onPublish4datayy13EventMetadataQz_0K4DataQztc_tFTW', symObjAddr: 0xF90, symBinAddr: 0x2500, symSize: 0x60 }
+  - { offset: 0x2CCA9, size: 0x8, addend: 0x0, symName: '_$s18CiscoSessionReplay0bC0C12SplunkCommon6Module0dbC5ProxyAdEP10deleteData3foryAD0F13EventMetadata_p_tFTW', symObjAddr: 0xFF0, symBinAddr: 0x2560, symSize: 0x20 }
+  - { offset: 0x2CCBD, size: 0x8, addend: 0x0, symName: '_$s24SplunkSessionReplayProxy0bC19RemoteConfigurationV8MRUMRootV4fromAEs7Decoder_p_tKcfCTf4nd_n', symObjAddr: 0x1360, symBinAddr: 0x28C0, symSize: 0x110 }
+  - { offset: 0x2CCE0, size: 0x8, addend: 0x0, symName: '_$s24SplunkSessionReplayProxy0bC19RemoteConfigurationV0F0V4fromAEs7Decoder_p_tKcfCTf4nd_n', symObjAddr: 0x1470, symBinAddr: 0x29D0, symSize: 0x110 }
+  - { offset: 0x2CD03, size: 0x8, addend: 0x0, symName: '_$s24SplunkSessionReplayProxy0bC19RemoteConfigurationV4RootV4fromAEs7Decoder_p_tKcfCTf4nd_n', symObjAddr: 0x1580, symBinAddr: 0x2AE0, symSize: 0x110 }
 ...

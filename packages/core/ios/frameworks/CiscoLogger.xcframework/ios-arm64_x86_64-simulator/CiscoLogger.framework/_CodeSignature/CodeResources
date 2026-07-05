@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		NW7gkH4jXCn0gT2CP2HUn/UhXbM=
+		whqRNLvKQDEey45upFoC8RDst9M=
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		+FJuRuBWuW5GpWS7N4nZ5t9Xo7g=
+		CAGLwSxEn94RtNM8aooSg5taYAA=
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zGJeFFBQSC1wJuDCVLoLgFuvJEI=
+		PM2GiDR2bMElJxPgs9h0mY4z6m8=
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		+FJuRuBWuW5GpWS7N4nZ5t9Xo7g=
+		CAGLwSxEn94RtNM8aooSg5taYAA=
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		uiy4lFqf1Y7jHniLU6VpmRVSkW8=
+		0Ou6Pjj40FXqVnj8/e0N55Hr9gM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,7 +74,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CHz5ClNicxQtatm8Auz70eaCbT6QvaO8Qv5YWEeBsqI=
+			AGQ5GNsp78ffxWIhDIA8hZ+BUc62alQSnmVZYI1uD0k=
 			</data>
 		</dict>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -102,14 +102,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aloyo95ep/aan4ZWhAKHXEt3z0Vss8Nue9WveceSG28=
+			oP8QWVC8BkP5Ktn0e3hzZRsNvV6R36qKfnFZFobvbjY=
 			</data>
 		</dict>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CHz5ClNicxQtatm8Auz70eaCbT6QvaO8Qv5YWEeBsqI=
+			AGQ5GNsp78ffxWIhDIA8hZ+BUc62alQSnmVZYI1uD0k=
 			</data>
 		</dict>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -137,7 +137,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HwX1NmuDpd70Eyg/XioC1xiJv/++m4XKwbX+7QFH/gI=
+			dHd4HHhsPc8Sb2HJOE1ZKeSe2KhWPbX0XeY31fpJ1QM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

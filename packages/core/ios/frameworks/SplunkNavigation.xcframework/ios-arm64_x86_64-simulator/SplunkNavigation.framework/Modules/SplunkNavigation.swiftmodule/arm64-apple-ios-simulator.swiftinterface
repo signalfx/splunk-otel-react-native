@@ -2,7 +2,7 @@
 // swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkNavigation
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
-import Combine
+import CiscoSwizzling
 import Foundation
 import SplunkCommon
 import Swift
@@ -10,6 +10,16 @@ import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+final public class DefaultNavigationEventProcessor : SplunkNavigation.NavigationEventProcessor {
+  public init()
+  final public func onViewController(typeName: Swift.String, controllerIdentity _: Swift.String) -> SplunkNavigation.NavigationEvent?
+  @objc deinit
+}
+public struct NavigationEvent {
+  public let name: Swift.String
+  public let attributes: [Swift.String : Any]?
+  public init(name: Swift.String, attributes: [Swift.String : Any]? = nil)
+}
 public struct NavigationData : SplunkCommon.ModuleEventData {
 }
 public struct NavigationMetadata : SplunkCommon.ModuleEventMetadata {
@@ -28,8 +38,9 @@ extension SplunkNavigation.Navigation : SplunkCommon.Module {
 public struct NavigationConfiguration : SplunkCommon.ModuleConfiguration {
   public var isEnabled: Swift.Bool
   public var enableAutomatedTracking: Swift.Bool?
+  public var navigationEventProcessor: (any SplunkNavigation.NavigationEventProcessor)?
   public init()
-  public init(isEnabled: Swift.Bool, enableAutomatedTracking: Swift.Bool? = nil)
+  public init(isEnabled: Swift.Bool = true, enableAutomatedTracking: Swift.Bool? = nil, navigationEventProcessor: (any SplunkNavigation.NavigationEventProcessor)? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct NavigationRemoteConfiguration : SplunkCommon.RemoteModuleConfiguration {
@@ -38,21 +49,24 @@ public struct NavigationRemoteConfiguration : SplunkCommon.RemoteModuleConfigura
 }
 extension SplunkNavigation.Navigation {
   final public func track(screen name: Swift.String)
+  final public func track(screen name: Swift.String, attributes: [Swift.String : Any]?)
 }
-final public class Navigation : Swift.Sendable {
+@_hasMissingDesignatedInitializers final public class Navigation : Swift.Sendable {
   final public let screenNameStream: _Concurrency.AsyncStream<Swift.String>
-  final public var agentVersion: Swift.String? {
-    get async
+  final public var sharedState: (any SplunkCommon.AgentSharedState)? {
+    get
+    set
   }
-  @discardableResult
-  final public func agentVersion(_ agentVersion: Swift.String) -> Self
   nonisolated(unsafe) final public var preferences: SplunkNavigation.Preferences {
     get
     set
   }
   final public let state: SplunkNavigation.RuntimeState
-  required public init()
+  required convenience public init()
   @objc deinit
+}
+public protocol NavigationEventProcessor : Swift.Sendable {
+  func onViewController(typeName: Swift.String, controllerIdentity: Swift.String) -> SplunkNavigation.NavigationEvent?
 }
 @_hasMissingDesignatedInitializers final public class Preferences : Swift.Codable, Swift.Sendable {
   nonisolated(unsafe) final public var enableAutomatedTracking: Swift.Bool? {

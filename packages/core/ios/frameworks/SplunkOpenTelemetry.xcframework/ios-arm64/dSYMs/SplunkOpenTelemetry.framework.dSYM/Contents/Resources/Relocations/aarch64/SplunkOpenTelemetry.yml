@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/jc69/Library/Developer/Xcode/DerivedData/SplunkAgentXCFrameworks-bnxxucyrilvdowgazrqfdklbnqhg/Build/Intermediates.noindex/ArchiveIntermediates/SplunkOpenTelemetry/InstallationBuildProductsLocation/Library/Frameworks/SplunkOpenTelemetry.framework/SplunkOpenTelemetry'
+binary-path:     '/Users/budim/Library/Developer/Xcode/DerivedData/SplunkAgentXCFrameworks-hgsygarymeusfmetozfuhcpftltz/Build/Intermediates.noindex/ArchiveIntermediates/SplunkOpenTelemetry/InstallationBuildProductsLocation/Library/Frameworks/SplunkOpenTelemetry.framework/SplunkOpenTelemetry'
 relocations:
   - { offset: 0x29D1E, size: 0x8, addend: 0x0, symName: _SplunkOpenTelemetryVersionString, symObjAddr: 0x0, symBinAddr: 0x1B3C0, symSize: 0x0 }
   - { offset: 0x29D55, size: 0x8, addend: 0x0, symName: _SplunkOpenTelemetryVersionNumber, symObjAddr: 0x48, symBinAddr: 0x1B408, symSize: 0x0 }
@@ -136,16 +136,16 @@ relocations:
   - { offset: 0x33913, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry23SpanInterceptorExporterC0bC3Sdk0dF0AadEP6export5spans15explicitTimeoutAD0dF10ResultCodeOSayAD0D4DataVG_SdSgtFTW', symObjAddr: 0x634, symBinAddr: 0x12D30, symSize: 0x4 }
   - { offset: 0x3394C, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry23SpanInterceptorExporterC0bC3Sdk0dF0AadEP5flush15explicitTimeoutAD0dF10ResultCodeOSdSg_tFTW', symObjAddr: 0x638, symBinAddr: 0x12D34, symSize: 0x5C }
   - { offset: 0x339AB, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry23SpanInterceptorExporterC0bC3Sdk0dF0AadEP8shutdown15explicitTimeoutySdSg_tFTW', symObjAddr: 0x694, symBinAddr: 0x12D90, symSize: 0x54 }
-  - { offset: 0x33DAC, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorCMa', symObjAddr: 0x824, symBinAddr: 0x139C0, symSize: 0x20 }
-  - { offset: 0x33DC1, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC15isStartRequiredSbvg', symObjAddr: 0x0, symBinAddr: 0x13224, symSize: 0x8 }
-  - { offset: 0x33DE2, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC13isEndRequiredSbvg', symObjAddr: 0x8, symBinAddr: 0x1322C, symSize: 0x8 }
-  - { offset: 0x33E49, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC4with15activityTrackerAC0A6Common17RuntimeAttributes_p_AF08ActivityI0_ptcfC', symObjAddr: 0x10, symBinAddr: 0x13234, symSize: 0x70 }
-  - { offset: 0x33E87, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC4with15activityTrackerAC0A6Common17RuntimeAttributes_p_AF08ActivityI0_ptcfc', symObjAddr: 0x80, symBinAddr: 0x132A4, symSize: 0x58 }
-  - { offset: 0x33EE3, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC7onStart13parentContext4spany0bC3Api0eJ0VSg_0bC3Sdk08ReadableE0_ptF', symObjAddr: 0xF0, symBinAddr: 0x132FC, symSize: 0x168 }
-  - { offset: 0x33F4B, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorCfd', symObjAddr: 0x288, symBinAddr: 0x13464, symSize: 0x24 }
-  - { offset: 0x33F7C, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorCfD', symObjAddr: 0x2AC, symBinAddr: 0x13488, symSize: 0x2C }
-  - { offset: 0x33FDE, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC0bC3Sdk0eF0AadEP7onStart13parentContext4spany0bC3Api0eK0VSg_AD08ReadableE0_ptFTW', symObjAddr: 0x2E8, symBinAddr: 0x134B4, symSize: 0x20 }
-  - { offset: 0x34027, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OLTPAttributesSpanProcessorC6inject33_4C761DD0F9CFF9F10C742A977C1B37C3LL10attributes2toySDySSypG_0bC3Sdk08ReadableE0_ptFTf4nnd_n', symObjAddr: 0x314, symBinAddr: 0x134D4, symSize: 0x4EC }
+  - { offset: 0x33DAC, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorCMa', symObjAddr: 0x824, symBinAddr: 0x139C0, symSize: 0x20 }
+  - { offset: 0x33DC1, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC15isStartRequiredSbvg', symObjAddr: 0x0, symBinAddr: 0x13224, symSize: 0x8 }
+  - { offset: 0x33DE2, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC13isEndRequiredSbvg', symObjAddr: 0x8, symBinAddr: 0x1322C, symSize: 0x8 }
+  - { offset: 0x33E49, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC4with15activityTrackerAC0A6Common17RuntimeAttributes_p_AF08ActivityI0_ptcfC', symObjAddr: 0x10, symBinAddr: 0x13234, symSize: 0x70 }
+  - { offset: 0x33E87, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC4with15activityTrackerAC0A6Common17RuntimeAttributes_p_AF08ActivityI0_ptcfc', symObjAddr: 0x80, symBinAddr: 0x132A4, symSize: 0x58 }
+  - { offset: 0x33EE3, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC7onStart13parentContext4spany0bC3Api0eJ0VSg_0bC3Sdk08ReadableE0_ptF', symObjAddr: 0xF0, symBinAddr: 0x132FC, symSize: 0x168 }
+  - { offset: 0x33F4B, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorCfd', symObjAddr: 0x288, symBinAddr: 0x13464, symSize: 0x24 }
+  - { offset: 0x33F7C, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorCfD', symObjAddr: 0x2AC, symBinAddr: 0x13488, symSize: 0x2C }
+  - { offset: 0x33FDE, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC0bC3Sdk0eF0AadEP7onStart13parentContext4spany0bC3Api0eK0VSg_AD08ReadableE0_ptFTW', symObjAddr: 0x2E8, symBinAddr: 0x134B4, symSize: 0x20 }
+  - { offset: 0x34027, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC6inject33_4A023ABA00CF6B7077C2A8A1F2F990A3LL10attributes2toySDySSypG_0bC3Sdk08ReadableE0_ptFTf4nnd_n', symObjAddr: 0x314, symBinAddr: 0x134D4, symSize: 0x4EC }
   - { offset: 0x34253, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC4withACSDySS0bC3Api14AttributeValueOGyc_tcfC', symObjAddr: 0x0, symBinAddr: 0x13A24, symSize: 0x3C }
   - { offset: 0x344A9, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorCMa', symObjAddr: 0x484, symBinAddr: 0x13DD0, symSize: 0x20 }
   - { offset: 0x344FF, size: 0x8, addend: 0x0, symName: '_$s19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC4withACSDySS0bC3Api14AttributeValueOGyc_tcfC', symObjAddr: 0x0, symBinAddr: 0x13A24, symSize: 0x3C }

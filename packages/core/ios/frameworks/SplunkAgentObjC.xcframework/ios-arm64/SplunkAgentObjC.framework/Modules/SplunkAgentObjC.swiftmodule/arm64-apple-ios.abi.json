@@ -2889,6 +2889,130 @@
           },
           {
             "kind": "Function",
+            "name": "trackError",
+            "printedName": "trackError(typeName:message:stacktrace:attributes:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CustomTrackingModuleObjC",
+                "printedName": "SplunkAgentObjC.CustomTrackingModuleObjC",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingModule"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : SplunkAgentObjC.AttributeValueObjC]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeValueObjC",
+                    "printedName": "SplunkAgentObjC.AttributeValueObjC",
+                    "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKAttributeValue"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingModule(im)trackErrorWithType:message:stacktrace:attributes:",
+            "mangledName": "$s15SplunkAgentObjC020CustomTrackingModuleC1CC10trackError8typeName7message10stacktrace10attributesACSS_S2SSgSDySSAA014AttributeValueC1CCGtF",
+            "moduleName": "SplunkAgentObjC",
+            "objc_name": "trackErrorWithType:message:stacktrace:attributes:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trackError",
+            "printedName": "trackError(typeName:message:stacktrace:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CustomTrackingModuleObjC",
+                "printedName": "SplunkAgentObjC.CustomTrackingModuleObjC",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingModule"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingModule(im)trackErrorWithType:message:stacktrace:",
+            "mangledName": "$s15SplunkAgentObjC020CustomTrackingModuleC1CC10trackError8typeName7message10stacktraceACSS_S2SSgtF",
+            "moduleName": "SplunkAgentObjC",
+            "objc_name": "trackErrorWithType:message:stacktrace:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "trackCustomEvent",
             "printedName": "trackCustomEvent(name:)",
             "children": [
@@ -3432,6 +3556,17 @@
       },
       {
         "kind": "Import",
+        "name": "SplunkNavigation",
+        "printedName": "SplunkNavigation",
+        "declKind": "Import",
+        "moduleName": "SplunkAgentObjC",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SplunkCommon",
         "printedName": "SplunkCommon",
         "declKind": "Import",
@@ -3449,6 +3584,183 @@
         "moduleName": "SplunkAgentObjC",
         "declAttributes": [
           "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAgentObjC",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DefaultNavigationEventProcessorObjC",
+        "printedName": "DefaultNavigationEventProcessorObjC",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultNavigationEventProcessorObjC",
+                "printedName": "SplunkAgentObjC.DefaultNavigationEventProcessorObjC",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKDefaultNavigationEventProcessor"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKDefaultNavigationEventProcessor(im)init",
+            "mangledName": "$s15SplunkAgentObjC031DefaultNavigationEventProcessorC1CCACycfc",
+            "moduleName": "SplunkAgentObjC",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "onViewController",
+            "printedName": "onViewController(typeName:controllerIdentity:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SplunkAgentObjC.NavigationEventObjC?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationEventObjC",
+                    "printedName": "SplunkAgentObjC.NavigationEventObjC",
+                    "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationEvent"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKDefaultNavigationEventProcessor(im)onViewControllerWithTypeName:controllerIdentity:",
+            "mangledName": "$s15SplunkAgentObjC031DefaultNavigationEventProcessorC1CC16onViewController8typeName18controllerIdentityAA0efC1CCSgSS_SStF",
+            "moduleName": "SplunkAgentObjC",
+            "objc_name": "onViewControllerWithTypeName:controllerIdentity:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKDefaultNavigationEventProcessor",
+        "mangledName": "$s15SplunkAgentObjC031DefaultNavigationEventProcessorC1CC",
+        "moduleName": "SplunkAgentObjC",
+        "objc_name": "SPLKDefaultNavigationEventProcessor",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "NavigationEventProcessorObjC",
+            "printedName": "NavigationEventProcessorObjC",
+            "usr": "c:@M@SplunkAgentObjC@objc(pl)SPLKNavigationEventProcessor",
+            "mangledName": "$s15SplunkAgentObjC024NavigationEventProcessorC1CP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
         ]
       },
       {
@@ -3567,6 +3879,130 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "navigationEventProcessor",
+            "printedName": "navigationEventProcessor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SplunkAgentObjC.NavigationEventProcessorObjC)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationEventProcessorObjC",
+                    "printedName": "any SplunkAgentObjC.NavigationEventProcessorObjC",
+                    "usr": "c:@M@SplunkAgentObjC@objc(pl)SPLKNavigationEventProcessor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationConfiguration(py)navigationEventProcessor",
+            "mangledName": "$s15SplunkAgentObjC023NavigationConfigurationC1CC24navigationEventProcessorAA0dghC1C_pSgvp",
+            "moduleName": "SplunkAgentObjC",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any SplunkAgentObjC.NavigationEventProcessorObjC)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NavigationEventProcessorObjC",
+                        "printedName": "any SplunkAgentObjC.NavigationEventProcessorObjC",
+                        "usr": "c:@M@SplunkAgentObjC@objc(pl)SPLKNavigationEventProcessor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationConfiguration(im)navigationEventProcessor",
+                "mangledName": "$s15SplunkAgentObjC023NavigationConfigurationC1CC24navigationEventProcessorAA0dghC1C_pSgvg",
+                "moduleName": "SplunkAgentObjC",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any SplunkAgentObjC.NavigationEventProcessorObjC)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NavigationEventProcessorObjC",
+                        "printedName": "any SplunkAgentObjC.NavigationEventProcessorObjC",
+                        "usr": "c:@M@SplunkAgentObjC@objc(pl)SPLKNavigationEventProcessor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationConfiguration(im)setNavigationEventProcessor:",
+                "mangledName": "$s15SplunkAgentObjC023NavigationConfigurationC1CC24navigationEventProcessorAA0dghC1C_pSgvs",
+                "moduleName": "SplunkAgentObjC",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15SplunkAgentObjC023NavigationConfigurationC1CC24navigationEventProcessorAA0dghC1C_pSgvM",
+                "mangledName": "$s15SplunkAgentObjC023NavigationConfigurationC1CC24navigationEventProcessorAA0dghC1C_pSgvM",
+                "moduleName": "SplunkAgentObjC",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -3659,6 +4095,56 @@
               "RawDocComment"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(isEnabled:enableAutomatedTracking:navigationEventProcessor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationConfigurationObjC",
+                "printedName": "SplunkAgentObjC.NavigationConfigurationObjC",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationConfiguration"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SplunkAgentObjC.NavigationEventProcessorObjC)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationEventProcessorObjC",
+                    "printedName": "any SplunkAgentObjC.NavigationEventProcessorObjC",
+                    "usr": "c:@M@SplunkAgentObjC@objc(pl)SPLKNavigationEventProcessor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationConfiguration(im)initWithEnabled:automatedTracking:navigationEventProcessor:",
+            "mangledName": "$s15SplunkAgentObjC023NavigationConfigurationC1CC9isEnabled23enableAutomatedTracking24navigationEventProcessorACSb_SbAA0dlmC1C_pSgtcfc",
+            "moduleName": "SplunkAgentObjC",
+            "objc_name": "initWithEnabled:automatedTracking:navigationEventProcessor:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
@@ -3742,6 +4228,98 @@
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAgentObjC",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NavigationEventProcessorObjC",
+        "printedName": "NavigationEventProcessorObjC",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onViewController",
+            "printedName": "onViewController(typeName:controllerIdentity:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SplunkAgentObjC.NavigationEventObjC?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationEventObjC",
+                    "printedName": "SplunkAgentObjC.NavigationEventObjC",
+                    "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationEvent"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SplunkAgentObjC@objc(pl)SPLKNavigationEventProcessor(im)onViewControllerWithTypeName:controllerIdentity:",
+            "mangledName": "$s15SplunkAgentObjC024NavigationEventProcessorC1CP16onViewController8typeName18controllerIdentityAA0deC1CCSgSS_SStF",
+            "moduleName": "SplunkAgentObjC",
+            "genericSig": "<τ_0_0 where τ_0_0 : SplunkAgentObjC.NavigationEventProcessorObjC>",
+            "sugared_genericSig": "<Self where Self : SplunkAgentObjC.NavigationEventProcessorObjC>",
+            "protocolReq": true,
+            "objc_name": "onViewControllerWithTypeName:controllerIdentity:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@SplunkAgentObjC@objc(pl)SPLKNavigationEventProcessor",
+        "mangledName": "$s15SplunkAgentObjC024NavigationEventProcessorC1CP",
+        "moduleName": "SplunkAgentObjC",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "objc_name": "SPLKNavigationEventProcessor",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           }
         ]
       },
@@ -3942,6 +4520,52 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "track",
+            "printedName": "track(screen:attributes:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationModuleObjC",
+                "printedName": "SplunkAgentObjC.NavigationModuleObjC",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationModule"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSDictionary?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSDictionary",
+                    "printedName": "Foundation.NSDictionary",
+                    "usr": "c:objc(cs)NSDictionary"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationModule(im)trackScreen:attributes:",
+            "mangledName": "$s15SplunkAgentObjC016NavigationModuleC1CC5track6screen10attributesACSS_So12NSDictionaryCSgtF",
+            "moduleName": "SplunkAgentObjC",
+            "objc_name": "trackScreen:attributes:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -3981,6 +4605,323 @@
         ],
         "superclassUsr": "c:objc(cs)NSObject",
         "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAgentObjC",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NavigationEventObjC",
+        "printedName": "NavigationEventObjC",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationEvent(py)name",
+            "mangledName": "$s15SplunkAgentObjC015NavigationEventC1CC4nameSSvp",
+            "moduleName": "SplunkAgentObjC",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationEvent(im)name",
+                "mangledName": "$s15SplunkAgentObjC015NavigationEventC1CC4nameSSvg",
+                "moduleName": "SplunkAgentObjC",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "attributes",
+            "printedName": "attributes",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSDictionary?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSDictionary",
+                    "printedName": "Foundation.NSDictionary",
+                    "usr": "c:objc(cs)NSDictionary"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationEvent(py)attributes",
+            "mangledName": "$s15SplunkAgentObjC015NavigationEventC1CC10attributesSo12NSDictionaryCSgvp",
+            "moduleName": "SplunkAgentObjC",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSDictionary?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSDictionary",
+                        "printedName": "Foundation.NSDictionary",
+                        "usr": "c:objc(cs)NSDictionary"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationEvent(im)attributes",
+                "mangledName": "$s15SplunkAgentObjC015NavigationEventC1CC10attributesSo12NSDictionaryCSgvg",
+                "moduleName": "SplunkAgentObjC",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:attributes:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationEventObjC",
+                "printedName": "SplunkAgentObjC.NavigationEventObjC",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationEvent"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSDictionary?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSDictionary",
+                    "printedName": "Foundation.NSDictionary",
+                    "usr": "c:objc(cs)NSDictionary"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationEvent(im)initWithName:attributes:",
+            "mangledName": "$s15SplunkAgentObjC015NavigationEventC1CC4name10attributesACSS_So12NSDictionaryCSgtcfc",
+            "moduleName": "SplunkAgentObjC",
+            "objc_name": "initWithName:attributes:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationEventObjC",
+                "printedName": "SplunkAgentObjC.NavigationEventObjC",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationEvent"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationEvent(im)initWithName:",
+            "mangledName": "$s15SplunkAgentObjC015NavigationEventC1CC4nameACSS_tcfc",
+            "moduleName": "SplunkAgentObjC",
+            "objc_name": "initWithName:",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationEventObjC",
+                "printedName": "SplunkAgentObjC.NavigationEventObjC",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationEvent"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationEvent(im)init",
+            "mangledName": "$s15SplunkAgentObjC015NavigationEventC1CCACycfc",
+            "moduleName": "SplunkAgentObjC",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKNavigationEvent",
+        "mangledName": "$s15SplunkAgentObjC015NavigationEventC1CC",
+        "moduleName": "SplunkAgentObjC",
+        "objc_name": "SPLKNavigationEvent",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
         "superclassNames": [
           "ObjectiveC.NSObject"
         ],
@@ -13972,7 +14913,10 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "SplunkAgentObjC"
+        "moduleName": "SplunkAgentObjC",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -13997,7 +14941,6 @@
             "moduleName": "SplunkAgentObjC",
             "static": true,
             "declAttributes": [
-              "Final",
               "AccessControl",
               "ObjC"
             ],
@@ -14020,7 +14963,6 @@
                 "moduleName": "SplunkAgentObjC",
                 "static": true,
                 "declAttributes": [
-                  "Final",
                   "ObjC"
                 ],
                 "accessorKind": "get"
@@ -14059,7 +15001,6 @@
         "mangledName": "$s15SplunkAgentObjC0abC10CResourcesC",
         "moduleName": "SplunkAgentObjC",
         "declAttributes": [
-          "Final",
           "AccessControl",
           "ObjC",
           "RawDocComment"
@@ -14455,189 +15396,189 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
       "kind": "StringLiteral",
       "offset": 7805,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
       "kind": "StringLiteral",
       "offset": 7981,
       "length": 45,
       "value": "\"SPLKAttributeValue<\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
       "kind": "StringLiteral",
       "offset": 8008,
       "length": 1,
       "value": "\">: \""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
       "kind": "StringLiteral",
       "offset": 8025,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueTypeObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueTypeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 837,
       "length": 6,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueTypeObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueTypeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 905,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueTypeObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueTypeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 975,
       "length": 6,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 900,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1066,
       "length": 4,
       "value": "-100"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1268,
       "length": 4,
       "value": "-101"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1437,
       "length": 4,
       "value": "-102"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-UserTrackingModeObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-UserTrackingModeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1011,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-UserTrackingModeObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-UserTrackingModeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1323,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Navigation\/Public API\/API-1.0-NavigationConfigurationObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Navigation\/Public API\/API-1.0-NavigationConfigurationObjC.swift",
       "kind": "BooleanLiteral",
-      "offset": 998,
+      "offset": 1212,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-MaskTypeObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-MaskTypeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 945,
       "length": 7,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RecordingMaskObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RecordingMaskObjC.swift",
       "kind": "Array",
       "offset": 1517,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RenderingModeObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RenderingModeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 919,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RenderingModeObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RenderingModeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1063,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 989,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1185,
       "length": 4,
       "value": "-100"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1334,
       "length": 4,
       "value": "-101"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1507,
       "length": 4,
       "value": "-102"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1686,
       "length": 4,
       "value": "-110"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1911,
       "length": 4,
       "value": "-200"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 2090,
       "length": 4,
       "value": "-201"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 2252,
       "length": 4,
       "value": "-300"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Shared\/ModuleConfigurationObjC.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Shared\/ModuleConfigurationObjC.swift",
       "kind": "BooleanLiteral",
       "offset": 947,
       "length": 4,

@@ -558,6 +558,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkCrashReports",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "System",
         "printedName": "System",
         "declKind": "Import",
@@ -607,1302 +617,6 @@
         "moduleName": "SplunkCrashReports",
         "declAttributes": [
           "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "CrashReportKeys",
-        "printedName": "CrashReportKeys",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "previousAppState",
-            "printedName": "previousAppState",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO16previousAppStateyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO16previousAppStateyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "crashTimestamp",
-            "printedName": "crashTimestamp",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO14crashTimestampyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO14crashTimestampyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "currentTimestamp",
-            "printedName": "currentTimestamp",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO16currentTimestampyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO16currentTimestampyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "freeDiskSpace",
-            "printedName": "freeDiskSpace",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO13freeDiskSpaceyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO13freeDiskSpaceyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "batteryLevel",
-            "printedName": "batteryLevel",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO12batteryLevelyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO12batteryLevelyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "freeMemory",
-            "printedName": "freeMemory",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO10freeMemoryyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO10freeMemoryyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "screenName",
-            "printedName": "screenName",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO10screenNameyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO10screenNameyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "buildId",
-            "printedName": "buildId",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO7buildIdyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO7buildIdyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "processPath",
-            "printedName": "processPath",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO11processPathyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO11processPathyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "isNative",
-            "printedName": "isNative",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO8isNativeyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO8isNativeyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "signalName",
-            "printedName": "signalName",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO10signalNameyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO10signalNameyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "faultAddress",
-            "printedName": "faultAddress",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO12faultAddressyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO12faultAddressyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "exceptionName",
-            "printedName": "exceptionName",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO13exceptionNameyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO13exceptionNameyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "exceptionReason",
-            "printedName": "exceptionReason",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO15exceptionReasonyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO15exceptionReasonyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "threads",
-            "printedName": "threads",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO7threadsyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO7threadsyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "images",
-            "printedName": "images",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO6imagesyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO6imagesyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "details",
-            "printedName": "details",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO7detailsyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO7detailsyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "component",
-            "printedName": "component",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO9componentyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO9componentyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "error",
-            "printedName": "error",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO5erroryA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO5erroryA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "instructionPointer",
-            "printedName": "instructionPointer",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO18instructionPointeryA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO18instructionPointeryA2CmF",
-            "moduleName": "SplunkCrashReports",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "imageName",
-            "printedName": "imageName",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO9imageNameyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO9imageNameyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "symbolName",
-            "printedName": "symbolName",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO10symbolNameyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO10symbolNameyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "threadNumber",
-            "printedName": "threadNumber",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO12threadNumberyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO12threadNumberyA2CmF",
-            "moduleName": "SplunkCrashReports",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "stackFrames",
-            "printedName": "stackFrames",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO11stackFramesyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO11stackFramesyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "isCrashedThread",
-            "printedName": "isCrashedThread",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO15isCrashedThreadyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO15isCrashedThreadyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "baseAddress",
-            "printedName": "baseAddress",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO11baseAddressyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO11baseAddressyA2CmF",
-            "moduleName": "SplunkCrashReports",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "offset",
-            "printedName": "offset",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO6offsetyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO6offsetyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "imageSize",
-            "printedName": "imageSize",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO9imageSizeyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO9imageSizeyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "imagePath",
-            "printedName": "imagePath",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO9imagePathyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO9imagePathyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "imageUUID",
-            "printedName": "imageUUID",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO9imageUUIDyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO9imageUUIDyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Var",
-            "name": "sessionId",
-            "printedName": "sessionId",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SplunkCrashReports.CrashReportKeys.Type) -> SplunkCrashReports.CrashReportKeys",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SplunkCrashReports.CrashReportKeys.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CrashReportKeys",
-                        "printedName": "SplunkCrashReports.CrashReportKeys",
-                        "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO9sessionIdyA2CmF",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO9sessionIdyA2CmF",
-            "moduleName": "SplunkCrashReports"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rawValue:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "SplunkCrashReports.CrashReportKeys?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CrashReportKeys",
-                    "printedName": "SplunkCrashReports.CrashReportKeys",
-                    "usr": "s:18SplunkCrashReports0B10ReportKeysO"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO8rawValueACSgSS_tcfc",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO8rawValueACSgSS_tcfc",
-            "moduleName": "SplunkCrashReports",
-            "implicit": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "rawValue",
-            "printedName": "rawValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:18SplunkCrashReports0B10ReportKeysO8rawValueSSvp",
-            "mangledName": "$s18SplunkCrashReports0B10ReportKeysO8rawValueSSvp",
-            "moduleName": "SplunkCrashReports",
-            "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:18SplunkCrashReports0B10ReportKeysO8rawValueSSvg",
-                "mangledName": "$s18SplunkCrashReports0B10ReportKeysO8rawValueSSvg",
-                "moduleName": "SplunkCrashReports",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:18SplunkCrashReports0B10ReportKeysO",
-        "mangledName": "$s18SplunkCrashReports0B10ReportKeysO",
-        "moduleName": "SplunkCrashReports",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "enumRawTypeName": "String",
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
-          }
         ]
       },
       {
@@ -3145,175 +1859,196 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports+JSON.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports+JSON.swift",
       "kind": "IntegerLiteral",
       "offset": 700,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
       "kind": "Array",
       "offset": 1016,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
       "kind": "StringLiteral",
       "offset": 1103,
       "length": 14,
       "value": "\"CrashReports\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
-      "kind": "StringLiteral",
-      "offset": 1364,
-      "length": 19,
-      "value": "\"SplunkCrashReport\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
       "kind": "Dictionary",
-      "offset": 1495,
+      "offset": 1512,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
       "kind": "StringLiteral",
-      "offset": 1664,
+      "offset": 1681,
       "length": 36,
       "value": "\"com.splunk.crashreports.devicedata\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
       "kind": "StringLiteral",
-      "offset": 688,
-      "length": 15,
-      "value": "\"ios.app.state\""
+      "offset": 841,
+      "length": 19,
+      "value": "\"SplunkCrashReport\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
       "kind": "StringLiteral",
-      "offset": 731,
-      "length": 17,
-      "value": "\"crash.timestamp\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 777,
-      "length": 25,
-      "value": "\"crash.observedTimestamp\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 828,
+      "offset": 956,
       "length": 21,
-      "value": "\"crash.freeDiskSpace\""
+      "value": "\"splunk-crash-report\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
       "kind": "StringLiteral",
-      "offset": 874,
-      "length": 20,
-      "value": "\"crash.batteryLevel\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 917,
-      "length": 18,
-      "value": "\"crash.freeMemory\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 958,
-      "length": 13,
-      "value": "\"screen.name\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 991,
-      "length": 20,
-      "value": "\"crash.app.build_id\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 1036,
-      "length": 19,
-      "value": "\"crash.processPath\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 1076,
-      "length": 16,
-      "value": "\"crash.isNative\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 1138,
-      "length": 15,
-      "value": "\"crash.address\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 1180,
-      "length": 16,
-      "value": "\"exception.type\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 1224,
-      "length": 19,
-      "value": "\"exception.message\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 1264,
-      "length": 19,
-      "value": "\"exception.threads\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 1302,
-      "length": 18,
-      "value": "\"exception.images\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 1544,
-      "length": 9,
-      "value": "\"crashed\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 1691,
-      "length": 12,
-      "value": "\"session.id\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Module\/CrashReports+Module.swift",
-      "kind": "StringLiteral",
-      "offset": 1004,
+      "offset": 1077,
       "length": 18,
       "value": "\"device.app.crash\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Module\/CrashReportsConfiguration.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1212,
+      "length": 7,
+      "value": "\"crash\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1338,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 873,
+      "length": 15,
+      "value": "\"ios.app.state\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 916,
+      "length": 17,
+      "value": "\"crash.timestamp\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 962,
+      "length": 25,
+      "value": "\"crash.observedTimestamp\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1013,
+      "length": 21,
+      "value": "\"crash.freeDiskSpace\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1059,
+      "length": 20,
+      "value": "\"crash.batteryLevel\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1102,
+      "length": 18,
+      "value": "\"crash.freeMemory\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1143,
+      "length": 13,
+      "value": "\"screen.name\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1176,
+      "length": 20,
+      "value": "\"crash.app.build_id\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1221,
+      "length": 19,
+      "value": "\"crash.processPath\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1261,
+      "length": 16,
+      "value": "\"crash.isNative\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1323,
+      "length": 15,
+      "value": "\"crash.address\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1365,
+      "length": 16,
+      "value": "\"exception.type\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1409,
+      "length": 19,
+      "value": "\"exception.message\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1449,
+      "length": 19,
+      "value": "\"exception.threads\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1487,
+      "length": 18,
+      "value": "\"exception.images\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1729,
+      "length": 9,
+      "value": "\"crashed\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1876,
+      "length": 12,
+      "value": "\"session.id\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Module\/CrashReportsConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 908,
       "length": 4,

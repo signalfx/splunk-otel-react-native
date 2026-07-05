@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		PCg5DcDno2Ujpm3ux5mZ1BX1JL4=
+		xbmKPn6IJN+eJ9vKz3kvBgY+wfQ=
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		UVQrf5y9rOFhvAR7tVYB58oJQz0=
+		PzEOYYtjHu/pHtbeWPoUaTJ2l4k=
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		fHO9Dmk3wTx5016cYMG7YbKw/pQ=
+		537N3jJTkrxo0A1gREUGZ9rj+p4=
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		UVQrf5y9rOFhvAR7tVYB58oJQz0=
+		PzEOYYtjHu/pHtbeWPoUaTJ2l4k=
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		KVUnvA0FOHrT7DQraDD34Y06seE=
+		MKcUMNd6ynx0/Z7+wBwzlPAmkqE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yorJmF1Z4aoGjXvTFRznAWR4qa5mda5KAJxUlMUpoLk=
+			ngI3/oY1XG5Kp9NyM59ZunoWE2HYmkUM0xH4c2C8Cws=
 			</data>
 		</dict>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -98,14 +98,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			59KGrUyELGRc5lWRh4vp1o5gXcLiDq343A9/7jIMOkE=
+			O5dQwD29Q/lCsiv/m16ho3Tb+qIrJJNCV7ia4PWcMp8=
 			</data>
 		</dict>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yorJmF1Z4aoGjXvTFRznAWR4qa5mda5KAJxUlMUpoLk=
+			ngI3/oY1XG5Kp9NyM59ZunoWE2HYmkUM0xH4c2C8Cws=
 			</data>
 		</dict>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -133,7 +133,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			x+kTbux+dV4h8juw1TeqswNW21BGrd3RpKZv1rRihuI=
+			yXLXN9kpINPpVYCaN5A4svW57st8BCmYg3eMiQZdci4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

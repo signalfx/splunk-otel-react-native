@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/jc69/Library/Developer/Xcode/DerivedData/OpenTelemetryXCFrameworks-dnuhehiwzocslndaiftevzodizto/Build/Intermediates.noindex/ArchiveIntermediates/OpenTelemetrySdk/InstallationBuildProductsLocation/Library/Frameworks/OpenTelemetrySdk.framework/OpenTelemetrySdk'
+binary-path:     '/Users/budim/Library/Developer/Xcode/DerivedData/OpenTelemetryXCFrameworks-frzydsnwxjuggzbkquokqbbhzykj/Build/Intermediates.noindex/ArchiveIntermediates/OpenTelemetrySdk/InstallationBuildProductsLocation/Library/Frameworks/OpenTelemetrySdk.framework/OpenTelemetrySdk'
 relocations:
   - { offset: 0x29D1E, size: 0x8, addend: 0x0, symName: _OpenTelemetrySdkVersionString, symObjAddr: 0x0, symBinAddr: 0x71B00, symSize: 0x0 }
   - { offset: 0x29D55, size: 0x8, addend: 0x0, symName: _OpenTelemetrySdkVersionNumber, symObjAddr: 0x48, symBinAddr: 0x71B48, symSize: 0x0 }
@@ -1672,7 +1672,7 @@ relocations:
   - { offset: 0x6DB72, size: 0x8, addend: 0x0, symName: '_$s16OpenTelemetrySdk020ObservableInstrumentC0VMa', symObjAddr: 0x1D0, symBinAddr: 0x3E7B8, symSize: 0x10 }
   - { offset: 0x6DB92, size: 0x8, addend: 0x0, symName: '_$s16OpenTelemetrySdk020ObservableInstrumentC0V5closeyyF', symObjAddr: 0x0, symBinAddr: 0x3E618, symSize: 0x24 }
   - { offset: 0x6DC50, size: 0x8, addend: 0x0, symName: '_$s16OpenTelemetrySdk16RegisteredReaderC2ids5Int32Vvg', symObjAddr: 0x0, symBinAddr: 0x3E7D0, symSize: 0x8 }
-  - { offset: 0x6DC74, size: 0x8, addend: 0x0, symName: '_$s16OpenTelemetrySdk16RegisteredReaderC10id_counters5Int32VvpZ', symObjAddr: 0x39D0, symBinAddr: 0xBB5E8, symSize: 0x0 }
+  - { offset: 0x6DC74, size: 0x8, addend: 0x0, symName: '_$s16OpenTelemetrySdk16RegisteredReaderC10id_counters5Int32VvpZ', symObjAddr: 0x39F0, symBinAddr: 0xBB5E8, symSize: 0x0 }
   - { offset: 0x6DE01, size: 0x8, addend: 0x0, symName: '_$s16OpenTelemetrySdk16RegisteredReaderCSHAASQWb', symObjAddr: 0x298, symBinAddr: 0x3E994, symSize: 0x4 }
   - { offset: 0x6DE15, size: 0x8, addend: 0x0, symName: '_$s16OpenTelemetrySdk16RegisteredReaderCACSQAAWl', symObjAddr: 0x29C, symBinAddr: 0x3E998, symSize: 0x40 }
   - { offset: 0x6DE29, size: 0x8, addend: 0x0, symName: '_$s16OpenTelemetrySdk16RegisteredReaderCMa', symObjAddr: 0x2DC, symBinAddr: 0x3E9D8, symSize: 0x20 }

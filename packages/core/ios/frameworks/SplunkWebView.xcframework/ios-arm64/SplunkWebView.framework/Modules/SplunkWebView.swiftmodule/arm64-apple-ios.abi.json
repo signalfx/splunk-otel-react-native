@@ -1099,7 +1099,10 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "SplunkWebView"
+        "moduleName": "SplunkWebView",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -1124,7 +1127,6 @@
             "moduleName": "SplunkWebView",
             "static": true,
             "declAttributes": [
-              "Final",
               "AccessControl",
               "ObjC"
             ],
@@ -1147,7 +1149,6 @@
                 "moduleName": "SplunkWebView",
                 "static": true,
                 "declAttributes": [
-                  "Final",
                   "ObjC"
                 ],
                 "accessorKind": "get"
@@ -1186,7 +1187,6 @@
         "mangledName": "$s13SplunkWebView0abC9ResourcesC",
         "moduleName": "SplunkWebView",
         "declAttributes": [
-          "Final",
           "AccessControl",
           "ObjC",
           "RawDocComment"
@@ -1267,42 +1267,42 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkWebView\/Sources\/SplunkWebView\/Module\/WebViewRemoteConfiguration.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkWebView\/Sources\/SplunkWebView\/Module\/WebViewRemoteConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 909,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkWebView\/Sources\/SplunkWebView\/WebViewBridgeScript.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkWebView\/Sources\/SplunkWebView\/WebViewBridgeScript.swift",
       "kind": "StringLiteral",
       "offset": 809,
       "length": 21,
       "value": "\"WebViewBridgeScript\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkWebView\/Sources\/SplunkWebView\/WebViewBridgeScript.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkWebView\/Sources\/SplunkWebView\/WebViewBridgeScript.swift",
       "kind": "StringLiteral",
       "offset": 847,
       "length": 4,
       "value": "\"js\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkWebView\/Sources\/SplunkWebView\/WebViewBridgeScript.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkWebView\/Sources\/SplunkWebView\/WebViewBridgeScript.swift",
       "kind": "StringLiteral",
       "offset": 892,
       "length": 45,
       "value": "\"WebViewBridgeScript.js not found in bundle.\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkWebView\/Sources\/SplunkWebView\/WebViewBridgeScript.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkWebView\/Sources\/SplunkWebView\/WebViewBridgeScript.swift",
       "kind": "StringLiteral",
       "offset": 1045,
       "length": 52,
       "value": "\"Could not read WebViewBridgeScript.js from bundle.\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkWebView\/Sources\/SplunkWebView\/WebViewInstrumentation.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkWebView\/Sources\/SplunkWebView\/WebViewInstrumentation.swift",
       "kind": "StringLiteral",
       "offset": 914,
       "length": 23,

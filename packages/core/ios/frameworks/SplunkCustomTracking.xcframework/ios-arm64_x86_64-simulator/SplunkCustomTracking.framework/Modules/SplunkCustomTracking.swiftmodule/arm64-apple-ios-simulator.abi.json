@@ -980,6 +980,55 @@
           },
           {
             "kind": "Function",
+            "name": "trackError",
+            "printedName": "trackError(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SplunkTrackableIssue",
+                "printedName": "any SplunkCustomTracking.SplunkTrackableIssue",
+                "usr": "s:20SplunkCustomTracking0A14TrackableIssueP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : SplunkCommon.EventAttributeValue]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventAttributeValue",
+                    "printedName": "SplunkCommon.EventAttributeValue",
+                    "usr": "s:12SplunkCommon19EventAttributeValueO"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SplunkCustomTracking0bC8InternalC10trackErroryyAA0A14TrackableIssue_p_SDySS0A6Common19EventAttributeValueOGtF",
+            "mangledName": "$s20SplunkCustomTracking0bC8InternalC10trackErroryyAA0A14TrackableIssue_p_SDySS0A6Common19EventAttributeValueOGtF",
+            "moduleName": "SplunkCustomTracking",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "track",
             "printedName": "track(_:)",
             "children": [
@@ -3034,73 +3083,416 @@
             "mangledName": "$ss9EscapableP"
           }
         ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SplunkExplicitIssue",
+        "printedName": "SplunkExplicitIssue",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "message",
+            "printedName": "message",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SplunkCustomTracking0A13ExplicitIssueV7messageSSvp",
+            "mangledName": "$s20SplunkCustomTracking0A13ExplicitIssueV7messageSSvp",
+            "moduleName": "SplunkCustomTracking",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkCustomTracking0A13ExplicitIssueV7messageSSvg",
+                "mangledName": "$s20SplunkCustomTracking0A13ExplicitIssueV7messageSSvg",
+                "moduleName": "SplunkCustomTracking",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "exceptionType",
+            "printedName": "exceptionType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SplunkCustomTracking0A13ExplicitIssueV13exceptionTypeSSvp",
+            "mangledName": "$s20SplunkCustomTracking0A13ExplicitIssueV13exceptionTypeSSvp",
+            "moduleName": "SplunkCustomTracking",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkCustomTracking0A13ExplicitIssueV13exceptionTypeSSvg",
+                "mangledName": "$s20SplunkCustomTracking0A13ExplicitIssueV13exceptionTypeSSvg",
+                "moduleName": "SplunkCustomTracking",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SplunkCustomTracking0A13ExplicitIssueV9timestamp10Foundation4DateVvp",
+            "mangledName": "$s20SplunkCustomTracking0A13ExplicitIssueV9timestamp10Foundation4DateVvp",
+            "moduleName": "SplunkCustomTracking",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkCustomTracking0A13ExplicitIssueV9timestamp10Foundation4DateVvg",
+                "mangledName": "$s20SplunkCustomTracking0A13ExplicitIssueV9timestamp10Foundation4DateVvg",
+                "moduleName": "SplunkCustomTracking",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "stacktrace",
+            "printedName": "stacktrace",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SplunkCustomTracking.Stacktrace?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Stacktrace",
+                    "printedName": "SplunkCustomTracking.Stacktrace",
+                    "usr": "s:20SplunkCustomTracking10StacktraceV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SplunkCustomTracking0A13ExplicitIssueV10stacktraceAA10StacktraceVSgvp",
+            "mangledName": "$s20SplunkCustomTracking0A13ExplicitIssueV10stacktraceAA10StacktraceVSgvp",
+            "moduleName": "SplunkCustomTracking",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SplunkCustomTracking.Stacktrace?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Stacktrace",
+                        "printedName": "SplunkCustomTracking.Stacktrace",
+                        "usr": "s:20SplunkCustomTracking10StacktraceV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkCustomTracking0A13ExplicitIssueV10stacktraceAA10StacktraceVSgvg",
+                "mangledName": "$s20SplunkCustomTracking0A13ExplicitIssueV10stacktraceAA10StacktraceVSgvg",
+                "moduleName": "SplunkCustomTracking",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SplunkCustomTracking.Stacktrace?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Stacktrace",
+                        "printedName": "SplunkCustomTracking.Stacktrace",
+                        "usr": "s:20SplunkCustomTracking10StacktraceV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkCustomTracking0A13ExplicitIssueV10stacktraceAA10StacktraceVSgvs",
+                "mangledName": "$s20SplunkCustomTracking0A13ExplicitIssueV10stacktraceAA10StacktraceVSgvs",
+                "moduleName": "SplunkCustomTracking",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkCustomTracking0A13ExplicitIssueV10stacktraceAA10StacktraceVSgvM",
+                "mangledName": "$s20SplunkCustomTracking0A13ExplicitIssueV10stacktraceAA10StacktraceVSgvM",
+                "moduleName": "SplunkCustomTracking",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(typeName:message:stacktrace:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SplunkExplicitIssue",
+                "printedName": "SplunkCustomTracking.SplunkExplicitIssue",
+                "usr": "s:20SplunkCustomTracking0A13ExplicitIssueV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20SplunkCustomTracking0A13ExplicitIssueV8typeName7message10stacktraceACSS_S2SSgtcfc",
+            "mangledName": "$s20SplunkCustomTracking0A13ExplicitIssueV8typeName7message10stacktraceACSS_S2SSgtcfc",
+            "moduleName": "SplunkCustomTracking",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20SplunkCustomTracking0A13ExplicitIssueV",
+        "mangledName": "$s20SplunkCustomTracking0A13ExplicitIssueV",
+        "moduleName": "SplunkCustomTracking",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SplunkTrackableIssue",
+            "printedName": "SplunkTrackableIssue",
+            "usr": "s:20SplunkCustomTracking0A14TrackableIssueP",
+            "mangledName": "$s20SplunkCustomTracking0A14TrackableIssueP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SplunkTrackable",
+            "printedName": "SplunkTrackable",
+            "usr": "s:20SplunkCustomTracking0A9TrackableP",
+            "mangledName": "$s20SplunkCustomTracking0A9TrackableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       }
     ],
     "json_format_version": 8
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1002,
       "length": 16,
       "value": "\"exception.type\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1042,
       "length": 19,
       "value": "\"exception.message\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1088,
       "length": 22,
       "value": "\"exception.stacktrace\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1131,
       "length": 16,
       "value": "\"exception.code\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1171,
       "length": 19,
       "value": "\"exception.escaped\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1309,
       "length": 16,
       "value": "\"code.namespace\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1435,
       "length": 14,
       "value": "\"service.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Module\/CustomTrackingRemoteConfiguration.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Module\/CustomTrackingRemoteConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 1120,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Protocols\/SplunkTrackableEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Protocols\/SplunkTrackableEvent.swift",
       "kind": "Dictionary",
       "offset": 998,
       "length": 3,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Protocols\/SplunkTrackableIssue.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4559,
+      "length": 4,
+      "value": "4096"
     }
   ]
 }

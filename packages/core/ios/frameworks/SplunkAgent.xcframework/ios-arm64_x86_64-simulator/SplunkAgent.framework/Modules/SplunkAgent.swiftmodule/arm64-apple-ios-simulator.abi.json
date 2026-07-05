@@ -918,7 +918,8 @@
         "declKind": "Import",
         "moduleName": "SplunkAgent",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "SPIAccessControl"
         ]
       },
       {
@@ -1016,6 +1017,16 @@
         "moduleName": "SplunkAgent",
         "declAttributes": [
           "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
           "RawDocComment"
         ]
       },
@@ -9694,6 +9705,129 @@
           },
           {
             "kind": "Function",
+            "name": "trackError",
+            "printedName": "trackError(typeName:message:stacktrace:attributes:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CustomTrackingModule",
+                "printedName": "any SplunkAgent.CustomTrackingModule",
+                "usr": "s:11SplunkAgent20CustomTrackingModuleP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SplunkAgent20CustomTrackingModuleP10trackError8typeName7message10stacktrace10attributesAaB_pSS_S2SSgSDySSypGtF",
+            "mangledName": "$s11SplunkAgent20CustomTrackingModuleP10trackError8typeName7message10stacktrace10attributesAaB_pSS_S2SSgSDySSypGtF",
+            "moduleName": "SplunkAgent",
+            "genericSig": "<τ_0_0 where τ_0_0 : SplunkAgent.CustomTrackingModule>",
+            "sugared_genericSig": "<Self where Self : SplunkAgent.CustomTrackingModule>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trackError",
+            "printedName": "trackError(typeName:message:stacktrace:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CustomTrackingModule",
+                "printedName": "any SplunkAgent.CustomTrackingModule",
+                "usr": "s:11SplunkAgent20CustomTrackingModuleP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SplunkAgent20CustomTrackingModuleP10trackError8typeName7message10stacktraceAaB_pSS_S2SSgtF",
+            "mangledName": "$s11SplunkAgent20CustomTrackingModuleP10trackError8typeName7message10stacktraceAaB_pSS_S2SSgtF",
+            "moduleName": "SplunkAgent",
+            "genericSig": "<τ_0_0 where τ_0_0 : SplunkAgent.CustomTrackingModule>",
+            "sugared_genericSig": "<Self where Self : SplunkAgent.CustomTrackingModule>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "trackWorkflow",
             "printedName": "trackWorkflow(_:)",
             "children": [
@@ -9902,6 +10036,44 @@
         "moduleName": "SplunkAgent",
         "declAttributes": [
           "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "AccessControl",
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -10243,91 +10415,6 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "NavigationState",
-        "printedName": "NavigationState",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "isAutomatedTrackingEnabled",
-            "printedName": "isAutomatedTrackingEnabled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11SplunkAgent15NavigationStateC26isAutomatedTrackingEnabledSbvp",
-            "mangledName": "$s11SplunkAgent15NavigationStateC26isAutomatedTrackingEnabledSbvp",
-            "moduleName": "SplunkAgent",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11SplunkAgent15NavigationStateC26isAutomatedTrackingEnabledSbvg",
-                "mangledName": "$s11SplunkAgent15NavigationStateC26isAutomatedTrackingEnabledSbvg",
-                "moduleName": "SplunkAgent",
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:11SplunkAgent15NavigationStateC",
-        "mangledName": "$s11SplunkAgent15NavigationStateC",
-        "moduleName": "SplunkAgent",
-        "declAttributes": [
-          "Final",
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "NavigationModuleState",
-            "printedName": "NavigationModuleState",
-            "usr": "s:11SplunkAgent21NavigationModuleStateP",
-            "mangledName": "$s11SplunkAgent21NavigationModuleStateP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
         "kind": "Import",
         "name": "CiscoLogger",
         "printedName": "CiscoLogger",
@@ -10360,88 +10447,13 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "NavigationNonOperationalState",
-        "printedName": "NavigationNonOperationalState",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "isAutomatedTrackingEnabled",
-            "printedName": "isAutomatedTrackingEnabled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11SplunkAgent29NavigationNonOperationalStateC26isAutomatedTrackingEnabledSbvp",
-            "mangledName": "$s11SplunkAgent29NavigationNonOperationalStateC26isAutomatedTrackingEnabledSbvp",
-            "moduleName": "SplunkAgent",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11SplunkAgent29NavigationNonOperationalStateC26isAutomatedTrackingEnabledSbvg",
-                "mangledName": "$s11SplunkAgent29NavigationNonOperationalStateC26isAutomatedTrackingEnabledSbvg",
-                "moduleName": "SplunkAgent",
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:11SplunkAgent29NavigationNonOperationalStateC",
-        "mangledName": "$s11SplunkAgent29NavigationNonOperationalStateC",
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
         "moduleName": "SplunkAgent",
         "declAttributes": [
-          "Final",
-          "AccessControl",
           "RawDocComment"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "NavigationModuleState",
-            "printedName": "NavigationModuleState",
-            "usr": "s:11SplunkAgent21NavigationModuleStateP",
-            "mangledName": "$s11SplunkAgent21NavigationModuleStateP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
         ]
       },
       {
@@ -10651,6 +10663,65 @@
             "declKind": "Func",
             "usr": "s:11SplunkAgent16NavigationModuleP5track6screenAaB_pSS_tF",
             "mangledName": "$s11SplunkAgent16NavigationModuleP5track6screenAaB_pSS_tF",
+            "moduleName": "SplunkAgent",
+            "genericSig": "<τ_0_0 where τ_0_0 : SplunkAgent.NavigationModule>",
+            "sugared_genericSig": "<Self where Self : SplunkAgent.NavigationModule>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "track",
+            "printedName": "track(screen:attributes:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationModule",
+                "printedName": "any SplunkAgent.NavigationModule",
+                "usr": "s:11SplunkAgent16NavigationModuleP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SplunkAgent16NavigationModuleP5track6screen10attributesAaB_pSS_SDySSypGSgtF",
+            "mangledName": "$s11SplunkAgent16NavigationModuleP5track6screen10attributesAaB_pSS_SDySSypGSgtF",
             "moduleName": "SplunkAgent",
             "genericSig": "<τ_0_0 where τ_0_0 : SplunkAgent.NavigationModule>",
             "sugared_genericSig": "<Self where Self : SplunkAgent.NavigationModule>",
@@ -16753,7 +16824,10 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "SplunkAgent"
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -16778,7 +16852,6 @@
             "moduleName": "SplunkAgent",
             "static": true,
             "declAttributes": [
-              "Final",
               "AccessControl",
               "ObjC"
             ],
@@ -16801,7 +16874,6 @@
                 "moduleName": "SplunkAgent",
                 "static": true,
                 "declAttributes": [
-                  "Final",
                   "ObjC"
                 ],
                 "accessorKind": "get"
@@ -16840,7 +16912,6 @@
         "mangledName": "$s11SplunkAgent0aB9ResourcesC",
         "moduleName": "SplunkAgent",
         "declAttributes": [
-          "Final",
           "AccessControl",
           "ObjC",
           "RawDocComment"
@@ -16913,6 +16984,202 @@
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "View",
+        "printedName": "View",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "trackScreen",
+            "printedName": "trackScreen(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftUI4ViewP11SplunkAgentE11trackScreenyQrSSF",
+            "mangledName": "$s7SwiftUI4ViewP11SplunkAgentE11trackScreenyQrSSF",
+            "moduleName": "SplunkAgent",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<Self where Self : SwiftUI.View>",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trackScreen",
+            "printedName": "trackScreen(_:attributes:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftUI4ViewP11SplunkAgentE11trackScreen_10attributesQrSS_SDySSypGSgtF",
+            "mangledName": "$s7SwiftUI4ViewP11SplunkAgentE11trackScreen_10attributesQrSS_SDySSypGSgtF",
+            "moduleName": "SplunkAgent",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<Self where Self : SwiftUI.View>",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sessionReplaySensitive",
+            "printedName": "sessionReplaySensitive(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftUI4ViewP11SplunkAgentE22sessionReplaySensitiveyQrSbF",
+            "mangledName": "$s7SwiftUI4ViewP11SplunkAgentE22sessionReplaySensitiveyQrSbF",
+            "moduleName": "SplunkAgent",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<Self where Self : SwiftUI.View>",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:7SwiftUI4ViewP",
+        "mangledName": "$s7SwiftUI4ViewP",
+        "moduleName": "SwiftUICore",
+        "genericSig": "<τ_0_0.Body : SwiftUI.View>",
+        "sugared_genericSig": "<Self.Body : SwiftUI.View>",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "Preconcurrency",
+          "TypeEraser",
+          "TypeEraser",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "Custom"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           }
         ]
       },
@@ -17254,802 +17521,734 @@
             "mangledName": "$s5UIKit23UITraitChangeObservableP"
           }
         ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "View",
-        "printedName": "View",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "sessionReplaySensitive",
-            "printedName": "sessionReplaySensitive(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "OpaqueTypeArchetype",
-                "printedName": "some SwiftUI.View",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "View",
-                    "printedName": "SwiftUI.View",
-                    "usr": "s:7SwiftUI4ViewP"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:7SwiftUI4ViewP11SplunkAgentE22sessionReplaySensitiveyQrSbF",
-            "mangledName": "$s7SwiftUI4ViewP11SplunkAgentE22sessionReplaySensitiveyQrSbF",
-            "moduleName": "SplunkAgent",
-            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
-            "sugared_genericSig": "<Self where Self : SwiftUI.View>",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:7SwiftUI4ViewP",
-        "mangledName": "$s7SwiftUI4ViewP",
-        "moduleName": "SwiftUICore",
-        "genericSig": "<τ_0_0.Body : SwiftUI.View>",
-        "sugared_genericSig": "<Self.Body : SwiftUI.View>",
-        "intro_Macosx": "10.15",
-        "intro_iOS": "13.0",
-        "intro_tvOS": "13.0",
-        "intro_watchOS": "6.0",
-        "declAttributes": [
-          "Preconcurrency",
-          "TypeEraser",
-          "TypeEraser",
-          "OriginallyDefinedIn",
-          "OriginallyDefinedIn",
-          "OriginallyDefinedIn",
-          "OriginallyDefinedIn",
-          "Available",
-          "Available",
-          "Available",
-          "Available",
-          "Custom"
-        ],
-        "isExternal": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
-        ]
       }
     ],
     "json_format_version": 8
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
       "kind": "StringLiteral",
       "offset": 730,
       "length": 16,
       "value": "\"appStateEvents\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
       "kind": "IntegerLiteral",
       "offset": 834,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
       "kind": "IntegerLiteral",
       "offset": 989,
       "length": 9,
       "value": "2592000"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
       "kind": "StringLiteral",
       "offset": 1169,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
       "kind": "StringLiteral",
       "offset": 4888,
       "length": 6,
       "value": "\"true\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
       "kind": "StringLiteral",
       "offset": 4925,
       "length": 7,
       "value": "\"false\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
       "kind": "IntegerLiteral",
-      "offset": 5626,
+      "offset": 5613,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
       "kind": "IntegerLiteral",
-      "offset": 5972,
+      "offset": 5959,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
       "kind": "IntegerLiteral",
-      "offset": 6395,
+      "offset": 6382,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "BooleanLiteral",
       "offset": 826,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 870,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 962,
       "length": 4,
       "value": "15.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 969,
       "length": 4,
       "value": "60.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 1009,
       "length": 3,
       "value": "4.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 1015,
       "length": 4,
       "value": "60.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 1022,
       "length": 4,
       "value": "60.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "BooleanLiteral",
       "offset": 1062,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/ConfigurationHandler+Storage.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/ConfigurationHandler+Storage.swift",
       "kind": "StringLiteral",
       "offset": 654,
       "length": 23,
       "value": "\"AgentConfigurationKey\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/ConfigurationHandler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/ConfigurationHandler.swift",
       "kind": "Array",
       "offset": 982,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/ConfigurationHandler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/ConfigurationHandler.swift",
       "kind": "StringLiteral",
       "offset": 1069,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/Endpoints\/RemoteConfigurationEndpoint.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/Endpoints\/RemoteConfigurationEndpoint.swift",
       "kind": "StringLiteral",
       "offset": 1173,
       "length": 8,
       "value": "\"config\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/SplunkConfigurationHandler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/SplunkConfigurationHandler.swift",
       "kind": "StringLiteral",
       "offset": 1066,
       "length": 833,
       "value": "\"{\n    \"configuration\": {\n        \"mrum\": {\n            \"enabled\": true,\n            \"maxSessionLength\": \""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/SplunkConfigurationHandler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/SplunkConfigurationHandler.swift",
       "kind": "StringLiteral",
       "offset": 1255,
       "length": 1,
       "value": "\",\n            \"sessionTimeout\": \""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/SplunkConfigurationHandler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/SplunkConfigurationHandler.swift",
       "kind": "StringLiteral",
       "offset": 1334,
       "length": 1,
       "value": "\",\n            \"sessionReplay\": {\n                \"enabled\": true\n            },\n            \"crashReporting\": {\n                \"enabled\": true\n            },\n            \"networkTracing\": {\n                \"enabled\": true\n            },\n            \"slowFrameDetector\": {\n                \"enabled\": true\n            },\n            \"appStart\": {\n                \"enabled\": true\n            }\n        }\n    }\n}\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Event Manager\/DefaultEventManager.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Event Manager\/DefaultEventManager.swift",
       "kind": "IntegerLiteral",
       "offset": 1514,
       "length": 3,
       "value": "300"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CrashReportsDataEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CrashReportsDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 894,
       "length": 6,
       "value": "\"mrum\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CrashReportsDataEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CrashReportsDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 994,
       "length": 14,
       "value": "\"crashreports\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CrashReportsDataEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CrashReportsDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 1034,
       "length": 7,
       "value": "\"crash\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CustomTrackingDataEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CustomTrackingDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 1158,
       "length": 25,
       "value": "\"CustomTrackingDataEvent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 823,
       "length": 6,
       "value": "\"mrum\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 845,
       "length": 21,
       "value": "\"session_replay_data\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 931,
       "length": 15,
       "value": "\"sessionreplay\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 968,
       "length": 16,
       "value": "\"session.replay\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
       "kind": "StringLiteral",
       "offset": 876,
       "length": 6,
       "value": "\"mrum\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
       "kind": "StringLiteral",
       "offset": 898,
       "length": 34,
       "value": "\"splunk.sessionReplay.isRecording\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
       "kind": "StringLiteral",
       "offset": 997,
       "length": 7,
       "value": "\"agent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
       "kind": "StringLiteral",
       "offset": 1026,
       "length": 16,
       "value": "\"session.replay\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
       "kind": "StringLiteral",
       "offset": 909,
       "length": 6,
       "value": "\"mrum\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
       "kind": "StringLiteral",
       "offset": 931,
       "length": 15,
       "value": "\"session.start\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
       "kind": "StringLiteral",
       "offset": 1011,
       "length": 7,
       "value": "\"agent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
       "kind": "StringLiteral",
       "offset": 1040,
       "length": 7,
       "value": "\"agent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Indexers\/SessionReplayEventIndexer.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Indexers\/SessionReplayEventIndexer.swift",
       "kind": "IntegerLiteral",
       "offset": 821,
       "length": 5,
       "value": "1000"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Indexers\/SessionReplayEventIndexer.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Indexers\/SessionReplayEventIndexer.swift",
       "kind": "IntegerLiteral",
       "offset": 968,
       "length": 9,
       "value": "2678400"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Memorizers\/SessionReplayEventMemorizer.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Memorizers\/SessionReplayEventMemorizer.swift",
       "kind": "IntegerLiteral",
       "offset": 781,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Memorizers\/SessionReplayEventMemorizer.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Memorizers\/SessionReplayEventMemorizer.swift",
       "kind": "IntegerLiteral",
       "offset": 926,
       "length": 9,
       "value": "2678400"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
       "kind": "Dictionary",
       "offset": 915,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
       "kind": "Dictionary",
       "offset": 980,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
       "kind": "StringLiteral",
       "offset": 1075,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
       "kind": "Array",
       "offset": 1154,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/SplunkRum+Modules.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/SplunkRum+Modules.swift",
       "kind": "Array",
-      "offset": 6169,
+      "offset": 6191,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Runtime Attributes\/CurrentScreenName.swift",
+      "kind": "StringLiteral",
+      "offset": 937,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
       "kind": "IntegerLiteral",
       "offset": 773,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
       "kind": "IntegerLiteral",
       "offset": 805,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
       "kind": "IntegerLiteral",
       "offset": 838,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOnAgentSampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOnAgentSampler.swift",
       "kind": "FloatLiteral",
       "offset": 776,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOnAgentSampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOnAgentSampler.swift",
       "kind": "FloatLiteral",
       "offset": 810,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOnAgentSampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOnAgentSampler.swift",
       "kind": "FloatLiteral",
       "offset": 844,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Replay Sampling\/SessionReplaySampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Replay Sampling\/SessionReplaySampler.swift",
       "kind": "FloatLiteral",
       "offset": 1088,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Replay Sampling\/SessionReplaySampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Replay Sampling\/SessionReplaySampler.swift",
       "kind": "FloatLiteral",
       "offset": 1190,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Sampling\/DefaultAgentSessionSampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Sampling\/DefaultAgentSessionSampler.swift",
       "kind": "FloatLiteral",
       "offset": 1026,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Sampling\/DefaultAgentSessionSampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Sampling\/DefaultAgentSessionSampler.swift",
       "kind": "FloatLiteral",
       "offset": 1128,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Sampling\/DefaultAgentSessionSampler.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Sampling\/DefaultAgentSessionSampler.swift",
       "kind": "FloatLiteral",
       "offset": 1300,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/DefaultSession.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/DefaultSession.swift",
       "kind": "StringLiteral",
       "offset": 1165,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/DefaultSession.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/DefaultSession.swift",
       "kind": "IntegerLiteral",
       "offset": 1555,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
       "kind": "IntegerLiteral",
       "offset": 762,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
       "kind": "IntegerLiteral",
       "offset": 909,
       "length": 9,
       "value": "2678400"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
       "kind": "Array",
       "offset": 1125,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
       "kind": "StringLiteral",
       "offset": 1411,
       "length": 10,
       "value": "\"sessions\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/NoOpSession.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/NoOpSession.swift",
       "kind": "StringLiteral",
       "offset": 735,
       "length": 7,
       "value": "\"no-op\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/User\/NoOpUser.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/User\/NoOpUser.swift",
       "kind": "StringLiteral",
       "offset": 706,
       "length": 6,
       "value": "\"noop\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Extensions\/String+HexID.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Extensions\/String+HexID.swift",
       "kind": "IntegerLiteral",
       "offset": 879,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Extensions\/String+NanoID.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Extensions\/String+NanoID.swift",
       "kind": "IntegerLiteral",
       "offset": 657,
       "length": 2,
       "value": "21"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/API-1.0-AgentConfiguration.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/API-1.0-AgentConfiguration.swift",
       "kind": "StringLiteral",
       "offset": 3277,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1209,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1572,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1623,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1683,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1735,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
       "kind": "StringLiteral",
       "offset": 1906,
       "length": 18,
       "value": "\"SplunkRumBuilder\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplay.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Custom Tracking\/Proxies\/Module\/CustomTracking+Tracking.swift",
+      "kind": "Dictionary",
+      "offset": 2116,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Custom Tracking\/Proxies\/Non-Operational\/CustomTrackingNonOperational+Tracking.swift",
+      "kind": "Dictionary",
+      "offset": 2011,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplay.swift",
       "kind": "IntegerLiteral",
       "offset": 1078,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplay.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplay.swift",
       "kind": "FloatLiteral",
       "offset": 1191,
       "length": 3,
       "value": "0.2"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplayState.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplayState.swift",
       "kind": "FloatLiteral",
       "offset": 1103,
       "length": 3,
       "value": "0.2"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Non-Operational\/SessionReplayNonOperational.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Non-Operational\/SessionReplayNonOperational.swift",
       "kind": "FloatLiteral",
       "offset": 1335,
       "length": 3,
       "value": "0.2"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Non-Operational\/SessionReplayNonOperationalState.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Non-Operational\/SessionReplayNonOperationalState.swift",
       "kind": "FloatLiteral",
       "offset": 1065,
       "length": 3,
       "value": "0.2"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Public API\/API-1.0-Sensitivity+SwiftUI.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Public API\/API-1.0-Sensitivity+SwiftUI.swift",
       "kind": "BooleanLiteral",
       "offset": 1149,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RecordingMask.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RecordingMask.swift",
       "kind": "IntegerLiteral",
       "offset": 1113,
       "length": 7,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RecordingMask.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RecordingMask.swift",
       "kind": "Array",
       "offset": 2594,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/SplunkRum.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/SplunkRum.swift",
       "kind": "BooleanLiteral",
       "offset": 1672,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/SplunkRum.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/SplunkRum.swift",
       "kind": "StringLiteral",
-      "offset": 12273,
+      "offset": 12158,
       "length": 7,
-      "value": "\"2.2.3\""
+      "value": "\"2.3.0\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
       "kind": "StringLiteral",
       "offset": 833,
       "length": 5,
       "value": "\"GET\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
       "kind": "StringLiteral",
       "offset": 859,
       "length": 6,
       "value": "\"POST\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
       "kind": "StringLiteral",
       "offset": 888,
       "length": 8,
       "value": "\"DELETE\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
       "kind": "StringLiteral",
       "offset": 916,
       "length": 5,
       "value": "\"PUT\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
       "kind": "StringLiteral",
       "offset": 943,
       "length": 7,
       "value": "\"PATCH\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Info\/AppInfo.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Info\/AppInfo.swift",
       "kind": "StringLiteral",
       "offset": 744,
       "length": 14,
       "value": "\"CFBundleName\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Info\/AppInfo.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Info\/AppInfo.swift",
       "kind": "StringLiteral",
       "offset": 879,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Info\/AppInfo.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Info\/AppInfo.swift",
       "kind": "StringLiteral",
       "offset": 973,
       "length": 17,
       "value": "\"CFBundleVersion\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/KeyValue Storage\/UserDefaultsStorage.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/KeyValue Storage\/UserDefaultsStorage.swift",
       "kind": "StringLiteral",
       "offset": 967,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/KeyValue Storage\/UserDefaultsStorage.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/KeyValue Storage\/UserDefaultsStorage.swift",
       "kind": "StringLiteral",
       "offset": 1190,
       "length": 31,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/KeyValue Storage\/UserDefaultsStorage.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/KeyValue Storage\/UserDefaultsStorage.swift",
       "kind": "StringLiteral",
       "offset": 1219,
       "length": 1,
       "value": "\".\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Repeating jobs\/LifecycleRepeatingJob.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Repeating jobs\/LifecycleRepeatingJob.swift",
       "kind": "BooleanLiteral",
       "offset": 1247,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Repeating jobs\/RepeatingJob.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Repeating jobs\/RepeatingJob.swift",
       "kind": "FloatLiteral",
       "offset": 961,
       "length": 3,

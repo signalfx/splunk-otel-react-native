@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/jc69/Library/Developer/Xcode/DerivedData/PLCrashReporterXCFrameworks-ahmekgznrnbueqgrxgwkknjrglcd/Build/Intermediates.noindex/ArchiveIntermediates/CrashReporter/InstallationBuildProductsLocation/Library/Frameworks/CrashReporter.framework/CrashReporter'
+binary-path:     '/Users/budim/Library/Developer/Xcode/DerivedData/PLCrashReporterXCFrameworks-ahxlstcbxxkeuufrwjckpajsfcnd/Build/Intermediates.noindex/ArchiveIntermediates/CrashReporter/InstallationBuildProductsLocation/Library/Frameworks/CrashReporter.framework/CrashReporter'
 relocations:
   - { offset: 0x5B7B2, size: 0x8, addend: 0x0, symName: _CrashReporterVersionString, symObjAddr: 0x0, symBinAddr: 0x1E840, symSize: 0x0 }
   - { offset: 0x5B7E7, size: 0x8, addend: 0x0, symName: _CrashReporterVersionNumber, symObjAddr: 0x48, symBinAddr: 0x1E888, symSize: 0x0 }
@@ -644,22 +644,22 @@ relocations:
   - { offset: 0x9B53D, size: 0x8, addend: 0x0, symName: '-[PLCrashReportThreadInfo registers]', symObjAddr: 0xE4, symBinAddr: 0x18B74, symSize: 0x8 }
   - { offset: 0x9B574, size: 0x8, addend: 0x0, symName: '-[PLCrashReportThreadInfo .cxx_destruct]', symObjAddr: 0xEC, symBinAddr: 0x18B7C, symSize: 0x30 }
   - { offset: 0x9B637, size: 0x8, addend: 0x0, symName: '+[PLCrashReporter initialize]', symObjAddr: 0x0, symBinAddr: 0x18BAC, symSize: 0x74 }
-  - { offset: 0x9B657, size: 0x8, addend: 0x0, symName: _sharedReporter, symObjAddr: 0xF898, symBinAddr: 0x2F568, symSize: 0x0 }
+  - { offset: 0x9B657, size: 0x8, addend: 0x0, symName: _sharedReporter, symObjAddr: 0xF8C0, symBinAddr: 0x2F568, symSize: 0x0 }
   - { offset: 0x9B8B8, size: 0x8, addend: 0x0, symName: '+[PLCrashReporter sharedReporter]', symObjAddr: 0x158, symBinAddr: 0x18D04, symSize: 0x44 }
-  - { offset: 0x9B8E4, size: 0x8, addend: 0x0, symName: _sharedReporter.onceLock, symObjAddr: 0xF8A0, symBinAddr: 0x2F570, symSize: 0x0 }
+  - { offset: 0x9B8E4, size: 0x8, addend: 0x0, symName: _sharedReporter.onceLock, symObjAddr: 0xF8C8, symBinAddr: 0x2F570, symSize: 0x0 }
   - { offset: 0x9B926, size: 0x8, addend: 0x0, symName: '-[PLCrashReporter enableCrashReporterAndReturnError:]', symObjAddr: 0x478, symBinAddr: 0x19024, symSize: 0x390 }
-  - { offset: 0x9B952, size: 0x8, addend: 0x0, symName: '_enableCrashReporterAndReturnError:.enforceOne', symObjAddr: 0xF8A8, symBinAddr: 0x2F578, symSize: 0x0 }
+  - { offset: 0x9B952, size: 0x8, addend: 0x0, symName: '_enableCrashReporterAndReturnError:.enforceOne', symObjAddr: 0xF8D0, symBinAddr: 0x2F578, symSize: 0x0 }
   - { offset: 0x9BAA4, size: 0x8, addend: 0x0, symName: '-[PLCrashReporter generateLiveReportWithThread:exception:error:]', symObjAddr: 0xA44, symBinAddr: 0x195F0, symSize: 0x43C }
   - { offset: 0x9BFBF, size: 0x8, addend: 0x0, symName: '-[PLCrashReporter(PrivateMethods) initWithBundle:configuration:]', symObjAddr: 0x12AC, symBinAddr: 0x19E58, symSize: 0x244 }
-  - { offset: 0x9C200, size: 0x8, addend: 0x0, symName: _shared_image_list, symObjAddr: 0xF888, symBinAddr: 0x2F558, symSize: 0x0 }
-  - { offset: 0x9C243, size: 0x8, addend: 0x0, symName: _signal_handler_context, symObjAddr: 0xF8B0, symBinAddr: 0x2F580, symSize: 0x0 }
+  - { offset: 0x9C200, size: 0x8, addend: 0x0, symName: _shared_image_list, symObjAddr: 0xF8B0, symBinAddr: 0x2F558, symSize: 0x0 }
+  - { offset: 0x9C243, size: 0x8, addend: 0x0, symName: _signal_handler_context, symObjAddr: 0xF8D8, symBinAddr: 0x2F580, symSize: 0x0 }
   - { offset: 0x9C4BE, size: 0x8, addend: 0x0, symName: _image_add_callback, symObjAddr: 0x74, symBinAddr: 0x18C20, symSize: 0xD4 }
   - { offset: 0x9C616, size: 0x8, addend: 0x0, symName: _monitored_signals, symObjAddr: 0x20C0, symBinAddr: 0x1F530, symSize: 0x0 }
   - { offset: 0x9C62C, size: 0x8, addend: 0x0, symName: _uncaught_exception_handler, symObjAddr: 0x9EC, symBinAddr: 0x19598, symSize: 0x44 }
-  - { offset: 0x9C650, size: 0x8, addend: 0x0, symName: _uncaught_exception_handler.exception_is_handled, symObjAddr: 0xFAB8, symBinAddr: 0x2F788, symSize: 0x0 }
+  - { offset: 0x9C650, size: 0x8, addend: 0x0, symName: _uncaught_exception_handler.exception_is_handled, symObjAddr: 0xFAE0, symBinAddr: 0x2F788, symSize: 0x0 }
   - { offset: 0x9C67D, size: 0x8, addend: 0x0, symName: '-[PLCrashReporter generateLiveReportWithThread:]', symObjAddr: 0xA30, symBinAddr: 0x195DC, symSize: 0x8 }
-  - { offset: 0x9C696, size: 0x8, addend: 0x0, symName: _crashCallbacks.1, symObjAddr: 0xFAC0, symBinAddr: 0x2F790, symSize: 0x0 }
-  - { offset: 0x9C6A1, size: 0x8, addend: 0x0, symName: _crashCallbacks.2, symObjAddr: 0xFAC8, symBinAddr: 0x2F798, symSize: 0x0 }
+  - { offset: 0x9C696, size: 0x8, addend: 0x0, symName: _crashCallbacks.1, symObjAddr: 0xFAE8, symBinAddr: 0x2F790, symSize: 0x0 }
+  - { offset: 0x9C6A1, size: 0x8, addend: 0x0, symName: _crashCallbacks.2, symObjAddr: 0xFAF0, symBinAddr: 0x2F798, symSize: 0x0 }
   - { offset: 0x9C7A8, size: 0x8, addend: 0x0, symName: '+[PLCrashReporter initialize]', symObjAddr: 0x0, symBinAddr: 0x18BAC, symSize: 0x74 }
   - { offset: 0x9C8EF, size: 0x8, addend: 0x0, symName: _image_remove_callback, symObjAddr: 0x148, symBinAddr: 0x18CF4, symSize: 0x10 }
   - { offset: 0x9C97C, size: 0x8, addend: 0x0, symName: '+[PLCrashReporter sharedReporter].cold.1', symObjAddr: 0x19E4, symBinAddr: 0x1BA78, symSize: 0x14 }
@@ -720,8 +720,8 @@ relocations:
   - { offset: 0x9E7A7, size: 0x8, addend: 0x0, symName: _plcrash_populate_posix_error, symObjAddr: 0x158, symBinAddr: 0x1A824, symSize: 0x90 }
   - { offset: 0x9E949, size: 0x8, addend: 0x0, symName: __Z22shared_handler_contextv, symObjAddr: 0x0, symBinAddr: 0x1A8B4, symSize: 0x30 }
   - { offset: 0x9E957, size: 0x8, addend: 0x0, symName: __Z22shared_handler_contextv, symObjAddr: 0x0, symBinAddr: 0x1A8B4, symSize: 0x30 }
-  - { offset: 0x9E981, size: 0x8, addend: 0x0, symName: __MergedGlobals, symObjAddr: 0x153A8, symBinAddr: 0x2F7A8, symSize: 0x0 }
-  - { offset: 0xA08CE, size: 0x8, addend: 0x0, symName: __ZL13sharedHandler, symObjAddr: 0x153A0, symBinAddr: 0x2F7A0, symSize: 0x0 }
+  - { offset: 0x9E981, size: 0x8, addend: 0x0, symName: __MergedGlobals, symObjAddr: 0x15500, symBinAddr: 0x2F7A8, symSize: 0x0 }
+  - { offset: 0xA08CE, size: 0x8, addend: 0x0, symName: __ZL13sharedHandler, symObjAddr: 0x154F8, symBinAddr: 0x2F7A0, symSize: 0x0 }
   - { offset: 0xA0932, size: 0x8, addend: 0x0, symName: '-[PLCrashSignalHandler registerHandlerWithSignal:error:]', symObjAddr: 0x570, symBinAddr: 0x1AE24, symSize: 0x1B0 }
   - { offset: 0xA095E, size: 0x8, addend: 0x0, symName: '__ZZ56-[PLCrashSignalHandler registerHandlerWithSignal:error:]E16registerHandlers', symObjAddr: 0xCD0, symBinAddr: 0x2F510, symSize: 0x0 }
   - { offset: 0xA0EC4, size: 0x8, addend: 0x0, symName: __Z22shared_handler_contextv.cold.1, symObjAddr: 0xB48, symBinAddr: 0x1BB20, symSize: 0x8C }

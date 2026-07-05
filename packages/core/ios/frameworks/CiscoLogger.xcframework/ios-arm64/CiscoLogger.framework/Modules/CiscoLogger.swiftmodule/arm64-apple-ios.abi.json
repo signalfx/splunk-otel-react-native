@@ -2983,105 +2983,105 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/Console Log Destination\/ConsoleLogDestinationModel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/Console Log Destination\/ConsoleLogDestinationModel.swift",
       "kind": "Dictionary",
       "offset": 262,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/Message Center\/LogMessageCenterModel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/Message Center\/LogMessageCenterModel.swift",
       "kind": "Dictionary",
       "offset": 222,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/Message Center\/LogMessageCenterModel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/Message Center\/LogMessageCenterModel.swift",
       "kind": "Dictionary",
       "offset": 287,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/Message Center\/LogMessageCenterModel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/Message Center\/LogMessageCenterModel.swift",
       "kind": "Dictionary",
       "offset": 357,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/ConsoleLogDestination\/ConsoleLogDestination.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/ConsoleLogDestination\/ConsoleLogDestination.swift",
       "kind": "StringLiteral",
       "offset": 315,
       "length": 9,
       "value": "\"default\""
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogLevel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 254,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogLevel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 353,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogLevel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 512,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogLevel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 692,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogLevel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 890,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogLevel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 1075,
       "length": 1,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogVerbosity.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogVerbosity.swift",
       "kind": "IntegerLiteral",
       "offset": 166,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogVerbosity.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogVerbosity.swift",
       "kind": "IntegerLiteral",
       "offset": 236,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogVerbosity.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/Model\/LogVerbosity.swift",
       "kind": "IntegerLiteral",
       "offset": 368,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/DefaultLogAgent\/DefaultLogAgent.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/smartlook-ios-sdk-private\/CiscoLogger\/Sources\/DefaultLogAgent\/DefaultLogAgent.swift",
       "kind": "BooleanLiteral",
       "offset": 1276,
       "length": 5,

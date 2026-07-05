@@ -66,6 +66,67 @@
           },
           {
             "kind": "Var",
+            "name": "sessionMetadata",
+            "printedName": "sessionMetadata",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SplunkCommon16AgentSharedStateP15sessionMetadataSSSgvp",
+            "mangledName": "$s12SplunkCommon16AgentSharedStateP15sessionMetadataSSSgvp",
+            "moduleName": "SplunkCommon",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SplunkCommon16AgentSharedStateP15sessionMetadataSSSgvg",
+                "mangledName": "$s12SplunkCommon16AgentSharedStateP15sessionMetadataSSSgvg",
+                "moduleName": "SplunkCommon",
+                "genericSig": "<τ_0_0 where τ_0_0 : SplunkCommon.AgentSharedState>",
+                "sugared_genericSig": "<Self where Self : SplunkCommon.AgentSharedState>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "agentVersion",
             "printedName": "agentVersion",
             "children": [
@@ -147,6 +208,67 @@
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "sessionMetadata",
+            "printedName": "sessionMetadata",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SplunkCommon16AgentSharedStatePAAE15sessionMetadataSSSgvp",
+            "mangledName": "$s12SplunkCommon16AgentSharedStatePAAE15sessionMetadataSSSgvp",
+            "moduleName": "SplunkCommon",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SplunkCommon16AgentSharedStatePAAE15sessionMetadataSSSgvg",
+                "mangledName": "$s12SplunkCommon16AgentSharedStatePAAE15sessionMetadataSSSgvg",
+                "moduleName": "SplunkCommon",
+                "genericSig": "<τ_0_0 where τ_0_0 : SplunkCommon.AgentSharedState>",
+                "sugared_genericSig": "<Self where Self : SplunkCommon.AgentSharedState>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Protocol",
@@ -4648,6 +4770,225 @@
         "moduleName": "SplunkCommon"
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkCommon",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkCommon"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TelemetryAttributeConverter",
+        "printedName": "TelemetryAttributeConverter",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "attributes",
+            "printedName": "attributes(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : OpenTelemetryApi.AttributeValue]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeValue",
+                    "printedName": "OpenTelemetryApi.AttributeValue",
+                    "usr": "s:16OpenTelemetryApi14AttributeValueO"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SplunkCommon27TelemetryAttributeConverterO10attributes4fromSDySS04OpenC3Api0D5ValueOGSDySSypGSg_tFZ",
+            "mangledName": "$s12SplunkCommon27TelemetryAttributeConverterO10attributes4fromSDySS04OpenC3Api0D5ValueOGSDySSypGSg_tFZ",
+            "moduleName": "SplunkCommon",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "SplunkInternal"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "attributeValue",
+            "printedName": "attributeValue(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeValue",
+                "printedName": "OpenTelemetryApi.AttributeValue",
+                "usr": "s:16OpenTelemetryApi14AttributeValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SplunkCommon27TelemetryAttributeConverterO14attributeValue4from04OpenC3Api0dG0Oyp_tFZ",
+            "mangledName": "$s12SplunkCommon27TelemetryAttributeConverterO14attributeValue4from04OpenC3Api0dG0Oyp_tFZ",
+            "moduleName": "SplunkCommon",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "SplunkInternal"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12SplunkCommon27TelemetryAttributeConverterO",
+        "mangledName": "$s12SplunkCommon27TelemetryAttributeConverterO",
+        "moduleName": "SplunkCommon",
+        "declAttributes": [
+          "AccessControl",
+          "SPIAccessControl",
+          "RawDocComment"
+        ],
+        "spi_group_names": [
+          "SplunkInternal"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkCommon",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "waitUntil",
+        "printedName": "waitUntil(timeout:pollIntervalNanoseconds:_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Double",
+            "printedName": "Swift.Double",
+            "hasDefaultArg": true,
+            "usr": "s:Sd"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "UInt64",
+            "printedName": "Swift.UInt64",
+            "hasDefaultArg": true,
+            "usr": "s:s6UInt64V"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "() async -> Swift.Bool",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaF",
+        "mangledName": "$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaF",
+        "moduleName": "SplunkCommon",
+        "declAttributes": [
+          "AccessControl",
+          "DiscardableResult",
+          "SPIAccessControl",
+          "RawDocComment"
+        ],
+        "spi_group_names": [
+          "SplunkTesting"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
         "kind": "TypeDecl",
         "name": "Span",
         "printedName": "Span",
@@ -4855,53 +5196,67 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/PackageIdentification\/PackageIdentifier+InstanceName.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/PackageIdentification\/PackageIdentifier+InstanceName.swift",
       "kind": "StringLiteral",
       "offset": 950,
       "length": 9,
       "value": "\"default\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/PackageIdentification\/PackageIdentifier+InstanceName.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/PackageIdentification\/PackageIdentifier+InstanceName.swift",
       "kind": "StringLiteral",
       "offset": 1456,
       "length": 9,
       "value": "\"default\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/PackageIdentification\/PackageIdentifier.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/PackageIdentification\/PackageIdentifier.swift",
       "kind": "StringLiteral",
       "offset": 781,
       "length": 16,
       "value": "\"com.splunk.rum\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/DefaultPersistentCache.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/DefaultPersistentCache.swift",
       "kind": "StringLiteral",
       "offset": 1262,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/DefaultPersistentCache.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/DefaultPersistentCache.swift",
       "kind": "StringLiteral",
       "offset": 2930,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/Model\/PersistentCacheModel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/Model\/PersistentCacheModel.swift",
       "kind": "Dictionary",
       "offset": 775,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/Model\/PersistentCacheModel.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/Model\/PersistentCacheModel.swift",
       "kind": "BooleanLiteral",
       "offset": 820,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Utils\/WaitUntil.swift",
+      "kind": "FloatLiteral",
+      "offset": 1094,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Utils\/WaitUntil.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1137,
+      "length": 10,
+      "value": "10000000"
     }
   ]
 }

@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/jc69/Library/Developer/Xcode/DerivedData/SessionReplay-egtwpchkntjoimdkedupzfucklws/Build/Intermediates.noindex/ArchiveIntermediates/CiscoInteractions/InstallationBuildProductsLocation/Library/Frameworks/CiscoInteractions.framework/CiscoInteractions'
+binary-path:     '/Users/budim/Library/Developer/Xcode/DerivedData/SessionReplay-femojjjhctvkhhhhdbiywmwyidbw/Build/Intermediates.noindex/ArchiveIntermediates/CiscoInteractions/InstallationBuildProductsLocation/Library/Frameworks/CiscoInteractions.framework/CiscoInteractions'
 relocations:
   - { offset: 0x4E75F, size: 0x8, addend: 0x0, symName: _CiscoInteractionsVersionString, symObjAddr: 0x0, symBinAddr: 0x1BB10, symSize: 0x0 }
   - { offset: 0x4E796, size: 0x8, addend: 0x0, symName: _CiscoInteractionsVersionNumber, symObjAddr: 0x40, symBinAddr: 0x1BB50, symSize: 0x0 }

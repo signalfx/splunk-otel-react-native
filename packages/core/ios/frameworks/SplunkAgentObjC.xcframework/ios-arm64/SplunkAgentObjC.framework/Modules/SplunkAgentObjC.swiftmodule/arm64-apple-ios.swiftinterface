@@ -113,6 +113,10 @@ extension SplunkAgentObjC.AttributeValueTypeObjC : Swift.CustomStringConvertible
   @discardableResult
   @objc(trackException:attributes:) final public func trackException(exception: Foundation.NSException, attributes: [Swift.String : SplunkAgentObjC.AttributeValueObjC]) -> SplunkAgentObjC.CustomTrackingModuleObjC
   @discardableResult
+  @objc(trackErrorWithType:message:stacktrace:attributes:) final public func trackError(typeName: Swift.String, message: Swift.String, stacktrace: Swift.String?, attributes: [Swift.String : SplunkAgentObjC.AttributeValueObjC]) -> SplunkAgentObjC.CustomTrackingModuleObjC
+  @discardableResult
+  @objc(trackErrorWithType:message:stacktrace:) final public func trackError(typeName: Swift.String, message: Swift.String, stacktrace: Swift.String?) -> SplunkAgentObjC.CustomTrackingModuleObjC
+  @discardableResult
   @objc final public func trackCustomEvent(name: Swift.String) -> SplunkAgentObjC.CustomTrackingModuleObjC
   @discardableResult
   @objc(trackErrorMessage:) final public func trackErrorMessage(message: Swift.String) -> SplunkAgentObjC.CustomTrackingModuleObjC
@@ -130,12 +134,22 @@ extension SplunkAgentObjC.AttributeValueTypeObjC : Swift.CustomStringConvertible
 @_hasMissingDesignatedInitializers @objc(SPLKInteractionsModule) final public class InteractionsModuleObjC : ObjectiveC.NSObject {
   @objc deinit
 }
+@_inheritsConvenienceInitializers @objc(SPLKDefaultNavigationEventProcessor) final public class DefaultNavigationEventProcessorObjC : ObjectiveC.NSObject, SplunkAgentObjC.NavigationEventProcessorObjC {
+  @objc override dynamic public init()
+  @objc(onViewControllerWithTypeName:controllerIdentity:) final public func onViewController(typeName: Swift.String, controllerIdentity _: Swift.String) -> SplunkAgentObjC.NavigationEventObjC?
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @objc(SPLKNavigationConfiguration) @objcMembers final public class NavigationConfigurationObjC : SplunkAgentObjC.ModuleConfigurationObjC {
   @objc final public var enableAutomatedTracking: Swift.Bool
+  @objc final public var navigationEventProcessor: (any SplunkAgentObjC.NavigationEventProcessorObjC)?
   @objc dynamic public init()
   @objc(initWithEnabled:) convenience public init(isEnabled: Swift.Bool)
   @objc(initWithEnabled:automatedTracking:) public init(isEnabled: Swift.Bool, enableAutomatedTracking: Swift.Bool)
+  @objc(initWithEnabled:automatedTracking:navigationEventProcessor:) public init(isEnabled: Swift.Bool, enableAutomatedTracking: Swift.Bool, navigationEventProcessor: (any SplunkAgentObjC.NavigationEventProcessorObjC)?)
   @objc deinit
+}
+@objc(SPLKNavigationEventProcessor) public protocol NavigationEventProcessorObjC {
+  @objc(onViewControllerWithTypeName:controllerIdentity:) func onViewController(typeName: Swift.String, controllerIdentity: Swift.String) -> SplunkAgentObjC.NavigationEventObjC?
 }
 @_hasMissingDesignatedInitializers @objc(SPLKNavigationModule) final public class NavigationModuleObjC : ObjectiveC.NSObject {
   @objc final public var preferences: SplunkAgentObjC.NavigationModulePreferencesObjC {
@@ -147,6 +161,15 @@ extension SplunkAgentObjC.AttributeValueTypeObjC : Swift.CustomStringConvertible
   }
   @discardableResult
   @objc(trackScreen:) final public func track(screen name: Swift.String) -> SplunkAgentObjC.NavigationModuleObjC
+  @discardableResult
+  @objc(trackScreen:attributes:) final public func track(screen name: Swift.String, attributes: Foundation.NSDictionary?) -> SplunkAgentObjC.NavigationModuleObjC
+  @objc deinit
+}
+@objc(SPLKNavigationEvent) final public class NavigationEventObjC : ObjectiveC.NSObject {
+  @objc final public let name: Swift.String
+  @objc final public let attributes: Foundation.NSDictionary?
+  @objc(initWithName:attributes:) public init(name: Swift.String, attributes: Foundation.NSDictionary? = nil)
+  @objc(initWithName:) convenience public init(name: Swift.String)
   @objc deinit
 }
 @objc(SPLKNavigationModulePreferences) final public class NavigationModulePreferencesObjC : ObjectiveC.NSObject {
@@ -458,8 +481,8 @@ extension SplunkAgentObjC.AttributeValueTypeObjC : Swift.CustomStringConvertible
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc final public class SplunkAgentObjCResources : ObjectiveC.NSObject {
-  @objc final public class var bundle: Foundation.Bundle {
+@_inheritsConvenienceInitializers @objc public class SplunkAgentObjCResources : ObjectiveC.NSObject {
+  @objc public class var bundle: Foundation.Bundle {
     @objc get
   }
   @objc override dynamic public init()

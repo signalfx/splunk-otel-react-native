@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/jc69/Library/Developer/Xcode/DerivedData/SessionReplay-egtwpchkntjoimdkedupzfucklws/Build/Intermediates.noindex/ArchiveIntermediates/CiscoRuntimeCache/InstallationBuildProductsLocation/Library/Frameworks/CiscoRuntimeCache.framework/CiscoRuntimeCache'
+binary-path:     '/Users/budim/Library/Developer/Xcode/DerivedData/SessionReplay-femojjjhctvkhhhhdbiywmwyidbw/Build/Intermediates.noindex/ArchiveIntermediates/CiscoRuntimeCache/InstallationBuildProductsLocation/Library/Frameworks/CiscoRuntimeCache.framework/CiscoRuntimeCache'
 relocations:
   - { offset: 0x29D1E, size: 0x8, addend: 0x0, symName: _CiscoRuntimeCacheVersionString, symObjAddr: 0x0, symBinAddr: 0x81F0, symSize: 0x0 }
   - { offset: 0x29D55, size: 0x8, addend: 0x0, symName: _CiscoRuntimeCacheVersionNumber, symObjAddr: 0x40, symBinAddr: 0x8230, symSize: 0x0 }

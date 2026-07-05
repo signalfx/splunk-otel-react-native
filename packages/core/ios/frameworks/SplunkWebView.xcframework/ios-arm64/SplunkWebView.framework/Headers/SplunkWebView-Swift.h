@@ -397,13 +397,13 @@ SWIFT_AVAILABILITY(ios,introduced=14.0)
 @interface WebViewInstrumentation (SWIFT_EXTENSION(SplunkWebView)) <WKScriptMessageHandlerWithReply>
 /// Handles JavaScript messages with a reply handler for asynchronous communication.
 /// This method is called when the web content calls <code>window.webkit.messageHandlers.SplunkRumNativeUpdate.postMessage()</code>.
-/// It retrieves the current native session ID and sends it back to the JavaScript context.
+/// It retrieves the current native session ID and session metadata, then sends them back to the JavaScript context.
 /// <ul>
 ///   <li>
 ///     Parameters:
 ///   </li>
 ///   <li>
-///     replyHandler: A block to be called with the reply data or an error string.
+///     replyHandler: A block to be called with the reply data (containing <code>sessionId</code> and <code>sessionMetadata</code>) or an error string.
 ///   </li>
 /// </ul>
 - (void)userContentController:(WKUserContentController * _Nonnull)_ didReceiveScriptMessage:(WKScriptMessage * _Nonnull)_ replyHandler:(void (^ _Nonnull)(id _Nullable, NSString * _Nullable))replyHandler;

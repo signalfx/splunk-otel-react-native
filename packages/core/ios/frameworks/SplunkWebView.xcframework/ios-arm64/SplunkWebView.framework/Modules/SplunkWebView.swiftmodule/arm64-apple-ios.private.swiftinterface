@@ -44,8 +44,8 @@ extension SplunkWebView.WebViewInstrumentation : WebKit.WKScriptMessageHandlerWi
 extension SplunkWebView.WebViewInstrumentation : WebKit.WKScriptMessageHandler {
   @_Concurrency.MainActor @preconcurrency @objc final public func userContentController(_: WebKit.WKUserContentController, didReceive _: WebKit.WKScriptMessage)
 }
-@_inheritsConvenienceInitializers @objc final public class SplunkWebViewResources : ObjectiveC.NSObject {
-  @objc final public class var bundle: Foundation.Bundle {
+@_inheritsConvenienceInitializers @objc public class SplunkWebViewResources : ObjectiveC.NSObject {
+  @objc public class var bundle: Foundation.Bundle {
     @objc get
   }
   @objc override dynamic public init()

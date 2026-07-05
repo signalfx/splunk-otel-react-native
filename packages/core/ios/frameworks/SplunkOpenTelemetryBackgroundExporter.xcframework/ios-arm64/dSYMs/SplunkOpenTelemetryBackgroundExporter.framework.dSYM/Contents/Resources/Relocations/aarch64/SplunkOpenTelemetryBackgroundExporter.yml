@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/jc69/Library/Developer/Xcode/DerivedData/SplunkAgentXCFrameworks-bnxxucyrilvdowgazrqfdklbnqhg/Build/Intermediates.noindex/ArchiveIntermediates/SplunkOpenTelemetryBackgroundExporter/InstallationBuildProductsLocation/Library/Frameworks/SplunkOpenTelemetryBackgroundExporter.framework/SplunkOpenTelemetryBackgroundExporter'
+binary-path:     '/Users/budim/Library/Developer/Xcode/DerivedData/SplunkAgentXCFrameworks-hgsygarymeusfmetozfuhcpftltz/Build/Intermediates.noindex/ArchiveIntermediates/SplunkOpenTelemetryBackgroundExporter/InstallationBuildProductsLocation/Library/Frameworks/SplunkOpenTelemetryBackgroundExporter.framework/SplunkOpenTelemetryBackgroundExporter'
 relocations:
   - { offset: 0x29D1E, size: 0x8, addend: 0x0, symName: _SplunkOpenTelemetryBackgroundExporterVersionString, symObjAddr: 0x0, symBinAddr: 0x44CC0, symSize: 0x0 }
   - { offset: 0x29D55, size: 0x8, addend: 0x0, symName: _SplunkOpenTelemetryBackgroundExporterVersionNumber, symObjAddr: 0x58, symBinAddr: 0x44D18, symSize: 0x0 }

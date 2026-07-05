@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		NmsA4cnIGcgheyQFjJYdULCJ6gU=
+		P++JUhp1JNWtKdqihIUcCA0g7po=
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		QBIazJH3ObOHU/gEfaunEfDk1GA=
+		oufm1V2YUAV8LIezW2wnEN/wmL0=
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		jVHN7A6SRviGeKxhfe0yyHiPZ/U=
+		5ZC2yBOQdNnPB2qoVts0RtheMLw=
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		QBIazJH3ObOHU/gEfaunEfDk1GA=
+		oufm1V2YUAV8LIezW2wnEN/wmL0=
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		NFMS0/44O8iKZpUidIfIl8eYKlQ=
+		GZ1xVZNMNYl8vZsKo1qTtsjqcIU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ziTZqFoU1LACeuiL4HoG8y+3auy8/wMVyQ8xfqwE9O8=
+			0GTLNCXSJKzWONQBjmzr2sujezuCojDsGuyTWZZuwfE=
 			</data>
 		</dict>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -98,14 +98,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lIohU/89ephG7NEh45jv0lHaAMlh5EV06lpSBo9+97M=
+			BW30zCISGpnFm+nG/1JFPzJ6ncgYOXsoABbWyDlOdAc=
 			</data>
 		</dict>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ziTZqFoU1LACeuiL4HoG8y+3auy8/wMVyQ8xfqwE9O8=
+			0GTLNCXSJKzWONQBjmzr2sujezuCojDsGuyTWZZuwfE=
 			</data>
 		</dict>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -133,7 +133,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9k32SiVLyxvIkeEkslufPC5Ivh4r+UTYJR/ZS6ZpIaU=
+			NQn386/KIiqkFzZIzA0/PDw4zlM3SHXElT8tQeew0yc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

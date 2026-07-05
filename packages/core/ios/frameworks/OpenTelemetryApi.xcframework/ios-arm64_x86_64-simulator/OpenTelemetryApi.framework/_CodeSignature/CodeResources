@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		25BoZ+OT72wGlHdLpLLwXuLHSm8=
+		84bzmUUdUeN/SxmEzn7ZplgoBRw=
 		</data>
 		<key>Modules/OpenTelemetryApi.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		9QOpdfuPANokcgXEHR80+wXcg7Y=
+		Gq2Rvm51mBihqoiY/rQVEbHWd5w=
 		</data>
 		<key>Modules/OpenTelemetryApi.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/OpenTelemetryApi.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zK8D+PZlvycNblwUKotO8wmIQK4=
+		L7PFhMd2z9N4d1Ua4Ho9p/3i/cI=
 		</data>
 		<key>Modules/OpenTelemetryApi.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		9QOpdfuPANokcgXEHR80+wXcg7Y=
+		Gq2Rvm51mBihqoiY/rQVEbHWd5w=
 		</data>
 		<key>Modules/OpenTelemetryApi.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/OpenTelemetryApi.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		V8UIzkspyl+hQzef/rhliWouDyo=
+		rbJOLF9/hkvvkf/PlUaKnSJMA1o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DYPZ7+NEv03N0/YV7VsUw/qq7GM5TTBAPxOlzKjdHLQ=
+			RPscyfHDHY2Aj6WDE8iXJS1DdH+Ik3pX51qSal4rif0=
 			</data>
 		</dict>
 		<key>Modules/OpenTelemetryApi.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -98,14 +98,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XwQl4ejPwKnT4fYIHU56d2jM7h9fxFA/ws83PM0yGGw=
+			KmYsy1tFFG41Eg3Iv1tRa7+9pWlRC8hL7Kxlf/pvFGc=
 			</data>
 		</dict>
 		<key>Modules/OpenTelemetryApi.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DYPZ7+NEv03N0/YV7VsUw/qq7GM5TTBAPxOlzKjdHLQ=
+			RPscyfHDHY2Aj6WDE8iXJS1DdH+Ik3pX51qSal4rif0=
 			</data>
 		</dict>
 		<key>Modules/OpenTelemetryApi.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -133,7 +133,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iQhpuCBe8ZFwXAQ8EJ0ebwXoDeSWsnol7CN/V9PWeAc=
+			5GOcIeEJRIjzRJZysssiBgMihAIgfyneO3scRXjTzSw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

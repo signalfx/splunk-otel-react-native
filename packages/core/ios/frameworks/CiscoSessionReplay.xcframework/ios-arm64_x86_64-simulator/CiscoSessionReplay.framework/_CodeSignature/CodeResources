@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Krldbz7ec/wSsd2QnmNt0ABJ5Jc=
+		X6NsyaaKrb8ae9fBNJT9JYyXYw4=
 		</data>
 		<key>Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		fu1KMBWeu33NTbvuIgBfqsHTvbM=
+		Y5QZiUszejxfGT8KpIu7inFOe8E=
 		</data>
 		<key>Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ME8g6n8Dy6nt7p52ZZ4PD7R2MHU=
+		Y+Y4BqnE4Juh4G8DAIkmdPqHK7k=
 		</data>
 		<key>Modules/CiscoSessionReplay.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		fu1KMBWeu33NTbvuIgBfqsHTvbM=
+		Y5QZiUszejxfGT8KpIu7inFOe8E=
 		</data>
 		<key>Modules/CiscoSessionReplay.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/CiscoSessionReplay.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		4MAr9w3txeODtKd1bJ+sKpHQE/w=
+		yzSUxRCLxVLPL8yUHX+pfCdspOA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,7 +74,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			06qYG2BUphtiPR4t9D8eHlEg9+PcAJ4qXOVP9Nkx+MI=
+			PGB760DCSHw8vNdwOEmzIA0diBPoQJoZLsMAg2QktRQ=
 			</data>
 		</dict>
 		<key>Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -102,14 +102,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			06MZAsxVnHWbCpmBJZYqdkbMHuHTTrSeAZPwuXNiX3I=
+			fJwv5bnXTi7XtQoCSzSVX1ycep59B0g2g9aj57OB4K8=
 			</data>
 		</dict>
 		<key>Modules/CiscoSessionReplay.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			06qYG2BUphtiPR4t9D8eHlEg9+PcAJ4qXOVP9Nkx+MI=
+			PGB760DCSHw8vNdwOEmzIA0diBPoQJoZLsMAg2QktRQ=
 			</data>
 		</dict>
 		<key>Modules/CiscoSessionReplay.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -137,7 +137,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dgUYJk31S3QpGqXvcFmhJjIPyOOjJVBVI60L0KYUGLE=
+			RvIyJUh3ulOhsorbD1wKxSWbQszX7lxnvJmxUeGQhcs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

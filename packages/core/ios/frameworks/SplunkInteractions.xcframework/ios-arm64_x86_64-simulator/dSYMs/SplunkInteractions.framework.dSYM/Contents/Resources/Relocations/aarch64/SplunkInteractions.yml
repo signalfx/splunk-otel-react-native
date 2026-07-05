@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/jc69/Library/Developer/Xcode/DerivedData/SplunkAgentXCFrameworks-bnxxucyrilvdowgazrqfdklbnqhg/Build/Intermediates.noindex/ArchiveIntermediates/SplunkInteractions/InstallationBuildProductsLocation/Library/Frameworks/SplunkInteractions.framework/SplunkInteractions'
+binary-path:     '/Users/budim/Library/Developer/Xcode/DerivedData/SplunkAgentXCFrameworks-hgsygarymeusfmetozfuhcpftltz/Build/Intermediates.noindex/ArchiveIntermediates/SplunkInteractions/InstallationBuildProductsLocation/Library/Frameworks/SplunkInteractions.framework/SplunkInteractions'
 relocations:
   - { offset: 0x2A3D1, size: 0x8, addend: 0x0, symName: _SplunkInteractionsVersionString, symObjAddr: 0x0, symBinAddr: 0x88E0, symSize: 0x0 }
   - { offset: 0x2A408, size: 0x8, addend: 0x0, symName: _SplunkInteractionsVersionNumber, symObjAddr: 0x48, symBinAddr: 0x8928, symSize: 0x0 }

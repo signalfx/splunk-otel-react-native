@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		U8K3v9PGmHZqHSZmVGgdFs+VJ3w=
+		WCvPHfBYKxCanT6mYi6Hh2jge+s=
 		</data>
 		<key>Modules/SplunkOpenTelemetryBackgroundExporter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		x5SfGtrEVR881HVsWBQO6+wNAso=
+		Rgl4E86Z4n+1BV0lQFt7dbzEnmY=
 		</data>
 		<key>Modules/SplunkOpenTelemetryBackgroundExporter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/SplunkOpenTelemetryBackgroundExporter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/kA9YOhWcrJZNQC3Qa2SNKv2FpA=
+		HkTPpNUbByCauhN7yc31hvMarbU=
 		</data>
 		<key>Modules/SplunkOpenTelemetryBackgroundExporter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		x5SfGtrEVR881HVsWBQO6+wNAso=
+		Rgl4E86Z4n+1BV0lQFt7dbzEnmY=
 		</data>
 		<key>Modules/SplunkOpenTelemetryBackgroundExporter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/SplunkOpenTelemetryBackgroundExporter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1gSm9Ean0LtSWRoYMHzBDhFfbJI=
+		LQlf0GlyMf2Nar95upaXKGVTfGA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GYSEEHxRbYEBYKDiofjAeSwzcreUknjf49kE6EoaN/o=
+			dxvaTrFpyMRF/HtFo6scXZTB5BnzuQs+IouTjq+52XQ=
 			</data>
 		</dict>
 		<key>Modules/SplunkOpenTelemetryBackgroundExporter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -98,14 +98,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2tCOSDlFy1sSP2HyYIAWLTwGvDz4ovHEfclsDwVOFXU=
+			zUfNwJKFYWQZBNu0GA+eGwbh67Ak9xztZdstGn2SeCI=
 			</data>
 		</dict>
 		<key>Modules/SplunkOpenTelemetryBackgroundExporter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GYSEEHxRbYEBYKDiofjAeSwzcreUknjf49kE6EoaN/o=
+			dxvaTrFpyMRF/HtFo6scXZTB5BnzuQs+IouTjq+52XQ=
 			</data>
 		</dict>
 		<key>Modules/SplunkOpenTelemetryBackgroundExporter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -133,7 +133,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			F0w0ilGx+RrhtKRK1LMm9BwNRa2F76TtSaWsnuTpYTw=
+			YYHZvktpL4WnrVV9zUyj5FmOzf/sD67trJOEacAH940=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
