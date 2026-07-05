@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Splunk Inc.
+ * Copyright 2026 Splunk Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,29 +21,38 @@ import {
   reactNavigationIntegration,
 } from '../integrations/reactNavigation';
 
-/** Minimal fake of a react-navigation container ref for driving the integration. */
-function fakeContainer(initialRoute?: {
-  name: string;
-  key?: string;
-  params?: object;
-}) {
+type FakeRoute = { name: string; key?: string; params?: object };
+
+/**
+ * Minimal fake of a react-navigation container ref for the integration.
+ * Models per-event listeners (`state` / `ready`) and `isReady()`, matching the
+ * structural surface the integration relies on.
+ */
+function fakeContainer(initialRoute?: FakeRoute, opts?: { ready?: boolean }) {
   let current = initialRoute;
-  let listener: (() => void) | undefined;
+  let ready = opts?.ready ?? true;
+  const listeners: Record<string, (() => void) | undefined> = {};
 
   return {
     getCurrentRoute: () => current,
-    addListener: (_type: 'state', cb: () => void) => {
-      listener = cb;
+    isReady: () => ready,
+    addListener: (type: 'state' | 'ready', cb: () => void) => {
+      listeners[type] = cb;
       return () => {
-        listener = undefined;
+        listeners[type] = undefined;
       };
     },
     // test helpers
-    _set: (route?: { name: string; key?: string; params?: object }) => {
+    _set: (route?: FakeRoute) => {
       current = route;
     },
-    _emit: () => listener?.(),
-    _hasListener: () => listener !== undefined,
+    _emit: () => listeners.state?.(),
+    _emitReady: () => {
+      ready = true;
+      listeners.ready?.();
+    },
+    _hasListener: () => listeners.state !== undefined,
+    _hasReadyListener: () => listeners.ready !== undefined,
   };
 }
 
@@ -108,6 +117,32 @@ describe('reactNavigationIntegration', () => {
       c
     );
 
+    expect(trackSpy).not.toHaveBeenCalled();
+  });
+
+  it('defers the initial route to the ready event when not ready at register time', () => {
+    const c = fakeContainer({ name: 'Home', key: 'Home-1' }, { ready: false });
+
+    reactNavigationIntegration().registerNavigationContainer(c);
+
+    // Not ready yet: nothing tracked, but a ready listener is registered.
+    expect(trackSpy).not.toHaveBeenCalled();
+    expect(c._hasReadyListener()).toBe(true);
+
+    c._emitReady();
+    expect(trackSpy).toHaveBeenCalledTimes(1);
+    expect(trackSpy).toHaveBeenCalledWith('Home', undefined);
+  });
+
+  it('does not subscribe to ready when trackInitialRoute is false', () => {
+    const c = fakeContainer({ name: 'Home', key: 'Home-1' }, { ready: false });
+
+    reactNavigationIntegration({ trackInitialRoute: false }).registerNavigationContainer(
+      c
+    );
+
+    expect(c._hasReadyListener()).toBe(false);
+    c._emitReady();
     expect(trackSpy).not.toHaveBeenCalled();
   });
 
@@ -200,6 +235,19 @@ describe('reactNavigationIntegration', () => {
 
     c._set({ name: 'Detail', key: 'Detail-1' });
     c._emit();
+    expect(trackSpy).not.toHaveBeenCalled();
+  });
+
+  it('removes the ready listener on unregister', () => {
+    const c = fakeContainer({ name: 'Home', key: 'Home-1' }, { ready: false });
+    const integration = reactNavigationIntegration();
+    integration.registerNavigationContainer(c);
+    expect(c._hasReadyListener()).toBe(true);
+
+    integration.unregisterNavigationContainer();
+    expect(c._hasReadyListener()).toBe(false);
+
+    c._emitReady();
     expect(trackSpy).not.toHaveBeenCalled();
   });
 
