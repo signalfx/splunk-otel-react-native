@@ -1,6 +1,7 @@
 // Test action types and categories
 export enum TestCategory {
   Crashes = 'crashes',
+  ErrorTracking = 'errorTracking',
   Navigation = 'navigation',
   CustomTracking = 'customTracking',
   Performance = 'performance',
@@ -42,6 +43,7 @@ export const platformLabels = (platforms: Set<MobilePlatform>): string => {
 
 export const categoryLabels: Record<TestCategory, string> = {
   [TestCategory.Crashes]: 'Crashes',
+  [TestCategory.ErrorTracking]: 'Error Tracking',
   [TestCategory.Navigation]: 'Navigation',
   [TestCategory.CustomTracking]: 'Custom Tracking',
   [TestCategory.Performance]: 'Performance',
