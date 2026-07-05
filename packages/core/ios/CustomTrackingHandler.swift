@@ -47,4 +47,55 @@ public class CustomTrackingHandler: NSObject {
     span?.end()
     resolve(nil)
   }
+
+  /// Attribute key marking the cross-platform layer the error originates from,
+  /// used by the backend for symbolication and UI routing.
+  private static let platformAttributeKey = "splunk.rum.platform"
+  private static let platformAttributeValue = "react-native"
+
+  /// Reports a caught JS error as a `component=error` span with an explicit,
+  /// pre-formatted stacktrace.
+  ///
+  /// Routes to the native explicit-stack API
+  /// (`customTracking.trackError(typeName:message:stacktrace:attributes:)`),
+  /// which sets `exception.type`, `exception.message`, `exception.stacktrace`,
+  /// `error=true`, and `component=error` without re-deriving the stack from the
+  /// native thread. Caller attributes are merged first; agent-managed keys win.
+  ///
+  /// - Note: `framesJson` and `timestampMs` are accepted for forward
+  ///   compatibility but currently unused: the backend symbolicates from the
+  ///   raw `exception.stacktrace`, and the native API emits the span at publish
+  ///   time (it does not yet accept a caller timestamp).
+  public func reportError(_ type: NSString,
+                          message: NSString,
+                          stacktrace: NSString,
+                          attributes: NSDictionary,
+                          framesJson: NSString,
+                          source: NSString,
+                          handled: Bool,
+                          timestampMs: Double,
+                          sourceMapIdsJson: NSString,
+                          resolve: @escaping RCTPromiseResolveBlock,
+                          reject: @escaping RCTPromiseRejectBlock) {
+    var merged: [String: Any] = (attributes as? [String: Any]) ?? [:]
+    merged["error.source"] = source as String
+    merged["exception.escaped"] = !handled
+    merged[CustomTrackingHandler.platformAttributeKey] =
+      CustomTrackingHandler.platformAttributeValue
+
+    let sourceMapIds = sourceMapIdsJson as String
+    if !sourceMapIds.isEmpty {
+      merged["error.sourceMapIds"] = sourceMapIds
+    }
+
+    let stack = stacktrace as String
+    _ = SplunkRum.shared.customTracking.trackError(
+      typeName: type as String,
+      message: message as String,
+      stacktrace: stack.isEmpty ? nil : stack,
+      attributes: merged
+    )
+
+    resolve(nil)
+  }
 }
