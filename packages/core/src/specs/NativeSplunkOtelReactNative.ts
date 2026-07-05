@@ -143,6 +143,21 @@ export interface Spec extends TurboModule {
   customStartWorkflow(name: string): Promise<number>;
   customEndWorkflow(handle: number): Promise<void>;
 
+  // Error tracking
+  // Limited to flat primitives + JSON strings for codegen compat.
+  // `framesJson` / `sourceMapIdsJson` are reserved for later, full automatic-capture phases.
+  reportError(
+    type: string,
+    message: string,
+    stacktrace: string,
+    attributes: { [key: string]: unknown },
+    framesJson: string,
+    source: string,
+    handled: boolean,
+    timestampMs: number,
+    sourceMapIdsJson: string
+  ): Promise<void>;
+
   // Navigation
   navigationTrack(screenName: string): Promise<void>;
 
