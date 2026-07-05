@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Splunk Inc.
+ * Copyright 2026 Splunk Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,8 +28,9 @@ import { SplunkRum } from '../api/SplunkRum';
  *
  * It is intentionally decoupled from `@react-navigation/native`: it never
  * imports the library (the `NavigationContainer` ref is passed in by the app)
- * and relies only on the structural `getCurrentRoute()` / `addListener('state')`
- * surface, so it works across react-navigation v5–v7 and adds no runtime
+ * and relies only on the structural `getCurrentRoute()` / `isReady()` /
+ * `addListener('ready' | 'state')` surface, so it works across
+ * react-navigation v6 and v7 (and structurally on v5) and adds no runtime
  * dependency. `@react-navigation/native` is declared only as an optional peer.
  */
 
@@ -54,7 +55,9 @@ interface RouteLike {
 /** Structural view of the `react-navigation` container we depend on. */
 interface NavigationContainerLike {
   getCurrentRoute(): RouteLike | undefined;
-  addListener(type: 'state', callback: () => void): unknown;
+  addListener(type: 'state' | 'ready', callback: () => void): unknown;
+  /** Present on react-navigation v6/v7 container refs. */
+  isReady?(): boolean;
 }
 
 /**
@@ -94,9 +97,12 @@ export interface ReactNavigationIntegrationOptions {
 
 export interface ReactNavigationIntegration {
   /**
-   * Starts tracking a `react-navigation` container. Call from the
-   * container's `onReady` callback. Only one container is tracked at a time;
-   * registering a new one replaces the previous.
+   * Starts tracking a `react-navigation` container.
+   *
+   * Can be called at any time. If the container is not ready yet, the initial
+   * screen is captured from its `ready` event (or `isReady()`), so registration
+   * does not have to happen inside the container's `onReady` callback. Only one
+   * container is tracked at a time. Registering a new one replaces the previous.
    */
   registerNavigationContainer(container: SplunkNavigationContainer): void;
 
@@ -178,9 +184,15 @@ export function reactNavigationIntegration(
   options: ReactNavigationIntegrationOptions = {}
 ): ReactNavigationIntegration {
   let container: NavigationContainerLike | undefined;
-  let unsubscribe: (() => void) | undefined;
+  let stateUnsubscribe: (() => void) | undefined;
+  let readyUnsubscribe: (() => void) | undefined;
   let lastRouteKey: string | undefined;
 
+  // Predicate evaluation order per a single committed route change is fixed:
+  // (1) dedup by raw route key (in handleStateChange, before emit),
+  // (2) viewNamePredicate (returning null/undefined/'' suppresses),
+  // (3) shouldTrackView (false suppresses),
+  // (4) attributesFromRoute, then native track().
   const emit = (route: SplunkRoute): void => {
     const defaultName = route.name;
 
@@ -198,7 +210,7 @@ export function reactNavigationIntegration(
 
     const attributes = options.attributesFromRoute?.(route);
 
-    // Fire-and-forget; navigation tracking must never throw into app code.
+    // Fire-and-forget - we do not want to throw into app code.
     try {
       const result = SplunkRum.instance.navigation.track(name, attributes);
       if (result && typeof result.catch === 'function') {
@@ -225,7 +237,7 @@ export function reactNavigationIntegration(
     }
 
     // Dedup by the focused route's key (falls back to name). This suppresses
-    // param-only updates and no-op back navigations to the same screen.
+    // param-only updates and no-op back navigations to the same screen (to mirror our native Agents).
     const key = route.key ?? route.name;
     if (key === lastRouteKey) {
       return;
@@ -239,6 +251,34 @@ export function reactNavigationIntegration(
     });
   };
 
+  // Subscribes to a container event, tolerating containers/mocks that do not
+  // return an unsubscribe function or do not support the event type.
+  const subscribe = (
+    c: NavigationContainerLike,
+    type: 'state' | 'ready'
+  ): (() => void) | undefined => {
+    try {
+      const result = c.addListener(type, handleStateChange);
+      return typeof result === 'function' ? (result as () => void) : undefined;
+    } catch {
+      return undefined;
+    }
+  };
+
+  const isContainerReady = (c: NavigationContainerLike): boolean => {
+    // No isReady() (older/structural containers) -> assume ready and let
+    // getCurrentRoute() gate emission.
+    if (typeof c.isReady !== 'function') {
+      return true;
+    }
+
+    try {
+      return c.isReady();
+    } catch {
+      return true;
+    }
+  };
+
   const integration: ReactNavigationIntegration = {
     registerNavigationContainer(c) {
       const resolved = resolveContainer(c);
@@ -249,31 +289,40 @@ export function reactNavigationIntegration(
         return;
       }
 
-      if (unsubscribe) {
+      if (stateUnsubscribe || readyUnsubscribe) {
         integration.unregisterNavigationContainer();
       }
 
       container = resolved;
       lastRouteKey = undefined;
 
-      const result = resolved.addListener('state', handleStateChange);
-      unsubscribe =
-        typeof result === 'function' ? (result as () => void) : undefined;
+      stateUnsubscribe = subscribe(resolved, 'state');
 
       if (options.trackInitialRoute !== false) {
-        handleStateChange();
+        if (isContainerReady(resolved)) {
+          // Ready now (e.g. registered from onReady): capture immediately.
+          handleStateChange();
+        } else {
+          // Registered before the container is ready: capture the first screen when the container reports ready.
+          readyUnsubscribe = subscribe(resolved, 'ready');
+        }
       }
     },
 
     unregisterNavigationContainer() {
-      if (unsubscribe) {
-        try {
-          unsubscribe();
-        } catch {
-          // ignore
+      for (const unsub of [stateUnsubscribe, readyUnsubscribe]) {
+        if (unsub) {
+          try {
+            unsub();
+          } catch {
+            // ignore
+          }
         }
       }
-      unsubscribe = undefined;
+
+      stateUnsubscribe = undefined;
+      readyUnsubscribe = undefined;
+
       container = undefined;
       lastRouteKey = undefined;
     },
