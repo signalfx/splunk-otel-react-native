@@ -98,8 +98,6 @@ const reactNavigationIntegrationMock = jest.fn(() => ({
   unregisterNavigationContainer: jest.fn(),
 }));
 
-const getActiveRouteNameMock = jest.fn(() => undefined);
-
 const agentPreferencesMock = {
   getEndpointConfiguration: jest.fn().mockResolvedValue(undefined),
   setEndpointConfiguration: jest.fn().mockResolvedValue(undefined),
@@ -331,5 +329,4 @@ module.exports = {
   ),
   MutableAttributes: MutableAttributesMock,
   reactNavigationIntegration: reactNavigationIntegrationMock,
-  getActiveRouteName: getActiveRouteNameMock,
 };

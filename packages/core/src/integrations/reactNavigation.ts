@@ -115,40 +115,6 @@ export interface ReactNavigationIntegration {
   unregisterNavigationContainer(): void;
 }
 
-/** Minimal navigation-state shape for {@link getActiveRouteName}. */
-interface NavigationStateLike {
-  index?: number;
-  routes?: ReadonlyArray<{
-    name?: string;
-    state?: NavigationStateLike;
-  }>;
-}
-
-/**
- * Resolves the focused leaf route name from a navigation state, descending
- * through nested navigators (stacks/tabs). Pure helper, exported for testing
- * and for callers that work from `getRootState()` instead of a container ref.
- */
-export function getActiveRouteName(
-  state: NavigationStateLike | undefined
-): string | undefined {
-  if (!state || !state.routes || state.routes.length === 0) {
-    return undefined;
-  }
-
-  const index =
-    typeof state.index === 'number' && state.index >= 0
-      ? state.index
-      : state.routes.length - 1;
-  const route = state.routes[index] ?? state.routes[state.routes.length - 1];
-
-  if (route?.state) {
-    return getActiveRouteName(route.state) ?? route.name;
-  }
-
-  return route?.name;
-}
-
 function resolveContainer(
   container: SplunkNavigationContainer | null | undefined
 ): NavigationContainerLike | undefined {
@@ -263,14 +229,40 @@ export function reactNavigationIntegration(
     }
   };
 
+  // Records the current route's key without emitting. Used when the initial
+  // route must not be tracked, so an unrelated state event on the same screen (e.g.
+  // a `navigation.setOptions(...)` call) is deduped instead of being recorded as a new screen.
+  const seedInitialRouteKey = (): void => {
+    try {
+      const route = container?.getCurrentRoute();
+      if (route && typeof route.name === 'string') {
+        lastRouteKey = route.key ?? route.name;
+      }
+    } catch {
+      // ignore
+    }
+  };
+
+  // Runs once when the container is ready: emits the initial route, or (when
+  // trackInitialRoute is false) only seeds the dedup key so the initial screen
+  // stays hidden even if a noop state event fires on it.
+  const captureInitialRoute = (): void => {
+    if (options.trackInitialRoute !== false) {
+      handleStateChange();
+    } else {
+      seedInitialRouteKey();
+    }
+  };
+
   // Subscribes to a container event, tolerating containers/mocks that do not
   // return an unsubscribe function or do not support the event type.
   const subscribe = (
     c: NavigationContainerLike,
-    type: 'state' | 'ready'
+    type: 'state' | 'ready',
+    listener: () => void
   ): (() => void) | undefined => {
     try {
-      const result = c.addListener(type, handleStateChange);
+      const result = c.addListener(type, listener);
       return typeof result === 'function' ? (result as () => void) : undefined;
     } catch {
       return undefined;
@@ -295,9 +287,11 @@ export function reactNavigationIntegration(
     registerNavigationContainer(c) {
       const resolved = resolveContainer(c);
       if (!resolved) {
-        console.warn(
-          '[SplunkRum] reactNavigationIntegration: invalid NavigationContainer ref; navigation will not be tracked.'
-        );
+        if (__DEV__) {
+          console.warn(
+            '[SplunkRum] reactNavigationIntegration: invalid NavigationContainer ref. Navigation will not be tracked.'
+          );
+        }
         return;
       }
 
@@ -308,16 +302,14 @@ export function reactNavigationIntegration(
       container = resolved;
       lastRouteKey = undefined;
 
-      stateUnsubscribe = subscribe(resolved, 'state');
+      stateUnsubscribe = subscribe(resolved, 'state', handleStateChange);
 
-      if (options.trackInitialRoute !== false) {
-        if (isContainerReady(resolved)) {
-          // Ready now (e.g. registered from onReady): capture immediately.
-          handleStateChange();
-        } else {
-          // Registered before the container is ready: capture the first screen when the container reports ready.
-          readyUnsubscribe = subscribe(resolved, 'ready');
-        }
+      if (isContainerReady(resolved)) {
+        // Ready now (e.g. registered from onReady): capture immediately.
+        captureInitialRoute();
+      } else {
+        // Registered before the container is ready: capture the first screen once ready.
+        readyUnsubscribe = subscribe(resolved, 'ready', captureInitialRoute);
       }
     },
 

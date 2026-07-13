@@ -16,10 +16,7 @@
 
 import { SplunkRum } from '../api/SplunkRum';
 import NativeModule from '../specs/NativeSplunkOtelReactNative';
-import {
-  getActiveRouteName,
-  reactNavigationIntegration,
-} from '../integrations/reactNavigation';
+import { reactNavigationIntegration } from '../integrations/reactNavigation';
 
 type FakeRoute = { name: string; key?: string; params?: object };
 
@@ -56,38 +53,6 @@ function fakeContainer(initialRoute?: FakeRoute, opts?: { ready?: boolean }) {
   };
 }
 
-describe('getActiveRouteName', () => {
-  it('returns undefined for missing or empty state', () => {
-    expect(getActiveRouteName(undefined)).toBeUndefined();
-    expect(getActiveRouteName({ routes: [] })).toBeUndefined();
-  });
-
-  it('returns the focused top-level route', () => {
-    expect(
-      getActiveRouteName({ index: 1, routes: [{ name: 'A' }, { name: 'B' }] })
-    ).toBe('B');
-  });
-
-  it('descends into nested navigators', () => {
-    const state = {
-      index: 0,
-      routes: [
-        {
-          name: 'Tabs',
-          state: { index: 1, routes: [{ name: 'Home' }, { name: 'Detail' }] },
-        },
-      ],
-    };
-    expect(getActiveRouteName(state)).toBe('Detail');
-  });
-
-  it('falls back to the last route when index is missing', () => {
-    expect(getActiveRouteName({ routes: [{ name: 'A' }, { name: 'B' }] })).toBe(
-      'B'
-    );
-  });
-});
-
 describe('reactNavigationIntegration', () => {
   let trackSpy: jest.SpyInstance;
 
@@ -120,6 +85,25 @@ describe('reactNavigationIntegration', () => {
     expect(trackSpy).not.toHaveBeenCalled();
   });
 
+  it('seeds dedup so a stray same-screen event is not recorded when trackInitialRoute is false', () => {
+    const c = fakeContainer({ name: 'Splash', key: 'Splash-1' });
+
+    reactNavigationIntegration({ trackInitialRoute: false }).registerNavigationContainer(
+      c
+    );
+    expect(trackSpy).not.toHaveBeenCalled();
+
+    // A stray state event on the SAME screen (e.g. setOptions) must not leak it.
+    c._emit();
+    expect(trackSpy).not.toHaveBeenCalled();
+
+    // A real navigation to a different screen is still recorded.
+    c._set({ name: 'Home', key: 'Home-1' });
+    c._emit();
+    expect(trackSpy).toHaveBeenCalledTimes(1);
+    expect(trackSpy).toHaveBeenCalledWith('Home', undefined);
+  });
+
   it('defers the initial route to the ready event when not ready at register time', () => {
     const c = fakeContainer({ name: 'Home', key: 'Home-1' }, { ready: false });
 
@@ -134,16 +118,27 @@ describe('reactNavigationIntegration', () => {
     expect(trackSpy).toHaveBeenCalledWith('Home', undefined);
   });
 
-  it('does not subscribe to ready when trackInitialRoute is false', () => {
-    const c = fakeContainer({ name: 'Home', key: 'Home-1' }, { ready: false });
+  it('seeds dedup via the ready event when not ready and trackInitialRoute is false', () => {
+    const c = fakeContainer({ name: 'Splash', key: 'Splash-1' }, { ready: false });
 
     reactNavigationIntegration({ trackInitialRoute: false }).registerNavigationContainer(
       c
     );
 
-    expect(c._hasReadyListener()).toBe(false);
+    // We still subscribe to 'ready' so the dedup key can be seeded.
+    expect(c._hasReadyListener()).toBe(true);
+
     c._emitReady();
     expect(trackSpy).not.toHaveBeenCalled();
+
+    // Stray same-screen event -> deduped; navigating away -> recorded.
+    c._emit();
+    expect(trackSpy).not.toHaveBeenCalled();
+
+    c._set({ name: 'Home', key: 'Home-1' });
+    c._emit();
+    expect(trackSpy).toHaveBeenCalledTimes(1);
+    expect(trackSpy).toHaveBeenCalledWith('Home', undefined);
   });
 
   it('tracks on route change and dedups the same focused route', () => {

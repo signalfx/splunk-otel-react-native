@@ -373,7 +373,7 @@ jest.mock('@splunk/otel-react-native', () =>
 );
 ```
 
-The same mock also provides `reactNavigationIntegration` (a no-op detector) and `getActiveRouteName`. If you import the navigation integration from its subpath, map it to the mock too:
+The same mock also provides `reactNavigationIntegration` (a no-op detector). If you import the navigation integration from its subpath, map it to the mock too:
 
 ```js
 // jest.config.js
