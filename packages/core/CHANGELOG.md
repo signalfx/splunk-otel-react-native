@@ -4,7 +4,7 @@
 
 * TBD
 
-## 1.0.3
+## 1.1.0
 
 ### Added
 * **Automatic navigation tracking for `react-navigation`.** New `reactNavigationIntegration()` (imported from the `@splunk/otel-react-native/react-navigation` subpath) observes the `NavigationContainer` ref and reports JS screen changes as `app.ui.navigation` telemetry via the native navigation module, which also propagates `screen.name` to all other telemetry. Supports `viewNamePredicate`, `shouldTrackView`, `attributesFromRoute`, and `trackInitialRoute` options; captures the initial screen from the container's `ready` event, and declares `@react-navigation/native` only as an optional peer dependency (no runtime import). Works with Expo Router.

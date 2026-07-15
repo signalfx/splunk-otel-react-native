@@ -4,7 +4,7 @@
 
 * TBD
 
-## 1.0.3
+## 1.1.0
 
 ### `@splunk/otel-react-native`
 
