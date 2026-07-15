@@ -10,8 +10,14 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 public protocol AgentSharedState : AnyObject, Swift.Sendable {
   var sessionId: Swift.String { get }
+  var sessionMetadata: Swift.String? { get }
   var agentVersion: Swift.String { get }
   func applicationState(for timestamp: Foundation.Date) -> Swift.String?
+}
+extension SplunkCommon.AgentSharedState {
+  public var sessionMetadata: Swift.String? {
+    get
+  }
 }
 public protocol ActivityTracker {
   func trackActivity(at date: Foundation.Date)

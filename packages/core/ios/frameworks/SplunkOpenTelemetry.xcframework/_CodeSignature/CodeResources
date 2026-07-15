@@ -14,19 +14,19 @@
 		</data>
 		<key>ios-arm64/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		O7C8ll4M8BQ7AFTkWuxpM2ElWHs=
+		5z0R55tGl1sDTK8JpmjMlKjRrmU=
 		</data>
 		<key>ios-arm64/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		AsAYwG76RXcOZM98iuspaF/ZWIM=
+		J/i0vlQxJ9O7duqX5oWNKQkjbXg=
 		</data>
 		<key>ios-arm64/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		ijwJ8IeSB3Gi8enWFQlNboAZJuI=
+		ho67tzMzqwUCii635r8syi1oTrw=
 		</data>
 		<key>ios-arm64/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		olWHcErEUPAmJYOl92m38qpdCkM=
+		JozyDVNMWWct1ulkJi4+XMx6Vzk=
 		</data>
 		<key>ios-arm64/SplunkOpenTelemetry.framework/Modules/module.modulemap</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>ios-arm64/SplunkOpenTelemetry.framework/SplunkOpenTelemetry</key>
 		<data>
-		N2PsrO6wEC+up7YF2XwIUTnd5JI=
+		zq69tiO4TUoY1BVjBcXfTfgQzYA=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>ios-arm64/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Resources/DWARF/SplunkOpenTelemetry</key>
 		<data>
-		pvvX49tXyYmTpJ+DKmR+UJjHQ+o=
+		0PEYIue3WJ2DnedXlRtQIlvuoIM=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkOpenTelemetry.yml</key>
 		<data>
-		k97/Z8roqRHVNz4mgxJkn5b6lO8=
+		Xd4sVV9oW9LiNv9T3D53GzPxplA=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoDiskStorage.swiftinterface</key>
 		<data>
@@ -74,35 +74,35 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		O7C8ll4M8BQ7AFTkWuxpM2ElWHs=
+		5z0R55tGl1sDTK8JpmjMlKjRrmU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		up+3b72mi8P1uMY1pXQITdM2qqU=
+		BTbxwmXn3zieyGSzCnGFIHiQqDU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		aeod2KLA4zTFWx2uITtqjvHtFSg=
+		hN1SQrTj9Hgna4Zp2Fc0FEXT/VY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		9KG47LKCrKvri7BkggWhec57IRc=
+		RUQ2a+zKpTyU7o/AyZhhMX4AS1k=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		O7C8ll4M8BQ7AFTkWuxpM2ElWHs=
+		5z0R55tGl1sDTK8JpmjMlKjRrmU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		GQcZUR/8aglzTp65j606QqZHYGI=
+		dtKnnYj9+DyWAO1a+vDD4Fur0Io=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		xU/1mJaSa7LTf0482D+mF2CBgYk=
+		TBUjDzaofQODjD8rrKymPCs+sQo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		l4jL0Z3R+53a8CO6ge6gTDqsWqo=
+		USiL6Vv/Cne+B4HLBRME94QvwHg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/module.modulemap</key>
 		<data>
@@ -110,11 +110,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/SplunkOpenTelemetry</key>
 		<data>
-		zACDxto9RszU1ag+6meq+uJ6Szw=
+		g+4BRPUQhYxlxweSvDaj/gkpfBo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Iyplv4/+/LGII/dwZhis3/l9Tws=
+		9YLT4ziLC7dnBgcWeXpcXiR/tHA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -122,15 +122,15 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Resources/DWARF/SplunkOpenTelemetry</key>
 		<data>
-		ehyj49ybvxOGocILJf/noMu8h7k=
+		OJMXD2QiBOVWmQ0iWOjpQdiP0eE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkOpenTelemetry.yml</key>
 		<data>
-		b/A+dqqinKeK9KKD9sB8L+6GaJQ=
+		vyZQhHm0QYQQpSy0FLVjZVGqDe8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Resources/Relocations/x86_64/SplunkOpenTelemetry.yml</key>
 		<data>
-		dbX9P0zkJ+9GBUZKUu5vUDuyRmY=
+		jnPUe45jet0qKQEEddUWcqTXbPk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoDiskStorage.swiftinterface</key>
 		<data>
@@ -185,28 +185,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			o2KVnxPUsta75jiDXJr2VLqj496iyEczhxaKfV7AdSI=
+			MAoV06ezUKim4A8++W0J5dFJGBXCaPS4N+a0vy2oN4g=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3jRdlTTKDKtgCuGxdaweJdY1q+x91+O76HC8tf1ZL4s=
+			RejXdy4CUtiwwM1uLOlJXjJhufdf/hUFciihBIm9VBk=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s1CrDnxrqYc9IzjUKMuHtHdFPiDV9c2RiYnggwqeui4=
+			3BlYdM0tFXILXnaarhNxf+fWBIzn99iV5x5wtaizpYc=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/D+hEStDtZtrttiJ/x3ego4B8tWyRoA58j8dQcoNXsQ=
+			vt57Nq+VDG60ZecqlipsC/YLUTJW+faIWg1bD0VwyEw=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkOpenTelemetry.framework/Modules/module.modulemap</key>
@@ -220,7 +220,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WtqzSGE52tPyWMnKBsVhpJYGKGGVytdzV0nHRFI0Z/A=
+			HgMNKAHuxmU7HURWBlAWiHHHR1/xvV+VLR8Ey62wx+I=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Info.plist</key>
@@ -234,14 +234,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tr4M74EjtYzh9kHT14d3RCF/k5e0xedb51mzIVoTyXY=
+			Du2JSyAeAPcECl7rIjj5YgRGlhjvR6RG//qSrwXrwbI=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkOpenTelemetry.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6tSV3jf+WiHcB9JRLlo0FRGobfy78Su3b000BzMVPM4=
+			Cia7Yc4TI8WlWwhIxrC6jJEYHB48xuaxFYhPyX9q3KA=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoDiskStorage.swiftinterface</key>
@@ -290,56 +290,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			o2KVnxPUsta75jiDXJr2VLqj496iyEczhxaKfV7AdSI=
+			MAoV06ezUKim4A8++W0J5dFJGBXCaPS4N+a0vy2oN4g=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			q1wMEFG180NzBxXh7XXngJWxH4mRYQbY/f2pMq5XULg=
+			X20ipTM2DPbzHjSTcCxELML1VtOuDIlcTRN5MkrxiKg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1i2HbKa4XBcklHvBC9BsyPMvvk6ZFDH4C4JMyAF6KHE=
+			2diX5trwtwZAT5X9kFeAPiCtUniSW98lmbRFJcQEBtA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lTxTbQE/dE7DmCcdGyrpSiznVP/2CnTTcSb8G1bjF1Q=
+			X8WPWlQhIaENt070NE3IKBWwooDwP9IYjR3oOLrAmsk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			o2KVnxPUsta75jiDXJr2VLqj496iyEczhxaKfV7AdSI=
+			MAoV06ezUKim4A8++W0J5dFJGBXCaPS4N+a0vy2oN4g=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fWL+UKJq2sDG04eyYGBlbHPdpsxHJC+W1gSG7w82QUA=
+			+/FImnw6VQ+3eQgNgtqBzAF4f1irXfwYk37Hh/0g+0w=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G1G+9FchUrtE6f03AFFIK7G5u1/SpiRSwOp9B8RWaAU=
+			XA3uFg060HK8xH1Ug5+7R4/4u1p2BKkq7wHHYCs6TF4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/PX4rOmGjTEmsPT+9qe4Jh+78nwPINnHpFFrfXI2pBw=
+			ce4sLL09lK31v3NoJB2OYSwEZp+5rGRb3VAcxj7MAUY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/Modules/module.modulemap</key>
@@ -353,14 +353,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6LqmLGB7rF98EgzTztvcMkl+1wRl5x9W3EAwrwNj2Ow=
+			QDKzcRH6lhyvJyhN92oiFtvbk/2fSUh1vesW8Dp5P1g=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetry.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YuYxiuVuj68oMjvIze/Cnhx7Q8UFJG4vNCCwGAhntGQ=
+			71IDtnIq4s2YS/6E8LorEuN6+6r2YUIcaTKL49D+6rE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Info.plist</key>
@@ -374,21 +374,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sQAcrTGB9W97c5sqFaKxMyhnszjUatMIp/6MhC20jNY=
+			Xdjwh6WqoBMYMIgQhreB+VucyvmN5Gvs1OYyqgx1TEc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkOpenTelemetry.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			M/teQgFaGUVb+cGQV1UtIZp8quRHCQio/Ey0M2ahMFw=
+			J/+DtAVzoI3l2sPBmIZbhmHPea7CCsp+/m9YvmgfiYg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Resources/Relocations/x86_64/SplunkOpenTelemetry.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rOQM/9AAbf1BUvFJxV2F3H3HLysEBDRyIkKKDkk7SW0=
+			NDAFNNYWNW3Ag1jjoVZCl12I2gmBWT5m4igxfX8+anY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkOpenTelemetry.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoDiskStorage.swiftinterface</key>

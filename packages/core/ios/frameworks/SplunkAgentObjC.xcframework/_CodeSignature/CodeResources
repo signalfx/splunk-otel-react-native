@@ -6,7 +6,7 @@
 	<dict>
 		<key>ios-arm64/SplunkAgentObjC.framework/Headers/SplunkAgentObjC-Swift.h</key>
 		<data>
-		8YRsOurNKdu0M1aFzA1v5dwRa8k=
+		c1QuumEgTRICo71Kh0IymhW9iOU=
 		</data>
 		<key>ios-arm64/SplunkAgentObjC.framework/Info.plist</key>
 		<data>
@@ -14,19 +14,19 @@
 		</data>
 		<key>ios-arm64/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		n3hO3B1IZATZctpbahH3kAr1tI8=
+		6SUK7Q2ntde365g3KzW6aFLa1k0=
 		</data>
 		<key>ios-arm64/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		t5ITNlNxiIT/Ta9rar3Ph1iJQaI=
+		+OM+ZWqIzucIRd/6ncS5XQYlf8Q=
 		</data>
 		<key>ios-arm64/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		AeEbx+1QKPJn49TDdykfVJ2UY3s=
+		Jfps1oekyc8HlvT1RerCkFpgTM0=
 		</data>
 		<key>ios-arm64/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		3nxGISR3oLy1fV66KMOpb0omT6U=
+		2/vVgwM2wDXHRWu8zNzo4uylJ0Y=
 		</data>
 		<key>ios-arm64/SplunkAgentObjC.framework/Modules/module.modulemap</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>ios-arm64/SplunkAgentObjC.framework/SplunkAgentObjC</key>
 		<data>
-		KqthGGGYJBm3RY/YdLqWyILQl7I=
+		I2DgL5LRX0IPhIV6AaQM6hPuf0o=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>ios-arm64/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Resources/DWARF/SplunkAgentObjC</key>
 		<data>
-		w+P8iEe0g8H6KPojG2yHyN5vTcU=
+		XnbGGa5j0VlUQarzzhCdeaALREg=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkAgentObjC.yml</key>
 		<data>
-		YBjisubnwtV4SBwVHAA7V32bZmA=
+		QgK2foxnsfUqcZGK3bXCSqO230c=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Resources/Swift/aarch64/OpenTelemetryApi.swiftinterface</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Headers/SplunkAgentObjC-Swift.h</key>
 		<data>
-		a0hSQD2RppiVqTKV14sP1Kz6ZUE=
+		DBPN4FkJpN2GcipU5LHd2EBjPVk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Info.plist</key>
 		<data>
@@ -70,35 +70,35 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		n3hO3B1IZATZctpbahH3kAr1tI8=
+		6SUK7Q2ntde365g3KzW6aFLa1k0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		BBq9Vn4r4ivKPJnLrOSmbXaAyqE=
+		BGzhg2qZDW2le6e0TlIWhk0YFJI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		n5v8dPOTfl/I18D8G85QLEKFvwA=
+		upDQcu35UxGiexLSK8Ch15nR+0A=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		lbBcOYxP/J72fVFT+w+wRmIW7kc=
+		4UfqeAdt3pdCuLUCyO4t7znzdD4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		n3hO3B1IZATZctpbahH3kAr1tI8=
+		6SUK7Q2ntde365g3KzW6aFLa1k0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		kAm1yIPTZg4rkabSq/waETDiHYM=
+		555DvGJsXd/keLIgjA74nJhXcpA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		CP4JcrY0zL6iUM2IttD872xuTWA=
+		QKiC7EO2D+KZXlcPh6w7zVVyPzs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ME+ikXRkfc6IWp8cbE81FTz9ffI=
+		jCm6Jarkfxiid9kLyg6kRgy6TqY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/module.modulemap</key>
 		<data>
@@ -114,11 +114,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/SplunkAgentObjC</key>
 		<data>
-		ahuEz4uJNav9QSfzM/gUlay5jlY=
+		QN4u19mlMkCflcKZcpqLI8a4fY8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Ns6tL/liIf9opP9WL8lzIKu/7vg=
+		CCArBpkqYPtbf3V85B2rBk7YTKk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -126,15 +126,15 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Resources/DWARF/SplunkAgentObjC</key>
 		<data>
-		0P4uOAFRTj2oIzZNAfNnOTgqqXs=
+		nVdtOHenfXyH2X5goZ+tcech8O0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkAgentObjC.yml</key>
 		<data>
-		NtJGPQjgymeXHMfyETDDD7fpoVc=
+		L0jcyWeX7scWtx87hWJKLVeZuV0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Resources/Relocations/x86_64/SplunkAgentObjC.yml</key>
 		<data>
-		Mm+X4Fnx2K9Ss6uVUnG8HY2HXzw=
+		Lng8w0ShQdy9zIDLYZrRhNWv11Y=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Resources/Swift/aarch64/OpenTelemetryApi.swiftinterface</key>
 		<data>
@@ -151,7 +151,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nnICsT/oUMxR+wAqZkeCEgcxGxDZhjDYxONEcMN5M/Q=
+			6lz3TxYjYWwY4yqK+z30qA9DSPHMZviO52ayDpa1BDM=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkAgentObjC.framework/Info.plist</key>
@@ -165,28 +165,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iGP+mIvxTXYdsUBrcKOhMjRdRKvTA49qcwmwA0GyaeA=
+			MGmFJz6Sp3d6AfJque6YLGglblNcjjbc2akigz3D7YI=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YNAYMj4YTPcqFjx6IIP+p1v0tBSSe9GcgtYFK48jwlk=
+			l3nXNyH45qe/qNAxurwAyt2rvZEMdXqh2nPq4PlWutE=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8kKyl7vlJ2zR+ZFtXlhK2kfGW2mDSdB10tH3XD5MXhs=
+			0ExIHFiQ6hlX/8Hlf76bShvlp+SXsfJQaTNsfrUcpp0=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VclxvgbFM9YZYaScwYTqcephrDuJ96C9DFToShNE6Qc=
+			eqgFM64Zu9VVhWJlilwgfpmAFl2zBiA3sZgCMNgXnAE=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkAgentObjC.framework/Modules/module.modulemap</key>
@@ -214,7 +214,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6YcuHVUBtY6VYlQCzfItwOCQHTrqSnHptfpRAfX8DAM=
+			ZaaaffiLUEFM2bfR6TVWTc+0J4Xq97LuhRYYDBf+c48=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Info.plist</key>
@@ -228,14 +228,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mHbw0scWKh2zw/Utt0pfoJRcKR2vuZZCFmWVD8LugLM=
+			oe4k3RGfLH4l7SZkxruKHR46/vGUnD3jQ/ejmbe2Xx4=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkAgentObjC.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9c+2KvBVUCCr99evPpePaaia8X8W8LtzZVd+/10K8eo=
+			y4xtfyUypRDfupFT6w2LPjLYexjS3nQvh4+TF1DzUtY=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Resources/Swift/aarch64/OpenTelemetryApi.swiftinterface</key>
@@ -249,7 +249,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PdVr/2/PWhzDl1d8i0oe5BweTrFWbsFsTexGfx3qrMA=
+			9+IRyjFlLEKk6SDMQu0To+luBL6CT8mPDEG6sNhCFdk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Info.plist</key>
@@ -263,56 +263,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iGP+mIvxTXYdsUBrcKOhMjRdRKvTA49qcwmwA0GyaeA=
+			MGmFJz6Sp3d6AfJque6YLGglblNcjjbc2akigz3D7YI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XFIIOgjfyUrnpIGoaEigD7lvNIuS26Url+vdf10E0Ig=
+			fXB0UtcigWJcJhtFYICpw6hMskaQUagzBwZR5Wh3OTo=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8a1oyfk8V5Saak7GrARZezK+muBt4A1MNoI9VNvZpf0=
+			X7B1siCItBbb5lIaket6tWQUsersqpOMKa7X/VepkBk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			04V8Od1XDvEECFui/AJg+dd4O8nR4qg1gvoqw6ronGA=
+			Ll9jY3OT2xTU7eLr4t1LL81eGPLoYXKJL3LeeZyfzY8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iGP+mIvxTXYdsUBrcKOhMjRdRKvTA49qcwmwA0GyaeA=
+			MGmFJz6Sp3d6AfJque6YLGglblNcjjbc2akigz3D7YI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CEV5l4+AgM+eo9kRxgHPRbK1TctpXEfZpL6PrvJlJvs=
+			gdp+IF5TzJwxaVp86+1MhXqYVV7XMjY2grV+kjl5QAo=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ugqyo5O77g3f2qZnBES+KEVgQLhWPiSetie69KviPq8=
+			dh26HKqOGScNE3jWKpO0somH5tiZYQnx4qnrrfhJK4A=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			St8HR3zFfSFKwczFxPHlcL1QOC5spKVP/i+AVT3bW9Y=
+			5T4uiyn3TqWM8gROxVYo5ASTJJ2KAzQolVrFc2UCoyI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/Modules/module.modulemap</key>
@@ -340,14 +340,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			M62adMJgNDOyAynagQpYSmD5pebz/V4bAzBHq6Q6/FU=
+			hnRtRerc58ak7cudRDt2P0MGextJRDbINa0+j8QyScI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkAgentObjC.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WjV2Phhdbi/pUl1OhWXBqbTL33H2wVNylkwE90wDEOM=
+			22+JqNt3orBohSYLfg7ztCu/ufrnBVS2yQpLqTnbk40=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Info.plist</key>
@@ -361,21 +361,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zTGYCH4re6tTJqbP9PmkaHkaMEglORcVjnrzmlHNsW0=
+			6jFEA6xa7mHRZh9nhiXV/msDPV4rxvk3dyrCzxlgA5I=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkAgentObjC.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CmruARQka8fYiVZlzVlD3XApDUuY1E9npKnf9Ci0O3c=
+			qtbiJ2HQlcorBi58QEHlrlYjh9MoYhOEZu7pdI+yuKw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Resources/Relocations/x86_64/SplunkAgentObjC.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Thxvb7ytCxSz6Sy4BYmwpJkO8X94PIxttay1mRg98ak=
+			gsLy/wG6tGb9p38LSOkWzNqU/+SycrKlRY/45henbQc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkAgentObjC.framework.dSYM/Contents/Resources/Swift/aarch64/OpenTelemetryApi.swiftinterface</key>

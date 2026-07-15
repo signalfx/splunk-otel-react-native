@@ -58,6 +58,7 @@ jest.mock('./src/specs/NativeSplunkOtelReactNative', () => ({
     customTrackEvent: jest.fn().mockResolvedValue(undefined),
     customStartWorkflow: jest.fn().mockResolvedValue(1),
     customEndWorkflow: jest.fn().mockResolvedValue(undefined),
+    navigationTrack: jest.fn().mockResolvedValue(undefined),
     integrateWebViewWithBrowserRum: jest.fn().mockResolvedValue(undefined),
   },
 }));

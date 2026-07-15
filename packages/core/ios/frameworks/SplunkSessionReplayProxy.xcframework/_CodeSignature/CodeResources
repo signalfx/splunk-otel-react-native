@@ -42,7 +42,7 @@
 		</data>
 		<key>ios-arm64/dSYMs/SplunkSessionReplayProxy.framework.dSYM/Contents/Resources/DWARF/SplunkSessionReplayProxy</key>
 		<data>
-		5tk1AcnhGBAAqX59hnoVuwX101Q=
+		IwalJD8vrDsNma96KRCfht6/Qzc=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkSessionReplayProxy.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkSessionReplayProxy.yml</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkSessionReplayProxy.framework.dSYM/Contents/Resources/DWARF/SplunkSessionReplayProxy</key>
 		<data>
-		QBuqne53klwwTu7W4ABqQ2bhNbk=
+		x0/qa+Hum3r4hKnjZEzBVj/tti4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkSessionReplayProxy.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkSessionReplayProxy.yml</key>
 		<data>
@@ -198,7 +198,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			udjuZ6RUGS8SpxiPxGupmt8RVvUChMaLYCVdH6hW4hI=
+			AuzqZgoH78VTJz+sXQQihKqRPRAholUWx/Fb1yw7nYY=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkSessionReplayProxy.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkSessionReplayProxy.yml</key>
@@ -317,7 +317,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8pa1LobBxRVww0Zf43YOMkeYRuNnSXIDXGG+P4vI6JQ=
+			RRcXN5BqO8WZ3lOx8vht3Vu+fGi95FT+fVMtzq5f0mY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkSessionReplayProxy.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkSessionReplayProxy.yml</key>

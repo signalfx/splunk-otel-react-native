@@ -640,6 +640,54 @@ SWIFT_CLASS_NAMED("CustomTrackingModuleObjC")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class SPLKNavigationEvent;
+/// A processor that intercepts automated navigation events before they produce spans.
+/// Implement this protocol to customize how detected <code>UIViewController</code> transitions
+/// are named, enriched, or filtered. The processor is called once per automated
+/// navigation event; manual <code>NavigationModuleObjC/track(screen:)</code> calls bypass it.
+/// Assign your processor to
+/// <code>NavigationConfigurationObjC/navigationEventProcessor</code> before starting the agent.
+/// <h2>Threading</h2>
+/// The callback may be invoked from a background queue. Implementations must be
+/// thread-safe or stateless.
+SWIFT_PROTOCOL_NAMED("NavigationEventProcessorObjC")
+@protocol SPLKNavigationEventProcessor
+/// Called for each detected <code>UIViewController</code> navigation event.
+/// Return a <code>NavigationEventObjC</code> to allow the navigation — potentially with a
+/// transformed name or additional attributes — or return <code>nil</code> to suppress it.
+/// \param typeName The view controller’s class name. The SDK strips the
+/// application module prefix before invoking this method, so your
+/// callback will receive <code>"DetailViewController"</code> as the value of
+/// this parameter rather than <code>"MyApp.DetailViewController"</code>.
+///
+/// \param controllerIdentity An opaque <code>NSString</code> that the SDK generates from the
+/// <code>ObjectIdentifier</code> of the <code>UIViewController</code> instance and passes to this
+/// callback. Use it to correlate multiple callbacks for the same controller
+/// instance (for example, to track which instances have already been seen).
+/// It is unique among simultaneously live instances, stable for the lifetime
+/// of the instance, and may be reused after the controller is deallocated.
+/// It is not persisted across app launches. Use <code>isEqual:</code> to compare
+/// identities.
+///
+///
+/// returns:
+/// A navigation event describing the screen, or <code>nil</code> to suppress.
+- (SPLKNavigationEvent * _Nullable)onViewControllerWithTypeName:(NSString * _Nonnull)typeName controllerIdentity:(NSString * _Nonnull)controllerIdentity SWIFT_WARN_UNUSED_RESULT;
+@end
+
+/// The default processor that passes navigation events through unchanged.
+/// This processor returns the sanitized controller type name as the screen name
+/// with no additional attributes. It is used automatically when no custom
+/// <code>NavigationEventProcessorObjC</code> is configured.
+SWIFT_CLASS_NAMED("DefaultNavigationEventProcessorObjC")
+@interface SPLKDefaultNavigationEventProcessor : NSObject <SPLKNavigationEventProcessor>
+/// Creates a default navigation event processor.
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// Returns a navigation event using the sanitized controller type name as the screen name,
+/// with no custom attributes.
+- (SPLKNavigationEvent * _Nullable)onViewControllerWithTypeName:(NSString * _Nonnull)typeName controllerIdentity:(NSString * _Nonnull)_ SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class NSURL;
 /// Endpoint configuration builds OTel collector urls.
 /// URLs can be defined either by providing the <code>realm</code>, which sends all instrumentation to the Splunk RUM collector to a specified realm;
@@ -716,12 +764,24 @@ typedef SWIFT_ENUM_NAMED(NSInteger, SPLKMaskElementType, "MaskTypeObjC", open) {
   SPLKMaskElementTypeErasing = 1,
 };
 
-/// The class implements the Navigation module configuration.
+/// Objective-C configuration for the navigation module.
+/// Use this class to enable automated navigation tracking and optionally
+/// configure a <code>NavigationEventProcessorObjC</code> to customize screen names,
+/// add span attributes, or suppress specific navigation events.
 SWIFT_CLASS_NAMED("NavigationConfigurationObjC")
 @interface SPLKNavigationConfiguration : SPLKModuleConfiguration
 /// A <code>BOOL</code> value determines whether the module should automatically detect navigation in the application.
 /// Default value is <code>NO</code>.
 @property (nonatomic) BOOL enableAutomatedTracking;
+/// Processor that intercepts automated navigation events before they produce spans.
+/// Set a custom <code>NavigationEventProcessorObjC</code> to rename screens, add span attributes,
+/// or suppress specific events by returning <code>nil</code> from the processor method.
+/// When <code>nil</code>, the default processor passes the controller type name through unchanged.
+/// important:
+/// The processor is retained strongly by the SDK for the lifetime
+/// of the agent. Avoid capturing references that transitively own <code>SplunkRum</code>;
+/// prefer stateless processors or weak captures where needed.
+@property (nonatomic, strong) id <SPLKNavigationEventProcessor> _Nullable navigationEventProcessor;
 /// Initializes new module configuration.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 /// Initializes new module configuration with preconfigured values.
@@ -734,6 +794,42 @@ SWIFT_CLASS_NAMED("NavigationConfigurationObjC")
 /// \param enableAutomatedTracking If <code>YES</code>, the module will automatically detect navigation.
 ///
 - (nonnull instancetype)initWithEnabled:(BOOL)isEnabled automatedTracking:(BOOL)enableAutomatedTracking OBJC_DESIGNATED_INITIALIZER;
+/// Initializes new module configuration with preconfigured values.
+/// \param isEnabled A <code>BOOL</code> value sets whether the module is enabled.
+///
+/// \param enableAutomatedTracking If <code>YES</code>, the module will automatically detect navigation.
+///
+/// \param navigationEventProcessor Optional processor to transform automated navigation events.
+///
+- (nonnull instancetype)initWithEnabled:(BOOL)isEnabled automatedTracking:(BOOL)enableAutomatedTracking navigationEventProcessor:(id <SPLKNavigationEventProcessor> _Nullable)navigationEventProcessor OBJC_DESIGNATED_INITIALIZER;
+@end
+
+/// The result of processing an automated navigation event.
+/// Returned by <code>NavigationEventProcessorObjC/onViewController(typeName:controllerIdentity:)</code>
+/// to describe how a detected screen transition should be recorded. The <code>name</code> becomes the
+/// <code>navigation.name</code> span attribute, and any <code>attributes</code> are added to the <code>app.ui.navigation</code> span.
+SWIFT_CLASS_NAMED("NavigationEventObjC")
+@interface SPLKNavigationEvent : NSObject
+/// The screen name to use for this navigation event.
+/// This value is set as the <code>navigation.name</code> and <code>screen.name</code> span attributes.
+@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+/// Custom attributes to include in the <code>app.ui.navigation</code> span.
+/// Use this to enrich the <code>app.ui.navigation</code> span with application-specific metadata
+/// (e.g., content identifiers, feature flags, or section names).
+/// Supported value types: <code>NSString</code>, <code>NSNumber</code> (integer, double, boolean), and arrays of those types.
+@property (nonatomic, readonly, strong) NSDictionary * _Nullable attributes;
+/// Creates a navigation event.
+/// \param name The screen name for this navigation event.
+///
+/// \param attributes Optional custom attributes to include in the <code>app.ui.navigation</code> span.
+///
+- (nonnull instancetype)initWithName:(NSString * _Nonnull)name attributes:(NSDictionary * _Nullable)attributes OBJC_DESIGNATED_INITIALIZER;
+/// Creates a navigation event with no custom attributes.
+/// \param name The screen name for this navigation event.
+///
+- (nonnull instancetype)initWithName:(NSString * _Nonnull)name;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class SPLKNavigationModulePreferences;
@@ -741,7 +837,7 @@ SWIFT_CLASS_NAMED("NavigationConfigurationObjC")
 /// The class implements a public API for the Navigation module.
 SWIFT_CLASS_NAMED("NavigationModuleObjC")
 @interface SPLKNavigationModule : NSObject
-/// An object that holds preferred settings for the module, a <code>NavigationModulePreferencesObjc</code> instance.
+/// An object that holds preferred settings for the module, a <code>NavigationModulePreferencesObjC</code> instance.
 @property (nonatomic, strong) SPLKNavigationModulePreferences * _Nonnull preferences;
 /// An object that reflects the current state and settings used for the module, a <code>NavigationModuleStateObjC</code> instance.
 @property (nonatomic, readonly, strong) SPLKNavigationModuleState * _Nonnull state;
@@ -754,6 +850,19 @@ SWIFT_CLASS_NAMED("NavigationModuleObjC")
 /// returns:
 /// The actual <code>NavigationModuleObjC</code> instance.
 - (SPLKNavigationModule * _Nonnull)trackScreen:(NSString * _Nonnull)name;
+/// Sets a manual screen name with custom attributes (setting is valid until a new name is set).
+/// note:
+/// The set value is not linked to any specific UI element.
+/// \param name The name to be tracked as the screen name until being changed.
+///
+/// \param attributes Optional custom key-value pairs to attach to the <code>app.ui.navigation</code> span.
+/// Supported value types: <code>NSString</code>, <code>NSNumber</code> (integer, double, boolean), and arrays of those types.
+/// Other types are converted to their string representation.
+///
+///
+/// returns:
+/// The actual <code>NavigationModuleObjC</code> instance.
+- (SPLKNavigationModule * _Nonnull)trackScreen:(NSString * _Nonnull)name attributes:(NSDictionary * _Nullable)attributes;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -2065,6 +2174,54 @@ SWIFT_CLASS_NAMED("CustomTrackingModuleObjC")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class SPLKNavigationEvent;
+/// A processor that intercepts automated navigation events before they produce spans.
+/// Implement this protocol to customize how detected <code>UIViewController</code> transitions
+/// are named, enriched, or filtered. The processor is called once per automated
+/// navigation event; manual <code>NavigationModuleObjC/track(screen:)</code> calls bypass it.
+/// Assign your processor to
+/// <code>NavigationConfigurationObjC/navigationEventProcessor</code> before starting the agent.
+/// <h2>Threading</h2>
+/// The callback may be invoked from a background queue. Implementations must be
+/// thread-safe or stateless.
+SWIFT_PROTOCOL_NAMED("NavigationEventProcessorObjC")
+@protocol SPLKNavigationEventProcessor
+/// Called for each detected <code>UIViewController</code> navigation event.
+/// Return a <code>NavigationEventObjC</code> to allow the navigation — potentially with a
+/// transformed name or additional attributes — or return <code>nil</code> to suppress it.
+/// \param typeName The view controller’s class name. The SDK strips the
+/// application module prefix before invoking this method, so your
+/// callback will receive <code>"DetailViewController"</code> as the value of
+/// this parameter rather than <code>"MyApp.DetailViewController"</code>.
+///
+/// \param controllerIdentity An opaque <code>NSString</code> that the SDK generates from the
+/// <code>ObjectIdentifier</code> of the <code>UIViewController</code> instance and passes to this
+/// callback. Use it to correlate multiple callbacks for the same controller
+/// instance (for example, to track which instances have already been seen).
+/// It is unique among simultaneously live instances, stable for the lifetime
+/// of the instance, and may be reused after the controller is deallocated.
+/// It is not persisted across app launches. Use <code>isEqual:</code> to compare
+/// identities.
+///
+///
+/// returns:
+/// A navigation event describing the screen, or <code>nil</code> to suppress.
+- (SPLKNavigationEvent * _Nullable)onViewControllerWithTypeName:(NSString * _Nonnull)typeName controllerIdentity:(NSString * _Nonnull)controllerIdentity SWIFT_WARN_UNUSED_RESULT;
+@end
+
+/// The default processor that passes navigation events through unchanged.
+/// This processor returns the sanitized controller type name as the screen name
+/// with no additional attributes. It is used automatically when no custom
+/// <code>NavigationEventProcessorObjC</code> is configured.
+SWIFT_CLASS_NAMED("DefaultNavigationEventProcessorObjC")
+@interface SPLKDefaultNavigationEventProcessor : NSObject <SPLKNavigationEventProcessor>
+/// Creates a default navigation event processor.
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// Returns a navigation event using the sanitized controller type name as the screen name,
+/// with no custom attributes.
+- (SPLKNavigationEvent * _Nullable)onViewControllerWithTypeName:(NSString * _Nonnull)typeName controllerIdentity:(NSString * _Nonnull)_ SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class NSURL;
 /// Endpoint configuration builds OTel collector urls.
 /// URLs can be defined either by providing the <code>realm</code>, which sends all instrumentation to the Splunk RUM collector to a specified realm;
@@ -2141,12 +2298,24 @@ typedef SWIFT_ENUM_NAMED(NSInteger, SPLKMaskElementType, "MaskTypeObjC", open) {
   SPLKMaskElementTypeErasing = 1,
 };
 
-/// The class implements the Navigation module configuration.
+/// Objective-C configuration for the navigation module.
+/// Use this class to enable automated navigation tracking and optionally
+/// configure a <code>NavigationEventProcessorObjC</code> to customize screen names,
+/// add span attributes, or suppress specific navigation events.
 SWIFT_CLASS_NAMED("NavigationConfigurationObjC")
 @interface SPLKNavigationConfiguration : SPLKModuleConfiguration
 /// A <code>BOOL</code> value determines whether the module should automatically detect navigation in the application.
 /// Default value is <code>NO</code>.
 @property (nonatomic) BOOL enableAutomatedTracking;
+/// Processor that intercepts automated navigation events before they produce spans.
+/// Set a custom <code>NavigationEventProcessorObjC</code> to rename screens, add span attributes,
+/// or suppress specific events by returning <code>nil</code> from the processor method.
+/// When <code>nil</code>, the default processor passes the controller type name through unchanged.
+/// important:
+/// The processor is retained strongly by the SDK for the lifetime
+/// of the agent. Avoid capturing references that transitively own <code>SplunkRum</code>;
+/// prefer stateless processors or weak captures where needed.
+@property (nonatomic, strong) id <SPLKNavigationEventProcessor> _Nullable navigationEventProcessor;
 /// Initializes new module configuration.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 /// Initializes new module configuration with preconfigured values.
@@ -2159,6 +2328,42 @@ SWIFT_CLASS_NAMED("NavigationConfigurationObjC")
 /// \param enableAutomatedTracking If <code>YES</code>, the module will automatically detect navigation.
 ///
 - (nonnull instancetype)initWithEnabled:(BOOL)isEnabled automatedTracking:(BOOL)enableAutomatedTracking OBJC_DESIGNATED_INITIALIZER;
+/// Initializes new module configuration with preconfigured values.
+/// \param isEnabled A <code>BOOL</code> value sets whether the module is enabled.
+///
+/// \param enableAutomatedTracking If <code>YES</code>, the module will automatically detect navigation.
+///
+/// \param navigationEventProcessor Optional processor to transform automated navigation events.
+///
+- (nonnull instancetype)initWithEnabled:(BOOL)isEnabled automatedTracking:(BOOL)enableAutomatedTracking navigationEventProcessor:(id <SPLKNavigationEventProcessor> _Nullable)navigationEventProcessor OBJC_DESIGNATED_INITIALIZER;
+@end
+
+/// The result of processing an automated navigation event.
+/// Returned by <code>NavigationEventProcessorObjC/onViewController(typeName:controllerIdentity:)</code>
+/// to describe how a detected screen transition should be recorded. The <code>name</code> becomes the
+/// <code>navigation.name</code> span attribute, and any <code>attributes</code> are added to the <code>app.ui.navigation</code> span.
+SWIFT_CLASS_NAMED("NavigationEventObjC")
+@interface SPLKNavigationEvent : NSObject
+/// The screen name to use for this navigation event.
+/// This value is set as the <code>navigation.name</code> and <code>screen.name</code> span attributes.
+@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+/// Custom attributes to include in the <code>app.ui.navigation</code> span.
+/// Use this to enrich the <code>app.ui.navigation</code> span with application-specific metadata
+/// (e.g., content identifiers, feature flags, or section names).
+/// Supported value types: <code>NSString</code>, <code>NSNumber</code> (integer, double, boolean), and arrays of those types.
+@property (nonatomic, readonly, strong) NSDictionary * _Nullable attributes;
+/// Creates a navigation event.
+/// \param name The screen name for this navigation event.
+///
+/// \param attributes Optional custom attributes to include in the <code>app.ui.navigation</code> span.
+///
+- (nonnull instancetype)initWithName:(NSString * _Nonnull)name attributes:(NSDictionary * _Nullable)attributes OBJC_DESIGNATED_INITIALIZER;
+/// Creates a navigation event with no custom attributes.
+/// \param name The screen name for this navigation event.
+///
+- (nonnull instancetype)initWithName:(NSString * _Nonnull)name;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class SPLKNavigationModulePreferences;
@@ -2166,7 +2371,7 @@ SWIFT_CLASS_NAMED("NavigationConfigurationObjC")
 /// The class implements a public API for the Navigation module.
 SWIFT_CLASS_NAMED("NavigationModuleObjC")
 @interface SPLKNavigationModule : NSObject
-/// An object that holds preferred settings for the module, a <code>NavigationModulePreferencesObjc</code> instance.
+/// An object that holds preferred settings for the module, a <code>NavigationModulePreferencesObjC</code> instance.
 @property (nonatomic, strong) SPLKNavigationModulePreferences * _Nonnull preferences;
 /// An object that reflects the current state and settings used for the module, a <code>NavigationModuleStateObjC</code> instance.
 @property (nonatomic, readonly, strong) SPLKNavigationModuleState * _Nonnull state;
@@ -2179,6 +2384,19 @@ SWIFT_CLASS_NAMED("NavigationModuleObjC")
 /// returns:
 /// The actual <code>NavigationModuleObjC</code> instance.
 - (SPLKNavigationModule * _Nonnull)trackScreen:(NSString * _Nonnull)name;
+/// Sets a manual screen name with custom attributes (setting is valid until a new name is set).
+/// note:
+/// The set value is not linked to any specific UI element.
+/// \param name The name to be tracked as the screen name until being changed.
+///
+/// \param attributes Optional custom key-value pairs to attach to the <code>app.ui.navigation</code> span.
+/// Supported value types: <code>NSString</code>, <code>NSNumber</code> (integer, double, boolean), and arrays of those types.
+/// Other types are converted to their string representation.
+///
+///
+/// returns:
+/// The actual <code>NavigationModuleObjC</code> instance.
+- (SPLKNavigationModule * _Nonnull)trackScreen:(NSString * _Nonnull)name attributes:(NSDictionary * _Nullable)attributes;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

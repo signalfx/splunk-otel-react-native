@@ -52,4 +52,6 @@ export interface SplunkNativeModuleType extends Spec {
   ): Promise<number>;
 
   customTrackEvent(name: string, attributes: Attributes): Promise<void>;
+
+  navigationTrack(screenName: string, attributes: Attributes): Promise<void>;
 }

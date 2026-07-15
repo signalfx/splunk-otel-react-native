@@ -587,18 +587,20 @@ RCT_REMAP_METHOD(customEndWorkflow,
 #ifndef RCT_NEW_ARCH_ENABLED
 RCT_REMAP_METHOD(navigationTrack,
                  navigationTrackScreenName:(NSString *)screenName
+                 attributes:(NSDictionary *)attributes
                  resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {
-  [self navigationTrack:screenName resolve:resolve reject:reject];
+  [self navigationTrack:screenName attributes:attributes resolve:resolve reject:reject];
 }
 #endif
 
 - (void)navigationTrack:(NSString *)screenName
+             attributes:(NSDictionary *)attributes
                 resolve:(RCTPromiseResolveBlock)resolve
                  reject:(RCTPromiseRejectBlock)reject
 {
-  [self.impl navigationTrackWithScreenName:screenName resolve:resolve reject:reject];
+  [self.impl navigationTrackWithScreenName:screenName attributes:attributes resolve:resolve reject:reject];
 }
 
 #pragma mark - WebView Integration

@@ -274,6 +274,70 @@ const workflow = await SplunkRum.instance.customTracking.startWorkflow('checkout
 await workflow.end();
 ```
 
+### Navigation Tracking
+
+Screen navigation is emitted as `app.ui.navigation` telemetry by the native agents, which also adds the current `screen.name` onto all other telemetry (errors, crashes, network spans, session replay).
+
+In a React Native app, native automatic detection only sees the host `Activity` / view controller (and `react-native-screens` containers), not the app's JS routes. Keep native automatic tracking **off** and let the JS layer report real screen names:
+
+```tsx
+new NavigationModuleConfiguration(true, false); // enabled, native auto-tracking off
+```
+
+#### Automatic tracking with `react-navigation`
+
+The agent ships a `react-navigation` integration behind a dedicated subpath. It observes the `NavigationContainer` ref and reports focused-route changes; it never imports `@react-navigation/native` (declared only as an optional peer), so apps that don't use it pull nothing.
+
+```tsx
+import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
+import { reactNavigationIntegration } from '@splunk/otel-react-native/react-navigation';
+
+const splunkNavigation = reactNavigationIntegration();
+
+export default function App() {
+  const navigationRef = useNavigationContainerRef();
+
+  return (
+    <NavigationContainer
+      ref={navigationRef}
+      onReady={() => splunkNavigation.registerNavigationContainer(navigationRef)}
+    >
+      {/* ... */}
+    </NavigationContainer>
+  );
+}
+```
+
+Registration can happen at any time — if the container is not ready yet, the initial screen is captured from its `ready` event. Call `splunkNavigation.unregisterNavigationContainer()` to stop tracking. Expo Router works unchanged (pass its `useNavigationContainerRef()` result).
+
+Options let you rename, filter, and enrich tracked views:
+
+```tsx
+reactNavigationIntegration({
+  // Rename a view, or return null/'' to skip tracking it.
+  viewNamePredicate: (route, defaultName) =>
+    route.name === 'Secret' ? null : defaultName,
+  // Decide whether a route is tracked at all.
+  shouldTrackView: (route) => route.name !== 'Debug',
+  // Attach attributes (e.g. selected route params). Off by default.
+  attributesFromRoute: (route) => ({ 'route.key': route.key ?? route.name }),
+  // Track the first screen on register. Defaults to true.
+  trackInitialRoute: true,
+});
+```
+
+The route change pipeline is as follows: dedup by route key -> `viewNamePredicate` -> `shouldTrackView` -> `attributesFromRoute` -> emit. Consecutive updates to the same focused route (e.g. param-only changes) are suppressed.
+
+#### Manual tracking
+
+For custom navigation systems, track screens directly:
+
+```tsx
+import { SplunkRum } from '@splunk/otel-react-native';
+
+await SplunkRum.instance.navigation.track('Checkout', { 'order.id': 'abc123' });
+```
+
 ### WebView Integration
 
 Instrument WebViews to capture web-based telemetry:
@@ -307,6 +371,18 @@ Or import it directly:
 jest.mock('@splunk/otel-react-native', () =>
   require('@splunk/otel-react-native/jest')
 );
+```
+
+The same mock also provides `reactNavigationIntegration` (a no-op detector). If you import the navigation integration from its subpath, map it to the mock too:
+
+```js
+// jest.config.js
+moduleNameMapper: {
+  '@splunk/otel-react-native/react-navigation':
+    '<rootDir>/node_modules/@splunk/otel-react-native/jest/mock.js',
+  '@splunk/otel-react-native':
+    '<rootDir>/node_modules/@splunk/otel-react-native/jest/mock.js',
+},
 ```
 
 ## Troubleshooting
