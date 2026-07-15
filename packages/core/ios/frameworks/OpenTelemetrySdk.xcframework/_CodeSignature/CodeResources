@@ -10,7 +10,7 @@
 		</data>
 		<key>ios-arm64/OpenTelemetrySdk.framework/Info.plist</key>
 		<data>
-		L4xA0dQcRlklS2sJYwByrq/aGT8=
+		BKAwZsEi/nVtPk/Omn0pVyghiAU=
 		</data>
 		<key>ios-arm64/OpenTelemetrySdk.framework/Modules/OpenTelemetrySdk.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/OpenTelemetrySdk.framework/Info.plist</key>
 		<data>
-		KwN5Dgns7GVl3xKWPSojVqaX4ac=
+		+P0Z97mhfUeoiG22mdATr8VUglM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/OpenTelemetrySdk.framework/Modules/OpenTelemetrySdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -94,11 +94,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/OpenTelemetrySdk.framework/OpenTelemetrySdk</key>
 		<data>
-		WjznGzfLff1Qve/5dFR1nNpOlWk=
+		H3fSz5/YSTfmgKHLYvyLtuGxdT0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/OpenTelemetrySdk.framework/_CodeSignature/CodeResources</key>
 		<data>
-		rnPMH5h5PKEPgImpLOzrg6cA3bk=
+		+s+Ksf+deb6jqysnq17d38HJXkk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/OpenTelemetrySdk.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -130,7 +130,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			603uB3oKwStppzbGwQsNA0vN1AbpysnhXuWXKuwxqXg=
+			4LJI4SjQKBjrwb6ewbwrYiVx0raTw75dDcasGmfZF04=
 			</data>
 		</dict>
 		<key>ios-arm64/OpenTelemetrySdk.framework/Modules/OpenTelemetrySdk.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -207,7 +207,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4ko2pai+1aFXw3BRTJtgK+2z3vOP1AdPEnxjpk7prGg=
+			Z27RFRSYty3W3AIbX6gqfjNc4OdJK9gS1F79CQEmTic=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/OpenTelemetrySdk.framework/Modules/OpenTelemetrySdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -277,14 +277,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eMUR82+rSqopYMMiJ8R7+L5MTgphhywTpKr2/EKp0gI=
+			oHFLr7il+zl/bFoU/Sa0TPkZ895GjEFBMWYGsln+ek0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/OpenTelemetrySdk.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LugxVMt0IVhatqS8zoIL2xxbpvYFHppXlJayMXg+S8Y=
+			+OkS3aeEus/OcY4pBgpaO6pEuzNFbU3U02EZA87Ly04=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/OpenTelemetrySdk.framework.dSYM/Contents/Info.plist</key>

@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		FhvPdPeMs4xG/7Vjm0nOMmizr2U=
+		Sgq2EB8iYnu1nBnwQq9gWz0WHWU=
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		AUeM8UHmD0UcllCo5Wmu+uDPy4Y=
+		jhoem6cJcEMsgRcjzQG7Mp7GyIw=
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		O3X1FJ9LorWlq6/INIDjBhKB96w=
+		tyAaCZBeAoLjIGIlvPxLl+RNADM=
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		AUeM8UHmD0UcllCo5Wmu+uDPy4Y=
+		jhoem6cJcEMsgRcjzQG7Mp7GyIw=
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		h5K/9O9jpM5s8ogc9dKPUuJ/Muc=
+		x/LVuUK4RN7QfeHqv3oM8Yg00g4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FvwuOmkbqA4OMj0frFQ+MMpQ5I3RurTSpI2TYFvJoGk=
+			zSc+stnlrzAHwCriSC/Le2Y3KX1MNxeVsZX0fUIjcN0=
 			</data>
 		</dict>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -98,14 +98,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zwVW2PjQDADwS9hRnzrG1gko3grrnovZ+QojSB3UbhU=
+			uetG1P/QJnc9K4LUlq625wnqhlEqHJMKLxr0Vl+ySBk=
 			</data>
 		</dict>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FvwuOmkbqA4OMj0frFQ+MMpQ5I3RurTSpI2TYFvJoGk=
+			zSc+stnlrzAHwCriSC/Le2Y3KX1MNxeVsZX0fUIjcN0=
 			</data>
 		</dict>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -133,7 +133,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wxYgtSL17tCAN1F2cqh1mWdk/pPvl75O1n3yo+faC/k=
+			Nvkd1Q5Mjwit0d2UhPE1ulBGeA2ttr0D4med4Oq0tGg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		jvUhzw/qdQsKG5M+6oP/yS5MgmQ=
+		udUUIv2zjpNYquEWAjwkAJYn438=
 		</data>
 		<key>Modules/SplunkNetwork.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		ogcXw3dDjQ5rACiL9+d7aZeLHe0=
+		MdQriJ65iHWHMwgou22oXV1X/to=
 		</data>
 		<key>Modules/SplunkNetwork.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/SplunkNetwork.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		b2pEVgAU/52hv8Uw0sC19WFZN6Q=
+		QdelV/HSbX1pBhQ9c763r3i66/M=
 		</data>
 		<key>Modules/SplunkNetwork.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		ogcXw3dDjQ5rACiL9+d7aZeLHe0=
+		MdQriJ65iHWHMwgou22oXV1X/to=
 		</data>
 		<key>Modules/SplunkNetwork.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/SplunkNetwork.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		UjidtJ4SjEM8QycwCnVUlMbOccM=
+		ZsEjTGycnC3Z0NAyyC9TVjWcJN4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3vrcGAKQaBPMs+IMf0qZU61GAsC8kW0xBTEeIV+U/Ns=
+			vrtfmzoP8xJFcQEKcxQ/EaXBN5+bTHDGdlxQyUFZ8b4=
 			</data>
 		</dict>
 		<key>Modules/SplunkNetwork.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -98,14 +98,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GaC6MRg91p2FJ/zrhRbIl0SSs2u53yOiAw1NBGuAQu0=
+			7EZS1riV2InfbwAYRwBZx2WrahtIHmiW7J22PXGwI2w=
 			</data>
 		</dict>
 		<key>Modules/SplunkNetwork.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3vrcGAKQaBPMs+IMf0qZU61GAsC8kW0xBTEeIV+U/Ns=
+			vrtfmzoP8xJFcQEKcxQ/EaXBN5+bTHDGdlxQyUFZ8b4=
 			</data>
 		</dict>
 		<key>Modules/SplunkNetwork.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -133,7 +133,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			a2yRg3yHLRUl4sDLBgewbPhFqCkl7x6yILmMerpfUd4=
+			mQXMT06bdcjReBy7Md7LN+6ktvKLLmsXq00FV4qHF4k=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

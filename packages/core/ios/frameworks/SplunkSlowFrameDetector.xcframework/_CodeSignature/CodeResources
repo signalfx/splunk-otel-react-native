@@ -10,7 +10,7 @@
 		</data>
 		<key>ios-arm64/SplunkSlowFrameDetector.framework/Info.plist</key>
 		<data>
-		rWaU/Jucj6FjnZal7lzq32NSUOc=
+		tpEOFV3aBABynqm7RZOxZdiIqiE=
 		</data>
 		<key>ios-arm64/SplunkSlowFrameDetector.framework/Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkSlowFrameDetector.framework/Info.plist</key>
 		<data>
-		NmsA4cnIGcgheyQFjJYdULCJ6gU=
+		P++JUhp1JNWtKdqihIUcCA0g7po=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkSlowFrameDetector.framework/Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -98,11 +98,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkSlowFrameDetector.framework/SplunkSlowFrameDetector</key>
 		<data>
-		07CTJnGibr5NbcBCCtCGTOXX60U=
+		GFgt8pxoAyGQEe4NWrsYIaFeL1I=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkSlowFrameDetector.framework/_CodeSignature/CodeResources</key>
 		<data>
-		li7kyTZSdnYNlUXmTWhC1PIfKss=
+		dP5bqMnLAb2xnWHEprAxSCv10m0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkSlowFrameDetector.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -142,7 +142,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			80DDu616vDTasPMu0LR7cRUtIOAwtJQ4kfgLWhTCnmg=
+			FwUy2ld0DLKhgX2ZPGC4y8ZhCkBa0YtN6GNb4NuF5lU=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkSlowFrameDetector.framework/Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -226,7 +226,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9hn0WLYatjoR5Efc8MUP/Uo0mD4k9b70dbFkE6X5boo=
+			jYGP0rGWa1NdML47EJ8+ywfxdsqxAuwkdJJ84cPYJ2A=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkSlowFrameDetector.framework/Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -296,14 +296,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			m/OFEnER6fCRb10j78ujLJ24nQAn3noBmOHGLTaFmd8=
+			vqBLtSlm4Wj3xR7i88sLhtLCM2lRMvJP9jRw0N9G5uI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkSlowFrameDetector.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SqeWXK/M9IM5sL22z2ItcPxWgbeItQh6wQDkiRBgjQI=
+			xGzVsgNcXn/baWVW1KPzXKWXOwp03O3x3xb+EudPy7Q=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkSlowFrameDetector.framework.dSYM/Contents/Info.plist</key>

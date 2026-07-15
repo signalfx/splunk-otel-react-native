@@ -99,6 +99,9 @@ extension UIKit.UIView {
   }
 }
 extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func ciscoSessionReplaySensitive(_ sensitive: Swift.Bool = true) -> some SwiftUICore.View
+  
+  @available(*, unavailable, renamed: "ciscoSessionReplaySensitive(_:)")
   @_Concurrency.MainActor @preconcurrency public func sessionReplaySensitive(_ sensitive: Swift.Bool = true) -> some SwiftUICore.View
   
 }

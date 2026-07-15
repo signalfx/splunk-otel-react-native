@@ -10,7 +10,7 @@
 		</data>
 		<key>ios-arm64/SplunkInteractions.framework/Info.plist</key>
 		<data>
-		otOpH/ecZ1i3VUo1s9PbELQAxPw=
+		rxkCYobHf8+g4NTYVh+OK9SLVc8=
 		</data>
 		<key>ios-arm64/SplunkInteractions.framework/Modules/SplunkInteractions.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkInteractions.framework/Info.plist</key>
 		<data>
-		73COQPDDwcKQQgmNM4KbKGJbxFg=
+		B3Wk3PCCsoGSznZbRSHVE79iyLo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkInteractions.framework/Modules/SplunkInteractions.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -114,11 +114,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkInteractions.framework/SplunkInteractions</key>
 		<data>
-		FL+bA+7BcfNOYBTN9eaZPzW31Vs=
+		59kb2YCjz6OkvrX2b9bivt4UFrQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkInteractions.framework/_CodeSignature/CodeResources</key>
 		<data>
-		VOhHf0nD52xTlPhAckpBuPC+8BQ=
+		i0AwhBEmZI9BjHOvWsmg/8k/JUE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkInteractions.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -190,7 +190,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			auB12KyTtoXZ+MnIw9hOQKgUs3+NyR96ar6x/aXHgjQ=
+			QfwuOoAIe7kr3uednwsuzxgNnaOMq4pRatnyVAfXMjY=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkInteractions.framework/Modules/SplunkInteractions.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -302,7 +302,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AwkXxiAurkMpAT1/HFM06h/Staqecvv5BYeJHhDxr0A=
+			TODAx/N3DubDLOTJBBO/GstY9xs5PQDKaBMPSdQi0ME=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkInteractions.framework/Modules/SplunkInteractions.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -372,14 +372,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KVq3Jhz98gBsc4pxQ7+FgxkVojhThvU4gwvFUQka0Qs=
+			L8kye6wETu7f8IB2mVyp0Z31awQJLZqjBcAN5QEct9o=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkInteractions.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wcz7+ZGXLJWFkXqkfk3UsCatDPaeRa2e/JRYUnCoY+M=
+			YUyHrxSecujFYMcFQOgcrUlhmJsZvTi3q/v8sdjz9kY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkInteractions.framework.dSYM/Contents/Info.plist</key>

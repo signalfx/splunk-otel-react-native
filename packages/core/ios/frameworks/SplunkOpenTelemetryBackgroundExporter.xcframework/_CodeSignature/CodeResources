@@ -10,7 +10,7 @@
 		</data>
 		<key>ios-arm64/SplunkOpenTelemetryBackgroundExporter.framework/Info.plist</key>
 		<data>
-		q0zLBwfYt0lYJDGaagwYF+bgEO8=
+		GB2pbVP7wdBk0sRgWyNmmjhcmTU=
 		</data>
 		<key>ios-arm64/SplunkOpenTelemetryBackgroundExporter.framework/Modules/SplunkOpenTelemetryBackgroundExporter.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetryBackgroundExporter.framework/Info.plist</key>
 		<data>
-		U8K3v9PGmHZqHSZmVGgdFs+VJ3w=
+		WCvPHfBYKxCanT6mYi6Hh2jge+s=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetryBackgroundExporter.framework/Modules/SplunkOpenTelemetryBackgroundExporter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -114,11 +114,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetryBackgroundExporter.framework/SplunkOpenTelemetryBackgroundExporter</key>
 		<data>
-		h69YIKuTw87ewjome8TTHQYtLeM=
+		+ukNHK3Nb8Q6Uti3OZszKvpImVM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetryBackgroundExporter.framework/_CodeSignature/CodeResources</key>
 		<data>
-		395RBcZPZTAtBSjrENLvNYZQ0Ec=
+		6jelVe/lZEg0EOOjPL1VjUglK3Q=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkOpenTelemetryBackgroundExporter.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -190,7 +190,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TUGgfUVy5ZDo36mSaaYIMDsxKshY07NJqAyI/sCw7i0=
+			4hCwXDUFMXCL2V7byRpIRvqzx7s6QytSUflUbMZW/N8=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkOpenTelemetryBackgroundExporter.framework/Modules/SplunkOpenTelemetryBackgroundExporter.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -302,7 +302,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AYoYWNSwGOEYaiMFAz6XI137gydpRB5DsY1HVJSBL1A=
+			IRnlnjdlVhFjgkqsWNTCh7jHUlxAxfUik8TRE13mCgk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetryBackgroundExporter.framework/Modules/SplunkOpenTelemetryBackgroundExporter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -372,14 +372,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CiaI2oEYU5bzy7ofrfdgLB+pBl1LN0Z/6Q8klcjuciE=
+			EbQ0RUMaPFYmAAfoE9MJv5xNOyYAxwDasvfRq2pN5CA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkOpenTelemetryBackgroundExporter.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9OSQofnkAjQlgvhWp9E6YXuqUWpU5X9nw8vAB/bq8/c=
+			8VhwXxN5p/WbK2dUIQ0zj6OEW2tan76oBKRvqgEsa+c=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkOpenTelemetryBackgroundExporter.framework.dSYM/Contents/Info.plist</key>

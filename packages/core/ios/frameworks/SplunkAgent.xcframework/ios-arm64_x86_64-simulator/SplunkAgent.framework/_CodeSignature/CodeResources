@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/jggxGQecN6/cFIuV4T6DlQBs0I=
+		Lv0M3PIERrVsxpjzyqf9kFPJEGg=
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		jc5sMeWPMgU1/rhlev4p5fTwXYk=
+		HI6SnUkA4gsT10wr27ynMdy57oc=
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		9CW4Fu85l/jzc6qNuNU1Aim3I40=
+		QGofgbkS0nLVuIYR4RpirwyXOiQ=
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		jc5sMeWPMgU1/rhlev4p5fTwXYk=
+		HI6SnUkA4gsT10wr27ynMdy57oc=
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		nZ9hw2gVN43k/fbXIp8erFrGxaY=
+		XqK8anN1ZWj+A0q5nWPzrMfQVKA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -78,7 +78,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7aa4xL5ulNvm9srWFZDIJ16eLUo3P9id3XuZr0vgeeo=
+			/A315RcD1MN6btzOs0lhr6kODmCmTwOXPWNjpzXVqFs=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgent.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -106,14 +106,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			80oDfkIh5j1MFVfMem6k+WYMfTEz3bJfb45OjnTBey4=
+			C2ClD1FroypHzaSFvtM10GPlXRmnaBbyvWBJ+EpO+UM=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7aa4xL5ulNvm9srWFZDIJ16eLUo3P9id3XuZr0vgeeo=
+			/A315RcD1MN6btzOs0lhr6kODmCmTwOXPWNjpzXVqFs=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgent.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -141,7 +141,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			p7kt+15DHm70d0iK3rOs271+GgJ87bOOh+e4scW/NpU=
+			sxBg8HQPDGK5lvcPKfhE7GhIpX1kJDZiNESZfmO485w=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

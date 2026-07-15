@@ -17448,21 +17448,21 @@
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
       "kind": "IntegerLiteral",
-      "offset": 5626,
+      "offset": 5613,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
       "kind": "IntegerLiteral",
-      "offset": 5972,
+      "offset": 5959,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
       "kind": "IntegerLiteral",
-      "offset": 6395,
+      "offset": 6382,
       "length": 1,
       "value": "0"
     },
@@ -18024,7 +18024,7 @@
       "kind": "StringLiteral",
       "offset": 12158,
       "length": 7,
-      "value": "\"2.3.0\""
+      "value": "\"2.3.1\""
     },
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",

@@ -10757,8 +10757,8 @@
         "children": [
           {
             "kind": "Function",
-            "name": "sessionReplaySensitive",
-            "printedName": "sessionReplaySensitive(_:)",
+            "name": "ciscoSessionReplaySensitive",
+            "printedName": "ciscoSessionReplaySensitive(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -10782,8 +10782,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:7SwiftUI4ViewP18CiscoSessionReplayE07sessionF9SensitiveyQrSbF",
-            "mangledName": "$s7SwiftUI4ViewP18CiscoSessionReplayE07sessionF9SensitiveyQrSbF",
+            "usr": "s:7SwiftUI4ViewP18CiscoSessionReplayE05ciscoeF9SensitiveyQrSbF",
+            "mangledName": "$s7SwiftUI4ViewP18CiscoSessionReplayE05ciscoeF9SensitiveyQrSbF",
             "moduleName": "CiscoSessionReplay",
             "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
             "sugared_genericSig": "<Self where Self : SwiftUI.View>",
@@ -12962,7 +12962,14 @@
     {
       "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoSessionReplay\/Sources\/CiscoSessionReplay\/Public API 1.0\/API-1.0+SensitivitySwiftUI.swift",
       "kind": "BooleanLiteral",
-      "offset": 718,
+      "offset": 723,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoSessionReplay\/Sources\/CiscoSessionReplay\/Public API 1.0\/API-1.0+SensitivitySwiftUI.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1093,
       "length": 4,
       "value": "true"
     },
@@ -13804,14 +13811,14 @@
       "kind": "StringLiteral",
       "offset": 190,
       "length": 7,
-      "value": "\"1.1.1\""
+      "value": "\"1.1.2\""
     },
     {
       "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoSessionReplay\/Sources\/CiscoSessionReplay\/Utils\/Info\/Smartlook+Version.swift",
       "kind": "StringLiteral",
       "offset": 206,
       "length": 5,
-      "value": "\"264\""
+      "value": "\"265\""
     },
     {
       "filePath": "\/Users\/jc69\/Smartlook\/smartlook-ios-sdk-private\/CiscoSessionReplay\/Sources\/CiscoSessionReplay\/Model\/Logging\/Logging.swift",
