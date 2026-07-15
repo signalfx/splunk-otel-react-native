@@ -10,7 +10,7 @@
 		</data>
 		<key>ios-arm64/SplunkWebView.framework/Info.plist</key>
 		<data>
-		ub9+6oMSeN3OG82+aVC08WNpAAU=
+		/vVuapWbKxmK85owJEzzje1CEm8=
 		</data>
 		<key>ios-arm64/SplunkWebView.framework/Modules/SplunkWebView.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/Info.plist</key>
 		<data>
-		gJXEUbQNjqDQR3+1kGiWTH0a92k=
+		EzQYk9WmmcrB69TlFKkQQDsEIb4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/Modules/SplunkWebView.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/SplunkWebView</key>
 		<data>
-		5k5GK8R/UY6LaK4SdiCr2AQEXsg=
+		lIisDAHs8Xobxp9lOp8d0orbb/w=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/WebViewBridgeScript.js</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/_CodeSignature/CodeResources</key>
 		<data>
-		recjprK8NgBq/eOEACUiRj+QDKQ=
+		+nTb56e2gyAKqrJWGTNsV7XuSwc=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkWebView.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -150,7 +150,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cSCrpLG3ikJAz3/DKfewfkBIp3G/KmksDZtUVc7Tjfs=
+			G0iV8s9n20YWyfTkhZtBGyy68lixSUdKtTy86Alakrg=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkWebView.framework/Modules/SplunkWebView.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -241,7 +241,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vPYbIAl7WfPnwtt6lA7tjPECXgD030TQbVVBCQLa8Ik=
+			ngtCAdSRhHd/bSSdncvfKBqszN0qeGQIxQSeUqyPl3Q=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/Modules/SplunkWebView.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -311,7 +311,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lgputCVBmfJLNR7rRdOHktiDK+su78F2VXaqhWLHfpQ=
+			btpuVAfcKjbf+eJK5KXGTdC4LAPVfU+uuMOdxooM388=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkWebView.framework/WebViewBridgeScript.js</key>
@@ -325,7 +325,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gJmXa+q6vnfxk3zyYRjig17whSR5qrC0d+2D+GrEWl0=
+			z+IfBrLQ2ua6QSkIlbVtaWRvTh2wNPplzuOusL9l8rQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkWebView.framework.dSYM/Contents/Info.plist</key>

@@ -6,7 +6,7 @@
 	<dict>
 		<key>ios-arm64/CiscoInstanceManager.framework/CiscoInstanceManager</key>
 		<data>
-		c80dZUd19sJUAr9tW2kaVVramoo=
+		YtprSyo0ugnI7WBF2CEtNXR3GFs=
 		</data>
 		<key>ios-arm64/CiscoInstanceManager.framework/Headers/CiscoInstanceManager-Swift.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>ios-arm64/CiscoInstanceManager.framework/Info.plist</key>
 		<data>
-		DhP8naHM5XtnpawkhIB+QSES4ms=
+		WEv4f3THQwcezIMZVxcoD4coGhY=
 		</data>
 		<key>ios-arm64/CiscoInstanceManager.framework/Modules/CiscoInstanceManager.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>ios-arm64/dSYMs/CiscoInstanceManager.framework.dSYM/Contents/Info.plist</key>
 		<data>
-		o9pLYjr57J/CwNNx5yHU17wJ8b8=
+		+GPgsw9hfcxAwkQvgv0Nx4NBOTU=
 		</data>
 		<key>ios-arm64/dSYMs/CiscoInstanceManager.framework.dSYM/Contents/Resources/DWARF/CiscoInstanceManager</key>
 		<data>
-		8Bs3lizWs9EOrvF+VG9+80DTxn4=
+		SGsgL6ej0UFkQX+YY+5FkOOPd8M=
 		</data>
 		<key>ios-arm64/dSYMs/CiscoInstanceManager.framework.dSYM/Contents/Resources/Relocations/aarch64/CiscoInstanceManager.yml</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoInstanceManager.framework/CiscoInstanceManager</key>
 		<data>
-		YC3Vpcs+qZHw8jqXfg0lkZ4WfmQ=
+		TOcPaP5xo7u47XEWQ0pswnlTaIw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoInstanceManager.framework/Headers/CiscoInstanceManager-Swift.h</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoInstanceManager.framework/Info.plist</key>
 		<data>
-		UFDE5cRJMU4kciLlpi5iZqnvYlo=
+		skqk1ntzBdYIxyEgloteXSLHRS0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoInstanceManager.framework/Modules/CiscoInstanceManager.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoInstanceManager.framework/_CodeSignature/CodeResources</key>
 		<data>
-		cFVsCJuiWhc7CYB6mXBtug4P7V8=
+		83bnqrdF3+U/IHLZgwbHvyg6gyE=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -107,7 +107,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DxEKn4YXbkQnVAHq0yoDpPhnLuTlnTFSbkIx7dUSIpA=
+			O7jOGG25S59PDPfjYv2oK8fKCRwW0wQRTA0j5J19Gvs=
 			</data>
 		</dict>
 		<key>ios-arm64/CiscoInstanceManager.framework/Headers/CiscoInstanceManager-Swift.h</key>
@@ -121,7 +121,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XzAk54ipEXavgzIpgNu6YyZtVaAtLzCwYp6995G2uk8=
+			VnkPwyUcA9PZaCdqJK+OtrWABucU+9hvz9Eo3i/nNY4=
 			</data>
 		</dict>
 		<key>ios-arm64/CiscoInstanceManager.framework/Modules/CiscoInstanceManager.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -163,14 +163,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			alWswVUlbBXG7HEvoeHT5oITFAHoGsnPbuOWFHmZ6Ds=
+			KTkn8XjICMvFT+InbHvbflIGdFBDhGe/+rcwdq1B7w8=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/CiscoInstanceManager.framework.dSYM/Contents/Resources/DWARF/CiscoInstanceManager</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iuqC9weQYOAT+j5/V25BCIhoAt7VHm8U7EO7xQIZpog=
+			DCCtehKo8C+P4Q7nqU2gwwS7zCtDold+vTBv0o2M5H0=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/CiscoInstanceManager.framework.dSYM/Contents/Resources/Relocations/aarch64/CiscoInstanceManager.yml</key>
@@ -184,7 +184,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pzcrVMZLHdBEBWNN7Z9DxxG5m+Qxdd2XyeWvojZFLOA=
+			nIyVsaVMoFs4XEfdg37VoBxMnMYZ14+pDvu+4zdNIcU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoInstanceManager.framework/Headers/CiscoInstanceManager-Swift.h</key>
@@ -198,7 +198,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RZepM0q3glM/QvLWQff55zuE1sUWl+RLzWm+HFmVjKc=
+			+weTS201hZMxdG/Vdij8G4FNfPriFeR4grQXarLE544=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoInstanceManager.framework/Modules/CiscoInstanceManager.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -268,7 +268,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dP/RENXG7q+6Q2mrosr+dUN8CkHFStImaghlEwrcKVg=
+			agVHlNDditNhvYqO0QXd6ppnjG2oe8LBn5j0x+QFI5g=
 			</data>
 		</dict>
 	</dict>

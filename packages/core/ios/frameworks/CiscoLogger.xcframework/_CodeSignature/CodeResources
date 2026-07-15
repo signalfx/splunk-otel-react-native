@@ -6,7 +6,7 @@
 	<dict>
 		<key>ios-arm64/CiscoLogger.framework/CiscoLogger</key>
 		<data>
-		MLxt3Cyr/QIT4c4H90Ouf/gjcsY=
+		jLhXPi8goHOFJ4R5LOXH87VG1CM=
 		</data>
 		<key>ios-arm64/CiscoLogger.framework/Headers/CiscoLogger-Swift.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>ios-arm64/CiscoLogger.framework/Info.plist</key>
 		<data>
-		H1QTTTScMbMHglprFEPL7bx1kOk=
+		+7YLqKozes/1sVaTy2AAt66YN3M=
 		</data>
 		<key>ios-arm64/CiscoLogger.framework/Modules/CiscoLogger.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>ios-arm64/dSYMs/CiscoLogger.framework.dSYM/Contents/Info.plist</key>
 		<data>
-		lcw81471DWFI/+EPrUvre5jbBog=
+		l/2zOUxhkwlU274nsNlnkFxbNws=
 		</data>
 		<key>ios-arm64/dSYMs/CiscoLogger.framework.dSYM/Contents/Resources/DWARF/CiscoLogger</key>
 		<data>
-		+5HR+bLqMdJFSFOQy1b4BH9n+VI=
+		OSVCAPnpODY9gttgBVBBmqB7EoM=
 		</data>
 		<key>ios-arm64/dSYMs/CiscoLogger.framework.dSYM/Contents/Resources/Relocations/aarch64/CiscoLogger.yml</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoLogger.framework/CiscoLogger</key>
 		<data>
-		C5yBqhMAtmppHIrL0ZdHhwNnfeE=
+		QIorfl9zk1hJzfWdVaG9cZZkSKU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoLogger.framework/Headers/CiscoLogger-Swift.h</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoLogger.framework/Info.plist</key>
 		<data>
-		NW7gkH4jXCn0gT2CP2HUn/UhXbM=
+		2NvKisQV7h+BQ5MF+4x9ZUU18sQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoLogger.framework/Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoLogger.framework/_CodeSignature/CodeResources</key>
 		<data>
-		1d/W+rTLRIY33P4fmvGkAs/zeew=
+		6pDfXmzaIyVh9gO5FwpCbq800LY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -115,7 +115,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			blgRYIM+xR2i4TFlPHRyjQ5wplxkQ7aY2ZDn87SBMcg=
+			SZl0XT0H+hgWVr4ffgr/YO99Sp33IEYtMtybdOLvNI0=
 			</data>
 		</dict>
 		<key>ios-arm64/CiscoLogger.framework/Headers/CiscoLogger-Swift.h</key>
@@ -129,7 +129,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			G+de1CyhItmO+qkp2EzIi7IbA9Ejz6L804Iel8edaJ4=
+			iGhnYInZfPeTFf1aaHwR/ZBKxrU8bmvHHuaZ+58De1I=
 			</data>
 		</dict>
 		<key>ios-arm64/CiscoLogger.framework/Modules/CiscoLogger.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -178,14 +178,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			92PPeHNG62r1m5/W8v0GGt+7fBAqpRQ0HhQtQwo3cU0=
+			XrBbeBbNMKT3drjjcA89ijgsTGNErpIwH3qBGhEk1/o=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/CiscoLogger.framework.dSYM/Contents/Resources/DWARF/CiscoLogger</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jFCtXA0PB/GGucI4NxE8r74w/UajGTbocU4ZIDC2yBE=
+			IhWERs9mRqD6ChrZXChYONvwuJSkDSDeIpo6ofVaJy0=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/CiscoLogger.framework.dSYM/Contents/Resources/Relocations/aarch64/CiscoLogger.yml</key>
@@ -199,7 +199,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fiVYe03KAArxbBULN28OucAyOrK61Sg0I2tGyrd25rU=
+			vyfWQPkk+qD5wrli3niUuQsg+WcRVPnEjDUPwQo74Ik=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoLogger.framework/Headers/CiscoLogger-Swift.h</key>
@@ -213,7 +213,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LdeDFGjn3YEaombOba+FSjTFR3AXtIsHCcFW+PyTmPc=
+			PZduU+Mg5b43rYBM6oyDz/yzES03xmHYFiZ1b/wi2AY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoLogger.framework/Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -290,7 +290,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z3qmH4ywXZjWSZgC5UJwrf7VlqlDBiOw2Q5k9FdeiQQ=
+			Lop756n92kHGrZEFDGAqaYRZHsy7g56+FBO+rU4c+Rw=
 			</data>
 		</dict>
 	</dict>

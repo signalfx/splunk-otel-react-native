@@ -6,7 +6,7 @@
 	<dict>
 		<key>ios-arm64/CiscoSessionReplay.framework/CiscoSessionReplay</key>
 		<data>
-		X4bhaG2OMZOROjMMc/c8bRq52L4=
+		TSoAPu4i5hxiNUpbyAzlyS2vHvU=
 		</data>
 		<key>ios-arm64/CiscoSessionReplay.framework/Headers/CiscoSessionReplay-Swift.h</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>ios-arm64/CiscoSessionReplay.framework/Info.plist</key>
 		<data>
-		Fma0sR3mrnCVJszupzMNFkBsZvI=
+		yAdGFEW/Pxa1ygRq3A/K7n8yva4=
 		</data>
 		<key>ios-arm64/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		fu1KMBWeu33NTbvuIgBfqsHTvbM=
+		XsvFCjjqZcZDuj/nwM7I3c/BDxg=
 		</data>
 		<key>ios-arm64/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		9Q4Yn3+kQaaYNlHXuCgNU2ut3vg=
+		QI35gXRRMt/iv6y4QOA58keNcsk=
 		</data>
 		<key>ios-arm64/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		aYOlGmLBjIsspLNp857feCtcH2A=
+		oIQTTmzfH3ic6Ql0EDb6WszJXcg=
 		</data>
 		<key>ios-arm64/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		9Q4Yn3+kQaaYNlHXuCgNU2ut3vg=
+		QI35gXRRMt/iv6y4QOA58keNcsk=
 		</data>
 		<key>ios-arm64/CiscoSessionReplay.framework/Modules/module.modulemap</key>
 		<data>
@@ -42,19 +42,19 @@
 		</data>
 		<key>ios-arm64/dSYMs/CiscoSessionReplay.framework.dSYM/Contents/Info.plist</key>
 		<data>
-		duH1oIg9WJGIasyVPIqDdJ12/3w=
+		8I8TKrdmR77XEurUbLhXpmEClxU=
 		</data>
 		<key>ios-arm64/dSYMs/CiscoSessionReplay.framework.dSYM/Contents/Resources/DWARF/CiscoSessionReplay</key>
 		<data>
-		35AYJF6N5NaToWZ2dTLagXPoZk8=
+		vQePRtm5cur/sCO4/MLbu6V0zDk=
 		</data>
 		<key>ios-arm64/dSYMs/CiscoSessionReplay.framework.dSYM/Contents/Resources/Relocations/aarch64/CiscoSessionReplay.yml</key>
 		<data>
-		NHH2PdwGuEPvgWG/hJ/r0+9QiXY=
+		8EW7VSpIw8ymMp7RYGN57C0Qs0U=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/CiscoSessionReplay</key>
 		<data>
-		GoGUcKm6ZuhiF57mvoTAkcJhTM4=
+		4joI0U0zAecHTDaLU9WWwWgr5Eg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Headers/CiscoSessionReplay-Swift.h</key>
 		<data>
@@ -62,39 +62,39 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Info.plist</key>
 		<data>
-		Krldbz7ec/wSsd2QnmNt0ABJ5Jc=
+		hFFV62GERaVvLWNE8Aes5YxMkvE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		fu1KMBWeu33NTbvuIgBfqsHTvbM=
+		XsvFCjjqZcZDuj/nwM7I3c/BDxg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		XXPqTfSTBjY4k1K+L1E+0tVmh6g=
+		UwM+Lef9T5EZ/j4NuJx6fQMjB+E=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		g9ktv6E4URjhw16AF7d9ra8jbpI=
+		yxzNq4a8os2GZalFQ6EqwavUtTs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		XXPqTfSTBjY4k1K+L1E+0tVmh6g=
+		UwM+Lef9T5EZ/j4NuJx6fQMjB+E=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		fu1KMBWeu33NTbvuIgBfqsHTvbM=
+		XsvFCjjqZcZDuj/nwM7I3c/BDxg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		YO89EbheBl8iWLHfCi+zxhq8kjE=
+		3nzCbASP4SWdbJKWFJz7Q0ZjzgM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		wotZYMo1zM1kZgVluQ8Q6oKOASI=
+		6NR97dqcqVDqp7/WXVUgw4+0tyo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		YO89EbheBl8iWLHfCi+zxhq8kjE=
+		3nzCbASP4SWdbJKWFJz7Q0ZjzgM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/module.modulemap</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Um9N0/oG5bQ06H2qj7NRtJ5qgvY=
+		N6aty1/g3VclXZT6LOCZAdPCWJI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -115,7 +115,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DvkXzZLkH9q6G2S9EdsYiZJgv5Tp/FEr6vTJgP+Ub4I=
+			EZCmDw3ihyYa9isYqkabgfW+PeJET7xQN1vyzpvKj/8=
 			</data>
 		</dict>
 		<key>ios-arm64/CiscoSessionReplay.framework/Headers/CiscoSessionReplay-Swift.h</key>
@@ -129,35 +129,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4KycERXCL9u8ZYm2/mCmt6rUeKYq/tDMvG7KziDHfwQ=
+			l86geIiMznitbbG48LpYINKMJpG3ctedqVqpVOfWnQ4=
 			</data>
 		</dict>
 		<key>ios-arm64/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			06qYG2BUphtiPR4t9D8eHlEg9+PcAJ4qXOVP9Nkx+MI=
+			04B5vCNaep2+po3wXQxKxVS1JrLbDYcveq4DHYDT4CQ=
 			</data>
 		</dict>
 		<key>ios-arm64/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8GROwp/u4yGROwYz6H8FaC5L3KaAt907D+zzFuaV32A=
+			+NfNtZbgTfcMxg51wNXEBI1puFunGSBAFpTwHXFAlaE=
 			</data>
 		</dict>
 		<key>ios-arm64/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tBYpbyDOcz7ztniRAUYCk6B4W0OGWVDZuaAPp0M4Lfo=
+			P5JKWUkJCf7ylBnJHgwj5iVqAYj+se6JPTYg35PyLNQ=
 			</data>
 		</dict>
 		<key>ios-arm64/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8GROwp/u4yGROwYz6H8FaC5L3KaAt907D+zzFuaV32A=
+			+NfNtZbgTfcMxg51wNXEBI1puFunGSBAFpTwHXFAlaE=
 			</data>
 		</dict>
 		<key>ios-arm64/CiscoSessionReplay.framework/Modules/module.modulemap</key>
@@ -178,28 +178,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RLc4Jb+Jtk53Gcz3S+6Qb2Aw/WYpAqDWayrWVsaTdX8=
+			e0Kyg+ZkGE5NRAAe4/S6WTdfM7oAzK9h67MFyaKoWzM=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/CiscoSessionReplay.framework.dSYM/Contents/Resources/DWARF/CiscoSessionReplay</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WuSE55UxKbTAYmPAK44gEELgE++76/TXOf+9ZIQhF/A=
+			jnEm5G4k/MhEQUOTAms5IfH3a9mVtGiUMyhEawaxTm4=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/CiscoSessionReplay.framework.dSYM/Contents/Resources/Relocations/aarch64/CiscoSessionReplay.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cWp7JwOQDmYywL49Hywu1HBamJTNBLP4+80kc9RTvkA=
+			NMOcM6tBuFNOdiJcPr9Rlm5Wn3r3IxiZfXDOljXhVQc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/CiscoSessionReplay</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+HAM7OvrugEL1GjAJLmn4g+1GkVhr9S38RdQ7xh8dcE=
+			DgnmUg8lhHSZcZ3gUkyrt9a8awRFZWUF8w/tlSEvxB4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Headers/CiscoSessionReplay-Swift.h</key>
@@ -213,63 +213,63 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CDtxieJL9r5zQaNem4bvXe9AmNSAGByhFH0KEdeCKLU=
+			RZnljgPItea8pQNN9u0asst+Dpq987GUUN/W2UH8hQg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			06qYG2BUphtiPR4t9D8eHlEg9+PcAJ4qXOVP9Nkx+MI=
+			04B5vCNaep2+po3wXQxKxVS1JrLbDYcveq4DHYDT4CQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9I6q/ry750dPHiXYz7dVVHzSx7alklFIiQev4RiBVtQ=
+			U5SFSmncseaRyetl4pvm212iowtL4m1k94kDgFbtSac=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6TGJHqIkoxswM6qdBImtM9SDoF2Aqf3qN/GTulP3Loc=
+			NX5hInWDXQPlIdtkVaia/bqGqTSS7ePzetBSJh7RypE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9I6q/ry750dPHiXYz7dVVHzSx7alklFIiQev4RiBVtQ=
+			U5SFSmncseaRyetl4pvm212iowtL4m1k94kDgFbtSac=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			06qYG2BUphtiPR4t9D8eHlEg9+PcAJ4qXOVP9Nkx+MI=
+			04B5vCNaep2+po3wXQxKxVS1JrLbDYcveq4DHYDT4CQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0zRnJndR2Cjlz6Tp+2dkmQykeFR1h7MCAg985MK4S88=
+			n1yPf40KEvnujbnOMNZpFRI71kfHzmpehkSAykff6iY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DkKE0CMJPM5O4mJTHro29nTAPHLFP/J0YQF0jnQnVsc=
+			VXq02GCYpNL0LhePFExqwnr2oxemFHgbhjUaDhnz+pw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/CiscoSessionReplay.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0zRnJndR2Cjlz6Tp+2dkmQykeFR1h7MCAg985MK4S88=
+			n1yPf40KEvnujbnOMNZpFRI71kfHzmpehkSAykff6iY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CiscoSessionReplay.framework/Modules/module.modulemap</key>
@@ -290,7 +290,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+4dCFyCpW+7JltC2vFY5cng5lqxgHqVO8sIJWOO9nKg=
+			h35w3kd6JNODFcRYEW60WSNX6TNznFUBT8/e65FfU9Q=
 			</data>
 		</dict>
 	</dict>

@@ -2720,58 +2720,44 @@
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 705,
+      "offset": 1500,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationModel.swift",
       "kind": "Dictionary",
-      "offset": 781,
+      "offset": 1576,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationModel.swift",
       "kind": "Dictionary",
-      "offset": 871,
+      "offset": 1666,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationModel.swift",
       "kind": "Array",
-      "offset": 956,
+      "offset": 1751,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationModel.swift",
       "kind": "Dictionary",
-      "offset": 1057,
+      "offset": 1847,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationRuntimeStateStore.swift",
       "kind": "BooleanLiteral",
-      "offset": 1749,
+      "offset": 2730,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationRuntimeStateStore.swift",
-      "kind": "StringLiteral",
-      "offset": 1827,
-      "length": 9,
-      "value": "\"unknown\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationRuntimeStateStore.swift",
-      "kind": "Dictionary",
-      "offset": 1858,
-      "length": 3,
-      "value": "[]"
     },
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Module\/NavigationConfiguration.swift",
@@ -2798,20 +2784,20 @@
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+Filtering.swift",
       "kind": "Array",
       "offset": 1249,
-      "length": 1134,
-      "value": "[\"UIApplicationRotationFollowingController\", \"UICompatibilityInputViewController\", \"UIInputWindowController\", \"UIKBSystemLayoutViewController\", \"UIPredictionViewController\", \"UISystemInputAssistantViewController\", \"UISystemInputViewController\", \"UISystemKeyboardDockController\", \"UINavigationController\", \"UITabBarController\", \"SwiftUI.UIKitNavigationController\", \"SwiftUI.UIKitTabBarController\", \"SwiftUI.UIKitSplitViewController\", \"SwiftUI.UIKitInspectorSplitViewController\", \"SwiftUI.NotifyingMulticolumnSplitViewController\", \"SwiftUI.NotificationSendingSplitViewController\", \"SwiftUI.SplitViewNavigationController\", \"SwiftUI.TabHostingController\", \"SwiftUI.PlatformAlertController\", \"SwiftUI.SwiftUISearchController\"]"
+      "length": 1221,
+      "value": "[\"UIApplicationRotationFollowingController\", \"UICompatibilityInputViewController\", \"UIEditingOverlayViewController\", \"UIInputWindowController\", \"UIKBSystemLayoutViewController\", \"UIPredictionViewController\", \"UISystemInputAssistantViewController\", \"UISystemInputViewController\", \"UISystemKeyboardDockController\", \"UITrackingElementWindowController\", \"UINavigationController\", \"UITabBarController\", \"SwiftUI.UIKitNavigationController\", \"SwiftUI.UIKitTabBarController\", \"SwiftUI.UIKitSplitViewController\", \"SwiftUI.UIKitInspectorSplitViewController\", \"SwiftUI.NotifyingMulticolumnSplitViewController\", \"SwiftUI.NotificationSendingSplitViewController\", \"SwiftUI.SplitViewNavigationController\", \"SwiftUI.TabHostingController\", \"SwiftUI.PlatformAlertController\", \"SwiftUI.SwiftUISearchController\"]"
     },
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+Filtering.swift",
       "kind": "Array",
-      "offset": 2999,
+      "offset": 3086,
       "length": 179,
       "value": "[\"UIHostingController<\", \"NavigationStackHostingController<\", \"PresentationHostingController<\", \"StyleContextSplitViewNavigationController<\"]"
     },
     {
       "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+ScreenState.swift",
       "kind": "Array",
-      "offset": 784,
+      "offset": 776,
       "length": 105,
       "value": "[\"component\", \"navigation.name\", \"last.screen.name\", \"screen.name\"]"
     },

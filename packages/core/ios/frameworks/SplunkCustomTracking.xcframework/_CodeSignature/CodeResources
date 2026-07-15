@@ -10,7 +10,7 @@
 		</data>
 		<key>ios-arm64/SplunkCustomTracking.framework/Info.plist</key>
 		<data>
-		oWqc2sMfBSum2IzVQsVg2BkzeLw=
+		CfCoxhhYZX61PkXiXPxS9Q4F574=
 		</data>
 		<key>ios-arm64/SplunkCustomTracking.framework/Modules/SplunkCustomTracking.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>ios-arm64/dSYMs/SplunkCustomTracking.framework.dSYM/Contents/Resources/DWARF/SplunkCustomTracking</key>
 		<data>
-		lB+XVOvcxSOz+Ar10fqkr9JKW2U=
+		dsET24j9vwlsv2gIO+afa/slMVQ=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkCustomTracking.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkCustomTracking.yml</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkCustomTracking.framework/Info.plist</key>
 		<data>
-		CaourlwSHBC/y6esL1oawsS3Nw4=
+		er6s+imKET6O6/KtT626MpZ59pk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkCustomTracking.framework/Modules/SplunkCustomTracking.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -102,11 +102,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkCustomTracking.framework/SplunkCustomTracking</key>
 		<data>
-		NlbBu2owPom5L0UqkizftbjDxXs=
+		oy9fjqrcSRwyEUjv1jGo1UyKjaI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkCustomTracking.framework/_CodeSignature/CodeResources</key>
 		<data>
-		uqfifw5oQVAXipGpc6lAwQhT1t4=
+		Na35b/qCX9b+0CxZY0zWU2amEjY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkCustomTracking.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkCustomTracking.framework.dSYM/Contents/Resources/DWARF/SplunkCustomTracking</key>
 		<data>
-		bxI+ihMA72x/aezhjWzrCivLJhw=
+		sgUfNK2OMOvpO1VnVGSSaBi3UOw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkCustomTracking.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkCustomTracking.yml</key>
 		<data>
@@ -154,7 +154,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rJxwLIqj2B1GnmO3CSAmZ25vnl+mc6VipaiQYAlp6ug=
+			+u3/Re0S5P86u9gYcRZSzK6E+3brUpRkxQc/gUdW2Ik=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkCustomTracking.framework/Modules/SplunkCustomTracking.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -210,7 +210,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SGGv0mdur60YFvpBKj7jwSEf3gAheOhO/AGYcv583m0=
+			7+V2vNCdNBd/3CyVbV3B3/1JgSnkn3OKO6rOECDITuU=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkCustomTracking.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkCustomTracking.yml</key>
@@ -245,7 +245,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kaW5HsyYbWxDdNmS7BSxI178LwKPcIzQyIL391GWjTE=
+			Z0k0ZgqDVDYJE7VjgVNrG6txf91NoIwj9LlfyjK/6bo=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkCustomTracking.framework/Modules/SplunkCustomTracking.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -315,14 +315,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mFi3L7OL1QJs1ovbNOEvnlGc+qMCWDhEbv4LjonOFEw=
+			bWpNqz8GA/EmPi3PT66T25I9Z1gGwAi2BZPXmfpZDeQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkCustomTracking.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zeyQn2ZLZzTE2F8oGROgdzdFgBrvio6mH3ZpW/fhZy4=
+			xtz8pWGGeUCepGIsyUChXYbFXy1p2x5uyIpCT4eoAa4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkCustomTracking.framework.dSYM/Contents/Info.plist</key>
@@ -336,7 +336,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DV6u9iv0eASig1fZzsKScHfFGeNNkDea8N2JZtFZImo=
+			xVpViD4CwSkAZAXUcC+o/r+erRU9pYaBzmIN30amU3Y=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkCustomTracking.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkCustomTracking.yml</key>

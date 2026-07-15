@@ -24,44 +24,6 @@ public class CrashReports {
 @_hasMissingDesignatedInitializers public class CrashReportDeviceStats {
   @objc deinit
 }
-public enum CrashReportKeys : Swift.String {
-  case previousAppState
-  case crashTimestamp
-  case currentTimestamp
-  case freeDiskSpace
-  case batteryLevel
-  case freeMemory
-  case screenName
-  case buildId
-  case processPath
-  case isNative
-  case signalName
-  case faultAddress
-  case exceptionName
-  case exceptionReason
-  case threads
-  case images
-  case details
-  case component
-  case error
-  case instructionPointer
-  case imageName
-  case symbolName
-  case threadNumber
-  case stackFrames
-  case isCrashedThread
-  case baseAddress
-  case offset
-  case imageSize
-  case imagePath
-  case imageUUID
-  case sessionId
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
 extension Swift.String : SplunkCommon.ModuleEventData {
 }
 public struct CrashReportsMetadata : SplunkCommon.ModuleEventMetadata {
@@ -87,6 +49,3 @@ public struct CrashReportsRemoteConfiguration : SplunkCommon.RemoteModuleConfigu
   public var enabled: Swift.Bool
   public init?(from data: Foundation.Data)
 }
-extension SplunkCrashReports.CrashReportKeys : Swift.Equatable {}
-extension SplunkCrashReports.CrashReportKeys : Swift.Hashable {}
-extension SplunkCrashReports.CrashReportKeys : Swift.RawRepresentable {}
