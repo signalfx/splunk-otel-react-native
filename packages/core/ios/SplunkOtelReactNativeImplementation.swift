@@ -305,8 +305,9 @@ public class SplunkOtelReactNativeImplementation: NSObject {
 
   @objc
   public func navigationTrackWithScreenName(_ screenName: NSString,
+                                             attributes: NSDictionary,
                                              resolve: @escaping RCTPromiseResolveBlock,
                                              reject: @escaping RCTPromiseRejectBlock) {
-    navigationHandler.track(screenName, resolve: resolve, reject: reject)
+    navigationHandler.track(screenName, attributes: attributes, resolve: resolve, reject: reject)
   }
 }

@@ -17877,14 +17877,22 @@
       "value": "[]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Runtime Attributes\/CurrentScreenName.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Runtime Attributes\/CurrentScreenName.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 937,
       "length": 9,
       "value": "\"unknown\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
+>>>>>>> develop
       "kind": "IntegerLiteral",
       "offset": 773,
       "length": 1,
@@ -18161,7 +18169,11 @@
       "kind": "StringLiteral",
       "offset": 12158,
       "length": 7,
+<<<<<<< HEAD
       "value": "\"2.3.0\""
+=======
+      "value": "\"2.3.1\""
+>>>>>>> develop
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",

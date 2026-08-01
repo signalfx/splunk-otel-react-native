@@ -142,8 +142,8 @@ class SplunkOtelReactNativeModule(reactContext: ReactApplicationContext) :
     implementation.customEndWorkflow(handle, promise)
 
   @ReactMethod
-  fun navigationTrack(screenName: String, promise: Promise) =
-    implementation.navigationTrack(screenName, promise)
+  fun navigationTrack(screenName: String, attributes: ReadableMap, promise: Promise) =
+    implementation.navigationTrack(screenName, attributes, promise)
 
   @ReactMethod
   fun integrateWebViewWithBrowserRum(viewTag: Double, promise: Promise) =

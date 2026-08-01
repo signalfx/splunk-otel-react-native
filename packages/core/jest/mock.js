@@ -91,6 +91,14 @@ const navigationMock = {
   track: jest.fn().mockResolvedValue(undefined),
 };
 
+// react-navigation integration (subpath: @splunk/otel-react-native/react-navigation).
+// No-op detector so consumers mapping the subpath to this mock can render/register
+// without a live native module.
+const reactNavigationIntegrationMock = jest.fn(() => ({
+  registerNavigationContainer: jest.fn(),
+  unregisterNavigationContainer: jest.fn(),
+}));
+
 const agentPreferencesMock = {
   getEndpointConfiguration: jest.fn().mockResolvedValue(undefined),
   setEndpointConfiguration: jest.fn().mockResolvedValue(undefined),
@@ -287,7 +295,7 @@ class AgentPreferencesMock {
   }
 }
 
-const SDK_VERSION = '1.0.2';
+const SDK_VERSION = '1.1.0';
 
 module.exports = {
   SplunkRum: SplunkRumMock,
@@ -321,4 +329,5 @@ module.exports = {
     'networkInstrumentation'
   ),
   MutableAttributes: MutableAttributesMock,
+  reactNavigationIntegration: reactNavigationIntegrationMock,
 };

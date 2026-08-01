@@ -10,7 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
+<<<<<<< HEAD
 		whqRNLvKQDEey45upFoC8RDst9M=
+=======
+		2NvKisQV7h+BQ5MF+4x9ZUU18sQ=
+>>>>>>> develop
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>

@@ -2725,13 +2725,27 @@
       "value": "true"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationModel.swift",
+      "kind": "Dictionary",
+      "offset": 1576,
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationModel.swift",
       "kind": "Dictionary",
       "offset": 1576,
       "length": 3,
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationModel.swift",
+      "kind": "Dictionary",
+      "offset": 1666,
+>>>>>>> develop
+      "length": 3,
+      "value": "[]"
+    },
+    {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationModel.swift",
       "kind": "Dictionary",
       "offset": 1666,
@@ -2740,69 +2754,108 @@
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationModel.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationModel.swift",
+>>>>>>> develop
       "kind": "Array",
       "offset": 1751,
       "length": 2,
       "value": "[]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationModel.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationModel.swift",
+>>>>>>> develop
       "kind": "Dictionary",
       "offset": 1847,
       "length": 3,
       "value": "[]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationRuntimeStateStore.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Model\/NavigationRuntimeStateStore.swift",
+>>>>>>> develop
       "kind": "BooleanLiteral",
       "offset": 2730,
       "length": 4,
       "value": "true"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Module\/NavigationConfiguration.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Module\/NavigationConfiguration.swift",
+>>>>>>> develop
       "kind": "BooleanLiteral",
       "offset": 885,
       "length": 4,
       "value": "true"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Module\/NavigationConfiguration.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Module\/NavigationConfiguration.swift",
+>>>>>>> develop
       "kind": "BooleanLiteral",
       "offset": 2314,
       "length": 4,
       "value": "true"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Module\/NavigationRemoteConfiguration.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Module\/NavigationRemoteConfiguration.swift",
+>>>>>>> develop
       "kind": "BooleanLiteral",
       "offset": 784,
       "length": 4,
       "value": "true"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+Filtering.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+Filtering.swift",
+>>>>>>> develop
       "kind": "Array",
       "offset": 1249,
       "length": 1221,
       "value": "[\"UIApplicationRotationFollowingController\", \"UICompatibilityInputViewController\", \"UIEditingOverlayViewController\", \"UIInputWindowController\", \"UIKBSystemLayoutViewController\", \"UIPredictionViewController\", \"UISystemInputAssistantViewController\", \"UISystemInputViewController\", \"UISystemKeyboardDockController\", \"UITrackingElementWindowController\", \"UINavigationController\", \"UITabBarController\", \"SwiftUI.UIKitNavigationController\", \"SwiftUI.UIKitTabBarController\", \"SwiftUI.UIKitSplitViewController\", \"SwiftUI.UIKitInspectorSplitViewController\", \"SwiftUI.NotifyingMulticolumnSplitViewController\", \"SwiftUI.NotificationSendingSplitViewController\", \"SwiftUI.SplitViewNavigationController\", \"SwiftUI.TabHostingController\", \"SwiftUI.PlatformAlertController\", \"SwiftUI.SwiftUISearchController\"]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+Filtering.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+Filtering.swift",
+>>>>>>> develop
       "kind": "Array",
       "offset": 3086,
       "length": 179,
       "value": "[\"UIHostingController<\", \"NavigationStackHostingController<\", \"PresentationHostingController<\", \"StyleContextSplitViewNavigationController<\"]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+ScreenState.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+ScreenState.swift",
+>>>>>>> develop
       "kind": "Array",
       "offset": 776,
       "length": 105,
       "value": "[\"component\", \"navigation.name\", \"last.screen.name\", \"screen.name\"]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+Span.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+Span.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 748,
       "length": 4,
@@ -2823,14 +2876,22 @@
       "value": "\"app.ui.navigation\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+Span.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+Span.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 911,
       "length": 17,
       "value": "\"navigation.name\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+Span.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation+Span.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 968,
       "length": 13,
@@ -2844,7 +2905,11 @@
       "value": "\"last.screen.name\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNavigation\/Sources\/SplunkNavigation\/Navigation.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1159,
       "length": 12,

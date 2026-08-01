@@ -159,7 +159,10 @@ export interface Spec extends TurboModule {
   ): Promise<void>;
 
   // Navigation
-  navigationTrack(screenName: string): Promise<void>;
+  navigationTrack(
+    screenName: string,
+    attributes: { [key: string]: unknown }
+  ): Promise<void>;
 
   // WebView integration
   integrateWebViewWithBrowserRum(viewTag: number): Promise<void>;

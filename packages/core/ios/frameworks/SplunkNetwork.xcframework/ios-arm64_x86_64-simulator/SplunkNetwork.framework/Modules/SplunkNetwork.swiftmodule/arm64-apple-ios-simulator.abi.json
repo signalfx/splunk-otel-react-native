@@ -2830,63 +2830,99 @@
       "value": "true"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1019,
       "length": 11,
       "value": "\"component\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1139,
       "length": 14,
       "value": "\"link.traceId\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1260,
       "length": 13,
       "value": "\"link.spanId\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1367,
       "length": 12,
       "value": "\"session.id\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1450,
       "length": 7,
       "value": "\"error\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1629,
       "length": 22,
       "value": "\"http.request.header.\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1779,
       "length": 23,
       "value": "\"http.response.header.\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeValues.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeValues.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 867,
       "length": 6,
       "value": "\"http\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 4195,
       "length": 53,

@@ -1862,7 +1862,11 @@
       "value": "\"NetworkMonitor\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/Module\/NetworkMonitorConfiguration.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/Module\/NetworkMonitorConfiguration.swift",
+>>>>>>> develop
       "kind": "BooleanLiteral",
       "offset": 911,
       "length": 4,
@@ -1897,42 +1901,66 @@
       "value": "true"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 938,
       "length": 16,
       "value": "\"NetworkMonitor\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1040,
       "length": 16,
       "value": "\"network.change\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1190,
       "length": 16,
       "value": "\"network.status\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1358,
       "length": 11,
       "value": "\"available\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1475,
       "length": 6,
       "value": "\"lost\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+=======
+      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+>>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1604,
       "length": 4,

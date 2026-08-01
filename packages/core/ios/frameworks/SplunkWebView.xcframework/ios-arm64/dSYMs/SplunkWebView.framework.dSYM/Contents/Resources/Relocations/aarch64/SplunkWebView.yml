@@ -2,8 +2,13 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/budim/Library/Developer/Xcode/DerivedData/SplunkAgentXCFrameworks-hgsygarymeusfmetozfuhcpftltz/Build/Intermediates.noindex/ArchiveIntermediates/SplunkWebView/InstallationBuildProductsLocation/Library/Frameworks/SplunkWebView.framework/SplunkWebView'
 relocations:
+<<<<<<< HEAD
   - { offset: 0x51EBE, size: 0x8, addend: 0x0, symName: _SplunkWebViewVersionString, symObjAddr: 0x0, symBinAddr: 0xA280, symSize: 0x0 }
   - { offset: 0x51EF5, size: 0x8, addend: 0x0, symName: _SplunkWebViewVersionNumber, symObjAddr: 0x40, symBinAddr: 0xA2C0, symSize: 0x0 }
+=======
+  - { offset: 0x51EBE, size: 0x8, addend: 0x0, symName: _SplunkWebViewVersionString, symObjAddr: 0x0, symBinAddr: 0xA240, symSize: 0x0 }
+  - { offset: 0x51EF5, size: 0x8, addend: 0x0, symName: _SplunkWebViewVersionNumber, symObjAddr: 0x40, symBinAddr: 0xA280, symSize: 0x0 }
+>>>>>>> develop
   - { offset: 0x520E3, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView0bC23InstrumentationMetadataV0A6Common011ModuleEventE0AASQWb', symObjAddr: 0xD0, symBinAddr: 0x4088, symSize: 0x24 }
   - { offset: 0x520F7, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView0bC23InstrumentationMetadataVMa', symObjAddr: 0xF4, symBinAddr: 0x40AC, symSize: 0x38 }
   - { offset: 0x5210B, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView0bC15InstrumentationC0A6Common6ModuleAA13ConfigurationAdEP_AD0fG0PWT', symObjAddr: 0x12C, symBinAddr: 0x40E4, symSize: 0x4 }
@@ -110,13 +115,23 @@ relocations:
   - { offset: 0x54227, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView0bC15InstrumentationC21userContentController_10didReceive12replyHandlerySo06WKUserfG0C_So15WKScriptMessageCyypSg_SSSgtctF031$syXlSgSo8NSStringCSgIeyBhyy_ypQ13SSSgIeghng_TRyXlSgSo0S0CSgIeyBhyy_Tf1nncn_nTf4ddng_n', symObjAddr: 0x1E7C, symBinAddr: 0x6CEC, symSize: 0x3C0 }
   - { offset: 0x54461, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView12BundleFinder33_D1B683933CE33F41195B356A14144520LLCfD', symObjAddr: 0x0, symBinAddr: 0x7294, symSize: 0x10 }
   - { offset: 0x544A3, size: 0x8, addend: 0x0, symName: '_$sSo8NSBundleC13SplunkWebViewE6module_WZ', symObjAddr: 0x10, symBinAddr: 0x72A4, symSize: 0x4C }
+<<<<<<< HEAD
   - { offset: 0x54573, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView0abC9ResourcesCMa', symObjAddr: 0x124, symBinAddr: 0x73A0, symSize: 0x20 }
   - { offset: 0x54587, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView12BundleFinder33_D1B683933CE33F41195B356A14144520LLCMa', symObjAddr: 0x1B0, symBinAddr: 0x742C, symSize: 0x20 }
+=======
+  - { offset: 0x54573, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView12BundleFinder33_D1B683933CE33F41195B356A14144520LLCMa', symObjAddr: 0x198, symBinAddr: 0x73E0, symSize: 0x20 }
+  - { offset: 0x54587, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView0abC9ResourcesCMa', symObjAddr: 0x1B8, symBinAddr: 0x7400, symSize: 0x20 }
+>>>>>>> develop
   - { offset: 0x545A7, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView12BundleFinder33_D1B683933CE33F41195B356A14144520LLCfD', symObjAddr: 0x0, symBinAddr: 0x7294, symSize: 0x10 }
   - { offset: 0x5465E, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView0abC9ResourcesC6bundleSo8NSBundleCvgZTo', symObjAddr: 0x5C, symBinAddr: 0x72F0, symSize: 0x40 }
   - { offset: 0x54676, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView0abC9ResourcesC6bundleSo8NSBundleCvgZTo', symObjAddr: 0x5C, symBinAddr: 0x72F0, symSize: 0x40 }
   - { offset: 0x54696, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView0abC9ResourcesC6bundleSo8NSBundleCvgZ', symObjAddr: 0x9C, symBinAddr: 0x7330, symSize: 0x40 }
+<<<<<<< HEAD
   - { offset: 0x546BE, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView0abC9ResourcesCACycfc', symObjAddr: 0xF4, symBinAddr: 0x7370, symSize: 0x30 }
   - { offset: 0x546F6, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView0abC9ResourcesCACycfcTo', symObjAddr: 0x144, symBinAddr: 0x73C0, symSize: 0x3C }
   - { offset: 0x5472B, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView0abC9ResourcesCfD', symObjAddr: 0x180, symBinAddr: 0x73FC, symSize: 0x30 }
+=======
+  - { offset: 0x546BE, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView0abC9ResourcesCACycfc', symObjAddr: 0xF4, symBinAddr: 0x7370, symSize: 0x34 }
+  - { offset: 0x546F6, size: 0x8, addend: 0x0, symName: '_$s13SplunkWebView0abC9ResourcesCACycfcTo', symObjAddr: 0x128, symBinAddr: 0x73A4, symSize: 0x3C }
+>>>>>>> develop
 ...

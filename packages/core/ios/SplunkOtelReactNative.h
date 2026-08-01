@@ -150,6 +150,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // Navigation
 - (void)navigationTrack:(NSString *)screenName
+             attributes:(NSDictionary *)attributes
                 resolve:(RCTPromiseResolveBlock)resolve
                  reject:(RCTPromiseRejectBlock)reject;
 
