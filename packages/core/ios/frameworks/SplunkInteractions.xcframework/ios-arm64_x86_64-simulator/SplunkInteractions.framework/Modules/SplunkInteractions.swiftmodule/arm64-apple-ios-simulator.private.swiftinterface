@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkInteractions
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkInteractions -package-name SplunkAgent
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
 import CiscoInteractions
 import CiscoLogger
@@ -37,6 +37,10 @@ extension SplunkInteractions.Interactions : SplunkCommon.Module {
   final public func deleteData(for _: any SplunkCommon.ModuleEventMetadata)
 }
 @_hasMissingDesignatedInitializers final public class Interactions : SplunkInteractions.SplunkInteractionsModule {
+  @_spi(SplunkInternal) final public var onActivity: ((Foundation.Date) -> Swift.Void)? {
+    @_spi(SplunkInternal) get
+    @_spi(SplunkInternal) set
+  }
   required public init()
   final public func register(customId: Swift.String?, for viewId: Swift.ObjectIdentifier)
   @objc deinit

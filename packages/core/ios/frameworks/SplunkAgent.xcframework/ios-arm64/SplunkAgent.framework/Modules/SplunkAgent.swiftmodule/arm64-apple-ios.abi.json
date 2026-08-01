@@ -644,6 +644,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SplunkCommon",
         "printedName": "SplunkCommon",
         "declKind": "Import",
@@ -866,6 +876,13 @@
       },
       {
         "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -908,7 +925,8 @@
         "declKind": "Import",
         "moduleName": "SplunkAgent",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "SPIAccessControl"
         ]
       },
       {
@@ -11187,6 +11205,13 @@
       },
       {
         "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -17758,6 +17783,13 @@
       "value": "\"session.replay\""
     },
     {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
+      "kind": "Array",
+      "offset": 1939,
+      "length": 2,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
       "kind": "StringLiteral",
       "offset": 876,
@@ -17842,6 +17874,41 @@
       "value": "2678400"
     },
     {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
+      "kind": "Array",
+      "offset": 1502,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1902,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2235,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2310,
+      "length": 6,
+      "value": "10000"
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2674,
+      "length": 5,
+      "value": "1024"
+    },
+    {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
       "kind": "Dictionary",
       "offset": 915,
@@ -17872,27 +17939,19 @@
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/SplunkRum+Modules.swift",
       "kind": "Array",
-      "offset": 6191,
+      "offset": 6228,
       "length": 2,
       "value": "[]"
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Runtime Attributes\/CurrentScreenName.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Runtime Attributes\/CurrentScreenName.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 937,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
->>>>>>> develop
       "kind": "IntegerLiteral",
       "offset": 773,
       "length": 1,
@@ -18103,15 +18162,22 @@
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplay.swift",
+      "kind": "Array",
+      "offset": 1063,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplay.swift",
       "kind": "IntegerLiteral",
-      "offset": 1078,
+      "offset": 1285,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplay.swift",
       "kind": "FloatLiteral",
-      "offset": 1191,
+      "offset": 1398,
       "length": 3,
       "value": "0.2"
     },
@@ -18169,11 +18235,7 @@
       "kind": "StringLiteral",
       "offset": 12158,
       "length": 7,
-<<<<<<< HEAD
-      "value": "\"2.3.0\""
-=======
-      "value": "\"2.3.1\""
->>>>>>> develop
+      "value": "\"2.4.0\""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",

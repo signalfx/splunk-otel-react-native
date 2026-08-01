@@ -591,6 +591,22 @@ SWIFT_CLASS_NAMED("CrashReportsConfigurationObjC")
 - (nonnull instancetype)initWithEnabled:(BOOL)isEnabled OBJC_DESIGNATED_INITIALIZER;
 @end
 
+/// The class implements the Custom Tracking module configuration.
+SWIFT_CLASS_NAMED("CustomTrackingConfigurationObjC")
+@interface SPLKCustomTrackingConfiguration : SPLKModuleConfiguration
+/// Indicates whether tracked errors and exceptions may include binary image metadata.
+/// Default value is <code>YES</code>.
+@property (nonatomic) BOOL includeBinaryImagesOnErrors;
+/// Initializes new module configuration.
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// Initializes new module configuration with preconfigured values.
+/// \param isEnabled A <code>BOOL</code> value sets whether the module is enabled.
+///
+/// \param includeBinaryImagesOnErrors A <code>BOOL</code> value sets whether tracked errors and exceptions may include binary image metadata.
+///
+- (nonnull instancetype)initWithEnabled:(BOOL)isEnabled includeBinaryImagesOnErrors:(BOOL)includeBinaryImagesOnErrors OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class NSError;
 @class NSException;
 /// The class implements a public API for the CustomTracking module.
@@ -2152,6 +2168,22 @@ SWIFT_CLASS_NAMED("CrashReportsConfigurationObjC")
 /// \param isEnabled A <code>BOOL</code> value sets whether the module is enabled.
 ///
 - (nonnull instancetype)initWithEnabled:(BOOL)isEnabled OBJC_DESIGNATED_INITIALIZER;
+@end
+
+/// The class implements the Custom Tracking module configuration.
+SWIFT_CLASS_NAMED("CustomTrackingConfigurationObjC")
+@interface SPLKCustomTrackingConfiguration : SPLKModuleConfiguration
+/// Indicates whether tracked errors and exceptions may include binary image metadata.
+/// Default value is <code>YES</code>.
+@property (nonatomic) BOOL includeBinaryImagesOnErrors;
+/// Initializes new module configuration.
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// Initializes new module configuration with preconfigured values.
+/// \param isEnabled A <code>BOOL</code> value sets whether the module is enabled.
+///
+/// \param includeBinaryImagesOnErrors A <code>BOOL</code> value sets whether tracked errors and exceptions may include binary image metadata.
+///
+- (nonnull instancetype)initWithEnabled:(BOOL)isEnabled includeBinaryImagesOnErrors:(BOOL)includeBinaryImagesOnErrors OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class NSError;

@@ -10,19 +10,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Sgq2EB8iYnu1nBnwQq9gWz0WHWU=
+		DSLXZgEKebD5nQBJA53xyfGO9PQ=
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-<<<<<<< HEAD
 		mvFUgcCiatWrr676s4MDKfczVBU=
-=======
-		jhoem6cJcEMsgRcjzQG7Mp7GyIw=
->>>>>>> develop
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		5oaL8C7XzZPH8Vz4v8e5zMzXcys=
+		wdiyEjFK0UhfNxcgZtCCHm5kvgY=
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,27 +26,19 @@
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		xGHx4aZ8o49HRPsSXFnhYUJX4aY=
+		Igq+6IXhCeQZY4KvhNDiljtDSc8=
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-<<<<<<< HEAD
-		XQo0uXg2lKo0IMpy3A39jGeHo+A=
+		mn+WkaaTT/dky+rs8dxSqzAEJ1I=
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
 		mvFUgcCiatWrr676s4MDKfczVBU=
-=======
-		tyAaCZBeAoLjIGIlvPxLl+RNADM=
-		</data>
-		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
-		<data>
-		jhoem6cJcEMsgRcjzQG7Mp7GyIw=
->>>>>>> develop
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		SY437huXHXiObAk4FztdTwQQwzQ=
+		s3zqhlbO6FEcHncNy2YpZiVDzyY=
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -58,15 +46,11 @@
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		6OKaRF3VfAzZoePGOaAWa8+oicA=
+		lWubuMLeisYtEzjXhNZbgsSd7PY=
 		</data>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-<<<<<<< HEAD
-		OnNkoFsnjmjjgDbmtdqjqssuwtI=
-=======
-		x/LVuUK4RN7QfeHqv3oM8Yg00g4=
->>>>>>> develop
+		JdjW+cljYalrchZkxmSq80U3+OM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -86,18 +70,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
 			SgLQPOgaKLtqC2tNWl1B9PBLxUyBI6UdzG+zHbt2sas=
-=======
-			zSc+stnlrzAHwCriSC/Le2Y3KX1MNxeVsZX0fUIjcN0=
->>>>>>> develop
 			</data>
 		</dict>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DIR/zqQ08/8/8yl0xKjMenSMeH33CQSuB3jj5lL20bY=
+			j3tV6LrNu2fRgfGko1LRM4DnV3/lh5Zo5DNgUNff3eY=
 			</data>
 		</dict>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -111,36 +91,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3J/GvQSXgo9l4muk9cXFmKlNrZ/jP2y5b9kHmtekAm4=
+			7ZQtdLdZ6D4SUlirHqGH+0m7EfBqd+HfRvmfZMXH5UQ=
 			</data>
 		</dict>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			nudpBWAeCIsDVgR9Dxt8b3x1E9c8WFr1IwZevVIiKao=
-=======
-			uetG1P/QJnc9K4LUlq625wnqhlEqHJMKLxr0Vl+ySBk=
->>>>>>> develop
+			LLkLD1so4TjTXct0Thst4e2hJzf6P9m3xW6epIpvUjA=
 			</data>
 		</dict>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
 			SgLQPOgaKLtqC2tNWl1B9PBLxUyBI6UdzG+zHbt2sas=
-=======
-			zSc+stnlrzAHwCriSC/Le2Y3KX1MNxeVsZX0fUIjcN0=
->>>>>>> develop
 			</data>
 		</dict>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K6SOgEvAQa7yoF6o1rSivezZ5Vw/mJjJwK0+/n9C1gM=
+			SddPrONyvV4jX4RaPeC0DaSRGAY7YQJEvyNOXJM623w=
 			</data>
 		</dict>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -154,18 +126,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QJuhmBXyDfAH0/a37U9C4UKgimxWdWkqK/W6gO/q+f8=
+			xqNsFxtMUHvivKe1RL8rE5ZcR+WJqVnxztRPf+79ST8=
 			</data>
 		</dict>
 		<key>Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			Drx1IYl5dvWJDgnFBrsBV7mqhSlPg1m06JIDF9ipUJ4=
-=======
-			Nvkd1Q5Mjwit0d2UhPE1ulBGeA2ttr0D4med4Oq0tGg=
->>>>>>> develop
+			JeOUonadOX1loyH1KfluBJd4G2pPnzMyOK/50hRzFNY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -10,19 +10,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		BscHyvXDH3XjlzMBwW+sedRtRIQ=
+		UBhxCbTPOB12ATFWDZC7qRzxihs=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-<<<<<<< HEAD
-		ryQ4gfXCtftPgDvkBPlVO8Ofk10=
-=======
-		loiXOO5WWaH2fRuXVl1wVIhHnns=
->>>>>>> develop
+		FM0TEuNWkYbeXv036DrjE+BZwCY=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		oCTbaQDS6AaTNfgWK3qcFDuxWkE=
+		+FHfupa0RHBjVzKcXsRM5ZoT9JI=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,27 +26,19 @@
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		3QFqYMz2TfKq0D0lO1STEZr3SAc=
+		5simpNOzpXdFbsyLU5uGYj5bvSw=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-<<<<<<< HEAD
-		qxNmuThOfjL+bC2Ns9DfDzQwT5A=
+		de8WMrjjviZumMXaLH8bab9tfrg=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		ryQ4gfXCtftPgDvkBPlVO8Ofk10=
-=======
-		i/cszy3ZSledAzeQZV8Y8zqbJwU=
-		</data>
-		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
-		<data>
-		loiXOO5WWaH2fRuXVl1wVIhHnns=
->>>>>>> develop
+		FM0TEuNWkYbeXv036DrjE+BZwCY=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		jVWIYuL8Z403BZwOqiYqpvBJlWQ=
+		2hE5+R1NGG0K2Sil2mNIxfAp8dM=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -58,15 +46,11 @@
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		UvUXmouX6jcINH259l8bcUWv9qI=
+		kq4BlnAHAQEGXvoAe664kdvp3LY=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-<<<<<<< HEAD
-		QLD25AkAi8pS2X/1pDcwZQ6yygk=
-=======
-		ByytxEehxc1rqtd/+5m1WONBxzM=
->>>>>>> develop
+		sUKP/FsGBkku3t0r+7xGu3HU3n4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -86,18 +70,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			DNklerB/59V6+VnhBXmoF3wZW06NMnpSf2r+vi6/FkM=
-=======
-			JNnDIQXl2LnSCiKGtONXS8UCqK4Xc8u8VdUslzFdYnY=
->>>>>>> develop
+			UfMS88n4tIkOhRCW8bMIS7azWUt+8kJUwzwfFkPKnXw=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OT8ozcvn33g+Uv61Z+Qs5Sz0fACKetKURC4wu0EGD3c=
+			30RTasb7Zfo7eyeX3/6Ppw/P3L8kg43oxUSJcwbrNQ4=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -111,36 +91,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cv5W7ks/mf4wXVOuvNN6anocmDDZb/67GHpX+XlD7Cw=
+			Fp0fzknHO7L0cxhoKaJYoR+LKi5y4yQHrjPAxsd/Dio=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			M0ELwJFaWAz7YZaT+GvLaqbwqv+d84XOyo6bKi5jpPY=
-=======
-			Ej4+n7doEjxCEZgH7pVvW3ONduJPRaUoKIYjN1D8/YY=
->>>>>>> develop
+			t7om43075vVccOSgKJuaQATNkPYVaNbcotSOSzGiIm4=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			DNklerB/59V6+VnhBXmoF3wZW06NMnpSf2r+vi6/FkM=
-=======
-			JNnDIQXl2LnSCiKGtONXS8UCqK4Xc8u8VdUslzFdYnY=
->>>>>>> develop
+			UfMS88n4tIkOhRCW8bMIS7azWUt+8kJUwzwfFkPKnXw=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rTOf2RDvSQxoYF6wS7plL9kT4p6G3eW/I6hjK4ZiohM=
+			DYba1cGfXdVD3GIf1Kf4njIGy0Q0LVGiqRsK0FE+cOY=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -154,18 +126,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zX90Uv9wycf+naP1QCXbARNVXEsZaqed4FUomu0Enik=
+			rQEVTBk0M1LD8p6ZRKGs+rgPg5RaO2RqLgIJ1ZVf2Ko=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			0JvCIUMKE0wm9n5QHePf1/3TD/gDyZgju6RVWU+j1Ro=
-=======
-			JpwNxklT1daXyx3rVQ8q7TnSsvrZcz5cJZW0kpnMZFo=
->>>>>>> develop
+			vdURdwm45tzOzhmbEyIkpPbQx76Mg8tVd4Wzwqs5sDU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

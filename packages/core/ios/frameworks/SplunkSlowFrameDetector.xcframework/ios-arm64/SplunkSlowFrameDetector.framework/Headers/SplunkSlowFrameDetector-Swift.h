@@ -371,9 +371,11 @@ extern "C" {
 
 /// Detects and reports slow and frozen frames in the user interface.
 /// This class monitors the application’s frame rate using <code>CADisplayLink</code>. It identifies “slow frames”
-/// when the time between frames exceeds the expected duration plus a (percentage) tolerance. It also
-/// detects “frozen frames” when the main thread is unresponsive for a significant period.
-/// These events are reported as metrics to the configured destination.
+/// when a frame arrives late enough to have missed at least one complete presentation opportunity at the
+/// current display cadence. It also detects “frozen frames” when the main thread is unresponsive for a
+/// significant period. A slow frame and a frozen frame are mutually exclusive, and one continuous freeze
+/// is reported as a single frozen frame event regardless of its duration.
+/// Detected events are periodically flushed to the configured destination as aggregated counts.
 SWIFT_CLASS("_TtC23SplunkSlowFrameDetector17SlowFrameDetector")
 @interface SlowFrameDetector : NSObject
 /// Initializes a new instance of the <code>SlowFrameDetector</code>.

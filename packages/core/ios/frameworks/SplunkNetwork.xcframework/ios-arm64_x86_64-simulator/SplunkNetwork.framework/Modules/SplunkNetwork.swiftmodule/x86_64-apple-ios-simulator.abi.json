@@ -2830,166 +2830,109 @@
       "value": "true"
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1019,
       "length": 11,
       "value": "\"component\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1139,
       "length": 14,
       "value": "\"link.traceId\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1260,
       "length": 13,
       "value": "\"link.spanId\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1367,
       "length": 12,
       "value": "\"session.id\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1450,
       "length": 7,
       "value": "\"error\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1629,
       "length": 22,
       "value": "\"http.request.header.\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1779,
       "length": 23,
       "value": "\"http.response.header.\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeValues.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeValues.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 867,
       "length": 6,
       "value": "\"http\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
->>>>>>> develop
       "kind": "StringLiteral",
-      "offset": 4195,
+      "offset": 3972,
       "length": 53,
       "value": "\"Failed to swizzle \""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 4247,
+      "offset": 4024,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5370,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 6034,
+      "offset": 5527,
       "length": 53,
       "value": "\"Failed to swizzle \""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 6086,
+      "offset": 5579,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 6540,
+      "offset": 6033,
       "length": 78,
       "value": "\"Original downloadTask(with: URLRequest, completionHandler:) IMP not captured\""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7918,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 10231,
+      "offset": 9205,
       "length": 53,
       "value": "\"Failed to swizzle \""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 10283,
+      "offset": 9257,
       "length": 1,
       "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
-      "kind": "BooleanLiteral",
-      "offset": 11229,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+Swizzling.swift",
@@ -3013,95 +2956,74 @@
       "value": "1"
     },
     {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 790,
+      "length": 1,
+      "value": "2"
+    },
+    {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 4046,
+      "offset": 3823,
       "length": 53,
       "value": "\"Failed to swizzle \""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 4098,
+      "offset": 3875,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5351,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 5994,
+      "offset": 5445,
       "length": 53,
       "value": "\"Failed to swizzle \""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 6046,
+      "offset": 5497,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 6663,
+      "offset": 6114,
       "length": 74,
       "value": "\"Original dataTask(with: URLRequest, completionHandler:) IMP not captured\""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8277,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 12249,
+      "offset": 10842,
       "length": 53,
       "value": "\"Failed to swizzle \""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 12301,
+      "offset": 10894,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
-      "kind": "BooleanLiteral",
-      "offset": 13554,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 14250,
+      "offset": 12553,
       "length": 53,
       "value": "\"Failed to swizzle \""
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 14302,
+      "offset": 12605,
       "length": 1,
       "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
-      "kind": "BooleanLiteral",
-      "offset": 15563,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation.swift",

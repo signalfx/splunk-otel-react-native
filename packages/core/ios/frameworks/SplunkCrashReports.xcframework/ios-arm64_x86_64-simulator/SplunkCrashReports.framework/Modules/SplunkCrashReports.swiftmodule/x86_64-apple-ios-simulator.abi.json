@@ -50,6 +50,26 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkCrashReports",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkCrashReports",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "CrashReporter",
         "printedName": "CrashReporter",
         "declKind": "Import",
@@ -212,6 +232,268 @@
                 "mangledName": "$s18SplunkCrashReports0bC0C11sharedState0A6Common011AgentSharedE0_pSgvM",
                 "moduleName": "SplunkCrashReports",
                 "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "crashReportPersistenceHandler",
+            "printedName": "crashReportPersistenceHandler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((@escaping () -> OpenTelemetryApi.SpanId, @escaping (Swift.Bool) -> ()) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(@escaping () -> OpenTelemetryApi.SpanId, @escaping (Swift.Bool) -> ()) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(() -> OpenTelemetryApi.SpanId, (Swift.Bool) -> ())",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "() -> OpenTelemetryApi.SpanId",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "SpanId",
+                                "printedName": "OpenTelemetryApi.SpanId",
+                                "usr": "s:16OpenTelemetryApi6SpanIdV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(Swift.Bool) -> ()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Bool",
+                                "printedName": "Swift.Bool",
+                                "usr": "s:Sb"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18SplunkCrashReports0bC0C29crashReportPersistenceHandlery16OpenTelemetryApi6SpanIdVyc_ySbctcSgvp",
+            "mangledName": "$s18SplunkCrashReports0bC0C29crashReportPersistenceHandlery16OpenTelemetryApi6SpanIdVyc_ySbctcSgvp",
+            "moduleName": "SplunkCrashReports",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((@escaping () -> OpenTelemetryApi.SpanId, @escaping (Swift.Bool) -> ()) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(@escaping () -> OpenTelemetryApi.SpanId, @escaping (Swift.Bool) -> ()) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(() -> OpenTelemetryApi.SpanId, (Swift.Bool) -> ())",
+                            "children": [
+                              {
+                                "kind": "TypeFunc",
+                                "name": "Function",
+                                "printedName": "() -> OpenTelemetryApi.SpanId",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "SpanId",
+                                    "printedName": "OpenTelemetryApi.SpanId",
+                                    "usr": "s:16OpenTelemetryApi6SpanIdV"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Void",
+                                    "printedName": "()"
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "TypeFunc",
+                                "name": "Function",
+                                "printedName": "(Swift.Bool) -> ()",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Void",
+                                    "printedName": "()"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Bool",
+                                    "printedName": "Swift.Bool",
+                                    "usr": "s:Sb"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18SplunkCrashReports0bC0C29crashReportPersistenceHandlery16OpenTelemetryApi6SpanIdVyc_ySbctcSgvg",
+                "mangledName": "$s18SplunkCrashReports0bC0C29crashReportPersistenceHandlery16OpenTelemetryApi6SpanIdVyc_ySbctcSgvg",
+                "moduleName": "SplunkCrashReports",
+                "implicit": true,
+                "isInternal": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((@escaping () -> OpenTelemetryApi.SpanId, @escaping (Swift.Bool) -> ()) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(@escaping () -> OpenTelemetryApi.SpanId, @escaping (Swift.Bool) -> ()) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(() -> OpenTelemetryApi.SpanId, (Swift.Bool) -> ())",
+                            "children": [
+                              {
+                                "kind": "TypeFunc",
+                                "name": "Function",
+                                "printedName": "() -> OpenTelemetryApi.SpanId",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "SpanId",
+                                    "printedName": "OpenTelemetryApi.SpanId",
+                                    "usr": "s:16OpenTelemetryApi6SpanIdV"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Void",
+                                    "printedName": "()"
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "TypeFunc",
+                                "name": "Function",
+                                "printedName": "(Swift.Bool) -> ()",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Void",
+                                    "printedName": "()"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Bool",
+                                    "printedName": "Swift.Bool",
+                                    "usr": "s:Sb"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18SplunkCrashReports0bC0C29crashReportPersistenceHandlery16OpenTelemetryApi6SpanIdVyc_ySbctcSgvs",
+                "mangledName": "$s18SplunkCrashReports0bC0C29crashReportPersistenceHandlery16OpenTelemetryApi6SpanIdVyc_ySbctcSgvs",
+                "moduleName": "SplunkCrashReports",
+                "implicit": true,
+                "isInternal": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18SplunkCrashReports0bC0C29crashReportPersistenceHandlery16OpenTelemetryApi6SpanIdVyc_ySbctcSgvM",
+                "mangledName": "$s18SplunkCrashReports0bC0C29crashReportPersistenceHandlery16OpenTelemetryApi6SpanIdVyc_ySbctcSgvM",
+                "moduleName": "SplunkCrashReports",
+                "implicit": true,
+                "isInternal": true,
                 "accessorKind": "_modify"
               }
             ]
@@ -1868,114 +2150,55 @@
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
       "kind": "Array",
-      "offset": 1016,
+      "offset": 1202,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
       "kind": "StringLiteral",
-      "offset": 1103,
+      "offset": 1289,
       "length": 14,
       "value": "\"CrashReports\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
->>>>>>> develop
+      "kind": "BooleanLiteral",
+      "offset": 1743,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
       "kind": "Dictionary",
-      "offset": 1512,
+      "offset": 1930,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
       "kind": "StringLiteral",
-      "offset": 1681,
+      "offset": 2099,
       "length": 36,
       "value": "\"com.splunk.crashreports.devicedata\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 841,
-      "length": 19,
-      "value": "\"SplunkCrashReport\""
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
       "kind": "StringLiteral",
       "offset": 841,
       "length": 19,
       "value": "\"SplunkCrashReport\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
       "kind": "StringLiteral",
       "offset": 956,
       "length": 21,
       "value": "\"splunk-crash-report\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1077,
-      "length": 18,
-      "value": "\"device.app.crash\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1212,
-      "length": 7,
-      "value": "\"crash\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1338,
-      "length": 9,
-      "value": "\"unknown\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 873,
-      "length": 15,
-      "value": "\"ios.app.state\""
->>>>>>> develop
-    },
-    {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
       "kind": "StringLiteral",
-<<<<<<< HEAD
-      "offset": 956,
-=======
-      "offset": 916,
-      "length": 17,
-      "value": "\"crash.timestamp\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 962,
-      "length": 25,
-      "value": "\"crash.observedTimestamp\""
-    },
-    {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-      "kind": "StringLiteral",
-      "offset": 1013,
->>>>>>> develop
-      "length": 21,
-      "value": "\"splunk-crash-report\""
-    },
-    {
-      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
-      "kind": "StringLiteral",
-<<<<<<< HEAD
       "offset": 1077,
       "length": 18,
       "value": "\"device.app.crash\""
@@ -2025,150 +2248,96 @@
     {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
-=======
->>>>>>> develop
       "offset": 1059,
       "length": 20,
       "value": "\"crash.batteryLevel\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1102,
       "length": 18,
       "value": "\"crash.freeMemory\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1143,
       "length": 13,
       "value": "\"screen.name\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1176,
       "length": 20,
       "value": "\"crash.app.build_id\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1221,
       "length": 19,
       "value": "\"crash.processPath\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1261,
       "length": 16,
       "value": "\"crash.isNative\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1323,
       "length": 15,
       "value": "\"crash.address\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1365,
       "length": 16,
       "value": "\"exception.type\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1409,
       "length": 19,
       "value": "\"exception.message\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1449,
       "length": 19,
       "value": "\"exception.threads\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1487,
       "length": 18,
       "value": "\"exception.images\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1729,
       "length": 9,
       "value": "\"crashed\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
->>>>>>> develop
       "kind": "StringLiteral",
       "offset": 1876,
       "length": 12,
       "value": "\"session.id\""
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Module\/CrashReportsConfiguration.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Module\/CrashReportsConfiguration.swift",
->>>>>>> develop
       "kind": "BooleanLiteral",
       "offset": 908,
       "length": 4,

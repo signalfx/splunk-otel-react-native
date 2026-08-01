@@ -4930,6 +4930,115 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "InternalNetworkRequestMarker",
+        "printedName": "InternalNetworkRequestMarker",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "mark",
+            "printedName": "mark(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SplunkCommon28InternalNetworkRequestMarkerO4marky10Foundation10URLRequestVAGFZ",
+            "mangledName": "$s12SplunkCommon28InternalNetworkRequestMarkerO4marky10Foundation10URLRequestVAGFZ",
+            "moduleName": "SplunkCommon",
+            "static": true,
+            "isInternal": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isMarked",
+            "printedName": "isMarked(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SplunkCommon28InternalNetworkRequestMarkerO8isMarkedySb10Foundation10URLRequestVFZ",
+            "mangledName": "$s12SplunkCommon28InternalNetworkRequestMarkerO8isMarkedySb10Foundation10URLRequestVFZ",
+            "moduleName": "SplunkCommon",
+            "static": true,
+            "isInternal": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12SplunkCommon28InternalNetworkRequestMarkerO",
+        "mangledName": "$s12SplunkCommon28InternalNetworkRequestMarkerO",
+        "moduleName": "SplunkCommon",
+        "isInternal": true,
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkCommon",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Function",
         "name": "waitUntil",
         "printedName": "waitUntil(timeout:pollIntervalNanoseconds:_:)",
@@ -5245,22 +5354,21 @@
       "value": "false"
     },
     {
-<<<<<<< HEAD
+      "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Utils\/InternalNetworkRequestMarker.swift",
+      "kind": "StringLiteral",
+      "offset": 791,
+      "length": 41,
+      "value": "\"com.splunk.rum.internal-network-request\""
+    },
+    {
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Utils\/WaitUntil.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Utils\/WaitUntil.swift",
->>>>>>> develop
       "kind": "FloatLiteral",
       "offset": 1094,
       "length": 3,
       "value": "1.0"
     },
     {
-<<<<<<< HEAD
       "filePath": "\/Users\/budim\/Work\/splunk\/ios\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Utils\/WaitUntil.swift",
-=======
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Utils\/WaitUntil.swift",
->>>>>>> develop
       "kind": "IntegerLiteral",
       "offset": 1137,
       "length": 10,

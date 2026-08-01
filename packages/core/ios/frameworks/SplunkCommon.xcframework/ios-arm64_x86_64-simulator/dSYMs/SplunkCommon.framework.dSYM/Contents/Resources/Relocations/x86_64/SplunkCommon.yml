@@ -2,8 +2,8 @@
 triple:          'x86_64-apple-darwin'
 binary-path:     '/Users/budim/Library/Developer/Xcode/DerivedData/SplunkAgentXCFrameworks-hgsygarymeusfmetozfuhcpftltz/Build/Intermediates.noindex/ArchiveIntermediates/SplunkCommon/InstallationBuildProductsLocation/Library/Frameworks/SplunkCommon.framework/SplunkCommon'
 relocations:
-  - { offset: 0x2B60B, size: 0x8, addend: 0x0, symName: _SplunkCommonVersionString, symObjAddr: 0x0, symBinAddr: 0xFF80, symSize: 0x0 }
-  - { offset: 0x2B642, size: 0x8, addend: 0x0, symName: _SplunkCommonVersionNumber, symObjAddr: 0x40, symBinAddr: 0xFFC0, symSize: 0x0 }
+  - { offset: 0x2B60B, size: 0x8, addend: 0x0, symName: _SplunkCommonVersionString, symObjAddr: 0x0, symBinAddr: 0x102D0, symSize: 0x0 }
+  - { offset: 0x2B642, size: 0x8, addend: 0x0, symName: _SplunkCommonVersionNumber, symObjAddr: 0x40, symBinAddr: 0x10310, symSize: 0x0 }
   - { offset: 0x2B680, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon16AgentSharedStateP15sessionMetadataSSSgvg', symObjAddr: 0x0, symBinAddr: 0x1310, symSize: 0x10 }
   - { offset: 0x2B6EE, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon16AgentSharedStateP15sessionMetadataSSSgvg', symObjAddr: 0x0, symBinAddr: 0x1310, symSize: 0x10 }
   - { offset: 0x2B999, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV2eeoiySbAC_ACtFZSbSWXEfU_', symObjAddr: 0x3D0, symBinAddr: 0x1800, symSize: 0x280 }
@@ -267,13 +267,19 @@ relocations:
   - { offset: 0x33CDC, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon27TelemetryAttributeConverterO07numericD5Value33_7C292607925CCBF50E28C5E8A956512ALL4from07defaultG004OpenC3Api0dG0Oyp_AJtFZ', symObjAddr: 0x8B0, symBinAddr: 0xB3C0, symSize: 0x190 }
   - { offset: 0x33DE2, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon27TelemetryAttributeConverterO010collectionD5Value33_7C292607925CCBF50E28C5E8A956512ALL4from04OpenC3Api0dG0OSgyp_tFZ', symObjAddr: 0xA40, symBinAddr: 0xB550, symSize: 0xB10 }
   - { offset: 0x34A5F, size: 0x8, addend: 0x0, symName: '_$sSD17dictionaryLiteralSDyxq_Gx_q_td_tcfCSS_16OpenTelemetryApi14AttributeValueOTt0g5Tf4g_n', symObjAddr: 0x2550, symBinAddr: 0xD030, symSize: 0x190 }
-  - { offset: 0x34C4A, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaF', symObjAddr: 0x0, symBinAddr: 0xD220, symSize: 0x80 }
-  - { offset: 0x34C91, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaF', symObjAddr: 0x0, symBinAddr: 0xD220, symSize: 0x80 }
-  - { offset: 0x34CFB, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaFTY0_', symObjAddr: 0x80, symBinAddr: 0xD2A0, symSize: 0x100 }
-  - { offset: 0x34D6E, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaFTQ1_', symObjAddr: 0x180, symBinAddr: 0xD3A0, symSize: 0x60 }
-  - { offset: 0x34DDD, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaFTY2_', symObjAddr: 0x1E0, symBinAddr: 0xD400, symSize: 0xA0 }
-  - { offset: 0x34E50, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaFTQ3_', symObjAddr: 0x280, symBinAddr: 0xD4A0, symSize: 0x60 }
-  - { offset: 0x34EB7, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaFTY4_', symObjAddr: 0x2E0, symBinAddr: 0xD500, symSize: 0xD0 }
-  - { offset: 0x34F24, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaFTQ5_', symObjAddr: 0x3B0, symBinAddr: 0xD5D0, symSize: 0x60 }
-  - { offset: 0x34F93, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaFTY6_', symObjAddr: 0x410, symBinAddr: 0xD630, symSize: 0x60 }
+  - { offset: 0x34C4E, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon28InternalNetworkRequestMarkerO4marky10Foundation10URLRequestVAGFZ', symObjAddr: 0x0, symBinAddr: 0xD220, symSize: 0x130 }
+  - { offset: 0x34CAA, size: 0x8, addend: 0x0, symName: '_$sSo19NSMutableURLRequestCMa', symObjAddr: 0x130, symBinAddr: 0xD350, symSize: 0x40 }
+  - { offset: 0x34CBE, size: 0x8, addend: 0x0, symName: '_$sypSgWOh', symObjAddr: 0x280, symBinAddr: 0xD4A0, symSize: 0x40 }
+  - { offset: 0x34CD2, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon28InternalNetworkRequestMarkerOMa', symObjAddr: 0x440, symBinAddr: 0xD4E0, symSize: 0xA }
+  - { offset: 0x34D09, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon28InternalNetworkRequestMarkerO4marky10Foundation10URLRequestVAGFZ', symObjAddr: 0x0, symBinAddr: 0xD220, symSize: 0x130 }
+  - { offset: 0x34D52, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon28InternalNetworkRequestMarkerO8isMarkedySb10Foundation10URLRequestVFZ', symObjAddr: 0x170, symBinAddr: 0xD390, symSize: 0x110 }
+  - { offset: 0x34E18, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaF', symObjAddr: 0x0, symBinAddr: 0xD4F0, symSize: 0x80 }
+  - { offset: 0x34E5F, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaF', symObjAddr: 0x0, symBinAddr: 0xD4F0, symSize: 0x80 }
+  - { offset: 0x34EC9, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaFTY0_', symObjAddr: 0x80, symBinAddr: 0xD570, symSize: 0x100 }
+  - { offset: 0x34F3C, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaFTQ1_', symObjAddr: 0x180, symBinAddr: 0xD670, symSize: 0x60 }
+  - { offset: 0x34FAB, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaFTY2_', symObjAddr: 0x1E0, symBinAddr: 0xD6D0, symSize: 0xA0 }
+  - { offset: 0x3501E, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaFTQ3_', symObjAddr: 0x280, symBinAddr: 0xD770, symSize: 0x60 }
+  - { offset: 0x35085, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaFTY4_', symObjAddr: 0x2E0, symBinAddr: 0xD7D0, symSize: 0xD0 }
+  - { offset: 0x350F2, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaFTQ5_', symObjAddr: 0x3B0, symBinAddr: 0xD8A0, symSize: 0x60 }
+  - { offset: 0x35161, size: 0x8, addend: 0x0, symName: '_$s12SplunkCommon9waitUntil7timeout23pollIntervalNanoseconds_SbSd_s6UInt64VSbyYaYbctYaFTY6_', symObjAddr: 0x410, symBinAddr: 0xD900, symSize: 0x60 }
 ...
