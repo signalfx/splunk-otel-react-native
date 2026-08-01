@@ -17,6 +17,7 @@ The Splunk Distribution of OpenTelemetry for React Native provides automatic ins
 - User interactions
 - App startup and performance metrics
 - Crash reporting
+- Manual error/exception reporting
 - Slow rendering detection
 - Navigation tracking
 
@@ -273,6 +274,31 @@ const workflow = await SplunkRum.instance.customTracking.startWorkflow('checkout
 // ... perform checkout steps ...
 await workflow.end();
 ```
+
+### Error Tracking
+
+Report a **caught** JS error or exception as a first-class RUM error span (`component=error`) carrying the OpenTelemetry `exception.type` / `exception.message` / `exception.stacktrace` attributes. Accepts either an `Error` object or a message `string`, plus optional `ReportErrorOptions` (`attributes`, `source`, `handled`, `timestampMs`).
+
+```tsx
+import { SplunkRum } from '@splunk/otel-react-native';
+
+try {
+  cart.checkout();
+} catch (e) {
+  SplunkRum.instance.customTracking.trackError(e as Error);
+}
+
+// Message string, or with attributes/options
+await SplunkRum.instance.customTracking.trackError('Checkout failed');
+await SplunkRum.instance.customTracking.trackError(error, {
+  attributes: { 'screen.name': 'Cart' },
+  handled: true, // non-fatal (default); false sets exception.escaped=true
+});
+```
+
+`trackError` is side-effect only: it never consumes the error and never throws back into your `catch` — the returned `Promise` always resolves. The raw JS stacktrace is sent verbatim as `exception.stacktrace`, while in release (minified/Hermes) builds it is unsymbolicated for now but still a valid, complete span. See the [package README](./packages/core/README.md#error-tracking) for the full option reference.
+
+> **Security:** `exception.message` and any attributes you pass may contain user data! Avoid reporting values that contain credentials, tokens or other sensitive material.
 
 ### WebView Integration
 

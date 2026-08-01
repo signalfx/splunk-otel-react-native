@@ -21,17 +21,17 @@ import { normalizeError } from '../bridge/stacktrace';
 /**
  * Origin of a reported error.
  *
- * Only {@link ErrorSource.Custom} is active in this phase; the remaining values
- * are reserved for automatic capture (Phase 2).
+ * Only {@link ErrorSource.Custom} is active in this phase, the remaining values
+ * are reserved for automatic capture.
  */
 export enum ErrorSource {
   /** Explicit application report via `trackError` (default). */
   Custom = 'custom',
-  /** `console.error` capture (Phase 2). */
+  /** `console.error` capture. */
   Console = 'console',
-  /** Global JS error handler (Phase 2). */
+  /** Global JS error handler. */
   Source = 'source',
-  /** Failed network request mapped to an error (Phase 2). */
+  /** Failed network request mapped to an error. */
   Network = 'network',
 }
 
