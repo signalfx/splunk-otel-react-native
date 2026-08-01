@@ -117,7 +117,7 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
         title: 'Track Caught Error',
         description: 'Report a caught Error as a component=error span',
         category: TestCategory.ErrorTracking,
-        platforms: new Set([MobilePlatform.iOS]),
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
         onTap: async () => {
           try {
             const cart = {} as { checkout: () => void };
@@ -136,7 +136,7 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
         title: 'Track Error (String)',
         description: 'Report an error from a plain message string',
         category: TestCategory.ErrorTracking,
-        platforms: new Set([MobilePlatform.iOS]),
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
         onTap: async () => {
           await SplunkRum.instance.customTracking.trackError(
             'Manual string error report from example app'
@@ -152,7 +152,7 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
         title: 'Track Error with Attributes',
         description: 'Report a caught error with custom attributes and options',
         category: TestCategory.ErrorTracking,
-        platforms: new Set([MobilePlatform.iOS]),
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
         onTap: async () => {
           try {
             throw new RangeError('Quantity out of range in example app');

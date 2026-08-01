@@ -142,6 +142,31 @@ class SplunkOtelReactNativeModule(reactContext: ReactApplicationContext) :
     implementation.customEndWorkflow(handle, promise)
 
   @ReactMethod
+  fun reportError(
+    type: String,
+    message: String,
+    stacktrace: String,
+    attributes: ReadableMap,
+    framesJson: String,
+    source: String,
+    handled: Boolean,
+    timestampMs: Double,
+    sourceMapIdsJson: String,
+    promise: Promise,
+  ) = implementation.reportError(
+    type,
+    message,
+    stacktrace,
+    attributes,
+    framesJson,
+    source,
+    handled,
+    timestampMs,
+    sourceMapIdsJson,
+    promise,
+  )
+
+  @ReactMethod
   fun navigationTrack(screenName: String, attributes: ReadableMap, promise: Promise) =
     implementation.navigationTrack(screenName, attributes, promise)
 

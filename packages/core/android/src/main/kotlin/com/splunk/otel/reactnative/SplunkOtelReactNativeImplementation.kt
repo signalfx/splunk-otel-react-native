@@ -180,6 +180,32 @@ class SplunkOtelReactNativeImplementation(private val reactContext: ReactApplica
   fun customEndWorkflow(handle: Double, promise: Promise) =
     customTrackingHandler.endWorkflow(handle, promise)
 
+  // MARK: - Error Tracking
+
+  fun reportError(
+    type: String,
+    message: String,
+    stacktrace: String,
+    attributes: ReadableMap,
+    framesJson: String,
+    source: String,
+    handled: Boolean,
+    timestampMs: Double,
+    sourceMapIdsJson: String,
+    promise: Promise,
+  ) = customTrackingHandler.reportError(
+    type,
+    message,
+    stacktrace,
+    attributes,
+    framesJson,
+    source,
+    handled,
+    timestampMs,
+    sourceMapIdsJson,
+    promise,
+  )
+
   // MARK: - Navigation
 
   fun navigationTrack(screenName: String, attributes: ReadableMap, promise: Promise) {

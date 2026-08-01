@@ -111,6 +111,30 @@ class SplunkOtelReactNativeModule(reactContext: ReactApplicationContext) :
   override fun customEndWorkflow(handle: Double, promise: Promise) =
     implementation.customEndWorkflow(handle, promise)
 
+  override fun reportError(
+    type: String,
+    message: String,
+    stacktrace: String,
+    attributes: ReadableMap,
+    framesJson: String,
+    source: String,
+    handled: Boolean,
+    timestampMs: Double,
+    sourceMapIdsJson: String,
+    promise: Promise,
+  ) = implementation.reportError(
+    type,
+    message,
+    stacktrace,
+    attributes,
+    framesJson,
+    source,
+    handled,
+    timestampMs,
+    sourceMapIdsJson,
+    promise,
+  )
+
   override fun navigationTrack(screenName: String, attributes: ReadableMap, promise: Promise) =
     implementation.navigationTrack(screenName, attributes, promise)
 
