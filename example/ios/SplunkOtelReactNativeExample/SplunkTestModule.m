@@ -2,6 +2,13 @@
 
 @interface RCT_EXTERN_MODULE(SplunkTestModule, NSObject)
 
+RCT_EXTERN_METHOD(writeSessionId:(NSString *)sessionId
+                  resolve:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject)
+
+RCT_EXTERN_METHOD(logSessionId:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject)
+
 RCT_EXTERN_METHOD(simulateCrash:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject)
 

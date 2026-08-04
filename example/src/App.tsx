@@ -1,10 +1,12 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import { ActivityIndicator, NativeModules, Text, View } from 'react-native';
 import {
   NavigationContainer,
   useNavigationContainerRef,
 } from '@react-navigation/native';
 import { enableScreens } from 'react-native-screens';
 import {
+  SplunkRum,
   SplunkRumProvider,
   StartupModuleConfiguration,
   SessionReplayModuleConfiguration,
@@ -35,6 +37,23 @@ enableScreens(true);
 const splunkNavigation = reactNavigationIntegration();
 
 console.log(`[Config] Valid: ${isConfigValid()}`);
+
+// Simulation hook for the iOS background-launch cold-start issue.
+//
+// The native React Native AppStartHandler anchors a cold start at the real (BSD)
+// process-start time and, per the Confluence design doc (section 3.4), the manual
+// `appStart.track(...)` path completes the span at the moment JS invokes tracking —
+// i.e. right after SplunkRum.install(). On a real iOS background launch the process
+// starts long before JavaScript boots and installs, so the whole gap is reported as
+// cold-start latency.
+//
+// We reproduce that anchoring deterministically (no APNs / no real background launch
+// needed) by delaying when the SplunkRumProvider mounts, which delays install():
+//   SPLUNK_INSTALL_DELAY_SECONDS=25 yarn ios --device ...
+const INSTALL_DELAY_SECONDS = Number.parseInt(
+  process.env.SPLUNK_INSTALL_DELAY_SECONDS ?? '0',
+  10
+);
 
 // SDK Configuration using external config
 const agentConfig: AgentConfiguration = {
@@ -92,12 +111,72 @@ const modules = [
 
 export default function App() {
   const [installed, setInstalled] = useState(false);
+  // When a delay is configured, hold off mounting SplunkRumProvider (and thus
+  // install()) so the process-start -> install gap is inflated on purpose.
+  const [readyToInstall, setReadyToInstall] = useState(
+    INSTALL_DELAY_SECONDS <= 0
+  );
   const navigationRef = useNavigationContainerRef();
+
+  useEffect(() => {
+    if (INSTALL_DELAY_SECONDS <= 0) {
+      return;
+    }
+
+    console.log(
+      `[BG-LAUNCH-PROBE] Delaying SplunkRum.install() by ${INSTALL_DELAY_SECONDS} s ` +
+        'to simulate a late SDK init after an early process start.'
+    );
+    const timer = setTimeout(() => {
+      setReadyToInstall(true);
+    }, INSTALL_DELAY_SECONDS * 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Once install has (been allowed to) run, poll the native side for the session
+  // id. logSessionId reads it straight from SplunkRum.shared and NSLogs + persists
+  // it, independent of the provider onReady path.
+  useEffect(() => {
+    if (!readyToInstall) {
+      return;
+    }
+
+    const interval = setInterval(async () => {
+      try {
+        const id: string | undefined =
+          await NativeModules.SplunkTestModule?.logSessionId();
+        if (id && id.length > 0) {
+          clearInterval(interval);
+        }
+      } catch (pollError) {
+        console.log('[BG-LAUNCH-PROBE] logSessionId poll failed:', pollError);
+      }
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [readyToInstall]);
 
   const onReady = useCallback(async () => {
     try {
       setInstalled(true);
       console.log('[App] SDK initialized successfully');
+
+      // Fetch + persist the session id FIRST, before any other await that might
+      // throw/hang on device. Release builds don't route JS console.log to device
+      // stderr, so persist the id to a file via the native test module for
+      // retrieval with:
+      //   xcrun devicectl device copy from ... --source tmp/session_id.txt
+      try {
+        const sessionState = await SplunkRum.session.state();
+        console.log(`[BG-LAUNCH-PROBE] Session id: ${sessionState.id}`);
+        await NativeModules.SplunkTestModule?.writeSessionId(sessionState.id);
+      } catch (writeError) {
+        console.log(
+          '[BG-LAUNCH-PROBE] Failed to persist session id:',
+          writeError
+        );
+      }
 
       // Start tracking react-navigation now that the SDK is installed, so the
       // native navigation module is ready to receive screen events.
@@ -109,6 +188,23 @@ export default function App() {
       console.error('[App] SDK initialization error:', e?.message ?? String(e));
     }
   }, [navigationRef]);
+
+  if (!readyToInstall) {
+    return (
+      <View
+        style={{
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <ActivityIndicator />
+        <Text style={{ marginTop: 12 }}>
+          {`Delaying SplunkRum.install() by ${INSTALL_DELAY_SECONDS}s\n(background-launch cold-start simulation)`}
+        </Text>
+      </View>
+    );
+  }
 
   return (
     <SplunkRumProvider

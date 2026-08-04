@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import SplunkAgent
 
 /**
  * Native module for testing SDK features from React Native.
@@ -21,6 +22,43 @@ class SplunkTestModule: NSObject {
   @objc
   static func requiresMainQueueSetup() -> Bool {
     return true
+  }
+
+  // MARK: - Debug helpers
+
+  /// Persists the current session id to <container>/tmp/session_id.txt so it can
+  /// be retrieved from a real device (Release, no Metro/debugger) with:
+  ///   xcrun devicectl device copy from --domain-type appDataContainer \
+  ///     --domain-identifier splunkotelreactnative.example \
+  ///     --source tmp/session_id.txt --destination /tmp/session_id.txt
+  @objc
+  func writeSessionId(_ sessionId: String,
+                      resolve: @escaping RCTPromiseResolveBlock,
+                      reject: @escaping RCTPromiseRejectBlock) {
+    NSLog("[BG-LAUNCH-PROBE] writeSessionId called with %@", sessionId)
+    let url = FileManager.default.temporaryDirectory.appendingPathComponent("session_id.txt")
+    do {
+      try "Session id: \(sessionId)\n".write(to: url, atomically: true, encoding: .utf8)
+      resolve(url.path)
+    } catch {
+      reject("WRITE_ERROR", error.localizedDescription, error)
+    }
+  }
+
+  /// Reads the current session id directly from the native SplunkAgent (the same
+  /// source as the RN `getSessionState` bridge), logs it via NSLog (visible in
+  /// `devicectl ... --console`), and writes it to <container>/tmp/session_id.txt.
+  /// Decoupled from the JS onReady path so it works even if that path throws.
+  @objc
+  func logSessionId(_ resolve: @escaping RCTPromiseResolveBlock,
+                    reject: @escaping RCTPromiseRejectBlock) {
+    let id = SplunkRum.shared.session.state.id
+    NSLog("[BG-LAUNCH-PROBE] Native session id: %@", id)
+    if !id.isEmpty {
+      let url = FileManager.default.temporaryDirectory.appendingPathComponent("session_id.txt")
+      try? "Session id: \(id)\n".write(to: url, atomically: true, encoding: .utf8)
+    }
+    resolve(id)
   }
   
   // MARK: - Crash Simulation
