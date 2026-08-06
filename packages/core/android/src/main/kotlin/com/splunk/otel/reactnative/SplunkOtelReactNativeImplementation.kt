@@ -190,7 +190,6 @@ class SplunkOtelReactNativeImplementation(private val reactContext: ReactApplica
     framesJson: String,
     source: String,
     handled: Boolean,
-    timestampMs: Double,
     sourceMapIdsJson: String,
     promise: Promise,
   ) = customTrackingHandler.reportError(
@@ -201,7 +200,6 @@ class SplunkOtelReactNativeImplementation(private val reactContext: ReactApplica
     framesJson,
     source,
     handled,
-    timestampMs,
     sourceMapIdsJson,
     promise,
   )

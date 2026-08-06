@@ -593,7 +593,6 @@ RCT_REMAP_METHOD(reportError,
                  framesJson:(NSString *)framesJson
                  source:(NSString *)source
                  handled:(BOOL)handled
-                 timestampMs:(double)timestampMs
                  sourceMapIdsJson:(NSString *)sourceMapIdsJson
                  resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
@@ -605,7 +604,6 @@ RCT_REMAP_METHOD(reportError,
          framesJson:framesJson
              source:source
             handled:handled
-        timestampMs:timestampMs
    sourceMapIdsJson:sourceMapIdsJson
             resolve:resolve
              reject:reject];
@@ -619,7 +617,6 @@ RCT_REMAP_METHOD(reportError,
          framesJson:(NSString *)framesJson
              source:(NSString *)source
             handled:(BOOL)handled
-        timestampMs:(double)timestampMs
    sourceMapIdsJson:(NSString *)sourceMapIdsJson
             resolve:(RCTPromiseResolveBlock)resolve
              reject:(RCTPromiseRejectBlock)reject
@@ -631,7 +628,6 @@ RCT_REMAP_METHOD(reportError,
               framesJson:framesJson
                   source:source
                  handled:handled
-             timestampMs:timestampMs
         sourceMapIdsJson:sourceMapIdsJson
                  resolve:resolve
                   reject:reject];

@@ -62,10 +62,8 @@ public class CustomTrackingHandler: NSObject {
   /// `error=true`, and `component=error` without re-deriving the stack from the
   /// native thread. Caller attributes are merged first; agent-managed keys win.
   ///
-  /// - Note: `framesJson` and `timestampMs` are accepted for forward
-  ///   compatibility but currently unused: the backend symbolicates from the
-  ///   raw `exception.stacktrace`, and the native API emits the span at publish
-  ///   time (it does not yet accept a caller timestamp).
+  /// - Note: `framesJson` is accepted for forward compatibility but currently
+  ///   unused: the backend symbolicates from the raw `exception.stacktrace`.
   public func reportError(_ type: NSString,
                           message: NSString,
                           stacktrace: NSString,
@@ -73,7 +71,6 @@ public class CustomTrackingHandler: NSObject {
                           framesJson: NSString,
                           source: NSString,
                           handled: Bool,
-                          timestampMs: Double,
                           sourceMapIdsJson: NSString,
                           resolve: @escaping RCTPromiseResolveBlock,
                           reject: @escaping RCTPromiseRejectBlock) {

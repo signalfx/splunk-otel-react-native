@@ -277,7 +277,7 @@ await workflow.end();
 
 ### Error Tracking
 
-Report a **caught** JS error or exception as a first-class RUM error span (`component=error`) carrying the OpenTelemetry `exception.type` / `exception.message` / `exception.stacktrace` attributes. Accepts either an `Error` object or a message `string`, plus optional `ReportErrorOptions` (`attributes`, `source`, `handled`, `timestampMs`).
+Report a **caught** JS error or exception as a first-class RUM error span (`component=error`) carrying the OpenTelemetry `exception.type` / `exception.message` / `exception.stacktrace` attributes. Accepts either an `Error` object or a message `string`, plus optional `ReportErrorOptions` (`attributes`, `source`, `handled`).
 
 ```tsx
 import { SplunkRum } from '@splunk/otel-react-native';

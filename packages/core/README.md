@@ -306,7 +306,6 @@ await SplunkRum.instance.customTracking.trackError(error, {
 | `attributes` | `Attributes` | `{}` | Custom attributes attached to the error span. |
 | `source` | `ErrorSource` | `ErrorSource.Custom` | Origin of the error. Only `Custom` is active today; the other values are reserved for automatic capture. |
 | `handled` | `boolean` | `true` | Whether the error was handled (non-fatal). Emitted as `exception.escaped = !handled`. |
-| `timestampMs` | `number` | `Date.now()` | Capture time in epoch milliseconds. |
 
 Key behaviors:
 

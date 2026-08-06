@@ -119,7 +119,6 @@ class SplunkOtelReactNativeModule(reactContext: ReactApplicationContext) :
     framesJson: String,
     source: String,
     handled: Boolean,
-    timestampMs: Double,
     sourceMapIdsJson: String,
     promise: Promise,
   ) = implementation.reportError(
@@ -130,7 +129,6 @@ class SplunkOtelReactNativeModule(reactContext: ReactApplicationContext) :
     framesJson,
     source,
     handled,
-    timestampMs,
     sourceMapIdsJson,
     promise,
   )

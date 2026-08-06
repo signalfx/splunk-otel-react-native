@@ -39,8 +39,7 @@ const ARG = {
   framesJson: 4,
   source: 5,
   handled: 6,
-  timestampMs: 7,
-  sourceMapIdsJson: 8,
+  sourceMapIdsJson: 7,
 } as const;
 
 describe('CustomTracking.trackError', () => {
@@ -67,7 +66,6 @@ describe('CustomTracking.trackError', () => {
     expect(args[ARG.framesJson]).toBe('');
     expect(args[ARG.source]).toBe(ErrorSource.Custom);
     expect(args[ARG.handled]).toBe(true);
-    expect(typeof args[ARG.timestampMs]).toBe('number');
     expect(args[ARG.sourceMapIdsJson]).toBe('');
   });
 
@@ -80,29 +78,17 @@ describe('CustomTracking.trackError', () => {
     expect(args[ARG.stacktrace]).toBe('');
   });
 
-  it('forwards options (attributes, source, handled, timestamp)', async () => {
+  it('forwards options (attributes, source, handled)', async () => {
     await tracking.trackError('checkout failed', {
       attributes: { 'screen.name': 'Cart', retries: 2 },
       source: ErrorSource.Source,
       handled: false,
-      timestampMs: 1735000000000,
     });
 
     const args = mockReportError.mock.calls[0];
     expect(args[ARG.attributes]).toEqual({ 'screen.name': 'Cart', retries: 2 });
     expect(args[ARG.source]).toBe(ErrorSource.Source);
     expect(args[ARG.handled]).toBe(false);
-    expect(args[ARG.timestampMs]).toBe(1735000000000);
-  });
-
-  it('defaults the timestamp to the current time', async () => {
-    const before = Date.now();
-    await tracking.trackError('t');
-    const after = Date.now();
-
-    const ts = mockReportError.mock.calls[0][ARG.timestampMs];
-    expect(ts).toBeGreaterThanOrEqual(before);
-    expect(ts).toBeLessThanOrEqual(after);
   });
 
   it('resolves (never rejects) when the bridge rejects', async () => {

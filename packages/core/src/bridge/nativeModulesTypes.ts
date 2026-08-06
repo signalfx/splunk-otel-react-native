@@ -63,7 +63,6 @@ export interface SplunkNativeModuleType extends Spec {
     framesJson: string,
     source: string,
     handled: boolean,
-    timestampMs: number,
     sourceMapIdsJson: string
   ): Promise<void>;
 }

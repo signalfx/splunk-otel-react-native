@@ -77,8 +77,6 @@ class CustomTrackingHandler {
    *
    * @param framesJson reserved for a later phase (backend symbolicates from the
    *   raw `exception.stacktrace`); currently unused.
-   * @param timestampMs reserved for forward compatibility; the native API emits
-   *   the span at publish time and does not yet accept a caller timestamp.
    */
   fun reportError(
     type: String,
@@ -88,7 +86,6 @@ class CustomTrackingHandler {
     @Suppress("UNUSED_PARAMETER") framesJson: String,
     source: String,
     handled: Boolean,
-    @Suppress("UNUSED_PARAMETER") timestampMs: Double,
     sourceMapIdsJson: String,
     promise: Promise,
   ) {

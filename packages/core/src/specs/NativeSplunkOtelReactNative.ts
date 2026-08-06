@@ -154,7 +154,6 @@ export interface Spec extends TurboModule {
     framesJson: string,
     source: string,
     handled: boolean,
-    timestampMs: number,
     sourceMapIdsJson: string
   ): Promise<void>;
 

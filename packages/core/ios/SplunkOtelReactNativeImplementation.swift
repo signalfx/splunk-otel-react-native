@@ -275,7 +275,6 @@ public class SplunkOtelReactNativeImplementation: NSObject {
                           framesJson: NSString,
                           source: NSString,
                           handled: Bool,
-                          timestampMs: Double,
                           sourceMapIdsJson: NSString,
                           resolve: @escaping RCTPromiseResolveBlock,
                           reject: @escaping RCTPromiseRejectBlock) {
@@ -286,7 +285,6 @@ public class SplunkOtelReactNativeImplementation: NSObject {
                                       framesJson: framesJson,
                                       source: source,
                                       handled: handled,
-                                      timestampMs: timestampMs,
                                       sourceMapIdsJson: sourceMapIdsJson,
                                       resolve: resolve,
                                       reject: reject)

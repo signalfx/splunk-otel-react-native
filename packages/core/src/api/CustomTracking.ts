@@ -49,8 +49,6 @@ export interface ReportErrorOptions {
    * Emitted as the OTel `exception.escaped` attribute (`!handled`).
    */
   handled?: boolean;
-  /** Capture time in epoch milliseconds. Defaults to `Date.now()`. */
-  timestampMs?: number;
 }
 
 /**
@@ -171,7 +169,6 @@ export class CustomTracking {
 
       const source = options?.source ?? ErrorSource.Custom;
       const handled = options?.handled ?? true;
-      const timestampMs = options?.timestampMs ?? Date.now();
       const attributes = options?.attributes ?? {};
 
       // `framesJson` / `sourceMapIdsJson` are reserved for later, full automatic-capture phases.
@@ -184,7 +181,6 @@ export class CustomTracking {
         '',
         source,
         handled,
-        timestampMs,
         ''
       );
     } catch (e) {
