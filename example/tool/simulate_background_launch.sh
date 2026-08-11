@@ -23,7 +23,6 @@
 #   1. SPLUNK_INSTALL_DELAY_SECONDS=25 (deterministic, works on Simulator AND device)
 #   2. A real device + Xcode "Launch due to a background fetch event" (no APNs)
 #   3. A real device + a genuine silent push (needs APNs credentials)
-# See tool/BACKGROUND_LAUNCH_SIMULATION.md for details.
 #
 # What it does:
 #   1. Terminates the app so the next launch is a fresh (cold) process.
@@ -73,8 +72,7 @@ xcrun simctl launch "${UDID}" "${BUNDLE_ID}"
 
 echo
 echo "Done. Now inspect:"
-echo "  - Console.app / device logs: filter for [BG-LAUNCH-PROBE] and SplunkRum AppStart output."
-echo "    Expect a 'process-start -> didBecomeActive delta' of ~${RESIDENCE_SECONDS}s."
+echo "  - Console.app / device logs: filter for SplunkRum AppStart output (enableDebugLogging)."
 echo "  - Splunk RUM: the AppStart span (component=appstart). Check start.type and duration."
 echo "    Bug reproduced  => start.type=cold with duration ~${RESIDENCE_SECONDS}s."
 echo "    Mitigated       => start.type=warm (or span suppressed)."
