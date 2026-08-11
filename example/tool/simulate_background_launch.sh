@@ -14,65 +14,68 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# Simulate an iOS background (silent-push) launch on the Simulator to reproduce the
-# "background launch inflates cold start" scenario for the Splunk RUM React Native SDK.
+# Reproduce the "background launch inflates cold start" scenario for the Splunk RUM
+# React Native SDK on the iOS Simulator, deterministically.
 #
-# NOTE ON THE SIMULATOR: `xcrun simctl push` does NOT cold-launch a terminated app
-# into the background. Use this script for a quick smoke test, but reproduce the real
-# inflated cold start with one of:
-#   1. SPLUNK_INSTALL_DELAY_SECONDS=25 (deterministic, works on Simulator AND device)
-#   2. A real device + Xcode "Launch due to a background fetch event" (no APNs)
-#   3. A real device + a genuine silent push (needs APNs credentials)
+# Why not a real silent push: on the Simulator, `xcrun simctl push` does NOT cold-launch
+# a terminated app into the background, so a push-then-sleep-then-foreground sequence
+# would leave no process running during the wait and then measure an ordinary (short)
+# cold start -- a false negative. Instead we reproduce the SAME native anchoring problem
+# by cold-launching an app that was BUILT with a baked-in install delay
+# (SPLUNK_INSTALL_DELAY_SECONDS): the process starts at T0 but SplunkRum install() only
+# runs at T0 + DELAY_SECONDS, so the AppStart span is inflated by ~DELAY_SECONDS.
+#
+# For a real background launch (production trigger), use a physical device with either
+# Xcode's "Launch due to a background fetch event" or a genuine silent push (APNs).
 #
 # What it does:
 #   1. Terminates the app so the next launch is a fresh (cold) process.
-#   2. Delivers a silent content-available push.
-#   3. Sleeps for RESIDENCE_SECONDS to simulate the app sitting in the background.
-#   4. Foregrounds the app, which triggers didBecomeActive and the AppStart span.
+#   2. Cold-launches the app. The process starts now (cold anchor = T0) and the app's
+#      own hook defers SplunkRum install() by DELAY_SECONDS.
+#   3. Waits for the deferred install (plus a small buffer) so the inflated AppStart
+#      span is emitted before you inspect.
+#
+# Prerequisites:
+#   - A booted iOS Simulator with the app installed, BUILT with the matching delay:
+#       SPLUNK_INSTALL_DELAY_SECONDS=60 yarn ios
+#     then stop the app (this script re-launches it cold).
+#   - DELAY_SECONDS passed to this script MUST match the baked-in SPLUNK_INSTALL_DELAY_SECONDS.
 #
 # Usage:
-#   tool/simulate_background_launch.sh [UDID] [BUNDLE_ID] [RESIDENCE_SECONDS]
+#   tool/simulate_background_launch.sh [UDID] [BUNDLE_ID] [DELAY_SECONDS]
 #
 # Defaults:
-#   UDID              -> "booted"
-#   BUNDLE_ID         -> splunkotelreactnative.example
-#   RESIDENCE_SECONDS -> 60
+#   UDID          -> "booted"
+#   BUNDLE_ID     -> splunkotelreactnative.example
+#   DELAY_SECONDS -> 60
 
 set -euo pipefail
 
 UDID="${1:-booted}"
 BUNDLE_ID="${2:-splunkotelreactnative.example}"
-RESIDENCE_SECONDS="${3:-60}"
+DELAY_SECONDS="${3:-60}"
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PAYLOAD="${SCRIPT_DIR}/../ios/silent-push.apns"
+# Small buffer so we don't start inspecting before install() + the AppStart span fire.
+BUFFER_SECONDS=5
 
-if [[ ! -f "${PAYLOAD}" ]]; then
-  echo "Error: silent-push payload not found at ${PAYLOAD}" >&2
-  exit 1
-fi
-
-echo "==> Simulator:        ${UDID}"
-echo "==> Bundle id:        ${BUNDLE_ID}"
-echo "==> Residence:        ${RESIDENCE_SECONDS}s"
-echo "==> Payload:          ${PAYLOAD}"
+echo "==> Simulator:     ${UDID}"
+echo "==> Bundle id:     ${BUNDLE_ID}"
+echo "==> Install delay: ${DELAY_SECONDS}s (must match SPLUNK_INSTALL_DELAY_SECONDS)"
 echo
 
-echo "==> [1/4] Terminating app to force a fresh cold process on next launch..."
+echo "==> [1/3] Terminating app to force a fresh cold process on next launch..."
 xcrun simctl terminate "${UDID}" "${BUNDLE_ID}" || true
 
-echo "==> [2/4] Delivering silent push (background cold launch)..."
-xcrun simctl push "${UDID}" "${BUNDLE_ID}" "${PAYLOAD}"
-
-echo "==> [3/4] Simulating ${RESIDENCE_SECONDS}s of background residence..."
-sleep "${RESIDENCE_SECONDS}"
-
-echo "==> [4/4] Foregrounding app (triggers didBecomeActive / AppStart)..."
+echo "==> [2/3] Cold-launching app (process starts at T0; install() deferred ${DELAY_SECONDS}s)..."
 xcrun simctl launch "${UDID}" "${BUNDLE_ID}"
+
+echo "==> [3/3] Waiting $((DELAY_SECONDS + BUFFER_SECONDS))s for the deferred install + AppStart span..."
+sleep "$((DELAY_SECONDS + BUFFER_SECONDS))"
 
 echo
 echo "Done. Now inspect:"
-echo "  - Console.app / device logs: filter for SplunkRum AppStart output (enableDebugLogging)."
+echo "  - Console.app / device logs: filter for [AppStart] and SplunkRum AppStart output."
+echo "    Expect SplunkRum install() to run ~${DELAY_SECONDS}s after process start."
 echo "  - Splunk RUM: the AppStart span (component=appstart). Check start.type and duration."
-echo "    Bug reproduced  => start.type=cold with duration ~${RESIDENCE_SECONDS}s."
+echo "    Bug reproduced  => start.type=cold with duration ~${DELAY_SECONDS}s."
 echo "    Mitigated       => start.type=warm (or span suppressed)."
