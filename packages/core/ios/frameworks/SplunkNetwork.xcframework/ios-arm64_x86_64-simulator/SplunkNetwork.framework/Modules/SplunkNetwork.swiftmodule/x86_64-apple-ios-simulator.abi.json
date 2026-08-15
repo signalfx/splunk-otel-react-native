@@ -1,0 +1,3050 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "SplunkNetwork",
+    "printedName": "SplunkNetwork",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkInstrumentationData",
+        "printedName": "NetworkInstrumentationData",
+        "declKind": "Struct",
+        "usr": "s:13SplunkNetwork0B19InstrumentationDataV",
+        "mangledName": "$s13SplunkNetwork0B19InstrumentationDataV",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleEventData",
+            "printedName": "ModuleEventData",
+            "usr": "s:12SplunkCommon15ModuleEventDataP",
+            "mangledName": "$s12SplunkCommon15ModuleEventDataP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkInstrumentationMetadata",
+        "printedName": "NetworkInstrumentationMetadata",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SplunkNetwork0B23InstrumentationMetadataV9timestamp10Foundation4DateVvp",
+            "mangledName": "$s13SplunkNetwork0B23InstrumentationMetadataV9timestamp10Foundation4DateVvp",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B23InstrumentationMetadataV9timestamp10Foundation4DateVvg",
+                "mangledName": "$s13SplunkNetwork0B23InstrumentationMetadataV9timestamp10Foundation4DateVvg",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B23InstrumentationMetadataV9timestamp10Foundation4DateVvs",
+                "mangledName": "$s13SplunkNetwork0B23InstrumentationMetadataV9timestamp10Foundation4DateVvs",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B23InstrumentationMetadataV9timestamp10Foundation4DateVvM",
+                "mangledName": "$s13SplunkNetwork0B23InstrumentationMetadataV9timestamp10Foundation4DateVvM",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkInstrumentationMetadata",
+                "printedName": "SplunkNetwork.NetworkInstrumentationMetadata",
+                "usr": "s:13SplunkNetwork0B23InstrumentationMetadataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkInstrumentationMetadata",
+                "printedName": "SplunkNetwork.NetworkInstrumentationMetadata",
+                "usr": "s:13SplunkNetwork0B23InstrumentationMetadataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork0B23InstrumentationMetadataV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s13SplunkNetwork0B23InstrumentationMetadataV2eeoiySbAC_ACtFZ",
+            "moduleName": "SplunkNetwork",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13SplunkNetwork0B23InstrumentationMetadataV",
+        "mangledName": "$s13SplunkNetwork0B23InstrumentationMetadataV",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleEventMetadata",
+            "printedName": "ModuleEventMetadata",
+            "usr": "s:12SplunkCommon19ModuleEventMetadataP",
+            "mangledName": "$s12SplunkCommon19ModuleEventMetadataP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkInstrumentationConfiguration",
+        "printedName": "NetworkInstrumentationConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isEnabled",
+            "printedName": "isEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV9isEnabledSbvp",
+            "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV9isEnabledSbvp",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV9isEnabledSbvg",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV9isEnabledSbvg",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV9isEnabledSbvs",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV9isEnabledSbvs",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV9isEnabledSbvM",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV9isEnabledSbvM",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ignoreURLs",
+            "printedName": "ignoreURLs",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SplunkNetwork.IgnoreURLs?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IgnoreURLs",
+                    "printedName": "SplunkNetwork.IgnoreURLs",
+                    "usr": "s:13SplunkNetwork10IgnoreURLsC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV10ignoreURLsAA06IgnoreF0CSgvp",
+            "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV10ignoreURLsAA06IgnoreF0CSgvp",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SplunkNetwork.IgnoreURLs?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IgnoreURLs",
+                        "printedName": "SplunkNetwork.IgnoreURLs",
+                        "usr": "s:13SplunkNetwork10IgnoreURLsC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV10ignoreURLsAA06IgnoreF0CSgvg",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV10ignoreURLsAA06IgnoreF0CSgvg",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SplunkNetwork.IgnoreURLs?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IgnoreURLs",
+                        "printedName": "SplunkNetwork.IgnoreURLs",
+                        "usr": "s:13SplunkNetwork10IgnoreURLsC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV10ignoreURLsAA06IgnoreF0CSgvs",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV10ignoreURLsAA06IgnoreF0CSgvs",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV10ignoreURLsAA06IgnoreF0CSgvM",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV10ignoreURLsAA06IgnoreF0CSgvM",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "capturedRequestHeaders",
+            "printedName": "capturedRequestHeaders",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV22capturedRequestHeadersSaySSGSgvp",
+            "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV22capturedRequestHeadersSaySSGSgvp",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV22capturedRequestHeadersSaySSGSgvg",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV22capturedRequestHeadersSaySSGSgvg",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV22capturedRequestHeadersSaySSGSgvs",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV22capturedRequestHeadersSaySSGSgvs",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV22capturedRequestHeadersSaySSGSgvM",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV22capturedRequestHeadersSaySSGSgvM",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "capturedResponseHeaders",
+            "printedName": "capturedResponseHeaders",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV23capturedResponseHeadersSaySSGSgvp",
+            "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV23capturedResponseHeadersSaySSGSgvp",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV23capturedResponseHeadersSaySSGSgvg",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV23capturedResponseHeadersSaySSGSgvg",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV23capturedResponseHeadersSaySSGSgvs",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV23capturedResponseHeadersSaySSGSgvs",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV23capturedResponseHeadersSaySSGSgvM",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV23capturedResponseHeadersSaySSGSgvM",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "injectTraceHeaders",
+            "printedName": "injectTraceHeaders",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV18injectTraceHeadersSbvp",
+            "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV18injectTraceHeadersSbvp",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV18injectTraceHeadersSbvg",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV18injectTraceHeadersSbvg",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV18injectTraceHeadersSbvs",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV18injectTraceHeadersSbvs",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV18injectTraceHeadersSbvM",
+                "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV18injectTraceHeadersSbvM",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(isEnabled:ignoreURLs:injectTraceHeaders:capturedRequestHeaders:capturedResponseHeaders:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkInstrumentationConfiguration",
+                "printedName": "SplunkNetwork.NetworkInstrumentationConfiguration",
+                "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SplunkNetwork.IgnoreURLs?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IgnoreURLs",
+                    "printedName": "SplunkNetwork.IgnoreURLs",
+                    "usr": "s:13SplunkNetwork10IgnoreURLsC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV9isEnabled10ignoreURLs18injectTraceHeaders015capturedRequestK00l8ResponseK0ACSb_AA06IgnoreH0CSgSbSaySSGSgAMtcfc",
+            "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV9isEnabled10ignoreURLs18injectTraceHeaders015capturedRequestK00l8ResponseK0ACSb_AA06IgnoreH0CSgSbSaySSGSgAMtcfc",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV6encode2toys7Encoder_p_tKF",
+            "moduleName": "SplunkNetwork",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV",
+        "mangledName": "$s13SplunkNetwork0B28InstrumentationConfigurationV",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleConfiguration",
+            "printedName": "ModuleConfiguration",
+            "usr": "s:12SplunkCommon19ModuleConfigurationP",
+            "mangledName": "$s12SplunkCommon19ModuleConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkRemoteConfiguration",
+        "printedName": "NetworkRemoteConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "enabled",
+            "printedName": "enabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SplunkNetwork0B19RemoteConfigurationV7enabledSbvp",
+            "mangledName": "$s13SplunkNetwork0B19RemoteConfigurationV7enabledSbvp",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B19RemoteConfigurationV7enabledSbvg",
+                "mangledName": "$s13SplunkNetwork0B19RemoteConfigurationV7enabledSbvg",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B19RemoteConfigurationV7enabledSbvs",
+                "mangledName": "$s13SplunkNetwork0B19RemoteConfigurationV7enabledSbvs",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B19RemoteConfigurationV7enabledSbvM",
+                "mangledName": "$s13SplunkNetwork0B19RemoteConfigurationV7enabledSbvM",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ignoreURLs",
+            "printedName": "ignoreURLs",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IgnoreURLs",
+                "printedName": "SplunkNetwork.IgnoreURLs",
+                "usr": "s:13SplunkNetwork10IgnoreURLsC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SplunkNetwork0B19RemoteConfigurationV10ignoreURLsAA06IgnoreF0Cvp",
+            "mangledName": "$s13SplunkNetwork0B19RemoteConfigurationV10ignoreURLsAA06IgnoreF0Cvp",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IgnoreURLs",
+                    "printedName": "SplunkNetwork.IgnoreURLs",
+                    "usr": "s:13SplunkNetwork10IgnoreURLsC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B19RemoteConfigurationV10ignoreURLsAA06IgnoreF0Cvg",
+                "mangledName": "$s13SplunkNetwork0B19RemoteConfigurationV10ignoreURLsAA06IgnoreF0Cvg",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IgnoreURLs",
+                    "printedName": "SplunkNetwork.IgnoreURLs",
+                    "usr": "s:13SplunkNetwork10IgnoreURLsC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B19RemoteConfigurationV10ignoreURLsAA06IgnoreF0Cvs",
+                "mangledName": "$s13SplunkNetwork0B19RemoteConfigurationV10ignoreURLsAA06IgnoreF0Cvs",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B19RemoteConfigurationV10ignoreURLsAA06IgnoreF0CvM",
+                "mangledName": "$s13SplunkNetwork0B19RemoteConfigurationV10ignoreURLsAA06IgnoreF0CvM",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SplunkNetwork.NetworkRemoteConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkRemoteConfiguration",
+                    "printedName": "SplunkNetwork.NetworkRemoteConfiguration",
+                    "usr": "s:13SplunkNetwork0B19RemoteConfigurationV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13SplunkNetwork0B19RemoteConfigurationV4fromACSg10Foundation4DataV_tcfc",
+            "mangledName": "$s13SplunkNetwork0B19RemoteConfigurationV4fromACSg10Foundation4DataV_tcfc",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13SplunkNetwork0B19RemoteConfigurationV",
+        "mangledName": "$s13SplunkNetwork0B19RemoteConfigurationV",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "RemoteModuleConfiguration",
+            "printedName": "RemoteModuleConfiguration",
+            "usr": "s:12SplunkCommon25RemoteModuleConfigurationP",
+            "mangledName": "$s12SplunkCommon25RemoteModuleConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkInstrumentation",
+        "printedName": "NetworkInstrumentation",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "excludedEndpoints",
+            "printedName": "excludedEndpoints",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Foundation.URL]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.URL]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SplunkNetwork0B15InstrumentationC17excludedEndpointsSay10Foundation3URLVGSgvp",
+            "mangledName": "$s13SplunkNetwork0B15InstrumentationC17excludedEndpointsSay10Foundation3URLVGSgvp",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Foundation.URL]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Foundation.URL]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URL",
+                            "printedName": "Foundation.URL",
+                            "usr": "s:10Foundation3URLV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B15InstrumentationC17excludedEndpointsSay10Foundation3URLVGSgvg",
+                "mangledName": "$s13SplunkNetwork0B15InstrumentationC17excludedEndpointsSay10Foundation3URLVGSgvg",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Foundation.URL]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Foundation.URL]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URL",
+                            "printedName": "Foundation.URL",
+                            "usr": "s:10Foundation3URLV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B15InstrumentationC17excludedEndpointsSay10Foundation3URLVGSgvs",
+                "mangledName": "$s13SplunkNetwork0B15InstrumentationC17excludedEndpointsSay10Foundation3URLVGSgvs",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B15InstrumentationC17excludedEndpointsSay10Foundation3URLVGSgvM",
+                "mangledName": "$s13SplunkNetwork0B15InstrumentationC17excludedEndpointsSay10Foundation3URLVGSgvM",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sharedState",
+            "printedName": "sharedState",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "(any SplunkCommon.AgentSharedState)?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SplunkNetwork0B15InstrumentationC11sharedState0A6Common011AgentSharedE0_pSgvp",
+            "mangledName": "$s13SplunkNetwork0B15InstrumentationC11sharedState0A6Common011AgentSharedE0_pSgvp",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any SplunkCommon.AgentSharedState)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AgentSharedState",
+                        "printedName": "any SplunkCommon.AgentSharedState",
+                        "usr": "s:12SplunkCommon16AgentSharedStateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B15InstrumentationC11sharedState0A6Common011AgentSharedE0_pSgvg",
+                "mangledName": "$s13SplunkNetwork0B15InstrumentationC11sharedState0A6Common011AgentSharedE0_pSgvg",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any SplunkCommon.AgentSharedState)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AgentSharedState",
+                        "printedName": "any SplunkCommon.AgentSharedState",
+                        "usr": "s:12SplunkCommon16AgentSharedStateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B15InstrumentationC11sharedState0A6Common011AgentSharedE0_pSgvs",
+                "mangledName": "$s13SplunkNetwork0B15InstrumentationC11sharedState0A6Common011AgentSharedE0_pSgvs",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B15InstrumentationC11sharedState0A6Common011AgentSharedE0_pSgvM",
+                "mangledName": "$s13SplunkNetwork0B15InstrumentationC11sharedState0A6Common011AgentSharedE0_pSgvM",
+                "moduleName": "SplunkNetwork",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isTraceHeaderInjectionEnabled",
+            "printedName": "isTraceHeaderInjectionEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SplunkNetwork0B15InstrumentationC29isTraceHeaderInjectionEnabledSbvp",
+            "mangledName": "$s13SplunkNetwork0B15InstrumentationC29isTraceHeaderInjectionEnabledSbvp",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SplunkNetwork0B15InstrumentationC29isTraceHeaderInjectionEnabledSbvg",
+                "mangledName": "$s13SplunkNetwork0B15InstrumentationC29isTraceHeaderInjectionEnabledSbvg",
+                "moduleName": "SplunkNetwork",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkInstrumentation",
+                "printedName": "SplunkNetwork.NetworkInstrumentation",
+                "usr": "s:13SplunkNetwork0B15InstrumentationC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13SplunkNetwork0B15InstrumentationCACycfc",
+            "mangledName": "$s13SplunkNetwork0B15InstrumentationCACycfc",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "install",
+            "printedName": "install(with:remoteConfiguration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SplunkCommon.ModuleConfiguration)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ModuleConfiguration",
+                    "printedName": "any SplunkCommon.ModuleConfiguration",
+                    "usr": "s:12SplunkCommon19ModuleConfigurationP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SplunkCommon.RemoteModuleConfiguration)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RemoteModuleConfiguration",
+                    "printedName": "any SplunkCommon.RemoteModuleConfiguration",
+                    "usr": "s:12SplunkCommon25RemoteModuleConfigurationP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork0B15InstrumentationC7install4with19remoteConfigurationy0A6Common06ModuleG0_pSg_AG06RemoteiG0_pSgtF",
+            "mangledName": "$s13SplunkNetwork0B15InstrumentationC7install4with19remoteConfigurationy0A6Common06ModuleG0_pSg_AG06RemoteiG0_pSgtF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "uninstall",
+            "printedName": "uninstall()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork0B15InstrumentationC9uninstallyyF",
+            "mangledName": "$s13SplunkNetwork0B15InstrumentationC9uninstallyyF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getIgnoreURLs",
+            "printedName": "getIgnoreURLs()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IgnoreURLs",
+                "printedName": "SplunkNetwork.IgnoreURLs",
+                "usr": "s:13SplunkNetwork10IgnoreURLsC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork0B15InstrumentationC13getIgnoreURLsAA0eF0CyF",
+            "mangledName": "$s13SplunkNetwork0B15InstrumentationC13getIgnoreURLsAA0eF0CyF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCapturedRequestHeaders",
+            "printedName": "getCapturedRequestHeaders()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork0B15InstrumentationC25getCapturedRequestHeadersShySSGyF",
+            "mangledName": "$s13SplunkNetwork0B15InstrumentationC25getCapturedRequestHeadersShySSGyF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCapturedResponseHeaders",
+            "printedName": "getCapturedResponseHeaders()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork0B15InstrumentationC26getCapturedResponseHeadersShySSGyF",
+            "mangledName": "$s13SplunkNetwork0B15InstrumentationC26getCapturedResponseHeadersShySSGyF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onPublish",
+            "printedName": "onPublish(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SplunkNetwork.NetworkInstrumentationMetadata, SplunkNetwork.NetworkInstrumentationData) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(SplunkNetwork.NetworkInstrumentationMetadata, SplunkNetwork.NetworkInstrumentationData)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkInstrumentationMetadata",
+                        "printedName": "SplunkNetwork.NetworkInstrumentationMetadata",
+                        "usr": "s:13SplunkNetwork0B23InstrumentationMetadataV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkInstrumentationData",
+                        "printedName": "SplunkNetwork.NetworkInstrumentationData",
+                        "usr": "s:13SplunkNetwork0B19InstrumentationDataV"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork0B15InstrumentationC9onPublish4datayyAA0bC8MetadataV_AA0bC4DataVtc_tF",
+            "mangledName": "$s13SplunkNetwork0B15InstrumentationC9onPublish4datayyAA0bC8MetadataV_AA0bC4DataVtc_tF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteData",
+            "printedName": "deleteData(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ModuleEventMetadata",
+                "printedName": "any SplunkCommon.ModuleEventMetadata",
+                "usr": "s:12SplunkCommon19ModuleEventMetadataP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork0B15InstrumentationC10deleteData3fory0A6Common19ModuleEventMetadata_p_tF",
+            "mangledName": "$s13SplunkNetwork0B15InstrumentationC10deleteData3fory0A6Common19ModuleEventMetadata_p_tF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13SplunkNetwork0B15InstrumentationC",
+        "mangledName": "$s13SplunkNetwork0B15InstrumentationC",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Module",
+            "printedName": "Module",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Configuration",
+                "printedName": "Configuration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkInstrumentationConfiguration",
+                    "printedName": "SplunkNetwork.NetworkInstrumentationConfiguration",
+                    "usr": "s:13SplunkNetwork0B28InstrumentationConfigurationV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "RemoteConfiguration",
+                "printedName": "RemoteConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkRemoteConfiguration",
+                    "printedName": "SplunkNetwork.NetworkRemoteConfiguration",
+                    "usr": "s:13SplunkNetwork0B19RemoteConfigurationV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "EventMetadata",
+                "printedName": "EventMetadata",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkInstrumentationMetadata",
+                    "printedName": "SplunkNetwork.NetworkInstrumentationMetadata",
+                    "usr": "s:13SplunkNetwork0B23InstrumentationMetadataV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "EventData",
+                "printedName": "EventData",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkInstrumentationData",
+                    "printedName": "SplunkNetwork.NetworkInstrumentationData",
+                    "usr": "s:13SplunkNetwork0B19InstrumentationDataV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:12SplunkCommon6ModuleP",
+            "mangledName": "$s12SplunkCommon6ModuleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IgnoreURLs",
+        "printedName": "IgnoreURLs",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IgnoreURLs",
+                "printedName": "SplunkNetwork.IgnoreURLs",
+                "usr": "s:13SplunkNetwork10IgnoreURLsC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13SplunkNetwork10IgnoreURLsCACycfc",
+            "mangledName": "$s13SplunkNetwork10IgnoreURLsCACycfc",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(patterns:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IgnoreURLs",
+                "printedName": "SplunkNetwork.IgnoreURLs",
+                "usr": "s:13SplunkNetwork10IgnoreURLsC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13SplunkNetwork10IgnoreURLsC8patternsACShySSG_tKcfc",
+            "mangledName": "$s13SplunkNetwork10IgnoreURLsC8patternsACShySSG_tKcfc",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(containing:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IgnoreURLs",
+                "printedName": "SplunkNetwork.IgnoreURLs",
+                "usr": "s:13SplunkNetwork10IgnoreURLsC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSRegularExpression?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSRegularExpression",
+                    "printedName": "Foundation.NSRegularExpression",
+                    "usr": "c:objc(cs)NSRegularExpression"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13SplunkNetwork10IgnoreURLsC10containingACSo19NSRegularExpressionCSg_tcfc",
+            "mangledName": "$s13SplunkNetwork10IgnoreURLsC10containingACSo19NSRegularExpressionCSg_tcfc",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IgnoreURLs",
+                "printedName": "SplunkNetwork.IgnoreURLs",
+                "usr": "s:13SplunkNetwork10IgnoreURLsC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13SplunkNetwork10IgnoreURLsC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s13SplunkNetwork10IgnoreURLsC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "Required",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork10IgnoreURLsC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13SplunkNetwork10IgnoreURLsC6encode2toys7Encoder_p_tKF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearPatterns",
+            "printedName": "clearPatterns()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork10IgnoreURLsC13clearPatternsSiyF",
+            "mangledName": "$s13SplunkNetwork10IgnoreURLsC13clearPatternsSiyF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addPatterns",
+            "printedName": "addPatterns(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork10IgnoreURLsC11addPatternsySiShySSGKF",
+            "mangledName": "$s13SplunkNetwork10IgnoreURLsC11addPatternsySiShySSGKF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addPattern",
+            "printedName": "addPattern(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSRegularExpression",
+                "printedName": "Foundation.NSRegularExpression",
+                "usr": "c:objc(cs)NSRegularExpression"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork10IgnoreURLsC10addPatternySbSo19NSRegularExpressionCF",
+            "mangledName": "$s13SplunkNetwork10IgnoreURLsC10addPatternySbSo19NSRegularExpressionCF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "count",
+            "printedName": "count()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork10IgnoreURLsC5countSiyF",
+            "mangledName": "$s13SplunkNetwork10IgnoreURLsC5countSiyF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAllPatterns",
+            "printedName": "getAllPatterns()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork10IgnoreURLsC14getAllPatternsSaySSGyF",
+            "mangledName": "$s13SplunkNetwork10IgnoreURLsC14getAllPatternsSaySSGyF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "matches",
+            "printedName": "matches(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork10IgnoreURLsC7matchesySbSSF",
+            "mangledName": "$s13SplunkNetwork10IgnoreURLsC7matchesySbSSF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "matches",
+            "printedName": "matches(url:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork10IgnoreURLsC7matches3urlSb10Foundation3URLV_tF",
+            "mangledName": "$s13SplunkNetwork10IgnoreURLsC7matches3urlSb10Foundation3URLV_tF",
+            "moduleName": "SplunkNetwork",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13SplunkNetwork10IgnoreURLsC",
+        "mangledName": "$s13SplunkNetwork10IgnoreURLsC",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TraceContextInjector",
+        "printedName": "TraceContextInjector",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "injectTraceContext",
+            "printedName": "injectTraceContext(into:spanContext:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SpanContext",
+                "printedName": "OpenTelemetryApi.SpanContext",
+                "usr": "s:16OpenTelemetryApi11SpanContextV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork20TraceContextInjectorO06injectcD04into04spanD010Foundation10URLRequestVAI_16OpenTelemetryApi04SpanD0VtFZ",
+            "mangledName": "$s13SplunkNetwork20TraceContextInjectorO06injectcD04into04spanD010Foundation10URLRequestVAI_16OpenTelemetryApi04SpanD0VtFZ",
+            "moduleName": "SplunkNetwork",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "injectActiveTraceContext",
+            "printedName": "injectActiveTraceContext(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork20TraceContextInjectorO012injectActivecD04into10Foundation10URLRequestVAH_tFZ",
+            "mangledName": "$s13SplunkNetwork20TraceContextInjectorO012injectActivecD04into10Foundation10URLRequestVAH_tFZ",
+            "moduleName": "SplunkNetwork",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hasTraceContext",
+            "printedName": "hasTraceContext(in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SplunkNetwork20TraceContextInjectorO03hascD02inSb10Foundation10URLRequestV_tFZ",
+            "mangledName": "$s13SplunkNetwork20TraceContextInjectorO03hascD02inSb10Foundation10URLRequestV_tFZ",
+            "moduleName": "SplunkNetwork",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13SplunkNetwork20TraceContextInjectorO",
+        "mangledName": "$s13SplunkNetwork20TraceContextInjectorO",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "URLSessionTask",
+        "printedName": "URLSessionTask",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "splunkSwizzledSetState",
+            "printedName": "splunkSwizzledSetState(state:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "State",
+                "printedName": "Foundation.URLSessionTask.State",
+                "usr": "c:@E@NSURLSessionTaskState"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@SplunkNetwork@@objc(cs)NSURLSessionTask(im)splunkSwizzledSetStateWithState:",
+            "mangledName": "$sSo16NSURLSessionTaskC13SplunkNetworkE22splunkSwizzledSetState5stateySo0abH0V_tF",
+            "moduleName": "SplunkNetwork",
+            "isOpen": true,
+            "objc_name": "splunkSwizzledSetStateWithState:",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "splunkSwizzledResume",
+            "printedName": "splunkSwizzledResume()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@SplunkNetwork@@objc(cs)NSURLSessionTask(im)splunkSwizzledResume",
+            "mangledName": "$sSo16NSURLSessionTaskC13SplunkNetworkE20splunkSwizzledResumeyyF",
+            "moduleName": "SplunkNetwork",
+            "isOpen": true,
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSURLSessionTask",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "intro_iOS": "7.0",
+        "objc_name": "NSURLSessionTask",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/Module\/NetworkInstrumentationConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 871,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/Module\/NetworkInstrumentationConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2290,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/Module\/NetworkInstrumentationConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2886,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/Module\/NetworkInstrumentationConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2966,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkInstrumentation.swift",
+      "kind": "Array",
+      "offset": 904,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkInstrumentation.swift",
+      "kind": "Array",
+      "offset": 1035,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkInstrumentation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1146,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1019,
+      "length": 11,
+      "value": "\"component\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1139,
+      "length": 14,
+      "value": "\"link.traceId\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1260,
+      "length": 13,
+      "value": "\"link.spanId\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1367,
+      "length": 12,
+      "value": "\"session.id\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1450,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1629,
+      "length": 22,
+      "value": "\"http.request.header.\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1779,
+      "length": 23,
+      "value": "\"http.response.header.\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeValues.swift",
+      "kind": "StringLiteral",
+      "offset": 867,
+      "length": 6,
+      "value": "\"http\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 3972,
+      "length": 53,
+      "value": "\"Failed to swizzle \""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 4024,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 5527,
+      "length": 53,
+      "value": "\"Failed to swizzle \""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 5579,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 6033,
+      "length": 78,
+      "value": "\"Original downloadTask(with: URLRequest, completionHandler:) IMP not captured\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 9205,
+      "length": 53,
+      "value": "\"Failed to swizzle \""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 9257,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+Swizzling.swift",
+      "kind": "IntegerLiteral",
+      "offset": 669,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 713,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 754,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 790,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 3823,
+      "length": 53,
+      "value": "\"Failed to swizzle \""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 3875,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 5445,
+      "length": 53,
+      "value": "\"Failed to swizzle \""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 5497,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 6114,
+      "length": 74,
+      "value": "\"Original dataTask(with: URLRequest, completionHandler:) IMP not captured\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 10842,
+      "length": 53,
+      "value": "\"Failed to swizzle \""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 10894,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 12553,
+      "length": 53,
+      "value": "\"Failed to swizzle \""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "kind": "StringLiteral",
+      "offset": 12605,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation.swift",
+      "kind": "StringLiteral",
+      "offset": 1262,
+      "length": 31,
+      "value": "\"com.splunk.networkModuleQueue\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1325,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation.swift",
+      "kind": "StringLiteral",
+      "offset": 1468,
+      "length": 24,
+      "value": "\"NetworkInstrumentation\""
+    }
+  ]
+}

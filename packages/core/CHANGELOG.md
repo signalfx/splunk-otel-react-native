@@ -5,6 +5,9 @@
 ### Added
 * **Manual error tracking.** New `SplunkRum.instance.customTracking.trackError(error, options?)` reports a caught JS error or exception (from a `try/catch`, error boundary, or handled promise rejection) as a first-class RUM error span (`component=error`, `error=true`, OTel `exception.type` / `exception.message` / `exception.stacktrace`). Accepts either an `Error` object or a message `string`, plus a `ReportErrorOptions` argument (`attributes`, `source`, `handled`). The raw JS stacktrace is transported verbatim as `exception.stacktrace`, and `splunk.rum.platform=react-native` is set for backend symbolication routing. The call is side-effect only: it never consumes the error and never throws back into the caller (the returned `Promise` always resolves). Exposes the new `ErrorSource` enum and `ReportErrorOptions` type, and a new `reportError` bridge method on both platforms.
 
+#### Changed
+* Bumped the native iOS RUM SDK to `2.4.1`.
+
 ## 1.1.0
 
 ### Added

@@ -1,0 +1,1212 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "SplunkSlowFrameDetector",
+    "printedName": "SplunkSlowFrameDetector",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EventMetadataSlowFrameDetector",
+        "printedName": "EventMetadataSlowFrameDetector",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23SplunkSlowFrameDetector013EventMetadatabcD0V9timestamp10Foundation4DateVvp",
+            "mangledName": "$s23SplunkSlowFrameDetector013EventMetadatabcD0V9timestamp10Foundation4DateVvp",
+            "moduleName": "SplunkSlowFrameDetector",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23SplunkSlowFrameDetector013EventMetadatabcD0V9timestamp10Foundation4DateVvg",
+                "mangledName": "$s23SplunkSlowFrameDetector013EventMetadatabcD0V9timestamp10Foundation4DateVvg",
+                "moduleName": "SplunkSlowFrameDetector",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23SplunkSlowFrameDetector013EventMetadatabcD0V9timestamp10Foundation4DateVvs",
+                "mangledName": "$s23SplunkSlowFrameDetector013EventMetadatabcD0V9timestamp10Foundation4DateVvs",
+                "moduleName": "SplunkSlowFrameDetector",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23SplunkSlowFrameDetector013EventMetadatabcD0V9timestamp10Foundation4DateVvM",
+                "mangledName": "$s23SplunkSlowFrameDetector013EventMetadatabcD0V9timestamp10Foundation4DateVvM",
+                "moduleName": "SplunkSlowFrameDetector",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "EventMetadataSlowFrameDetector",
+                "printedName": "SplunkSlowFrameDetector.EventMetadataSlowFrameDetector",
+                "usr": "s:23SplunkSlowFrameDetector013EventMetadatabcD0V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "EventMetadataSlowFrameDetector",
+                "printedName": "SplunkSlowFrameDetector.EventMetadataSlowFrameDetector",
+                "usr": "s:23SplunkSlowFrameDetector013EventMetadatabcD0V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SplunkSlowFrameDetector013EventMetadatabcD0V2eeoiySbAC_ACtFZ",
+            "mangledName": "$s23SplunkSlowFrameDetector013EventMetadatabcD0V2eeoiySbAC_ACtFZ",
+            "moduleName": "SplunkSlowFrameDetector",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:23SplunkSlowFrameDetector013EventMetadatabcD0V",
+        "mangledName": "$s23SplunkSlowFrameDetector013EventMetadatabcD0V",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleEventMetadata",
+            "printedName": "ModuleEventMetadata",
+            "usr": "s:12SplunkCommon19ModuleEventMetadataP",
+            "mangledName": "$s12SplunkCommon19ModuleEventMetadataP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SlowFrameData",
+        "printedName": "SlowFrameData",
+        "declKind": "Struct",
+        "usr": "s:23SplunkSlowFrameDetector0bC4DataV",
+        "mangledName": "$s23SplunkSlowFrameDetector0bC4DataV",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleEventData",
+            "printedName": "ModuleEventData",
+            "usr": "s:12SplunkCommon15ModuleEventDataP",
+            "mangledName": "$s12SplunkCommon15ModuleEventDataP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SlowFrameDetectorConfiguration",
+        "printedName": "SlowFrameDetectorConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isEnabled",
+            "printedName": "isEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23SplunkSlowFrameDetector0bcD13ConfigurationV9isEnabledSbvp",
+            "mangledName": "$s23SplunkSlowFrameDetector0bcD13ConfigurationV9isEnabledSbvp",
+            "moduleName": "SplunkSlowFrameDetector",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23SplunkSlowFrameDetector0bcD13ConfigurationV9isEnabledSbvg",
+                "mangledName": "$s23SplunkSlowFrameDetector0bcD13ConfigurationV9isEnabledSbvg",
+                "moduleName": "SplunkSlowFrameDetector",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23SplunkSlowFrameDetector0bcD13ConfigurationV9isEnabledSbvs",
+                "mangledName": "$s23SplunkSlowFrameDetector0bcD13ConfigurationV9isEnabledSbvs",
+                "moduleName": "SplunkSlowFrameDetector",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23SplunkSlowFrameDetector0bcD13ConfigurationV9isEnabledSbvM",
+                "mangledName": "$s23SplunkSlowFrameDetector0bcD13ConfigurationV9isEnabledSbvM",
+                "moduleName": "SplunkSlowFrameDetector",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SlowFrameDetectorConfiguration",
+                "printedName": "SplunkSlowFrameDetector.SlowFrameDetectorConfiguration",
+                "usr": "s:23SplunkSlowFrameDetector0bcD13ConfigurationV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:23SplunkSlowFrameDetector0bcD13ConfigurationVACycfc",
+            "mangledName": "$s23SplunkSlowFrameDetector0bcD13ConfigurationVACycfc",
+            "moduleName": "SplunkSlowFrameDetector",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(isEnabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SlowFrameDetectorConfiguration",
+                "printedName": "SplunkSlowFrameDetector.SlowFrameDetectorConfiguration",
+                "usr": "s:23SplunkSlowFrameDetector0bcD13ConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:23SplunkSlowFrameDetector0bcD13ConfigurationV9isEnabledACSb_tcfc",
+            "mangledName": "$s23SplunkSlowFrameDetector0bcD13ConfigurationV9isEnabledACSb_tcfc",
+            "moduleName": "SplunkSlowFrameDetector",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SplunkSlowFrameDetector0bcD13ConfigurationV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s23SplunkSlowFrameDetector0bcD13ConfigurationV6encode2toys7Encoder_p_tKF",
+            "moduleName": "SplunkSlowFrameDetector",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:23SplunkSlowFrameDetector0bcD13ConfigurationV",
+        "mangledName": "$s23SplunkSlowFrameDetector0bcD13ConfigurationV",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleConfiguration",
+            "printedName": "ModuleConfiguration",
+            "usr": "s:12SplunkCommon19ModuleConfigurationP",
+            "mangledName": "$s12SplunkCommon19ModuleConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SlowFrameDetectorRemoteConfiguration",
+        "printedName": "SlowFrameDetectorRemoteConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "enabled",
+            "printedName": "enabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23SplunkSlowFrameDetector0bcD19RemoteConfigurationV7enabledSbvp",
+            "mangledName": "$s23SplunkSlowFrameDetector0bcD19RemoteConfigurationV7enabledSbvp",
+            "moduleName": "SplunkSlowFrameDetector",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23SplunkSlowFrameDetector0bcD19RemoteConfigurationV7enabledSbvg",
+                "mangledName": "$s23SplunkSlowFrameDetector0bcD19RemoteConfigurationV7enabledSbvg",
+                "moduleName": "SplunkSlowFrameDetector",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23SplunkSlowFrameDetector0bcD19RemoteConfigurationV7enabledSbvs",
+                "mangledName": "$s23SplunkSlowFrameDetector0bcD19RemoteConfigurationV7enabledSbvs",
+                "moduleName": "SplunkSlowFrameDetector",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23SplunkSlowFrameDetector0bcD19RemoteConfigurationV7enabledSbvM",
+                "mangledName": "$s23SplunkSlowFrameDetector0bcD19RemoteConfigurationV7enabledSbvM",
+                "moduleName": "SplunkSlowFrameDetector",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SplunkSlowFrameDetector.SlowFrameDetectorRemoteConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SlowFrameDetectorRemoteConfiguration",
+                    "printedName": "SplunkSlowFrameDetector.SlowFrameDetectorRemoteConfiguration",
+                    "usr": "s:23SplunkSlowFrameDetector0bcD19RemoteConfigurationV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:23SplunkSlowFrameDetector0bcD19RemoteConfigurationV4fromACSg10Foundation4DataV_tcfc",
+            "mangledName": "$s23SplunkSlowFrameDetector0bcD19RemoteConfigurationV4fromACSg10Foundation4DataV_tcfc",
+            "moduleName": "SplunkSlowFrameDetector",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:23SplunkSlowFrameDetector0bcD19RemoteConfigurationV",
+        "mangledName": "$s23SplunkSlowFrameDetector0bcD19RemoteConfigurationV",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "RemoteModuleConfiguration",
+            "printedName": "RemoteModuleConfiguration",
+            "usr": "s:12SplunkCommon25RemoteModuleConfigurationP",
+            "mangledName": "$s12SplunkCommon25RemoteModuleConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "QuartzCore",
+        "printedName": "QuartzCore",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SlowFrameDetector",
+        "printedName": "SlowFrameDetector",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isEnabled",
+            "printedName": "isEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23SplunkSlowFrameDetector0bcD0C9isEnabledSbvp",
+            "mangledName": "$s23SplunkSlowFrameDetector0bcD0C9isEnabledSbvp",
+            "moduleName": "SplunkSlowFrameDetector",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23SplunkSlowFrameDetector0bcD0C9isEnabledSbvg",
+                "mangledName": "$s23SplunkSlowFrameDetector0bcD0C9isEnabledSbvg",
+                "moduleName": "SplunkSlowFrameDetector",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SlowFrameDetector",
+                "printedName": "SplunkSlowFrameDetector.SlowFrameDetector",
+                "usr": "c:@M@SplunkSlowFrameDetector@objc(cs)SlowFrameDetector"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SplunkSlowFrameDetector@objc(cs)SlowFrameDetector(im)init",
+            "mangledName": "$s23SplunkSlowFrameDetector0bcD0CACycfc",
+            "moduleName": "SplunkSlowFrameDetector",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Convenience",
+              "Required",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "install",
+            "printedName": "install(with:remoteConfiguration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SplunkCommon.ModuleConfiguration)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ModuleConfiguration",
+                    "printedName": "any SplunkCommon.ModuleConfiguration",
+                    "usr": "s:12SplunkCommon19ModuleConfigurationP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SplunkCommon.RemoteModuleConfiguration)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RemoteModuleConfiguration",
+                    "printedName": "any SplunkCommon.RemoteModuleConfiguration",
+                    "usr": "s:12SplunkCommon25RemoteModuleConfigurationP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SplunkSlowFrameDetector0bcD0C7install4with19remoteConfigurationy0A6Common06ModuleH0_pSg_AG06RemotejH0_pSgtF",
+            "mangledName": "$s23SplunkSlowFrameDetector0bcD0C7install4with19remoteConfigurationy0A6Common06ModuleH0_pSg_AG06RemotejH0_pSgtF",
+            "moduleName": "SplunkSlowFrameDetector",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteData",
+            "printedName": "deleteData(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ModuleEventMetadata",
+                "printedName": "any SplunkCommon.ModuleEventMetadata",
+                "usr": "s:12SplunkCommon19ModuleEventMetadataP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SplunkSlowFrameDetector0bcD0C10deleteData3fory0A6Common19ModuleEventMetadata_p_tF",
+            "mangledName": "$s23SplunkSlowFrameDetector0bcD0C10deleteData3fory0A6Common19ModuleEventMetadata_p_tF",
+            "moduleName": "SplunkSlowFrameDetector",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onPublish",
+            "printedName": "onPublish(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SplunkSlowFrameDetector.EventMetadataSlowFrameDetector, SplunkSlowFrameDetector.SlowFrameData) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(SplunkSlowFrameDetector.EventMetadataSlowFrameDetector, SplunkSlowFrameDetector.SlowFrameData)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventMetadataSlowFrameDetector",
+                        "printedName": "SplunkSlowFrameDetector.EventMetadataSlowFrameDetector",
+                        "usr": "s:23SplunkSlowFrameDetector013EventMetadatabcD0V"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SlowFrameData",
+                        "printedName": "SplunkSlowFrameDetector.SlowFrameData",
+                        "usr": "s:23SplunkSlowFrameDetector0bC4DataV"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23SplunkSlowFrameDetector0bcD0C9onPublish4datayyAA013EventMetadatabcD0V_AA0bC4DataVtc_tF",
+            "mangledName": "$s23SplunkSlowFrameDetector0bcD0C9onPublish4datayyAA013EventMetadatabcD0V_AA0bC4DataVtc_tF",
+            "moduleName": "SplunkSlowFrameDetector",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SplunkSlowFrameDetector@objc(cs)SlowFrameDetector",
+        "mangledName": "$s23SplunkSlowFrameDetector0bcD0C",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Module",
+            "printedName": "Module",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Configuration",
+                "printedName": "Configuration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SlowFrameDetectorConfiguration",
+                    "printedName": "SplunkSlowFrameDetector.SlowFrameDetectorConfiguration",
+                    "usr": "s:23SplunkSlowFrameDetector0bcD13ConfigurationV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "RemoteConfiguration",
+                "printedName": "RemoteConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SlowFrameDetectorRemoteConfiguration",
+                    "printedName": "SplunkSlowFrameDetector.SlowFrameDetectorRemoteConfiguration",
+                    "usr": "s:23SplunkSlowFrameDetector0bcD19RemoteConfigurationV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "EventMetadata",
+                "printedName": "EventMetadata",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventMetadataSlowFrameDetector",
+                    "printedName": "SplunkSlowFrameDetector.EventMetadataSlowFrameDetector",
+                    "usr": "s:23SplunkSlowFrameDetector013EventMetadatabcD0V"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "EventData",
+                "printedName": "EventData",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SlowFrameData",
+                    "printedName": "SplunkSlowFrameDetector.SlowFrameData",
+                    "usr": "s:23SplunkSlowFrameDetector0bC4DataV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:12SplunkCommon6ModuleP",
+            "mangledName": "$s12SplunkCommon6ModuleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "QuartzCore",
+        "printedName": "QuartzCore",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "QuartzCore",
+        "printedName": "QuartzCore",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/Module\/SlowFrameDetectorConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 915,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/Module\/SlowFrameDetectorConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1239,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/Module\/SlowFrameDetectorRemoteConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 812,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameDetector.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1605,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameDetector.swift",
+      "kind": "FloatLiteral",
+      "offset": 2027,
+      "length": 5,
+      "value": "0.001"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameDetector.swift",
+      "kind": "FloatLiteral",
+      "offset": 2176,
+      "length": 3,
+      "value": "0.7"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameDetector.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9727,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1170,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1369,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1411,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1838,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2089,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2679,
+      "length": 4,
+      "value": "true"
+    }
+  ]
+}

@@ -1,0 +1,1497 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "SplunkInteractions",
+    "printedName": "SplunkInteractions",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "CiscoInteractions",
+        "printedName": "CiscoInteractions",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoInteractions",
+        "printedName": "CiscoInteractions",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SplunkInteractionsDestination",
+        "printedName": "SplunkInteractionsDestination",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "sendInteraction",
+            "printedName": "sendInteraction(actionName:elementId:xpath:time:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18SplunkInteractions0aB11DestinationP15sendInteraction10actionName9elementId5xpath4timeySS_SSSgAI10Foundation4DateVtF",
+            "mangledName": "$s18SplunkInteractions0aB11DestinationP15sendInteraction10actionName9elementId5xpath4timeySS_SSSgAI10Foundation4DateVtF",
+            "moduleName": "SplunkInteractions",
+            "genericSig": "<τ_0_0 where τ_0_0 : SplunkInteractions.SplunkInteractionsDestination>",
+            "sugared_genericSig": "<Self where Self : SplunkInteractions.SplunkInteractionsDestination>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendFrustration",
+            "printedName": "sendFrustration(xpath:time:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18SplunkInteractions0aB11DestinationP15sendFrustration5xpath4timeySSSg_10Foundation4DateVtF",
+            "mangledName": "$s18SplunkInteractions0aB11DestinationP15sendFrustration5xpath4timeySSSg_10Foundation4DateVtF",
+            "moduleName": "SplunkInteractions",
+            "genericSig": "<τ_0_0 where τ_0_0 : SplunkInteractions.SplunkInteractionsDestination>",
+            "sugared_genericSig": "<Self where Self : SplunkInteractions.SplunkInteractionsDestination>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:18SplunkInteractions0aB11DestinationP",
+        "mangledName": "$s18SplunkInteractions0aB11DestinationP",
+        "moduleName": "SplunkInteractions",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoInteractions",
+        "printedName": "CiscoInteractions",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InteractionEventData",
+        "printedName": "InteractionEventData",
+        "declKind": "Struct",
+        "usr": "s:18SplunkInteractions20InteractionEventDataV",
+        "mangledName": "$s18SplunkInteractions20InteractionEventDataV",
+        "moduleName": "SplunkInteractions",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleEventData",
+            "printedName": "ModuleEventData",
+            "usr": "s:12SplunkCommon15ModuleEventDataP",
+            "mangledName": "$s12SplunkCommon15ModuleEventDataP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoInteractions",
+        "printedName": "CiscoInteractions",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoRuntimeCache",
+        "printedName": "CiscoRuntimeCache",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoSwizzling",
+        "printedName": "CiscoSwizzling",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Interactions",
+        "printedName": "Interactions",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "onActivity",
+            "printedName": "onActivity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Foundation.Date) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.Date) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18SplunkInteractions0B0C10onActivityy10Foundation4DateVcSgvp",
+            "mangledName": "$s18SplunkInteractions0B0C10onActivityy10Foundation4DateVcSgvp",
+            "moduleName": "SplunkInteractions",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "SPIAccessControl",
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "SplunkInternal"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Foundation.Date) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Foundation.Date) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Date",
+                            "printedName": "Foundation.Date",
+                            "usr": "s:10Foundation4DateV"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18SplunkInteractions0B0C10onActivityy10Foundation4DateVcSgvg",
+                "mangledName": "$s18SplunkInteractions0B0C10onActivityy10Foundation4DateVcSgvg",
+                "moduleName": "SplunkInteractions",
+                "declAttributes": [
+                  "Final"
+                ],
+                "spi_group_names": [
+                  "SplunkInternal"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Foundation.Date) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Foundation.Date) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Date",
+                            "printedName": "Foundation.Date",
+                            "usr": "s:10Foundation4DateV"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18SplunkInteractions0B0C10onActivityy10Foundation4DateVcSgvs",
+                "mangledName": "$s18SplunkInteractions0B0C10onActivityy10Foundation4DateVcSgvs",
+                "moduleName": "SplunkInteractions",
+                "declAttributes": [
+                  "Final"
+                ],
+                "spi_group_names": [
+                  "SplunkInternal"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18SplunkInteractions0B0C10onActivityy10Foundation4DateVcSgvM",
+                "mangledName": "$s18SplunkInteractions0B0C10onActivityy10Foundation4DateVcSgvM",
+                "moduleName": "SplunkInteractions",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "SPIAccessControl"
+                ],
+                "spi_group_names": [
+                  "SplunkInternal"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Interactions",
+                "printedName": "SplunkInteractions.Interactions",
+                "usr": "s:18SplunkInteractions0B0C"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18SplunkInteractions0B0CACycfc",
+            "mangledName": "$s18SplunkInteractions0B0CACycfc",
+            "moduleName": "SplunkInteractions",
+            "declAttributes": [
+              "Required",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "register",
+            "printedName": "register(customId:for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ObjectIdentifier",
+                "printedName": "Swift.ObjectIdentifier",
+                "usr": "s:SO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18SplunkInteractions0B0C8register8customId3forySSSg_SOtF",
+            "mangledName": "$s18SplunkInteractions0B0C8register8customId3forySSSg_SOtF",
+            "moduleName": "SplunkInteractions",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "install",
+            "printedName": "install(with:remoteConfiguration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SplunkCommon.ModuleConfiguration)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ModuleConfiguration",
+                    "printedName": "any SplunkCommon.ModuleConfiguration",
+                    "usr": "s:12SplunkCommon19ModuleConfigurationP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SplunkCommon.RemoteModuleConfiguration)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RemoteModuleConfiguration",
+                    "printedName": "any SplunkCommon.RemoteModuleConfiguration",
+                    "usr": "s:12SplunkCommon25RemoteModuleConfigurationP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18SplunkInteractions0B0C7install4with19remoteConfigurationy0A6Common06ModuleF0_pSg_AG06RemotehF0_pSgtF",
+            "mangledName": "$s18SplunkInteractions0B0C7install4with19remoteConfigurationy0A6Common06ModuleF0_pSg_AG06RemotehF0_pSgtF",
+            "moduleName": "SplunkInteractions",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onPublish",
+            "printedName": "onPublish(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CiscoInteractions.InteractionEvent, SplunkInteractions.InteractionEventData) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(CiscoInteractions.InteractionEvent, SplunkInteractions.InteractionEventData)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InteractionEvent",
+                        "printedName": "CiscoInteractions.InteractionEvent",
+                        "usr": "s:17CiscoInteractions16InteractionEventV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InteractionEventData",
+                        "printedName": "SplunkInteractions.InteractionEventData",
+                        "usr": "s:18SplunkInteractions20InteractionEventDataV"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18SplunkInteractions0B0C9onPublish4datayy05CiscoB016InteractionEventV_AA0gH4DataVtc_tF",
+            "mangledName": "$s18SplunkInteractions0B0C9onPublish4datayy05CiscoB016InteractionEventV_AA0gH4DataVtc_tF",
+            "moduleName": "SplunkInteractions",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteData",
+            "printedName": "deleteData(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ModuleEventMetadata",
+                "printedName": "any SplunkCommon.ModuleEventMetadata",
+                "usr": "s:12SplunkCommon19ModuleEventMetadataP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18SplunkInteractions0B0C10deleteData3fory0A6Common19ModuleEventMetadata_p_tF",
+            "mangledName": "$s18SplunkInteractions0B0C10deleteData3fory0A6Common19ModuleEventMetadata_p_tF",
+            "moduleName": "SplunkInteractions",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:18SplunkInteractions0B0C",
+        "mangledName": "$s18SplunkInteractions0B0C",
+        "moduleName": "SplunkInteractions",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Module",
+            "printedName": "Module",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Configuration",
+                "printedName": "Configuration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "InteractionsConfiguration",
+                    "printedName": "SplunkInteractions.InteractionsConfiguration",
+                    "usr": "s:18SplunkInteractions0B13ConfigurationV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "RemoteConfiguration",
+                "printedName": "RemoteConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "InteractionsRemoteConfiguration",
+                    "printedName": "SplunkInteractions.InteractionsRemoteConfiguration",
+                    "usr": "s:18SplunkInteractions0B19RemoteConfigurationV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "EventMetadata",
+                "printedName": "EventMetadata",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "InteractionEvent",
+                    "printedName": "CiscoInteractions.InteractionEvent",
+                    "usr": "s:17CiscoInteractions16InteractionEventV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "EventData",
+                "printedName": "EventData",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "InteractionEventData",
+                    "printedName": "SplunkInteractions.InteractionEventData",
+                    "usr": "s:18SplunkInteractions20InteractionEventDataV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:12SplunkCommon6ModuleP",
+            "mangledName": "$s12SplunkCommon6ModuleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SplunkInteractionsModule",
+            "printedName": "SplunkInteractionsModule",
+            "usr": "s:18SplunkInteractions0aB6ModuleP",
+            "mangledName": "$s18SplunkInteractions0aB6ModuleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InteractionsConfiguration",
+        "printedName": "InteractionsConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isEnabled",
+            "printedName": "isEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18SplunkInteractions0B13ConfigurationV9isEnabledSbvp",
+            "mangledName": "$s18SplunkInteractions0B13ConfigurationV9isEnabledSbvp",
+            "moduleName": "SplunkInteractions",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18SplunkInteractions0B13ConfigurationV9isEnabledSbvg",
+                "mangledName": "$s18SplunkInteractions0B13ConfigurationV9isEnabledSbvg",
+                "moduleName": "SplunkInteractions",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18SplunkInteractions0B13ConfigurationV9isEnabledSbvs",
+                "mangledName": "$s18SplunkInteractions0B13ConfigurationV9isEnabledSbvs",
+                "moduleName": "SplunkInteractions",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18SplunkInteractions0B13ConfigurationV9isEnabledSbvM",
+                "mangledName": "$s18SplunkInteractions0B13ConfigurationV9isEnabledSbvM",
+                "moduleName": "SplunkInteractions",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InteractionsConfiguration",
+                "printedName": "SplunkInteractions.InteractionsConfiguration",
+                "usr": "s:18SplunkInteractions0B13ConfigurationV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18SplunkInteractions0B13ConfigurationVACycfc",
+            "mangledName": "$s18SplunkInteractions0B13ConfigurationVACycfc",
+            "moduleName": "SplunkInteractions",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(isEnabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InteractionsConfiguration",
+                "printedName": "SplunkInteractions.InteractionsConfiguration",
+                "usr": "s:18SplunkInteractions0B13ConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18SplunkInteractions0B13ConfigurationV9isEnabledACSb_tcfc",
+            "mangledName": "$s18SplunkInteractions0B13ConfigurationV9isEnabledACSb_tcfc",
+            "moduleName": "SplunkInteractions",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18SplunkInteractions0B13ConfigurationV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s18SplunkInteractions0B13ConfigurationV6encode2toys7Encoder_p_tKF",
+            "moduleName": "SplunkInteractions",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18SplunkInteractions0B13ConfigurationV",
+        "mangledName": "$s18SplunkInteractions0B13ConfigurationV",
+        "moduleName": "SplunkInteractions",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleConfiguration",
+            "printedName": "ModuleConfiguration",
+            "usr": "s:12SplunkCommon19ModuleConfigurationP",
+            "mangledName": "$s12SplunkCommon19ModuleConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InteractionsRemoteConfiguration",
+        "printedName": "InteractionsRemoteConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "enabled",
+            "printedName": "enabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18SplunkInteractions0B19RemoteConfigurationV7enabledSbvp",
+            "mangledName": "$s18SplunkInteractions0B19RemoteConfigurationV7enabledSbvp",
+            "moduleName": "SplunkInteractions",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18SplunkInteractions0B19RemoteConfigurationV7enabledSbvg",
+                "mangledName": "$s18SplunkInteractions0B19RemoteConfigurationV7enabledSbvg",
+                "moduleName": "SplunkInteractions",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18SplunkInteractions0B19RemoteConfigurationV7enabledSbvs",
+                "mangledName": "$s18SplunkInteractions0B19RemoteConfigurationV7enabledSbvs",
+                "moduleName": "SplunkInteractions",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18SplunkInteractions0B19RemoteConfigurationV7enabledSbvM",
+                "mangledName": "$s18SplunkInteractions0B19RemoteConfigurationV7enabledSbvM",
+                "moduleName": "SplunkInteractions",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SplunkInteractions.InteractionsRemoteConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "InteractionsRemoteConfiguration",
+                    "printedName": "SplunkInteractions.InteractionsRemoteConfiguration",
+                    "usr": "s:18SplunkInteractions0B19RemoteConfigurationV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18SplunkInteractions0B19RemoteConfigurationV4fromACSg10Foundation4DataV_tcfc",
+            "mangledName": "$s18SplunkInteractions0B19RemoteConfigurationV4fromACSg10Foundation4DataV_tcfc",
+            "moduleName": "SplunkInteractions",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18SplunkInteractions0B19RemoteConfigurationV",
+        "mangledName": "$s18SplunkInteractions0B19RemoteConfigurationV",
+        "moduleName": "SplunkInteractions",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "RemoteModuleConfiguration",
+            "printedName": "RemoteModuleConfiguration",
+            "usr": "s:12SplunkCommon25RemoteModuleConfigurationP",
+            "mangledName": "$s12SplunkCommon25RemoteModuleConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoInteractions",
+        "printedName": "CiscoInteractions",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkInteractions",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SplunkInteractionsModule",
+        "printedName": "SplunkInteractionsModule",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "register",
+            "printedName": "register(customId:for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ObjectIdentifier",
+                "printedName": "Swift.ObjectIdentifier",
+                "usr": "s:SO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18SplunkInteractions0aB6ModuleP8register8customId3forySSSg_SOtF",
+            "mangledName": "$s18SplunkInteractions0aB6ModuleP8register8customId3forySSSg_SOtF",
+            "moduleName": "SplunkInteractions",
+            "genericSig": "<τ_0_0 where τ_0_0 : SplunkInteractions.SplunkInteractionsModule>",
+            "sugared_genericSig": "<Self where Self : SplunkInteractions.SplunkInteractionsModule>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:18SplunkInteractions0aB6ModuleP",
+        "mangledName": "$s18SplunkInteractions0aB6ModuleP",
+        "moduleName": "SplunkInteractions",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InteractionEvent",
+        "printedName": "InteractionEvent",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "InteractionEvent",
+                "printedName": "CiscoInteractions.InteractionEvent",
+                "usr": "s:17CiscoInteractions16InteractionEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "InteractionEvent",
+                "printedName": "CiscoInteractions.InteractionEvent",
+                "usr": "s:17CiscoInteractions16InteractionEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CiscoInteractions16InteractionEventV06SplunkB0E2eeoiySbAC_ACtFZ",
+            "mangledName": "$s17CiscoInteractions16InteractionEventV06SplunkB0E2eeoiySbAC_ACtFZ",
+            "moduleName": "SplunkInteractions",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17CiscoInteractions16InteractionEventV06SplunkB0E9timestamp10Foundation4DateVvp",
+            "mangledName": "$s17CiscoInteractions16InteractionEventV06SplunkB0E9timestamp10Foundation4DateVvp",
+            "moduleName": "SplunkInteractions",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CiscoInteractions16InteractionEventV06SplunkB0E9timestamp10Foundation4DateVvg",
+                "mangledName": "$s17CiscoInteractions16InteractionEventV06SplunkB0E9timestamp10Foundation4DateVvg",
+                "moduleName": "SplunkInteractions",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17CiscoInteractions16InteractionEventV",
+        "mangledName": "$s17CiscoInteractions16InteractionEventV",
+        "moduleName": "CiscoInteractions",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleEventMetadata",
+            "printedName": "ModuleEventMetadata",
+            "usr": "s:12SplunkCommon19ModuleEventMetadataP",
+            "mangledName": "$s12SplunkCommon19ModuleEventMetadataP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InteractionViewNode",
+        "printedName": "InteractionViewNode",
+        "declKind": "Class",
+        "usr": "s:17CiscoInteractions19InteractionViewNodeC",
+        "mangledName": "$s17CiscoInteractions19InteractionViewNodeC",
+        "moduleName": "CiscoInteractions",
+        "declAttributes": [
+          "Final"
+        ],
+        "isExternal": true,
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkInteractions\/Sources\/SplunkInteractions\/Module\/Interactions.swift",
+      "kind": "StringLiteral",
+      "offset": 1820,
+      "length": 20,
+      "value": "\"SplunkInteractions\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkInteractions\/Sources\/SplunkInteractions\/Module\/Interactions.swift",
+      "kind": "StringLiteral",
+      "offset": 1920,
+      "length": 29,
+      "value": "\"SplunkInteractionsCustomIds\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkInteractions\/Sources\/SplunkInteractions\/Module\/Interactions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2031,
+      "length": 5,
+      "value": "1000"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkInteractions\/Sources\/SplunkInteractions\/Module\/InteractionsConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 913,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkInteractions\/Sources\/SplunkInteractions\/Module\/InteractionsRemoteConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 829,
+      "length": 4,
+      "value": "true"
+    }
+  ]
+}

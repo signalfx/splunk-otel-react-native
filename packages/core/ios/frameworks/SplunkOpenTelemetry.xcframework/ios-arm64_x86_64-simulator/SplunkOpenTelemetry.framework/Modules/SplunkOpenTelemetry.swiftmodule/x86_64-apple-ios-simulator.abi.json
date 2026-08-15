@@ -1,0 +1,3153 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "SplunkOpenTelemetry",
+    "printedName": "SplunkOpenTelemetry",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkOpenTelemetryBackgroundExporter",
+        "printedName": "SplunkOpenTelemetryBackgroundExporter",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OTLPLogToSpanEventProcessor",
+        "printedName": "OTLPLogToSpanEventProcessor",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(with:resources:debugEnabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OTLPLogToSpanEventProcessor",
+                "printedName": "SplunkOpenTelemetry.OTLPLogToSpanEventProcessor",
+                "usr": "s:19SplunkOpenTelemetry27OTLPLogToSpanEventProcessorC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AgentResources",
+                "printedName": "any SplunkCommon.AgentResources",
+                "usr": "s:12SplunkCommon14AgentResourcesP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19SplunkOpenTelemetry27OTLPLogToSpanEventProcessorC4with9resources12debugEnabledAC10Foundation3URLVSg_0A6Common14AgentResources_pSbtcfc",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPLogToSpanEventProcessorC4with9resources12debugEnabledAC10Foundation3URLVSg_0A6Common14AgentResources_pSbtcfc",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "Required",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(with:resources:debugEnabled:traceProcessor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OTLPLogToSpanEventProcessor",
+                "printedName": "SplunkOpenTelemetry.OTLPLogToSpanEventProcessor",
+                "usr": "s:19SplunkOpenTelemetry27OTLPLogToSpanEventProcessorC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AgentResources",
+                "printedName": "any SplunkCommon.AgentResources",
+                "usr": "s:12SplunkCommon14AgentResourcesP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OTLPTraceProcessor",
+                "printedName": "SplunkOpenTelemetry.OTLPTraceProcessor",
+                "usr": "s:19SplunkOpenTelemetry18OTLPTraceProcessorC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19SplunkOpenTelemetry27OTLPLogToSpanEventProcessorC4with9resources12debugEnabled05traceH0AC10Foundation3URLVSg_0A6Common14AgentResources_pSbAA09OTLPTraceH0Ctcfc",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPLogToSpanEventProcessorC4with9resources12debugEnabled05traceH0AC10Foundation3URLVSg_0A6Common14AgentResources_pSbAA09OTLPTraceH0Ctcfc",
+            "moduleName": "SplunkOpenTelemetry",
+            "isInternal": true,
+            "declAttributes": [
+              "Convenience",
+              "AccessControl"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "sendEvent",
+            "printedName": "sendEvent(_:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AgentEvent",
+                "printedName": "any SplunkCommon.AgentEvent",
+                "usr": "s:12SplunkCommon10AgentEventP"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry27OTLPLogToSpanEventProcessorC04sendG0_10completiony0A6Common05AgentG0_p_ySbctF",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPLogToSpanEventProcessorC04sendG0_10completiony0A6Common05AgentG0_p_ySbctF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendEvent",
+            "printedName": "sendEvent(event:immediateProcessing:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AgentEvent",
+                "printedName": "any SplunkCommon.AgentEvent",
+                "usr": "s:12SplunkCommon10AgentEventP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry27OTLPLogToSpanEventProcessorC04sendG05event19immediateProcessing10completiony0A6Common05AgentG0_p_SbySbctF",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPLogToSpanEventProcessorC04sendG05event19immediateProcessing10completiony0A6Common05AgentG0_p_SbySbctF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19SplunkOpenTelemetry27OTLPLogToSpanEventProcessorC",
+        "mangledName": "$s19SplunkOpenTelemetry27OTLPLogToSpanEventProcessorC",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LogEventProcessor",
+            "printedName": "LogEventProcessor",
+            "usr": "s:12SplunkCommon17LogEventProcessorP",
+            "mangledName": "$s12SplunkCommon17LogEventProcessorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkOpenTelemetryBackgroundExporter",
+        "printedName": "SplunkOpenTelemetryBackgroundExporter",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OTLPSessionReplayEventProcessor",
+        "printedName": "OTLPSessionReplayEventProcessor",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(with:resources:runtimeAttributes:globalAttributes:debugEnabled:accessToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OTLPSessionReplayEventProcessor",
+                "printedName": "SplunkOpenTelemetry.OTLPSessionReplayEventProcessor",
+                "usr": "s:19SplunkOpenTelemetry31OTLPSessionReplayEventProcessorC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AgentResources",
+                "printedName": "any SplunkCommon.AgentResources",
+                "usr": "s:12SplunkCommon14AgentResourcesP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RuntimeAttributes",
+                "printedName": "any SplunkCommon.RuntimeAttributes",
+                "usr": "s:12SplunkCommon17RuntimeAttributesP"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> [Swift.String : OpenTelemetryApi.AttributeValue]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : OpenTelemetryApi.AttributeValue]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AttributeValue",
+                        "printedName": "OpenTelemetryApi.AttributeValue",
+                        "usr": "s:16OpenTelemetryApi14AttributeValueO"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19SplunkOpenTelemetry31OTLPSessionReplayEventProcessorC4with9resources17runtimeAttributes06globalK012debugEnabled11accessTokenAC10Foundation3URLVSg_0A6Common14AgentResources_pAN07RuntimeK0_pSDySS0bC3Api14AttributeValueOGycSbSSSgtcfc",
+            "mangledName": "$s19SplunkOpenTelemetry31OTLPSessionReplayEventProcessorC4with9resources17runtimeAttributes06globalK012debugEnabled11accessTokenAC10Foundation3URLVSg_0A6Common14AgentResources_pAN07RuntimeK0_pSDySS0bC3Api14AttributeValueOGycSbSSSgtcfc",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "Required",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "setEndpoint",
+            "printedName": "setEndpoint(_:accessToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry31OTLPSessionReplayEventProcessorC11setEndpoint_11accessTokeny10Foundation3URLV_SSSgtF",
+            "mangledName": "$s19SplunkOpenTelemetry31OTLPSessionReplayEventProcessorC11setEndpoint_11accessTokeny10Foundation3URLV_SSSgtF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearEndpoint",
+            "printedName": "clearEndpoint()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry31OTLPSessionReplayEventProcessorC13clearEndpointyyF",
+            "mangledName": "$s19SplunkOpenTelemetry31OTLPSessionReplayEventProcessorC13clearEndpointyyF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendEvent",
+            "printedName": "sendEvent(_:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AgentEvent",
+                "printedName": "any SplunkCommon.AgentEvent",
+                "usr": "s:12SplunkCommon10AgentEventP"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry31OTLPSessionReplayEventProcessorC04sendF0_10completiony0A6Common05AgentF0_p_ySbctF",
+            "mangledName": "$s19SplunkOpenTelemetry31OTLPSessionReplayEventProcessorC04sendF0_10completiony0A6Common05AgentF0_p_ySbctF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendEvent",
+            "printedName": "sendEvent(event:immediateProcessing:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AgentEvent",
+                "printedName": "any SplunkCommon.AgentEvent",
+                "usr": "s:12SplunkCommon10AgentEventP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry31OTLPSessionReplayEventProcessorC04sendF05event19immediateProcessing10completiony0A6Common05AgentF0_p_SbySbctF",
+            "mangledName": "$s19SplunkOpenTelemetry31OTLPSessionReplayEventProcessorC04sendF05event19immediateProcessing10completiony0A6Common05AgentF0_p_SbySbctF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19SplunkOpenTelemetry31OTLPSessionReplayEventProcessorC",
+        "mangledName": "$s19SplunkOpenTelemetry31OTLPSessionReplayEventProcessorC",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LogEventProcessor",
+            "printedName": "LogEventProcessor",
+            "usr": "s:12SplunkCommon17LogEventProcessorP",
+            "mangledName": "$s12SplunkCommon17LogEventProcessorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OTLPAttributesLogRecordProcessor",
+        "printedName": "OTLPAttributesLogRecordProcessor",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(proxy:with:activityTracker:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OTLPAttributesLogRecordProcessor",
+                "printedName": "SplunkOpenTelemetry.OTLPAttributesLogRecordProcessor",
+                "usr": "s:19SplunkOpenTelemetry32OTLPAttributesLogRecordProcessorC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogRecordProcessor",
+                "printedName": "any OpenTelemetrySdk.LogRecordProcessor",
+                "usr": "s:16OpenTelemetrySdk18LogRecordProcessorP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RuntimeAttributes",
+                "printedName": "any SplunkCommon.RuntimeAttributes",
+                "usr": "s:12SplunkCommon17RuntimeAttributesP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ActivityTracker",
+                "printedName": "any SplunkCommon.ActivityTracker",
+                "usr": "s:12SplunkCommon15ActivityTrackerP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19SplunkOpenTelemetry32OTLPAttributesLogRecordProcessorC5proxy4with15activityTrackerAC0bC3Sdk0efG0_p_0A6Common17RuntimeAttributes_pAI08ActivityK0_ptcfc",
+            "mangledName": "$s19SplunkOpenTelemetry32OTLPAttributesLogRecordProcessorC5proxy4with15activityTrackerAC0bC3Sdk0efG0_p_0A6Common17RuntimeAttributes_pAI08ActivityK0_ptcfc",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "onEmit",
+            "printedName": "onEmit(logRecord:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReadableLogRecord",
+                "printedName": "OpenTelemetrySdk.ReadableLogRecord",
+                "usr": "s:16OpenTelemetrySdk17ReadableLogRecordV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry32OTLPAttributesLogRecordProcessorC6onEmit03logF0y0bC3Sdk08ReadableeF0V_tF",
+            "mangledName": "$s19SplunkOpenTelemetry32OTLPAttributesLogRecordProcessorC6onEmit03logF0y0bC3Sdk08ReadableeF0V_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "shutdown",
+            "printedName": "shutdown(explicitTimeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ExportResult",
+                "printedName": "OpenTelemetrySdk.ExportResult",
+                "usr": "s:16OpenTelemetrySdk12ExportResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry32OTLPAttributesLogRecordProcessorC8shutdown15explicitTimeout0bC3Sdk12ExportResultOSdSg_tF",
+            "mangledName": "$s19SplunkOpenTelemetry32OTLPAttributesLogRecordProcessorC8shutdown15explicitTimeout0bC3Sdk12ExportResultOSdSg_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "forceFlush",
+            "printedName": "forceFlush(explicitTimeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ExportResult",
+                "printedName": "OpenTelemetrySdk.ExportResult",
+                "usr": "s:16OpenTelemetrySdk12ExportResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry32OTLPAttributesLogRecordProcessorC10forceFlush15explicitTimeout0bC3Sdk12ExportResultOSdSg_tF",
+            "mangledName": "$s19SplunkOpenTelemetry32OTLPAttributesLogRecordProcessorC10forceFlush15explicitTimeout0bC3Sdk12ExportResultOSdSg_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19SplunkOpenTelemetry32OTLPAttributesLogRecordProcessorC",
+        "mangledName": "$s19SplunkOpenTelemetry32OTLPAttributesLogRecordProcessorC",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LogRecordProcessor",
+            "printedName": "LogRecordProcessor",
+            "usr": "s:16OpenTelemetrySdk18LogRecordProcessorP",
+            "mangledName": "$s16OpenTelemetrySdk18LogRecordProcessorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OTLPGlobalAttributesLogRecordProcessor",
+        "printedName": "OTLPGlobalAttributesLogRecordProcessor",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(proxy:with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OTLPGlobalAttributesLogRecordProcessor",
+                "printedName": "SplunkOpenTelemetry.OTLPGlobalAttributesLogRecordProcessor",
+                "usr": "s:19SplunkOpenTelemetry38OTLPGlobalAttributesLogRecordProcessorC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogRecordProcessor",
+                "printedName": "any OpenTelemetrySdk.LogRecordProcessor",
+                "usr": "s:16OpenTelemetrySdk18LogRecordProcessorP"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> [Swift.String : OpenTelemetryApi.AttributeValue]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : OpenTelemetryApi.AttributeValue]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AttributeValue",
+                        "printedName": "OpenTelemetryApi.AttributeValue",
+                        "usr": "s:16OpenTelemetryApi14AttributeValueO"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19SplunkOpenTelemetry38OTLPGlobalAttributesLogRecordProcessorC5proxy4withAC0bC3Sdk0fgH0_p_SDySS0bC3Api14AttributeValueOGyctcfc",
+            "mangledName": "$s19SplunkOpenTelemetry38OTLPGlobalAttributesLogRecordProcessorC5proxy4withAC0bC3Sdk0fgH0_p_SDySS0bC3Api14AttributeValueOGyctcfc",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "onEmit",
+            "printedName": "onEmit(logRecord:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReadableLogRecord",
+                "printedName": "OpenTelemetrySdk.ReadableLogRecord",
+                "usr": "s:16OpenTelemetrySdk17ReadableLogRecordV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry38OTLPGlobalAttributesLogRecordProcessorC6onEmit03logG0y0bC3Sdk08ReadablefG0V_tF",
+            "mangledName": "$s19SplunkOpenTelemetry38OTLPGlobalAttributesLogRecordProcessorC6onEmit03logG0y0bC3Sdk08ReadablefG0V_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "forceFlush",
+            "printedName": "forceFlush(explicitTimeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ExportResult",
+                "printedName": "OpenTelemetrySdk.ExportResult",
+                "usr": "s:16OpenTelemetrySdk12ExportResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry38OTLPGlobalAttributesLogRecordProcessorC10forceFlush15explicitTimeout0bC3Sdk12ExportResultOSdSg_tF",
+            "mangledName": "$s19SplunkOpenTelemetry38OTLPGlobalAttributesLogRecordProcessorC10forceFlush15explicitTimeout0bC3Sdk12ExportResultOSdSg_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "shutdown",
+            "printedName": "shutdown(explicitTimeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ExportResult",
+                "printedName": "OpenTelemetrySdk.ExportResult",
+                "usr": "s:16OpenTelemetrySdk12ExportResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry38OTLPGlobalAttributesLogRecordProcessorC8shutdown15explicitTimeout0bC3Sdk12ExportResultOSdSg_tF",
+            "mangledName": "$s19SplunkOpenTelemetry38OTLPGlobalAttributesLogRecordProcessorC8shutdown15explicitTimeout0bC3Sdk12ExportResultOSdSg_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19SplunkOpenTelemetry38OTLPGlobalAttributesLogRecordProcessorC",
+        "mangledName": "$s19SplunkOpenTelemetry38OTLPGlobalAttributesLogRecordProcessorC",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LogRecordProcessor",
+            "printedName": "LogRecordProcessor",
+            "usr": "s:16OpenTelemetrySdk18LogRecordProcessorP",
+            "mangledName": "$s16OpenTelemetrySdk18LogRecordProcessorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OTLPLogToSpanExporter",
+        "printedName": "OTLPLogToSpanExporter",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "export",
+            "printedName": "export(logRecords:explicitTimeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ExportResult",
+                "printedName": "OpenTelemetrySdk.ExportResult",
+                "usr": "s:16OpenTelemetrySdk12ExportResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[OpenTelemetrySdk.ReadableLogRecord]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReadableLogRecord",
+                    "printedName": "OpenTelemetrySdk.ReadableLogRecord",
+                    "usr": "s:16OpenTelemetrySdk17ReadableLogRecordV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry21OTLPLogToSpanExporterC6export10logRecords15explicitTimeout0bC3Sdk12ExportResultOSayAG17ReadableLogRecordVG_SdSgtF",
+            "mangledName": "$s19SplunkOpenTelemetry21OTLPLogToSpanExporterC6export10logRecords15explicitTimeout0bC3Sdk12ExportResultOSayAG17ReadableLogRecordVG_SdSgtF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "shutdown",
+            "printedName": "shutdown(explicitTimeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry21OTLPLogToSpanExporterC8shutdown15explicitTimeoutySdSg_tF",
+            "mangledName": "$s19SplunkOpenTelemetry21OTLPLogToSpanExporterC8shutdown15explicitTimeoutySdSg_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "forceFlush",
+            "printedName": "forceFlush(explicitTimeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ExportResult",
+                "printedName": "OpenTelemetrySdk.ExportResult",
+                "usr": "s:16OpenTelemetrySdk12ExportResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry21OTLPLogToSpanExporterC10forceFlush15explicitTimeout0bC3Sdk12ExportResultOSdSg_tF",
+            "mangledName": "$s19SplunkOpenTelemetry21OTLPLogToSpanExporterC10forceFlush15explicitTimeout0bC3Sdk12ExportResultOSdSg_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19SplunkOpenTelemetry21OTLPLogToSpanExporterC",
+        "mangledName": "$s19SplunkOpenTelemetry21OTLPLogToSpanExporterC",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LogRecordExporter",
+            "printedName": "LogRecordExporter",
+            "usr": "s:16OpenTelemetrySdk17LogRecordExporterP",
+            "mangledName": "$s16OpenTelemetrySdk17LogRecordExporterP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OTel",
+        "printedName": "OTel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "version",
+            "printedName": "version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19SplunkOpenTelemetry4OTelC7versionSSvpZ",
+            "mangledName": "$s19SplunkOpenTelemetry4OTelC7versionSSvpZ",
+            "moduleName": "SplunkOpenTelemetry",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19SplunkOpenTelemetry4OTelC7versionSSvgZ",
+                "mangledName": "$s19SplunkOpenTelemetry4OTelC7versionSSvgZ",
+                "moduleName": "SplunkOpenTelemetry",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19SplunkOpenTelemetry4OTelC",
+        "mangledName": "$s19SplunkOpenTelemetry4OTelC",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OTLPAttributesSpanProcessor",
+        "printedName": "OTLPAttributesSpanProcessor",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isStartRequired",
+            "printedName": "isStartRequired",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC15isStartRequiredSbvp",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC15isStartRequiredSbvp",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC15isStartRequiredSbvg",
+                "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC15isStartRequiredSbvg",
+                "moduleName": "SplunkOpenTelemetry",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isEndRequired",
+            "printedName": "isEndRequired",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC13isEndRequiredSbvp",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC13isEndRequiredSbvp",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC13isEndRequiredSbvg",
+                "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC13isEndRequiredSbvg",
+                "moduleName": "SplunkOpenTelemetry",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(with:activityTracker:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OTLPAttributesSpanProcessor",
+                "printedName": "SplunkOpenTelemetry.OTLPAttributesSpanProcessor",
+                "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RuntimeAttributes",
+                "printedName": "any SplunkCommon.RuntimeAttributes",
+                "usr": "s:12SplunkCommon17RuntimeAttributesP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ActivityTracker",
+                "printedName": "any SplunkCommon.ActivityTracker",
+                "usr": "s:12SplunkCommon15ActivityTrackerP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC4with15activityTrackerAC0A6Common17RuntimeAttributes_p_AF08ActivityI0_ptcfc",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC4with15activityTrackerAC0A6Common17RuntimeAttributes_p_AF08ActivityI0_ptcfc",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "onStart",
+            "printedName": "onStart(parentContext:span:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "OpenTelemetryApi.SpanContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SpanContext",
+                    "printedName": "OpenTelemetryApi.SpanContext",
+                    "usr": "s:16OpenTelemetryApi11SpanContextV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReadableSpan",
+                "printedName": "any OpenTelemetrySdk.ReadableSpan",
+                "usr": "s:16OpenTelemetrySdk12ReadableSpanP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC7onStart13parentContext4spany0bC3Api0eJ0VSg_0bC3Sdk08ReadableE0_ptF",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC7onStart13parentContext4spany0bC3Api0eJ0VSg_0bC3Sdk08ReadableE0_ptF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onEnd",
+            "printedName": "onEnd(span:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReadableSpan",
+                "printedName": "any OpenTelemetrySdk.ReadableSpan",
+                "usr": "s:16OpenTelemetrySdk12ReadableSpanP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC5onEnd4spany0bC3Sdk08ReadableE0_p_tF",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC5onEnd4spany0bC3Sdk08ReadableE0_p_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "shutdown",
+            "printedName": "shutdown(explicitTimeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC8shutdown15explicitTimeoutySdSg_tF",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC8shutdown15explicitTimeoutySdSg_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "forceFlush",
+            "printedName": "forceFlush(timeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC10forceFlush7timeoutySdSg_tF",
+            "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC10forceFlush7timeoutySdSg_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC",
+        "mangledName": "$s19SplunkOpenTelemetry27OTLPAttributesSpanProcessorC",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SpanProcessor",
+            "printedName": "SpanProcessor",
+            "usr": "s:16OpenTelemetrySdk13SpanProcessorP",
+            "mangledName": "$s16OpenTelemetrySdk13SpanProcessorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OTLPGlobalAttributesSpanProcessor",
+        "printedName": "OTLPGlobalAttributesSpanProcessor",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OTLPGlobalAttributesSpanProcessor",
+                "printedName": "SplunkOpenTelemetry.OTLPGlobalAttributesSpanProcessor",
+                "usr": "s:19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> [Swift.String : OpenTelemetryApi.AttributeValue]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : OpenTelemetryApi.AttributeValue]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AttributeValue",
+                        "printedName": "OpenTelemetryApi.AttributeValue",
+                        "usr": "s:16OpenTelemetryApi14AttributeValueO"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC4withACSDySS0bC3Api14AttributeValueOGyc_tcfc",
+            "mangledName": "$s19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC4withACSDySS0bC3Api14AttributeValueOGyc_tcfc",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "isStartRequired",
+            "printedName": "isStartRequired",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC15isStartRequiredSbvp",
+            "mangledName": "$s19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC15isStartRequiredSbvp",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC15isStartRequiredSbvg",
+                "mangledName": "$s19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC15isStartRequiredSbvg",
+                "moduleName": "SplunkOpenTelemetry",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isEndRequired",
+            "printedName": "isEndRequired",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC13isEndRequiredSbvp",
+            "mangledName": "$s19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC13isEndRequiredSbvp",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC13isEndRequiredSbvg",
+                "mangledName": "$s19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC13isEndRequiredSbvg",
+                "moduleName": "SplunkOpenTelemetry",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "onStart",
+            "printedName": "onStart(parentContext:span:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "OpenTelemetryApi.SpanContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SpanContext",
+                    "printedName": "OpenTelemetryApi.SpanContext",
+                    "usr": "s:16OpenTelemetryApi11SpanContextV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReadableSpan",
+                "printedName": "any OpenTelemetrySdk.ReadableSpan",
+                "usr": "s:16OpenTelemetrySdk12ReadableSpanP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC7onStart13parentContext4spany0bC3Api0fK0VSg_0bC3Sdk08ReadableF0_ptF",
+            "mangledName": "$s19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC7onStart13parentContext4spany0bC3Api0fK0VSg_0bC3Sdk08ReadableF0_ptF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onEnd",
+            "printedName": "onEnd(span:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReadableSpan",
+                "printedName": "any OpenTelemetrySdk.ReadableSpan",
+                "usr": "s:16OpenTelemetrySdk12ReadableSpanP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC5onEnd4spany0bC3Sdk08ReadableF0_p_tF",
+            "mangledName": "$s19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC5onEnd4spany0bC3Sdk08ReadableF0_p_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "shutdown",
+            "printedName": "shutdown(explicitTimeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC8shutdown15explicitTimeoutySdSg_tF",
+            "mangledName": "$s19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC8shutdown15explicitTimeoutySdSg_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "forceFlush",
+            "printedName": "forceFlush(timeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC10forceFlush7timeoutySdSg_tF",
+            "mangledName": "$s19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC10forceFlush7timeoutySdSg_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC",
+        "mangledName": "$s19SplunkOpenTelemetry33OTLPGlobalAttributesSpanProcessorC",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SpanProcessor",
+            "printedName": "SpanProcessor",
+            "usr": "s:16OpenTelemetrySdk13SpanProcessorP",
+            "mangledName": "$s16OpenTelemetrySdk13SpanProcessorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetrySdk",
+        "printedName": "OpenTelemetrySdk",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkOpenTelemetryBackgroundExporter",
+        "printedName": "SplunkOpenTelemetryBackgroundExporter",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OTLPTraceProcessor",
+        "printedName": "OTLPTraceProcessor",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(with:resources:runtimeAttributes:globalAttributes:debugEnabled:spanInterceptor:accessToken:activityTracker:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OTLPTraceProcessor",
+                "printedName": "SplunkOpenTelemetry.OTLPTraceProcessor",
+                "usr": "s:19SplunkOpenTelemetry18OTLPTraceProcessorC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AgentResources",
+                "printedName": "any SplunkCommon.AgentResources",
+                "usr": "s:12SplunkCommon14AgentResourcesP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RuntimeAttributes",
+                "printedName": "any SplunkCommon.RuntimeAttributes",
+                "usr": "s:12SplunkCommon17RuntimeAttributesP"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> [Swift.String : OpenTelemetryApi.AttributeValue]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : OpenTelemetryApi.AttributeValue]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AttributeValue",
+                        "printedName": "OpenTelemetryApi.AttributeValue",
+                        "usr": "s:16OpenTelemetryApi14AttributeValueO"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((OpenTelemetrySdk.SpanData) -> OpenTelemetrySdk.SpanData?)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(OpenTelemetrySdk.SpanData) -> OpenTelemetrySdk.SpanData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "OpenTelemetrySdk.SpanData?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SpanData",
+                            "printedName": "OpenTelemetrySdk.SpanData",
+                            "usr": "s:16OpenTelemetrySdk8SpanDataV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SpanData",
+                        "printedName": "OpenTelemetrySdk.SpanData",
+                        "usr": "s:16OpenTelemetrySdk8SpanDataV"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ActivityTracker",
+                "printedName": "any SplunkCommon.ActivityTracker",
+                "usr": "s:12SplunkCommon15ActivityTrackerP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19SplunkOpenTelemetry18OTLPTraceProcessorC4with9resources17runtimeAttributes06globalI012debugEnabled15spanInterceptor11accessToken15activityTrackerAC10Foundation3URLVSg_0A6Common14AgentResources_pAP07RuntimeI0_pSDySS0bC3Api14AttributeValueOGycSb0bC3Sdk8SpanDataVSgAYcSgSSSgAP08ActivityR0_ptcfc",
+            "mangledName": "$s19SplunkOpenTelemetry18OTLPTraceProcessorC4with9resources17runtimeAttributes06globalI012debugEnabled15spanInterceptor11accessToken15activityTrackerAC10Foundation3URLVSg_0A6Common14AgentResources_pAP07RuntimeI0_pSDySS0bC3Api14AttributeValueOGycSb0bC3Sdk8SpanDataVSgAYcSgSSSgAP08ActivityR0_ptcfc",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "Required",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "emitAndPersistSpan",
+            "printedName": "emitAndPersistSpan(emitting:timeout:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> OpenTelemetryApi.SpanId",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SpanId",
+                    "printedName": "OpenTelemetryApi.SpanId",
+                    "usr": "s:16OpenTelemetryApi6SpanIdV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry18OTLPTraceProcessorC18emitAndPersistSpan8emitting7timeout10completiony0bC3Api0I2IdVyc_SdySbctF",
+            "mangledName": "$s19SplunkOpenTelemetry18OTLPTraceProcessorC18emitAndPersistSpan8emitting7timeout10completiony0bC3Api0I2IdVyc_SdySbctF",
+            "moduleName": "SplunkOpenTelemetry",
+            "isInternal": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "forceFlushBufferedSpans",
+            "printedName": "forceFlushBufferedSpans(timeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ExportResult",
+                "printedName": "OpenTelemetrySdk.ExportResult",
+                "usr": "s:16OpenTelemetrySdk12ExportResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry18OTLPTraceProcessorC23forceFlushBufferedSpans7timeout0bC3Sdk12ExportResultOSdSg_tF",
+            "mangledName": "$s19SplunkOpenTelemetry18OTLPTraceProcessorC23forceFlushBufferedSpans7timeout0bC3Sdk12ExportResultOSdSg_tF",
+            "moduleName": "SplunkOpenTelemetry",
+            "isInternal": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setEndpoint",
+            "printedName": "setEndpoint(_:accessToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry18OTLPTraceProcessorC11setEndpoint_11accessTokeny10Foundation3URLV_SSSgtF",
+            "mangledName": "$s19SplunkOpenTelemetry18OTLPTraceProcessorC11setEndpoint_11accessTokeny10Foundation3URLV_SSSgtF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearEndpoint",
+            "printedName": "clearEndpoint()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19SplunkOpenTelemetry18OTLPTraceProcessorC13clearEndpointyyF",
+            "mangledName": "$s19SplunkOpenTelemetry18OTLPTraceProcessorC13clearEndpointyyF",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19SplunkOpenTelemetry18OTLPTraceProcessorC",
+        "mangledName": "$s19SplunkOpenTelemetry18OTLPTraceProcessorC",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "TraceProcessor",
+            "printedName": "TraceProcessor",
+            "usr": "s:12SplunkCommon14TraceProcessorP",
+            "mangledName": "$s12SplunkCommon14TraceProcessorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetry",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OTLPBackgroundHTTPTraceExporter",
+        "printedName": "OTLPBackgroundHTTPTraceExporter",
+        "declKind": "Class",
+        "usr": "s:37SplunkOpenTelemetryBackgroundExporter023OTLPBackgroundHTTPTraceE0C",
+        "mangledName": "$s37SplunkOpenTelemetryBackgroundExporter023OTLPBackgroundHTTPTraceE0C",
+        "moduleName": "SplunkOpenTelemetryBackgroundExporter",
+        "superclassUsr": "s:37SplunkOpenTelemetryBackgroundExporter022OTLPBackgroundHTTPBaseE0C",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "SplunkOpenTelemetryBackgroundExporter.OTLPBackgroundHTTPBaseExporter"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SpanExporter",
+            "printedName": "SpanExporter",
+            "usr": "s:16OpenTelemetrySdk12SpanExporterP",
+            "mangledName": "$s16OpenTelemetrySdk12SpanExporterP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AttributeValue",
+        "printedName": "AttributeValue",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeValue",
+                "printedName": "OpenTelemetryApi.AttributeValue",
+                "usr": "s:16OpenTelemetryApi14AttributeValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "EventAttributeValue",
+                "printedName": "SplunkCommon.EventAttributeValue",
+                "usr": "s:12SplunkCommon19EventAttributeValueO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16OpenTelemetryApi14AttributeValueO06SplunkaB0EyAC0F6Common05EventdE0Ocfc",
+            "mangledName": "$s16OpenTelemetryApi14AttributeValueO06SplunkaB0EyAC0F6Common05EventdE0Ocfc",
+            "moduleName": "SplunkOpenTelemetry",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16OpenTelemetryApi14AttributeValueO",
+        "mangledName": "$s16OpenTelemetryApi14AttributeValueO",
+        "moduleName": "OpenTelemetryApi",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerLogExporter.swift",
+      "kind": "Array",
+      "offset": 780,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerLogExporter.swift",
+      "kind": "StringLiteral",
+      "offset": 949,
+      "length": 15,
+      "value": "\"OpenTelemetry\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerSpanExporter.swift",
+      "kind": "Array",
+      "offset": 766,
+      "length": 72,
+      "value": "[\"component\", \"screen.name\", \"session.id\"]"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerSpanExporter.swift",
+      "kind": "StringLiteral",
+      "offset": 1001,
+      "length": 15,
+      "value": "\"OpenTelemetry\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPLogToSpanEventProcessor.swift",
+      "kind": "StringLiteral",
+      "offset": 1320,
+      "length": 25,
+      "value": "\"LogToSpanEventProcessor\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPSessionReplayEventProcessor.swift",
+      "kind": "StringLiteral",
+      "offset": 1983,
+      "length": 15,
+      "value": "\"OpenTelemetry\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPSessionReplayEventProcessor.swift",
+      "kind": "StringLiteral",
+      "offset": 2141,
+      "length": 29,
+      "value": "\"SessionReplayEventProcessor\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/LogToSpanExporter\/OTLPLogToSpanExporter.swift",
+      "kind": "StringLiteral",
+      "offset": 1043,
+      "length": 22,
+      "value": "\"Log to Span Exporter\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/OTel.swift",
+      "kind": "StringLiteral",
+      "offset": 615,
+      "length": 12,
+      "value": "\"OTel 0.0.1\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/BatchSpanProcessorCore+Draining.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8094,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPAttributesSpanProcessor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1035,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPAttributesSpanProcessor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1072,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1665,
+      "length": 3,
+      "value": "100"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "FloatLiteral",
+      "offset": 1789,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1932,
+      "length": 5,
+      "value": "2048"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2085,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2116,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "FloatLiteral",
+      "offset": 5225,
+      "length": 3,
+      "value": "0.1"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "FloatLiteral",
+      "offset": 5657,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "FloatLiteral",
+      "offset": 6133,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "FloatLiteral",
+      "offset": 6295,
+      "length": 3,
+      "value": "5.0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "StringLiteral",
+      "offset": 6636,
+      "length": 20,
+      "value": "\"BatchSpanProcessor\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6915,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7051,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7170,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7316,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7463,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "StringLiteral",
+      "offset": 7820,
+      "length": 15,
+      "value": "\"OpenTelemetry\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/ReadableSpanQueue.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1397,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/ReadableSpanQueue.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1422,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/ReadableSpanQueue.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1513,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Stdout Exporters\/SplunkStdoutLogExporter.swift",
+      "kind": "StringLiteral",
+      "offset": 969,
+      "length": 15,
+      "value": "\"OpenTelemetry\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Stdout Exporters\/SplunkStdoutSpanExporter.swift",
+      "kind": "StringLiteral",
+      "offset": 954,
+      "length": 15,
+      "value": "\"OpenTelemetry\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Utils\/Foundation\/Date+Formatting.swift",
+      "kind": "IntegerLiteral",
+      "offset": 838,
+      "length": 1,
+      "value": "0"
+    }
+  ]
+}

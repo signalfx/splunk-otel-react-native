@@ -1,0 +1,1689 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "CiscoInstanceManager",
+    "printedName": "CiscoInstanceManager",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DefaultInstances",
+        "printedName": "DefaultInstances",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20CiscoInstanceManager16DefaultInstancesV7defaultxvp",
+            "mangledName": "$s20CiscoInstanceManager16DefaultInstancesV7defaultxvp",
+            "moduleName": "CiscoInstanceManager",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20CiscoInstanceManager16DefaultInstancesV7defaultxvg",
+                "mangledName": "$s20CiscoInstanceManager16DefaultInstancesV7defaultxvg",
+                "moduleName": "CiscoInstanceManager",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Restorable>",
+                "sugared_genericSig": "<Instance where Instance : CiscoInstanceManager.Restorable>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "all",
+            "printedName": "all",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20CiscoInstanceManager16DefaultInstancesV3allSayxGvp",
+            "mangledName": "$s20CiscoInstanceManager16DefaultInstancesV3allSayxGvp",
+            "moduleName": "CiscoInstanceManager",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20CiscoInstanceManager16DefaultInstancesV3allSayxGvg",
+                "mangledName": "$s20CiscoInstanceManager16DefaultInstancesV3allSayxGvg",
+                "moduleName": "CiscoInstanceManager",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Restorable>",
+                "sugared_genericSig": "<Instance where Instance : CiscoInstanceManager.Restorable>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "byName",
+            "printedName": "byName(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20CiscoInstanceManager16DefaultInstancesV6byNameyxSgSSF",
+            "mangledName": "$s20CiscoInstanceManager16DefaultInstancesV6byNameyxSgSSF",
+            "moduleName": "CiscoInstanceManager",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Restorable>",
+            "sugared_genericSig": "<Instance where Instance : CiscoInstanceManager.Restorable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20CiscoInstanceManager16DefaultInstancesV",
+        "mangledName": "$s20CiscoInstanceManager16DefaultInstancesV",
+        "moduleName": "CiscoInstanceManager",
+        "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Restorable>",
+        "sugared_genericSig": "<Instance where Instance : CiscoInstanceManager.Restorable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Instances",
+            "printedName": "Instances",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Instance",
+                "printedName": "Instance",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:20CiscoInstanceManager9InstancesP",
+            "mangledName": "$s20CiscoInstanceManager9InstancesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ReplayApi",
+        "printedName": "ReplayApi",
+        "declKind": "Struct",
+        "usr": "s:20CiscoInstanceManager9ReplayApiV",
+        "mangledName": "$s20CiscoInstanceManager9ReplayApiV",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoDiskStorage",
+        "printedName": "CiscoDiskStorage",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoEncryption",
+        "printedName": "CiscoEncryption",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DefaultInstanceManager",
+        "printedName": "DefaultInstanceManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "instances",
+            "printedName": "instances",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Instances",
+                "printedName": "any CiscoInstanceManager.Instances<τ_0_0>",
+                "usr": "s:20CiscoInstanceManager9InstancesP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20CiscoInstanceManager07DefaultbC0C9instancesAA9Instances_px0B0Rts_XPvp",
+            "mangledName": "$s20CiscoInstanceManager07DefaultbC0C9instancesAA9Instances_px0B0Rts_XPvp",
+            "moduleName": "CiscoInstanceManager",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instances",
+                    "printedName": "any CiscoInstanceManager.Instances<τ_0_0>",
+                    "usr": "s:20CiscoInstanceManager9InstancesP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20CiscoInstanceManager07DefaultbC0C9instancesAA9Instances_px0B0Rts_XPvg",
+                "mangledName": "$s20CiscoInstanceManager07DefaultbC0C9instancesAA9Instances_px0B0Rts_XPvg",
+                "moduleName": "CiscoInstanceManager",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Restorable>",
+                "sugared_genericSig": "<Instance where Instance : CiscoInstanceManager.Restorable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "basePrefix",
+            "printedName": "basePrefix",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20CiscoInstanceManager07DefaultbC0C10basePrefixSSvp",
+            "mangledName": "$s20CiscoInstanceManager07DefaultbC0C10basePrefixSSvp",
+            "moduleName": "CiscoInstanceManager",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20CiscoInstanceManager07DefaultbC0C10basePrefixSSvg",
+                "mangledName": "$s20CiscoInstanceManager07DefaultbC0C10basePrefixSSvg",
+                "moduleName": "CiscoInstanceManager",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Restorable>",
+                "sugared_genericSig": "<Instance where Instance : CiscoInstanceManager.Restorable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "version",
+            "printedName": "version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20CiscoInstanceManager07DefaultbC0C7versionSuvp",
+            "mangledName": "$s20CiscoInstanceManager07DefaultbC0C7versionSuvp",
+            "moduleName": "CiscoInstanceManager",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20CiscoInstanceManager07DefaultbC0C7versionSuvg",
+                "mangledName": "$s20CiscoInstanceManager07DefaultbC0C7versionSuvg",
+                "moduleName": "CiscoInstanceManager",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Restorable>",
+                "sugared_genericSig": "<Instance where Instance : CiscoInstanceManager.Restorable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "create",
+            "printedName": "create(instanceName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20CiscoInstanceManager07DefaultbC0C6create12instanceNamexSS_tKF",
+            "mangledName": "$s20CiscoInstanceManager07DefaultbC0C6create12instanceNamexSS_tKF",
+            "moduleName": "CiscoInstanceManager",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Restorable>",
+            "sugared_genericSig": "<Instance where Instance : CiscoInstanceManager.Restorable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "remove",
+            "printedName": "remove(instanceName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20CiscoInstanceManager07DefaultbC0C6remove12instanceNameySS_tKF",
+            "mangledName": "$s20CiscoInstanceManager07DefaultbC0C6remove12instanceNameySS_tKF",
+            "moduleName": "CiscoInstanceManager",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Restorable>",
+            "sugared_genericSig": "<Instance where Instance : CiscoInstanceManager.Restorable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(defaultInstance:basePrefix:version:retentionPeriod:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultInstanceManager",
+                "printedName": "CiscoInstanceManager.DefaultInstanceManager<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:20CiscoInstanceManager07DefaultbC0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0",
+                "hasDefaultArg": true
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20CiscoInstanceManager07DefaultbC0C07defaultB010basePrefix7version15retentionPeriodACyxGx_SSSuSdSgtKcfc",
+            "mangledName": "$s20CiscoInstanceManager07DefaultbC0C07defaultB010basePrefix7version15retentionPeriodACyxGx_SSSuSdSgtKcfc",
+            "moduleName": "CiscoInstanceManager",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Restorable>",
+            "sugared_genericSig": "<Instance where Instance : CiscoInstanceManager.Restorable>",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "init_kind": "Convenience"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:20CiscoInstanceManager07DefaultbC0C",
+        "mangledName": "$s20CiscoInstanceManager07DefaultbC0C",
+        "moduleName": "CiscoInstanceManager",
+        "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Restorable>",
+        "sugared_genericSig": "<Instance where Instance : CiscoInstanceManager.Restorable>",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoDiskStorage",
+        "printedName": "CiscoDiskStorage",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "Preconcurrency",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Instances",
+        "printedName": "Instances",
+        "children": [
+          {
+            "kind": "AssociatedType",
+            "name": "Instance",
+            "printedName": "Instance",
+            "declKind": "AssociatedType",
+            "usr": "s:20CiscoInstanceManager9InstancesP0B0Qa",
+            "mangledName": "$s20CiscoInstanceManager9InstancesP0B0Qa",
+            "moduleName": "CiscoInstanceManager",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Instance"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20CiscoInstanceManager9InstancesP7default0B0Qzvp",
+            "mangledName": "$s20CiscoInstanceManager9InstancesP7default0B0Qzvp",
+            "moduleName": "CiscoInstanceManager",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Instance"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20CiscoInstanceManager9InstancesP7default0B0Qzvg",
+                "mangledName": "$s20CiscoInstanceManager9InstancesP7default0B0Qzvg",
+                "moduleName": "CiscoInstanceManager",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Instances>",
+                "sugared_genericSig": "<Self where Self : CiscoInstanceManager.Instances>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "all",
+            "printedName": "all",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0.Instance]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Instance"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20CiscoInstanceManager9InstancesP3allSay0B0QzGvp",
+            "mangledName": "$s20CiscoInstanceManager9InstancesP3allSay0B0QzGvp",
+            "moduleName": "CiscoInstanceManager",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0.Instance]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DependentMember",
+                        "printedName": "τ_0_0.Instance"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20CiscoInstanceManager9InstancesP3allSay0B0QzGvg",
+                "mangledName": "$s20CiscoInstanceManager9InstancesP3allSay0B0QzGvg",
+                "moduleName": "CiscoInstanceManager",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Instances>",
+                "sugared_genericSig": "<Self where Self : CiscoInstanceManager.Instances>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "byName",
+            "printedName": "byName(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Instance?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Instance"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20CiscoInstanceManager9InstancesP6byNamey0B0QzSgSSF",
+            "mangledName": "$s20CiscoInstanceManager9InstancesP6byNamey0B0QzSgSSF",
+            "moduleName": "CiscoInstanceManager",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Instances>",
+            "sugared_genericSig": "<Self where Self : CiscoInstanceManager.Instances>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:20CiscoInstanceManager9InstancesP",
+        "mangledName": "$s20CiscoInstanceManager9InstancesP",
+        "moduleName": "CiscoInstanceManager",
+        "genericSig": "<τ_0_0 : Swift.Sendable, τ_0_0.Instance : CiscoInstanceManager.Restorable>",
+        "sugared_genericSig": "<Self : Swift.Sendable, Self.Instance : CiscoInstanceManager.Restorable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoDiskStorage",
+        "printedName": "CiscoDiskStorage",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SecureDescriptor",
+        "printedName": "SecureDescriptor",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "value",
+            "printedName": "value",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20CiscoInstanceManager16SecureDescriptorP5valueSSvp",
+            "mangledName": "$s20CiscoInstanceManager16SecureDescriptorP5valueSSvp",
+            "moduleName": "CiscoInstanceManager",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20CiscoInstanceManager16SecureDescriptorP5valueSSvg",
+                "mangledName": "$s20CiscoInstanceManager16SecureDescriptorP5valueSSvg",
+                "moduleName": "CiscoInstanceManager",
+                "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.SecureDescriptor>",
+                "sugared_genericSig": "<Self where Self : CiscoInstanceManager.SecureDescriptor>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(instanceName:ofType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExistentialMetatype",
+                "printedName": "any Any.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20CiscoInstanceManager16SecureDescriptorP12instanceName6ofTypexSgSS_ypXptcfc",
+            "mangledName": "$s20CiscoInstanceManager16SecureDescriptorP12instanceName6ofTypexSgSS_ypXptcfc",
+            "moduleName": "CiscoInstanceManager",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.SecureDescriptor>",
+            "sugared_genericSig": "<Self where Self : CiscoInstanceManager.SecureDescriptor>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(securedValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20CiscoInstanceManager16SecureDescriptorP12securedValuexSgSS_tcfc",
+            "mangledName": "$s20CiscoInstanceManager16SecureDescriptorP12securedValuexSgSS_tcfc",
+            "moduleName": "CiscoInstanceManager",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.SecureDescriptor>",
+            "sugared_genericSig": "<Self where Self : CiscoInstanceManager.SecureDescriptor>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20CiscoInstanceManager16SecureDescriptorPAAE4hash4intoys6HasherVz_tF",
+            "mangledName": "$s20CiscoInstanceManager16SecureDescriptorPAAE4hash4intoys6HasherVz_tF",
+            "moduleName": "CiscoInstanceManager",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.SecureDescriptor>",
+            "sugared_genericSig": "<Self where Self : CiscoInstanceManager.SecureDescriptor>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20CiscoInstanceManager16SecureDescriptorPAAE2eeoiySbx_xtFZ",
+            "mangledName": "$s20CiscoInstanceManager16SecureDescriptorPAAE2eeoiySbx_xtFZ",
+            "moduleName": "CiscoInstanceManager",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.SecureDescriptor>",
+            "sugared_genericSig": "<Self where Self : CiscoInstanceManager.SecureDescriptor>",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:20CiscoInstanceManager16SecureDescriptorP",
+        "mangledName": "$s20CiscoInstanceManager16SecureDescriptorP",
+        "moduleName": "CiscoInstanceManager",
+        "genericSig": "<τ_0_0 : Swift.Hashable>",
+        "sugared_genericSig": "<Self : Swift.Hashable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Restorable",
+        "printedName": "Restorable",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20CiscoInstanceManager10RestorablePxycfc",
+            "mangledName": "$s20CiscoInstanceManager10RestorablePxycfc",
+            "moduleName": "CiscoInstanceManager",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Restorable>",
+            "sugared_genericSig": "<Self where Self : CiscoInstanceManager.Restorable>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "restoreInstance",
+            "printedName": "restoreInstance(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20CiscoInstanceManager10RestorableP07restoreB04withySS_tF",
+            "mangledName": "$s20CiscoInstanceManager10RestorableP07restoreB04withySS_tF",
+            "moduleName": "CiscoInstanceManager",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Restorable>",
+            "sugared_genericSig": "<Self where Self : CiscoInstanceManager.Restorable>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isRemovableInstance",
+            "printedName": "isRemovableInstance()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20CiscoInstanceManager10RestorableP011isRemovableB0SbyF",
+            "mangledName": "$s20CiscoInstanceManager10RestorableP011isRemovableB0SbyF",
+            "moduleName": "CiscoInstanceManager",
+            "genericSig": "<τ_0_0 where τ_0_0 : CiscoInstanceManager.Restorable>",
+            "sugared_genericSig": "<Self where Self : CiscoInstanceManager.Restorable>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:20CiscoInstanceManager10RestorableP",
+        "mangledName": "$s20CiscoInstanceManager10RestorableP",
+        "moduleName": "CiscoInstanceManager",
+        "genericSig": "<τ_0_0 : Swift.Hashable>",
+        "sugared_genericSig": "<Self : Swift.Hashable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ClientApp",
+        "printedName": "ClientApp",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ClientApp",
+                "printedName": "CiscoInstanceManager.ClientApp",
+                "usr": "s:20CiscoInstanceManager9ClientAppC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20CiscoInstanceManager9ClientAppCACycfc",
+            "mangledName": "$s20CiscoInstanceManager9ClientAppCACycfc",
+            "moduleName": "CiscoInstanceManager",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "applicationDidFinishLaunching",
+            "printedName": "applicationDidFinishLaunching()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20CiscoInstanceManager9ClientAppC29applicationDidFinishLaunchingyyF",
+            "mangledName": "$s20CiscoInstanceManager9ClientAppC29applicationDidFinishLaunchingyyF",
+            "moduleName": "CiscoInstanceManager",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:20CiscoInstanceManager9ClientAppC",
+        "mangledName": "$s20CiscoInstanceManager9ClientAppC",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CryptoKit",
+        "printedName": "CryptoKit",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CiscoInstanceManager"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIView",
+        "printedName": "UIView",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "replayTestMethod",
+            "printedName": "replayTestMethod(param:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC20CiscoInstanceManagerE16replayTestMethod5paramySS_tF",
+            "mangledName": "$sSo6UIViewC20CiscoInstanceManagerE16replayTestMethod5paramySS_tF",
+            "moduleName": "CiscoInstanceManager",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "replayTestMethod",
+            "printedName": "replayTestMethod(param:instanceName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC20CiscoInstanceManagerE16replayTestMethod5param12instanceNameySS_SStF",
+            "mangledName": "$sSo6UIViewC20CiscoInstanceManagerE16replayTestMethod5param12instanceNameySS_SStF",
+            "moduleName": "CiscoInstanceManager",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIView",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIView",
+        "declAttributes": [
+          "Preconcurrency",
+          "Available",
+          "ObjC",
+          "NonSendable",
+          "Custom",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)UIResponder",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/Model\/Access Statistics\/DefaultAccessStatistics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 913,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/POC Sample\/ReplayApi.swift",
+      "kind": "StringLiteral",
+      "offset": 316,
+      "length": 25,
+      "value": "\"com.cisco.smartlook.sdk\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/POC Sample\/ReplayApi.swift",
+      "kind": "StringLiteral",
+      "offset": 361,
+      "length": 17,
+      "value": "\"instanceManager\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/DefaultInstanceManager\/DefaultInstanceManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 317,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/DefaultInstanceManager\/DefaultInstanceManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3512,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/DefaultInstanceManager\/DefaultInstanceManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3540,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/DefaultInstanceManager\/DefaultInstanceManager.swift",
+      "kind": "StringLiteral",
+      "offset": 5369,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/DefaultInstanceManager\/DefaultInstanceManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5397,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/Safe Space Maintainer\/DefaultSafeSpaceMaintainer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 405,
+      "length": 4,
+      "value": "3600"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/Safe Space Maintainer\/DefaultSafeSpaceMaintainer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 412,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/Safe Space Maintainer\/DefaultSafeSpaceMaintainer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 417,
+      "length": 2,
+      "value": "31"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/Safe Space Maintainer\/DefaultSafeSpaceMaintainer.swift",
+      "kind": "StringLiteral",
+      "offset": 628,
+      "length": 3,
+      "value": "\"V\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/Safe Space Maintainer\/DefaultSafeSpaceMaintainer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1117,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/POC Sample\/Replay.swift",
+      "kind": "StringLiteral",
+      "offset": 257,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/Model\/Secure Descriptor\/DefaultSecureDescriptor.swift",
+      "kind": "IntegerLiteral",
+      "offset": 467,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoInstanceManager\/Sources\/Model\/Secure Descriptor\/DefaultSecureDescriptor.swift",
+      "kind": "StringLiteral",
+      "offset": 508,
+      "length": 19,
+      "value": "\"^[a-fA-F0-9]{20}$\""
+    }
+  ]
+}

@@ -1,0 +1,1942 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "SplunkNetworkMonitor",
+    "printedName": "SplunkNetworkMonitor",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "CiscoLogger",
+        "printedName": "CiscoLogger",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkMonitorData",
+        "printedName": "NetworkMonitorData",
+        "declKind": "Struct",
+        "usr": "s:20SplunkNetworkMonitor0bC4DataV",
+        "mangledName": "$s20SplunkNetworkMonitor0bC4DataV",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleEventData",
+            "printedName": "ModuleEventData",
+            "usr": "s:12SplunkCommon15ModuleEventDataP",
+            "mangledName": "$s12SplunkCommon15ModuleEventDataP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkMonitorMetadata",
+        "printedName": "NetworkMonitorMetadata",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SplunkNetworkMonitor0bC8MetadataV9timestamp10Foundation4DateVvp",
+            "mangledName": "$s20SplunkNetworkMonitor0bC8MetadataV9timestamp10Foundation4DateVvp",
+            "moduleName": "SplunkNetworkMonitor",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC8MetadataV9timestamp10Foundation4DateVvg",
+                "mangledName": "$s20SplunkNetworkMonitor0bC8MetadataV9timestamp10Foundation4DateVvg",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC8MetadataV9timestamp10Foundation4DateVvs",
+                "mangledName": "$s20SplunkNetworkMonitor0bC8MetadataV9timestamp10Foundation4DateVvs",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC8MetadataV9timestamp10Foundation4DateVvM",
+                "mangledName": "$s20SplunkNetworkMonitor0bC8MetadataV9timestamp10Foundation4DateVvM",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "eventName",
+            "printedName": "eventName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SplunkNetworkMonitor0bC8MetadataV9eventNameSSvp",
+            "mangledName": "$s20SplunkNetworkMonitor0bC8MetadataV9eventNameSSvp",
+            "moduleName": "SplunkNetworkMonitor",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC8MetadataV9eventNameSSvg",
+                "mangledName": "$s20SplunkNetworkMonitor0bC8MetadataV9eventNameSSvg",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC8MetadataV9eventNameSSvs",
+                "mangledName": "$s20SplunkNetworkMonitor0bC8MetadataV9eventNameSSvs",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC8MetadataV9eventNameSSvM",
+                "mangledName": "$s20SplunkNetworkMonitor0bC8MetadataV9eventNameSSvM",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkMonitorMetadata",
+                "printedName": "SplunkNetworkMonitor.NetworkMonitorMetadata",
+                "usr": "s:20SplunkNetworkMonitor0bC8MetadataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkMonitorMetadata",
+                "printedName": "SplunkNetworkMonitor.NetworkMonitorMetadata",
+                "usr": "s:20SplunkNetworkMonitor0bC8MetadataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SplunkNetworkMonitor0bC8MetadataV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s20SplunkNetworkMonitor0bC8MetadataV2eeoiySbAC_ACtFZ",
+            "moduleName": "SplunkNetworkMonitor",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20SplunkNetworkMonitor0bC8MetadataV",
+        "mangledName": "$s20SplunkNetworkMonitor0bC8MetadataV",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleEventMetadata",
+            "printedName": "ModuleEventMetadata",
+            "usr": "s:12SplunkCommon19ModuleEventMetadataP",
+            "mangledName": "$s12SplunkCommon19ModuleEventMetadataP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkMonitorConfiguration",
+        "printedName": "NetworkMonitorConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isEnabled",
+            "printedName": "isEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SplunkNetworkMonitor0bC13ConfigurationV9isEnabledSbvp",
+            "mangledName": "$s20SplunkNetworkMonitor0bC13ConfigurationV9isEnabledSbvp",
+            "moduleName": "SplunkNetworkMonitor",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC13ConfigurationV9isEnabledSbvg",
+                "mangledName": "$s20SplunkNetworkMonitor0bC13ConfigurationV9isEnabledSbvg",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC13ConfigurationV9isEnabledSbvs",
+                "mangledName": "$s20SplunkNetworkMonitor0bC13ConfigurationV9isEnabledSbvs",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC13ConfigurationV9isEnabledSbvM",
+                "mangledName": "$s20SplunkNetworkMonitor0bC13ConfigurationV9isEnabledSbvM",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(isEnabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkMonitorConfiguration",
+                "printedName": "SplunkNetworkMonitor.NetworkMonitorConfiguration",
+                "usr": "s:20SplunkNetworkMonitor0bC13ConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20SplunkNetworkMonitor0bC13ConfigurationV9isEnabledACSb_tcfc",
+            "mangledName": "$s20SplunkNetworkMonitor0bC13ConfigurationV9isEnabledACSb_tcfc",
+            "moduleName": "SplunkNetworkMonitor",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SplunkNetworkMonitor0bC13ConfigurationV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s20SplunkNetworkMonitor0bC13ConfigurationV6encode2toys7Encoder_p_tKF",
+            "moduleName": "SplunkNetworkMonitor",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20SplunkNetworkMonitor0bC13ConfigurationV",
+        "mangledName": "$s20SplunkNetworkMonitor0bC13ConfigurationV",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ModuleConfiguration",
+            "printedName": "ModuleConfiguration",
+            "usr": "s:12SplunkCommon19ModuleConfigurationP",
+            "mangledName": "$s12SplunkCommon19ModuleConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkMonitorRemoteConfiguration",
+        "printedName": "NetworkMonitorRemoteConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "enabled",
+            "printedName": "enabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SplunkNetworkMonitor0bC19RemoteConfigurationV7enabledSbvp",
+            "mangledName": "$s20SplunkNetworkMonitor0bC19RemoteConfigurationV7enabledSbvp",
+            "moduleName": "SplunkNetworkMonitor",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC19RemoteConfigurationV7enabledSbvg",
+                "mangledName": "$s20SplunkNetworkMonitor0bC19RemoteConfigurationV7enabledSbvg",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC19RemoteConfigurationV7enabledSbvs",
+                "mangledName": "$s20SplunkNetworkMonitor0bC19RemoteConfigurationV7enabledSbvs",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC19RemoteConfigurationV7enabledSbvM",
+                "mangledName": "$s20SplunkNetworkMonitor0bC19RemoteConfigurationV7enabledSbvM",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SplunkNetworkMonitor.NetworkMonitorRemoteConfiguration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkMonitorRemoteConfiguration",
+                    "printedName": "SplunkNetworkMonitor.NetworkMonitorRemoteConfiguration",
+                    "usr": "s:20SplunkNetworkMonitor0bC19RemoteConfigurationV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20SplunkNetworkMonitor0bC19RemoteConfigurationV4fromACSg10Foundation4DataV_tcfc",
+            "mangledName": "$s20SplunkNetworkMonitor0bC19RemoteConfigurationV4fromACSg10Foundation4DataV_tcfc",
+            "moduleName": "SplunkNetworkMonitor",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20SplunkNetworkMonitor0bC19RemoteConfigurationV",
+        "mangledName": "$s20SplunkNetworkMonitor0bC19RemoteConfigurationV",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "RemoteModuleConfiguration",
+            "printedName": "RemoteModuleConfiguration",
+            "usr": "s:12SplunkCommon25RemoteModuleConfigurationP",
+            "mangledName": "$s12SplunkCommon25RemoteModuleConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor"
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreTelephony",
+        "printedName": "CoreTelephony",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConnectionType",
+        "printedName": "ConnectionType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "wifi",
+            "printedName": "wifi",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SplunkNetworkMonitor.ConnectionType.Type) -> SplunkNetworkMonitor.ConnectionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionType",
+                    "printedName": "SplunkNetworkMonitor.ConnectionType",
+                    "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SplunkNetworkMonitor.ConnectionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionType",
+                        "printedName": "SplunkNetworkMonitor.ConnectionType",
+                        "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO4wifiyA2CmF",
+            "mangledName": "$s20SplunkNetworkMonitor14ConnectionTypeO4wifiyA2CmF",
+            "moduleName": "SplunkNetworkMonitor"
+          },
+          {
+            "kind": "Var",
+            "name": "cellular",
+            "printedName": "cellular",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SplunkNetworkMonitor.ConnectionType.Type) -> SplunkNetworkMonitor.ConnectionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionType",
+                    "printedName": "SplunkNetworkMonitor.ConnectionType",
+                    "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SplunkNetworkMonitor.ConnectionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionType",
+                        "printedName": "SplunkNetworkMonitor.ConnectionType",
+                        "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO8cellularyA2CmF",
+            "mangledName": "$s20SplunkNetworkMonitor14ConnectionTypeO8cellularyA2CmF",
+            "moduleName": "SplunkNetworkMonitor"
+          },
+          {
+            "kind": "Var",
+            "name": "wiredEthernet",
+            "printedName": "wiredEthernet",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SplunkNetworkMonitor.ConnectionType.Type) -> SplunkNetworkMonitor.ConnectionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionType",
+                    "printedName": "SplunkNetworkMonitor.ConnectionType",
+                    "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SplunkNetworkMonitor.ConnectionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionType",
+                        "printedName": "SplunkNetworkMonitor.ConnectionType",
+                        "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO13wiredEthernetyA2CmF",
+            "mangledName": "$s20SplunkNetworkMonitor14ConnectionTypeO13wiredEthernetyA2CmF",
+            "moduleName": "SplunkNetworkMonitor"
+          },
+          {
+            "kind": "Var",
+            "name": "vpn",
+            "printedName": "vpn",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SplunkNetworkMonitor.ConnectionType.Type) -> SplunkNetworkMonitor.ConnectionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionType",
+                    "printedName": "SplunkNetworkMonitor.ConnectionType",
+                    "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SplunkNetworkMonitor.ConnectionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionType",
+                        "printedName": "SplunkNetworkMonitor.ConnectionType",
+                        "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO3vpnyA2CmF",
+            "mangledName": "$s20SplunkNetworkMonitor14ConnectionTypeO3vpnyA2CmF",
+            "moduleName": "SplunkNetworkMonitor"
+          },
+          {
+            "kind": "Var",
+            "name": "other",
+            "printedName": "other",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SplunkNetworkMonitor.ConnectionType.Type) -> SplunkNetworkMonitor.ConnectionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionType",
+                    "printedName": "SplunkNetworkMonitor.ConnectionType",
+                    "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SplunkNetworkMonitor.ConnectionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionType",
+                        "printedName": "SplunkNetworkMonitor.ConnectionType",
+                        "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO5otheryA2CmF",
+            "mangledName": "$s20SplunkNetworkMonitor14ConnectionTypeO5otheryA2CmF",
+            "moduleName": "SplunkNetworkMonitor"
+          },
+          {
+            "kind": "Var",
+            "name": "unavailable",
+            "printedName": "unavailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SplunkNetworkMonitor.ConnectionType.Type) -> SplunkNetworkMonitor.ConnectionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionType",
+                    "printedName": "SplunkNetworkMonitor.ConnectionType",
+                    "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SplunkNetworkMonitor.ConnectionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionType",
+                        "printedName": "SplunkNetworkMonitor.ConnectionType",
+                        "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO11unavailableyA2CmF",
+            "mangledName": "$s20SplunkNetworkMonitor14ConnectionTypeO11unavailableyA2CmF",
+            "moduleName": "SplunkNetworkMonitor"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SplunkNetworkMonitor.ConnectionType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionType",
+                    "printedName": "SplunkNetworkMonitor.ConnectionType",
+                    "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s20SplunkNetworkMonitor14ConnectionTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "SplunkNetworkMonitor",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO8rawValueSSvp",
+            "mangledName": "$s20SplunkNetworkMonitor14ConnectionTypeO8rawValueSSvp",
+            "moduleName": "SplunkNetworkMonitor",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO8rawValueSSvg",
+                "mangledName": "$s20SplunkNetworkMonitor14ConnectionTypeO8rawValueSSvg",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO",
+        "mangledName": "$s20SplunkNetworkMonitor14ConnectionTypeO",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkMonitor",
+        "printedName": "NetworkMonitor",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sharedState",
+            "printedName": "sharedState",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnownedStorage",
+                "printedName": "(any SplunkCommon.AgentSharedState)?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SplunkNetworkMonitor0bC0C11sharedState0A6Common011AgentSharedE0_pSgvp",
+            "mangledName": "$s20SplunkNetworkMonitor0bC0C11sharedState0A6Common011AgentSharedE0_pSgvp",
+            "moduleName": "SplunkNetworkMonitor",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "ownership": 2,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any SplunkCommon.AgentSharedState)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AgentSharedState",
+                        "printedName": "any SplunkCommon.AgentSharedState",
+                        "usr": "s:12SplunkCommon16AgentSharedStateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC0C11sharedState0A6Common011AgentSharedE0_pSgvg",
+                "mangledName": "$s20SplunkNetworkMonitor0bC0C11sharedState0A6Common011AgentSharedE0_pSgvg",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any SplunkCommon.AgentSharedState)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AgentSharedState",
+                        "printedName": "any SplunkCommon.AgentSharedState",
+                        "usr": "s:12SplunkCommon16AgentSharedStateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC0C11sharedState0A6Common011AgentSharedE0_pSgvs",
+                "mangledName": "$s20SplunkNetworkMonitor0bC0C11sharedState0A6Common011AgentSharedE0_pSgvs",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC0C11sharedState0A6Common011AgentSharedE0_pSgvM",
+                "mangledName": "$s20SplunkNetworkMonitor0bC0C11sharedState0A6Common011AgentSharedE0_pSgvM",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkMonitor",
+                "printedName": "SplunkNetworkMonitor.NetworkMonitor",
+                "usr": "s:20SplunkNetworkMonitor0bC0C"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SplunkNetworkMonitor0bC0C6sharedACvpZ",
+            "mangledName": "$s20SplunkNetworkMonitor0bC0C6sharedACvpZ",
+            "moduleName": "SplunkNetworkMonitor",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkMonitor",
+                    "printedName": "SplunkNetworkMonitor.NetworkMonitor",
+                    "usr": "s:20SplunkNetworkMonitor0bC0C"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC0C6sharedACvgZ",
+                "mangledName": "$s20SplunkNetworkMonitor0bC0C6sharedACvgZ",
+                "moduleName": "SplunkNetworkMonitor",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "statusChangeHandler",
+            "printedName": "statusChangeHandler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Bool, SplunkNetworkMonitor.ConnectionType, Swift.String?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool, SplunkNetworkMonitor.ConnectionType, Swift.String?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.Bool, SplunkNetworkMonitor.ConnectionType, Swift.String?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConnectionType",
+                            "printedName": "SplunkNetworkMonitor.ConnectionType",
+                            "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20SplunkNetworkMonitor0bC0C19statusChangeHandlerySb_AA14ConnectionTypeOSSSgtcSgvp",
+            "mangledName": "$s20SplunkNetworkMonitor0bC0C19statusChangeHandlerySb_AA14ConnectionTypeOSSSgtcSgvp",
+            "moduleName": "SplunkNetworkMonitor",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Bool, SplunkNetworkMonitor.ConnectionType, Swift.String?) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Bool, SplunkNetworkMonitor.ConnectionType, Swift.String?) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.Bool, SplunkNetworkMonitor.ConnectionType, Swift.String?)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Bool",
+                                "printedName": "Swift.Bool",
+                                "usr": "s:Sb"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ConnectionType",
+                                "printedName": "SplunkNetworkMonitor.ConnectionType",
+                                "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "Swift.String?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "String",
+                                    "printedName": "Swift.String",
+                                    "usr": "s:SS"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC0C19statusChangeHandlerySb_AA14ConnectionTypeOSSSgtcSgvg",
+                "mangledName": "$s20SplunkNetworkMonitor0bC0C19statusChangeHandlerySb_AA14ConnectionTypeOSSSgtcSgvg",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Bool, SplunkNetworkMonitor.ConnectionType, Swift.String?) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Bool, SplunkNetworkMonitor.ConnectionType, Swift.String?) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.Bool, SplunkNetworkMonitor.ConnectionType, Swift.String?)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Bool",
+                                "printedName": "Swift.Bool",
+                                "usr": "s:Sb"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ConnectionType",
+                                "printedName": "SplunkNetworkMonitor.ConnectionType",
+                                "usr": "s:20SplunkNetworkMonitor14ConnectionTypeO"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "Swift.String?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "String",
+                                    "printedName": "Swift.String",
+                                    "usr": "s:SS"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC0C19statusChangeHandlerySb_AA14ConnectionTypeOSSSgtcSgvs",
+                "mangledName": "$s20SplunkNetworkMonitor0bC0C19statusChangeHandlerySb_AA14ConnectionTypeOSSSgtcSgvs",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20SplunkNetworkMonitor0bC0C19statusChangeHandlerySb_AA14ConnectionTypeOSSSgtcSgvM",
+                "mangledName": "$s20SplunkNetworkMonitor0bC0C19statusChangeHandlerySb_AA14ConnectionTypeOSSSgtcSgvM",
+                "moduleName": "SplunkNetworkMonitor",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkMonitor",
+                "printedName": "SplunkNetworkMonitor.NetworkMonitor",
+                "usr": "s:20SplunkNetworkMonitor0bC0C"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20SplunkNetworkMonitor0bC0CACycfc",
+            "mangledName": "$s20SplunkNetworkMonitor0bC0CACycfc",
+            "moduleName": "SplunkNetworkMonitor",
+            "declAttributes": [
+              "Required",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "startDetection",
+            "printedName": "startDetection()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SplunkNetworkMonitor0bC0C14startDetectionyyF",
+            "mangledName": "$s20SplunkNetworkMonitor0bC0C14startDetectionyyF",
+            "moduleName": "SplunkNetworkMonitor",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopDetection",
+            "printedName": "stopDetection()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SplunkNetworkMonitor0bC0C13stopDetectionyyF",
+            "mangledName": "$s20SplunkNetworkMonitor0bC0C13stopDetectionyyF",
+            "moduleName": "SplunkNetworkMonitor",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "install",
+            "printedName": "install(with:remoteConfiguration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SplunkCommon.ModuleConfiguration)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ModuleConfiguration",
+                    "printedName": "any SplunkCommon.ModuleConfiguration",
+                    "usr": "s:12SplunkCommon19ModuleConfigurationP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SplunkCommon.RemoteModuleConfiguration)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RemoteModuleConfiguration",
+                    "printedName": "any SplunkCommon.RemoteModuleConfiguration",
+                    "usr": "s:12SplunkCommon25RemoteModuleConfigurationP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SplunkNetworkMonitor0bC0C7install4with19remoteConfigurationy0A6Common06ModuleG0_pSg_AG06RemoteiG0_pSgtF",
+            "mangledName": "$s20SplunkNetworkMonitor0bC0C7install4with19remoteConfigurationy0A6Common06ModuleG0_pSg_AG06RemoteiG0_pSgtF",
+            "moduleName": "SplunkNetworkMonitor",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteData",
+            "printedName": "deleteData(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ModuleEventMetadata",
+                "printedName": "any SplunkCommon.ModuleEventMetadata",
+                "usr": "s:12SplunkCommon19ModuleEventMetadataP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SplunkNetworkMonitor0bC0C10deleteData3fory0A6Common19ModuleEventMetadata_p_tF",
+            "mangledName": "$s20SplunkNetworkMonitor0bC0C10deleteData3fory0A6Common19ModuleEventMetadata_p_tF",
+            "moduleName": "SplunkNetworkMonitor",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onPublish",
+            "printedName": "onPublish(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SplunkNetworkMonitor.NetworkMonitorMetadata, SplunkNetworkMonitor.NetworkMonitorData) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(SplunkNetworkMonitor.NetworkMonitorMetadata, SplunkNetworkMonitor.NetworkMonitorData)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkMonitorMetadata",
+                        "printedName": "SplunkNetworkMonitor.NetworkMonitorMetadata",
+                        "usr": "s:20SplunkNetworkMonitor0bC8MetadataV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkMonitorData",
+                        "printedName": "SplunkNetworkMonitor.NetworkMonitorData",
+                        "usr": "s:20SplunkNetworkMonitor0bC4DataV"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20SplunkNetworkMonitor0bC0C9onPublish4datayyAA0bC8MetadataV_AA0bC4DataVtc_tF",
+            "mangledName": "$s20SplunkNetworkMonitor0bC0C9onPublish4datayyAA0bC8MetadataV_AA0bC4DataVtc_tF",
+            "moduleName": "SplunkNetworkMonitor",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:20SplunkNetworkMonitor0bC0C",
+        "mangledName": "$s20SplunkNetworkMonitor0bC0C",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Module",
+            "printedName": "Module",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Configuration",
+                "printedName": "Configuration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkMonitorConfiguration",
+                    "printedName": "SplunkNetworkMonitor.NetworkMonitorConfiguration",
+                    "usr": "s:20SplunkNetworkMonitor0bC13ConfigurationV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "RemoteConfiguration",
+                "printedName": "RemoteConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkMonitorRemoteConfiguration",
+                    "printedName": "SplunkNetworkMonitor.NetworkMonitorRemoteConfiguration",
+                    "usr": "s:20SplunkNetworkMonitor0bC19RemoteConfigurationV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "EventMetadata",
+                "printedName": "EventMetadata",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkMonitorMetadata",
+                    "printedName": "SplunkNetworkMonitor.NetworkMonitorMetadata",
+                    "usr": "s:20SplunkNetworkMonitor0bC8MetadataV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "EventData",
+                "printedName": "EventData",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkMonitorData",
+                    "printedName": "SplunkNetworkMonitor.NetworkMonitorData",
+                    "usr": "s:20SplunkNetworkMonitor0bC4DataV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:12SplunkCommon6ModuleP",
+            "mangledName": "$s12SplunkCommon6ModuleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetworkMonitor",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/Destination\/DebugDestination.swift",
+      "kind": "StringLiteral",
+      "offset": 907,
+      "length": 16,
+      "value": "\"NetworkMonitor\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/Module\/NetworkMonitorConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 911,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitor.swift",
+      "kind": "StringLiteral",
+      "offset": 1088,
+      "length": 21,
+      "value": "\"NetworkMonitorQueue\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1324,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1505,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1612,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+      "kind": "StringLiteral",
+      "offset": 938,
+      "length": 16,
+      "value": "\"NetworkMonitor\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+      "kind": "StringLiteral",
+      "offset": 1040,
+      "length": 16,
+      "value": "\"network.change\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+      "kind": "StringLiteral",
+      "offset": 1190,
+      "length": 16,
+      "value": "\"network.status\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+      "kind": "StringLiteral",
+      "offset": 1358,
+      "length": 11,
+      "value": "\"available\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+      "kind": "StringLiteral",
+      "offset": 1475,
+      "length": 6,
+      "value": "\"lost\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetworkMonitor\/Sources\/SplunkNetworkMonitor\/NetworkMonitorSpanAttributes.swift",
+      "kind": "StringLiteral",
+      "offset": 1604,
+      "length": 4,
+      "value": "\"na\""
+    }
+  ]
+}

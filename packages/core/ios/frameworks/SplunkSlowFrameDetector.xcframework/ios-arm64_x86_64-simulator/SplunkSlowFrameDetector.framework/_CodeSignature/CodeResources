@@ -6,51 +6,51 @@
 	<dict>
 		<key>Headers/SplunkSlowFrameDetector-Swift.h</key>
 		<data>
-		c2VdAUoS0ox4STq3F7pRGirNEbg=
+		f63Of81rpxKbYmKKJiPSctVmoo8=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		mh5wTjnrQ2ysR1gFykzhWFmVZGY=
+		T5dxjEwJs0WNnPxKKlZHY+yr3lk=
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		hsd3Ie7dwdibDMBAPn9q0YsADKo=
+		4lcAtusnnnWGhPALEflUvJGEgP8=
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		D4FWoUVl8kXVbWMTH5PbqZoOd98=
+		3CG+8tP51bEqMXKbUDR0vbEEDRA=
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		PiqJgsd/WiGwBppC+bdgCDVGAyk=
+		+MF4ovXGi4ANyM47gx7eE9atJGI=
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		h4vncgXWkCSuvQ4SFaUjc535BDk=
+		zgSjm1rmxQbedZhYJo7/skRJ2mI=
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		WfWfw/nY1GxDvncQJrk2QT5uAI0=
+		uqFEjitcb9cHUM+wQmB6RGdoBRI=
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		hsd3Ie7dwdibDMBAPn9q0YsADKo=
+		4lcAtusnnnWGhPALEflUvJGEgP8=
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		6Cg7FaJxMOAj+dTubJfFYuQGRfQ=
+		TpTW6ZrtPM/dU43WQs8LgEHRxcQ=
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		12Rs9pdoUQO57yPmzlJ//m97k/U=
+		18rwkS6z8VimUCDIYahopsjrw1I=
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		NoHCqAIFOCO3OLkgutQ/Dg3Ipds=
+		gPDw9ouvWoyJ3HTvfQk34l+9Rps=
 		</data>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		folThbAgXvmXZye+WVpHAOE4Iv4=
+		rEW1u7UUAS6RWLlX7I4/BJzQZCc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,77 +63,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eRrCTWjxqOG3PBtdZczzcqzIrCjXCujehoRBGJJN2zo=
+			eveKIpLe2Ts1Aw2rWDyjB1KEZSlUFUV6HDwpLii2FCE=
 			</data>
 		</dict>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PajHWMl+UyP3LQFbr6+Wx2F99KuljxQiTDTZQELigBo=
+			w0jdPt3rH9iSCB6HFy0Ahi4+e3Govn830h50ILdNS+c=
 			</data>
 		</dict>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PfavW8U00xhaNqh8y3EfF4P56rNszUmmgZAvDNlCTXo=
+			EIu0aTcXyn61HTVTGEiPcFHtthFOMV4a8FpiniCAGZA=
 			</data>
 		</dict>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			owbnB1qO4cpMex8mkMVsdVNnPTMoayGP0AxUFbXAAo0=
+			CIqaxMrEnh1CqoNTWjL4fxgp7IOOHA0aZBLEunxjhO0=
 			</data>
 		</dict>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3thnVRzzWyxTzW8cO9tNyiMZUz4aER6MW2a+ZnyY4jw=
+			SgfMa63QyxDpiurmqZZ2PKSrrJtsEbAVtrVmfv0Nrn0=
 			</data>
 		</dict>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+4L+Us1IO1jW3Rr3xjE64HbFO8ml+xy364zEJoCXVLE=
+			2UlztDBaxUCvV70Q+U0iXHLtlHJ+yNw5bZT9wJAgHp4=
 			</data>
 		</dict>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PajHWMl+UyP3LQFbr6+Wx2F99KuljxQiTDTZQELigBo=
+			w0jdPt3rH9iSCB6HFy0Ahi4+e3Govn830h50ILdNS+c=
 			</data>
 		</dict>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			49DN/QCiH2hR76m5rDuuY+CAiJ2VTZFpjJQUl76VjWQ=
+			pimh8CaCOdZPg15j9BCOiEjVjz+8gO+/M76tVkRMSf8=
 			</data>
 		</dict>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zhVx2yqCaAL9QkRWJbQPrg6IcGqmyTGA8z323qFxL4I=
+			kUABJyM154FJt+PSTK+0P+zW47jOB2ZTzTkOxkLBxGk=
 			</data>
 		</dict>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8CK1LlBrfXd4snQMej9gCXWzSRkXpesH6nZ9nYxOeRY=
+			nfuT2ubYmZNDHhq3/j0MpOn1ADDd65fTLj5DyhYgWAs=
 			</data>
 		</dict>
 		<key>Modules/SplunkSlowFrameDetector.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kyuQNJrGC5qyveOdY6ZC8obwf0Qe5N5rUoxRea7yljw=
+			s3DJQiwTyszJZVWxsHAf1O3EeQgviCzV/0ogpjyd4KI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
