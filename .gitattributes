@@ -5,3 +5,7 @@
 # Prevent silent lockfile corruption during git merges.
 # Forces manual conflict resolution to ensure lockfile integrity.
 yarn.lock merge=binary linguist-generated
+example/Gemfile.lock merge=binary linguist-generated
+example/ios/Podfile.lock merge=binary linguist-generated
+**/gradle.lockfile merge=binary linguist-generated
+example/android/settings-gradle.lockfile merge=binary linguist-generated

@@ -1,23 +1,25 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
-# Debug logging
-echo "DEBUG: PR_AUTHOR='$PR_AUTHOR'"
-echo "DEBUG: PR_TITLE='$PR_TITLE'"
+# Keep untrusted PR metadata from injecting extra log lines.
+SAFE_PR_AUTHOR=${PR_AUTHOR//$'\r'/}
+SAFE_PR_AUTHOR=${SAFE_PR_AUTHOR//$'\n'/ }
+SAFE_PR_TITLE=${PR_TITLE//$'\r'/}
+SAFE_PR_TITLE=${SAFE_PR_TITLE//$'\n'/ }
 
 # List of authors to skip
 SKIP_AUTHORS=("renovate[bot]" "renovate-bot" "dependabot[bot]")
 
 for author in "${SKIP_AUTHORS[@]}"; do
   if [[ "$PR_AUTHOR" == "$author" ]]; then
-    echo "PR authored by $PR_AUTHOR, skipping validation."
+    printf 'PR authored by %s, skipping validation.\n' "$SAFE_PR_AUTHOR"
     exit 0
   fi
 done
 
-echo "Validating PR title: \"$PR_TITLE\""
+printf 'Validating PR title: "%s"\n' "$SAFE_PR_TITLE"
 
-REGEX='^\[?(WIP|wip)?\]?\s*(DEMRUM-[0-9]+(,\s?DEMRUM-[0-9]+)*|NO-TICKET):\s.+$'
+REGEX='^\[?(WIP|wip)?\]?[[:space:]]*(DEMRUM-[0-9]+(,[[:space:]]?DEMRUM-[0-9]+)*|NO-TICKET):[[:space:]].+$'
 
 if [[ "$PR_TITLE" =~ $REGEX ]]; then
   echo "✅ PR title is valid."

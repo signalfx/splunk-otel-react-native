@@ -1,21 +1,11 @@
 #!/bin/bash
-set -e
-
-# List of authors to skip
-SKIP_AUTHORS=()
-
-for author in "${SKIP_AUTHORS[@]}"; do
-  if [[ "$PR_AUTHOR" == "$author" ]]; then
-    echo "PR authored by $PR_AUTHOR, skipping validation."
-    exit 0
-  fi
-done
+set -euo pipefail
 
 # Get PR body from the environment variable set in the workflow
 body="$PR_BODY"
 
 # Extract "Generative AI usage" section
-gai_section=$(echo "$body" | awk '/### Generative AI usage/{flag=1;next}/###/{flag=0}flag')
+gai_section=$(printf '%s\n' "$body" | awk '/### Generative AI usage/{flag=1;next}/###/{flag=0}flag')
 
 # Check if section exists
 if [[ -z "$gai_section" ]]; then
@@ -24,7 +14,7 @@ if [[ -z "$gai_section" ]]; then
 fi
 
 # Count checked checkboxes
-checkboxes=$(echo "$gai_section" | grep -c '\- \[x\]')
+checkboxes=$(printf '%s\n' "$gai_section" | grep -c '\- \[x\]' || true)
 
 # Ensure exactly one checkbox is checked
 if [[ "$checkboxes" -ne 1 ]]; then
