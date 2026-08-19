@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* TBD
+
+## 1.2.0
+
 ### `@splunk/otel-react-native`
 
 #### Added
