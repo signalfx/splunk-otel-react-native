@@ -8,7 +8,7 @@ apply plugin: "com.splunk.rum-httpurlconnection-auto-plugin"
 // ByteBuddy version fix required for network interception to work properly
 configurations.matching { it.name.toLowerCase().contains("bytebuddyclasspath") }.all {
     resolutionStrategy {
-        force("net.bytebuddy:byte-buddy:1.14.12")
+        force("net.bytebuddy:byte-buddy:1.18.11")
     }
 }
 
