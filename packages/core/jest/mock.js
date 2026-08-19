@@ -84,7 +84,17 @@ const customTrackingMock = {
   startWorkflow: jest
     .fn()
     .mockResolvedValue({ end: jest.fn().mockResolvedValue(undefined) }),
+  trackError: jest.fn().mockResolvedValue(undefined),
 };
+
+// Mirrors the real `ErrorSource` enum so consumers can import it from the mock
+// and pass `{ source: ErrorSource.Custom }` without hitting `undefined`.
+const ErrorSourceMock = Object.freeze({
+  Custom: 'custom',
+  Console: 'console',
+  Source: 'source',
+  Network: 'network',
+});
 
 const navigationMock = {
   track: jest.fn().mockResolvedValue(undefined),
@@ -328,5 +338,6 @@ module.exports = {
     'networkInstrumentation'
   ),
   MutableAttributes: MutableAttributesMock,
+  ErrorSource: ErrorSourceMock,
   reactNavigationIntegration: reactNavigationIntegrationMock,
 };

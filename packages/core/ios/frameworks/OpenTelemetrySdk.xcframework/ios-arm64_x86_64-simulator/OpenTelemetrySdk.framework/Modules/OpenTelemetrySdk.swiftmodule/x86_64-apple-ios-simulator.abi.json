@@ -51982,1918 +51982,1918 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Common\/ComponentRegistry.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Common\/ComponentRegistry.swift",
       "kind": "Array",
       "offset": 500,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Common\/InstrumentationLibraryInfo.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Common\/InstrumentationLibraryInfo.swift",
       "kind": "StringLiteral",
       "offset": 375,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Internal\/Locks.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Internal\/Locks.swift",
       "kind": "IntegerLiteral",
       "offset": 1697,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Internal\/Locks.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Internal\/Locks.swift",
       "kind": "IntegerLiteral",
       "offset": 3700,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/Export\/InMemoryLogRecordExporter.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/Export\/InMemoryLogRecordExporter.swift",
       "kind": "BooleanLiteral",
       "offset": 248,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/LogLimits.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/LogLimits.swift",
       "kind": "IntegerLiteral",
       "offset": 177,
       "length": 3,
       "value": "128"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/LoggerBuilderSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/LoggerBuilderSdk.swift",
       "kind": "BooleanLiteral",
       "offset": 482,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/LoggerProviderBuilder.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/LoggerProviderBuilder.swift",
       "kind": "Array",
       "offset": 372,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/LoggerProviderSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/LoggerProviderSdk.swift",
       "kind": "Array",
       "offset": 490,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/LoggerSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/LoggerSdk.swift",
       "kind": "BooleanLiteral",
       "offset": 491,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/LoggerSharedState.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/LoggerSharedState.swift",
       "kind": "BooleanLiteral",
       "offset": 300,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/Processors\/BatchLogRecordProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/Processors\/BatchLogRecordProcessor.swift",
       "kind": "IntegerLiteral",
       "offset": 461,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/Processors\/BatchLogRecordProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/Processors\/BatchLogRecordProcessor.swift",
       "kind": "IntegerLiteral",
       "offset": 508,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/Processors\/BatchLogRecordProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/Processors\/BatchLogRecordProcessor.swift",
       "kind": "IntegerLiteral",
       "offset": 546,
       "length": 4,
       "value": "2048"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/Processors\/BatchLogRecordProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Logs\/Processors\/BatchLogRecordProcessor.swift",
       "kind": "IntegerLiteral",
       "offset": 592,
       "length": 3,
       "value": "512"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/Base2ExponentialHistogramAggregation.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/Base2ExponentialHistogramAggregation.swift",
       "kind": "IntegerLiteral",
       "offset": 234,
       "length": 3,
       "value": "160"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/Base2ExponentialHistogramAggregation.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/Base2ExponentialHistogramAggregation.swift",
       "kind": "IntegerLiteral",
       "offset": 277,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/DoubleLastValueAggregator.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/DoubleLastValueAggregator.swift",
       "kind": "IntegerLiteral",
       "offset": 1472,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/DoubleSumAggregator.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/DoubleSumAggregator.swift",
       "kind": "IntegerLiteral",
       "offset": 1669,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/DropAggregator.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/DropAggregator.swift",
       "kind": "IntegerLiteral",
       "offset": 243,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/DropAggregator.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/DropAggregator.swift",
       "kind": "IntegerLiteral",
       "offset": 261,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/ExplicitBucketHistogramAggregation.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/ExplicitBucketHistogramAggregation.swift",
       "kind": "Array",
       "offset": 255,
       "length": 70,
       "value": "[0, 5, 10, 25, 50, 75, 100, 250, 500, 750, 1000, 2500, 5000, 7500]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/LongLastValueAggregator.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/LongLastValueAggregator.swift",
       "kind": "IntegerLiteral",
       "offset": 1461,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/LongSumAggregator.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Aggregation\/LongSumAggregator.swift",
       "kind": "IntegerLiteral",
       "offset": 1643,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/Base2ExponentialHistogramIndexer.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/Base2ExponentialHistogramIndexer.swift",
       "kind": "IntegerLiteral",
       "offset": 1841,
       "length": 4,
       "value": "1023"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/Base2ExponentialHistogramIndexer.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/Base2ExponentialHistogramIndexer.swift",
       "kind": "IntegerLiteral",
       "offset": 1878,
       "length": 2,
       "value": "52"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/Base2ExponentialHistogramIndexer.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/Base2ExponentialHistogramIndexer.swift",
       "kind": "IntegerLiteral",
       "offset": 1910,
       "length": 2,
       "value": "11"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/Base2ExponentialHistogramIndexer.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/Base2ExponentialHistogramIndexer.swift",
       "kind": "FloatLiteral",
       "offset": 1960,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/Base2ExponentialHistogramIndexer.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/Base2ExponentialHistogramIndexer.swift",
       "kind": "IntegerLiteral",
       "offset": 1970,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/EmptyExponentialHistogramBuckets.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/EmptyExponentialHistogramBuckets.swift",
       "kind": "IntegerLiteral",
       "offset": 232,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/EmptyExponentialHistogramBuckets.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/EmptyExponentialHistogramBuckets.swift",
       "kind": "Array",
       "offset": 271,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/EmptyExponentialHistogramBuckets.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/Internal\/EmptyExponentialHistogramBuckets.swift",
       "kind": "IntegerLiteral",
       "offset": 305,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/MetricData.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/MetricData.swift",
       "kind": "StringLiteral",
       "offset": 954,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/MetricData.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/MetricData.swift",
       "kind": "StringLiteral",
       "offset": 975,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/MetricData.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/MetricData.swift",
       "kind": "StringLiteral",
       "offset": 989,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/MetricData.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Data\/MetricData.swift",
       "kind": "BooleanLiteral",
       "offset": 1030,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/DoubleHistogramMeterBuilderSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/DoubleHistogramMeterBuilderSdk.swift",
       "kind": "StringLiteral",
       "offset": 369,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/DoubleHistogramMeterBuilderSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/DoubleHistogramMeterBuilderSdk.swift",
       "kind": "StringLiteral",
       "offset": 395,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exemplar\/ExemplarReservoir.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exemplar\/ExemplarReservoir.swift",
       "kind": "BooleanLiteral",
       "offset": 1461,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exemplar\/ExemplarReservoir.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exemplar\/ExemplarReservoir.swift",
       "kind": "IntegerLiteral",
       "offset": 4023,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exemplar\/ReservoirCell.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exemplar\/ReservoirCell.swift",
       "kind": "Dictionary",
       "offset": 251,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exemplar\/ReservoirCell.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exemplar\/ReservoirCell.swift",
       "kind": "IntegerLiteral",
       "offset": 315,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exemplar\/ReservoirCell.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exemplar\/ReservoirCell.swift",
       "kind": "IntegerLiteral",
       "offset": 346,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exemplar\/ReservoirCell.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exemplar\/ReservoirCell.swift",
       "kind": "IntegerLiteral",
       "offset": 371,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exporter\/PeriodicMeterReaderBuilder.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exporter\/PeriodicMeterReaderBuilder.swift",
       "kind": "FloatLiteral",
       "offset": 406,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exporter\/PeriodicMetricReaderSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exporter\/PeriodicMetricReaderSdk.swift",
       "kind": "StringLiteral",
       "offset": 427,
       "length": 63,
       "value": "\"org.opentelemetry.StablePeriodicMetricReaderSdk.scheduleQueue\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exporter\/PeriodicMetricReaderSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/Exporter\/PeriodicMetricReaderSdk.swift",
       "kind": "FloatLiteral",
       "offset": 695,
       "length": 4,
       "value": "60.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/InstrumentSelectorBuilder.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/InstrumentSelectorBuilder.swift",
       "kind": "StringLiteral",
       "offset": 214,
       "length": 4,
       "value": "\".*\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/MeterProviderSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/MeterProviderSdk.swift",
       "kind": "StringLiteral",
       "offset": 374,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/RegisteredReader.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/RegisteredReader.swift",
       "kind": "IntegerLiteral",
       "offset": 300,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/RegisteredReader.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/RegisteredReader.swift",
       "kind": "IntegerLiteral",
       "offset": 525,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/State\/EmptyMetricStorage.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/State\/EmptyMetricStorage.swift",
       "kind": "StringLiteral",
       "offset": 508,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/State\/EmptyMetricStorage.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/State\/EmptyMetricStorage.swift",
       "kind": "StringLiteral",
       "offset": 525,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/State\/EmptyMetricStorage.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/State\/EmptyMetricStorage.swift",
       "kind": "StringLiteral",
       "offset": 535,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/State\/MetricStorage.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/State\/MetricStorage.swift",
       "kind": "IntegerLiteral",
       "offset": 196,
       "length": 5,
       "value": "2000"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/State\/ObservableMeasurement.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/State\/ObservableMeasurement.swift",
       "kind": "IntegerLiteral",
       "offset": 621,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/State\/ObservableMeasurement.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/State\/ObservableMeasurement.swift",
       "kind": "IntegerLiteral",
       "offset": 650,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/State\/SynchronousMetricStorage.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Metrics\/State\/SynchronousMetricStorage.swift",
       "kind": "StringLiteral",
       "offset": 753,
       "length": 67,
       "value": "\"org.opentelemetry.SynchronousMetricStorage.aggregatorHandlesQueue\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/EnvVarResource.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/EnvVarResource.swift",
       "kind": "StringLiteral",
       "offset": 324,
       "length": 26,
       "value": "\"OTEL_RESOURCE_ATTRIBUTES\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/EnvVarResource.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/EnvVarResource.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 3,
       "value": "\",\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/EnvVarResource.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/EnvVarResource.swift",
       "kind": "StringLiteral",
       "offset": 462,
       "length": 3,
       "value": "\"=\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/Resource.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/Resource.swift",
       "kind": "IntegerLiteral",
       "offset": 364,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 760,
       "length": 16,
       "value": "\"browser.brands\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 1809,
       "length": 18,
       "value": "\"browser.platform\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 2196,
       "length": 16,
       "value": "\"browser.mobile\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 2632,
       "length": 18,
       "value": "\"browser.language\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 3231,
       "length": 21,
       "value": "\"user_agent.original\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 3459,
       "length": 16,
       "value": "\"cloud.provider\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 3737,
       "length": 18,
       "value": "\"cloud.account.id\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 4487,
       "length": 14,
       "value": "\"cloud.region\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 6715,
       "length": 19,
       "value": "\"cloud.resource_id\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 7158,
       "length": 25,
       "value": "\"cloud.availability_zone\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 7479,
       "length": 16,
       "value": "\"cloud.platform\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 7878,
       "length": 23,
       "value": "\"aws.ecs.container.arn\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 8213,
       "length": 21,
       "value": "\"aws.ecs.cluster.arn\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 8536,
       "length": 20,
       "value": "\"aws.ecs.launchtype\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 8901,
       "length": 18,
       "value": "\"aws.ecs.task.arn\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 9158,
       "length": 21,
       "value": "\"aws.ecs.task.family\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 9420,
       "length": 23,
       "value": "\"aws.ecs.task.revision\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 9678,
       "length": 21,
       "value": "\"aws.eks.cluster.arn\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 10177,
       "length": 21,
       "value": "\"aws.log.group.names\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 10635,
       "length": 20,
       "value": "\"aws.log.group.arns\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 10921,
       "length": 22,
       "value": "\"aws.log.stream.names\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 11534,
       "length": 21,
       "value": "\"aws.log.stream.arns\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 12046,
       "length": 29,
       "value": "\"gcp.cloud_run.job.execution\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 12451,
       "length": 30,
       "value": "\"gcp.cloud_run.job.task_index\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 13031,
       "length": 23,
       "value": "\"gcp.gce.instance.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 13490,
       "length": 27,
       "value": "\"gcp.gce.instance.hostname\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 13759,
       "length": 35,
       "value": "\"heroku.release.creation_timestamp\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 14029,
       "length": 23,
       "value": "\"heroku.release.commit\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 14272,
       "length": 15,
       "value": "\"heroku.app.id\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 14500,
       "length": 16,
       "value": "\"container.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 14859,
       "length": 14,
       "value": "\"container.id\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 15170,
       "length": 19,
       "value": "\"container.runtime\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 15423,
       "length": 22,
       "value": "\"container.image.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 15626,
       "length": 21,
       "value": "\"container.image.tag\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 16444,
       "length": 20,
       "value": "\"container.image.id\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 16820,
       "length": 19,
       "value": "\"container.command\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 17130,
       "length": 24,
       "value": "\"container.command_line\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 17445,
       "length": 24,
       "value": "\"container.command_args\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 17808,
       "length": 24,
       "value": "\"deployment.environment\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 18873,
       "length": 11,
       "value": "\"device.id\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 19312,
       "length": 25,
       "value": "\"device.model.identifier\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 19739,
       "length": 19,
       "value": "\"device.model.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 20181,
       "length": 21,
       "value": "\"device.manufacturer\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 21454,
       "length": 11,
       "value": "\"faas.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 22383,
       "length": 14,
       "value": "\"faas.version\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 22793,
       "length": 15,
       "value": "\"faas.instance\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 23323,
       "length": 17,
       "value": "\"faas.max_memory\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 23759,
       "length": 9,
       "value": "\"host.id\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 24082,
       "length": 11,
       "value": "\"host.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 24301,
       "length": 11,
       "value": "\"host.type\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 24528,
       "length": 11,
       "value": "\"host.arch\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 24846,
       "length": 17,
       "value": "\"host.image.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 25106,
       "length": 15,
       "value": "\"host.image.id\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 25391,
       "length": 20,
       "value": "\"host.image.version\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 25608,
       "length": 18,
       "value": "\"k8s.cluster.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 27096,
       "length": 17,
       "value": "\"k8s.cluster.uid\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 27286,
       "length": 15,
       "value": "\"k8s.node.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 27501,
       "length": 14,
       "value": "\"k8s.node.uid\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 27731,
       "length": 20,
       "value": "\"k8s.namespace.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 27948,
       "length": 13,
       "value": "\"k8s.pod.uid\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 28151,
       "length": 14,
       "value": "\"k8s.pod.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 28486,
       "length": 20,
       "value": "\"k8s.container.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 28863,
       "length": 29,
       "value": "\"k8s.container.restart_count\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 29110,
       "length": 20,
       "value": "\"k8s.replicaset.uid\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 29328,
       "length": 21,
       "value": "\"k8s.replicaset.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 29567,
       "length": 20,
       "value": "\"k8s.deployment.uid\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 29785,
       "length": 21,
       "value": "\"k8s.deployment.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 30027,
       "length": 21,
       "value": "\"k8s.statefulset.uid\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 30249,
       "length": 22,
       "value": "\"k8s.statefulset.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 30486,
       "length": 19,
       "value": "\"k8s.daemonset.uid\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 30700,
       "length": 20,
       "value": "\"k8s.daemonset.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 30917,
       "length": 13,
       "value": "\"k8s.job.uid\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 31107,
       "length": 14,
       "value": "\"k8s.job.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 31330,
       "length": 17,
       "value": "\"k8s.cronjob.uid\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 31536,
       "length": 18,
       "value": "\"k8s.cronjob.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 31739,
       "length": 9,
       "value": "\"os.type\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 32117,
       "length": 16,
       "value": "\"os.description\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 32378,
       "length": 9,
       "value": "\"os.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 32696,
       "length": 12,
       "value": "\"os.version\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 32872,
       "length": 13,
       "value": "\"process.pid\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 33067,
       "length": 20,
       "value": "\"process.parent_pid\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 33439,
       "length": 25,
       "value": "\"process.executable.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 33828,
       "length": 25,
       "value": "\"process.executable.path\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 34240,
       "length": 17,
       "value": "\"process.command\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 34720,
       "length": 22,
       "value": "\"process.command_line\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 35309,
       "length": 22,
       "value": "\"process.command_args\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 35530,
       "length": 15,
       "value": "\"process.owner\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 35843,
       "length": 22,
       "value": "\"process.runtime.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 36129,
       "length": 25,
       "value": "\"process.runtime.version\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 36505,
       "length": 29,
       "value": "\"process.runtime.description\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 37060,
       "length": 14,
       "value": "\"service.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 37380,
       "length": 17,
       "value": "\"service.version\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 38106,
       "length": 19,
       "value": "\"service.namespace\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 39264,
       "length": 21,
       "value": "\"service.instance.id\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 40050,
       "length": 20,
       "value": "\"telemetry.sdk.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 40305,
       "length": 24,
       "value": "\"telemetry.sdk.language\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 40536,
       "length": 23,
       "value": "\"telemetry.sdk.version\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 40790,
       "length": 24,
       "value": "\"telemetry.auto.version\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 40998,
       "length": 16,
       "value": "\"webengine.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 41206,
       "length": 19,
       "value": "\"webengine.version\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 41545,
       "length": 23,
       "value": "\"webengine.description\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 41828,
       "length": 17,
       "value": "\"otel.scope.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 42090,
       "length": 20,
       "value": "\"otel.scope.version\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 42344,
       "length": 19,
       "value": "\"otel.library.name\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 42579,
       "length": 22,
       "value": "\"otel.library.version\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 42839,
       "length": 15,
       "value": "\"alibaba_cloud\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 42946,
       "length": 5,
       "value": "\"aws\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 43041,
       "length": 7,
       "value": "\"azure\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 43142,
       "length": 5,
       "value": "\"gcp\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 43251,
       "length": 8,
       "value": "\"heroku\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 43346,
       "length": 11,
       "value": "\"ibm_cloud\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 43452,
       "length": 15,
       "value": "\"tencent_cloud\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 43896,
       "length": 19,
       "value": "\"alibaba_cloud_ecs\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 44029,
       "length": 18,
       "value": "\"alibaba_cloud_fc\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 44179,
       "length": 25,
       "value": "\"alibaba_cloud_openshift\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 44305,
       "length": 9,
       "value": "\"aws_ec2\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 44419,
       "length": 9,
       "value": "\"aws_ecs\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 44534,
       "length": 9,
       "value": "\"aws_eks\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 44632,
       "length": 12,
       "value": "\"aws_lambda\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 44761,
       "length": 23,
       "value": "\"aws_elastic_beanstalk\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 44880,
       "length": 16,
       "value": "\"aws_app_runner\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 45009,
       "length": 15,
       "value": "\"aws_openshift\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 45123,
       "length": 10,
       "value": "\"azure_vm\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 45258,
       "length": 27,
       "value": "\"azure_container_instances\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 45387,
       "length": 11,
       "value": "\"azure_aks\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 45497,
       "length": 17,
       "value": "\"azure_functions\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 45616,
       "length": 19,
       "value": "\"azure_app_service\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 45742,
       "length": 17,
       "value": "\"azure_openshift\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 45888,
       "length": 25,
       "value": "\"gcp_bare_metal_solution\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 46039,
       "length": 20,
       "value": "\"gcp_compute_engine\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 46156,
       "length": 15,
       "value": "\"gcp_cloud_run\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 46303,
       "length": 23,
       "value": "\"gcp_kubernetes_engine\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 46448,
       "length": 21,
       "value": "\"gcp_cloud_functions\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 46580,
       "length": 16,
       "value": "\"gcp_app_engine\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 46711,
       "length": 15,
       "value": "\"gcp_openshift\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 46850,
       "length": 21,
       "value": "\"ibm_cloud_openshift\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 46997,
       "length": 19,
       "value": "\"tencent_cloud_cvm\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 47147,
       "length": 19,
       "value": "\"tencent_cloud_eks\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 47296,
       "length": 19,
       "value": "\"tencent_cloud_scf\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 48019,
       "length": 7,
       "value": "\"amd64\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 48101,
       "length": 7,
       "value": "\"arm32\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 48183,
       "length": 7,
       "value": "\"arm64\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 48266,
       "length": 6,
       "value": "\"ia64\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 48356,
       "length": 7,
       "value": "\"ppc32\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 48447,
       "length": 7,
       "value": "\"ppc64\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 48542,
       "length": 7,
       "value": "\"s390x\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 48627,
       "length": 5,
       "value": "\"x86\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 49012,
       "length": 9,
       "value": "\"windows\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 49094,
       "length": 7,
       "value": "\"linux\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 49182,
       "length": 8,
       "value": "\"darwin\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 49267,
       "length": 9,
       "value": "\"freebsd\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 49351,
       "length": 8,
       "value": "\"netbsd\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 49436,
       "length": 9,
       "value": "\"openbsd\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 49533,
       "length": 14,
       "value": "\"dragonflybsd\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 49642,
       "length": 6,
       "value": "\"hpux\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 49750,
       "length": 5,
       "value": "\"aix\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 49846,
       "length": 9,
       "value": "\"solaris\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 49929,
       "length": 6,
       "value": "\"z_os\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 50347,
       "length": 5,
       "value": "\"cpp\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 50441,
       "length": 8,
       "value": "\"dotnet\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 50538,
       "length": 8,
       "value": "\"erlang\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 50627,
       "length": 4,
       "value": "\"go\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 50716,
       "length": 6,
       "value": "\"java\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 50811,
       "length": 8,
       "value": "\"nodejs\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 50902,
       "length": 5,
       "value": "\"php\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 50996,
       "length": 8,
       "value": "\"python\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 51089,
       "length": 6,
       "value": "\"ruby\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 51180,
       "length": 6,
       "value": "\"rust\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 51273,
       "length": 7,
       "value": "\"swift\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Resources\/ResourceAttributes.swift",
       "kind": "StringLiteral",
       "offset": 51367,
       "length": 7,
       "value": "\"webjs\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/AttributesDictionary.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/AttributesDictionary.swift",
       "kind": "IntegerLiteral",
       "offset": 3796,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Data\/SpanData.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Data\/SpanData.swift",
       "kind": "BooleanLiteral",
       "offset": 1764,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Data\/SpanData.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Data\/SpanData.swift",
       "kind": "BooleanLiteral",
       "offset": 1875,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Data\/SpanData.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Data\/SpanData.swift",
       "kind": "IntegerLiteral",
       "offset": 2225,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Data\/SpanData.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Data\/SpanData.swift",
       "kind": "IntegerLiteral",
       "offset": 2549,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Data\/SpanData.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Data\/SpanData.swift",
       "kind": "IntegerLiteral",
       "offset": 2888,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Propagation\/EnvironmentContextPropagator.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Propagation\/EnvironmentContextPropagator.swift",
       "kind": "StringLiteral",
       "offset": 327,
       "length": 13,
       "value": "\"TRACEPARENT\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Propagation\/EnvironmentContextPropagator.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Propagation\/EnvironmentContextPropagator.swift",
       "kind": "StringLiteral",
       "offset": 367,
       "length": 12,
       "value": "\"TRACESTATE\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Samplers\/Samplers.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Samplers\/Samplers.swift",
       "kind": "BooleanLiteral",
       "offset": 1779,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Samplers\/Samplers.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/Samplers\/Samplers.swift",
       "kind": "BooleanLiteral",
       "offset": 1853,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanBuilderSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanBuilderSdk.swift",
       "kind": "BooleanLiteral",
       "offset": 413,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanBuilderSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanBuilderSdk.swift",
       "kind": "BooleanLiteral",
       "offset": 487,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanBuilderSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanBuilderSdk.swift",
       "kind": "IntegerLiteral",
       "offset": 924,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanBuilderSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanBuilderSdk.swift",
       "kind": "BooleanLiteral",
       "offset": 1015,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanLimits.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanLimits.swift",
       "kind": "IntegerLiteral",
       "offset": 446,
       "length": 3,
       "value": "128"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanLimits.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanLimits.swift",
       "kind": "IntegerLiteral",
       "offset": 556,
       "length": 3,
       "value": "128"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanLimits.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanLimits.swift",
       "kind": "IntegerLiteral",
       "offset": 670,
       "length": 3,
       "value": "128"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanLimits.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanLimits.swift",
       "kind": "IntegerLiteral",
       "offset": 796,
       "length": 3,
       "value": "128"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanLimits.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanLimits.swift",
       "kind": "IntegerLiteral",
       "offset": 920,
       "length": 3,
       "value": "128"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
       "kind": "StringLiteral",
       "offset": 877,
       "length": 15,
       "value": "\"processorType\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
       "kind": "StringLiteral",
       "offset": 957,
       "length": 9,
       "value": "\"dropped\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
       "kind": "IntegerLiteral",
       "offset": 1448,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
       "kind": "IntegerLiteral",
       "offset": 1495,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
       "kind": "IntegerLiteral",
       "offset": 1533,
       "length": 4,
       "value": "2048"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
       "kind": "IntegerLiteral",
       "offset": 1579,
       "length": 3,
       "value": "512"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
       "kind": "BooleanLiteral",
       "offset": 2930,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/BatchSpanProcessor.swift",
       "kind": "BooleanLiteral",
       "offset": 2965,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/NoopSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/NoopSpanProcessor.swift",
       "kind": "BooleanLiteral",
       "offset": 208,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/NoopSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/NoopSpanProcessor.swift",
       "kind": "BooleanLiteral",
       "offset": 236,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/SimpleSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/SimpleSpanProcessor.swift",
       "kind": "BooleanLiteral",
       "offset": 477,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/SimpleSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/SimpleSpanProcessor.swift",
       "kind": "StringLiteral",
       "offset": 534,
       "length": 38,
       "value": "\"io.opentelemetry.simplespanprocessor\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/SimpleSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/SimpleSpanProcessor.swift",
       "kind": "BooleanLiteral",
       "offset": 606,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/SimpleSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanProcessors\/SimpleSpanProcessor.swift",
       "kind": "BooleanLiteral",
       "offset": 641,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanSdk.swift",
       "kind": "BooleanLiteral",
       "offset": 414,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanSdk.swift",
       "kind": "BooleanLiteral",
       "offset": 1240,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanSdk.swift",
       "kind": "IntegerLiteral",
       "offset": 3147,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/SpanSdk.swift",
       "kind": "IntegerLiteral",
       "offset": 3230,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/TracerProviderBuilder.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/TracerProviderBuilder.swift",
       "kind": "Array",
       "offset": 559,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/TracerProviderSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/TracerProviderSdk.swift",
       "kind": "StringLiteral",
       "offset": 361,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/TracerProviderSdk.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/TracerProviderSdk.swift",
       "kind": "Array",
       "offset": 800,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/TracerSharedState.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Trace\/TracerSharedState.swift",
       "kind": "BooleanLiteral",
       "offset": 449,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Version.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/Tools\/xcframework\/otel\/vendor\/opentelemetry-swift-core\/Sources\/OpenTelemetrySdk\/Version.swift",
       "kind": "StringLiteral",
       "offset": 178,
       "length": 7,

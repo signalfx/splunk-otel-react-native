@@ -6,51 +6,51 @@
 	<dict>
 		<key>Headers/CiscoInstanceManager-Swift.h</key>
 		<data>
-		LwyyfZrCGNYn5yqc6L1752mGiq0=
+		JBX1YqSO7I6FyG3JWIbMJsk03gs=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		skqk1ntzBdYIxyEgloteXSLHRS0=
+		HiNsaiQUsr07To4JnU9XjG4Yuvs=
 		</data>
 		<key>Modules/CiscoInstanceManager.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		HuvufMkoTiFSX7ATrqvuremfx7A=
+		ZVJR/0bVxQp4JEbyxLGNDPOmags=
 		</data>
 		<key>Modules/CiscoInstanceManager.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		C7oR02nyKH5BRv3vQdjllGpLB1Q=
+		1Gt8sZm/6jWBYK7lwY2o8OseK58=
 		</data>
 		<key>Modules/CiscoInstanceManager.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		B60ccBqOgo34hdyPpCVO4TB6dmo=
+		BlRUDvebjJE8UqhBGCGj0XvlFYM=
 		</data>
 		<key>Modules/CiscoInstanceManager.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		C7oR02nyKH5BRv3vQdjllGpLB1Q=
+		1Gt8sZm/6jWBYK7lwY2o8OseK58=
 		</data>
 		<key>Modules/CiscoInstanceManager.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zKcXn+91VQx6CZJOSOdGPWpnkY4=
+		amcgfz37xKg11KwT6WL8XKgwmgA=
 		</data>
 		<key>Modules/CiscoInstanceManager.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		HuvufMkoTiFSX7ATrqvuremfx7A=
+		ZVJR/0bVxQp4JEbyxLGNDPOmags=
 		</data>
 		<key>Modules/CiscoInstanceManager.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		WftGRJyWK8KRzLmEvr75AuB4NB4=
+		K+pJoKMaQeSXs39GCOwNtm4ULio=
 		</data>
 		<key>Modules/CiscoInstanceManager.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		IdndAXQ0on9AEY46LpKVrDprjXU=
+		+H+uPTc+Xh6kQNrvIzz+fwufP2M=
 		</data>
 		<key>Modules/CiscoInstanceManager.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		WftGRJyWK8KRzLmEvr75AuB4NB4=
+		K+pJoKMaQeSXs39GCOwNtm4ULio=
 		</data>
 		<key>Modules/CiscoInstanceManager.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		tt+cIZ4otK1qHyXwi1Ogy+FmK2g=
+		H0xcQQfgcapZc+5K+AZBYxU8g8o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,77 +63,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sR1WMtXFgrOQH7vIIHlVuMIc1s9+9Tr0Hhe46GW4Als=
+			5UXonx6EmTJ+3RXiiyEeY+X9TrS3LoovJDTSrYbInYM=
 			</data>
 		</dict>
 		<key>Modules/CiscoInstanceManager.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fu3xyVr5pdTD0tGvMdyEMKFX8yBfYX2u0wzT228nhHI=
+			Q4yfcp+y87UqawwGMYw1y9oNoN89n0eATrNTBsHQfP0=
 			</data>
 		</dict>
 		<key>Modules/CiscoInstanceManager.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xoaRkqQVtcZ1rP10oK0aZ2+ET/Z0lLv7sNufcX6wOQY=
+			tVjl1czQTVzEsuyQkM+QeY6yMDCp3mxHnAVQjYmpQJQ=
 			</data>
 		</dict>
 		<key>Modules/CiscoInstanceManager.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QXFaqn8DMD8EhGkem+b9u1Rh0Of/3HKnzLgUNAapn+4=
+			RpQcPTjg7F36qZF8cLS88hLdApo/6SkySjwlPfFOVo8=
 			</data>
 		</dict>
 		<key>Modules/CiscoInstanceManager.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xoaRkqQVtcZ1rP10oK0aZ2+ET/Z0lLv7sNufcX6wOQY=
+			tVjl1czQTVzEsuyQkM+QeY6yMDCp3mxHnAVQjYmpQJQ=
 			</data>
 		</dict>
 		<key>Modules/CiscoInstanceManager.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NbcqPIff/xTiKymQKquRg/mrbnIAGz8GBj8JKoTWu2k=
+			f4Luf+2TTA4eG1i4sylJZmoLJJxo/IsJ+NNnHWBQqWY=
 			</data>
 		</dict>
 		<key>Modules/CiscoInstanceManager.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fu3xyVr5pdTD0tGvMdyEMKFX8yBfYX2u0wzT228nhHI=
+			Q4yfcp+y87UqawwGMYw1y9oNoN89n0eATrNTBsHQfP0=
 			</data>
 		</dict>
 		<key>Modules/CiscoInstanceManager.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8ZPab3zVjoGIfWdZ8YIeUaXWAWoIC0vn1IWVl2foaXY=
+			gMuuYkMVhptXEQH73UzYcsH2wl3DGd//PinTUn6GU7M=
 			</data>
 		</dict>
 		<key>Modules/CiscoInstanceManager.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7Ev/D6MtzvcL5zpXHkgto+RnH7cm/z6zyACOi9VxQQA=
+			zokq6SI6iWZa45WWIbhLD6xPZ4QtVB2jTRgqyQqG1CU=
 			</data>
 		</dict>
 		<key>Modules/CiscoInstanceManager.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8ZPab3zVjoGIfWdZ8YIeUaXWAWoIC0vn1IWVl2foaXY=
+			gMuuYkMVhptXEQH73UzYcsH2wl3DGd//PinTUn6GU7M=
 			</data>
 		</dict>
 		<key>Modules/CiscoInstanceManager.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QIjgODHrNSOZKRro2qsQDTYxWB+TeYVqb2yAuFzNVdI=
+			mtOvf5cPuGCkpzbWn1Ou3f5N6mirdvd6FbADodXCArU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

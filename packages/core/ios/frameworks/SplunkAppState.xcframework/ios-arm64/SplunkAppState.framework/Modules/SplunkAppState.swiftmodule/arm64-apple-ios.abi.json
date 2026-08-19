@@ -934,14 +934,14 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAppState\/Sources\/SplunkAppState\/AppStateModule.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAppState\/Sources\/SplunkAppState\/AppStateModule.swift",
       "kind": "Array",
       "offset": 816,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAppState\/Sources\/SplunkAppState\/Module\/AppStateRemoteConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAppState\/Sources\/SplunkAppState\/Module\/AppStateRemoteConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 775,
       "length": 4,

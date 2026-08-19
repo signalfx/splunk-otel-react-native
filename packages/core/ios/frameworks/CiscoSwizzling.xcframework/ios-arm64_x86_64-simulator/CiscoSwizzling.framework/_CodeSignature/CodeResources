@@ -6,51 +6,51 @@
 	<dict>
 		<key>Headers/CiscoSwizzling-Swift.h</key>
 		<data>
-		Jl8MA9puMfpMqFfoC5cfc6zG7Cs=
+		LRP+dfIANuAQUEF/bsOIrbTg0Gg=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OrgmC8kANguzcqD5n5HjpvocRkM=
+		0VrxI3UFWSg3G4VL8DKv/ukRGSM=
 		</data>
 		<key>Modules/CiscoSwizzling.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		BCEGckWug23JrGEkHyRTNxu3EUQ=
+		fQ/f9Lonk26k2zaWyKSwOVEmp1A=
 		</data>
 		<key>Modules/CiscoSwizzling.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		1T2bwKswKfAYNH+iU2ncUxxmOyg=
+		c+f6Jccf4TWz3VyVWlO5FenuVSk=
 		</data>
 		<key>Modules/CiscoSwizzling.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		dCQKJAwYFqAALthNfXzCzIh6IF8=
+		iL+0Q00ALJ07mtwoa8QgVGIwHDs=
 		</data>
 		<key>Modules/CiscoSwizzling.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		1T2bwKswKfAYNH+iU2ncUxxmOyg=
+		c+f6Jccf4TWz3VyVWlO5FenuVSk=
 		</data>
 		<key>Modules/CiscoSwizzling.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		dl8YCU2BwZhKq8jBZUxhJDaSODY=
+		XFG/MGLQGJ5ZpNDn4UtkTAUlq2E=
 		</data>
 		<key>Modules/CiscoSwizzling.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		BCEGckWug23JrGEkHyRTNxu3EUQ=
+		fQ/f9Lonk26k2zaWyKSwOVEmp1A=
 		</data>
 		<key>Modules/CiscoSwizzling.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		nEpV3ahY3A9YmPfBYYXERIwTgCE=
+		E8VzjzgX6LuaQ8SK2vPIUYJzno0=
 		</data>
 		<key>Modules/CiscoSwizzling.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Dyze0yIpGJBC7XhTZrNwyFSIkaE=
+		EI9bX3QrK9btRrR96at1Abxe5bs=
 		</data>
 		<key>Modules/CiscoSwizzling.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		nEpV3ahY3A9YmPfBYYXERIwTgCE=
+		E8VzjzgX6LuaQ8SK2vPIUYJzno0=
 		</data>
 		<key>Modules/CiscoSwizzling.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0Qdza6trdcHh22UeztSBFy4xFag=
+		a7HFb2BeZzG7uKdYPsO5dSYWTW0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,77 +67,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nIFc9UzaM2tZlCpAfg4816VuVIUpiNlOixc/S7vqhPk=
+			PbNKv8yPGorn6ZlyzViEzeNghzGa2O9z2cD5WKMZmvU=
 			</data>
 		</dict>
 		<key>Modules/CiscoSwizzling.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JR6I+1IgVPyPbytkGg+bNKb82iBKmDBkc7wCKHtOJRs=
+			JaTn6s5yNjvIu2Ap7UktkpfT9dMH2djy8XGSSy1QJ3k=
 			</data>
 		</dict>
 		<key>Modules/CiscoSwizzling.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PA9qQu7whdtHq8GwWbSaELZlEp3jZmoxADvHBItmp0s=
+			dAeYooC8opU6MfXsseMcg9rEYxt27xjt3AsiMaJZ6QM=
 			</data>
 		</dict>
 		<key>Modules/CiscoSwizzling.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dAddmjTyDSCTzVgm42xGcziEHTybA7KvBkM/dnj5oGo=
+			QZo7/JCPx8yJURLf6MjC5wuv1bhfiBY+6763ey9hPKo=
 			</data>
 		</dict>
 		<key>Modules/CiscoSwizzling.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PA9qQu7whdtHq8GwWbSaELZlEp3jZmoxADvHBItmp0s=
+			dAeYooC8opU6MfXsseMcg9rEYxt27xjt3AsiMaJZ6QM=
 			</data>
 		</dict>
 		<key>Modules/CiscoSwizzling.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/E4YKV0amS/g1RhkmoV7JG24kW+4l9Be0Gy+FPizMms=
+			J9wzq7rZavNYccyAJLeDNwh1gGI85OyksVdlqhx/V7s=
 			</data>
 		</dict>
 		<key>Modules/CiscoSwizzling.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JR6I+1IgVPyPbytkGg+bNKb82iBKmDBkc7wCKHtOJRs=
+			JaTn6s5yNjvIu2Ap7UktkpfT9dMH2djy8XGSSy1QJ3k=
 			</data>
 		</dict>
 		<key>Modules/CiscoSwizzling.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FdVX+pvkv6iEbIikj7pJitVdS7VyYj7HnHWbqPMaSzA=
+			nUV6ExP68JzWGRIUvplWrKi0rvMmxL2yOrI7AvRApLw=
 			</data>
 		</dict>
 		<key>Modules/CiscoSwizzling.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wJqX6bGUYJNBD0s3Gjx36VOtr/i9E7HDy0WeuumJYoc=
+			p8RuCN4u4oRyb/lCVocpU7uhqbjvDLrDHSjaquCC25I=
 			</data>
 		</dict>
 		<key>Modules/CiscoSwizzling.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FdVX+pvkv6iEbIikj7pJitVdS7VyYj7HnHWbqPMaSzA=
+			nUV6ExP68JzWGRIUvplWrKi0rvMmxL2yOrI7AvRApLw=
 			</data>
 		</dict>
 		<key>Modules/CiscoSwizzling.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J6wg022/5KN3jtKqRSugLMKnvXuM366KbAxHRFLfzFI=
+			LPzKqgFsvPO7gEZU99KrLpUlyXU4youJ4XES/+8XRX4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

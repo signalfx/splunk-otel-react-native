@@ -14,6 +14,7 @@ export const TestActionsComponent: React.FC<TestActionsComponentProps> = ({
   const groupedActions = useMemo(() => {
     const groups: Record<TestCategory, TestAction[]> = {
       [TestCategory.Crashes]: [],
+      [TestCategory.ErrorTracking]: [],
       [TestCategory.Navigation]: [],
       [TestCategory.CustomTracking]: [],
       [TestCategory.Performance]: [],
@@ -35,6 +36,7 @@ export const TestActionsComponent: React.FC<TestActionsComponentProps> = ({
   const orderedCategories = [
     TestCategory.ApiTests,
     TestCategory.Crashes,
+    TestCategory.ErrorTracking,
     TestCategory.Performance,
     TestCategory.Network,
     TestCategory.Navigation,

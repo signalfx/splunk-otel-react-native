@@ -582,6 +582,57 @@ RCT_REMAP_METHOD(customEndWorkflow,
   [self.impl customEndWorkflowWithHandle:handleNumber resolve:resolve reject:reject];
 }
 
+#pragma mark - Error Tracking
+
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(reportError,
+                 reportErrorType:(NSString *)type
+                 message:(NSString *)message
+                 stacktrace:(NSString *)stacktrace
+                 attributes:(NSDictionary *)attributes
+                 framesJson:(NSString *)framesJson
+                 source:(NSString *)source
+                 handled:(BOOL)handled
+                 sourceMapIdsJson:(NSString *)sourceMapIdsJson
+                 resolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self reportError:type
+            message:message
+         stacktrace:stacktrace
+         attributes:attributes
+         framesJson:framesJson
+             source:source
+            handled:handled
+   sourceMapIdsJson:sourceMapIdsJson
+            resolve:resolve
+             reject:reject];
+}
+#endif
+
+- (void)reportError:(NSString *)type
+            message:(NSString *)message
+         stacktrace:(NSString *)stacktrace
+         attributes:(NSDictionary *)attributes
+         framesJson:(NSString *)framesJson
+             source:(NSString *)source
+            handled:(BOOL)handled
+   sourceMapIdsJson:(NSString *)sourceMapIdsJson
+            resolve:(RCTPromiseResolveBlock)resolve
+             reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl reportError:type
+                 message:message
+              stacktrace:stacktrace
+              attributes:attributes
+              framesJson:framesJson
+                  source:source
+                 handled:handled
+        sourceMapIdsJson:sourceMapIdsJson
+                 resolve:resolve
+                  reject:reject];
+}
+
 #pragma mark - Navigation
 
 #ifndef RCT_NEW_ARCH_ENABLED

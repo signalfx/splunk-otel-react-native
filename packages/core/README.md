@@ -17,6 +17,7 @@ The Splunk Distribution of OpenTelemetry for React Native provides automatic ins
 - User interactions
 - App startup and performance metrics
 - Crash reporting
+- Manual error/exception reporting
 - Slow rendering detection
 - Navigation tracking
 
@@ -273,6 +274,46 @@ const workflow = await SplunkRum.instance.customTracking.startWorkflow('checkout
 // ... perform checkout steps ...
 await workflow.end();
 ```
+
+### Error Tracking
+
+Report a **caught** JS error or exception (from a `try/catch`, an error boundary, or a handled promise rejection) as a first-class RUM error. Each report is emitted as a `component=error` span carrying the OpenTelemetry `exception.*` semantics (`exception.type`, `exception.message`, `exception.stacktrace`) alongside the current `screen.name`, `session.id`, and your custom attributes.
+
+```tsx
+import { SplunkRum } from '@splunk/otel-react-native';
+
+// Report a caught error (the common case)
+try {
+  cart.checkout();
+} catch (e) {
+  SplunkRum.instance.customTracking.trackError(e as Error);
+}
+
+// Report from a message string
+await SplunkRum.instance.customTracking.trackError('Checkout failed');
+
+// Report with attributes and options
+await SplunkRum.instance.customTracking.trackError(error, {
+  attributes: { 'screen.name': 'Cart', 'cart.item.count': 3 },
+  handled: true, // non-fatal (default). false sets exception.escaped=true
+});
+```
+
+`trackError` accepts either an `Error` object or a message `string`, plus optional `ReportErrorOptions`:
+
+| Option | Type | Default | Description |
+| --- | --- | --- | --- |
+| `attributes` | `Attributes` | `{}` | Custom attributes attached to the error span. |
+| `source` | `ErrorSource` | `ErrorSource.Custom` | Origin of the error. Only `Custom` is active today; the other values are reserved for automatic capture. |
+| `handled` | `boolean` | `true` | Whether the error was handled (non-fatal). Emitted as `exception.escaped = !handled`. |
+
+Key behaviors:
+
+- **Side-effect only / never throws.** `trackError` never consumes or alters the caught error and never throws back into your `catch`. The returned `Promise` always resolves (it does not reject), so it stays `await`-safe and never produces an unhandled rejection. Reporting failures are surfaced only as a `console.warn`. You keep full control to log, show UI, retry, or re-throw.
+- **No-op before install.** Before `install()` completes, `trackError` resolves silently.
+- **Raw stacktrace is always sent.** The engine's `error.stack` is transported verbatim as `exception.stacktrace`. In debug / non-minified bundles this is human-readable as-is. In release builds the JS is minified and compiled to Hermes bytecode, so frames look like `index.bundle:1:<byteOffset>` and are not yet symbolicated — this is a valid, complete span; readable symbolication is planned for a future release. String-only reports carry no stacktrace.
+
+> **Security:** `exception.message` and any attributes you pass may contain user data. Avoid reporting values that carry credentials, tokens, or other sensitive material.
 
 ### Navigation Tracking
 

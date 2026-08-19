@@ -1352,7 +1352,7 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkSessionReplayProxy\/Sources\/SplunkSessionReplayProxy\/SessionReplay+Module.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSessionReplayProxy\/Sources\/SplunkSessionReplayProxy\/SessionReplay+Module.swift",
       "kind": "BooleanLiteral",
       "offset": 3670,
       "length": 4,

@@ -14,6 +14,7 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import {
   SplunkRum,
+  ErrorSource,
   type EndpointConfiguration,
 } from '@splunk/otel-react-native';
 import {
@@ -23,7 +24,7 @@ import {
 import { config as appConfig } from '../config';
 
 import { TestCategory, MobilePlatform, type TestAction } from '../types';
-import { TestActionsWidget, StatusBar } from '../components';
+import { TestActionsWidget, StatusBar, SessionIdBar } from '../components';
 import { NativeTestBridge } from '../NativeTestBridge';
 import { runApiAssertionTests, type ApiTestReport } from '../ApiAssertions';
 import type {
@@ -107,6 +108,69 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
         platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
         onTap: async () => {
           throw new Error('Test JS exception from example app');
+        },
+      },
+
+      // Error Tracking (manual trackError API)
+      {
+        id: 'error-caught',
+        title: 'Track Caught Error',
+        description: 'Report a caught Error as a component=error span',
+        category: TestCategory.ErrorTracking,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          try {
+            const cart = {} as { checkout: () => void };
+            cart.checkout();
+          } catch (e) {
+            await SplunkRum.instance.customTracking.trackError(e as Error);
+            Alert.alert(
+              'Error Tracking',
+              'Caught error reported.\nCheck RUM for an error span with exception.type=TypeError and a JS exception.stacktrace.'
+            );
+          }
+        },
+      },
+      {
+        id: 'error-string',
+        title: 'Track Error (String)',
+        description: 'Report an error from a plain message string',
+        category: TestCategory.ErrorTracking,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          await SplunkRum.instance.customTracking.trackError(
+            'Manual string error report from example app'
+          );
+          Alert.alert(
+            'Error Tracking',
+            'String error reported.\nCheck RUM for an error span with exception.message set and no stacktrace.'
+          );
+        },
+      },
+      {
+        id: 'error-attributes',
+        title: 'Track Error with Attributes',
+        description: 'Report a caught error with custom attributes and options',
+        category: TestCategory.ErrorTracking,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          try {
+            throw new RangeError('Quantity out of range in example app');
+          } catch (e) {
+            await SplunkRum.instance.customTracking.trackError(e as Error, {
+              attributes: {
+                'screen.name': 'Home',
+                'error.context': 'manual-test',
+                'cart.item.count': 3,
+              },
+              source: ErrorSource.Custom,
+              handled: true,
+            });
+            Alert.alert(
+              'Error Tracking',
+              'Error with attributes reported.\nCheck RUM for error.source=custom, exception.escaped=false, and the custom screen.name attribute.'
+            );
+          }
         },
       },
 
@@ -618,6 +682,7 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
         </Text>
       </View>
       <StatusBar />
+      <SessionIdBar />
       <TestActionsWidget actions={testActions} />
 
       <Modal

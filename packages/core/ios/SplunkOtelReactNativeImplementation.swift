@@ -267,6 +267,29 @@ public class SplunkOtelReactNativeImplementation: NSObject {
     customTrackingHandler.endWorkflow(handle, resolve: resolve, reject: reject)
   }
 
+  @objc
+  public func reportError(_ type: NSString,
+                          message: NSString,
+                          stacktrace: NSString,
+                          attributes: NSDictionary,
+                          framesJson: NSString,
+                          source: NSString,
+                          handled: Bool,
+                          sourceMapIdsJson: NSString,
+                          resolve: @escaping RCTPromiseResolveBlock,
+                          reject: @escaping RCTPromiseRejectBlock) {
+    customTrackingHandler.reportError(type,
+                                      message: message,
+                                      stacktrace: stacktrace,
+                                      attributes: attributes,
+                                      framesJson: framesJson,
+                                      source: source,
+                                      handled: handled,
+                                      sourceMapIdsJson: sourceMapIdsJson,
+                                      resolve: resolve,
+                                      reject: reject)
+  }
+
   // MARK: - WebView Integration
 
   @objc

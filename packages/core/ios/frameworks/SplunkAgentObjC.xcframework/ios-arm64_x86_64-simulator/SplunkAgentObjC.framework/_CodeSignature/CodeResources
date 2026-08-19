@@ -6,51 +6,51 @@
 	<dict>
 		<key>Headers/SplunkAgentObjC-Swift.h</key>
 		<data>
-		DBPN4FkJpN2GcipU5LHd2EBjPVk=
+		/NO044A4j4NQGKJgLdlDM0Y+57M=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		zfFQM1E/Y+nkVRmrLQuBo6YW6N0=
+		KCZwN7AzVq7RZFiMAz0ML5nJv8g=
 		</data>
 		<key>Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		6SUK7Q2ntde365g3KzW6aFLa1k0=
+		/WA6RXk56E3FnRQfRBo8+0OdaMQ=
 		</data>
 		<key>Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		BGzhg2qZDW2le6e0TlIWhk0YFJI=
+		ZX57cjsVDoReYe4Nr93RwdFC8Vg=
 		</data>
 		<key>Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		upDQcu35UxGiexLSK8Ch15nR+0A=
+		HxEpe8pMtFjcHOiY7dixy8//67A=
 		</data>
 		<key>Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		4UfqeAdt3pdCuLUCyO4t7znzdD4=
+		QwAyePPJV8EbOr9W7SO82RrJN/Y=
 		</data>
 		<key>Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		VF0iu5wLr8Bmn4bZUDydEzYHQZs=
+		BGqmJa7+oAWTkMVCq6ZnKRnw1r0=
 		</data>
 		<key>Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		6SUK7Q2ntde365g3KzW6aFLa1k0=
+		/WA6RXk56E3FnRQfRBo8+0OdaMQ=
 		</data>
 		<key>Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		555DvGJsXd/keLIgjA74nJhXcpA=
+		P/6F2rrNaPwIP6quIo1G5MDns7s=
 		</data>
 		<key>Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		QKiC7EO2D+KZXlcPh6w7zVVyPzs=
+		06E4w9Tq323tlVabS5YiF9u//5E=
 		</data>
 		<key>Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		jCm6Jarkfxiid9kLyg6kRgy6TqY=
+		jNZfy55dhEqw1aBInR7af4gyKLk=
 		</data>
 		<key>Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		AUqdUUgnODb1kI0BEf+SWzYbsPs=
+		VnPsKt9uy8rxHTiyd5n8h8Ml/8I=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -71,77 +71,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9+IRyjFlLEKk6SDMQu0To+luBL6CT8mPDEG6sNhCFdk=
+			Qu+rU7hbFEwKh/x1Wa25Nvb+VIMXowwBrFPYFy0HMCc=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MGmFJz6Sp3d6AfJque6YLGglblNcjjbc2akigz3D7YI=
+			/KTBw3ReMIVW0E3mYPQ11K5HRIyEmirNF/gFrqIWPlk=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fXB0UtcigWJcJhtFYICpw6hMskaQUagzBwZR5Wh3OTo=
+			MRmO7BZppwN7YwMy9LbAdBXdyJmUZKPw/Xnm/fkv9+Y=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X7B1siCItBbb5lIaket6tWQUsersqpOMKa7X/VepkBk=
+			LzjtyfywrPyYFyaKx5GEC9MT9xH/m1ABGS03Id3bLgw=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ll9jY3OT2xTU7eLr4t1LL81eGPLoYXKJL3LeeZyfzY8=
+			nsJZflIlGi+bmGE9BlwBJ47A5l7ZRmFT2Z/kNnmkH3U=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgentObjC.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DiKzhgn7WcLYXjTBImhoLW/0HbR4UnOAtViBFO+F+eo=
+			Nn9mo/SrK6WxsrOrA7hpW66zGX61FUr+qawE22KH0nc=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MGmFJz6Sp3d6AfJque6YLGglblNcjjbc2akigz3D7YI=
+			/KTBw3ReMIVW0E3mYPQ11K5HRIyEmirNF/gFrqIWPlk=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gdp+IF5TzJwxaVp86+1MhXqYVV7XMjY2grV+kjl5QAo=
+			vCyjCqKJPudYjyP8Kl6nf0ltzjoLv1B3N5saB3oUVIk=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dh26HKqOGScNE3jWKpO0somH5tiZYQnx4qnrrfhJK4A=
+			07o8zDn6gEFsS0QINxhEn1kF4lZGFFYB4svPXUtMRsU=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5T4uiyn3TqWM8gROxVYo5ASTJJ2KAzQolVrFc2UCoyI=
+			8wiKfOqhrC6kzxMQu7x0Ui1mcwwKEIe1550whknVUL4=
 			</data>
 		</dict>
 		<key>Modules/SplunkAgentObjC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UyM36XwsQxrxU1nMw91r0noDUavFK1iQ09pxawz4/gw=
+			BwwuFEwA+01WsvTQfKGAXHnneRGhoOdgHJKPKngrb6A=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkAgentObjC
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkAgentObjC -package-name SplunkAgent
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
 import Foundation
 import OpenTelemetryApi
 import SplunkAgent
@@ -103,6 +103,12 @@ extension SplunkAgentObjC.AttributeValueTypeObjC : Swift.CustomStringConvertible
   @objc(initWithEnabled:) public init(isEnabled: Swift.Bool)
   @objc deinit
 }
+@_inheritsConvenienceInitializers @objc(SPLKCustomTrackingConfiguration) @objcMembers final public class CustomTrackingConfigurationObjC : SplunkAgentObjC.ModuleConfigurationObjC {
+  @objc final public var includeBinaryImagesOnErrors: Swift.Bool
+  @objc dynamic public init()
+  @objc(initWithEnabled:includeBinaryImagesOnErrors:) public init(isEnabled: Swift.Bool, includeBinaryImagesOnErrors: Swift.Bool)
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers @objc(SPLKCustomTrackingModule) final public class CustomTrackingModuleObjC : ObjectiveC.NSObject {
   @discardableResult
   @objc final public func trackCustomEvent(name: Swift.String, attributes: [Swift.String : SplunkAgentObjC.AttributeValueObjC]) -> SplunkAgentObjC.CustomTrackingModuleObjC
@@ -112,6 +118,10 @@ extension SplunkAgentObjC.AttributeValueTypeObjC : Swift.CustomStringConvertible
   @objc(trackError:attributes:) final public func trackError(error: Foundation.NSError, attributes: [Swift.String : SplunkAgentObjC.AttributeValueObjC]) -> SplunkAgentObjC.CustomTrackingModuleObjC
   @discardableResult
   @objc(trackException:attributes:) final public func trackException(exception: Foundation.NSException, attributes: [Swift.String : SplunkAgentObjC.AttributeValueObjC]) -> SplunkAgentObjC.CustomTrackingModuleObjC
+  @discardableResult
+  @objc(trackErrorWithType:message:stacktrace:attributes:) final public func trackError(typeName: Swift.String, message: Swift.String, stacktrace: Swift.String?, attributes: [Swift.String : SplunkAgentObjC.AttributeValueObjC]) -> SplunkAgentObjC.CustomTrackingModuleObjC
+  @discardableResult
+  @objc(trackErrorWithType:message:stacktrace:) final public func trackError(typeName: Swift.String, message: Swift.String, stacktrace: Swift.String?) -> SplunkAgentObjC.CustomTrackingModuleObjC
   @discardableResult
   @objc final public func trackCustomEvent(name: Swift.String) -> SplunkAgentObjC.CustomTrackingModuleObjC
   @discardableResult
@@ -478,7 +488,7 @@ extension SplunkAgentObjC.AttributeValueTypeObjC : Swift.CustomStringConvertible
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc final public class SplunkAgentObjCResources : ObjectiveC.NSObject {
-  @objc final public class var bundle: Foundation.Bundle {
+  @objc nonisolated final public class var bundle: Foundation.Bundle {
     @objc get
   }
   @objc override dynamic public init()

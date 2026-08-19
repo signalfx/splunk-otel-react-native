@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkAgent
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkAgent -package-name SplunkAgent
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
 import Combine
 import CoreGraphics
 import Foundation
@@ -411,6 +411,10 @@ public protocol CustomTrackingModule {
   func trackError(_ error: any Swift.Error, _ attributes: SplunkAgent.MutableAttributes) -> any SplunkAgent.CustomTrackingModule
   @discardableResult
   func trackException(_ exception: Foundation.NSException, _ attributes: SplunkAgent.MutableAttributes) -> any SplunkAgent.CustomTrackingModule
+  @discardableResult
+  func trackError(typeName: Swift.String, message: Swift.String, stacktrace: Swift.String?, attributes: [Swift.String : Any]) -> any SplunkAgent.CustomTrackingModule
+  @discardableResult
+  func trackError(typeName: Swift.String, message: Swift.String, stacktrace: Swift.String?) -> any SplunkAgent.CustomTrackingModule
   func trackWorkflow(_ workflowName: Swift.String) -> any OpenTelemetryApi.Span
   @discardableResult
   func trackCustomEvent(_ name: Swift.String) -> any SplunkAgent.CustomTrackingModule
@@ -643,7 +647,7 @@ extension SplunkAgent.SplunkRum {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc final public class SplunkAgentResources : ObjectiveC.NSObject {
-  @objc final public class var bundle: Foundation.Bundle {
+  @objc nonisolated final public class var bundle: Foundation.Bundle {
     @objc get
   }
   @objc override dynamic public init()

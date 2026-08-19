@@ -16,6 +16,40 @@
 
 import type { Attributes } from '@opentelemetry/api';
 import { SplunkNativeBridge as Native } from '../sdk/SplunkNativeBridge';
+import { normalizeError } from '../bridge/stacktrace';
+
+/**
+ * Origin of a reported error.
+ *
+ * Only {@link ErrorSource.Custom} is active in this phase, the remaining values
+ * are reserved for automatic capture.
+ */
+export enum ErrorSource {
+  /** Explicit application report via `trackError` (default). */
+  Custom = 'custom',
+  /** `console.error` capture. */
+  Console = 'console',
+  /** Global JS error handler. */
+  Source = 'source',
+  /** Failed network request mapped to an error. */
+  Network = 'network',
+}
+
+/**
+ * Options for {@link CustomTracking.trackError}.
+ */
+export interface ReportErrorOptions {
+  /** Additional attributes attached to the error span. */
+  attributes?: Attributes;
+  /** Error origin. Defaults to {@link ErrorSource.Custom}. */
+  source?: ErrorSource;
+  /**
+   * Whether the error was handled (non-fatal). Defaults to `true`.
+   *
+   * Emitted as the OTel `exception.escaped` attribute (`!handled`).
+   */
+  handled?: boolean;
+}
 
 /**
  * Handle to an active workflow span.
@@ -80,5 +114,80 @@ export class CustomTracking {
   async startWorkflow(name: string): Promise<WorkflowHandle> {
     const handle = await Native.customStartWorkflow(name);
     return new WorkflowHandle(handle);
+  }
+
+  /**
+   * Reports a caught error or exception as a first-class RUM error.
+   *
+   * Captures the error type, message, and stacktrace at the call site and
+   * emits a `component=error` span natively with OTel `exception.*`
+   * attributes. The raw (unsymbolicated) stack is always sent as
+   * `exception.stacktrace`.
+   *
+   * This method is side-effect only: it never throws back into the caller,
+   * never consumes or alters the caught error, and always resolves (it does
+   * not reject). The app keeps full control to log, show UI, retry, or
+   * re-throw. Before `install()` or on reporting failure it resolves silently
+   * and logs a debug warning.
+   *
+   * @example Caught error
+   * ```typescript
+   * try {
+   *   doRiskyThing();
+   * } catch (e) {
+   *   SplunkRum.instance.customTracking.trackError(e);
+   * }
+   * ```
+   *
+   * @example Message with attributes
+   * ```typescript
+   * await SplunkRum.instance.customTracking.trackError('Checkout failed', {
+   *   attributes: { 'screen.name': 'Cart' },
+   * });
+   * ```
+   *
+   * @param error - The caught `Error`.
+   * @param options - Optional reporting options.
+   */
+  async trackError(error: Error, options?: ReportErrorOptions): Promise<void>;
+  /**
+   * Reports an error described by a message string.
+   *
+   * @param message - The error message.
+   * @param options - Optional reporting options.
+   */
+  async trackError(
+    message: string,
+    options?: ReportErrorOptions
+  ): Promise<void>;
+  async trackError(
+    errorOrMessage: Error | string,
+    options?: ReportErrorOptions
+  ): Promise<void> {
+    try {
+      const normalized = normalizeError(errorOrMessage);
+
+      const source = options?.source ?? ErrorSource.Custom;
+      const handled = options?.handled ?? true;
+      const attributes = options?.attributes ?? {};
+
+      // `framesJson` / `sourceMapIdsJson` are reserved for later, full automatic-capture phases.
+      //  The backend currently symbolicates from the raw `exception.stacktrace`.
+      await Native.reportError(
+        normalized.type,
+        normalized.message,
+        normalized.stack,
+        attributes,
+        '',
+        source,
+        handled,
+        ''
+      );
+    } catch (e) {
+      console.warn(
+        '[SplunkRum] trackError failed to report:',
+        e instanceof Error ? e.message : String(e)
+      );
+    }
   }
 }

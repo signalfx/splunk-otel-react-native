@@ -4930,6 +4930,115 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "InternalNetworkRequestMarker",
+        "printedName": "InternalNetworkRequestMarker",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "mark",
+            "printedName": "mark(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SplunkCommon28InternalNetworkRequestMarkerO4marky10Foundation10URLRequestVAGFZ",
+            "mangledName": "$s12SplunkCommon28InternalNetworkRequestMarkerO4marky10Foundation10URLRequestVAGFZ",
+            "moduleName": "SplunkCommon",
+            "static": true,
+            "isInternal": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isMarked",
+            "printedName": "isMarked(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SplunkCommon28InternalNetworkRequestMarkerO8isMarkedySb10Foundation10URLRequestVFZ",
+            "mangledName": "$s12SplunkCommon28InternalNetworkRequestMarkerO8isMarkedySb10Foundation10URLRequestVFZ",
+            "moduleName": "SplunkCommon",
+            "static": true,
+            "isInternal": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12SplunkCommon28InternalNetworkRequestMarkerO",
+        "mangledName": "$s12SplunkCommon28InternalNetworkRequestMarkerO",
+        "moduleName": "SplunkCommon",
+        "isInternal": true,
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkCommon",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Function",
         "name": "waitUntil",
         "printedName": "waitUntil(timeout:pollIntervalNanoseconds:_:)",
@@ -5196,63 +5305,70 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/PackageIdentification\/PackageIdentifier+InstanceName.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/PackageIdentification\/PackageIdentifier+InstanceName.swift",
       "kind": "StringLiteral",
       "offset": 950,
       "length": 9,
       "value": "\"default\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/PackageIdentification\/PackageIdentifier+InstanceName.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/PackageIdentification\/PackageIdentifier+InstanceName.swift",
       "kind": "StringLiteral",
       "offset": 1456,
       "length": 9,
       "value": "\"default\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/PackageIdentification\/PackageIdentifier.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/PackageIdentification\/PackageIdentifier.swift",
       "kind": "StringLiteral",
       "offset": 781,
       "length": 16,
       "value": "\"com.splunk.rum\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/DefaultPersistentCache.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/DefaultPersistentCache.swift",
       "kind": "StringLiteral",
       "offset": 1262,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/DefaultPersistentCache.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/DefaultPersistentCache.swift",
       "kind": "StringLiteral",
       "offset": 2930,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/Model\/PersistentCacheModel.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/Model\/PersistentCacheModel.swift",
       "kind": "Dictionary",
       "offset": 775,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/Model\/PersistentCacheModel.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Persistent Cache\/DefaultPersistanceCache\/Model\/PersistentCacheModel.swift",
       "kind": "BooleanLiteral",
       "offset": 820,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Utils\/WaitUntil.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Utils\/InternalNetworkRequestMarker.swift",
+      "kind": "StringLiteral",
+      "offset": 791,
+      "length": 41,
+      "value": "\"com.splunk.rum.internal-network-request\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Utils\/WaitUntil.swift",
       "kind": "FloatLiteral",
       "offset": 1094,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Utils\/WaitUntil.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCommon\/Sources\/SplunkCommon\/Utils\/WaitUntil.swift",
       "kind": "IntegerLiteral",
       "offset": 1137,
       "length": 10,

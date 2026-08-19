@@ -693,6 +693,13 @@
       },
       {
         "kind": "Import",
+        "name": "QuartzCore",
+        "printedName": "QuartzCore",
+        "declKind": "Import",
+        "moduleName": "SplunkSlowFrameDetector"
+      },
+      {
+        "kind": "Import",
         "name": "SplunkCommon",
         "printedName": "SplunkCommon",
         "declKind": "Import",
@@ -1111,81 +1118,95 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/Module\/SlowFrameDetectorConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/Module\/SlowFrameDetectorConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 915,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/Module\/SlowFrameDetectorConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/Module\/SlowFrameDetectorConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 1239,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/Module\/SlowFrameDetectorRemoteConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/Module\/SlowFrameDetectorRemoteConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 812,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameDetector.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameDetector.swift",
       "kind": "BooleanLiteral",
-      "offset": 1364,
+      "offset": 1605,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameDetector.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameDetector.swift",
       "kind": "FloatLiteral",
-      "offset": 1577,
-      "length": 4,
-      "value": "15.0"
+      "offset": 2027,
+      "length": 5,
+      "value": "0.001"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameDetector.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameDetector.swift",
       "kind": "FloatLiteral",
-      "offset": 1725,
+      "offset": 2176,
       "length": 3,
       "value": "0.7"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameDetector.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameDetector.swift",
       "kind": "BooleanLiteral",
-      "offset": 8859,
+      "offset": 9727,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
       "kind": "BooleanLiteral",
       "offset": 1170,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
       "kind": "IntegerLiteral",
       "offset": 1369,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
       "kind": "IntegerLiteral",
       "offset": 1411,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
       "kind": "IntegerLiteral",
-      "offset": 1519,
+      "offset": 1838,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2089,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkSlowFrameDetector\/Sources\/SplunkSlowFrameDetector\/SlowFrameLogic.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2679,
+      "length": 4,
+      "value": "true"
     }
   ]
 }

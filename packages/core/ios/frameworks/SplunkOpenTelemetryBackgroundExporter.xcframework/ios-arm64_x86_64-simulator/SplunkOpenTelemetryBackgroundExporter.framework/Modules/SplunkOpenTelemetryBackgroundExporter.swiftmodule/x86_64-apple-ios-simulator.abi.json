@@ -3495,9 +3495,54 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "agentVersion",
+            "printedName": "agentVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:37SplunkOpenTelemetryBackgroundExporter25OTLPExporterConfigurationV12agentVersionSSvp",
+            "mangledName": "$s37SplunkOpenTelemetryBackgroundExporter25OTLPExporterConfigurationV12agentVersionSSvp",
+            "moduleName": "SplunkOpenTelemetryBackgroundExporter",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:37SplunkOpenTelemetryBackgroundExporter25OTLPExporterConfigurationV12agentVersionSSvg",
+                "mangledName": "$s37SplunkOpenTelemetryBackgroundExporter25OTLPExporterConfigurationV12agentVersionSSvg",
+                "moduleName": "SplunkOpenTelemetryBackgroundExporter",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(timeout:)",
+            "printedName": "init(timeout:agentVersion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3511,11 +3556,18 @@
                 "printedName": "Swift.Double",
                 "hasDefaultArg": true,
                 "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:37SplunkOpenTelemetryBackgroundExporter25OTLPExporterConfigurationV7timeoutACSd_tcfc",
-            "mangledName": "$s37SplunkOpenTelemetryBackgroundExporter25OTLPExporterConfigurationV7timeoutACSd_tcfc",
+            "usr": "s:37SplunkOpenTelemetryBackgroundExporter25OTLPExporterConfigurationV7timeout12agentVersionACSd_SStcfc",
+            "mangledName": "$s37SplunkOpenTelemetryBackgroundExporter25OTLPExporterConfigurationV7timeout12agentVersionACSd_SStcfc",
             "moduleName": "SplunkOpenTelemetryBackgroundExporter",
             "declAttributes": [
               "AccessControl",
@@ -3644,6 +3696,35 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Function",
+            "name": "userAgent",
+            "printedName": "userAgent(agentVersion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:37SplunkOpenTelemetryBackgroundExporter15OTLPHTTPHeadersO9userAgent12agentVersionS2S_tFZ",
+            "mangledName": "$s37SplunkOpenTelemetryBackgroundExporter15OTLPHTTPHeadersO9userAgent12agentVersionS2S_tFZ",
+            "moduleName": "SplunkOpenTelemetryBackgroundExporter",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Enum",
@@ -3812,6 +3893,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetryBackgroundExporter"
       },
       {
         "kind": "Import",
@@ -4042,6 +4130,33 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetryBackgroundExporter"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetryBackgroundExporter",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CiscoDiskStorage",
+        "printedName": "CiscoDiskStorage",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetryBackgroundExporter",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "CiscoEncryption",
         "printedName": "CiscoEncryption",
         "declKind": "Import",
@@ -4051,6 +4166,13 @@
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkOpenTelemetryBackgroundExporter"
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
         "declKind": "Import",
         "moduleName": "SplunkOpenTelemetryBackgroundExporter"
       },
@@ -4847,203 +4969,238 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/BackgroundHTTPClient.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/BackgroundHTTPClient.swift",
       "kind": "StringLiteral",
       "offset": 1425,
       "length": 38,
       "value": "\"com.otel.config.session.\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/BackgroundHTTPClient.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/BackgroundHTTPClient.swift",
       "kind": "StringLiteral",
       "offset": 1462,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/BackgroundHTTPClient.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/BackgroundHTTPClient.swift",
       "kind": "BooleanLiteral",
       "offset": 1651,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Exporters\/logs\/Binary body support\/From upstream\/SplunkAttributeValue.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Exporters\/logs\/Binary body support\/From upstream\/SplunkAttributeValue.swift",
       "kind": "StringLiteral",
       "offset": 4972,
       "length": 4,
       "value": "\"_0\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Extensions\/KeyBuilder+DefaultKeys.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Extensions\/KeyBuilder+DefaultKeys.swift",
       "kind": "StringLiteral",
       "offset": 702,
       "length": 13,
       "value": "\"uploadFiles\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Extensions\/KeyBuilder+DefaultKeys.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Extensions\/KeyBuilder+DefaultKeys.swift",
       "kind": "StringLiteral",
       "offset": 844,
       "length": 20,
       "value": "\"pendingUploadFiles\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/OTLPExporterConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/OTLPExporterConfiguration.swift",
       "kind": "IntegerLiteral",
       "offset": 993,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/OTLPExporterConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/OTLPExporterConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 1726,
+      "offset": 1581,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/OTLPExporterConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 2026,
       "length": 12,
       "value": "\"User-Agent\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/OTLPExporterConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/OTLPExporterConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2813,
+      "offset": 3857,
       "length": 28,
       "value": "\"OTEL_EXPORTER_OTLP_HEADERS\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/RequestDescriptor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/RequestDescriptor.swift",
       "kind": "IntegerLiteral",
-      "offset": 1765,
+      "offset": 1785,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/RequestDescriptor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/RequestDescriptor.swift",
       "kind": "Dictionary",
-      "offset": 1831,
+      "offset": 1851,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/RequestDescriptor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/RequestDescriptor.swift",
       "kind": "IntegerLiteral",
-      "offset": 2384,
+      "offset": 2404,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/RequestDescriptor.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/RequestDescriptor.swift",
       "kind": "Dictionary",
-      "offset": 2452,
+      "offset": 2472,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/SessionQOSConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/SessionQOSConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 907,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/SessionQOSConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/SessionQOSConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 960,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/SessionQOSConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/Models\/SessionQOSConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 1011,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPBackgroundHTTPBaseExporter.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPBackgroundHTTPBaseExporter+Recovery.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1203,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPBackgroundHTTPBaseExporter.swift",
+      "kind": "StringLiteral",
+      "offset": 963,
+      "length": 21,
+      "value": "\"EndpointMaintenance\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPBackgroundHTTPBaseExporter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1190,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPBackgroundHTTPBaseExporter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1564,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPBackgroundHTTPBaseExporter.swift",
       "kind": "Dictionary",
-      "offset": 2615,
+      "offset": 3196,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPBackgroundHTTPBaseExporter.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPBackgroundHTTPBaseExporter.swift",
       "kind": "StringLiteral",
-      "offset": 2723,
+      "offset": 3304,
       "length": 24,
       "value": "\"OTLPBackgroundExporter\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPBackgroundHTTPBaseExporter.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPBackgroundHTTPBaseExporter.swift",
       "kind": "FloatLiteral",
-      "offset": 2810,
+      "offset": 3391,
       "length": 3,
       "value": "0.2"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPBackgroundHTTPBaseExporter.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPBackgroundHTTPBaseExporter.swift",
       "kind": "IntegerLiteral",
-      "offset": 2862,
+      "offset": 3443,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPBackgroundHTTPBaseExporter.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPBackgroundHTTPBaseExporter.swift",
       "kind": "BooleanLiteral",
-      "offset": 3027,
+      "offset": 3608,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/Models\/Metrics\/OTLPSum.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/Models\/Metrics\/OTLPSum.swift",
       "kind": "IntegerLiteral",
       "offset": 1195,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/Models\/Metrics\/OTLPSum.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/Models\/Metrics\/OTLPSum.swift",
       "kind": "IntegerLiteral",
       "offset": 1338,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/Models\/Trace\/OTLPStatus.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/Models\/Trace\/OTLPStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 1252,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/Models\/Trace\/OTLPStatus.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/Models\/Trace\/OTLPStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 1344,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/Models\/Trace\/OTLPStatus.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/Models\/Trace\/OTLPStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 1423,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/OTLPVersion.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/OTLPVersion.swift",
       "kind": "StringLiteral",
       "offset": 1379,
       "length": 7,
       "value": "\"1.9.0\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/OTLPVersion.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/OTLPVersion.swift",
       "kind": "StringLiteral",
       "offset": 1466,
       "length": 43,
       "value": "\"https:\/\/opentelemetry.io\/docs\/specs\/otlp\/\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/OTLPVersion.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetryBackgroundExporter\/Sources\/SplunkOpenTelemetryBackgroundExporter\/OTLPEncoder\/OTLPVersion.swift",
       "kind": "StringLiteral",
       "offset": 1600,
       "length": 67,

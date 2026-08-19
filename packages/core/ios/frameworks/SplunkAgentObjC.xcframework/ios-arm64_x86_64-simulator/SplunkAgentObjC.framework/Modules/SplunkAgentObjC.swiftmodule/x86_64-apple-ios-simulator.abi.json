@@ -2659,6 +2659,290 @@
       },
       {
         "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkAgentObjC",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCustomTracking",
+        "printedName": "SplunkCustomTracking",
+        "declKind": "Import",
+        "moduleName": "SplunkAgentObjC",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAgentObjC",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CustomTrackingConfigurationObjC",
+        "printedName": "CustomTrackingConfigurationObjC",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "includeBinaryImagesOnErrors",
+            "printedName": "includeBinaryImagesOnErrors",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingConfiguration(py)includeBinaryImagesOnErrors",
+            "mangledName": "$s15SplunkAgentObjC027CustomTrackingConfigurationC1CC27includeBinaryImagesOnErrorsSbvp",
+            "moduleName": "SplunkAgentObjC",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingConfiguration(im)includeBinaryImagesOnErrors",
+                "mangledName": "$s15SplunkAgentObjC027CustomTrackingConfigurationC1CC27includeBinaryImagesOnErrorsSbvg",
+                "moduleName": "SplunkAgentObjC",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingConfiguration(im)setIncludeBinaryImagesOnErrors:",
+                "mangledName": "$s15SplunkAgentObjC027CustomTrackingConfigurationC1CC27includeBinaryImagesOnErrorsSbvs",
+                "moduleName": "SplunkAgentObjC",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15SplunkAgentObjC027CustomTrackingConfigurationC1CC27includeBinaryImagesOnErrorsSbvM",
+                "mangledName": "$s15SplunkAgentObjC027CustomTrackingConfigurationC1CC27includeBinaryImagesOnErrorsSbvM",
+                "moduleName": "SplunkAgentObjC",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CustomTrackingConfigurationObjC",
+                "printedName": "SplunkAgentObjC.CustomTrackingConfigurationObjC",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingConfiguration"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingConfiguration(im)init",
+            "mangledName": "$s15SplunkAgentObjC027CustomTrackingConfigurationC1CCACycfc",
+            "moduleName": "SplunkAgentObjC",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(isEnabled:includeBinaryImagesOnErrors:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CustomTrackingConfigurationObjC",
+                "printedName": "SplunkAgentObjC.CustomTrackingConfigurationObjC",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingConfiguration"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingConfiguration(im)initWithEnabled:includeBinaryImagesOnErrors:",
+            "mangledName": "$s15SplunkAgentObjC027CustomTrackingConfigurationC1CC9isEnabled27includeBinaryImagesOnErrorsACSb_Sbtcfc",
+            "moduleName": "SplunkAgentObjC",
+            "objc_name": "initWithEnabled:includeBinaryImagesOnErrors:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingConfiguration",
+        "mangledName": "$s15SplunkAgentObjC027CustomTrackingConfigurationC1CC",
+        "moduleName": "SplunkAgentObjC",
+        "objc_name": "SPLKCustomTrackingConfiguration",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:@M@SplunkAgentObjC@objc(cs)SPLKModuleConfiguration",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "SplunkAgentObjC.ModuleConfigurationObjC",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -2878,6 +3162,130 @@
             "mangledName": "$s15SplunkAgentObjC020CustomTrackingModuleC1CC14trackException9exception10attributesACSo11NSExceptionC_SDySSAA014AttributeValueC1CCGtF",
             "moduleName": "SplunkAgentObjC",
             "objc_name": "trackException:attributes:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trackError",
+            "printedName": "trackError(typeName:message:stacktrace:attributes:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CustomTrackingModuleObjC",
+                "printedName": "SplunkAgentObjC.CustomTrackingModuleObjC",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingModule"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : SplunkAgentObjC.AttributeValueObjC]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeValueObjC",
+                    "printedName": "SplunkAgentObjC.AttributeValueObjC",
+                    "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKAttributeValue"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingModule(im)trackErrorWithType:message:stacktrace:attributes:",
+            "mangledName": "$s15SplunkAgentObjC020CustomTrackingModuleC1CC10trackError8typeName7message10stacktrace10attributesACSS_S2SSgSDySSAA014AttributeValueC1CCGtF",
+            "moduleName": "SplunkAgentObjC",
+            "objc_name": "trackErrorWithType:message:stacktrace:attributes:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trackError",
+            "printedName": "trackError(typeName:message:stacktrace:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CustomTrackingModuleObjC",
+                "printedName": "SplunkAgentObjC.CustomTrackingModuleObjC",
+                "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingModule"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SplunkAgentObjC@objc(cs)SPLKCustomTrackingModule(im)trackErrorWithType:message:stacktrace:",
+            "mangledName": "$s15SplunkAgentObjC020CustomTrackingModuleC1CC10trackError8typeName7message10stacktraceACSS_S2SSgtF",
+            "moduleName": "SplunkAgentObjC",
+            "objc_name": "trackErrorWithType:message:stacktrace:",
             "declAttributes": [
               "Final",
               "AccessControl",
@@ -14815,6 +15223,7 @@
             "static": true,
             "declAttributes": [
               "Final",
+              "Nonisolated",
               "AccessControl",
               "ObjC"
             ],
@@ -15272,189 +15681,196 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
       "kind": "StringLiteral",
       "offset": 7805,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
       "kind": "StringLiteral",
       "offset": 7981,
       "length": 45,
       "value": "\"SPLKAttributeValue<\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
       "kind": "StringLiteral",
       "offset": 8008,
       "length": 1,
       "value": "\">: \""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueObjC.swift",
       "kind": "StringLiteral",
       "offset": 8025,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueTypeObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueTypeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 837,
       "length": 6,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueTypeObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueTypeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 905,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueTypeObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-AttributeValueTypeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 975,
       "length": 6,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 900,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1066,
       "length": 4,
       "value": "-100"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1268,
       "length": 4,
       "value": "-101"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-StatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1437,
       "length": 4,
       "value": "-102"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-UserTrackingModeObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-UserTrackingModeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1011,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-UserTrackingModeObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Model\/API-1.0-UserTrackingModeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1323,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Navigation\/Public API\/API-1.0-NavigationConfigurationObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Custom Tracking\/Public API\/API-1.0-CustomTrackingConfigurationObjC.swift",
+      "kind": "BooleanLiteral",
+      "offset": 989,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Navigation\/Public API\/API-1.0-NavigationConfigurationObjC.swift",
       "kind": "BooleanLiteral",
       "offset": 1212,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-MaskTypeObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-MaskTypeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 945,
       "length": 7,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RecordingMaskObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RecordingMaskObjC.swift",
       "kind": "Array",
       "offset": 1517,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RenderingModeObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RenderingModeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 919,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RenderingModeObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RenderingModeObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1063,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 989,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1185,
       "length": 4,
       "value": "-100"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1334,
       "length": 4,
       "value": "-101"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1507,
       "length": 4,
       "value": "-102"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1686,
       "length": 4,
       "value": "-110"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 1911,
       "length": 4,
       "value": "-200"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 2090,
       "length": 4,
       "value": "-201"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Session Replay\/Public API\/Model\/API-1.0-SessionReplayStatusObjC.swift",
       "kind": "IntegerLiteral",
       "offset": 2252,
       "length": 4,
       "value": "-300"
     },
     {
-      "filePath": "\/Users\/jc69\/Splunk\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Shared\/ModuleConfigurationObjC.swift",
+      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgentObjC\/Modules\/Shared\/ModuleConfigurationObjC.swift",
       "kind": "BooleanLiteral",
       "offset": 947,
       "length": 4,

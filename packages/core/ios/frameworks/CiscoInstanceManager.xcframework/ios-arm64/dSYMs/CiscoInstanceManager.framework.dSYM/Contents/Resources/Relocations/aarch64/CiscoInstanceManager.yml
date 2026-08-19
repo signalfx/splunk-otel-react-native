@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/jc69/Library/Developer/Xcode/DerivedData/SessionReplay-egtwpchkntjoimdkedupzfucklws/Build/Intermediates.noindex/ArchiveIntermediates/CiscoInstanceManager/InstallationBuildProductsLocation/Library/Frameworks/CiscoInstanceManager.framework/CiscoInstanceManager'
+binary-path:     '/Users/ruzicka/Library/Developer/Xcode/DerivedData/SessionReplay-defuscgljodzurbwolylvylmwzkh/Build/Intermediates.noindex/ArchiveIntermediates/CiscoInstanceManager/InstallationBuildProductsLocation/Library/Frameworks/CiscoInstanceManager.framework/CiscoInstanceManager'
 relocations:
   - { offset: 0x5B9, size: 0x8, addend: 0x0, symName: _CiscoInstanceManagerVersionString, symObjAddr: 0x0, symBinAddr: 0x18B80, symSize: 0x0 }
   - { offset: 0x5ED, size: 0x8, addend: 0x0, symName: _CiscoInstanceManagerVersionNumber, symObjAddr: 0x40, symBinAddr: 0x18BC0, symSize: 0x0 }
@@ -283,44 +283,44 @@ relocations:
   - { offset: 0xC381, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVwet', symObjAddr: 0xB0, symBinAddr: 0x131E0, symSize: 0x48 }
   - { offset: 0xC394, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVwst', symObjAddr: 0xF8, symBinAddr: 0x13228, symSize: 0x3C }
   - { offset: 0xC3A7, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVMa', symObjAddr: 0x134, symBinAddr: 0x13264, symSize: 0x10 }
-  - { offset: 0xC672, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVSHAASQWb', symObjAddr: 0x79C, symBinAddr: 0x138CC, symSize: 0x4 }
-  - { offset: 0xC685, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVACSQAAWl', symObjAddr: 0x7A0, symBinAddr: 0x138D0, symSize: 0x40 }
-  - { offset: 0xC698, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVAA0eF0AAWI', symObjAddr: 0x7E0, symBinAddr: 0x13910, symSize: 0x24 }
-  - { offset: 0xC6AB, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVACSHAAWl', symObjAddr: 0x804, symBinAddr: 0x13934, symSize: 0x40 }
-  - { offset: 0xC718, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF20CiscoInstanceManager10AccessInfoV_Tg5', symObjAddr: 0x920, symBinAddr: 0x13A50, symSize: 0x17C }
-  - { offset: 0xC87F, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSS_Tg5', symObjAddr: 0xA9C, symBinAddr: 0x13BCC, symSize: 0x108 }
-  - { offset: 0xC9D0, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF20CiscoInstanceManager16SecureDescriptor_p_10Foundation4DateVt_Tg5', symObjAddr: 0xBA4, symBinAddr: 0x13CD4, symSize: 0x194 }
-  - { offset: 0xCB37, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSu_Tg5', symObjAddr: 0xD38, symBinAddr: 0x13E68, symSize: 0x100 }
-  - { offset: 0xCC2F, size: 0x8, addend: 0x0, symName: '_$ss11_StringGutsV27_slowEnsureMatchingEncodingySS5IndexVAEF', symObjAddr: 0xE38, symBinAddr: 0x13F68, symSize: 0x78 }
-  - { offset: 0xCC5A, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataVyACxcSTRzs5UInt8V7ElementRtzlufcAC15_RepresentationOSRyAEGXEfU0_', symObjAddr: 0xEB0, symBinAddr: 0x13FE0, symSize: 0xCC }
-  - { offset: 0xCD10, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationO22withUnsafeMutableBytesyxxSwKXEKlFs16IndexingIteratorVySS8UTF8ViewVG_Sit_Tg5', symObjAddr: 0xF7C, symBinAddr: 0x140AC, symSize: 0x398 }
-  - { offset: 0xCE11, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataVyACxcSTRzs5UInt8V7ElementRtzlufcAC15_RepresentationOSWXEfU_', symObjAddr: 0x1314, symBinAddr: 0x14444, symSize: 0x8C }
-  - { offset: 0xCE73, size: 0x8, addend: 0x0, symName: '_$s10Foundation13__DataStorageC22withUnsafeMutableBytes2in5applyxSnySiG_xSwKXEtKlFs16IndexingIteratorVySS8UTF8ViewVG_Sit_Tg5', symObjAddr: 0x13A0, symBinAddr: 0x144D0, symSize: 0xAC }
-  - { offset: 0xCF25, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationO15withUnsafeBytesyxxSWKXEKlFyt_Tg5063$s9CryptoKit12HashFunctionPAAE6update4datayqd___t10Foundation12B70ProtocolRd__lFy7Regions_7ElementQYd__XEfU_ySWXEfU_AA6SHA256V_AF0H0VTg50H3Kit0X0VTf1ncn_n', symObjAddr: 0x144C, symBinAddr: 0x1457C, symSize: 0x1AC }
-  - { offset: 0xD012, size: 0x8, addend: 0x0, symName: '_$s10Foundation13__DataStorageC15withUnsafeBytes2in5applyxSnySiG_xSWKXEtKlFyt_Tg5063$s9CryptoKit12HashFunctionPAAE6update4datayqd___t10Foundation12B70ProtocolRd__lFy7Regions_7ElementQYd__XEfU_ySWXEfU_AA6SHA256V_AF0H0VTg50J3Kit0Z0VTf1nncn_n', symObjAddr: 0x15F8, symBinAddr: 0x14728, symSize: 0xC4 }
-  - { offset: 0xD08A, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataVyACxcSTRzs5UInt8V7ElementRtzlufc8IteratorQz_SitSwXEfU1_SS8UTF8ViewV_TG5', symObjAddr: 0x16BC, symBinAddr: 0x147EC, symSize: 0x58 }
-  - { offset: 0xD157, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV06InlineB0VyAESWcfCTf4nd_n', symObjAddr: 0x1714, symBinAddr: 0x14844, symSize: 0xB4 }
-  - { offset: 0xD1C1, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV10LargeSliceVyAESWcfCTf4nd_n', symObjAddr: 0x17C8, symBinAddr: 0x148F8, symSize: 0x74 }
-  - { offset: 0xD1D8, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV11InlineSliceVyAESWcfCTf4nd_n', symObjAddr: 0x183C, symBinAddr: 0x1496C, symSize: 0x64 }
-  - { offset: 0xD203, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationOyAESWcfCTf4nd_n', symObjAddr: 0x18A0, symBinAddr: 0x149D0, symSize: 0x64 }
-  - { offset: 0xD254, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationO5countAESi_tcfCTf4nd_n', symObjAddr: 0x1904, symBinAddr: 0x14A34, symSize: 0x9C }
-  - { offset: 0xD446, size: 0x8, addend: 0x0, symName: '_$ss16PartialRangeFromVySS5IndexVGMa', symObjAddr: 0x2078, symBinAddr: 0x15158, symSize: 0x58 }
-  - { offset: 0xD459, size: 0x8, addend: 0x0, symName: '_$sSo20NSTextCheckingResultCMa', symObjAddr: 0x2110, symBinAddr: 0x151B0, symSize: 0x44 }
-  - { offset: 0xD46C, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationOWOy', symObjAddr: 0x2154, symBinAddr: 0x151F4, symSize: 0x40 }
-  - { offset: 0xD47F, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationOWOe', symObjAddr: 0x2194, symBinAddr: 0x15234, symSize: 0x40 }
-  - { offset: 0xD492, size: 0x8, addend: 0x0, symName: '_$s10Foundation15ContiguousBytes_pSgWOh', symObjAddr: 0x2264, symBinAddr: 0x15274, symSize: 0x48 }
-  - { offset: 0xD4A6, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataVyACxcSTRzs5UInt8V7ElementRtzlufc8IteratorQz_SitSwXEfU1_SS8UTF8ViewV_TG5TA', symObjAddr: 0x22AC, symBinAddr: 0x152BC, symSize: 0x18 }
-  - { offset: 0xD4B9, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationOSgWOe', symObjAddr: 0x22C4, symBinAddr: 0x152D4, symSize: 0x14 }
-  - { offset: 0xD53C, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataVyACxcSTRzs5UInt8V7ElementRtzlufCSS8UTF8ViewV_Tt0g5', symObjAddr: 0x144, symBinAddr: 0x13274, symSize: 0x4DC }
-  - { offset: 0xD6B1, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVAA0eF0A2aDP5valueSSvgTW', symObjAddr: 0x620, symBinAddr: 0x13750, symSize: 0x2C }
-  - { offset: 0xD723, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVAA0eF0A2aDP12instanceName6ofTypexSgSS_ypXptcfCTW', symObjAddr: 0x64C, symBinAddr: 0x1377C, symSize: 0x68 }
-  - { offset: 0xD796, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVAA0eF0A2aDP12securedValuexSgSS_tcfCTW', symObjAddr: 0x6B4, symBinAddr: 0x137E4, symSize: 0x24 }
-  - { offset: 0xD7EF, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVSHAASH9hashValueSivgTW', symObjAddr: 0x6D8, symBinAddr: 0x13808, symSize: 0x48 }
-  - { offset: 0xD8AE, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVSHAASH4hash4intoys6HasherVz_tFTW', symObjAddr: 0x720, symBinAddr: 0x13850, symSize: 0x8 }
-  - { offset: 0xD907, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVSHAASH13_rawHashValue4seedS2i_tFTW', symObjAddr: 0x728, symBinAddr: 0x13858, symSize: 0x44 }
-  - { offset: 0xD99F, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVSQAASQ2eeoiySbx_xtFZTW', symObjAddr: 0x76C, symBinAddr: 0x1389C, symSize: 0x30 }
-  - { offset: 0xDA69, size: 0x8, addend: 0x0, symName: '_$sSo19NSRegularExpressionC7pattern7optionsABSS_So0aB7OptionsVtKcfcTO', symObjAddr: 0x844, symBinAddr: 0x13974, symSize: 0xDC }
-  - { offset: 0xDAB6, size: 0x8, addend: 0x0, symName: '_$sSlsE6prefixy11SubSequenceQzSiFSS_Tg5Tf4ng_n', symObjAddr: 0x19A0, symBinAddr: 0x14AD0, symSize: 0x8C }
-  - { offset: 0xDBAB, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorV08generateeF033_87943BBC087AD465C3B27C32A8A1670FLL12instanceName6ofTypeS2S_ypXptFZTf4nnd_n', symObjAddr: 0x1A2C, symBinAddr: 0x14B5C, symSize: 0x44C }
-  - { offset: 0xE022, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorV12securedValueACSgSS_tcfCTf4nd_n', symObjAddr: 0x1E78, symBinAddr: 0x14FA8, symSize: 0x1B0 }
+  - { offset: 0xC672, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVSHAASQWb', symObjAddr: 0x7A8, symBinAddr: 0x138D8, symSize: 0x4 }
+  - { offset: 0xC685, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVACSQAAWl', symObjAddr: 0x7AC, symBinAddr: 0x138DC, symSize: 0x40 }
+  - { offset: 0xC698, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVAA0eF0AAWI', symObjAddr: 0x7EC, symBinAddr: 0x1391C, symSize: 0x24 }
+  - { offset: 0xC6AB, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVACSHAAWl', symObjAddr: 0x810, symBinAddr: 0x13940, symSize: 0x40 }
+  - { offset: 0xC718, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF20CiscoInstanceManager10AccessInfoV_Tg5', symObjAddr: 0x92C, symBinAddr: 0x13A5C, symSize: 0x17C }
+  - { offset: 0xC87F, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSS_Tg5', symObjAddr: 0xAA8, symBinAddr: 0x13BD8, symSize: 0x108 }
+  - { offset: 0xC9D0, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF20CiscoInstanceManager16SecureDescriptor_p_10Foundation4DateVt_Tg5', symObjAddr: 0xBB0, symBinAddr: 0x13CE0, symSize: 0x194 }
+  - { offset: 0xCB37, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSu_Tg5', symObjAddr: 0xD44, symBinAddr: 0x13E74, symSize: 0x100 }
+  - { offset: 0xCC2F, size: 0x8, addend: 0x0, symName: '_$ss11_StringGutsV27_slowEnsureMatchingEncodingySS5IndexVAEF', symObjAddr: 0xE44, symBinAddr: 0x13F74, symSize: 0x78 }
+  - { offset: 0xCC5A, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataVyACxcSTRzs5UInt8V7ElementRtzlufcAC15_RepresentationOSRyAEGXEfU0_', symObjAddr: 0xEBC, symBinAddr: 0x13FEC, symSize: 0xCC }
+  - { offset: 0xCD10, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationO22withUnsafeMutableBytesyxxSwKXEKlFs16IndexingIteratorVySS8UTF8ViewVG_Sit_Tg5', symObjAddr: 0xF88, symBinAddr: 0x140B8, symSize: 0x398 }
+  - { offset: 0xCE11, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataVyACxcSTRzs5UInt8V7ElementRtzlufcAC15_RepresentationOSWXEfU_', symObjAddr: 0x1320, symBinAddr: 0x14450, symSize: 0x8C }
+  - { offset: 0xCE73, size: 0x8, addend: 0x0, symName: '_$s10Foundation13__DataStorageC22withUnsafeMutableBytes2in5applyxSnySiG_xSwKXEtKlFs16IndexingIteratorVySS8UTF8ViewVG_Sit_Tg5', symObjAddr: 0x13AC, symBinAddr: 0x144DC, symSize: 0xAC }
+  - { offset: 0xCF25, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationO15withUnsafeBytesyxxSWKXEKlFyt_Tg5063$s9CryptoKit12HashFunctionPAAE6update4datayqd___t10Foundation12B70ProtocolRd__lFy7Regions_7ElementQYd__XEfU_ySWXEfU_AA6SHA256V_AF0H0VTg50H3Kit0X0VTf1ncn_n', symObjAddr: 0x1458, symBinAddr: 0x14588, symSize: 0x1AC }
+  - { offset: 0xD012, size: 0x8, addend: 0x0, symName: '_$s10Foundation13__DataStorageC15withUnsafeBytes2in5applyxSnySiG_xSWKXEtKlFyt_Tg5063$s9CryptoKit12HashFunctionPAAE6update4datayqd___t10Foundation12B70ProtocolRd__lFy7Regions_7ElementQYd__XEfU_ySWXEfU_AA6SHA256V_AF0H0VTg50J3Kit0Z0VTf1nncn_n', symObjAddr: 0x1604, symBinAddr: 0x14734, symSize: 0xC4 }
+  - { offset: 0xD08A, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataVyACxcSTRzs5UInt8V7ElementRtzlufc8IteratorQz_SitSwXEfU1_SS8UTF8ViewV_TG5', symObjAddr: 0x16C8, symBinAddr: 0x147F8, symSize: 0x58 }
+  - { offset: 0xD157, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV06InlineB0VyAESWcfCTf4nd_n', symObjAddr: 0x1720, symBinAddr: 0x14850, symSize: 0xB4 }
+  - { offset: 0xD1C1, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV10LargeSliceVyAESWcfCTf4nd_n', symObjAddr: 0x17D4, symBinAddr: 0x14904, symSize: 0x74 }
+  - { offset: 0xD1D8, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV11InlineSliceVyAESWcfCTf4nd_n', symObjAddr: 0x1848, symBinAddr: 0x14978, symSize: 0x64 }
+  - { offset: 0xD203, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationOyAESWcfCTf4nd_n', symObjAddr: 0x18AC, symBinAddr: 0x149DC, symSize: 0x64 }
+  - { offset: 0xD254, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationO5countAESi_tcfCTf4nd_n', symObjAddr: 0x1910, symBinAddr: 0x14A40, symSize: 0x9C }
+  - { offset: 0xD446, size: 0x8, addend: 0x0, symName: '_$ss16PartialRangeFromVySS5IndexVGMa', symObjAddr: 0x2084, symBinAddr: 0x15164, symSize: 0x58 }
+  - { offset: 0xD459, size: 0x8, addend: 0x0, symName: '_$sSo20NSTextCheckingResultCMa', symObjAddr: 0x211C, symBinAddr: 0x151BC, symSize: 0x44 }
+  - { offset: 0xD46C, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationOWOy', symObjAddr: 0x2160, symBinAddr: 0x15200, symSize: 0x40 }
+  - { offset: 0xD47F, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationOWOe', symObjAddr: 0x21A0, symBinAddr: 0x15240, symSize: 0x40 }
+  - { offset: 0xD492, size: 0x8, addend: 0x0, symName: '_$s10Foundation15ContiguousBytes_pSgWOh', symObjAddr: 0x2270, symBinAddr: 0x15280, symSize: 0x48 }
+  - { offset: 0xD4A6, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataVyACxcSTRzs5UInt8V7ElementRtzlufc8IteratorQz_SitSwXEfU1_SS8UTF8ViewV_TG5TA', symObjAddr: 0x22B8, symBinAddr: 0x152C8, symSize: 0x18 }
+  - { offset: 0xD4B9, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataV15_RepresentationOSgWOe', symObjAddr: 0x22D0, symBinAddr: 0x152E0, symSize: 0x14 }
+  - { offset: 0xD53C, size: 0x8, addend: 0x0, symName: '_$s10Foundation4DataVyACxcSTRzs5UInt8V7ElementRtzlufCSS8UTF8ViewV_Tt0g5', symObjAddr: 0x144, symBinAddr: 0x13274, symSize: 0x4E8 }
+  - { offset: 0xD6B1, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVAA0eF0A2aDP5valueSSvgTW', symObjAddr: 0x62C, symBinAddr: 0x1375C, symSize: 0x2C }
+  - { offset: 0xD723, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVAA0eF0A2aDP12instanceName6ofTypexSgSS_ypXptcfCTW', symObjAddr: 0x658, symBinAddr: 0x13788, symSize: 0x68 }
+  - { offset: 0xD796, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVAA0eF0A2aDP12securedValuexSgSS_tcfCTW', symObjAddr: 0x6C0, symBinAddr: 0x137F0, symSize: 0x24 }
+  - { offset: 0xD7EF, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVSHAASH9hashValueSivgTW', symObjAddr: 0x6E4, symBinAddr: 0x13814, symSize: 0x48 }
+  - { offset: 0xD8AE, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVSHAASH4hash4intoys6HasherVz_tFTW', symObjAddr: 0x72C, symBinAddr: 0x1385C, symSize: 0x8 }
+  - { offset: 0xD907, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVSHAASH13_rawHashValue4seedS2i_tFTW', symObjAddr: 0x734, symBinAddr: 0x13864, symSize: 0x44 }
+  - { offset: 0xD99F, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorVSQAASQ2eeoiySbx_xtFZTW', symObjAddr: 0x778, symBinAddr: 0x138A8, symSize: 0x30 }
+  - { offset: 0xDA69, size: 0x8, addend: 0x0, symName: '_$sSo19NSRegularExpressionC7pattern7optionsABSS_So0aB7OptionsVtKcfcTO', symObjAddr: 0x850, symBinAddr: 0x13980, symSize: 0xDC }
+  - { offset: 0xDAB6, size: 0x8, addend: 0x0, symName: '_$sSlsE6prefixy11SubSequenceQzSiFSS_Tg5Tf4ng_n', symObjAddr: 0x19AC, symBinAddr: 0x14ADC, symSize: 0x8C }
+  - { offset: 0xDBAB, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorV08generateeF033_87943BBC087AD465C3B27C32A8A1670FLL12instanceName6ofTypeS2S_ypXptFZTf4nnd_n', symObjAddr: 0x1A38, symBinAddr: 0x14B68, symSize: 0x44C }
+  - { offset: 0xE022, size: 0x8, addend: 0x0, symName: '_$s20CiscoInstanceManager23DefaultSecureDescriptorV12securedValueACSgSS_tcfCTf4nd_n', symObjAddr: 0x1E84, symBinAddr: 0x14FB4, symSize: 0x1B0 }
 ...
