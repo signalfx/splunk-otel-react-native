@@ -1,6 +1,6 @@
 {
   "name": "@splunk/otel-session-replay-react-native",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Splunk Session Replay for React Native",
   "main": "./lib/module/index.js",
   "module": "./lib/module/index.js",
