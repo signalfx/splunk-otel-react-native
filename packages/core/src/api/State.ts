@@ -23,8 +23,9 @@ export type SplunkRumStatus =
   | { type: 'Running' }
   | {
       type: 'NotRunning';
-      reason: /** Agent not installed via `SplunkRum.install()`. */
-      | 'NotInstalled'
+      reason:
+        /** Agent not installed via `SplunkRum.install()`. */
+        | 'NotInstalled'
         /** Running in a subprocess (Android multi-process). */
         | 'Subprocess'
         /** Session was sampled out per `samplingRate`. */
