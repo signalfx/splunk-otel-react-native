@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "exceptions": [
+    {
+      "id": "1138808",
+      "package": "image-size",
+      "severity": "high",
+      "expires": "2026-09-15",
+      "owner": "@signalfx/mrum-react-native-maintainers",
+      "reason": "React Native 0.86.2 pins Metro 0.84.4, which pins image-size 1.2.1. No patched image-size release exists; remove this exception when Metro provides one."
+    },
+    {
+      "id": "1138809",
+      "package": "image-size",
+      "severity": "high",
+      "expires": "2026-09-15",
+      "owner": "@signalfx/mrum-react-native-maintainers",
+      "reason": "React Native 0.86.2 pins Metro 0.84.4, which pins image-size 1.2.1. No patched image-size release exists; remove this exception when Metro provides one."
+    }
+  ]
+}

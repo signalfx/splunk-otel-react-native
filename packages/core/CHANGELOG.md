@@ -7,6 +7,7 @@
 
 #### Changed
 * Bumped the native iOS RUM SDK to `2.4.1`.
+* Upgraded the SDK development and example-app baseline to React Native `0.86.2` and React `19.2.3`, including the matching New Architecture toolchain.
 
 ## 1.1.0
 

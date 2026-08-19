@@ -7,6 +7,9 @@ on:
     types:
       - checks_requested
 
+permissions:
+  contents: read
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -17,7 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+        with:
+          persist-credentials: false
 
       - name: Setup
         uses: ./.github/actions/setup
@@ -28,12 +33,23 @@ jobs:
       - name: Typecheck files
         run: yarn typecheck
 
+      - name: Verify vendored framework checksums
+        run: yarn check:framework-integrity
+
+      - name: Verify dependency policy
+        run: yarn check:dependencies
+
+      - name: Audit dependencies
+        run: yarn audit:dependencies
+
   test:
     name: Unit Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+        with:
+          persist-credentials: false
 
       - name: Setup
         uses: ./.github/actions/setup
@@ -53,7 +69,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+        with:
+          persist-credentials: false
 
       - name: Setup
         uses: ./.github/actions/setup
@@ -68,37 +86,28 @@ jobs:
           test -d packages/core/plugin/build || (echo "Missing plugin/build" && exit 1)
 
   build-android:
-    name: Build Android (${{ matrix.arch }} arch)
+    name: Build Android
     runs-on: ubuntu-latest
     needs: [build-library]
-    strategy:
-      fail-fast: false
-      matrix:
-        arch: [old, new]
-        include:
-          - arch: old
-            new_arch_enabled: false
-          - arch: new
-            new_arch_enabled: true
 
     env:
-      TURBO_CACHE_DIR: .turbo/android-${{ matrix.arch }}
-      ORG_GRADLE_PROJECT_newArchEnabled: ${{ matrix.new_arch_enabled }}
+      TURBO_CACHE_DIR: .turbo/android
 
     steps:
       - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+        with:
+          persist-credentials: false
 
       - name: Setup
         uses: ./.github/actions/setup
 
-      - name: Cache turborepo for Android (${{ matrix.arch }})
+      - name: Cache turborepo for Android
         uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
         with:
           path: ${{ env.TURBO_CACHE_DIR }}
-          key: ${{ runner.os }}-turborepo-android-${{ matrix.arch }}-${{ hashFiles('yarn.lock') }}
+          key: ${{ runner.os }}-turborepo-android-${{ hashFiles('yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-turborepo-android-${{ matrix.arch }}-
             ${{ runner.os }}-turborepo-android-
 
       - name: Check turborepo cache for Android
@@ -121,9 +130,9 @@ jobs:
         run: |
           echo "ANDROID_HOME: $ANDROID_HOME"
           echo "ANDROID_SDK_ROOT: $ANDROID_SDK_ROOT"
-          
+
           yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
-          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0"
 
       - name: Cache Gradle
         if: env.turbo_cache_hit != 1
@@ -132,65 +141,42 @@ jobs:
           path: |
             ~/.gradle/wrapper
             ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-${{ matrix.arch }}-${{ hashFiles('example/android/gradle/wrapper/gradle-wrapper.properties') }}
+          key: ${{ runner.os }}-gradle-${{ hashFiles('example/android/gradle/wrapper/gradle-wrapper.properties') }}
           restore-keys: |
-            ${{ runner.os }}-gradle-${{ matrix.arch }}-
             ${{ runner.os }}-gradle-
 
-      - name: Set architecture in gradle.properties
-        if: env.turbo_cache_hit != 1
-        run: |
-          sed -i "s/^newArchEnabled=.*/newArchEnabled=${{ matrix.new_arch_enabled }}/" example/android/gradle.properties
-          echo "Architecture setting:"
-          grep newArchEnabled example/android/gradle.properties
-
-      - name: Build example app for Android (${{ matrix.arch }})
+      - name: Build example app for Android
         env:
-          JAVA_OPTS: "-XX:MaxHeapSize=6g"
-          # Splunk configuration (injected via babel at build time)
-          SPLUNK_REALM: ${{ secrets.SPLUNK_REALM }}
-          SPLUNK_RUM_ACCESS_TOKEN: ${{ secrets.SPLUNK_RUM_ACCESS_TOKEN }}
-          SPLUNK_ENVIRONMENT: ci
+          JAVA_OPTS: '-XX:MaxHeapSize=6g'
         run: |
           yarn turbo run build:android --cache-dir="${{ env.TURBO_CACHE_DIR }}"
 
   build-ios:
-    name: Build iOS (${{ matrix.arch }} arch)
+    name: Build iOS
     runs-on: macos-14
     needs: [build-library]
-    strategy:
-      fail-fast: false
-      matrix:
-        arch: [old, new]
-        include:
-          - arch: old
-            new_arch_enabled: '0'
-            use_prebuilt_rncore: '0'
-          - arch: new
-            new_arch_enabled: '1'
-            use_prebuilt_rncore: '1'
 
     env:
       XCODE_VERSION: '16.2'
-      TURBO_CACHE_DIR: .turbo/ios-${{ matrix.arch }}
-      RCT_NEW_ARCH_ENABLED: ${{ matrix.new_arch_enabled }}
+      TURBO_CACHE_DIR: .turbo/ios
       RCT_USE_RN_DEP: 1
-      RCT_USE_PREBUILT_RNCORE: ${{ matrix.use_prebuilt_rncore }}
+      RCT_USE_PREBUILT_RNCORE: 1
 
     steps:
       - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+        with:
+          persist-credentials: false
 
       - name: Setup
         uses: ./.github/actions/setup
 
-      - name: Cache turborepo for iOS (${{ matrix.arch }})
+      - name: Cache turborepo for iOS
         uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
         with:
           path: ${{ env.TURBO_CACHE_DIR }}
-          key: ${{ runner.os }}-turborepo-ios-${{ matrix.arch }}-${{ hashFiles('yarn.lock') }}
+          key: ${{ runner.os }}-turborepo-ios-${{ hashFiles('yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-turborepo-ios-${{ matrix.arch }}-
             ${{ runner.os }}-turborepo-ios-
 
       - name: Check turborepo cache for iOS
@@ -214,38 +200,23 @@ jobs:
           fi
           xcodebuild -version
 
-      - name: Set architecture in Podfile
-        if: env.turbo_cache_hit != 1
-        run: |
-          if [[ "${{ matrix.new_arch_enabled }}" == "1" ]]; then
-            sed -i '' "s/^ENV\['RCT_NEW_ARCH_ENABLED'\] = '0'/ENV['RCT_NEW_ARCH_ENABLED'] = '1'/" example/ios/Podfile
-          else
-            sed -i '' "s/^ENV\['RCT_NEW_ARCH_ENABLED'\] = '1'/ENV['RCT_NEW_ARCH_ENABLED'] = '0'/" example/ios/Podfile
-          fi
-          echo "Architecture setting:"
-          head -1 example/ios/Podfile
-
       - name: Clean Pods
         if: env.turbo_cache_hit != 1
         run: |
           rm -rf example/ios/Pods
           rm -rf example/ios/build
-          rm -f example/ios/Podfile.lock
 
       - name: Install CocoaPods
         if: env.turbo_cache_hit != 1
         run: |
           cd example
           bundle install
-          bundle exec pod repo update --verbose
-          RCT_NEW_ARCH_ENABLED=${{ matrix.new_arch_enabled }} bundle exec pod install --project-directory=ios
+          # React Native 0.86.2 embeds the absolute hermes-compiler path in its
+          # evaluated podspec, so the Hermes SPEC CHECKSUM differs by runner
+          # workspace. Normal install still honors the committed pod versions.
+          bundle exec pod install --project-directory=ios
 
-      - name: Build example app for iOS (${{ matrix.arch }})
-        env:
-          # Splunk configuration (injected via babel at build time)
-          SPLUNK_REALM: ${{ secrets.SPLUNK_REALM }}
-          SPLUNK_RUM_ACCESS_TOKEN: ${{ secrets.SPLUNK_RUM_ACCESS_TOKEN }}
-          SPLUNK_ENVIRONMENT: ci
+      - name: Build example app for iOS
         run: |
           yarn turbo run build:ios --cache-dir="${{ env.TURBO_CACHE_DIR }}"
 

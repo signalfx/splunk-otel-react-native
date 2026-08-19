@@ -1,0 +1,60 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    cooldown:
+      default-days: 7
+      semver-major-days: 30
+      semver-minor-days: 14
+      semver-patch-days: 7
+    open-pull-requests-limit: 10
+    groups:
+      react-native:
+        applies-to: version-updates
+        patterns:
+          - react
+          - react-native
+          - '@react-native/*'
+          - '@react-native-community/*'
+      navigation:
+        applies-to: version-updates
+        patterns:
+          - '@react-navigation/*'
+          - react-native-safe-area-context
+          - react-native-screens
+      development-tooling:
+        applies-to: version-updates
+        dependency-type: development
+        patterns:
+          - '*'
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    cooldown:
+      default-days: 7
+
+  - package-ecosystem: bundler
+    directory: /example
+    schedule:
+      interval: weekly
+      day: monday
+    cooldown:
+      default-days: 7
+
+  - package-ecosystem: gradle
+    directories:
+      - /example/android
+      - /packages/core/android
+      - /packages/session-replay/android
+    schedule:
+      interval: weekly
+      day: monday
+    cooldown:
+      default-days: 7

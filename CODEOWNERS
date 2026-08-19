@@ -4,4 +4,8 @@
 
 # CODEOWNERS File:
 # Changes to this CODEOWNERS file specifically require approval from MRUM React Native admins.
-.github/CODEOWNERS @signalfx/mrum-react-native-admins
+/CODEOWNERS @signalfx/mrum-react-native-admins
+
+# Workflow and local action changes cross repository trust boundaries and require admin review.
+/.github/workflows/ @signalfx/mrum-react-native-admins
+/.github/actions/ @signalfx/mrum-react-native-admins

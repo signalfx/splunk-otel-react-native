@@ -32,19 +32,19 @@ export const withSplunkAndroid: ConfigPlugin<SplunkOtelPluginProps> = (
   config,
   props
 ) => {
-  return withProjectBuildGradle(config, (config) => {
-    if (config.modResults.language !== 'groovy') {
+  return withProjectBuildGradle(config, (modConfig) => {
+    if (modConfig.modResults.language !== 'groovy') {
       throw new Error(
         'Cannot configure Splunk OTel for Android because the project build.gradle is not in Groovy'
       );
     }
 
-    config.modResults.contents = addMavenRepository(
-      config.modResults.contents,
+    modConfig.modResults.contents = addMavenRepository(
+      modConfig.modResults.contents,
       props.androidMavenRepository ?? SPLUNK_MAVEN_URL
     );
 
-    return config;
+    return modConfig;
   });
 };
 

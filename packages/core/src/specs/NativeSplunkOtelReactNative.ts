@@ -64,10 +64,7 @@ export type NativeStatus =
   | {
       type: 'NotRunning';
       reason:
-        | 'NotInstalled'
-        | 'Subprocess'
-        | 'SampledOut'
-        | 'UnsupportedOsVersion';
+        'NotInstalled' | 'Subprocess' | 'SampledOut' | 'UnsupportedOsVersion';
     };
 
 export type NativeState = {

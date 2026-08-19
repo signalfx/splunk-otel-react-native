@@ -25,8 +25,7 @@ export type SessionReplayStackParamList = {
 export type TabParamList = {
   TestsTab: NavigatorScreenParams<TestsStackParamList> | undefined;
   SessionReplayTab:
-    | NavigatorScreenParams<SessionReplayStackParamList>
-    | undefined;
+    NavigatorScreenParams<SessionReplayStackParamList> | undefined;
   NavigationTab: NavigatorScreenParams<NavigationStackParamList> | undefined;
   ProfileTab: NavigatorScreenParams<ProfileStackParamList> | undefined;
 };

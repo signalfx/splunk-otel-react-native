@@ -1,20 +1,30 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": [".nvmrc", ".yarnrc.yml"],
+  "globalDependencies": [
+    ".nvmrc",
+    ".yarnrc.yml",
+    "example/Gemfile.lock",
+    "example/ios/Podfile.lock",
+    "example/android/app/gradle.lockfile",
+    "example/android/settings-gradle.lockfile",
+    "packages/*/android/gradle.lockfile",
+    "packages/core/ios/frameworks/manifest.json"
+  ],
   "globalEnv": ["NODE_ENV"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["src/**/*.ts", "src/**/*.tsx", "package.json", "tsconfig*.json"],
+      "inputs": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "package.json",
+        "tsconfig*.json"
+      ],
       "outputs": ["lib/**", "plugin/build/**"]
     },
     "build:android": {
       "dependsOn": ["build"],
-      "env": [
-        "ANDROID_HOME",
-        "ORG_GRADLE_PROJECT_newArchEnabled",
-        "JAVA_OPTS"
-      ],
+      "env": ["ANDROID_HOME", "JAVA_OPTS"],
       "inputs": [
         "package.json",
         "android/**",
@@ -31,11 +41,7 @@
     },
     "build:ios": {
       "dependsOn": ["build"],
-      "env": [
-        "RCT_NEW_ARCH_ENABLED",
-        "RCT_USE_RN_DEP",
-        "RCT_USE_PREBUILT_RNCORE"
-      ],
+      "env": ["RCT_USE_RN_DEP", "RCT_USE_PREBUILT_RNCORE"],
       "inputs": [
         "package.json",
         "*.podspec",

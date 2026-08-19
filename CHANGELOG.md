@@ -9,6 +9,12 @@
 
 #### Changed
 * Bumped the native iOS RUM SDK to `2.4.1`.
+* Upgraded the SDK development and example-app baseline to React Native `0.86.2` and React `19.2.3`, including the matching New Architecture toolchain.
+
+### `@splunk/otel-session-replay-react-native`
+
+#### Changed
+* Upgraded the development baseline to React Native `0.86.2` and bumped the native Splunk Android session replay SDK to `2.3.2`.
 
 ## 1.1.0
 
