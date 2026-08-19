@@ -211,7 +211,10 @@ jobs:
         run: |
           cd example
           bundle install
-          bundle exec pod install --deployment --project-directory=ios
+          # React Native 0.86.2 embeds the absolute hermes-compiler path in its
+          # evaluated podspec, so the Hermes SPEC CHECKSUM differs by runner
+          # workspace. Normal install still honors the committed pod versions.
+          bundle exec pod install --project-directory=ios
 
       - name: Build example app for iOS
         run: |
