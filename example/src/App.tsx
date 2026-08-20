@@ -27,6 +27,8 @@ import { reactNavigationIntegration } from '@splunk/otel-react-native/react-navi
 
 import { RootNavigator } from './navigation/RootNavigator';
 import { config as appConfig, isConfigValid } from './config';
+import { SplunkRum } from '@splunk/otel-react-native';
+import { NativeTestBridge } from './NativeTestBridge';
 
 enableScreens(true);
 
@@ -146,6 +148,22 @@ export default function App() {
 
       await SplunkSessionReplay.instance.start();
       console.log('[App] Session Replay started');
+
+      // Repro helper: release-build JS logs are not visible over the CLI, so
+      // persist the session id to a file that can be pulled from a real device
+      // with `devicectl device copy from` to look the session up in the RUM UI.
+      try {
+        const session = await SplunkRum.instance.session.state();
+        if (session?.id && NativeTestBridge.isAvailable) {
+          await NativeTestBridge.persistSessionId(session.id);
+          console.log('[App] Persisted session id:', session.id);
+        }
+      } catch (persistError: any) {
+        console.warn(
+          '[App] Failed to persist session id:',
+          persistError?.message ?? String(persistError)
+        );
+      }
     } catch (e: any) {
       console.error('[App] SDK initialization error:', e?.message ?? String(e));
     }
