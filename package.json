@@ -80,6 +80,7 @@
     "flatted@npm:^3.2.9": "3.4.4",
     "handlebars@npm:^4.7.7": "4.7.9",
     "ip-address@npm:^10.0.1": "10.4.0",
+    "joi": "17.13.4",
     "lodash@npm:^4.15.0": "4.18.1",
     "lodash@npm:^4.17.21": "4.18.1",
     "minimatch@npm:^3.0.4": "3.1.5",
