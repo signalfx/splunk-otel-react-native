@@ -11,6 +11,10 @@ const manifestPaths = [
   'packages/session-replay/package.json',
 ];
 const exactVersion = /^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/;
+const frozenPlatformVersions = new Map([
+  ['react', '19.2.3'],
+  ['react-native', '0.86.2'],
+]);
 const errors = [];
 
 for (const manifestPath of manifestPaths) {
@@ -31,6 +35,17 @@ for (const manifestPath of manifestPaths) {
           `${manifestPath}: ${dependencyType}.${name} must use an exact or workspace version, found ${version}`
         );
       }
+
+      let frozenVersion = frozenPlatformVersions.get(name);
+      if (!frozenVersion && name.startsWith('@react-native/')) {
+        frozenVersion = '0.86.2';
+      }
+
+      if (frozenVersion && version !== frozenVersion) {
+        errors.push(
+          `${manifestPath}: ${dependencyType}.${name} must remain at ${frozenVersion}, found ${version}`
+        );
+      }
     }
   }
 
@@ -39,6 +54,16 @@ for (const manifestPath of manifestPaths) {
       errors.push(
         `${manifestPath}: resolutions.${name} must use an exact version, found ${version}`
       );
+    }
+  }
+
+  if (manifestPath === 'package.json') {
+    for (const [name, frozenVersion] of frozenPlatformVersions) {
+      if (manifest.resolutions?.[name] !== frozenVersion) {
+        errors.push(
+          `${manifestPath}: resolutions.${name} must remain at ${frozenVersion}`
+        );
+      }
     }
   }
 }

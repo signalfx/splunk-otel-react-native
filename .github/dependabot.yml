@@ -12,13 +12,27 @@ updates:
       semver-minor-days: 14
       semver-patch-days: 7
     open-pull-requests-limit: 10
+    ignore:
+      # React Native bundles a version-matched React renderer. Keep this train
+      # frozen until a dedicated platform-upgrade project moves all packages.
+      - dependency-name: react
+        versions:
+          - '>19.2.3'
+      - dependency-name: react-native
+        versions:
+          - '>0.86.2'
+      - dependency-name: '@react-native/*'
+        versions:
+          - '>0.86.2'
     groups:
-      react-native:
+      react-native-platform:
         applies-to: version-updates
         patterns:
-          - react
           - react-native
           - '@react-native/*'
+      react-native-cli:
+        applies-to: version-updates
+        patterns:
           - '@react-native-community/*'
       navigation:
         applies-to: version-updates
@@ -26,11 +40,6 @@ updates:
           - '@react-navigation/*'
           - react-native-safe-area-context
           - react-native-screens
-      development-tooling:
-        applies-to: version-updates
-        dependency-type: development
-        patterns:
-          - '*'
 
   - package-ecosystem: github-actions
     directory: /
