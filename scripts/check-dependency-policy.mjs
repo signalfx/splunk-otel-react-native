@@ -71,6 +71,7 @@ for (const manifestPath of manifestPaths) {
 const yarnConfig = readFileSync(resolve(root, '.yarnrc.yml'), 'utf8');
 const requiredYarnSettings = [
   ['dependency scripts disabled', /^enableScripts:\s+false$/m],
+  ['hardened mode enabled', /^enableHardenedMode:\s+true$/m],
   ['immutable installs enabled', /^enableImmutableInstalls:\s+true$/m],
   ['checksum failures enabled', /^checksumBehavior:\s+throw$/m],
   [
@@ -90,6 +91,22 @@ if (/npmAuth(?:Token|Ident):/m.test(yarnConfig)) {
   errors.push(
     '.yarnrc.yml: repository configuration must not contain npm credentials'
   );
+}
+
+const npmConfig = readFileSync(resolve(root, '.npmrc'), 'utf8');
+const requiredNpmSettings = [
+  ['dependency scripts disabled', /^ignore-scripts=true$/m],
+  ['package lock generation disabled', /^package-lock=false$/m],
+];
+
+for (const [description, pattern] of requiredNpmSettings) {
+  if (!pattern.test(npmConfig)) {
+    errors.push(`.npmrc: ${description}`);
+  }
+}
+
+if (/(?:_auth|authToken|password)\s*=/im.test(npmConfig)) {
+  errors.push('.npmrc: repository configuration must not contain credentials');
 }
 
 const exceptionPolicy = JSON.parse(

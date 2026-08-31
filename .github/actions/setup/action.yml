@@ -23,7 +23,11 @@ runs:
         key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock', '.yarnrc.yml', '.yarn/releases/*') }}-${{ hashFiles('**/package.json', '!node_modules/**') }}
 
     - name: Verify and install dependencies
-      run: yarn install --immutable
+      run: yarn install --immutable --mode=skip-build --check-resolutions
+      shell: bash
+
+    - name: Reject unapproved native install artifacts
+      run: yarn check:install-artifacts
       shell: bash
 
     - name: Cache dependencies

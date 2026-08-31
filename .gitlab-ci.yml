@@ -14,7 +14,8 @@ build_artifacts:
       - dist/
   script:
     - corepack enable
-    - yarn install --immutable
+    - yarn install --immutable --mode=skip-build --check-resolutions
+    - yarn check:install-artifacts
     - yarn build
     - rm -rf dist
     - mkdir -p dist

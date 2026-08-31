@@ -18,6 +18,7 @@
     "write:framework-integrity": "node scripts/framework-integrity.mjs --write",
     "check:framework-integrity": "node scripts/framework-integrity.mjs --check",
     "check:dependencies": "node scripts/check-dependency-policy.mjs",
+    "check:install-artifacts": "node scripts/check-install-artifacts.mjs",
     "audit:dependencies": "yarn npm audit --all --recursive --severity high",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "typecheck": "yarn workspace @splunk/otel-react-native typecheck && yarn workspace @splunk/otel-session-replay-react-native typecheck",
