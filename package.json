@@ -77,7 +77,6 @@
     "brace-expansion@npm:^2.0.1": "2.1.4",
     "defu@npm:^6.1.4": "6.1.7",
     "fast-uri@npm:^3.0.1": "3.1.5",
-    "fast-xml-parser@npm:^4.4.1": "4.5.7",
     "flatted@npm:^3.2.9": "3.4.4",
     "handlebars@npm:^4.7.7": "4.7.9",
     "ip-address@npm:^10.0.1": "10.4.0",
