@@ -2406,9 +2406,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/config-plugins@npm:57.0.7":
-  version: 57.0.7
-  resolution: "@expo/config-plugins@npm:57.0.7"
+"@expo/config-plugins@npm:57.0.8":
+  version: 57.0.8
+  resolution: "@expo/config-plugins@npm:57.0.8"
   dependencies:
     "@expo/config-types": "npm:^57.0.2"
     "@expo/json-file": "npm:~11.0.1"
@@ -2423,7 +2423,7 @@ __metadata:
     slugify: "npm:^1.6.6"
     xcode: "npm:^3.0.1"
     xml2js: "npm:0.6.0"
-  checksum: 10/5f52a4443c70345e2faa4cb0338c43ee8f01739c8425b371beaa3eae068c0f00f9547d364a670548139396842ec802eb43913f16ea0b4a565358bee1fa7c540d
+  checksum: 10/ce44c73c586bfae94e934480e749830a826a1de333fa5ceab02c5e11e02b869e0283050fe749b64fa64b35523750d29e36f38dc40057fcc9af5b773a17824e39
   languageName: node
   linkType: hard
 
@@ -3996,7 +3996,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@splunk/otel-react-native@workspace:packages/core"
   dependencies:
-    "@expo/config-plugins": "npm:57.0.7"
+    "@expo/config-plugins": "npm:57.0.8"
     "@opentelemetry/api": "npm:1.9.1"
     "@react-native/babel-preset": "npm:0.86.2"
     "@react-native/jest-preset": "npm:0.86.2"

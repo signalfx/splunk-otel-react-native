@@ -99,7 +99,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@expo/config-plugins": "57.0.7",
+    "@expo/config-plugins": "57.0.8",
     "@opentelemetry/api": "1.9.1",
     "@react-native/babel-preset": "0.86.2",
     "@react-native/jest-preset": "0.86.2",
