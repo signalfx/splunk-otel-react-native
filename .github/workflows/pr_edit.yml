@@ -9,6 +9,7 @@ permissions:
 
 jobs:
   validate_pr_title:
+    if: github.event.pull_request.user.login != 'dependabot[bot]' || github.event.pull_request.user.type != 'Bot'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout trusted validator scripts
