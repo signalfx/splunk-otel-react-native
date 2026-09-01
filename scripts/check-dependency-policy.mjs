@@ -131,9 +131,14 @@ for (const exception of exceptionPolicy.exceptions) {
     );
   }
 
-  if (!exception.owner || !exception.reason) {
+  if (
+    !exception.owner ||
+    !exception.reason ||
+    !exception.dependencyPath ||
+    !exception.mitigation
+  ) {
     errors.push(
-      `security/audit-exceptions.json: advisory ${exception.id} requires an owner and reason`
+      `security/audit-exceptions.json: advisory ${exception.id} requires an owner, reason, dependency path, and mitigation`
     );
   }
 
@@ -144,6 +149,31 @@ for (const exception of exceptionPolicy.exceptions) {
   ) {
     errors.push(
       `security/audit-exceptions.json: advisory ${exception.id} must expire within 90 days`
+    );
+  }
+}
+
+for (const observation of exceptionPolicy.observations || []) {
+  const expires = Date.parse(`${observation.expires}T23:59:59Z`);
+
+  if (
+    !observation.owner ||
+    !observation.reason ||
+    !observation.dependencyPath ||
+    !observation.mitigation
+  ) {
+    errors.push(
+      `security/audit-exceptions.json: observation ${observation.id} requires an owner, reason, dependency path, and mitigation`
+    );
+  }
+
+  if (
+    !Number.isFinite(expires) ||
+    expires <= now ||
+    expires - now > maximumExceptionLifetime
+  ) {
+    errors.push(
+      `security/audit-exceptions.json: observation ${observation.id} must expire within 90 days`
     );
   }
 }
