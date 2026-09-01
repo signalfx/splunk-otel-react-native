@@ -33,6 +33,17 @@
       "dependencyPath": "@expo/config-plugins 57.0.8 > xcode 3.0.1 > uuid 7.0.3",
       "mitigation": "Do not force uuid across a major boundary. Monitor xcode for a compatible update and retain the install-time execution controls.",
       "reason": "The vulnerable buffer-writing forms of uuid v3, v5, and v6 are not reachable. xcode 3.0.1 imports only uuid.v4() without a caller-provided buffer."
+    },
+    {
+      "id": "1147955",
+      "package": "decode-uri-component",
+      "version": "0.2.2",
+      "severity": "moderate",
+      "expires": "2026-11-29",
+      "owner": "@signalfx/mrum-react-native-maintainers",
+      "dependencyPath": "@react-navigation/native 7.3.16 > @react-navigation/core 7.21.12 > query-string 7.1.3 > decode-uri-component 0.2.2",
+      "mitigation": "Keep the example app free of unbounded attacker-controlled query strings. Monitor React Navigation and query-string for a compatible fixed dependency range.",
+      "reason": "Forcing the fixed 0.5.0 release breaks query-string 7.1.3 at runtime because the decoder's module API changed. This dependency is confined to the private example app and is not shipped by either SDK package."
     }
   ]
 }
