@@ -8,7 +8,7 @@ apply plugin: "com.splunk.rum-httpurlconnection-auto-plugin"
 // Pin Byte Buddy explicitly because Splunk network instrumentation depends on its bytecode behavior.
 configurations.matching { it.name.toLowerCase().contains("bytebuddyclasspath") }.all {
     resolutionStrategy {
-        force("net.bytebuddy:byte-buddy:1.18.11")
+        force("net.bytebuddy:byte-buddy:1.18.12")
     }
 }
 
