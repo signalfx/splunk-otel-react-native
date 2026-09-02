@@ -15,7 +15,7 @@ runs:
 
     - name: Restore dependencies
       id: yarn-cache
-      uses: actions/cache/restore@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+      uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
       with:
         path: |
           **/node_modules
@@ -23,12 +23,16 @@ runs:
         key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock', '.yarnrc.yml', '.yarn/releases/*') }}-${{ hashFiles('**/package.json', '!node_modules/**') }}
 
     - name: Verify and install dependencies
-      run: yarn install --immutable
+      run: yarn install --immutable --mode=skip-build --check-resolutions
+      shell: bash
+
+    - name: Reject unapproved native install artifacts
+      run: yarn check:install-artifacts
       shell: bash
 
     - name: Cache dependencies
       if: steps.yarn-cache.outputs.cache-hit != 'true'
-      uses: actions/cache/save@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+      uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
       with:
         path: |
           **/node_modules

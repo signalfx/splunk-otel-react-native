@@ -23,13 +23,13 @@ buildscript {
         classpath("com.splunk:rum-okhttp3-auto-plugin:${splunkRumVersion}")
         classpath("com.splunk:rum-httpurlconnection-auto-plugin:${splunkRumVersion}")
     }
+
+    configurations.classpath {
+        resolutionStrategy.activateDependencyLocking()
+    }
 }
 
 allprojects {
-    dependencyLocking {
-        lockAllConfigurations()
-    }
-
     repositories {
         google()
         mavenCentral()

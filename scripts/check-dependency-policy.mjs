@@ -11,6 +11,10 @@ const manifestPaths = [
   'packages/session-replay/package.json',
 ];
 const exactVersion = /^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/;
+const frozenPlatformVersions = new Map([
+  ['react', '19.2.3'],
+  ['react-native', '0.86.2'],
+]);
 const errors = [];
 
 for (const manifestPath of manifestPaths) {
@@ -31,6 +35,17 @@ for (const manifestPath of manifestPaths) {
           `${manifestPath}: ${dependencyType}.${name} must use an exact or workspace version, found ${version}`
         );
       }
+
+      let frozenVersion = frozenPlatformVersions.get(name);
+      if (!frozenVersion && name.startsWith('@react-native/')) {
+        frozenVersion = '0.86.2';
+      }
+
+      if (frozenVersion && version !== frozenVersion) {
+        errors.push(
+          `${manifestPath}: ${dependencyType}.${name} must remain at ${frozenVersion}, found ${version}`
+        );
+      }
     }
   }
 
@@ -41,11 +56,22 @@ for (const manifestPath of manifestPaths) {
       );
     }
   }
+
+  if (manifestPath === 'package.json') {
+    for (const [name, frozenVersion] of frozenPlatformVersions) {
+      if (manifest.resolutions?.[name] !== frozenVersion) {
+        errors.push(
+          `${manifestPath}: resolutions.${name} must remain at ${frozenVersion}`
+        );
+      }
+    }
+  }
 }
 
 const yarnConfig = readFileSync(resolve(root, '.yarnrc.yml'), 'utf8');
 const requiredYarnSettings = [
   ['dependency scripts disabled', /^enableScripts:\s+false$/m],
+  ['hardened mode enabled', /^enableHardenedMode:\s+true$/m],
   ['immutable installs enabled', /^enableImmutableInstalls:\s+true$/m],
   ['checksum failures enabled', /^checksumBehavior:\s+throw$/m],
   [
@@ -65,6 +91,22 @@ if (/npmAuth(?:Token|Ident):/m.test(yarnConfig)) {
   errors.push(
     '.yarnrc.yml: repository configuration must not contain npm credentials'
   );
+}
+
+const npmConfig = readFileSync(resolve(root, '.npmrc'), 'utf8');
+const requiredNpmSettings = [
+  ['dependency scripts disabled', /^ignore-scripts=true$/m],
+  ['package lock generation disabled', /^package-lock=false$/m],
+];
+
+for (const [description, pattern] of requiredNpmSettings) {
+  if (!pattern.test(npmConfig)) {
+    errors.push(`.npmrc: ${description}`);
+  }
+}
+
+if (/(?:_auth|authToken|password)\s*=/im.test(npmConfig)) {
+  errors.push('.npmrc: repository configuration must not contain credentials');
 }
 
 const exceptionPolicy = JSON.parse(
@@ -89,9 +131,14 @@ for (const exception of exceptionPolicy.exceptions) {
     );
   }
 
-  if (!exception.owner || !exception.reason) {
+  if (
+    !exception.owner ||
+    !exception.reason ||
+    !exception.dependencyPath ||
+    !exception.mitigation
+  ) {
     errors.push(
-      `security/audit-exceptions.json: advisory ${exception.id} requires an owner and reason`
+      `security/audit-exceptions.json: advisory ${exception.id} requires an owner, reason, dependency path, and mitigation`
     );
   }
 
@@ -102,6 +149,31 @@ for (const exception of exceptionPolicy.exceptions) {
   ) {
     errors.push(
       `security/audit-exceptions.json: advisory ${exception.id} must expire within 90 days`
+    );
+  }
+}
+
+for (const observation of exceptionPolicy.observations || []) {
+  const expires = Date.parse(`${observation.expires}T23:59:59Z`);
+
+  if (
+    !observation.owner ||
+    !observation.reason ||
+    !observation.dependencyPath ||
+    !observation.mitigation
+  ) {
+    errors.push(
+      `security/audit-exceptions.json: observation ${observation.id} requires an owner, reason, dependency path, and mitigation`
+    );
+  }
+
+  if (
+    !Number.isFinite(expires) ||
+    expires <= now ||
+    expires - now > maximumExceptionLifetime
+  ) {
+    errors.push(
+      `security/audit-exceptions.json: observation ${observation.id} must expire within 90 days`
     );
   }
 }
