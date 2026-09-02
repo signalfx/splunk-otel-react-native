@@ -79,7 +79,7 @@
     "react": "19.2.3",
     "react-native": "0.86.2",
     "react-native-builder-bob": "0.43.0",
-    "typescript": "5.9.3"
+    "typescript": "7.0.2"
   },
   "engines": {
     "node": ">=22.13.0"
