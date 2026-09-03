@@ -22,7 +22,26 @@ class SplunkTestModule: NSObject {
   static func requiresMainQueueSetup() -> Bool {
     return true
   }
-  
+
+  // MARK: - Repro helper
+
+  /// Persists the current RUM session id to the app tmp dir so it can be pulled
+  /// from a real device with `devicectl device copy from` when release-build
+  /// logs are not visible over the CLI (used for the background-launch repro).
+  @objc
+  func persistSessionId(_ sessionId: String,
+                        resolve: @escaping RCTPromiseResolveBlock,
+                        reject: @escaping RCTPromiseRejectBlock) {
+    let path = (NSTemporaryDirectory() as NSString)
+      .appendingPathComponent("splunk_session_id.txt")
+    do {
+      try (sessionId + "\n").write(toFile: path, atomically: true, encoding: .utf8)
+      resolve(path)
+    } catch {
+      reject("PERSIST_FAILED", error.localizedDescription, error)
+    }
+  }
+
   // MARK: - Crash Simulation
   
   @objc
