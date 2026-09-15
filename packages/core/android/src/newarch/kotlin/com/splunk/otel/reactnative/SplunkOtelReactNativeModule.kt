@@ -108,8 +108,8 @@ class SplunkOtelReactNativeModule(reactContext: ReactApplicationContext) :
   override fun customStartWorkflow(name: String, promise: Promise) =
     implementation.customStartWorkflow(name, promise)
 
-  override fun customEndWorkflow(handle: Double, promise: Promise) =
-    implementation.customEndWorkflow(handle, promise)
+  override fun customEndWorkflow(handle: Double, attributes: ReadableMap, promise: Promise) =
+    implementation.customEndWorkflow(handle, attributes, promise)
 
   override fun reportError(
     type: String,

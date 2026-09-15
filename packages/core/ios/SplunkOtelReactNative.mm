@@ -566,20 +566,25 @@ RCT_REMAP_METHOD(customStartWorkflow,
 #ifndef RCT_NEW_ARCH_ENABLED
 RCT_REMAP_METHOD(customEndWorkflow,
                  customEndWorkflowHandle:(nonnull NSNumber *)handle
+                 attributes:(NSDictionary *)attributes
                  resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {
-  [self customEndWorkflow:[handle doubleValue] resolve:resolve reject:reject];
+  [self customEndWorkflow:[handle doubleValue] attributes:attributes resolve:resolve reject:reject];
 }
 #endif
 
 // New architecture receives `double` from codegen, old arch receives NSNumber
 - (void)customEndWorkflow:(double)handle
+               attributes:(NSDictionary *)attributes
                  resolve:(RCTPromiseResolveBlock)resolve
                  reject:(RCTPromiseRejectBlock)reject
 {
   NSNumber *handleNumber = [NSNumber numberWithDouble:handle];
-  [self.impl customEndWorkflowWithHandle:handleNumber resolve:resolve reject:reject];
+  [self.impl customEndWorkflowWithHandle:handleNumber
+                              attributes:attributes
+                                 resolve:resolve
+                                  reject:reject];
 }
 
 #pragma mark - Error Tracking

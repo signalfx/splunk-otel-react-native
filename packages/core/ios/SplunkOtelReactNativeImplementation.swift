@@ -262,9 +262,13 @@ public class SplunkOtelReactNativeImplementation: NSObject {
 
   @objc
   public func customEndWorkflowWithHandle(_ handle: NSNumber,
+                                          attributes: NSDictionary,
                                           resolve: @escaping RCTPromiseResolveBlock,
                                           reject: @escaping RCTPromiseRejectBlock) {
-    customTrackingHandler.endWorkflow(handle, resolve: resolve, reject: reject)
+    customTrackingHandler.endWorkflow(handle,
+                                      attributes: attributes,
+                                      resolve: resolve,
+                                      reject: reject)
   }
 
   @objc

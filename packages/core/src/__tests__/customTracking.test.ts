@@ -122,3 +122,62 @@ describe('CustomTracking.trackError', () => {
     expect(error).toBeInstanceOf(Error);
   });
 });
+
+describe('WorkflowHandle.end', () => {
+  let tracking: CustomTracking;
+
+  beforeEach(() => {
+    tracking = new CustomTracking();
+    mockCustomStartWorkflow.mockClear();
+    mockCustomEndWorkflow.mockClear();
+  });
+
+  it('sends an empty attribute set when called without attributes', async () => {
+    const workflow = await tracking.startWorkflow('checkout');
+
+    await workflow.end();
+
+    expect(mockCustomEndWorkflow).toHaveBeenCalledTimes(1);
+    expect(mockCustomEndWorkflow).toHaveBeenCalledWith(7, {});
+  });
+
+  it('forwards caller attributes with their types preserved', async () => {
+    const workflow = await tracking.startWorkflow('checkout');
+
+    await workflow.end({
+      'checkout.outcome': 'success',
+      'checkout.items': 3,
+      'checkout.retried': false,
+    });
+
+    expect(mockCustomEndWorkflow).toHaveBeenCalledWith(7, {
+      'checkout.outcome': 'success',
+      'checkout.items': 3,
+      'checkout.retried': false,
+    });
+  });
+
+  it('strips attribute keys reserved by the native module', async () => {
+    const workflow = await tracking.startWorkflow('checkout');
+
+    await workflow.end({
+      component: 'not-allowed',
+      'workflow.name': 'not-allowed',
+      'checkout.outcome': 'success',
+    });
+
+    expect(mockCustomEndWorkflow).toHaveBeenCalledWith(7, {
+      'checkout.outcome': 'success',
+    });
+  });
+
+  it('passes the handle returned by startWorkflow', async () => {
+    mockCustomStartWorkflow.mockResolvedValueOnce(42);
+
+    const workflow = await tracking.startWorkflow('checkout');
+    await workflow.end();
+
+    expect(mockCustomStartWorkflow).toHaveBeenCalledWith('checkout');
+    expect(mockCustomEndWorkflow).toHaveBeenCalledWith(42, {});
+  });
+});

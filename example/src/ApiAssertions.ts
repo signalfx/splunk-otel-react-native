@@ -282,6 +282,19 @@ export async function runApiAssertionTests(): Promise<ApiTestReport> {
       );
       await handle.end();
       assertions.assert(true, 'CustomTracking', 'workflow.end() completed');
+
+      const handleWithAttributes = await sdk.customTracking.startWorkflow(
+        'test_api_workflow_with_attributes'
+      );
+      await handleWithAttributes.end({
+        'demo.outcome': 'success',
+        'demo.items': 3,
+      });
+      assertions.assert(
+        true,
+        'CustomTracking',
+        'workflow.end(attributes) completed'
+      );
     } catch (e: any) {
       assertions.assert(
         false,

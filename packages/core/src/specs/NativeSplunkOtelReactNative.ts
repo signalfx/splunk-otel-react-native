@@ -138,7 +138,10 @@ export interface Spec extends TurboModule {
     attributes: { [key: string]: unknown }
   ): Promise<void>;
   customStartWorkflow(name: string): Promise<number>;
-  customEndWorkflow(handle: number): Promise<void>;
+  customEndWorkflow(
+    handle: number,
+    attributes: { [key: string]: unknown }
+  ): Promise<void>;
 
   // Error tracking
   // Limited to flat primitives + JSON strings for codegen compat.

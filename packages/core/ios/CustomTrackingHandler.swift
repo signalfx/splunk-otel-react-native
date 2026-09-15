@@ -40,10 +40,14 @@ public class CustomTrackingHandler: NSObject {
     resolve(NSNumber(value: handle))
   }
 
+  /// Ends the workflow span, applying any caller attributes first so the keys the
+  /// native SDK owns take precedence on conflict.
   public func endWorkflow(_ handle: NSNumber,
+                          attributes: NSDictionary,
                           resolve: @escaping RCTPromiseResolveBlock,
                           reject: @escaping RCTPromiseRejectBlock) {
     let span = WorkflowSpanStore.shared.remove(handle.intValue)
+    span?.setAttributes(AttributeConverter.buildSpanAttributes(from: attributes))
     span?.end()
     resolve(nil)
   }
