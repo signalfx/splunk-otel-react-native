@@ -122,6 +122,29 @@ android {
     }
 }
 
+/**
+ * Makes the app's CMake configuration wait for the workspace libraries' codegen.
+ *
+ * Autolinking writes `add_subdirectory(...)` entries for every codegen'd library
+ * into Android-autolinking.cmake. Libraries from node_modules point at checked-in
+ * `src/main/jni` folders, but the two workspace packages point at
+ * `build/generated/source/codegen/jni`, which `gradlew clean` deletes. Nothing in
+ * the generated build graph orders the app's CMake configuration after those
+ * libraries regenerate it, so after a clean the configuration intermittently
+ * fails with "add_subdirectory given source ... which is not an existing
+ * directory", depending on which task happens to run first.
+ */
+def workspaceCodegenTasks = [
+    ":splunk_otel-react-native:generateCodegenArtifactsFromSchema",
+    ":splunk_otel-session-replay-react-native:generateCodegenArtifactsFromSchema",
+]
+
+tasks.configureEach { task ->
+    if (task.name.startsWith("configureCMake") || task.name.startsWith("buildCMake")) {
+        task.dependsOn(workspaceCodegenTasks)
+    }
+}
+
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
