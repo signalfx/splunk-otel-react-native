@@ -15,10 +15,19 @@
  */
 
 export { SplunkSessionReplay } from './SessionReplay';
-export { SessionReplayStatus, MaskType } from './model';
+export { SensitiveView } from './components/SensitiveView';
+export type { SensitiveViewProps } from './components/SensitiveView';
+export {
+  SessionReplayStatus,
+  MaskType,
+  RenderingMode,
+  Sensitivity,
+  NativeViewClass,
+} from './model';
 export type {
   MaskRect,
   MaskElement,
   RecordingMask,
   SessionReplayState,
+  NativeViewClassName,
 } from './model';

@@ -17,11 +17,13 @@
 package com.splunk.otel.reactnative.sessionreplay
 
 import com.facebook.react.BaseReactPackage
+import com.facebook.react.bridge.ModuleSpec
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import java.util.HashMap
+import javax.inject.Provider
 
 class SplunkSessionReplayPackage : BaseReactPackage() {
   override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
@@ -31,6 +33,9 @@ class SplunkSessionReplayPackage : BaseReactPackage() {
       null
     }
   }
+
+  override fun getViewManagers(reactContext: ReactApplicationContext): List<ModuleSpec> =
+    listOf(ModuleSpec.viewManagerSpec(Provider { SplunkSensitiveViewManager() }))
 
   override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
     return ReactModuleInfoProvider {

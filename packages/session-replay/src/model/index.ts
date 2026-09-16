@@ -16,5 +16,9 @@
 
 export { SessionReplayStatus } from './SessionReplayStatus';
 export { MaskType } from './MaskType';
+export { RenderingMode } from './RenderingMode';
+export { Sensitivity } from './Sensitivity';
+export { NativeViewClass } from './NativeViewClass';
+export type { NativeViewClassName } from './NativeViewClass';
 export type { MaskRect, MaskElement, RecordingMask } from './RecordingMask';
 export type { SessionReplayState } from './SessionReplayState';

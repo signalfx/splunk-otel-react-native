@@ -25,8 +25,26 @@ enum SessionReplaySerializer {
     return [
       "status": serializeStatus(state.status),
       "isRecording": state.isRecording,
-      "samplingRate": state.samplingRate
+      "samplingRate": state.samplingRate,
+      "renderingMode": serializeRenderingMode(state.renderingMode)
     ]
+  }
+
+  // MARK: - Rendering Mode
+
+  static func serializeRenderingMode(_ mode: RenderingMode) -> String {
+    switch mode {
+    case .native: return "native"
+    case .wireframeOnly: return "wireframeOnly"
+    }
+  }
+
+  static func deserializeRenderingMode(_ mode: String) -> RenderingMode? {
+    switch mode {
+    case "native": return .native
+    case "wireframeOnly": return .wireframeOnly
+    default: return nil
+    }
   }
 
   // MARK: - Status
@@ -45,6 +63,16 @@ enum SessionReplaySerializer {
       case .storageLimitReached: return "storageLimitReached"
       case .disabledBySampling: return "disabledBySampling"
       }
+    }
+  }
+
+  // MARK: - Sensitivity
+
+  static func serializeSensitivity(_ isSensitive: Bool?) -> String {
+    switch isSensitive {
+    case .some(true): return "sensitive"
+    case .some(false): return "notSensitive"
+    case .none: return "unset"
     }
   }
 

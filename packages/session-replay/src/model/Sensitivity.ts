@@ -14,19 +14,18 @@
  * limitations under the License.
  */
 
-import type { SessionReplayStatus } from './SessionReplayStatus';
-import type { RenderingMode } from './RenderingMode';
-
 /**
- * Read-only snapshot of the session replay module's current state.
+ * Effective sensitivity of a native view class.
+ *
+ * Sensitivity is tri-state on both platforms: an explicit `true`/`false`, or
+ * "unset", in which case the value is inherited from the nearest superclass
+ * that does have a value, and finally from the SDK default.
  */
-export interface SessionReplayState {
-  /** Current recording status. */
-  status: SessionReplayStatus;
-  /** Whether the module is actively recording. */
-  isRecording: boolean;
-  /** The sampling rate applied at install time, in the [0, 1] range. */
-  samplingRate: number;
-  /** The capture mode currently in effect. */
-  renderingMode: RenderingMode;
+export enum Sensitivity {
+  /** Explicitly sensitive - the area is replaced by the masking pattern. */
+  SENSITIVE = 'sensitive',
+  /** Explicitly not sensitive - overrides any inherited default. */
+  NOT_SENSITIVE = 'notSensitive',
+  /** No explicit value - inherits from the superclass chain / SDK default. */
+  UNSET = 'unset',
 }
