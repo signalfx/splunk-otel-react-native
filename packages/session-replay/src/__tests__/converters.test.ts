@@ -21,6 +21,7 @@ import {
 } from '../bridge/converters';
 import { SessionReplayStatus } from '../model/SessionReplayStatus';
 import { MaskType } from '../model/MaskType';
+import { RenderingMode } from '../model/RenderingMode';
 
 describe('converters', () => {
   describe('fromNativeState', () => {
@@ -29,12 +30,14 @@ describe('converters', () => {
         status: 'recording',
         isRecording: true,
         samplingRate: 1.0,
+        renderingMode: 'native',
       });
 
       expect(state).toEqual({
         status: SessionReplayStatus.RECORDING,
         isRecording: true,
         samplingRate: 1.0,
+        renderingMode: RenderingMode.NATIVE,
       });
     });
 
@@ -43,13 +46,26 @@ describe('converters', () => {
         status: 'notStarted',
         isRecording: false,
         samplingRate: 0.5,
+        renderingMode: 'wireframeOnly',
       });
 
       expect(state).toEqual({
         status: SessionReplayStatus.NOT_RECORDING_NOT_STARTED,
         isRecording: false,
         samplingRate: 0.5,
+        renderingMode: RenderingMode.WIREFRAME_ONLY,
       });
+    });
+
+    it('falls back to native for an unknown rendering mode', () => {
+      const state = fromNativeState({
+        status: 'recording',
+        isRecording: true,
+        samplingRate: 1.0,
+        renderingMode: 'someFutureMode',
+      });
+
+      expect(state.renderingMode).toBe(RenderingMode.NATIVE);
     });
 
     it('maps all not-recording causes', () => {
@@ -84,6 +100,7 @@ describe('converters', () => {
           status: native,
           isRecording: false,
           samplingRate: 1.0,
+          renderingMode: 'native',
         });
         expect(state.status).toBe(expected);
       }
@@ -94,6 +111,7 @@ describe('converters', () => {
         status: 'unknownFutureStatus',
         isRecording: false,
         samplingRate: 1.0,
+        renderingMode: 'native',
       });
 
       expect(state.status).toBe(SessionReplayStatus.NOT_RECORDING_NOT_STARTED);
