@@ -109,10 +109,15 @@
   },
   "codegenConfig": {
     "name": "SplunkSessionReplaySpec",
-    "type": "modules",
+    "type": "all",
     "jsSrcsDir": "src",
     "android": {
       "javaPackageName": "com.splunk.otel.reactnative.sessionreplay"
+    },
+    "ios": {
+      "componentProvider": {
+        "SplunkSensitiveView": "SplunkSensitiveViewComponentView"
+      }
     }
   },
   "jest": {

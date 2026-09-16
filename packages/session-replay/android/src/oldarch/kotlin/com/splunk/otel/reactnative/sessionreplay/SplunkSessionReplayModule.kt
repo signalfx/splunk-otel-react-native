@@ -27,7 +27,7 @@ import com.facebook.react.module.annotations.ReactModule
 class SplunkSessionReplayModule(reactContext: ReactApplicationContext) :
   ReactContextBaseJavaModule(reactContext) {
 
-  private val implementation = SplunkSessionReplayImplementation()
+  private val implementation = SplunkSessionReplayImplementation(reactContext)
 
   override fun getName(): String = NAME
 
@@ -46,6 +46,30 @@ class SplunkSessionReplayModule(reactContext: ReactApplicationContext) :
   @ReactMethod
   fun setRecordingMask(mask: ReadableMap?, promise: Promise) =
     implementation.setRecordingMask(mask, promise)
+
+  @ReactMethod
+  fun setViewSensitivity(reactTag: Double, isSensitive: Boolean, promise: Promise) =
+    implementation.setViewSensitivity(reactTag, isSensitive, promise)
+
+  @ReactMethod
+  fun clearViewSensitivity(reactTag: Double, promise: Promise) =
+    implementation.clearViewSensitivity(reactTag, promise)
+
+  @ReactMethod
+  fun setClassSensitivity(className: String, isSensitive: Boolean, promise: Promise) =
+    implementation.setClassSensitivity(className, isSensitive, promise)
+
+  @ReactMethod
+  fun clearClassSensitivity(className: String, promise: Promise) =
+    implementation.clearClassSensitivity(className, promise)
+
+  @ReactMethod
+  fun getClassSensitivity(className: String, promise: Promise) =
+    implementation.getClassSensitivity(className, promise)
+
+  @ReactMethod
+  fun setRenderingMode(mode: String, promise: Promise) =
+    implementation.setRenderingMode(mode, promise)
 
   companion object {
     const val NAME = "SplunkSessionReplay"
