@@ -138,4 +138,122 @@ RCT_REMAP_METHOD(setRecordingMask,
   [self.impl setRecordingMaskWithMask:mask resolve:resolve reject:reject];
 }
 
+#pragma mark - Preferences
+
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(setRenderingMode,
+                 setRenderingModeMode:(NSString *)mode
+                 resolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self setRenderingMode:mode resolve:resolve reject:reject];
+}
+#endif
+
+- (void)setRenderingMode:(NSString *)mode
+                 resolve:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl setRenderingModeWithMode:mode resolve:resolve reject:reject];
+}
+
+#pragma mark - Instance Sensitivity
+
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(setViewSensitivity,
+                 setViewSensitivityReactTag:(double)reactTag
+                 isSensitive:(BOOL)isSensitive
+                 resolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self setViewSensitivity:reactTag isSensitive:isSensitive resolve:resolve reject:reject];
+}
+#endif
+
+- (void)setViewSensitivity:(double)reactTag
+               isSensitive:(BOOL)isSensitive
+                   resolve:(RCTPromiseResolveBlock)resolve
+                    reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl setViewSensitivityWithReactTag:@(reactTag)
+                                isSensitive:isSensitive
+                                    resolve:resolve
+                                     reject:reject];
+}
+
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(clearViewSensitivity,
+                 clearViewSensitivityReactTag:(double)reactTag
+                 resolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self clearViewSensitivity:reactTag resolve:resolve reject:reject];
+}
+#endif
+
+- (void)clearViewSensitivity:(double)reactTag
+                     resolve:(RCTPromiseResolveBlock)resolve
+                      reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl clearViewSensitivityWithReactTag:@(reactTag) resolve:resolve reject:reject];
+}
+
+#pragma mark - Class Sensitivity
+
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(setClassSensitivity,
+                 setClassSensitivityClassName:(NSString *)className
+                 isSensitive:(BOOL)isSensitive
+                 resolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self setClassSensitivity:className isSensitive:isSensitive resolve:resolve reject:reject];
+}
+#endif
+
+- (void)setClassSensitivity:(NSString *)className
+                isSensitive:(BOOL)isSensitive
+                    resolve:(RCTPromiseResolveBlock)resolve
+                     reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl setClassSensitivityWithClassName:className
+                                  isSensitive:isSensitive
+                                      resolve:resolve
+                                       reject:reject];
+}
+
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(clearClassSensitivity,
+                 clearClassSensitivityClassName:(NSString *)className
+                 resolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self clearClassSensitivity:className resolve:resolve reject:reject];
+}
+#endif
+
+- (void)clearClassSensitivity:(NSString *)className
+                      resolve:(RCTPromiseResolveBlock)resolve
+                       reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl clearClassSensitivityWithClassName:className resolve:resolve reject:reject];
+}
+
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_METHOD(getClassSensitivity,
+                 getClassSensitivityClassName:(NSString *)className
+                 resolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  [self getClassSensitivity:className resolve:resolve reject:reject];
+}
+#endif
+
+- (void)getClassSensitivity:(NSString *)className
+                    resolve:(RCTPromiseResolveBlock)resolve
+                     reject:(RCTPromiseRejectBlock)reject
+{
+  [self.impl getClassSensitivityWithClassName:className resolve:resolve reject:reject];
+}
+
 @end

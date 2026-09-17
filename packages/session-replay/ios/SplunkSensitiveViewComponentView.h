@@ -14,11 +14,22 @@
  * limitations under the License.
  */
 
-export { SessionReplayStatus } from './SessionReplayStatus';
-export { MaskType } from './MaskType';
-export { RenderingMode } from './RenderingMode';
-export { Sensitivity } from './Sensitivity';
-export { NativeViewClass } from './NativeViewClass';
-export type { NativeViewClassRef } from './NativeViewClass';
-export type { MaskRect, MaskElement, RecordingMask } from './RecordingMask';
-export type { SessionReplayState } from './SessionReplayState';
+#ifdef RCT_NEW_ARCH_ENABLED
+
+#import <React/RCTViewComponentView.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+/**
+ * Host view backing the `<SensitiveView>` component.
+ *
+ * Subclassing RCTViewComponentView means the whole ViewProps surface - borders,
+ * radii, background, overflow - is handled by React Native as usual, and this
+ * only has to add the sensitivity flag.
+ */
+@interface SplunkSensitiveViewComponentView : RCTViewComponentView
+@end
+
+NS_ASSUME_NONNULL_END
+
+#endif

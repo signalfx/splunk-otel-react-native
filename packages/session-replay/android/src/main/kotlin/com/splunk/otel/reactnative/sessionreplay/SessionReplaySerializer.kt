@@ -20,7 +20,9 @@ import android.graphics.Rect
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
+import com.facebook.react.uimanager.PixelUtil
 import com.splunk.rum.integration.sessionreplay.api.RecordingMask
+import com.splunk.rum.integration.sessionreplay.api.RenderingMode
 import com.splunk.rum.integration.sessionreplay.api.State
 import com.splunk.rum.integration.sessionreplay.api.Status
 
@@ -32,9 +34,23 @@ internal object SessionReplaySerializer {
     return WritableNativeMap().apply {
       putString("status", serializeStatus(state.status))
       putBoolean("isRecording", state.status.isRecording)
-      
+
       putDouble("samplingRate", state.samplingRate.toDouble())
+      putString("renderingMode", serializeRenderingMode(state.renderingMode))
     }
+  }
+
+  // MARK: - Rendering Mode
+
+  fun serializeRenderingMode(mode: RenderingMode): String = when (mode) {
+    RenderingMode.NATIVE -> "native"
+    RenderingMode.WIREFRAME_ONLY -> "wireframeOnly"
+  }
+
+  fun deserializeRenderingMode(mode: String): RenderingMode? = when (mode) {
+    "native" -> RenderingMode.NATIVE
+    "wireframeOnly" -> RenderingMode.WIREFRAME_ONLY
+    else -> null
   }
 
   // MARK: - Status
@@ -66,13 +82,19 @@ internal object SessionReplaySerializer {
     }
   }
 
+  /**
+   * The JavaScript API expresses mask rects in React Native layout units, but
+   * [RecordingMask.Element] rects are in physical device pixels. Convert on the
+   * way out so the same coordinates mean the same thing on both platforms,
+   * where iOS `CGRect` points already match layout units.
+   */
   private fun serializeMaskElement(element: RecordingMask.Element): WritableNativeMap {
     return WritableNativeMap().apply {
-      putDouble("x", element.rect.left.toDouble())
-      putDouble("y", element.rect.top.toDouble())
+      putDouble("x", toLayoutUnits(element.rect.left))
+      putDouble("y", toLayoutUnits(element.rect.top))
 
-      putDouble("width", (element.rect.right - element.rect.left).toDouble())
-      putDouble("height", (element.rect.bottom - element.rect.top).toDouble())
+      putDouble("width", toLayoutUnits(element.rect.right - element.rect.left))
+      putDouble("height", toLayoutUnits(element.rect.bottom - element.rect.top))
 
       putString("type", when (element.type) {
         RecordingMask.Element.Type.COVERING -> "covering"
@@ -81,6 +103,22 @@ internal object SessionReplaySerializer {
     }
   }
 
+  private fun toLayoutUnits(pixels: Int): Double =
+    PixelUtil.toDIPFromPixel(pixels.toFloat()).toDouble()
+
+  private fun toPixels(layoutUnits: Double): Int =
+    Math.round(PixelUtil.toPixelFromDIP(layoutUnits.toFloat()))
+
+  // MARK: - Sensitivity
+
+  fun serializeSensitivity(isSensitive: Boolean?): String = when (isSensitive) {
+    true -> "sensitive"
+    false -> "notSensitive"
+    null -> "unset"
+  }
+
+  // MARK: - Recording Mask
+
   fun deserializeRecordingMask(map: ReadableMap?): RecordingMask? {
     if (map == null) return null
     val elementsArray = map.getArray("elements") ?: return null
@@ -88,11 +126,11 @@ internal object SessionReplaySerializer {
     val elements = (0 until elementsArray.size()).mapNotNull { i ->
       val item = elementsArray.getMap(i) ?: return@mapNotNull null
 
-      val x = item.getDouble("x").toInt()
-      val y = item.getDouble("y").toInt()
+      val x = toPixels(item.getDouble("x"))
+      val y = toPixels(item.getDouble("y"))
 
-      val width = item.getDouble("width").toInt()
-      val height = item.getDouble("height").toInt()
+      val width = toPixels(item.getDouble("width"))
+      val height = toPixels(item.getDouble("height"))
 
       val typeStr = if (item.hasKey("type")) item.getString("type") else "covering"
       val maskType = if (typeStr == "erasing") {

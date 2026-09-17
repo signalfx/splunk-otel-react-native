@@ -2,7 +2,24 @@
 
 ## Unreleased
 
-* TBD
+### Added
+
+* `SensitiveView` component, which masks everything rendered inside it in session replay recordings. Note that masking and un-masking are not symmetric: `sensitive={true}` covers the whole subtree, while `sensitive={false}` applies to that view alone — sensitivity is resolved per view and never consults an ancestor. To exempt an element from a class-level rule, use `setViewSensitivity` with that element's own ref; to carve a region out of a masked area, use an erasing recording mask.
+* Per-view and per-class sensitivity on `SplunkSessionReplay.instance`: `setViewSensitivity`, `clearViewSensitivity`, `setClassSensitivity`, `clearClassSensitivity`, `getClassSensitivity`.
+* `maskAllText`, `maskAllImages` and `maskWebViews` convenience helpers. Neither native SDK has a global masking switch, so these are built on the per-class API.
+* `NativeViewClass` constants mapping React Native primitives onto the native view classes the SDK defaults key off, so class rules work on both platforms without hardcoding names. Each entry lists the classes for both React Native architectures, since iOS mounts different classes under each and both are compiled in — selecting a single name would resolve successfully and then mask nothing. Class rules apply to every name that resolves and reject only if none do.
+* `Sensitivity` and `RenderingMode` enums.
+* `setRenderingMode`, and `renderingMode` on the `getState` snapshot.
+
+### Changed
+
+* **Recording mask coordinates are now React Native layout units on both platforms.** Previously values were passed to the native SDKs unchanged, which meant a rect authored from `onLayout` or `measureInWindow` was correct on iOS (points) but roughly three times too small on Android (physical device pixels). If you were compensating for that on Android, remove the scaling.
+* Web views remain unmasked by default, matching both Splunk native agents, which clear the underlying SDKs' default at install. Call `maskWebViews()` to restore masking.
+
+### Notes
+
+* Sensitivity requested before the agent finishes installing is retained and applied once it becomes available. This covers all three paths — `SensitiveView`, `setViewSensitivity`, and the class-level rules behind `maskAllText` and friends. `SplunkRumProvider` renders its children synchronously while installing from an effect, so any of them can be reached first, and the pre-install sensitivity API discards writes without reporting an error.
+* When using the imperative `setViewSensitivity` on a view you do not own, clear it when your component unmounts. Both platforms recycle views, and a leaked exemption can leave content visible that a class rule should mask.
 
 ## 1.2.0
 
