@@ -4,6 +4,10 @@
 
 * TBD
 
+## 1.3.0
+
+* Version bump in sync with `@splunk/otel-session-replay-react-native`.
+
 ## 1.2.0
 
 ### Added

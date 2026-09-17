@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* TBD
+
+## 1.3.0
+
 ### Added
 
 * `SensitiveView` component, which masks everything rendered inside it in session replay recordings. Note that masking and un-masking are not symmetric: `sensitive={true}` covers the whole subtree, while `sensitive={false}` applies to that view alone — sensitivity is resolved per view and never consults an ancestor. To exempt an element from a class-level rule, use `setViewSensitivity` with that element's own ref; to carve a region out of a masked area, use an erasing recording mask.
