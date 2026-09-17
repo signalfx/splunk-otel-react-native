@@ -1,6 +1,7 @@
 import { NativeModules, Platform } from 'react-native';
 
 interface NativeTestModuleType {
+  persistSessionId(sessionId: string): Promise<string>;
   simulateCrash(): Promise<void>;
   simulateANR(): Promise<void>;
   simulateSlowRender(): Promise<void>;
@@ -23,6 +24,10 @@ class TestBridge {
 
   get isAvailable(): boolean {
     return NativeTestModule !== null;
+  }
+
+  async persistSessionId(sessionId: string): Promise<string> {
+    return this.native.persistSessionId(sessionId);
   }
 
   async simulateCrash(): Promise<void> {

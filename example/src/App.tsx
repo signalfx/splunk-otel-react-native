@@ -1,4 +1,5 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import { ActivityIndicator, Text, View } from 'react-native';
 import {
   NavigationContainer,
   useNavigationContainerRef,
@@ -26,6 +27,8 @@ import { reactNavigationIntegration } from '@splunk/otel-react-native/react-navi
 
 import { RootNavigator } from './navigation/RootNavigator';
 import { config as appConfig, isConfigValid } from './config';
+import { SplunkRum } from '@splunk/otel-react-native';
+import { NativeTestBridge } from './NativeTestBridge';
 
 enableScreens(true);
 
@@ -35,6 +38,25 @@ enableScreens(true);
 const splunkNavigation = reactNavigationIntegration();
 
 console.log(`[Config] Valid: ${isConfigValid()}`);
+
+// Simulation hook for the iOS background-launch cold-start issue.
+//
+// The native React Native AppStartHandler anchors a cold start at the real (BSD)
+// process-start time and, per the Confluence design doc (section 3.4), the manual
+// `appStart.track(...)` path completes the span at the moment JS invokes tracking,
+// i.e. right after SplunkRum.install(). On a real iOS background launch the process
+// starts long before JavaScript boots and installs, so the whole gap is reported as
+// cold-start latency.
+//
+// We reproduce that anchoring deterministically (no APNs and no real background
+// launch needed) by delaying when the SplunkRumProvider mounts, which delays
+// install(). Set the delay (in seconds) at build time so it is inlined into the
+// bundle:
+//   SPLUNK_INSTALL_DELAY_SECONDS=25 yarn ios --device ...
+const INSTALL_DELAY_SECONDS = Number.parseInt(
+  process.env.SPLUNK_INSTALL_DELAY_SECONDS ?? '0',
+  10
+);
 
 // SDK Configuration using external config
 const agentConfig: AgentConfiguration = {
@@ -92,7 +114,28 @@ const modules = [
 
 export default function App() {
   const [installed, setInstalled] = useState(false);
+  // When a delay is configured, hold off mounting SplunkRumProvider (and thus
+  // install()) so the process-start -> install gap is inflated on purpose.
+  const [readyToInstall, setReadyToInstall] = useState(
+    INSTALL_DELAY_SECONDS <= 0
+  );
   const navigationRef = useNavigationContainerRef();
+
+  useEffect(() => {
+    if (INSTALL_DELAY_SECONDS <= 0) {
+      return;
+    }
+
+    console.log(
+      `[AppStart] Delaying SplunkRum.install() by ${INSTALL_DELAY_SECONDS}s ` +
+        'to simulate a late SDK init after an early process start.'
+    );
+    const timer = setTimeout(() => {
+      setReadyToInstall(true);
+    }, INSTALL_DELAY_SECONDS * 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const onReady = useCallback(async () => {
     try {
@@ -105,10 +148,43 @@ export default function App() {
 
       await SplunkSessionReplay.instance.start();
       console.log('[App] Session Replay started');
+
+      // Repro helper: release-build JS logs are not visible over the CLI, so
+      // persist the session id to a file that can be pulled from a real device
+      // with `devicectl device copy from` to look the session up in the RUM UI.
+      try {
+        const session = await SplunkRum.instance.session.state();
+        if (session?.id && NativeTestBridge.isAvailable) {
+          await NativeTestBridge.persistSessionId(session.id);
+          console.log('[App] Persisted session id:', session.id);
+        }
+      } catch (persistError: any) {
+        console.warn(
+          '[App] Failed to persist session id:',
+          persistError?.message ?? String(persistError)
+        );
+      }
     } catch (e: any) {
       console.error('[App] SDK initialization error:', e?.message ?? String(e));
     }
   }, [navigationRef]);
+
+  if (!readyToInstall) {
+    return (
+      <View
+        style={{
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <ActivityIndicator />
+        <Text style={{ marginTop: 12 }}>
+          {`Delaying SplunkRum.install() by ${INSTALL_DELAY_SECONDS}s\n(background-launch cold-start simulation)`}
+        </Text>
+      </View>
+    );
+  }
 
   return (
     <SplunkRumProvider
