@@ -29,5 +29,5 @@ export type {
   MaskElement,
   RecordingMask,
   SessionReplayState,
-  NativeViewClassName,
+  NativeViewClassRef,
 } from './model';

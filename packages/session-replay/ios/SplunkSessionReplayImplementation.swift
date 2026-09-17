@@ -109,18 +109,53 @@ public class SplunkSessionReplayImplementation: NSObject {
   ///
   /// The component owns its view, so it can set the flag on creation and clear
   /// it on recycle without resolving a React tag. `nil` removes the override.
+  ///
+  /// A view can mount before the agent is installed - `SplunkRumProvider`
+  /// renders its children synchronously and installs from an effect - and in
+  /// that state the sensitivity API is a proxy whose setter silently does
+  /// nothing. Since React Native does not re-apply an unchanged prop, the
+  /// request is retained and retried until it takes effect, so sensitive
+  /// content does not stay visible for the lifetime of the view.
   @objc
   public static func applySensitivity(for view: UIView, isSensitive: NSNumber?) {
-    let value = isSensitive?.boolValue
-
-    // Fabric mounts on the main thread, so this is normally already correct.
-    if Thread.isMainThread {
-      SplunkRum.shared.sessionReplay.sensitivity[view] = value
-    } else {
-      DispatchQueue.main.async {
-        SplunkRum.shared.sessionReplay.sensitivity[view] = value
-      }
+    onMain {
+      applyRetainingSensitivity(for: view, isSensitive: isSensitive?.boolValue, attempt: 0)
     }
+  }
+
+  @nonobjc
+  private static func applyRetainingSensitivity(for view: UIView,
+                                                isSensitive: Bool?,
+                                                attempt: Int) {
+    let sensitivity = SplunkRum.shared.sessionReplay.sensitivity
+    sensitivity[view] = isSensitive
+
+    // Clearing cannot be verified this way, and clearing against a
+    // non-operational proxy is a no-op either way, so only a request to mask
+    // or exempt is worth retrying.
+    guard let isSensitive else { return }
+
+    // The non-operational proxy's getter always reports nil, so a read-back
+    // that does not match means the write never landed.
+    if sensitivity[view] == isSensitive { return }
+
+    guard attempt < sensitivityRetryLimit else {
+      debugPrint("SplunkSessionReplay: sensitivity could not be applied; session replay is unavailable.")
+      return
+    }
+
+    DispatchQueue.main.asyncAfter(deadline: .now() + sensitivityRetryDelay) { [weak view] in
+      guard let view else { return }
+      applyRetainingSensitivity(for: view, isSensitive: isSensitive, attempt: attempt + 1)
+    }
+  }
+
+  /// Roughly ten seconds, which comfortably covers agent installation.
+  private static let sensitivityRetryLimit = 40
+  private static let sensitivityRetryDelay: TimeInterval = 0.25
+
+  private static func onMain(_ block: @escaping () -> Void) {
+    if Thread.isMainThread { block() } else { DispatchQueue.main.async(execute: block) }
   }
 
   // MARK: - Instance Sensitivity
@@ -163,22 +198,58 @@ public class SplunkSessionReplayImplementation: NSObject {
 
   /// Locates a mounted view by React tag.
   ///
-  /// Fabric assigns the React tag to `UIView.tag` when a component view is
-  /// taken from the recycle pool, so a hierarchy search finds it without
-  /// depending on the bridge - which no longer exists in bridgeless mode.
+  /// Searched by hand rather than with `viewWithTag:` because the two React
+  /// Native architectures store the tag differently. Fabric assigns it to
+  /// `UIView.tag` when a component view leaves the recycle pool, while the
+  /// legacy architecture keeps it in an associated object behind the
+  /// `reactTag` category property and leaves `UIView.tag` untouched - so
+  /// `viewWithTag:` would never find a legacy view.
+  ///
+  /// This avoids depending on the bridge, which does not exist in bridgeless
+  /// mode.
   private static func findView(withReactTag reactTag: Int) -> UIView? {
     guard reactTag != 0 else { return nil }
 
     for scene in UIApplication.shared.connectedScenes {
       guard let windowScene = scene as? UIWindowScene else { continue }
       for window in windowScene.windows {
-        if let view = window.viewWithTag(reactTag) {
+        if let view = findView(withReactTag: reactTag, in: window) {
           return view
         }
       }
     }
 
     return nil
+  }
+
+  private static func findView(withReactTag reactTag: Int, in view: UIView) -> UIView? {
+    if matches(view: view, reactTag: reactTag) {
+      return view
+    }
+
+    for subview in view.subviews {
+      if let match = findView(withReactTag: reactTag, in: subview) {
+        return match
+      }
+    }
+
+    return nil
+  }
+
+  private static let reactTagSelector = NSSelectorFromString("reactTag")
+
+  private static func matches(view: UIView, reactTag: Int) -> Bool {
+    if view.tag == reactTag {
+      return true
+    }
+
+    guard view.responds(to: reactTagSelector),
+          let legacyTag = view.value(forKey: "reactTag") as? NSNumber
+    else {
+      return false
+    }
+
+    return legacyTag.intValue == reactTag
   }
 
   // MARK: - Class Sensitivity

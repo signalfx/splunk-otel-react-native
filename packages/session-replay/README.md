@@ -143,6 +143,12 @@ mask element (below) rather than nesting.
 Class-level rules cover every current and future instance of a native view
 class, including subclasses.
 
+Each `NativeViewClass` entry is a set of class names rather than one name,
+because the two React Native architectures mount different iOS classes and both
+are compiled into the binary — so selecting by a single name would resolve
+successfully and then mask nothing. The rule is applied to every name that
+resolves, and only rejects if none do.
+
 ```tsx
 import {
   SplunkSessionReplay,

@@ -19,7 +19,13 @@ import type { SessionReplayState } from './model/SessionReplayState';
 import type { RecordingMask } from './model/RecordingMask';
 import { Sensitivity } from './model/Sensitivity';
 import { RenderingMode } from './model/RenderingMode';
-import { NativeViewClass } from './model/NativeViewClass';
+import {
+  NativeViewClass,
+  type NativeViewClassRef,
+} from './model/NativeViewClass';
+
+const toClassNames = (className: NativeViewClassRef): readonly string[] =>
+  typeof className === 'string' ? [className] : className;
 import {
   fromNativeState,
   fromNativeRecordingMask,
@@ -140,7 +146,12 @@ export class SplunkSessionReplay {
    * class, including its subclasses.
    *
    * Use the {@link NativeViewClass} constants rather than raw class names, so
-   * the same call works on both platforms.
+   * the same call works on both platforms and both React Native architectures.
+   *
+   * Accepts a set of class names, in which case it is applied to every one
+   * that the runtime can resolve. It rejects only if none of them resolve, so
+   * naming a class that is not linked - or one that belongs to the other
+   * architecture - is not an error on its own.
    *
    * @example
    * ```typescript
@@ -151,15 +162,22 @@ export class SplunkSessionReplay {
    * );
    * ```
    */
-  setClassSensitivity(className: string, isSensitive: boolean): Promise<void> {
-    return Native.setClassSensitivity(className, isSensitive);
+  setClassSensitivity(
+    className: NativeViewClassRef,
+    isSensitive: boolean
+  ): Promise<void> {
+    return this.forEachResolvable(className, (name) =>
+      Native.setClassSensitivity(name, isSensitive)
+    );
   }
 
   /**
    * Removes a class-level override, restoring the SDK default for that class.
    */
-  clearClassSensitivity(className: string): Promise<void> {
-    return Native.clearClassSensitivity(className);
+  clearClassSensitivity(className: NativeViewClassRef): Promise<void> {
+    return this.forEachResolvable(className, (name) =>
+      Native.clearClassSensitivity(name)
+    );
   }
 
   /**
@@ -168,9 +186,55 @@ export class SplunkSessionReplay {
    * Returns {@link Sensitivity.UNSET} when no explicit value was set, even if
    * the class is effectively sensitive through inheritance - for example
    * `ReactEditText`, which inherits its default from `android.widget.EditText`.
+   *
+   * Given a set of class names, reports the first explicit value found, since
+   * the names describe one component across architectures and at most one of
+   * them has mounted instances.
    */
-  async getClassSensitivity(className: string): Promise<Sensitivity> {
-    return toSensitivity(await Native.getClassSensitivity(className));
+  async getClassSensitivity(
+    className: NativeViewClassRef
+  ): Promise<Sensitivity> {
+    for (const name of toClassNames(className)) {
+      try {
+        const value = toSensitivity(await Native.getClassSensitivity(name));
+        if (value !== Sensitivity.UNSET) {
+          return value;
+        }
+      } catch {
+        // Not resolvable in this runtime; try the next name.
+      }
+    }
+
+    return Sensitivity.UNSET;
+  }
+
+  /**
+   * Applies `action` to every class name that the native runtime can resolve.
+   *
+   * Rejects with the last error only when nothing resolved, so that a set
+   * spanning both React Native architectures succeeds as long as the one in
+   * use is present.
+   */
+  private async forEachResolvable(
+    className: NativeViewClassRef,
+    action: (name: string) => Promise<void>
+  ): Promise<void> {
+    const names = toClassNames(className);
+    let applied = 0;
+    let lastError: unknown;
+
+    for (const name of names) {
+      try {
+        await action(name);
+        applied += 1;
+      } catch (error) {
+        lastError = error;
+      }
+    }
+
+    if (applied === 0) {
+      throw lastError ?? new Error(`No class resolved for ${names.join(', ')}`);
+    }
   }
 
   /**

@@ -16,12 +16,17 @@
 
 package com.splunk.otel.reactnative.sessionreplay
 
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
+import android.view.View
 import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewManager
 import com.splunk.rum.integration.sessionreplay.api.SessionReplay
+import java.lang.ref.WeakReference
+import java.util.WeakHashMap
 
 /**
  * View manager backing the `<SensitiveView>` component.
@@ -45,39 +50,84 @@ class SplunkSensitiveViewManager : ReactViewManager() {
 
   override fun getName(): String = NAME
 
+  /** Sensitivity requested for views that could not be marked yet. */
+  private val pending = WeakHashMap<View, Boolean>()
+
+  private val handler = Handler(Looper.getMainLooper())
+
   /**
    * Applies session replay sensitivity to the view itself.
    *
    * Because the flag lives on a view this manager owns, it is set when the
    * view is created and released in [onDropViewInstance] - there is no React
    * tag to resolve and nothing for the JavaScript layer to remember.
+   *
+   * A view can mount before the agent is installed, since `SplunkRumProvider`
+   * renders its children synchronously and installs from an effect. React
+   * Native will not re-apply an unchanged prop, so failing here once would
+   * leave the view unmarked for its whole lifetime. The request is therefore
+   * retained and retried until it lands.
    */
   @ReactProp(name = "sensitive", defaultBoolean = true)
   fun setSensitive(view: ReactViewGroup, isSensitive: Boolean) {
-    try {
-      SessionReplay.instance.sensitivity.setViewInstanceSensitivity(view, isSensitive)
-    } catch (t: Throwable) {
-      // Session replay may not be installed. Masking is best-effort here; the
-      // imperative API reports failures to callers that need to know.
-      Log.w(TAG, "setSensitive() - failed", t)
+    if (applySensitivity(view, isSensitive)) {
+      pending.remove(view)
+      return
     }
+
+    pending[view] = isSensitive
+    scheduleRetry(view, attempt = 0)
   }
 
   override fun onDropViewInstance(view: ReactViewGroup) {
+    pending.remove(view)
+
     // Android recycles views, and instance sensitivity is stored as a view tag
     // that would otherwise outlive this component and mask whatever is mounted
     // next.
-    try {
-      SessionReplay.instance.sensitivity.setViewInstanceSensitivity(view, null)
-    } catch (t: Throwable) {
-      Log.w(TAG, "onDropViewInstance() - failed to clear sensitivity", t)
-    }
+    applySensitivity(view, null)
 
     super.onDropViewInstance(view)
+  }
+
+  /** Returns whether the value was applied, rather than throwing. */
+  private fun applySensitivity(view: View, isSensitive: Boolean?): Boolean =
+    try {
+      SessionReplay.instance.sensitivity.setViewInstanceSensitivity(view, isSensitive)
+      true
+    } catch (t: Throwable) {
+      // Session replay is not installed yet, or not installed at all.
+      false
+    }
+
+  private fun scheduleRetry(view: View, attempt: Int) {
+    if (attempt >= RETRY_LIMIT) {
+      pending.remove(view)
+      Log.w(TAG, "sensitivity could not be applied; session replay is unavailable")
+      return
+    }
+
+    // Held weakly so a pending retry can never keep a detached view alive.
+    val viewRef = WeakReference(view)
+
+    handler.postDelayed({
+      val target = viewRef.get() ?: return@postDelayed
+      val desired = pending[target] ?: return@postDelayed
+
+      if (applySensitivity(target, desired)) {
+        pending.remove(target)
+      } else {
+        scheduleRetry(target, attempt + 1)
+      }
+    }, RETRY_DELAY_MS)
   }
 
   companion object {
     const val NAME = "SplunkSensitiveView"
     private const val TAG = "SplunkSensitiveView"
+
+    /** Roughly ten seconds, which comfortably covers agent installation. */
+    private const val RETRY_LIMIT = 40
+    private const val RETRY_DELAY_MS = 250L
   }
 }

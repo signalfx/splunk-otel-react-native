@@ -61,20 +61,61 @@ describe('sensitivity', () => {
       ).resolves.toBe(Sensitivity.SENSITIVE);
     });
 
-    it('maps maskAllText onto the platform text class', async () => {
+    it('applies maskAllText to every class name for the platform', async () => {
       await SplunkSessionReplay.instance.maskAllText();
-      expect(native.setClassSensitivity).toHaveBeenCalledWith(
-        NativeViewClass.TEXT,
-        true
-      );
+
+      for (const name of NativeViewClass.TEXT) {
+        expect(native.setClassSensitivity).toHaveBeenCalledWith(name, true);
+      }
     });
 
     it('supports unmasking through the same helper', async () => {
       await SplunkSessionReplay.instance.maskAllImages(false);
-      expect(native.setClassSensitivity).toHaveBeenCalledWith(
-        NativeViewClass.IMAGE,
-        false
+
+      for (const name of NativeViewClass.IMAGE) {
+        expect(native.setClassSensitivity).toHaveBeenCalledWith(name, false);
+      }
+    });
+
+    // A class set spans both React Native architectures, so the names for the
+    // one not in use are expected to be unresolvable.
+    it('succeeds when only some class names resolve', async () => {
+      native.setClassSensitivity
+        .mockRejectedValueOnce(new Error('E_SESSION_REPLAY_UNKNOWN_CLASS'))
+        .mockResolvedValueOnce(undefined);
+
+      await expect(
+        SplunkSessionReplay.instance.setClassSensitivity(
+          ['MissingClass', 'PresentClass'],
+          true
+        )
+      ).resolves.toBeUndefined();
+    });
+
+    it('rejects only when no class name resolves', async () => {
+      native.setClassSensitivity.mockRejectedValue(
+        new Error('E_SESSION_REPLAY_UNKNOWN_CLASS')
       );
+
+      await expect(
+        SplunkSessionReplay.instance.setClassSensitivity(
+          ['MissingA', 'MissingB'],
+          true
+        )
+      ).rejects.toThrow('E_SESSION_REPLAY_UNKNOWN_CLASS');
+    });
+
+    it('skips unresolvable names when reading back', async () => {
+      native.getClassSensitivity
+        .mockRejectedValueOnce(new Error('E_SESSION_REPLAY_UNKNOWN_CLASS'))
+        .mockResolvedValueOnce('sensitive');
+
+      await expect(
+        SplunkSessionReplay.instance.getClassSensitivity([
+          'MissingClass',
+          'PresentClass',
+        ])
+      ).resolves.toBe(Sensitivity.SENSITIVE);
     });
   });
 });

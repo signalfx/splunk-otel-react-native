@@ -22,6 +22,7 @@ import {
   Sensitivity,
   SplunkSessionReplay,
   type MaskRect,
+  type NativeViewClassRef,
   type RecordingMask,
   type SessionReplayState,
 } from '@splunk/otel-session-replay-react-native';
@@ -322,6 +323,24 @@ const ExemptionBlock: React.FC = () => {
   const [exempt, setExempt] = useState(false);
   const [diagnostic, setDiagnostic] = useState<string | null>(null);
 
+  // An exemption is an instance-level `false`, and both platforms recycle
+  // views. Unlike <SensitiveView>, which releases its flag on recycle, a flag
+  // set on someone else's view has to be cleared by whoever set it - otherwise
+  // the reused image view stays exempt and shows content an app-wide rule was
+  // supposed to mask.
+  const exemptedTag = useRef<number | null>(null);
+
+  useEffect(
+    () => () => {
+      const tag = exemptedTag.current;
+      exemptedTag.current = null;
+      if (tag != null) {
+        SplunkSessionReplay.instance.clearViewSensitivity(tag).catch(() => {});
+      }
+    },
+    []
+  );
+
   const toggleExemption = useCallback(async () => {
     const tag = findNodeHandle(imageRef.current as never);
     if (tag == null) {
@@ -347,6 +366,7 @@ const ExemptionBlock: React.FC = () => {
     );
 
     if (applied) {
+      exemptedTag.current = next ? tag : null;
       setExempt(next);
     }
   }, [exempt]);
@@ -395,7 +415,10 @@ const ExemptionBlock: React.FC = () => {
 /* 3. Class-level policy                                                       */
 /* -------------------------------------------------------------------------- */
 
-const TRACKED_CLASSES: { label: string; className: string }[] = [
+const TRACKED_CLASSES: {
+  label: string;
+  className: NativeViewClassRef;
+}[] = [
   { label: '<Text>', className: NativeViewClass.TEXT },
   { label: '<Image>', className: NativeViewClass.IMAGE },
   { label: '<TextInput>', className: NativeViewClass.TEXT_INPUT },
@@ -407,15 +430,15 @@ const ClassPolicySection: React.FC = () => {
 
   const readBack = useCallback(async () => {
     const entries = await Promise.all(
-      TRACKED_CLASSES.map(async ({ className }) => {
+      TRACKED_CLASSES.map(async ({ label, className }) => {
         try {
           return [
-            className,
+            label,
             await SplunkSessionReplay.instance.getClassSensitivity(className),
           ] as const;
         } catch {
           // WebView is only loadable once react-native-webview is installed.
-          return [className, Sensitivity.UNSET] as const;
+          return [label, Sensitivity.UNSET] as const;
         }
       })
     );
@@ -446,12 +469,12 @@ const ClassPolicySection: React.FC = () => {
     >
       <View style={styles.policyTable}>
         {TRACKED_CLASSES.map(({ label, className }) => (
-          <View key={className} style={styles.policyRow}>
+          <View key={label} style={styles.policyRow}>
             <Text style={styles.policyLabel}>{label}</Text>
             <Text style={styles.policyClass} numberOfLines={1}>
-              {className}
+              {[className].flat().join(', ')}
             </Text>
-            <SensitivityPill value={policy[className] ?? Sensitivity.UNSET} />
+            <SensitivityPill value={policy[label] ?? Sensitivity.UNSET} />
           </View>
         ))}
       </View>
