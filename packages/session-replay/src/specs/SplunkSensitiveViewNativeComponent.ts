@@ -14,13 +14,23 @@
  * limitations under the License.
  */
 
-// Imported from the package entry point rather than deep paths, because the
-// React Native strict type API blocks `react-native/Libraries/*`.
-import {
-  codegenNativeComponent,
-  type CodegenTypes,
-  type ViewProps,
-} from 'react-native';
+import type { ViewProps } from 'react-native';
+// Imported from these paths rather than the package entry point because the
+// root re-exports of the codegen helpers only exist from React Native 0.80
+// onwards, and this package supports 0.75. The entry point eagerly re-exports
+// SensitiveView, so an undefined import here would throw while merely loading
+// the package, breaking every API in it.
+//
+// The strict type API marks `react-native/Libraries/*` unresolvable for
+// TypeScript, which is why these two modules are declared in
+// `src/types/react-native-codegen.d.ts`. Metro does not apply that condition,
+// so it resolves them at runtime on every supported version.
+// eslint-disable-next-line @react-native/no-deep-imports -- the top level
+// import this rule suggests does not exist before React Native 0.80, and
+// auto-fixing it would break loading this package on 0.75.
+import type { WithDefault } from 'react-native/Libraries/Types/CodegenTypes';
+// eslint-disable-next-line @react-native/no-deep-imports -- see above
+import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNativeComponent';
 
 export interface NativeProps extends ViewProps {
   /**
@@ -31,7 +41,7 @@ export interface NativeProps extends ViewProps {
    * flag is set when the view is created and released with it, so there is no
    * React tag to resolve and nothing to clear on unmount.
    */
-  sensitive?: CodegenTypes.WithDefault<boolean, true>;
+  sensitive?: WithDefault<boolean, true>;
 }
 
 export default codegenNativeComponent<NativeProps>('SplunkSensitiveView');

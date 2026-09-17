@@ -18,7 +18,7 @@
 
 ### Notes
 
-* Sensitivity requested before the agent finishes installing is retained and applied once it becomes available. `SplunkRumProvider` renders its children synchronously while installing from an effect, so a `SensitiveView` can mount first, and React Native does not re-apply an unchanged prop — a single failed attempt would otherwise leave the view unmarked for its whole lifetime.
+* Sensitivity requested before the agent finishes installing is retained and applied once it becomes available. This covers all three paths — `SensitiveView`, `setViewSensitivity`, and the class-level rules behind `maskAllText` and friends. `SplunkRumProvider` renders its children synchronously while installing from an effect, so any of them can be reached first, and the pre-install sensitivity API discards writes without reporting an error.
 * When using the imperative `setViewSensitivity` on a view you do not own, clear it when your component unmounts. Both platforms recycle views, and a leaked exemption can leave content visible that a class rule should mask.
 
 ## 1.2.0

@@ -136,10 +136,16 @@ public class SplunkSessionReplayImplementation: NSObject {
   /// could land after Fabric reused the view and overwrite the new instance's
   /// setting - and a stale `false` would expose content the new instance asked
   /// to mask.
+  /// - Parameter completion: Reports whether the value ended up in effect, so
+  ///   the imperative bridge can settle its promise honestly instead of
+  ///   claiming success for a write the proxy discarded.
   @nonobjc
-  private static func applyPendingSensitivity(for view: UIView, attempt: Int) {
+  private static func applyPendingSensitivity(for view: UIView,
+                                              attempt: Int,
+                                              completion: ((Bool) -> Void)? = nil) {
     guard let pending = pendingSensitivity(for: view) else {
-      // Superseded or cleared; nothing left to do.
+      // Superseded by a newer request, which owns its own outcome.
+      completion?(true)
       return
     }
 
@@ -151,6 +157,7 @@ public class SplunkSessionReplayImplementation: NSObject {
     // or exempt is worth retrying.
     guard let desired = pending.value else {
       clearPendingSensitivity(for: view)
+      completion?(true)
       return
     }
 
@@ -158,18 +165,22 @@ public class SplunkSessionReplayImplementation: NSObject {
     // that does not match means the write never landed.
     if sensitivity[view] == desired {
       clearPendingSensitivity(for: view)
+      completion?(true)
       return
     }
 
     guard attempt < sensitivityRetryLimit else {
       clearPendingSensitivity(for: view)
-      debugPrint("SplunkSessionReplay: sensitivity could not be applied; session replay is unavailable.")
+      completion?(false)
       return
     }
 
     DispatchQueue.main.asyncAfter(deadline: .now() + sensitivityRetryDelay) { [weak view] in
-      guard let view else { return }
-      applyPendingSensitivity(for: view, attempt: attempt + 1)
+      guard let view else {
+        completion?(false)
+        return
+      }
+      applyPendingSensitivity(for: view, attempt: attempt + 1, completion: completion)
     }
   }
 
@@ -224,24 +235,30 @@ public class SplunkSessionReplayImplementation: NSObject {
                                  isSensitive: Bool,
                                  resolve: @escaping RCTPromiseResolveBlock,
                                  reject: @escaping RCTPromiseRejectBlock) {
-    applyViewSensitivity(reactTag: reactTag, isSensitive: isSensitive, resolve: resolve)
+    applyViewSensitivity(reactTag: reactTag, isSensitive: isSensitive, resolve: resolve, reject: reject)
   }
 
   @objc
   public func clearViewSensitivity(reactTag: NSNumber,
                                    resolve: @escaping RCTPromiseResolveBlock,
                                    reject: @escaping RCTPromiseRejectBlock) {
-    applyViewSensitivity(reactTag: reactTag, isSensitive: nil, resolve: resolve)
+    applyViewSensitivity(reactTag: reactTag, isSensitive: nil, resolve: resolve, reject: reject)
   }
 
   /// Resolves a React tag to its `UIView` and applies `isSensitive` to it.
   ///
   /// A `nil` value removes the instance override so the class-level default
   /// applies again.
+  ///
+  /// Retained and retried like the host-component path, because a caller can
+  /// reach this before the agent finishes installing and the sensitivity proxy
+  /// discards writes in that state. The promise settles on the real outcome
+  /// rather than on having found a view.
   @nonobjc
   private func applyViewSensitivity(reactTag: NSNumber,
                                     isSensitive: Bool?,
-                                    resolve: @escaping RCTPromiseResolveBlock) {
+                                    resolve: @escaping RCTPromiseResolveBlock,
+                                    reject: @escaping RCTPromiseRejectBlock) {
     onMainThread {
       guard let view = Self.findView(withReactTag: reactTag.intValue) else {
         // The view may not be mounted yet, or may have been unmounted between
@@ -250,10 +267,20 @@ public class SplunkSessionReplayImplementation: NSObject {
         return
       }
 
-      SplunkRum.shared.sessionReplay.sensitivity[view] = isSensitive
-      resolve(true)
+      Self.setPendingSensitivity(isSensitive, for: view)
+      Self.applyPendingSensitivity(for: view, attempt: 0) { applied in
+        if applied {
+          resolve(true)
+        } else {
+          reject(Self.unavailableErrorCode, Self.unavailableErrorMessage, nil)
+        }
+      }
     }
   }
+
+  private static let unavailableErrorCode = "E_SESSION_REPLAY_UNAVAILABLE"
+  private static let unavailableErrorMessage =
+    "Session replay did not become available, so the sensitivity request was not applied."
 
   /// Locates a mounted view by React tag.
   ///
@@ -354,11 +381,82 @@ public class SplunkSessionReplayImplementation: NSObject {
       return
     }
 
+    let name = className as String
+
     onMainThread {
-      SplunkRum.shared.sessionReplay.sensitivity[viewClass] = isSensitive
-      resolve(nil)
+      // Recorded before the first attempt so a later request for the same
+      // class supersedes any retry already in flight.
+      Self.pendingClassSensitivity[name] = PendingSensitivity(isSensitive)
+      Self.applyPendingClassSensitivity(
+        viewClass: viewClass,
+        className: name,
+        attempt: 0,
+        resolve: resolve,
+        reject: reject
+      )
     }
   }
+
+  /// Applies whatever class sensitivity is currently pending for `className`.
+  ///
+  /// An app-wide policy can be requested before the agent finishes installing -
+  /// a component inside `SplunkRumProvider` can call
+  /// `maskAllText()` from a mount effect, and the provider renders its children
+  /// before its install effect runs. In that state the sensitivity API is a
+  /// proxy that discards writes, so resolving immediately would report success
+  /// while the text stayed visible for the whole session. The request is
+  /// retained and verified instead, and the promise settles only on the real
+  /// outcome.
+  @nonobjc
+  private static func applyPendingClassSensitivity(viewClass: UIView.Type,
+                                                   className: String,
+                                                   attempt: Int,
+                                                   resolve: @escaping RCTPromiseResolveBlock,
+                                                   reject: @escaping RCTPromiseRejectBlock) {
+    guard let pending = pendingClassSensitivity[className] else {
+      // Superseded by a newer request, which owns its own outcome.
+      resolve(nil)
+      return
+    }
+
+    let sensitivity = SplunkRum.shared.sessionReplay.sensitivity
+    sensitivity[viewClass] = pending.value
+
+    // Clearing cannot be verified by reading back, and clearing against a
+    // non-operational proxy is a no-op either way.
+    guard let desired = pending.value else {
+      pendingClassSensitivity[className] = nil
+      resolve(nil)
+      return
+    }
+
+    // The non-operational proxy's class getter always reports nil, so a
+    // read-back that does not match means the write never landed.
+    if sensitivity[viewClass] == desired {
+      pendingClassSensitivity[className] = nil
+      resolve(nil)
+      return
+    }
+
+    guard attempt < sensitivityRetryLimit else {
+      pendingClassSensitivity[className] = nil
+      reject(unavailableErrorCode, unavailableErrorMessage, nil)
+      return
+    }
+
+    DispatchQueue.main.asyncAfter(deadline: .now() + sensitivityRetryDelay) {
+      applyPendingClassSensitivity(
+        viewClass: viewClass,
+        className: className,
+        attempt: attempt + 1,
+        resolve: resolve,
+        reject: reject
+      )
+    }
+  }
+
+  /// Class policies requested but not yet in effect. Main-thread only.
+  private static var pendingClassSensitivity: [String: PendingSensitivity] = [:]
 
   @objc
   public func getClassSensitivity(className: NSString,

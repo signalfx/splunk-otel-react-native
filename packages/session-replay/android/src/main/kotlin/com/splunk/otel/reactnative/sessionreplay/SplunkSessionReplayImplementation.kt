@@ -16,6 +16,8 @@
 
 package com.splunk.otel.reactnative.sessionreplay
 
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.View
 import com.facebook.react.bridge.Promise
@@ -29,8 +31,17 @@ class SplunkSessionReplayImplementation(
   private val reactContext: ReactApplicationContext
 ) {
 
+  /** Class policies requested but not yet in effect. UI-thread only. */
+  private val pendingClassSensitivity = HashMap<String, Boolean>()
+
+  private val handler = Handler(Looper.getMainLooper())
+
   companion object {
     private const val TAG = "SplunkSessionReplay"
+
+    /** Roughly ten seconds, which comfortably covers agent installation. */
+    private const val RETRY_LIMIT = 40
+    private const val RETRY_DELAY_MS = 250L
   }
 
   // MARK: - Recording Control
@@ -172,6 +183,16 @@ class SplunkSessionReplayImplementation(
     applyClassSensitivity(className, null, promise)
   }
 
+  /**
+   * Applies a class-level policy, retaining it until the agent is installed.
+   *
+   * An app-wide policy can be requested before installation finishes, because
+   * `SplunkRumProvider` renders its children before its install effect runs, so
+   * a descendant calling `maskAllText()` from a mount effect gets here first.
+   * Failing outright would make the caller responsible for retrying, and the
+   * matching iOS path retains the request, so this does too and settles the
+   * promise on the real outcome.
+   */
   private fun applyClassSensitivity(className: String, isSensitive: Boolean?, promise: Promise) {
     val viewClass = lookUpViewClass(className)
     if (viewClass == null) {
@@ -185,15 +206,65 @@ class SplunkSessionReplayImplementation(
     // The class sensitivity registry is an unsynchronized list that wireframe
     // extraction reads from the UI thread, so it must only be mutated there.
     UiThreadUtil.runOnUiThread {
-      try {
-        SessionReplay.instance.sensitivity.setViewClassSensitivity(viewClass, isSensitive)
+      if (isSensitive == null) {
+        // A clear supersedes any retained request, and clearing before install
+        // is a no-op either way, so there is nothing to retry.
+        pendingClassSensitivity.remove(className)
+        applyClassSensitivity(viewClass, null)
         promise.resolve(null)
-      } catch (t: Throwable) {
-        Log.e(TAG, "setClassSensitivity() - failed for $className", t)
-        promise.reject("E_SESSION_REPLAY_SENSITIVITY", t)
+        return@runOnUiThread
       }
+
+      pendingClassSensitivity[className] = isSensitive
+      retryClassSensitivity(viewClass, className, attempt = 0, promise = promise)
     }
   }
+
+  private fun retryClassSensitivity(
+    viewClass: Class<View>,
+    className: String,
+    attempt: Int,
+    promise: Promise
+  ) {
+    // Re-read rather than capture, so a newer request or a clear supersedes
+    // this chain instead of being overwritten by it.
+    val desired = pendingClassSensitivity[className]
+    if (desired == null) {
+      promise.resolve(null)
+      return
+    }
+
+    if (applyClassSensitivity(viewClass, desired)) {
+      pendingClassSensitivity.remove(className)
+      promise.resolve(null)
+      return
+    }
+
+    if (attempt >= RETRY_LIMIT) {
+      pendingClassSensitivity.remove(className)
+      Log.w(TAG, "setClassSensitivity() - session replay unavailable for $className")
+      promise.reject(
+        "E_SESSION_REPLAY_UNAVAILABLE",
+        "Session replay did not become available, so the sensitivity request was not applied."
+      )
+      return
+    }
+
+    handler.postDelayed(
+      { retryClassSensitivity(viewClass, className, attempt + 1, promise) },
+      RETRY_DELAY_MS
+    )
+  }
+
+  /** Returns whether the value was applied, rather than throwing. */
+  private fun applyClassSensitivity(viewClass: Class<View>, isSensitive: Boolean?): Boolean =
+    try {
+      SessionReplay.instance.sensitivity.setViewClassSensitivity(viewClass, isSensitive)
+      true
+    } catch (t: Throwable) {
+      // Session replay is not installed yet, or not installed at all.
+      false
+    }
 
   fun getClassSensitivity(className: String, promise: Promise) {
     val viewClass = lookUpViewClass(className)
