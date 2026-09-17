@@ -15,6 +15,7 @@
 //
 
 import Foundation
+import ObjectiveC
 import SplunkAgent
 import React
 import UIKit
@@ -119,35 +120,93 @@ public class SplunkSessionReplayImplementation: NSObject {
   @objc
   public static func applySensitivity(for view: UIView, isSensitive: NSNumber?) {
     onMain {
-      applyRetainingSensitivity(for: view, isSensitive: isSensitive?.boolValue, attempt: 0)
+      // Recorded before the first attempt so that a later request - including
+      // the clear issued when Fabric recycles the view - supersedes any retry
+      // already in flight.
+      setPendingSensitivity(isSensitive?.boolValue, for: view)
+      applyPendingSensitivity(for: view, attempt: 0)
     }
   }
 
+  /// Applies whatever sensitivity is currently pending for `view`.
+  ///
+  /// The desired value is read from the view on every attempt rather than
+  /// captured, so a retry can never resurrect a value the component has since
+  /// changed or released. Without that, a retry scheduled by one instance
+  /// could land after Fabric reused the view and overwrite the new instance's
+  /// setting - and a stale `false` would expose content the new instance asked
+  /// to mask.
   @nonobjc
-  private static func applyRetainingSensitivity(for view: UIView,
-                                                isSensitive: Bool?,
-                                                attempt: Int) {
-    let sensitivity = SplunkRum.shared.sessionReplay.sensitivity
-    sensitivity[view] = isSensitive
+  private static func applyPendingSensitivity(for view: UIView, attempt: Int) {
+    guard let pending = pendingSensitivity(for: view) else {
+      // Superseded or cleared; nothing left to do.
+      return
+    }
 
-    // Clearing cannot be verified this way, and clearing against a
+    let sensitivity = SplunkRum.shared.sessionReplay.sensitivity
+    sensitivity[view] = pending.value
+
+    // Clearing cannot be verified by reading back, and clearing against a
     // non-operational proxy is a no-op either way, so only a request to mask
     // or exempt is worth retrying.
-    guard let isSensitive else { return }
+    guard let desired = pending.value else {
+      clearPendingSensitivity(for: view)
+      return
+    }
 
     // The non-operational proxy's getter always reports nil, so a read-back
     // that does not match means the write never landed.
-    if sensitivity[view] == isSensitive { return }
+    if sensitivity[view] == desired {
+      clearPendingSensitivity(for: view)
+      return
+    }
 
     guard attempt < sensitivityRetryLimit else {
+      clearPendingSensitivity(for: view)
       debugPrint("SplunkSessionReplay: sensitivity could not be applied; session replay is unavailable.")
       return
     }
 
     DispatchQueue.main.asyncAfter(deadline: .now() + sensitivityRetryDelay) { [weak view] in
       guard let view else { return }
-      applyRetainingSensitivity(for: view, isSensitive: isSensitive, attempt: attempt + 1)
+      applyPendingSensitivity(for: view, attempt: attempt + 1)
     }
+  }
+
+  // MARK: - Pending Sensitivity Storage
+
+  /// Boxed so that "no request pending" and "pending request to clear" stay
+  /// distinguishable through the associated object.
+  private final class PendingSensitivity {
+    let value: Bool?
+    init(_ value: Bool?) { self.value = value }
+  }
+
+  private static var pendingSensitivityKey: UInt8 = 0
+
+  @nonobjc
+  private static func setPendingSensitivity(_ value: Bool?, for view: UIView) {
+    objc_setAssociatedObject(
+      view,
+      &pendingSensitivityKey,
+      PendingSensitivity(value),
+      .OBJC_ASSOCIATION_RETAIN_NONATOMIC
+    )
+  }
+
+  @nonobjc
+  private static func pendingSensitivity(for view: UIView) -> PendingSensitivity? {
+    objc_getAssociatedObject(view, &pendingSensitivityKey) as? PendingSensitivity
+  }
+
+  @nonobjc
+  private static func clearPendingSensitivity(for view: UIView) {
+    objc_setAssociatedObject(
+      view,
+      &pendingSensitivityKey,
+      nil,
+      .OBJC_ASSOCIATION_RETAIN_NONATOMIC
+    )
   }
 
   /// Roughly ten seconds, which comfortably covers agent installation.
@@ -237,19 +296,33 @@ public class SplunkSessionReplayImplementation: NSObject {
   }
 
   private static let reactTagSelector = NSSelectorFromString("reactTag")
+  private static let componentViewProtocol = NSProtocolFromString("RCTComponentViewProtocol")
 
+  /// Whether `view` is the React view identified by `reactTag`.
+  ///
+  /// `UIView.tag` cannot be trusted on its own. Under the legacy architecture
+  /// it is an ordinary application-controlled UIKit tag that React never
+  /// touches, so any view that happens to have been given the same small
+  /// integer would match first in a depth-first walk - applying sensitivity to
+  /// the wrong view and leaving the intended content visible. Each
+  /// architecture is therefore matched on the representation that is
+  /// authoritative for it.
   private static func matches(view: UIView, reactTag: Int) -> Bool {
-    if view.tag == reactTag {
-      return true
+    // The legacy architecture stores the tag in an associated object behind
+    // this category property, and Fabric never sets it. So when it is present
+    // it is authoritative, and `UIView.tag` must not be consulted at all.
+    if view.responds(to: reactTagSelector),
+       let legacyTag = view.value(forKey: "reactTag") as? NSNumber {
+      return legacyTag.intValue == reactTag
     }
 
-    guard view.responds(to: reactTagSelector),
-          let legacyTag = view.value(forKey: "reactTag") as? NSNumber
-    else {
+    // Fabric assigns the React tag to `UIView.tag`, but only for views it
+    // mounts, so require that this is actually a component view.
+    guard let componentViewProtocol, view.conforms(to: componentViewProtocol) else {
       return false
     }
 
-    return legacyTag.intValue == reactTag
+    return view.tag == reactTag
   }
 
   // MARK: - Class Sensitivity
