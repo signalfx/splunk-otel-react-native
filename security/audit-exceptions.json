@@ -5,21 +5,21 @@
       "id": "1138808",
       "package": "image-size",
       "severity": "high",
-      "expires": "2026-09-15",
+      "expires": "2026-11-29",
       "owner": "@signalfx/mrum-react-native-maintainers",
       "dependencyPath": "react-native 0.86.2 > @react-native/community-cli-plugin 0.86.2 > metro 0.84.4 > image-size 1.2.1",
       "mitigation": "The package is build tooling only. PR builds use ephemeral hosted runners with read-only tokens, no secrets, and no persisted checkout credentials. Never move these builds to privileged runners; remove the exception when Metro publishes a patched path.",
-      "reason": "React Native 0.86.2 pins Metro 0.84.4, which pins image-size 1.2.1. No patched image-size release exists; remove this exception when Metro provides one."
+      "reason": "React Native 0.86.2 pins Metro 0.84.4, which pins image-size 1.2.1. Re-verified on renewal: the 1.x line ends at 1.2.1, so no patched release exists inside Metro's ^1.0.2 range, and the only newer release is 2.0.4 across a major boundary. Remove this exception when Metro moves to a patched range."
     },
     {
       "id": "1138809",
       "package": "image-size",
       "severity": "high",
-      "expires": "2026-09-15",
+      "expires": "2026-11-29",
       "owner": "@signalfx/mrum-react-native-maintainers",
       "dependencyPath": "react-native 0.86.2 > @react-native/community-cli-plugin 0.86.2 > metro 0.84.4 > image-size 1.2.1",
       "mitigation": "The package is build tooling only. PR builds use ephemeral hosted runners with read-only tokens, no secrets, and no persisted checkout credentials. Never move these builds to privileged runners; remove the exception when Metro publishes a patched path.",
-      "reason": "React Native 0.86.2 pins Metro 0.84.4, which pins image-size 1.2.1. No patched image-size release exists; remove this exception when Metro provides one."
+      "reason": "React Native 0.86.2 pins Metro 0.84.4, which pins image-size 1.2.1. Re-verified on renewal: the 1.x line ends at 1.2.1, so no patched release exists inside Metro's ^1.0.2 range, and the only newer release is 2.0.4 across a major boundary. Remove this exception when Metro moves to a patched range."
     }
   ],
   "observations": [
