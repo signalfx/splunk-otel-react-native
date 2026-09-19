@@ -49,10 +49,18 @@ class CustomTrackingHandler {
     }
   }
 
-  fun endWorkflow(handle: Double, promise: Promise) {
+  /**
+   * Ends the workflow span, applying any caller attributes first so the keys the
+   * native SDK owns take precedence on conflict.
+   */
+  fun endWorkflow(handle: Double, attributes: ReadableMap, promise: Promise) {
     try {
       val span = WorkflowSpanStore.remove(handle.toInt())
-      span?.end()
+
+      if (span != null) {
+        span.setAllAttributes(AttributeConverter.buildAttributesFromMap(attributes))
+        span.end()
+      }
 
       promise.resolve(null)
     } catch (t: Throwable) {

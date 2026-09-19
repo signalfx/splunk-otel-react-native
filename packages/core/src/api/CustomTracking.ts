@@ -52,6 +52,35 @@ export interface ReportErrorOptions {
 }
 
 /**
+ * Attribute keys reserved by the native custom tracking module. The native
+ * modules set these on the workflow span themselves; stripping them here keeps
+ * behavior consistent across platforms and prevents a caller from overwriting
+ * them.
+ *
+ * `workflow.name` is set when the workflow starts, so it cannot be protected by
+ * write ordering alone.
+ */
+const RESERVED_WORKFLOW_ATTRIBUTE_KEYS: ReadonlySet<string> = new Set([
+  'component',
+  'workflow.name',
+]);
+
+function sanitizeWorkflowAttributes(attributes?: Attributes): Attributes {
+  if (!attributes) {
+    return {};
+  }
+
+  const sanitized: Attributes = {};
+  for (const key of Object.keys(attributes)) {
+    if (!RESERVED_WORKFLOW_ATTRIBUTE_KEYS.has(key)) {
+      sanitized[key] = attributes[key];
+    }
+  }
+
+  return sanitized;
+}
+
+/**
  * Handle to an active workflow span.
  *
  * Call `end()` to complete the workflow and record its duration.
@@ -63,9 +92,27 @@ export class WorkflowHandle {
    * Ends the workflow span.
    *
    * Records the workflow duration from `startWorkflow()` to this call.
+   *
+   * Attributes are attached to the workflow span, which is useful for detail
+   * that is only known once the work has finished, such as its outcome or how
+   * much work it covered.
+   *
+   * @example
+   * ```typescript
+   * await workflow.end({
+   *   'checkout.outcome': 'success',
+   *   'checkout.items': 3,
+   * });
+   * ```
+   *
+   * @param attributes - Optional attributes to attach to the workflow span.
+   *   Reserved keys (`component`, `workflow.name`) are ignored.
    */
-  async end(): Promise<void> {
-    return Native.customEndWorkflow(this.handle);
+  async end(attributes?: Attributes): Promise<void> {
+    return Native.customEndWorkflow(
+      this.handle,
+      sanitizeWorkflowAttributes(attributes)
+    );
   }
 }
 
@@ -86,7 +133,7 @@ export class WorkflowHandle {
  * ```typescript
  * const workflow = await SplunkRum.instance.customTracking.startWorkflow('checkout');
  * // ... user completes checkout ...
- * await workflow.end();
+ * await workflow.end({ 'checkout.outcome': 'success' });
  * ```
  */
 export class CustomTracking {
@@ -106,7 +153,8 @@ export class CustomTracking {
    * Starts a workflow span for duration measurement.
    *
    * Returns a handle to end the workflow later. The span duration
-   * measures time between start and end.
+   * measures time between start and end. Attributes describing the outcome can
+   * be attached when the workflow ends, see {@link WorkflowHandle.end}.
    *
    * @param name - Workflow name (becomes span name and `workflow.name` attribute).
    * @returns Handle to end the workflow.

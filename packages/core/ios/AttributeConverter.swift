@@ -57,6 +57,57 @@ enum AttributeConverter {
     return MutableAttributes(dictionary: dict)
   }
 
+  /// Converts a bridged dictionary into typed attribute values for use on a span.
+  ///
+  /// A span takes `[String: AttributeValue]` directly rather than the
+  /// `MutableAttributes` that `buildAttributes(from:)` produces.
+  static func buildSpanAttributes(from nsDict: NSDictionary) -> [String: AttributeValue] {
+    var dict: [String: AttributeValue] = [:]
+    for (kAny, vAny) in nsDict {
+      guard let key = kAny as? String else { continue }
+
+      if let s = vAny as? String {
+        dict[key] = .string(s)
+        continue
+      }
+
+      if let n = vAny as? NSNumber {
+        dict[key] = attributeValue(from: n)
+        continue
+      }
+
+      if let arr = vAny as? [Any] {
+        let mapped: [AttributeValue] = arr.compactMap { element in
+          if let s = element as? String { return .string(s) }
+          if let n = element as? NSNumber { return attributeValue(from: n) }
+
+          return nil
+        }
+
+        dict[key] = .array(AttributeArray(values: mapped))
+        continue
+      }
+    }
+
+    return dict
+  }
+
+  /// Maps an `NSNumber` to the attribute value matching its underlying type.
+  ///
+  /// JavaScript booleans bridge to `__NSCFBoolean`, which also casts
+  /// successfully to a number, so the boolean check has to come first.
+  private static func attributeValue(from number: NSNumber) -> AttributeValue {
+    if CFGetTypeID(number) == CFBooleanGetTypeID() {
+      return .bool(number.boolValue)
+    }
+
+    if CFNumberIsFloatType(number) {
+      return .double(number.doubleValue)
+    }
+
+    return .int(number.intValue)
+  }
+
   static func attributeValueToAny(_ value: AttributeValue?) -> Any? {
     guard let value else { return nil }
 

@@ -2,7 +2,10 @@
 
 ## Unreleased
 
-* TBD
+### `@splunk/otel-react-native`
+
+#### Added
+* **Workflow attributes.** `WorkflowHandle.end(attributes?)` now accepts optional attributes that are attached to the workflow span, for detail that is only known once the work has finished (an outcome, a record count, whether it retried). `startWorkflow()` is unchanged and existing `end()` calls keep working, so the change is additive. Keys owned by the native modules (`component`, `workflow.name`) are stripped from caller input, matching how `Navigation.track` treats its reserved keys. The `customEndWorkflow` bridge method now takes an attributes argument on both platforms.
 
 ## 1.3.0
 
