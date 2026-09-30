@@ -15,6 +15,7 @@
 //
 
 import Foundation
+import OpenTelemetryApi
 import React
 import SplunkAgent
 
@@ -272,20 +273,16 @@ public class SplunkOtelReactNativeImplementation: NSObject {
                           message: NSString,
                           stacktrace: NSString,
                           attributes: NSDictionary,
-                          framesJson: NSString,
                           source: NSString,
                           handled: Bool,
-                          sourceMapIdsJson: NSString,
                           resolve: @escaping RCTPromiseResolveBlock,
                           reject: @escaping RCTPromiseRejectBlock) {
     customTrackingHandler.reportError(type,
                                       message: message,
                                       stacktrace: stacktrace,
                                       attributes: attributes,
-                                      framesJson: framesJson,
                                       source: source,
                                       handled: handled,
-                                      sourceMapIdsJson: sourceMapIdsJson,
                                       resolve: resolve,
                                       reject: reject)
   }
@@ -307,5 +304,20 @@ public class SplunkOtelReactNativeImplementation: NSObject {
                                              resolve: @escaping RCTPromiseResolveBlock,
                                              reject: @escaping RCTPromiseRejectBlock) {
     navigationHandler.track(screenName, attributes: attributes, resolve: resolve, reject: reject)
+  }
+
+  // MARK: - React Native Fatal Crash
+
+  @objc
+  public func recordReactNativeFatalCrashSyncWithMessage(_ message: NSString,
+                                                          stack: NSString?,
+                                                          attributes: NSDictionary) -> NSNumber {
+    NSNumber(
+      value: customTrackingHandler.recordFatalCrashSync(
+        message,
+        stack: stack,
+        attributes: attributes
+      )
+    )
   }
 }

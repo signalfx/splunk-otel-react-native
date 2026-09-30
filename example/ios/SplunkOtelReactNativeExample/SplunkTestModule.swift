@@ -114,15 +114,15 @@ class SplunkTestModule: NSObject {
         }
         return
       }
-      
+
       let statusCode = (response as? HTTPURLResponse)?.statusCode ?? -1
       let message = "URLSession request completed with status: \(statusCode)"
-      
+
       DispatchQueue.main.async {
         resolve(message)
       }
     }
-    
+
     task.resume()
   }
 }

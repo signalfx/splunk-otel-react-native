@@ -18,6 +18,7 @@ Pod::Spec.new do |s|
   s.private_header_files = "ios/**/*.h"
 
   s.preserve_paths = [
+    "ios/*.sh",
     "ios/*.xcframework",
     "ios/**/*.h",
     "ios/*.xcframework/**/*.h"
@@ -64,4 +65,3 @@ Pod::Spec.new do |s|
 
   install_modules_dependencies(s)
 end
-

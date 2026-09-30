@@ -29,6 +29,7 @@ import {
   toNativeModules,
   fromNativeState,
 } from '../bridge/converters';
+import * as JsErrorHandler from '../instrumentation/JsErrorHandler';
 
 /**
  * Splunk RUM SDK entry point.
@@ -87,9 +88,21 @@ export class SplunkRum {
       !!configuration.enableDebugLogging
     );
 
+    const isReinstall = this._instance !== null;
+
+    // TODO(react-native-crash-reporting): Errors thrown while Native.install is
+    // pending are not captured. Install a lightweight early handler/queue before
+    // awaiting native initialization, and ensure fatal events can reach a native
+    // persistent store even when initialization has not completed.
     await Native.install(nativeConfig, nativeModules);
 
     if (!this._instance) this._instance = new SplunkRum();
+
+    JsErrorHandler.install(this._instance, {
+      enabled: configuration.automaticErrorReporting !== false,
+      debugLogging: Boolean(configuration.enableDebugLogging),
+      updateRumRef: isReinstall,
+    });
   }
 
   /**

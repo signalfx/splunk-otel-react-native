@@ -42,7 +42,10 @@ export type {
  * Provides stronger TypeScript types that cannot be expressed in codegen specs
  * (e.g., union types, external types like Attributes from OpenTelemetry API).
  */
-export interface SplunkNativeModuleType extends Spec {
+export interface SplunkNativeModuleType extends Omit<
+  Spec,
+  'recordReactNativeFatalCrashSync'
+> {
   setUserTrackingMode(mode: UserTrackingMode | null): Promise<void>;
 
   globalAttributesSetAll(map: Attributes): Promise<number>;
@@ -52,17 +55,23 @@ export interface SplunkNativeModuleType extends Spec {
   ): Promise<number>;
 
   customTrackEvent(name: string, attributes: Attributes): Promise<void>;
-
   navigationTrack(screenName: string, attributes: Attributes): Promise<void>;
+  /**
+   * Blocking-synchronous fatal recorder available on both bridge architectures.
+   * The native side owns span durability and duplicate-suppression arming.
+   */
+  recordReactNativeFatalCrashSync: (
+    message: string,
+    stack: string | null,
+    attributes: Attributes
+  ) => boolean;
 
   reportError(
     type: string,
     message: string,
     stacktrace: string,
     attributes: Attributes,
-    framesJson: string,
     source: string,
-    handled: boolean,
-    sourceMapIdsJson: string
+    handled: boolean
   ): Promise<void>;
 }

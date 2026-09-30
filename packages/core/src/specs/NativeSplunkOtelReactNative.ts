@@ -137,21 +137,39 @@ export interface Spec extends TurboModule {
     name: string,
     attributes: { [key: string]: unknown }
   ): Promise<void>;
+  /**
+   * Blocking-synchronous fatal recorder for both React Native architectures.
+   *
+   * Returns true only after the exact crash span is durably persisted and the
+   * native crash suppressor is armed. This gives a happens-before guarantee
+   * before the JS layer chains React Native's previous fatal handler.
+   *
+   * The native operation is hard-bounded to two seconds and performs no network
+   * I/O. A false result is fail-open: the native crash must still proceed.
+   *
+   * `attributes` carries the JS and source-map identity that native cannot
+   * reconstruct. `stack` is the unmodified engine stack and is stored once as
+   * `exception.stacktrace` by the native agent.
+   *
+   * Codegen emits a synchronous TurboModule method. The old architecture uses
+   * the equivalent Android/iOS blocking bridge annotations.
+   */
+  recordReactNativeFatalCrashSync(
+    message: string,
+    stack: string | null,
+    attributes: { [key: string]: unknown }
+  ): boolean;
   customStartWorkflow(name: string): Promise<number>;
   customEndWorkflow(handle: number): Promise<void>;
 
-  // Error tracking
-  // Limited to flat primitives + JSON strings for codegen compat.
-  // `framesJson` / `sourceMapIdsJson` are reserved for later, full automatic-capture phases.
+  // Error tracking. Stack parsing and symbolication are backend responsibilities.
   reportError(
     type: string,
     message: string,
     stacktrace: string,
     attributes: { [key: string]: unknown },
-    framesJson: string,
     source: string,
-    handled: boolean,
-    sourceMapIdsJson: string
+    handled: boolean
   ): Promise<void>;
 
   // Navigation

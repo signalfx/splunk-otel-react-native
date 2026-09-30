@@ -18,6 +18,8 @@ package com.splunk.otel.reactnative
 
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReadableMap
+import com.splunk.rum.integration.agent.api.SplunkRum
+import com.splunk.rum.integration.crash.ReactNativeFatalCrashReporter
 import com.splunk.rum.integration.customtracking.CustomTracking
 import io.opentelemetry.api.common.AttributeKey
 import io.opentelemetry.api.common.Attributes
@@ -25,7 +27,9 @@ import io.opentelemetry.api.common.Attributes
 /**
  * Handles custom tracking operations.
  */
-class CustomTrackingHandler {
+internal class CustomTrackingHandler(
+  @Suppress("UNUSED_PARAMETER") context: android.content.Context,
+) {
 
   fun trackEvent(name: String, attributes: ReadableMap, promise: Promise) {
     try {
@@ -36,6 +40,28 @@ class CustomTrackingHandler {
     } catch (t: Throwable) {
       promise.reject("E_CT_EVENT", t)
     }
+  }
+
+  /**
+   * Synchronously persists a fatal React Native crash through the Android
+   * agent. The native API owns the durability acknowledgement and duplicate
+   * suppression marker.
+   */
+  fun recordFatalCrashSync(
+    message: String,
+    stack: String?,
+    attributes: ReadableMap,
+  ): Boolean {
+    val errorAttributes = AttributeConverter.buildAttributesFromMap(attributes)
+    val crashAttributes = Attributes.builder()
+      .putAll(errorAttributes)
+      .put(CRASH_RUM_SESSION_ID_KEY, SplunkRum.instance.session.state.id)
+      .build()
+    return ReactNativeFatalCrashReporter.recordCrashSync(
+      message = message,
+      stacktrace = stack,
+      attributes = crashAttributes,
+    )
   }
 
   fun startWorkflow(name: String, promise: Promise) {
@@ -75,18 +101,14 @@ class CustomTrackingHandler {
    * Caller attributes are applied first so the agent-managed keys added here
    * take precedence on conflict.
    *
-   * @param framesJson reserved for a later phase (backend symbolicates from the
-   *   raw `exception.stacktrace`); currently unused.
    */
   fun reportError(
     type: String,
     message: String,
     stacktrace: String,
     attributes: ReadableMap,
-    @Suppress("UNUSED_PARAMETER") framesJson: String,
     source: String,
     handled: Boolean,
-    sourceMapIdsJson: String,
     promise: Promise,
   ) {
     try {
@@ -100,10 +122,6 @@ class CustomTrackingHandler {
       builder.put(AttributeKey.stringKey("error.source"), source)
       builder.put(AttributeKey.booleanKey("exception.escaped"), !handled)
       builder.put(AttributeKey.stringKey(PLATFORM_ATTRIBUTE_KEY), PLATFORM_ATTRIBUTE_VALUE)
-
-      if (sourceMapIdsJson.isNotEmpty()) {
-        builder.put(AttributeKey.stringKey("error.sourceMapIds"), sourceMapIdsJson)
-      }
 
       CustomTracking.instance.trackError(
         type,
@@ -125,5 +143,7 @@ class CustomTrackingHandler {
      */
     private const val PLATFORM_ATTRIBUTE_KEY = "splunk.rum.platform"
     private const val PLATFORM_ATTRIBUTE_VALUE = "react-native"
+    val CRASH_RUM_SESSION_ID_KEY: AttributeKey<String> =
+      AttributeKey.stringKey("crash.rumSessionId")
   }
 }

@@ -159,6 +159,11 @@ NS_ASSUME_NONNULL_BEGIN
                                resolve:(RCTPromiseResolveBlock)resolve
                                 reject:(RCTPromiseRejectBlock)reject;
 
+// React Native fatal crash persistence (blocking-synchronous)
+- (NSNumber *)recordReactNativeFatalCrashSync:(NSString *)message
+                                        stack:(nullable NSString *)stack
+                                   attributes:(NSDictionary *)attributes;
+
 #endif
 
 @end

@@ -81,10 +81,10 @@ const userMock = {
 
 const customTrackingMock = {
   trackCustomEvent: jest.fn().mockResolvedValue(undefined),
+  trackError: jest.fn().mockResolvedValue(undefined),
   startWorkflow: jest
     .fn()
     .mockResolvedValue({ end: jest.fn().mockResolvedValue(undefined) }),
-  trackError: jest.fn().mockResolvedValue(undefined),
 };
 
 // Mirrors the real `ErrorSource` enum so consumers can import it from the mock

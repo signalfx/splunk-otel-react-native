@@ -36,10 +36,8 @@ const ARG = {
   message: 1,
   stacktrace: 2,
   attributes: 3,
-  framesJson: 4,
-  source: 5,
-  handled: 6,
-  sourceMapIdsJson: 7,
+  source: 4,
+  handled: 5,
 } as const;
 
 describe('CustomTracking.trackError', () => {
@@ -62,11 +60,17 @@ describe('CustomTracking.trackError', () => {
     expect(args[ARG.message]).toBe('x is not a function');
     expect(typeof args[ARG.stacktrace]).toBe('string');
     expect(args[ARG.stacktrace].length).toBeGreaterThan(0);
-    expect(args[ARG.attributes]).toEqual({});
-    expect(args[ARG.framesJson]).toBe('');
+    expect(args[ARG.attributes]).toEqual(
+      expect.objectContaining({
+        'splunk.rum.platform': 'react-native',
+        'splunk.rum.js.bundle.origin': 'embedded',
+        'error.capture': 'manual',
+        'exception.escaped': false,
+      })
+    );
     expect(args[ARG.source]).toBe(ErrorSource.Custom);
     expect(args[ARG.handled]).toBe(true);
-    expect(args[ARG.sourceMapIdsJson]).toBe('');
+    expect(args).toHaveLength(6);
   });
 
   it('reports a message string with no stacktrace', async () => {
@@ -86,7 +90,13 @@ describe('CustomTracking.trackError', () => {
     });
 
     const args = mockReportError.mock.calls[0];
-    expect(args[ARG.attributes]).toEqual({ 'screen.name': 'Cart', retries: 2 });
+    expect(args[ARG.attributes]).toEqual(
+      expect.objectContaining({
+        'screen.name': 'Cart',
+        retries: 2,
+        'exception.escaped': true,
+      })
+    );
     expect(args[ARG.source]).toBe(ErrorSource.Source);
     expect(args[ARG.handled]).toBe(false);
   });

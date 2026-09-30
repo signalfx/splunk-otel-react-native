@@ -15,6 +15,8 @@
  */
 
 import type { Attributes } from '@opentelemetry/api';
+import { logJsErrorPayloadDiagnostics } from '../instrumentation/JsErrorDiagnosticLogger';
+import { addJavaScriptArtifactContext } from '../instrumentation/JavaScriptSourceMapRegistry';
 import { SplunkNativeBridge as Native } from '../sdk/SplunkNativeBridge';
 import { normalizeError } from '../bridge/stacktrace';
 
@@ -45,8 +47,6 @@ export interface ReportErrorOptions {
   source?: ErrorSource;
   /**
    * Whether the error was handled (non-fatal). Defaults to `true`.
-   *
-   * Emitted as the OTel `exception.escaped` attribute (`!handled`).
    */
   handled?: boolean;
 }
@@ -169,19 +169,28 @@ export class CustomTracking {
 
       const source = options?.source ?? ErrorSource.Custom;
       const handled = options?.handled ?? true;
-      const attributes = options?.attributes ?? {};
+      const attributes = addJavaScriptArtifactContext({
+        'error.layer': 'javascript',
+        'error.type': 'js_exception',
+        'error.capture': 'manual',
+        'error.is_fatal': false,
+        ...(options?.attributes ?? {}),
+        'exception.escaped': !handled,
+      });
 
-      // `framesJson` / `sourceMapIdsJson` are reserved for later, full automatic-capture phases.
-      //  The backend currently symbolicates from the raw `exception.stacktrace`.
+      logJsErrorPayloadDiagnostics({
+        message: normalized.message,
+        attributes,
+        stack: normalized.stack,
+      });
+
       await Native.reportError(
         normalized.type,
         normalized.message,
         normalized.stack,
         attributes,
-        '',
         source,
-        handled,
-        ''
+        handled
       );
     } catch (e) {
       console.warn(
