@@ -114,6 +114,142 @@ Ensure minSdkVersion is 24 or higher.
 
 The Maven repository is automatically configured. No additional setup required.
 
+### Android JavaScript source-map upload
+
+The Android package includes an opt-in Gradle integration that validates the
+exact release bundle and final source map. For every production serialization,
+the Metro integration injects a fresh UUID into executable bundle code and the
+matching Metro map. If Hermes composition drops the map field, the CLI prepares
+an upload-only temporary map carrying that same bundle ID.
+
+The build hook is disabled by default. When enabled, it validates the final
+bundle/map pair and uploads the map through `@splunk/rum-cli`. Dry-run performs
+the same artifact checks without making a network request. ProGuard mappings
+and other native symbols are outside this JavaScript source-map hook.
+
+Install the CLI as a local development dependency:
+
+```bash
+yarn add --dev @splunk/rum-cli
+```
+
+Apply the script after `com.facebook.react` in `android/app/build.gradle`:
+
+```groovy
+apply from: file(
+  "../../node_modules/@splunk/otel-react-native/android/splunk-rum.gradle"
+)
+
+splunkRumReactNative {
+  enabled.set(true)
+  dryRun.set(
+    providers.gradleProperty("splunkRumSourceMapDryRun")
+      .map { it.toBoolean() }
+      .orElse(false)
+  )
+  variants.set(["release"])
+}
+```
+
+For CI upload, provide the CLI credentials through environment variables and
+build normally:
+
+```bash
+SPLUNK_REALM=us0 \
+SPLUNK_ACCESS_TOKEN="$SPLUNK_ACCESS_TOKEN" \
+./gradlew :app:assembleRelease
+```
+
+To validate locally without uploading:
+
+```bash
+./gradlew :app:assembleRelease \
+  -PsplunkRumSourceMapDryRun=true
+```
+
+The CLI requires the exact `sourceMapId` injected by
+`@splunk/otel-react-native/metro`. No customer-supplied identifier is required.
+
+The task consumes the React Native bundle task's declared outputs, so it selects
+the shipped bundle and the final Hermes-composed or JSC map without relying on a
+fixed bundle-directory convention. The executing JavaScript bundle registers
+its selector and ID and error events carry:
+
+```text
+splunk.rum.platform=react-native
+splunk.rum.js.bundle.origin=embedded
+splunk.rum.js.engine
+error.sourceMapIds
+```
+
+For a normal embedded build, `error.sourceMapIds` contains one entry. The
+contract is collection-shaped so independently loaded bundles can register
+additional selectors later. No source-map metadata resource is packaged in the
+APK. In dry-run mode the map is not uploaded, so backend symbolication is not
+expected yet.
+
+### iOS JavaScript source-map upload
+
+The iOS package includes an opt-in Xcode helper that consumes the exact
+`main.jsbundle` shipped in the application and the final Hermes-composed or JSC
+source map. It validates the executable ID and, when required, stages an
+upload-only map carrying that ID without packaging a runtime manifest.
+
+Install the CLI as a local development dependency, then update the existing
+`Bundle React Native code and images` phase so source-map generation is enabled
+before React Native runs and the Splunk helper runs afterward:
+
+```bash
+set -e
+
+WITH_ENVIRONMENT="$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh"
+REACT_NATIVE_XCODE="$REACT_NATIVE_PATH/scripts/react-native-xcode.sh"
+
+if [[ "$SPLUNK_RUM_SOURCE_MAP_ENABLED" == "YES" || \
+      "$SPLUNK_RUM_SOURCE_MAP_DRY_RUN" == "YES" ]]; then
+  export SOURCEMAP_FILE="${DERIVED_FILE_DIR}/${BUNDLE_NAME:-main}.jsbundle.map"
+fi
+
+/bin/sh -c "$WITH_ENVIRONMENT $REACT_NATIVE_XCODE"
+
+if [[ "$SPLUNK_RUM_SOURCE_MAP_ENABLED" == "YES" || \
+      "$SPLUNK_RUM_SOURCE_MAP_DRY_RUN" == "YES" ]]; then
+  /bin/bash \
+    "$SRCROOT/../node_modules/@splunk/otel-react-native/ios/splunk-rum-xcode.sh"
+fi
+```
+
+For CI upload, enable the phase and provide the CLI credentials:
+
+```bash
+SPLUNK_RUM_SOURCE_MAP_ENABLED=YES \
+SPLUNK_REALM=us0 \
+SPLUNK_ACCESS_TOKEN="$SPLUNK_ACCESS_TOKEN" \
+xcodebuild \
+  -workspace ios/MyApp.xcworkspace \
+  -scheme MyApp \
+  -configuration Release \
+  build
+```
+
+For local validation without upload, use the dry-run build setting:
+
+```bash
+xcodebuild \
+  -workspace ios/MyApp.xcworkspace \
+  -scheme MyApp \
+  -configuration Release \
+  SPLUNK_RUM_SOURCE_MAP_DRY_RUN=YES \
+  build
+```
+
+`SPLUNK_RUM_CLI_PATH` can override the default
+`node_modules/.bin/splunk-rum` path. The exact `sourceMapId` comes from the
+executing bundle and must match the final map.
+
+Dry-run requires no realm or access token and does not upload the source map, so
+backend symbolication is not expected in that mode.
+
 ## Quick Start
 
 ### 1. Wrap Your App with `SplunkRumProvider`
@@ -254,6 +390,46 @@ import { SplunkRum } from '@splunk/otel-react-native';
 
 // Set tracking mode
 await SplunkRum.instance.user.setTrackingMode('ANONYMOUS_TRACKING');
+```
+
+### Automatic JavaScript Error Reporting
+
+After `SplunkRum.install()` (or `SplunkRumProvider`), the SDK automatically reports:
+
+- Uncaught JavaScript errors (via React Native `ErrorUtils` global handler)
+- Unhandled promise rejections (including in release builds)
+
+These are sent as **RUM error spans** through `customTracking.trackError`, not as native crash reports. Automatic reporting is **enabled by default** and can be disabled:
+
+```tsx
+<SplunkRumProvider
+  agentConfiguration={{
+    appName: 'MyApp',
+    deploymentEnvironment: 'production',
+    endpoint: { rumAccessToken: 'TOKEN', realm: 'us0' },
+    automaticErrorReporting: false,
+  }}
+>
+  <App />
+</SplunkRumProvider>
+```
+
+Errors reported automatically include attributes such as `error.capture` (`globalHandler` or `unhandledPromiseRejection`) and `error.is_fatal` when applicable.
+
+**Limitations:**
+
+- Errors that occur before `SplunkRum.install()` completes are not captured automatically.
+- React Error Boundary catches are not reported unless you call `trackError` in `componentDidCatch`.
+- On Android, fatal JS errors still terminate the process via React Native's `JavascriptException`; the RUM error event is recorded first with the untouched engine stack in `error.stack`.
+- Fatal error spans may not appear in Splunk until a later app launch, when the SDK flushes telemetry from the previous session.
+- Readable stack traces in Splunk require uploading JavaScript source maps separately (see Splunk `@splunk/rum-cli`). The agent sends the original Hermes or JSC stack once in `error.stack`; backend symbolication is responsible for interpreting its coordinates.
+
+You can still report errors manually:
+
+```tsx
+await SplunkRum.instance.customTracking.trackError(error, {
+  'my.attribute': 'value',
+});
 ```
 
 ### Custom Events

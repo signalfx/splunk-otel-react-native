@@ -590,10 +590,8 @@ RCT_REMAP_METHOD(reportError,
                  message:(NSString *)message
                  stacktrace:(NSString *)stacktrace
                  attributes:(NSDictionary *)attributes
-                 framesJson:(NSString *)framesJson
                  source:(NSString *)source
                  handled:(BOOL)handled
-                 sourceMapIdsJson:(NSString *)sourceMapIdsJson
                  resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {
@@ -601,10 +599,8 @@ RCT_REMAP_METHOD(reportError,
             message:message
          stacktrace:stacktrace
          attributes:attributes
-         framesJson:framesJson
              source:source
             handled:handled
-   sourceMapIdsJson:sourceMapIdsJson
             resolve:resolve
              reject:reject];
 }
@@ -614,10 +610,8 @@ RCT_REMAP_METHOD(reportError,
             message:(NSString *)message
          stacktrace:(NSString *)stacktrace
          attributes:(NSDictionary *)attributes
-         framesJson:(NSString *)framesJson
              source:(NSString *)source
             handled:(BOOL)handled
-   sourceMapIdsJson:(NSString *)sourceMapIdsJson
             resolve:(RCTPromiseResolveBlock)resolve
              reject:(RCTPromiseRejectBlock)reject
 {
@@ -625,10 +619,8 @@ RCT_REMAP_METHOD(reportError,
                  message:message
               stacktrace:stacktrace
               attributes:attributes
-              framesJson:framesJson
                   source:source
                  handled:handled
-        sourceMapIdsJson:sourceMapIdsJson
                  resolve:resolve
                   reject:reject];
 }
@@ -673,6 +665,29 @@ RCT_REMAP_METHOD(integrateWebViewWithBrowserRum,
 {
   NSNumber *tag = @((int)viewTag);
   [self.impl integrateWebViewWithBrowserRumWithViewTag:tag resolve:resolve reject:reject];
+}
+
+#pragma mark - React Native Fatal Crash
+
+// The old bridge and TurboModule path both expose the same blocking method.
+#ifndef RCT_NEW_ARCH_ENABLED
+RCT_REMAP_BLOCKING_SYNCHRONOUS_METHOD(recordReactNativeFatalCrashSync,
+                                      NSNumber *,
+                                      recordReactNativeFatalCrashSyncMessage:(NSString *)message
+                                      stack:(NSString *)stack
+                                      attributes:(NSDictionary *)attributes)
+{
+  return [self recordReactNativeFatalCrashSync:message stack:stack attributes:attributes];
+}
+#endif
+
+- (NSNumber *)recordReactNativeFatalCrashSync:(NSString *)message
+                                        stack:(NSString *)stack
+                                   attributes:(NSDictionary *)attributes
+{
+  return [self.impl recordReactNativeFatalCrashSyncWithMessage:message
+                                                         stack:stack
+                                                    attributes:attributes];
 }
 
 @end

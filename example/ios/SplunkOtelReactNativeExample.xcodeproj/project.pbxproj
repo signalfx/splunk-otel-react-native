@@ -189,7 +189,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"\\\"$WITH_ENVIRONMENT\\\" \\\"$REACT_NATIVE_XCODE\\\"\"\n";
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\nif [[ \"$SPLUNK_RUM_SOURCE_MAP_ENABLED\" == \"YES\" || \"$SPLUNK_RUM_SOURCE_MAP_DRY_RUN\" == \"YES\" ]]; then\n  export SOURCEMAP_FILE=\"${DERIVED_FILE_DIR}/${BUNDLE_NAME:-main}.jsbundle.map\"\nfi\n\n/bin/sh -c \"\\\"$WITH_ENVIRONMENT\\\" \\\"$REACT_NATIVE_XCODE\\\"\"\n\nif [[ \"$SPLUNK_RUM_SOURCE_MAP_ENABLED\" == \"YES\" || \"$SPLUNK_RUM_SOURCE_MAP_DRY_RUN\" == \"YES\" ]]; then\n  /bin/bash \"$SRCROOT/../node_modules/@splunk/otel-react-native/ios/splunk-rum-xcode.sh\"\nfi\n";
 		};
 		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

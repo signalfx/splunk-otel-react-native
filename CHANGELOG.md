@@ -2,7 +2,13 @@
 
 ## Unreleased
 
-* TBD
+### `@splunk/otel-react-native`
+
+#### Added
+* Added bounded, synchronous persistence of production-fatal JavaScript errors as `SplunkCrashReport` spans on Android and iOS. The native agents durably store the exact span before React Native terminates and suppress their duplicate native crash event only when that persistence is acknowledged.
+
+#### Changed
+* Fatal JavaScript errors now use the native crash contract (`component=crash`, `error=true`, and `crash.rumSessionId`) and retain the raw engine stack only in `exception.stacktrace`.
 
 ## 1.3.0
 

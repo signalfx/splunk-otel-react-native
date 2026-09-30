@@ -54,3 +54,8 @@ export {
   getSdkVersionInfo,
 } from './version';
 export type { SdkVersionInfo } from './version';
+export {
+  SplunkErrorBoundary,
+  withSplunkErrorBoundary,
+} from './instrumentation/SplunkErrorBoundary';
+export type { SplunkErrorBoundaryProps } from './instrumentation/SplunkErrorBoundary';

@@ -1,0 +1,193 @@
+/*
+ * Copyright 2025 Splunk Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import org.gradle.api.DefaultTask
+import org.gradle.api.GradleException
+import org.gradle.api.file.RegularFileProperty
+import org.gradle.api.model.ObjectFactory
+import org.gradle.api.provider.ListProperty
+import org.gradle.api.provider.Property
+import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.InputFile
+import org.gradle.api.tasks.Internal
+import org.gradle.api.tasks.Optional
+import org.gradle.api.tasks.TaskAction
+import org.gradle.process.ExecOperations
+
+import javax.inject.Inject
+
+abstract class SplunkRumReactNativeExtension {
+    final Property<Boolean> enabled
+    final Property<Boolean> dryRun
+    final ListProperty<String> variants
+    final Property<String> cliPath
+    final Property<String> nodeExecutable
+    final Property<String> bundleName
+    final Property<String> artifactsConfig
+
+    @Inject
+    SplunkRumReactNativeExtension(ObjectFactory objects) {
+        enabled = objects.property(Boolean).convention(false)
+        dryRun = objects.property(Boolean).convention(false)
+        variants = objects.listProperty(String).convention(["release"])
+        cliPath = objects.property(String)
+        nodeExecutable = objects.property(String).convention("node")
+        bundleName = objects.property(String).convention("index.android.bundle")
+        artifactsConfig = objects.property(String)
+    }
+}
+
+abstract class ProcessSplunkRumReactNativeSourceMapsTask extends DefaultTask {
+    @Inject abstract ExecOperations getExecOperations()
+
+    @Input abstract Property<Boolean> getIntegrationEnabled()
+    @Input abstract Property<Boolean> getDryRun()
+    @Input abstract ListProperty<String> getIncludedVariants()
+    @Input abstract Property<String> getBuildVariant()
+    @Input abstract Property<String> getJsEngine()
+    @Input abstract Property<String> getBundleName()
+    @Input @Optional abstract Property<String> getArtifactsConfig()
+    @Input abstract Property<String> getCliPath()
+    @Input abstract Property<String> getNodeExecutable()
+    @InputFile @Optional abstract RegularFileProperty getBundleFile()
+    @InputFile @Optional abstract RegularFileProperty getSourceMapFile()
+
+    @Internal
+    File getCliFile() {
+        project.file(cliPath.get())
+    }
+
+    @TaskAction
+    void processSourceMaps() {
+        if (!integrationEnabled.get() || !includedVariants.get().contains(buildVariant.get())) {
+            logger.info("Splunk RUM React Native source-map processing is disabled for ${buildVariant.get()}.")
+            return
+        }
+        File cli = cliFile
+        if (!cli.isFile()) {
+            throw new GradleException(
+                "Splunk RUM CLI was not found at ${cli}. Install @splunk/rum-cli locally " +
+                    "or configure splunkRumReactNative.cliPath."
+            )
+        }
+
+        File bundle = bundleFile.get().asFile
+        File sourceMap = sourceMapFile.get().asFile
+        File artifacts = artifactsConfig.orNull == null ? null : project.file(artifactsConfig.get())
+        if (artifacts != null && !artifacts.isFile()) {
+            throw new GradleException("React Native artifacts configuration was not found at ${artifacts}.")
+        }
+        if (artifacts == null && (!bundle.isFile() || !sourceMap.isFile())) {
+            throw new GradleException(
+                "The final React Native bundle and source map are required. " +
+                    "Do not substitute .packager.map or .compiler.map files."
+            )
+        }
+
+        List<String> command = []
+        if (cli.name.endsWith(".js")) {
+            command.add(nodeExecutable.get())
+        }
+        command.add(cli.absolutePath)
+        command.addAll([
+            "react-native", "sourcemaps", "upload",
+            "--platform", "android",
+            "--engine", jsEngine.get(),
+        ])
+        if (dryRun.get()) {
+            command.add("--dry-run")
+        }
+        if (artifacts != null) {
+            command.addAll(["--artifacts", artifacts.absolutePath])
+        } else {
+            command.addAll([
+                "--bundle-name", bundleName.get(),
+                "--bundle", bundle.absolutePath,
+                "--source-map", sourceMap.absolutePath,
+            ])
+        }
+
+        ByteArrayOutputStream stdout = new ByteArrayOutputStream()
+        execOperations.exec {
+            commandLine(command)
+            standardOutput = stdout
+        }
+        String action = dryRun.get() ? "dry run completed" : "upload completed"
+        logger.lifecycle(
+            "Splunk RUM React Native source-map ${action} for ${buildVariant.get()}:\n" +
+                stdout.toString("UTF-8").trim()
+        )
+    }
+}
+
+def splunkRumExtension = extensions.create(
+    "splunkRumReactNative",
+    SplunkRumReactNativeExtension,
+    objects
+)
+
+splunkRumExtension.cliPath.convention(
+    new File(rootProject.projectDir.parentFile, "node_modules/.bin/splunk-rum").absolutePath
+)
+
+plugins.withId("com.android.application") {
+    def androidComponents = extensions.getByName("androidComponents")
+
+    androidComponents.onVariants(androidComponents.selector().all()) { variant ->
+        if (variant.debuggable) {
+            return
+        }
+
+        String variantName = variant.name
+        String capitalizedVariant = variantName.substring(0, 1).toUpperCase() + variantName.substring(1)
+        def reactBundleTask = tasks.named("createBundle${capitalizedVariant}JsAndAssets")
+
+        def taskProvider = tasks.register(
+            "processSplunkRum${capitalizedVariant}SourceMaps",
+            ProcessSplunkRumReactNativeSourceMapsTask
+        ) {
+            group = "splunk rum"
+            description = "Validates the final React Native bundle/map identity and uploads unless dry-run is enabled."
+            mustRunAfter(reactBundleTask)
+
+            integrationEnabled.set(splunkRumExtension.enabled)
+            dryRun.set(splunkRumExtension.dryRun)
+            includedVariants.set(splunkRumExtension.variants)
+            buildVariant.set(variantName)
+            jsEngine.set(providers.provider {
+                String.valueOf(project.findProperty("hermesEnabled")).toBoolean()
+                    ? "hermes"
+                    : "jsc"
+            })
+            bundleName.set(splunkRumExtension.bundleName)
+            artifactsConfig.set(splunkRumExtension.artifactsConfig)
+            cliPath.set(splunkRumExtension.cliPath)
+            nodeExecutable.set(splunkRumExtension.nodeExecutable)
+            bundleFile.set(reactBundleTask.flatMap { bundleTask ->
+                bundleTask.jsBundleDir.file(splunkRumExtension.bundleName)
+            })
+            sourceMapFile.set(reactBundleTask.flatMap { bundleTask ->
+                bundleTask.jsSourceMapsDir.file(
+                    splunkRumExtension.bundleName.map { "${it}.map" }
+                )
+            })
+        }
+
+        reactBundleTask.configure {
+            finalizedBy(taskProvider)
+        }
+    }
+}

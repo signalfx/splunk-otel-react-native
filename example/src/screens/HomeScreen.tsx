@@ -14,6 +14,7 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import {
   SplunkRum,
+  SplunkErrorBoundary,
   ErrorSource,
   type EndpointConfiguration,
 } from '@splunk/otel-react-native';
@@ -37,9 +38,32 @@ type Props = NativeStackScreenProps<TestsStackParamList, 'Home'> & {
   installed: boolean;
 };
 
+function RenderBomb({ active }: { active: boolean }) {
+  if (active) {
+    throw new Error('Test React render error from SplunkErrorBoundary');
+  }
+  return null;
+}
+
+class LifecycleBomb extends React.Component<{ active: boolean }> {
+  componentDidMount(): void {
+    if (this.props.active) {
+      throw new Error('Test React lifecycle error from SplunkErrorBoundary');
+    }
+  }
+
+  render(): null {
+    return null;
+  }
+}
+
 export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
   const [testReport, setTestReport] = useState<ApiTestReport | null>(null);
   const [showReport, setShowReport] = useState(false);
+  const [triggerRenderError, setTriggerRenderError] = useState(false);
+  const [renderBoundaryKey, setRenderBoundaryKey] = useState(0);
+  const [triggerLifecycleError, setTriggerLifecycleError] = useState(false);
+  const [lifecycleBoundaryKey, setLifecycleBoundaryKey] = useState(0);
 
   const tabNavigation =
     navigation.getParent<BottomTabNavigationProp<TabParamList>>();
@@ -102,12 +126,73 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
       },
       {
         id: 'crash-js',
-        title: 'Simulate JS Exception',
-        description: 'Throws a JavaScript exception',
+        title: 'Simulate JS Exception (manual)',
+        description:
+          'Calls customTracking.trackError directly (manual reporting)',
         category: TestCategory.Crashes,
         platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
         onTap: async () => {
-          throw new Error('Test JS exception from example app');
+          const error = new Error('Test JS exception from example app');
+          await SplunkRum.instance.customTracking.trackError(error, {
+            'test.source': 'HomeScreen',
+            'test.action': 'crash-js',
+          });
+        },
+      },
+      {
+        id: 'crash-js-unhandled',
+        title: 'Unhandled JS Error',
+        description:
+          'Reports via ErrorUtils global handler on next tick (RUM error span, not native crash)',
+        category: TestCategory.Crashes,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          // Same path RN uses for timer/bridge errors (reportFatalError → global handler).
+          const ErrorUtils =
+            require('react-native/Libraries/vendor/core/ErrorUtils').default;
+          const triggerUnhandledJsError = () => {
+            ErrorUtils.reportFatalError(
+              new Error('Test unhandled JS error from example app')
+            );
+          };
+          setTimeout(() => triggerUnhandledJsError(), 0);
+        },
+      },
+      {
+        id: 'crash-js-unhandled-promise',
+        title: 'Unhandled Promise Rejection',
+        description:
+          'Rejects a promise; auto-reported via unhandled rejection handler',
+        category: TestCategory.Crashes,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          void Promise.reject(
+            new Error('Test unhandled promise rejection from example app')
+          );
+        },
+      },
+      {
+        id: 'crash-react-boundary',
+        title: 'React Render Error (boundary)',
+        description:
+          'Throws during render; caught by SplunkErrorBoundary and reported as react_render_error span',
+        category: TestCategory.Crashes,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          setRenderBoundaryKey((value) => value + 1);
+          setTriggerRenderError(true);
+        },
+      },
+      {
+        id: 'crash-react-lifecycle-boundary',
+        title: 'React Lifecycle Error (boundary)',
+        description:
+          'Throws from componentDidMount; caught by SplunkErrorBoundary and reported as a handled React error',
+        category: TestCategory.Crashes,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          setLifecycleBoundaryKey((value) => value + 1);
+          setTriggerLifecycleError(true);
         },
       },
 
@@ -670,6 +755,10 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
       openRootModal,
       setShowReport,
       setTestReport,
+      setLifecycleBoundaryKey,
+      setRenderBoundaryKey,
+      setTriggerLifecycleError,
+      setTriggerRenderError,
     ]
   );
 
@@ -683,6 +772,20 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
       </View>
       <StatusBar />
       <SessionIdBar />
+      <SplunkErrorBoundary
+        key={`render-boundary-${renderBoundaryKey}`}
+        fallback={null}
+        onError={() => setTriggerRenderError(false)}
+      >
+        <RenderBomb active={triggerRenderError} />
+      </SplunkErrorBoundary>
+      <SplunkErrorBoundary
+        key={`lifecycle-boundary-${lifecycleBoundaryKey}`}
+        fallback={null}
+        onError={() => setTriggerLifecycleError(false)}
+      >
+        <LifecycleBomb active={triggerLifecycleError} />
+      </SplunkErrorBoundary>
       <TestActionsWidget actions={testActions} />
 
       <Modal

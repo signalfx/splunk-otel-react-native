@@ -15,6 +15,7 @@
 //
 
 import Foundation
+import OpenTelemetryApi
 import React
 import SplunkAgent
 
@@ -30,6 +31,18 @@ public class CustomTrackingHandler: NSObject {
     let attrs = AttributeConverter.buildAttributes(from: attributes)
     _ = SplunkRum.shared.customTracking.trackCustomEvent(name as String, attrs)
     resolve(nil)
+  }
+
+  /// Synchronously persists a fatal React Native crash through the iOS agent.
+  public func recordFatalCrashSync(_ message: NSString,
+                                   stack: NSString?,
+                                   attributes: NSDictionary) -> Bool {
+    let attrs = AttributeConverter.buildAttributes(from: attributes)
+    return SplunkRum.shared.recordReactNativeFatalCrashSync(
+      message: message as String,
+      stacktrace: stack as String?,
+      attributes: attrs
+    )
   }
 
   public func startWorkflow(_ name: NSString,
@@ -62,16 +75,12 @@ public class CustomTrackingHandler: NSObject {
   /// `error=true`, and `component=error` without re-deriving the stack from the
   /// native thread. Caller attributes are merged first; agent-managed keys win.
   ///
-  /// - Note: `framesJson` is accepted for forward compatibility but currently
-  ///   unused: the backend symbolicates from the raw `exception.stacktrace`.
   public func reportError(_ type: NSString,
                           message: NSString,
                           stacktrace: NSString,
                           attributes: NSDictionary,
-                          framesJson: NSString,
                           source: NSString,
                           handled: Bool,
-                          sourceMapIdsJson: NSString,
                           resolve: @escaping RCTPromiseResolveBlock,
                           reject: @escaping RCTPromiseRejectBlock) {
     var merged: [String: Any] = (attributes as? [String: Any]) ?? [:]
@@ -79,11 +88,6 @@ public class CustomTrackingHandler: NSObject {
     merged["exception.escaped"] = !handled
     merged[CustomTrackingHandler.platformAttributeKey] =
       CustomTrackingHandler.platformAttributeValue
-
-    let sourceMapIds = sourceMapIdsJson as String
-    if !sourceMapIds.isEmpty {
-      merged["error.sourceMapIds"] = sourceMapIds
-    }
 
     let stack = stacktrace as String
     _ = SplunkRum.shared.customTracking.trackError(

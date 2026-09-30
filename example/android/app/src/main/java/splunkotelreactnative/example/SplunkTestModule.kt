@@ -48,6 +48,7 @@ class SplunkTestModule(reactContext: ReactApplicationContext) :
         
         // ANR timeout
         private const val ANR_TIMEOUT_MS = 10_000L
+
     }
 
     @ReactMethod
