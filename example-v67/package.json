@@ -12,14 +12,13 @@
   },
   "dependencies": {
     "@opentelemetry/api": "^1.4.0",
-    "@opentelemetry/core": "^1.9.0",
     "@splunk/otel-react-native": "file:..",
     "react": "17.0.2",
     "react-native": "0.67.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/runtime": "^7.12.5",
+    "@babel/core": "^7.29.7",
+    "@babel/runtime": "^7.29.7",
     "@react-native-community/eslint-config": "^2.0.0",
     "babel-jest": "^26.6.3",
     "eslint": "7.14.0",
@@ -29,5 +28,25 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "overrides": {
+    "@babel/helpers": "7.29.7",
+    "@babel/plugin-transform-modules-systemjs": "7.29.7",
+    "@babel/traverse": "7.29.8",
+    "browserslist": "4.29.3",
+    "braces": "3.0.3",
+    "cross-spawn@6.0.5": "6.0.6",
+    "cross-spawn@7.0.3": "7.0.6",
+    "hermes-engine": "0.10.0",
+    "lodash@4.17.21": "4.18.1",
+    "micromatch": "4.0.8",
+    "react-devtools-core@4.19.1": "4.28.4",
+    "semver@5.7.1": "5.7.2",
+    "semver@6.3.0": "6.3.1",
+    "send@0.18.0": "0.19.0",
+    "serve-static@1.15.0": "1.16.2",
+    "ws@1.1.5": "5.2.5",
+    "ws@6.2.2": "6.2.4",
+    "ws@7.5.9": "7.5.13"
   }
 }
