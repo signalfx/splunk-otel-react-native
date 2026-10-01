@@ -15,6 +15,7 @@
  */
 
 import type { SessionReplayStatus } from './SessionReplayStatus';
+import type { RenderingMode } from './RenderingMode';
 
 /**
  * Read-only snapshot of the session replay module's current state.
@@ -26,4 +27,6 @@ export interface SessionReplayState {
   isRecording: boolean;
   /** The sampling rate applied at install time, in the [0, 1] range. */
   samplingRate: number;
+  /** The capture mode currently in effect. */
+  renderingMode: RenderingMode;
 }

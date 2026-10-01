@@ -122,6 +122,51 @@ android {
     }
 }
 
+/**
+ * Makes the app's CMake configuration wait for the workspace libraries' codegen.
+ *
+ * Autolinking writes `add_subdirectory(...)` entries for every codegen'd library
+ * into Android-autolinking.cmake. Libraries from node_modules point at checked-in
+ * `src/main/jni` folders, but the two workspace packages point at
+ * `build/generated/source/codegen/jni`, which `gradlew clean` deletes. Nothing in
+ * the generated build graph orders the app's CMake configuration after those
+ * libraries regenerate it, so after a clean the configuration intermittently
+ * fails with "add_subdirectory given source ... which is not an existing
+ * directory", depending on which task happens to run first.
+ */
+def workspaceCodegenTasks = [
+    ":splunk_otel-react-native:generateCodegenArtifactsFromSchema",
+    ":splunk_otel-session-replay-react-native:generateCodegenArtifactsFromSchema",
+]
+
+tasks.configureEach { task ->
+    if (task.name.startsWith("configureCMake") || task.name.startsWith("buildCMake")) {
+        task.dependsOn(workspaceCodegenTasks)
+    }
+}
+
+/**
+ * Lets `clean` run without configuring CMake.
+ *
+ * AGP's native clean runs `ninja clean` inside app/.cxx. Ninja regenerates
+ * build.ninja first, which re-runs the CMake configuration described above -
+ * and during a clean the generated codegen it references is being deleted, so
+ * the task fails. Nothing orders those two against each other, which is why it
+ * only fails sometimes.
+ *
+ * Everything that task would remove lives in app/build and app/.cxx, and both
+ * are deleted directly here, so configuring a C++ build system purely to clean
+ * it is unnecessary. `.cxx` has to be named explicitly because it sits outside
+ * the build directory.
+ */
+tasks.matching { it.name.startsWith("externalNativeBuildClean") }.configureEach {
+    enabled = false
+}
+
+tasks.named("clean", Delete) {
+    delete layout.projectDirectory.dir(".cxx")
+}
+
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")

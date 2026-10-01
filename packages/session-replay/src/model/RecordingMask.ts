@@ -16,7 +16,14 @@
 
 import type { MaskType } from './MaskType';
 
-/** A rectangular area on screen. */
+/**
+ * A rectangular area on screen, in React Native layout units.
+ *
+ * These are the same units `onLayout` and `measureInWindow` report, so a
+ * measured rect can be used directly. The native SDKs disagree internally -
+ * iOS masks in points and Android in physical device pixels - and the bridge
+ * converts, so the same coordinates describe the same area on both platforms.
+ */
 export interface MaskRect {
   x: number;
   y: number;

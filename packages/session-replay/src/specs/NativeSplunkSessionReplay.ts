@@ -24,6 +24,7 @@ export type NativeSessionReplayState = {
   status: string;
   isRecording: boolean;
   samplingRate: number;
+  renderingMode: string;
 };
 
 export type NativeMaskElement = {
@@ -48,6 +49,37 @@ export interface Spec extends TurboModule {
 
   getRecordingMask(): Promise<NativeRecordingMask | null>;
   setRecordingMask(mask: { [key: string]: unknown } | null): Promise<void>;
+
+  /**
+   * Marks the native view backing `reactTag` as sensitive (or explicitly not
+   * sensitive). Resolves to `false` when the tag could not be resolved to a
+   * native view, which happens for views React Native collapsed away.
+   */
+  setViewSensitivity(reactTag: number, isSensitive: boolean): Promise<boolean>;
+
+  /**
+   * Removes an instance-level override, letting the class-level default apply
+   * again. Must be called when a marked view unmounts, because both platforms
+   * recycle native views across unrelated components.
+   */
+  clearViewSensitivity(reactTag: number): Promise<boolean>;
+
+  /**
+   * Applies sensitivity to every current and future instance of a native view
+   * class. `className` is a fully qualified Java class name on Android and an
+   * Objective-C runtime class name on iOS.
+   */
+  setClassSensitivity(className: string, isSensitive: boolean): Promise<void>;
+  clearClassSensitivity(className: string): Promise<void>;
+
+  /** Returns `'sensitive' | 'notSensitive' | 'unset'`. */
+  getClassSensitivity(className: string): Promise<string>;
+
+  /**
+   * Sets the preferred capture mode, `'native'` or `'wireframeOnly'`. The
+   * effective mode is reported by `getState`.
+   */
+  setRenderingMode(mode: string): Promise<void>;
 }
 
 const Turbo = TurboModuleRegistry.get<Spec>('SplunkSessionReplay');

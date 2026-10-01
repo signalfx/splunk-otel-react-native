@@ -21,6 +21,8 @@ import type {
 } from '../specs/NativeSplunkSessionReplay';
 import { SessionReplayStatus } from '../model/SessionReplayStatus';
 import { MaskType } from '../model/MaskType';
+import { RenderingMode } from '../model/RenderingMode';
+import { Sensitivity } from '../model/Sensitivity';
 import type { SessionReplayState } from '../model/SessionReplayState';
 import type { RecordingMask, MaskElement } from '../model/RecordingMask';
 
@@ -42,6 +44,11 @@ const MASK_TYPE_MAP: Record<string, MaskType> = {
   erasing: MaskType.ERASING,
 };
 
+const RENDERING_MODE_MAP: Record<string, RenderingMode> = {
+  native: RenderingMode.NATIVE,
+  wireframeOnly: RenderingMode.WIREFRAME_ONLY,
+};
+
 export function fromNativeState(
   native: NativeSessionReplayState
 ): SessionReplayState {
@@ -51,6 +58,8 @@ export function fromNativeState(
       SessionReplayStatus.NOT_RECORDING_NOT_STARTED,
     isRecording: native.isRecording,
     samplingRate: native.samplingRate,
+    renderingMode:
+      RENDERING_MODE_MAP[native.renderingMode] ?? RenderingMode.NATIVE,
   };
 }
 
@@ -88,4 +97,14 @@ export function toNativeRecordingMask(
 ): NativeRecordingMask | null {
   if (!mask) return null;
   return { elements: mask.elements.map(toNativeMaskElement) };
+}
+
+const SENSITIVITY_MAP: Record<string, Sensitivity> = {
+  sensitive: Sensitivity.SENSITIVE,
+  notSensitive: Sensitivity.NOT_SENSITIVE,
+  unset: Sensitivity.UNSET,
+};
+
+export function toSensitivity(native: string): Sensitivity {
+  return SENSITIVITY_MAP[native] ?? Sensitivity.UNSET;
 }
