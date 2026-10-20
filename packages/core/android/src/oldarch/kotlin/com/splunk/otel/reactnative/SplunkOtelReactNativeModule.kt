@@ -138,8 +138,8 @@ class SplunkOtelReactNativeModule(reactContext: ReactApplicationContext) :
     implementation.customStartWorkflow(name, promise)
 
   @ReactMethod
-  fun customEndWorkflow(handle: Double, promise: Promise) =
-    implementation.customEndWorkflow(handle, promise)
+  fun customEndWorkflow(handle: Double, attributes: ReadableMap, promise: Promise) =
+    implementation.customEndWorkflow(handle, attributes, promise)
 
   @ReactMethod
   fun reportError(

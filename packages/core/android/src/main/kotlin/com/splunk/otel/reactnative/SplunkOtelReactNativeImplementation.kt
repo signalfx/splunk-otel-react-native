@@ -177,8 +177,8 @@ class SplunkOtelReactNativeImplementation(private val reactContext: ReactApplica
   fun customStartWorkflow(name: String, promise: Promise) =
     customTrackingHandler.startWorkflow(name, promise)
 
-  fun customEndWorkflow(handle: Double, promise: Promise) =
-    customTrackingHandler.endWorkflow(handle, promise)
+  fun customEndWorkflow(handle: Double, attributes: ReadableMap, promise: Promise) =
+    customTrackingHandler.endWorkflow(handle, attributes, promise)
 
   // MARK: - Error Tracking
 

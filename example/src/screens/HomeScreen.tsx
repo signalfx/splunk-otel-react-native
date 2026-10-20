@@ -408,6 +408,31 @@ export const HomeScreen: React.FC<Props> = ({ navigation, installed }) => {
           Alert.alert('Workflow', 'Workflow started (auto-ends in 1.5s)');
         },
       },
+      {
+        id: 'custom-workflow-attributes',
+        title: 'Track Workflow With Attributes',
+        description: 'End a workflow span carrying custom attributes',
+        category: TestCategory.CustomTracking,
+        platforms: new Set([MobilePlatform.Android, MobilePlatform.iOS]),
+        onTap: async () => {
+          const handle = await SplunkRum.instance.customTracking.startWorkflow(
+            'test_workflow_with_attributes'
+          );
+          // The attributes are deliberately generic. Naming a workflow after an
+          // HTTP request and tagging it with `http.*` semantic conventions makes
+          // the span render as a real network call on the session timeline,
+          // which is indistinguishable from captured instrumentation.
+          setTimeout(async () => {
+            await handle.end({
+              'demo.outcome': 'success',
+              'demo.items': 3,
+              'demo.retried': false,
+            });
+            Alert.alert('Workflow', 'Workflow completed with attributes');
+          }, 1500);
+          Alert.alert('Workflow', 'Workflow started (auto-ends in 1.5s)');
+        },
+      },
       // Session
       {
         id: 'session-info',

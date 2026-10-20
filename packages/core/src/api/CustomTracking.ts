@@ -17,6 +17,7 @@
 import type { Attributes } from '@opentelemetry/api';
 import { SplunkNativeBridge as Native } from '../sdk/SplunkNativeBridge';
 import { normalizeError } from '../bridge/stacktrace';
+import { omitReservedAttributes } from '../bridge/attributes';
 
 /**
  * Origin of a reported error.
@@ -52,6 +53,26 @@ export interface ReportErrorOptions {
 }
 
 /**
+ * Attribute keys the native SDKs own on a workflow span.
+ *
+ * The native SDKs write all of these when the workflow starts: `component` and
+ * `workflow.name` on the span builder, and the session, user, installation, and
+ * screen keys from their span processors. Attributes passed to
+ * {@link WorkflowHandle.end} are written later, so they would overwrite these
+ * values. Stripping the keys here is the only thing that protects them.
+ */
+const RESERVED_WORKFLOW_ATTRIBUTE_KEYS: ReadonlySet<string> = new Set([
+  'component',
+  'workflow.name',
+  'session.id',
+  'session.previous_id',
+  'user.anonymous_id',
+  'app.installation.id',
+  'screen.name',
+  'last.screen.name',
+]);
+
+/**
  * Handle to an active workflow span.
  *
  * Call `end()` to complete the workflow and record its duration.
@@ -63,9 +84,29 @@ export class WorkflowHandle {
    * Ends the workflow span.
    *
    * Records the workflow duration from `startWorkflow()` to this call.
+   *
+   * Attributes are attached to the workflow span, which is useful for detail
+   * that is only known once the work has finished, such as its outcome or how
+   * much work it covered.
+   *
+   * @example
+   * ```typescript
+   * await workflow.end({
+   *   'checkout.outcome': 'success',
+   *   'checkout.items': 3,
+   * });
+   * ```
+   *
+   * @param attributes - Optional attributes to attach to the workflow span.
+   *   Reserved keys (`component`, `workflow.name`, `session.id`,
+   *   `session.previous_id`, `user.anonymous_id`, `app.installation.id`,
+   *   `screen.name`, `last.screen.name`) are ignored.
    */
-  async end(): Promise<void> {
-    return Native.customEndWorkflow(this.handle);
+  async end(attributes?: Attributes): Promise<void> {
+    return Native.customEndWorkflow(
+      this.handle,
+      omitReservedAttributes(attributes, RESERVED_WORKFLOW_ATTRIBUTE_KEYS)
+    );
   }
 }
 
@@ -86,7 +127,7 @@ export class WorkflowHandle {
  * ```typescript
  * const workflow = await SplunkRum.instance.customTracking.startWorkflow('checkout');
  * // ... user completes checkout ...
- * await workflow.end();
+ * await workflow.end({ 'checkout.outcome': 'success' });
  * ```
  */
 export class CustomTracking {
@@ -106,7 +147,8 @@ export class CustomTracking {
    * Starts a workflow span for duration measurement.
    *
    * Returns a handle to end the workflow later. The span duration
-   * measures time between start and end.
+   * measures time between start and end. Attributes describing the outcome can
+   * be attached when the workflow ends, see {@link WorkflowHandle.end}.
    *
    * @param name - Workflow name (becomes span name and `workflow.name` attribute).
    * @returns Handle to end the workflow.

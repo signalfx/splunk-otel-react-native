@@ -145,6 +145,7 @@ NS_ASSUME_NONNULL_BEGIN
                      reject:(RCTPromiseRejectBlock)reject;
 
 - (void)customEndWorkflow:(double)handle
+               attributes:(NSDictionary *)attributes
                   resolve:(RCTPromiseResolveBlock)resolve
                    reject:(RCTPromiseRejectBlock)reject;
 

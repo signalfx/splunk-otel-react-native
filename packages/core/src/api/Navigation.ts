@@ -16,6 +16,7 @@
 
 import type { Attributes } from '@opentelemetry/api';
 import { SplunkNativeBridge as Native } from '../sdk/SplunkNativeBridge';
+import { omitReservedAttributes } from '../bridge/attributes';
 
 /**
  * Attribute keys reserved by the native navigation module. The native modules
@@ -29,21 +30,6 @@ const RESERVED_NAVIGATION_ATTRIBUTE_KEYS: ReadonlySet<string> = new Set([
   'screen.name',
   'last.screen.name',
 ]);
-
-function sanitizeNavigationAttributes(attributes?: Attributes): Attributes {
-  if (!attributes) {
-    return {};
-  }
-
-  const sanitized: Attributes = {};
-  for (const key of Object.keys(attributes)) {
-    if (!RESERVED_NAVIGATION_ATTRIBUTE_KEYS.has(key)) {
-      sanitized[key] = attributes[key];
-    }
-  }
-
-  return sanitized;
-}
 
 /**
  * Navigation tracking.
@@ -67,7 +53,7 @@ export class Navigation {
   async track(screenName: string, attributes?: Attributes): Promise<void> {
     return Native.navigationTrack(
       screenName,
-      sanitizeNavigationAttributes(attributes)
+      omitReservedAttributes(attributes, RESERVED_NAVIGATION_ATTRIBUTE_KEYS)
     );
   }
 }

@@ -122,3 +122,85 @@ describe('CustomTracking.trackError', () => {
     expect(error).toBeInstanceOf(Error);
   });
 });
+
+describe('WorkflowHandle.end', () => {
+  let tracking: CustomTracking;
+
+  beforeEach(() => {
+    tracking = new CustomTracking();
+    mockCustomStartWorkflow.mockClear();
+    mockCustomEndWorkflow.mockClear();
+  });
+
+  it('sends an empty attribute set when called without attributes', async () => {
+    const workflow = await tracking.startWorkflow('checkout');
+
+    await workflow.end();
+
+    expect(mockCustomEndWorkflow).toHaveBeenCalledTimes(1);
+    expect(mockCustomEndWorkflow).toHaveBeenCalledWith(7, {});
+  });
+
+  it('forwards non-reserved caller attributes unchanged', async () => {
+    const workflow = await tracking.startWorkflow('checkout');
+
+    await workflow.end({
+      'checkout.outcome': 'success',
+      'checkout.items': 3,
+      'checkout.retried': false,
+    });
+
+    expect(mockCustomEndWorkflow).toHaveBeenCalledWith(7, {
+      'checkout.outcome': 'success',
+      'checkout.items': 3,
+      'checkout.retried': false,
+    });
+  });
+
+  it.each([
+    'component',
+    'workflow.name',
+    'session.id',
+    'session.previous_id',
+    'user.anonymous_id',
+    'app.installation.id',
+    'screen.name',
+    'last.screen.name',
+  ])('strips the native-owned key %s', async (reservedKey) => {
+    const workflow = await tracking.startWorkflow('checkout');
+
+    await workflow.end({
+      [reservedKey]: 'not-allowed',
+      'checkout.outcome': 'success',
+    });
+
+    expect(mockCustomEndWorkflow).toHaveBeenCalledWith(7, {
+      'checkout.outcome': 'success',
+    });
+  });
+
+  it('does not mutate the caller attributes', async () => {
+    const workflow = await tracking.startWorkflow('checkout');
+    const attributes = {
+      'session.id': 'not-allowed',
+      'checkout.outcome': 'success',
+    };
+
+    await workflow.end(attributes);
+
+    expect(attributes).toEqual({
+      'session.id': 'not-allowed',
+      'checkout.outcome': 'success',
+    });
+  });
+
+  it('passes the handle returned by startWorkflow', async () => {
+    mockCustomStartWorkflow.mockResolvedValueOnce(42);
+
+    const workflow = await tracking.startWorkflow('checkout');
+    await workflow.end();
+
+    expect(mockCustomStartWorkflow).toHaveBeenCalledWith('checkout');
+    expect(mockCustomEndWorkflow).toHaveBeenCalledWith(42, {});
+  });
+});

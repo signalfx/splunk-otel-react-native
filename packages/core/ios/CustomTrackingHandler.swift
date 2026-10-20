@@ -40,10 +40,17 @@ public class CustomTrackingHandler: NSObject {
     resolve(NSNumber(value: handle))
   }
 
+  /// Ends the workflow span with the caller's attributes.
+  ///
+  /// These attributes are written after the native SDK set its own keys at span
+  /// start, so they overwrite on conflict. The JS layer strips the native-owned
+  /// keys before they reach the bridge.
   public func endWorkflow(_ handle: NSNumber,
+                          attributes: NSDictionary,
                           resolve: @escaping RCTPromiseResolveBlock,
                           reject: @escaping RCTPromiseRejectBlock) {
     let span = WorkflowSpanStore.shared.remove(handle.intValue)
+    span?.setAttributes(AttributeConverter.buildSpanAttributes(from: attributes))
     span?.end()
     resolve(nil)
   }
