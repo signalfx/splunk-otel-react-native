@@ -272,8 +272,10 @@ await SplunkRum.instance.customTracking.trackCustomEvent('purchase_completed', {
 // Track a workflow with duration
 const workflow = await SplunkRum.instance.customTracking.startWorkflow('checkout');
 // ... perform checkout steps ...
-await workflow.end();
+await workflow.end({ 'checkout.outcome': 'success', 'checkout.items': 3 });
 ```
+
+`workflow.end()` takes optional attributes for details that are only known once the work has finished. Keys the agent owns on the workflow span (`component`, `workflow.name`, `session.id`, `session.previous_id`, `user.anonymous_id`, `app.installation.id`, `screen.name`, `last.screen.name`) are ignored.
 
 ### Error Tracking
 

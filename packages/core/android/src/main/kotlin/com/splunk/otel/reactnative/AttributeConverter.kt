@@ -52,41 +52,41 @@ object AttributeConverter {
   }
 
   fun putArray(builder: AttributesBuilder, key: String, arr: ReadableArray) {
-    if (arr.size() == 0) return
-
-    when (arr.getType(0)) {
-      ReadableType.String -> {
-        val list = mutableListOf<String>()
-        for (i in 0 until arr.size()) {
-          val s = arr.getString(i)
-          if (s != null) list.add(s)
-        }
-
-        builder.put(AttributeKey.stringArrayKey(key), list)
-      }
-
-      ReadableType.Boolean -> {
-        val list = mutableListOf<Boolean>()
-        for (i in 0 until arr.size()) list += arr.getBoolean(i)
-        
-        builder.put(AttributeKey.booleanArrayKey(key), list)
-      }
-
+    when (elementType(arr)) {
+      ReadableType.String -> builder.put(AttributeKey.stringArrayKey(key), stringElements(arr))
+      ReadableType.Boolean -> builder.put(AttributeKey.booleanArrayKey(key), booleanElements(arr))
       ReadableType.Number -> {
-        var allIntegral = true
-        val doubles = mutableListOf<Double>()
-        val longs = mutableListOf<Long>()
-        for (i in 0 until arr.size()) {
-          val d = arr.getDouble(i)
-          doubles += d
-          val l = d.toLong()
-          if (d == l.toDouble()) longs += l else allIntegral = false
-        }
-
-        if (allIntegral) builder.put(AttributeKey.longArrayKey(key), longs) else builder.put(AttributeKey.doubleArrayKey(key), doubles)
+        val numbers = numberElements(arr)
+        val longs = integralOrNull(numbers)
+        if (longs != null) builder.put(AttributeKey.longArrayKey(key), longs) else builder.put(AttributeKey.doubleArrayKey(key), numbers)
       }
       else -> Unit
     }
+  }
+
+  /**
+   * Attribute arrays must be homogeneous, so an array takes the type of its
+   * first non-null element. Nulls and elements of any other type are dropped,
+   * because the `ReadableArray` getters throw on a type mismatch.
+   */
+  private fun elementType(arr: ReadableArray): ReadableType? =
+    (0 until arr.size()).map { arr.getType(it) }.firstOrNull { it != ReadableType.Null }
+
+  private fun indicesOf(arr: ReadableArray, type: ReadableType): List<Int> =
+    (0 until arr.size()).filter { arr.getType(it) == type }
+
+  private fun stringElements(arr: ReadableArray): List<String> =
+    indicesOf(arr, ReadableType.String).mapNotNull { arr.getString(it) }
+
+  private fun booleanElements(arr: ReadableArray): List<Boolean> =
+    indicesOf(arr, ReadableType.Boolean).map { arr.getBoolean(it) }
+
+  private fun numberElements(arr: ReadableArray): List<Double> =
+    indicesOf(arr, ReadableType.Number).map { arr.getDouble(it) }
+
+  private fun integralOrNull(numbers: List<Double>): List<Long>? {
+    val longs = numbers.map { it.toLong() }
+    return if (numbers.indices.all { numbers[it] == longs[it].toDouble() }) longs else null
   }
 
   fun listToWritableArray(list: List<*>): WritableNativeArray {
@@ -129,43 +129,14 @@ object AttributeConverter {
     key: String,
     arr: ReadableArray
   ) {
-    if (arr.size() == 0) return
-
-    when (arr.getType(0)) {
-      ReadableType.String -> {
-        val list = mutableListOf<String>()
-
-        for (i in 0 until arr.size()) {
-          val s = arr.getString(i)
-          if (s != null) list.add(s)
-        }
-
-        ga[AttributeKey.stringArrayKey(key)] = list
-      }
-
-      ReadableType.Boolean -> {
-        val list = mutableListOf<Boolean>()
-
-        for (i in 0 until arr.size()) list += arr.getBoolean(i)
-
-        ga[AttributeKey.booleanArrayKey(key)] = list
-      }
-
+    when (elementType(arr)) {
+      ReadableType.String -> ga[AttributeKey.stringArrayKey(key)] = stringElements(arr)
+      ReadableType.Boolean -> ga[AttributeKey.booleanArrayKey(key)] = booleanElements(arr)
       ReadableType.Number -> {
-        var allIntegral = true
-        val doubles = mutableListOf<Double>()
-        val longs = mutableListOf<Long>()
-
-        for (i in 0 until arr.size()) {
-          val d = arr.getDouble(i)
-          doubles += d
-          val l = d.toLong()
-          if (d == l.toDouble()) longs += l else allIntegral = false
-        }
-
-        if (allIntegral) ga[AttributeKey.longArrayKey(key)] = longs else ga[AttributeKey.doubleArrayKey(key)] = doubles
+        val numbers = numberElements(arr)
+        val longs = integralOrNull(numbers)
+        if (longs != null) ga[AttributeKey.longArrayKey(key)] = longs else ga[AttributeKey.doubleArrayKey(key)] = numbers
       }
-
       else -> Unit
     }
   }

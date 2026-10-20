@@ -17,6 +17,7 @@
 import type { Attributes } from '@opentelemetry/api';
 import { SplunkNativeBridge as Native } from '../sdk/SplunkNativeBridge';
 import { normalizeError } from '../bridge/stacktrace';
+import { omitReservedAttributes } from '../bridge/attributes';
 
 /**
  * Origin of a reported error.
@@ -52,33 +53,24 @@ export interface ReportErrorOptions {
 }
 
 /**
- * Attribute keys reserved by the native custom tracking module. The native
- * modules set these on the workflow span themselves; stripping them here keeps
- * behavior consistent across platforms and prevents a caller from overwriting
- * them.
+ * Attribute keys the native SDKs own on a workflow span.
  *
- * `workflow.name` is set when the workflow starts, so it cannot be protected by
- * write ordering alone.
+ * The native SDKs write all of these when the workflow starts: `component` and
+ * `workflow.name` on the span builder, and the session, user, installation, and
+ * screen keys from their span processors. Attributes passed to
+ * {@link WorkflowHandle.end} are written later, so they would overwrite these
+ * values. Stripping the keys here is the only thing that protects them.
  */
 const RESERVED_WORKFLOW_ATTRIBUTE_KEYS: ReadonlySet<string> = new Set([
   'component',
   'workflow.name',
+  'session.id',
+  'session.previous_id',
+  'user.anonymous_id',
+  'app.installation.id',
+  'screen.name',
+  'last.screen.name',
 ]);
-
-function sanitizeWorkflowAttributes(attributes?: Attributes): Attributes {
-  if (!attributes) {
-    return {};
-  }
-
-  const sanitized: Attributes = {};
-  for (const key of Object.keys(attributes)) {
-    if (!RESERVED_WORKFLOW_ATTRIBUTE_KEYS.has(key)) {
-      sanitized[key] = attributes[key];
-    }
-  }
-
-  return sanitized;
-}
 
 /**
  * Handle to an active workflow span.
@@ -106,12 +98,14 @@ export class WorkflowHandle {
    * ```
    *
    * @param attributes - Optional attributes to attach to the workflow span.
-   *   Reserved keys (`component`, `workflow.name`) are ignored.
+   *   Reserved keys (`component`, `workflow.name`, `session.id`,
+   *   `session.previous_id`, `user.anonymous_id`, `app.installation.id`,
+   *   `screen.name`, `last.screen.name`) are ignored.
    */
   async end(attributes?: Attributes): Promise<void> {
     return Native.customEndWorkflow(
       this.handle,
-      sanitizeWorkflowAttributes(attributes)
+      omitReservedAttributes(attributes, RESERVED_WORKFLOW_ATTRIBUTE_KEYS)
     );
   }
 }

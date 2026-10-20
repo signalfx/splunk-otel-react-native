@@ -141,7 +141,7 @@ describe('WorkflowHandle.end', () => {
     expect(mockCustomEndWorkflow).toHaveBeenCalledWith(7, {});
   });
 
-  it('forwards caller attributes with their types preserved', async () => {
+  it('forwards non-reserved caller attributes unchanged', async () => {
     const workflow = await tracking.startWorkflow('checkout');
 
     await workflow.end({
@@ -157,16 +157,39 @@ describe('WorkflowHandle.end', () => {
     });
   });
 
-  it('strips attribute keys reserved by the native module', async () => {
+  it.each([
+    'component',
+    'workflow.name',
+    'session.id',
+    'session.previous_id',
+    'user.anonymous_id',
+    'app.installation.id',
+    'screen.name',
+    'last.screen.name',
+  ])('strips the native-owned key %s', async (reservedKey) => {
     const workflow = await tracking.startWorkflow('checkout');
 
     await workflow.end({
-      component: 'not-allowed',
-      'workflow.name': 'not-allowed',
+      [reservedKey]: 'not-allowed',
       'checkout.outcome': 'success',
     });
 
     expect(mockCustomEndWorkflow).toHaveBeenCalledWith(7, {
+      'checkout.outcome': 'success',
+    });
+  });
+
+  it('does not mutate the caller attributes', async () => {
+    const workflow = await tracking.startWorkflow('checkout');
+    const attributes = {
+      'session.id': 'not-allowed',
+      'checkout.outcome': 'success',
+    };
+
+    await workflow.end(attributes);
+
+    expect(attributes).toEqual({
+      'session.id': 'not-allowed',
       'checkout.outcome': 'success',
     });
   });

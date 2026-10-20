@@ -2,24 +2,44 @@
   "schemaVersion": 1,
   "exceptions": [
     {
-      "id": "1138808",
+      "id": "1239765",
       "package": "image-size",
       "severity": "high",
       "expires": "2026-11-29",
       "owner": "@signalfx/mrum-react-native-maintainers",
       "dependencyPath": "react-native 0.86.2 > @react-native/community-cli-plugin 0.86.2 > metro 0.84.4 > image-size 1.2.1",
       "mitigation": "The package is build tooling only. PR builds use ephemeral hosted runners with read-only tokens, no secrets, and no persisted checkout credentials. Never move these builds to privileged runners; remove the exception when Metro publishes a patched path.",
-      "reason": "React Native 0.86.2 pins Metro 0.84.4, which pins image-size 1.2.1. Re-verified on renewal: the 1.x line ends at 1.2.1, so no patched release exists inside Metro's ^1.0.2 range, and the only newer release is 2.0.4 across a major boundary. Remove this exception when Metro moves to a patched range."
+      "reason": "Supersedes advisory 1138808, which the advisory database re-issued under this ID (GHSA-5p2g-fcmc-qvqq). React Native 0.86.2 pins Metro 0.84.4, which pins image-size 1.2.1. The fix exists only in image-size 2.0.3 and later, across a major boundary, and the 1.x line ends at 1.2.1, so no patched release exists inside Metro's ^1.0.2 range. Remove this exception when Metro moves to a patched range."
     },
     {
-      "id": "1138809",
+      "id": "1239766",
       "package": "image-size",
       "severity": "high",
       "expires": "2026-11-29",
       "owner": "@signalfx/mrum-react-native-maintainers",
       "dependencyPath": "react-native 0.86.2 > @react-native/community-cli-plugin 0.86.2 > metro 0.84.4 > image-size 1.2.1",
       "mitigation": "The package is build tooling only. PR builds use ephemeral hosted runners with read-only tokens, no secrets, and no persisted checkout credentials. Never move these builds to privileged runners; remove the exception when Metro publishes a patched path.",
-      "reason": "React Native 0.86.2 pins Metro 0.84.4, which pins image-size 1.2.1. Re-verified on renewal: the 1.x line ends at 1.2.1, so no patched release exists inside Metro's ^1.0.2 range, and the only newer release is 2.0.4 across a major boundary. Remove this exception when Metro moves to a patched range."
+      "reason": "Supersedes advisory 1138809, which the advisory database re-issued under this ID (GHSA-w3rx-r6r6-pgpr). React Native 0.86.2 pins Metro 0.84.4, which pins image-size 1.2.1. The fix exists only in image-size 2.0.3 and later, across a major boundary, and the 1.x line ends at 1.2.1, so no patched release exists inside Metro's ^1.0.2 range. Remove this exception when Metro moves to a patched range."
+    },
+    {
+      "id": "1240992",
+      "package": "braces",
+      "severity": "high",
+      "expires": "2026-11-29",
+      "owner": "@signalfx/mrum-react-native-maintainers",
+      "dependencyPath": "jest 29.7.0 / metro-file-map 0.84.4 / fast-glob 3.3.3 > micromatch 4.0.8 > braces 3.0.3",
+      "mitigation": "The package is test and build tooling only; neither SDK package has runtime dependencies. Glob patterns come from repository configuration, never from untrusted input. PR builds use ephemeral hosted runners with read-only tokens and no secrets. Remove the exception when braces publishes a fixed release.",
+      "reason": "GHSA-vfj7-8cjw-p6xm affects every braces release up to and including 3.0.3, which is the latest published version, so no patched release exists to resolve to."
+    },
+    {
+      "id": "1240853",
+      "package": "basic-ftp",
+      "severity": "high",
+      "expires": "2026-11-29",
+      "owner": "@signalfx/mrum-react-native-maintainers",
+      "dependencyPath": "release-it 19.2.4 > proxy-agent 6.5.0 > pac-proxy-agent 7.2.0 > get-uri 6.0.5 > basic-ftp 5.3.1",
+      "mitigation": "The package is release tooling only and is reached only when a PAC proxy script is fetched over ftp://. Never configure release runs with an FTP-hosted PAC proxy. Do not force basic-ftp across the major boundary; remove the exception when get-uri accepts a patched range.",
+      "reason": "GHSA-c475-qrg2-pj4r is fixed only in basic-ftp 6.2.1 and later. Every get-uri release, including the latest 8.0.1, depends on basic-ftp ^5, so no patched release exists inside the range the dependency chain accepts."
     }
   ],
   "observations": [

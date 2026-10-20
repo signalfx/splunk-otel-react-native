@@ -295,6 +295,18 @@ export async function runApiAssertionTests(): Promise<ApiTestReport> {
         'CustomTracking',
         'workflow.end(attributes) completed'
       );
+
+      const handleWithSparseArray = await sdk.customTracking.startWorkflow(
+        'test_api_workflow_with_sparse_array'
+      );
+      await handleWithSparseArray.end({
+        'demo.counts': [1, null, 2],
+      });
+      assertions.assert(
+        true,
+        'CustomTracking',
+        'workflow.end() with a null array element completed'
+      );
     } catch (e: any) {
       assertions.assert(
         false,

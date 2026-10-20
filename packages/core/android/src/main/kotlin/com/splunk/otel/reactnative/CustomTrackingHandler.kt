@@ -16,6 +16,7 @@
 
 package com.splunk.otel.reactnative
 
+import android.util.Log
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReadableMap
 import com.splunk.rum.integration.customtracking.CustomTracking
@@ -50,15 +51,25 @@ class CustomTrackingHandler {
   }
 
   /**
-   * Ends the workflow span, applying any caller attributes first so the keys the
-   * native SDK owns take precedence on conflict.
+   * Ends the workflow span with the caller's attributes.
+   *
+   * These attributes are written after the native SDK set its own keys at span
+   * start, so they overwrite on conflict. The JS layer strips the native-owned
+   * keys before they reach the bridge.
    */
   fun endWorkflow(handle: Double, attributes: ReadableMap, promise: Promise) {
     try {
       val span = WorkflowSpanStore.remove(handle.toInt())
 
       if (span != null) {
-        span.setAllAttributes(AttributeConverter.buildAttributesFromMap(attributes))
+        // The span is already out of the store, so it must end even if the
+        // attributes cannot be converted, or the workflow is never exported.
+        try {
+          span.setAllAttributes(AttributeConverter.buildAttributesFromMap(attributes))
+        } catch (t: Throwable) {
+          Log.w(TAG, "endWorkflow() - dropped attributes that could not be converted", t)
+        }
+
         span.end()
       }
 
@@ -127,6 +138,8 @@ class CustomTrackingHandler {
   }
 
   companion object {
+    private const val TAG = "SplunkOtelRN"
+
     /**
      * Marks the cross-platform layer the error originates from, for backend
      * symbolication and UI routing.

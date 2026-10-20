@@ -22,39 +22,7 @@ import SplunkAgent
 enum AttributeConverter {
 
   static func buildAttributes(from nsDict: NSDictionary) -> MutableAttributes {
-    var dict: [String: AttributeValue] = [:]
-    for (kAny, vAny) in nsDict {
-      guard let key = kAny as? String else { continue }
-
-      if let s = vAny as? String {
-        dict[key] = .string(s)
-        continue
-      }
-
-      if let b = vAny as? Bool {
-        dict[key] = .bool(b)
-        continue
-      }
-
-      if let n = vAny as? NSNumber {
-        dict[key] = .double(n.doubleValue)
-        continue
-      }
-
-      if let arr = vAny as? [Any] {
-        let mapped: [AttributeValue] = arr.compactMap { e in
-          if let s = e as? String { return .string(s) }
-          if let b = e as? Bool { return .bool(b) }
-          if let n = e as? NSNumber { return .double(n.doubleValue) }
-          return nil
-        }
-
-        dict[key] = .array(AttributeArray(values: mapped))
-        continue
-      }
-    }
-
-    return MutableAttributes(dictionary: dict)
+    return MutableAttributes(dictionary: buildSpanAttributes(from: nsDict))
   }
 
   /// Converts a bridged dictionary into typed attribute values for use on a span.
@@ -77,14 +45,7 @@ enum AttributeConverter {
       }
 
       if let arr = vAny as? [Any] {
-        let mapped: [AttributeValue] = arr.compactMap { element in
-          if let s = element as? String { return .string(s) }
-          if let n = element as? NSNumber { return attributeValue(from: n) }
-
-          return nil
-        }
-
-        dict[key] = .array(AttributeArray(values: mapped))
+        dict[key] = .array(AttributeArray(values: convertArrayToAttributeArray(arr)))
         continue
       }
     }
@@ -92,20 +53,28 @@ enum AttributeConverter {
     return dict
   }
 
-  /// Maps an `NSNumber` to the attribute value matching its underlying type.
+  /// Maps an `NSNumber` to a boolean, integer, or double attribute value.
   ///
   /// JavaScript booleans bridge to `__NSCFBoolean`, which also casts
-  /// successfully to a number, so the boolean check has to come first.
+  /// successfully to a number, so the boolean check has to come first. A Swift
+  /// `as? Bool` cast is not used because it also succeeds for the numbers 0 and 1.
+  ///
+  /// Every JavaScript number arrives as a double, so whole numbers are mapped to
+  /// integers to match the Android converter.
   private static func attributeValue(from number: NSNumber) -> AttributeValue {
     if CFGetTypeID(number) == CFBooleanGetTypeID() {
       return .bool(number.boolValue)
     }
 
-    if CFNumberIsFloatType(number) {
-      return .double(number.doubleValue)
+    if !CFNumberIsFloatType(number) {
+      return .int(number.intValue)
     }
 
-    return .int(number.intValue)
+    if let integer = Int(exactly: number.doubleValue) {
+      return .int(integer)
+    }
+
+    return .double(number.doubleValue)
   }
 
   static func attributeValueToAny(_ value: AttributeValue?) -> Any? {
@@ -128,15 +97,7 @@ enum AttributeConverter {
   static func convertArrayToAttributeArray(_ arr: [Any]) -> [AttributeValue] {
     return arr.compactMap { element in
       if let s = element as? String { return .string(s) }
-      if let b = element as? Bool { return .bool(b) }
-      if let n = element as? NSNumber {
-
-        if CFNumberIsFloatType(n) {
-          return .double(n.doubleValue)
-        } else {
-          return .int(n.intValue)
-        }
-      }
+      if let n = element as? NSNumber { return attributeValue(from: n) }
 
       return nil
     }
