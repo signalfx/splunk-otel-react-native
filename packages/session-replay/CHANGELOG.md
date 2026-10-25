@@ -4,6 +4,7 @@
 
 ### Changed
 * Version bump in sync with `@splunk/otel-react-native`.
+* Building for iOS now requires Xcode 26.4 or later.
 
 ## 1.3.0
 

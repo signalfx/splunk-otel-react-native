@@ -156,11 +156,11 @@ jobs:
 
   build-ios:
     name: Build iOS
-    runs-on: macos-14
+    runs-on: macos-26
     needs: [build-library]
 
     env:
-      XCODE_VERSION: '16.2'
+      XCODE_VERSION: '26.6'
       TURBO_CACHE_DIR: .turbo/ios
       RCT_USE_RN_DEP: 1
       RCT_USE_PREBUILT_RNCORE: 1
@@ -208,6 +208,12 @@ jobs:
         run: |
           rm -rf example/ios/Pods
           rm -rf example/ios/build
+
+      - name: Setup Ruby
+        if: env.turbo_cache_hit != 1
+        uses: ruby/setup-ruby@7f797815d8adceb1c412e7abefdd1ab4abc47a5f # v1.335.0
+        with:
+          ruby-version: '3.3'
 
       - name: Install CocoaPods
         if: env.turbo_cache_hit != 1

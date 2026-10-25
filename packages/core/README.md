@@ -29,6 +29,7 @@ The Splunk Distribution of OpenTelemetry for React Native provides automatic ins
 - React Native >= 0.75.0
 - React >= 18.2.0
 - iOS >= 15.0
+- Xcode >= 26.4 (for iOS builds)
 - Android minSdkVersion >= 24
 
 ## Installation
