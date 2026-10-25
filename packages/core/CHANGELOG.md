@@ -2,7 +2,11 @@
 
 ## Unreleased
 
-* TBD
+### Changed
+* Bumped the native iOS RUM SDK to `2.4.3`.
+
+### Fixed
+* **iOS app start no longer reports background time or JavaScript start-up as launch time.** The SDK still records app lifecycle events before JavaScript installs the agent, but it now hands them to the iOS AppStart module together with how the app was launched (in the foreground, in the background, or in the foreground and then interrupted).
 
 ## 1.3.0
 

@@ -44,7 +44,7 @@ Pod::Spec.new do |s|
     "ios/frameworks/SplunkWebView.xcframework",
     "ios/frameworks/OpenTelemetryApi.xcframework",
     "ios/frameworks/OpenTelemetrySdk.xcframework",
-    "ios/frameworks/CrashReporter.xcframework",
+    "ios/frameworks/SplunkCrashReporter.xcframework",
     "ios/frameworks/CiscoCommon.xcframework",
     "ios/frameworks/CiscoDiskStorage.xcframework",
     "ios/frameworks/CiscoEncryption.xcframework",

@@ -3,204 +3,204 @@
   "algorithm": "sha256",
   "source": {
     "repository": "signalfx/splunk-otel-ios",
-    "version": "2.4.1"
+    "version": "2.4.3"
   },
   "frameworks": [
     {
       "name": "CiscoCommon",
       "path": "packages/core/ios/frameworks/CiscoCommon.xcframework",
       "files": 31,
-      "bytes": 522057,
-      "sha256": "ce6b24804d2818281082c20f090a31fa3242a01601d4866740684db34a4844d6"
+      "bytes": 459455,
+      "sha256": "1ade98426f5d4cff32fd8e3667b105cd72f4fd8ea7d4e32c60430bb719b3db81"
     },
     {
       "name": "CiscoDiskStorage",
       "path": "packages/core/ios/frameworks/CiscoDiskStorage.xcframework",
       "files": 31,
-      "bytes": 1677500,
-      "sha256": "e36305d590f160a8aec424d842a7ec237ed91692bcc1af8538d398799f03e74e"
+      "bytes": 1572805,
+      "sha256": "f783de70817854aa770e5cfc28582f06ee46807b476a40190d5ca05104930859"
     },
     {
       "name": "CiscoEncryption",
       "path": "packages/core/ios/frameworks/CiscoEncryption.xcframework",
       "files": 31,
-      "bytes": 1172087,
-      "sha256": "ed8834a595018cca13d34fbfc9ba812f0b902eda50e8f3070f021a1ca5f0dd36"
+      "bytes": 1309264,
+      "sha256": "5ef09c71f3a0fd27c2480082edecf50dc6419b38edae1d04d386da425e6e5a6f"
     },
     {
       "name": "CiscoInstanceManager",
       "path": "packages/core/ios/frameworks/CiscoInstanceManager.xcframework",
       "files": 29,
-      "bytes": 1565519,
-      "sha256": "0959d2710a05ec2a71eefbdb49be6cdf432e8e1ed3f3d215f75fb6af49181331"
+      "bytes": 1301787,
+      "sha256": "d01d70d6e2b859cb3b43cf50af4bba15333b9bbc375851d3d834211282d11ad0"
     },
     {
       "name": "CiscoInteractions",
       "path": "packages/core/ios/frameworks/CiscoInteractions.xcframework",
       "files": 31,
-      "bytes": 3206020,
-      "sha256": "5e6f1e61218e7fb2295845aad8b3424f7e9436c83de791ecaef98dbec70cc8d7"
+      "bytes": 2973537,
+      "sha256": "4159988f3a294cc49bef57fe1af4d7d43f1ef27d3b4df57749585b231c65e755"
     },
     {
       "name": "CiscoLogger",
       "path": "packages/core/ios/frameworks/CiscoLogger.xcframework",
       "files": 31,
-      "bytes": 1942224,
-      "sha256": "1025a387a846af662f8f284875b84141603074e9faed4770100bc93e18eba5fd"
+      "bytes": 1907012,
+      "sha256": "9610bc5be55fc16938f66689ebb1c79b5bb01036140c5e71dc05de9e8daeb374"
     },
     {
       "name": "CiscoRuntimeCache",
       "path": "packages/core/ios/frameworks/CiscoRuntimeCache.xcframework",
       "files": 31,
-      "bytes": 1186694,
-      "sha256": "df9d49cabc6aa8e8d5a0688e96288ba9cc1eb776e9d7b100a13dc745eb658abe"
+      "bytes": 1032955,
+      "sha256": "c84299c67bd868cb5baebaf50a0c9c88f16d1efae07ec6bca0a992a364090eaf"
     },
     {
       "name": "CiscoSessionReplay",
       "path": "packages/core/ios/frameworks/CiscoSessionReplay.xcframework",
       "files": 31,
-      "bytes": 14991263,
-      "sha256": "01f84b459e40b112bd2ea75f6a38a0c544c92e353ef1ca73d1bf9149c58f1009"
+      "bytes": 14303530,
+      "sha256": "702c576d851d88696a96fa248eb107367ee519014834e7f6d1beb29315856d59"
     },
     {
       "name": "CiscoSwizzling",
       "path": "packages/core/ios/frameworks/CiscoSwizzling.xcframework",
       "files": 31,
-      "bytes": 4398586,
-      "sha256": "2ceb35e063b63bc9196a883d5d52e4ded5eff135747732a218784026e5ad636a"
-    },
-    {
-      "name": "CrashReporter",
-      "path": "packages/core/ios/frameworks/CrashReporter.xcframework",
-      "files": 129,
-      "bytes": 7251290,
-      "sha256": "97c0a3ee29979e6710d9179f6cf7e982b2e75686ff93ca7c0eb8cde7c0df4ff1"
+      "bytes": 4425714,
+      "sha256": "a9c617776c4408009be305b37a5e6c27bcc8ecee7c17e4a9ada084e29a391edb"
     },
     {
       "name": "OpenTelemetryApi",
       "path": "packages/core/ios/frameworks/OpenTelemetryApi.xcframework",
       "files": 33,
-      "bytes": 39587909,
-      "sha256": "6f39ce9588544d726f6385e9024bec7f36370ce044bd1f9e868aad75ad316407"
+      "bytes": 39732996,
+      "sha256": "202006fc44d5cce84e60b32f1719ac0ea6add3027b7c0e82ba161746365336b6"
     },
     {
       "name": "OpenTelemetrySdk",
       "path": "packages/core/ios/frameworks/OpenTelemetrySdk.xcframework",
       "files": 33,
-      "bytes": 26455404,
-      "sha256": "eb5a4c97fdcb7bbc1faf75d289634f339b58339ae6d2ba318a284f6d3e8f4384"
+      "bytes": 23826021,
+      "sha256": "fb7b1c0d8b592bb95e507f8af5493d3b740496093d62d7b9875ee75ffad1bd57"
     },
     {
       "name": "SplunkAgent",
       "path": "packages/core/ios/frameworks/SplunkAgent.xcframework",
       "files": 49,
-      "bytes": 21017321,
-      "sha256": "560d8cd9996f23ad4b9557974e66de4efb38a9a78ca727da86c83e7abb34d9cd"
+      "bytes": 17337361,
+      "sha256": "ae5b1206b57e9078f780bacc56b638bacb916a09c4ba3187c43d22dcc2a2d6ef"
     },
     {
       "name": "SplunkAgentObjC",
       "path": "packages/core/ios/frameworks/SplunkAgentObjC.xcframework",
       "files": 40,
-      "bytes": 13801063,
-      "sha256": "eaabe6ea7ae9acb7598ccfa710819c71a1d6d0a36288f57aee40897dea681dce"
+      "bytes": 10068966,
+      "sha256": "eb9203feac06af5a93bb1d68db13f4b2b196e310c8a05ae21826869bbf896d32"
     },
     {
       "name": "SplunkAppStart",
       "path": "packages/core/ios/frameworks/SplunkAppStart.xcframework",
       "files": 39,
-      "bytes": 5844464,
-      "sha256": "9586402a80bc1cec1859d9dcd204e11fd8375ab1d872338cd2cf73428fc8d6ca"
+      "bytes": 6706548,
+      "sha256": "3a558f716dd33182ead13b3990fbc797f14c93ac8d8e8c43f9a46ef7e31419ac"
     },
     {
       "name": "SplunkAppState",
       "path": "packages/core/ios/frameworks/SplunkAppState.xcframework",
       "files": 36,
-      "bytes": 4914789,
-      "sha256": "4191d6499ba0fb714e1dd3db6c74f642b7e7264871d9a9127b50d878f9f424ce"
+      "bytes": 4918230,
+      "sha256": "90ee10631c92f9ea8e8ad24bd1a3781c3946969f22ad42562e9a8b0fa40c56f3"
     },
     {
       "name": "SplunkCommon",
       "path": "packages/core/ios/frameworks/SplunkCommon.xcframework",
       "files": 45,
-      "bytes": 4690392,
-      "sha256": "e77faa237fb0181b5d6050950028b772ff7cabb7a2de8d0c53cf7e44a936f974"
+      "bytes": 4885028,
+      "sha256": "59336b6b837beee6b5f0ed9ba6a32bbde3b7b69e8bd0d9d1e59ca33c7aa48a31"
+    },
+    {
+      "name": "SplunkCrashReporter",
+      "path": "packages/core/ios/frameworks/SplunkCrashReporter.xcframework",
+      "files": 133,
+      "bytes": 7245715,
+      "sha256": "53e468d7bafaa64cee0fe0e77f6f75a8296103a07ca3d002403f3278a89b1e58"
     },
     {
       "name": "SplunkCrashReports",
       "path": "packages/core/ios/frameworks/SplunkCrashReports.xcframework",
       "files": 39,
-      "bytes": 6266106,
-      "sha256": "3e2fa3cf86aec8fb74193578108dc7f9add68747018652ebf2917bd4068341c2"
+      "bytes": 6262747,
+      "sha256": "4c4c5505ad17c88952fc8d882967c422a20f680f41f89bf6af63fffd25364c8b"
     },
     {
       "name": "SplunkCustomTracking",
       "path": "packages/core/ios/frameworks/SplunkCustomTracking.xcframework",
       "files": 39,
-      "bytes": 5693832,
-      "sha256": "d1fc6ac63e808a8929a67e3583288f2f635c6c2dc4fc82e99de0bbf6735a08c6"
+      "bytes": 5487357,
+      "sha256": "6d502326042b6be82a3bd8004cd0edb75cc3991fb78b08999b17d2263ea8b09b"
     },
     {
       "name": "SplunkInteractions",
       "path": "packages/core/ios/frameworks/SplunkInteractions.xcframework",
       "files": 48,
-      "bytes": 3907797,
-      "sha256": "98bbad7c553b7b44b51e4d7dee0cebb76c5cfa98f9bbe6d69f384cf36596dfe3"
+      "bytes": 3759589,
+      "sha256": "d546dc908f44f39af1281a18c31058de3e5678d79eea5e8eddd1782d4c5286d0"
     },
     {
       "name": "SplunkNavigation",
       "path": "packages/core/ios/frameworks/SplunkNavigation.xcframework",
       "files": 42,
-      "bytes": 6785877,
-      "sha256": "4b4dca12fdfd4e90ee99be44d64bb4036c8a8b57b4f99f52f046a229ffb74484"
+      "bytes": 6765218,
+      "sha256": "5521038195a2c29a0926d284062600479568f62eb3ae210209afb9450277da99"
     },
     {
       "name": "SplunkNetwork",
       "path": "packages/core/ios/frameworks/SplunkNetwork.xcframework",
       "files": 39,
-      "bytes": 5663680,
-      "sha256": "a75b5de2116b7ba3fe0bb44b00f3b322efcfc4117201fe9ccef8c99e3d57eb2a"
+      "bytes": 6127171,
+      "sha256": "be4edf5f9adfb858dfab70eaa1c2533dd0daf296af3cd0a5fcbba65fa0ca1d45"
     },
     {
       "name": "SplunkNetworkMonitor",
       "path": "packages/core/ios/frameworks/SplunkNetworkMonitor.xcframework",
       "files": 39,
-      "bytes": 4221580,
-      "sha256": "c1ce700440b562565ae37ec37ce560c7ad88916795006e0bdf8d87a389550ff7"
+      "bytes": 4045161,
+      "sha256": "c7d24134a21b368a137d29c58b2d912a136349ef05d785ad677db67d34b06018"
     },
     {
       "name": "SplunkOpenTelemetry",
       "path": "packages/core/ios/frameworks/SplunkOpenTelemetry.xcframework",
       "files": 45,
-      "bytes": 8560548,
-      "sha256": "d46ddd39b2bdd99374cc18fda054425c53fa72b37ab2b6b47d88631caa9e3320"
+      "bytes": 7568356,
+      "sha256": "2e3fcb2f6ed28af068862d345b5356d94217455db51b7ab749c17f7f7c990e71"
     },
     {
       "name": "SplunkOpenTelemetryBackgroundExporter",
       "path": "packages/core/ios/frameworks/SplunkOpenTelemetryBackgroundExporter.xcframework",
       "files": 48,
-      "bytes": 12044082,
-      "sha256": "798fc64f8e3515a8280ae3b238e4ea5b32bbe97cbd17d6778fd5c8e2a83f635e"
+      "bytes": 11803363,
+      "sha256": "824142458ea2048c20a75ccfc98a3c7a29454665b8ec4fbbdc6d5b5defda013c"
     },
     {
       "name": "SplunkSessionReplayProxy",
       "path": "packages/core/ios/frameworks/SplunkSessionReplayProxy.xcframework",
       "files": 36,
-      "bytes": 3022753,
-      "sha256": "b9676367b9a1ff58c5a91a4515be347c2577e8eba41f20d2b9635c9a921c043b"
+      "bytes": 2846168,
+      "sha256": "c0b6a7bd84607a1661e444b95a793d1450d83d2b80e706e938b35d12d9295956"
     },
     {
       "name": "SplunkSlowFrameDetector",
       "path": "packages/core/ios/frameworks/SplunkSlowFrameDetector.xcframework",
       "files": 36,
-      "bytes": 5461810,
-      "sha256": "7bd61ae486c6589dcf8dc81a0bf091ca9abf68466d4e8a186bd1f1045b4f483e"
+      "bytes": 5470688,
+      "sha256": "fdcd6151260efbebc8e5269fe5ea4361f261c7c4a7c7750bbea87a34bc50e474"
     },
     {
       "name": "SplunkWebView",
       "path": "packages/core/ios/frameworks/SplunkWebView.xcframework",
       "files": 38,
-      "bytes": 4612911,
-      "sha256": "d1b748c938ff0d01c38aa13d4fce196dc602125c4fcecc9a13f113d4e694e57a"
+      "bytes": 4468479,
+      "sha256": "e0946042d2b5c92b820f8fdd823373dad7417fcb2f4716c854e7f8a7ed015add"
     }
   ]
 }

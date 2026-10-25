@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-* TBD
+### Changed
+* Version bump in sync with `@splunk/otel-react-native`.
 
 ## 1.3.0
 
