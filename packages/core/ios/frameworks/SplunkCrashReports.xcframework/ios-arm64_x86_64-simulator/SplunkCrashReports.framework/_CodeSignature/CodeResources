@@ -6,51 +6,51 @@
 	<dict>
 		<key>Headers/SplunkCrashReports-Swift.h</key>
 		<data>
-		ebUmhHYByr7cqOOb4OhC81bxOFE=
+		1ZJwuSqjiuYFEfICPqXtqjfd8YQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		yFzladhL0G94goPCTU7gJd3bpdg=
+		4ZPktjS8G5KZpiUANw4k8IPVxLI=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		3iL4lkMnGB7+zk7AXXgGpO/ufOo=
+		3wEMejO1jBZGG+Sa+eHWw0BDgjw=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		u831BGxPfcrXlSQzEz2Qf9DRZMg=
+		l2wJZoxeh6DM0vgRJKfwE+hj6KY=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		jKSSiKo0v6zHvZljwybRqAEtGMg=
+		MSGbgPnvGZENO1SOPzI7YduUnvk=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		5TyCvg6K3ur0uFqLu4qhQnIS17Y=
+		ckoHGWPxQuL+g/1e0IRi4ORXeY4=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		XWcFx0R/Q26usZbGcEbCg5nQp+U=
+		zJOy55YXHCSv2vdl+/ZMwsKSAtc=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		3iL4lkMnGB7+zk7AXXgGpO/ufOo=
+		3wEMejO1jBZGG+Sa+eHWw0BDgjw=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		wJK4Je+xrb/2VMk61PkBfGSnN9c=
+		8FG6KXQk8DYn/08P7Gpn3gKZT5c=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		A1OeSnQi9c5GtiUbpAULh8+zQJ4=
+		QLNaPan6x/YlzsQ9aa+Nxb2U2CM=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		kfopmPWQrMedrH4L72kPoHp4B1c=
+		VkrU5riR4YwdCeIibVYJdEEOTRk=
 		</data>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		lG+eX09geEaXmG7U/9uBxFB4C2E=
+		66GNAdbx22Pj+LDm8a6TJH889dw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,77 +63,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xKkgojMT2XTxPh09dfTB11UEtgYrPN6vHmJ+qRJJERs=
+			2H5LhDCTpz1eXiPGWQOI2rzsJtrx7+yGoduHH75qDr4=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fR6irvIxQEw3E9jT0H8ALhG4Mu6e91FNgyhL5MJzH0I=
+			IAfpQTYld/rPzWG3aKZK7n6uXjf4mroGhOz8eOPiBxg=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wwIWWd9ysxklZC3GOHhkFy/liUqeS6g0nspVkMgsGsM=
+			pnbl82CSOdtqLivnSkpq13XqaTDpeKPJ/pnHkmNl+nA=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TNgr84qgtNhtJOZLBbR+vsuCojo0RotnQ2bSGDNVPgI=
+			YBlnraJbEDRWUIB43xM42v8Uxa1YIIlWT3NUlsFJI4M=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dE6sn9TVyi0mOmt7DXWJpARO3/kzFFYBwiOT/quTcyI=
+			ihsaiPmh4aHUbgbmx11AAFoS2uCrmkS1hbpcfTNk0hI=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+l8zHdCvKVNgc7oPaUfDC3tdNR8xp9U6ji53bF369v8=
+			CknUlGp7u3SrKqayDQbWmjNvpj3/BFttQEvvZPGI6eA=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fR6irvIxQEw3E9jT0H8ALhG4Mu6e91FNgyhL5MJzH0I=
+			IAfpQTYld/rPzWG3aKZK7n6uXjf4mroGhOz8eOPiBxg=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r/25m8/kUMNfOYt97C/4ZNI5IuJHsB8u4nLPf3fQZ3w=
+			qtkbJjNSpD8gdxiY+Rd3YmamNeM4GqzN/Bo44MG9cIM=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			m6+7N9TWijzc6QOKNujZA7tOeeLvbhwi9HT/obqf/To=
+			0MPcggMBsf/iA5d08NB7JIAOzZEsfHTcorAafRu64I0=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mE5kDdDfh+clIwu25nWm/avYCxAyCrQviwBKTqa6q+g=
+			HhWUq/rVh5tRyr+oSFngdoNlmdDh4bR6+XHHmHSqfuQ=
 			</data>
 		</dict>
 		<key>Modules/SplunkCrashReports.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K7kqAVzYNAs+UHf8z40Nir6bYSJ8OpHbtQ/qkyT+Xgg=
+			IRgq17/zlBBxysblMreXo4MdAa/lB4ioCgW9OMG4ZBE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkSlowFrameDetector -package-name SplunkAgent
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
+// swift-compiler-version: Apple Swift version 6.4 effective-5.10 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -language-mode 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkSlowFrameDetector -package-name SplunkAgent
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.4
 import Foundation
 import OpenTelemetryApi
 import QuartzCore
@@ -12,36 +12,36 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 public struct EventMetadataSlowFrameDetector {
-  public var timestamp: Foundation.Date
+  public var timestamp: Foundation::Date
 }
-public struct SlowFrameData : SplunkCommon.ModuleEventData {
+public struct SlowFrameData : SplunkCommon::ModuleEventData {
 }
-extension SplunkSlowFrameDetector.EventMetadataSlowFrameDetector : SplunkCommon.ModuleEventMetadata {
-  public static func == (lhs: SplunkSlowFrameDetector.EventMetadataSlowFrameDetector, rhs: SplunkSlowFrameDetector.EventMetadataSlowFrameDetector) -> Swift.Bool
+extension SplunkSlowFrameDetector::EventMetadataSlowFrameDetector : SplunkCommon::ModuleEventMetadata {
+  public static func == (lhs: SplunkSlowFrameDetector::EventMetadataSlowFrameDetector, rhs: SplunkSlowFrameDetector::EventMetadataSlowFrameDetector) -> Swift::Bool
 }
-extension SplunkSlowFrameDetector.SlowFrameDetector : SplunkCommon.Module {
-  public typealias Configuration = SplunkSlowFrameDetector.SlowFrameDetectorConfiguration
-  public typealias RemoteConfiguration = SplunkSlowFrameDetector.SlowFrameDetectorRemoteConfiguration
-  public typealias EventMetadata = SplunkSlowFrameDetector.EventMetadataSlowFrameDetector
-  public typealias EventData = SplunkSlowFrameDetector.SlowFrameData
-  final public func deleteData(for _: any SplunkCommon.ModuleEventMetadata)
-  final public func onPublish(data _: @escaping (SplunkSlowFrameDetector.EventMetadataSlowFrameDetector, SplunkSlowFrameDetector.SlowFrameData) -> Swift.Void)
+extension SplunkSlowFrameDetector::SlowFrameDetector : SplunkCommon::Module {
+  public typealias Configuration = SplunkSlowFrameDetector::SlowFrameDetectorConfiguration
+  public typealias RemoteConfiguration = SplunkSlowFrameDetector::SlowFrameDetectorRemoteConfiguration
+  public typealias EventMetadata = SplunkSlowFrameDetector::EventMetadataSlowFrameDetector
+  public typealias EventData = SplunkSlowFrameDetector::SlowFrameData
+  final public func deleteData(for _: any SplunkCommon::ModuleEventMetadata)
+  final public func onPublish(data _: @escaping (SplunkSlowFrameDetector::EventMetadataSlowFrameDetector, SplunkSlowFrameDetector::SlowFrameData) -> Swift::Void)
 }
-public struct SlowFrameDetectorConfiguration : SplunkCommon.ModuleConfiguration {
-  public var isEnabled: Swift.Bool
+public struct SlowFrameDetectorConfiguration : SplunkCommon::ModuleConfiguration {
+  public var isEnabled: Swift::Bool
   public init()
-  public init(isEnabled: Swift.Bool = true)
-  public func encode(to encoder: any Swift.Encoder) throws
+  public init(isEnabled: Swift::Bool = true)
+  public func encode(to encoder: any Swift::Encoder) throws
 }
-public struct SlowFrameDetectorRemoteConfiguration : SplunkCommon.RemoteModuleConfiguration {
-  public var enabled: Swift.Bool
-  public init?(from _: Foundation.Data)
+public struct SlowFrameDetectorRemoteConfiguration : SplunkCommon::RemoteModuleConfiguration {
+  public var enabled: Swift::Bool
+  public init?(from _: Foundation::Data)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class SlowFrameDetector : ObjectiveC.NSObject {
-  final public var isEnabled: Swift.Bool {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class SlowFrameDetector : ObjectiveC::NSObject {
+  final public var isEnabled: Swift::Bool {
     get
   }
   @objc override required convenience dynamic public init()
   @objc deinit
-  final public func install(with configuration: (any SplunkCommon.ModuleConfiguration)?, remoteConfiguration: (any SplunkCommon.RemoteModuleConfiguration)?)
+  final public func install(with configuration: (any SplunkCommon::ModuleConfiguration)?, remoteConfiguration: (any SplunkCommon::RemoteModuleConfiguration)?)
 }

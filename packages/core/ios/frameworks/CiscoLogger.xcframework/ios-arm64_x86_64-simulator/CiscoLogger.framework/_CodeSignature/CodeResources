@@ -6,51 +6,51 @@
 	<dict>
 		<key>Headers/CiscoLogger-Swift.h</key>
 		<data>
-		cnxSLZdAU6yZuXsXXZ5kUwwpIpI=
+		54vnzZPX9e/nade4FThyOx4Yp2Q=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lXrpFK3nRu9cW2AkNZy07poRqIU=
+		HPq4E3pFLSaeSSjLfSuKo/SR+yE=
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		N21Lpf6cWrDZQB0UykHFgLinHFs=
+		yn3X1NBHlUr/m1vhB1ThuBA761g=
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		/u6ukBlvZmsJSgqZr6Vqo1g/SSw=
+		uShxrUCuYicPr87Brk1gyM8Vj3E=
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		8AHSRAEqkUiN5PBp3BHYHYjt5+A=
+		DggDVvO0W267epca136rnoZ7NkM=
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		/u6ukBlvZmsJSgqZr6Vqo1g/SSw=
+		uShxrUCuYicPr87Brk1gyM8Vj3E=
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		IhjC+H1/86kvMFRmGveFN5QuJXo=
+		uzqWoXcWaVT2zOqEUhwqfU6tGTo=
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		N21Lpf6cWrDZQB0UykHFgLinHFs=
+		yn3X1NBHlUr/m1vhB1ThuBA761g=
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		2+AXtFWBJPFPIa0hOleSBvsx0js=
+		Cx+RggGdraO64OJ/KiuRaj3+qnI=
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		qQXLg6ltO4hyGlPBjLLcUUMy3IU=
+		IWRwuQbMqj0ki9QUvlTdY402RSc=
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		2+AXtFWBJPFPIa0hOleSBvsx0js=
+		Cx+RggGdraO64OJ/KiuRaj3+qnI=
 		</data>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		7j3Mr6EduppqupD9eWrlybzeeeY=
+		lbcB4oMHTdXlGjGkkUo6FD1mXtk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,77 +67,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4DURMRrmN7otQdJKy1Onie39vvNF8KBnw12ZJPdarF0=
+			2AMpbur2vpMOmWLgbf/s+IYgmKxG2/zcCnmB6hi6wjM=
 			</data>
 		</dict>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rWPCoyTAHOTcu+xgoKwA7zLGq7XiYbgj6lCsA5IgOtY=
+			pTZM6I5E9gGlPdPUF0DqRytdvG7qzheACO+3IkfA59c=
 			</data>
 		</dict>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			72xVo94jHdDRMRTGYVwiWl45ajtAhPojRmG4WCzsbtQ=
+			QGh3L4o9l2qWlALX5bCs67HDYx6rRCAUiyCyEnX+DiA=
 			</data>
 		</dict>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8VNylNUwz93e8Uj+GKxKvOMetcNpNyVQYQZHi2B3uh8=
+			mM2PyDPNp+EF1AnUpSmO5jFVKWIQRiYAVkmBinHM6u8=
 			</data>
 		</dict>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			72xVo94jHdDRMRTGYVwiWl45ajtAhPojRmG4WCzsbtQ=
+			QGh3L4o9l2qWlALX5bCs67HDYx6rRCAUiyCyEnX+DiA=
 			</data>
 		</dict>
 		<key>Modules/CiscoLogger.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			d+zrTkSQ7hzYWH+wWi2P+58KZuCUUafX8OukVcFB45c=
+			X3bkckQ05xf8kFlbgGXQe2a3s1lFYYsOMLQj37U/kZU=
 			</data>
 		</dict>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rWPCoyTAHOTcu+xgoKwA7zLGq7XiYbgj6lCsA5IgOtY=
+			pTZM6I5E9gGlPdPUF0DqRytdvG7qzheACO+3IkfA59c=
 			</data>
 		</dict>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ttXZC3srPOlkvu4HfVnfpwlqAPiMN11m10W25p3rcvE=
+			KrybgdzdLwuXhNIb13uz29l2olUPXTNNg2UP5ivj9tk=
 			</data>
 		</dict>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FqrP8qpqMGtkWj++K2EhctWlGgyKUlsXVW499818PyA=
+			EhnMC38F175Wyr6FygeeYGEZY4BPkIAWjsV+xX4ng5s=
 			</data>
 		</dict>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ttXZC3srPOlkvu4HfVnfpwlqAPiMN11m10W25p3rcvE=
+			KrybgdzdLwuXhNIb13uz29l2olUPXTNNg2UP5ivj9tk=
 			</data>
 		</dict>
 		<key>Modules/CiscoLogger.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZYgUw2CB0kq8UMFFOHRxnogMJZIuIfmCQqmS4kP3ypA=
+			wXgACpxupl3vZ2GxfSPbalIOidQUkvb3kfKT8u8DufE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

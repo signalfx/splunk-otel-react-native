@@ -1,8 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkCrashReports -package-name SplunkAgent
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
-import CrashReporter
+// swift-compiler-version: Apple Swift version 6.4 effective-5.10 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -language-mode 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SplunkCrashReports -package-name SplunkAgent
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.4
 import Foundation
 import OpenTelemetryApi
 import SplunkCommon
@@ -13,39 +12,39 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 public class CrashReports {
-  unowned public var sharedState: (any SplunkCommon.AgentSharedState)?
+  unowned public var sharedState: (any SplunkCommon::AgentSharedState)?
   required public init()
   @objc deinit
   public func configureCrashReporter()
   public func reportCrashIfPresent()
-  public func initializeCrashReporter() -> Swift.Bool
-  public func crashReportUpdateScreenName(_ screenName: Swift.String)
+  public func initializeCrashReporter() -> Swift::Bool
+  public func crashReportUpdateScreenName(_ screenName: Swift::String)
 }
 @_hasMissingDesignatedInitializers public class CrashReportDeviceStats {
   @objc deinit
 }
-extension Swift.String : SplunkCommon.ModuleEventData {
+extension Swift::String : SplunkCommon::ModuleEventData {
 }
-public struct CrashReportsMetadata : SplunkCommon.ModuleEventMetadata {
-  public var timestamp: Foundation.Date
-  public var eventName: Swift.String
-  public static func == (a: SplunkCrashReports.CrashReportsMetadata, b: SplunkCrashReports.CrashReportsMetadata) -> Swift.Bool
+public struct CrashReportsMetadata : SplunkCommon::ModuleEventMetadata {
+  public var timestamp: Foundation::Date
+  public var eventName: Swift::String
+  public static func == (a: SplunkCrashReports::CrashReportsMetadata, b: SplunkCrashReports::CrashReportsMetadata) -> Swift::Bool
 }
-extension SplunkCrashReports.CrashReports : SplunkCommon.Module {
-  public typealias Configuration = SplunkCrashReports.CrashReportsConfiguration
-  public typealias RemoteConfiguration = SplunkCrashReports.CrashReportsRemoteConfiguration
-  public typealias EventMetadata = SplunkCrashReports.CrashReportsMetadata
-  public typealias EventData = Swift.String
-  public func install(with configuration: (any SplunkCommon.ModuleConfiguration)?, remoteConfiguration _: (any SplunkCommon.RemoteModuleConfiguration)?)
-  public func onPublish(data block: @escaping (SplunkCrashReports.CrashReportsMetadata, Swift.String) -> Swift.Void)
-  public func deleteData(for _: any SplunkCommon.ModuleEventMetadata)
+extension SplunkCrashReports::CrashReports : SplunkCommon::Module {
+  public typealias Configuration = SplunkCrashReports::CrashReportsConfiguration
+  public typealias RemoteConfiguration = SplunkCrashReports::CrashReportsRemoteConfiguration
+  public typealias EventMetadata = SplunkCrashReports::CrashReportsMetadata
+  public typealias EventData = Swift::String
+  public func install(with configuration: (any SplunkCommon::ModuleConfiguration)?, remoteConfiguration _: (any SplunkCommon::RemoteModuleConfiguration)?)
+  public func onPublish(data block: @escaping (SplunkCrashReports::CrashReportsMetadata, Swift::String) -> Swift::Void)
+  public func deleteData(for _: any SplunkCommon::ModuleEventMetadata)
 }
-public struct CrashReportsConfiguration : SplunkCommon.ModuleConfiguration {
-  public var isEnabled: Swift.Bool
-  public init(isEnabled: Swift.Bool)
-  public func encode(to encoder: any Swift.Encoder) throws
+public struct CrashReportsConfiguration : SplunkCommon::ModuleConfiguration {
+  public var isEnabled: Swift::Bool
+  public init(isEnabled: Swift::Bool)
+  public func encode(to encoder: any Swift::Encoder) throws
 }
-public struct CrashReportsRemoteConfiguration : SplunkCommon.RemoteModuleConfiguration {
-  public var enabled: Swift.Bool
-  public init?(from data: Foundation.Data)
+public struct CrashReportsRemoteConfiguration : SplunkCommon::RemoteModuleConfiguration {
+  public var enabled: Swift::Bool
+  public init?(from data: Foundation::Data)
 }

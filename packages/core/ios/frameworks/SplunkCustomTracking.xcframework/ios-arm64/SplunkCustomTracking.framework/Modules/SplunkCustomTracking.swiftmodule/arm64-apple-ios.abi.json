@@ -3796,189 +3796,189 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/CustomTracking.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/CustomTracking.swift",
       "kind": "BooleanLiteral",
       "offset": 1451,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1002,
       "length": 16,
       "value": "\"exception.type\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1042,
       "length": 19,
       "value": "\"exception.message\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1088,
       "length": 22,
       "value": "\"exception.stacktrace\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1134,
       "length": 19,
       "value": "\"exception.threads\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1176,
       "length": 18,
       "value": "\"exception.images\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1215,
       "length": 16,
       "value": "\"exception.code\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1255,
       "length": 19,
       "value": "\"exception.escaped\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1393,
       "length": 16,
       "value": "\"code.namespace\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1557,
       "length": 19,
       "value": "\"crash.processPath\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/ErrorAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1686,
       "length": 14,
       "value": "\"service.name\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/Stacktrace.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/Stacktrace.swift",
       "kind": "IntegerLiteral",
       "offset": 1528,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/Stacktrace.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/DataTypes\/ErrorData\/Stacktrace.swift",
       "kind": "StringLiteral",
       "offset": 8467,
       "length": 70,
       "value": "\"^\\s*(\\d+)\\s+(.+?)\\s+(0x[0-9a-fA-F]+)\\s+(.*?)(?:\\s+\\+\\s+(\\d+))?\\s*$\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/ErrorDiagnostics\/ErrorDiagnosticEnricher.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/ErrorDiagnostics\/ErrorDiagnosticEnricher.swift",
       "kind": "StringLiteral",
       "offset": 971,
       "length": 25,
       "value": "\"ErrorDiagnosticEnricher\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/ErrorDiagnostics\/ErrorDiagnosticEnricher.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/ErrorDiagnostics\/ErrorDiagnosticEnricher.swift",
       "kind": "BooleanLiteral",
       "offset": 1252,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/ErrorDiagnostics\/ErrorDiagnosticJSON.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/ErrorDiagnostics\/ErrorDiagnosticJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 673,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/ErrorDiagnostics\/ErrorDiagnosticKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/ErrorDiagnostics\/ErrorDiagnosticKeys.swift",
       "kind": "StringLiteral",
       "offset": 903,
       "length": 9,
       "value": "\"crashed\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/ErrorDiagnostics\/LoadedImageMetadataResolver.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/ErrorDiagnostics\/LoadedImageMetadataResolver.swift",
       "kind": "Dictionary",
       "offset": 1222,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Module\/CustomTrackingConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Module\/CustomTrackingConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 837,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Module\/CustomTrackingConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Module\/CustomTrackingConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 1164,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Module\/CustomTrackingConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Module\/CustomTrackingConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 1244,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Module\/CustomTrackingConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Module\/CustomTrackingConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 1294,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Module\/CustomTrackingRemoteConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Module\/CustomTrackingRemoteConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 1120,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Protocols\/SplunkTrackableEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Protocols\/SplunkTrackableEvent.swift",
       "kind": "Dictionary",
       "offset": 998,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Protocols\/SplunkTrackableIssue.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Protocols\/SplunkTrackableIssue.swift",
       "kind": "IntegerLiteral",
       "offset": 5290,
       "length": 5,
       "value": "4096"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Protocols\/SplunkTrackableIssue.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Protocols\/SplunkTrackableIssue.swift",
       "kind": "IntegerLiteral",
       "offset": 5663,
       "length": 6,
       "value": "16384"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Protocols\/SplunkTrackableIssue.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCustomTracking\/Sources\/SplunkCustomTracking\/Protocols\/SplunkTrackableIssue.swift",
       "kind": "IntegerLiteral",
       "offset": 5861,
       "length": 3,

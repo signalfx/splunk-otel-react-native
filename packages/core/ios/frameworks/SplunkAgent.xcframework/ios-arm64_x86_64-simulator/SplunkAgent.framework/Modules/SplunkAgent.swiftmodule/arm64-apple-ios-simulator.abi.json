@@ -1029,6 +1029,36 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SplunkCommon",
         "printedName": "SplunkCommon",
         "declKind": "Import",
@@ -9229,6 +9259,17 @@
         "moduleName": "SplunkAgent",
         "declAttributes": [
           "AccessControl",
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkAppStart",
+        "printedName": "SplunkAppStart",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "AccessControl",
           "RawDocComment"
         ]
       },
@@ -9261,6 +9302,646 @@
         "moduleName": "SplunkAgent",
         "declAttributes": [
           "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppStartLifecycleSnapshot",
+        "printedName": "AppStartLifecycleSnapshot",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "LaunchOrigin",
+            "printedName": "LaunchOrigin",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "foreground",
+                "printedName": "foreground",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin.Type) -> SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LaunchOrigin",
+                        "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                        "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LaunchOrigin",
+                            "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                            "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO10foregroundyA2EmF",
+                "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO10foregroundyA2EmF",
+                "moduleName": "SplunkAgent",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "background",
+                "printedName": "background",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin.Type) -> SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LaunchOrigin",
+                        "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                        "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LaunchOrigin",
+                            "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                            "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO10backgroundyA2EmF",
+                "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO10backgroundyA2EmF",
+                "moduleName": "SplunkAgent",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "foregroundResumed",
+                "printedName": "foregroundResumed",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin.Type) -> SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LaunchOrigin",
+                        "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                        "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LaunchOrigin",
+                            "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                            "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO17foregroundResumedyA2EmF",
+                "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO17foregroundResumedyA2EmF",
+                "moduleName": "SplunkAgent",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "unknown",
+                "printedName": "unknown",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin.Type) -> SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LaunchOrigin",
+                        "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                        "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LaunchOrigin",
+                            "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                            "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO7unknownyA2EmF",
+                "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO7unknownyA2EmF",
+                "moduleName": "SplunkAgent",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO9hashValueSivp",
+                "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO9hashValueSivp",
+                "moduleName": "SplunkAgent",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO9hashValueSivg",
+                    "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO9hashValueSivg",
+                    "moduleName": "SplunkAgent",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO4hash4intoys6HasherVz_tF",
+                "moduleName": "SplunkAgent",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LaunchOrigin",
+                    "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                    "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LaunchOrigin",
+                    "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                    "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO2eeoiySbAE_AEtFZ",
+                "moduleName": "SplunkAgent",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO",
+            "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO",
+            "moduleName": "SplunkAgent",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "launchOrigin",
+            "printedName": "launchOrigin",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LaunchOrigin",
+                "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12launchOriginAC06LaunchH0Ovp",
+            "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV12launchOriginAC06LaunchH0Ovp",
+            "moduleName": "SplunkAgent",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LaunchOrigin",
+                    "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                    "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12launchOriginAC06LaunchH0Ovg",
+                "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV12launchOriginAC06LaunchH0Ovg",
+                "moduleName": "SplunkAgent",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didFinishLaunching",
+            "printedName": "didFinishLaunching",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV18didFinishLaunching10Foundation4DateVSgvp",
+            "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV18didFinishLaunching10Foundation4DateVSgvp",
+            "moduleName": "SplunkAgent",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV18didFinishLaunching10Foundation4DateVSgvg",
+                "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV18didFinishLaunching10Foundation4DateVSgvg",
+                "moduleName": "SplunkAgent",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "willEnterForeground",
+            "printedName": "willEnterForeground",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV19willEnterForeground10Foundation4DateVSgvp",
+            "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV19willEnterForeground10Foundation4DateVSgvp",
+            "moduleName": "SplunkAgent",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV19willEnterForeground10Foundation4DateVSgvg",
+                "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV19willEnterForeground10Foundation4DateVSgvg",
+                "moduleName": "SplunkAgent",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didBecomeActive",
+            "printedName": "didBecomeActive",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV15didBecomeActive10Foundation4DateVSgvp",
+            "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV15didBecomeActive10Foundation4DateVSgvp",
+            "moduleName": "SplunkAgent",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV15didBecomeActive10Foundation4DateVSgvg",
+                "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV15didBecomeActive10Foundation4DateVSgvg",
+                "moduleName": "SplunkAgent",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(launchOrigin:didFinishLaunching:willEnterForeground:didBecomeActive:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppStartLifecycleSnapshot",
+                "printedName": "SplunkAgent.AppStartLifecycleSnapshot",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LaunchOrigin",
+                "printedName": "SplunkAgent.AppStartLifecycleSnapshot.LaunchOrigin",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12LaunchOriginO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV12launchOrigin18didFinishLaunching19willEnterForeground0I12BecomeActiveA2C06LaunchH0O_10Foundation4DateVSgA2Mtcfc",
+            "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV12launchOrigin18didFinishLaunching19willEnterForeground0I12BecomeActiveA2C06LaunchH0O_10Foundation4DateVSgA2Mtcfc",
+            "moduleName": "SplunkAgent",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV",
+        "mangledName": "$s11SplunkAgent25AppStartLifecycleSnapshotV",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -9330,13 +10011,46 @@
             "moduleName": "SplunkAgent",
             "genericSig": "<τ_0_0 where τ_0_0 : SplunkAgent.AppStartModule>",
             "sugared_genericSig": "<Self where Self : SplunkAgent.AppStartModule>",
+            "deprecated": true,
             "protocolReq": true,
             "declAttributes": [
+              "Available",
               "SPIAccessControl",
               "RawDocComment"
             ],
             "spi_group_names": [
               "SplunkInternal"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "track",
+            "printedName": "track(initialLifecycle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppStartModule",
+                "printedName": "any SplunkAgent.AppStartModule",
+                "usr": "s:11SplunkAgent14AppStartModuleP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AppStartLifecycleSnapshot",
+                "printedName": "SplunkAgent.AppStartLifecycleSnapshot",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SplunkAgent14AppStartModuleP5track16initialLifecycleAaB_pAA0cdH8SnapshotV_tF",
+            "mangledName": "$s11SplunkAgent14AppStartModuleP5track16initialLifecycleAaB_pAA0cdH8SnapshotV_tF",
+            "moduleName": "SplunkAgent",
+            "genericSig": "<τ_0_0 where τ_0_0 : SplunkAgent.AppStartModule>",
+            "sugared_genericSig": "<Self where Self : SplunkAgent.AppStartModule>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
@@ -9393,14 +10107,46 @@
             "moduleName": "SplunkAgent",
             "genericSig": "<τ_0_0 where τ_0_0 : SplunkAgent.AppStartModule>",
             "sugared_genericSig": "<Self where Self : SplunkAgent.AppStartModule>",
+            "deprecated": true,
             "declAttributes": [
               "AccessControl",
+              "Available",
               "SPIAccessControl"
             ],
             "isFromExtension": true,
             "spi_group_names": [
               "SplunkInternal"
             ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "track",
+            "printedName": "track(initialLifecycle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppStartModule",
+                "printedName": "any SplunkAgent.AppStartModule",
+                "usr": "s:11SplunkAgent14AppStartModuleP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AppStartLifecycleSnapshot",
+                "printedName": "SplunkAgent.AppStartLifecycleSnapshot",
+                "usr": "s:11SplunkAgent25AppStartLifecycleSnapshotV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11SplunkAgent14AppStartModulePAAE5track16initialLifecycleAaB_pAA0cdH8SnapshotV_tF",
+            "mangledName": "$s11SplunkAgent14AppStartModulePAAE5track16initialLifecycleAaB_pAA0cdH8SnapshotV_tF",
+            "moduleName": "SplunkAgent",
+            "genericSig": "<τ_0_0 where τ_0_0 : SplunkAgent.AppStartModule>",
+            "sugared_genericSig": "<Self where Self : SplunkAgent.AppStartModule>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           }
         ],
@@ -15419,6 +16165,16 @@
       },
       {
         "kind": "Import",
+        "name": "SplunkAppStart",
+        "printedName": "SplunkAppStart",
+        "declKind": "Import",
+        "moduleName": "SplunkAgent",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SplunkCommon",
         "printedName": "SplunkCommon",
         "declKind": "Import",
@@ -15927,11 +16683,7 @@
             "moduleName": "SplunkAgent",
             "declAttributes": [
               "AccessControl",
-              "SPIAccessControl",
               "RawDocComment"
-            ],
-            "spi_group_names": [
-              "SplunkInternal"
             ],
             "accessors": [
               {
@@ -15950,9 +16702,6 @@
                 "usr": "s:11SplunkAgent0A3RumC8appStartAA03AppE6Module_pvg",
                 "mangledName": "$s11SplunkAgent0A3RumC8appStartAA03AppE6Module_pvg",
                 "moduleName": "SplunkAgent",
-                "spi_group_names": [
-                  "SplunkInternal"
-                ],
                 "accessorKind": "get"
               }
             ]
@@ -17553,777 +18302,791 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
       "kind": "StringLiteral",
       "offset": 730,
       "length": 16,
       "value": "\"appStateEvents\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
       "kind": "IntegerLiteral",
       "offset": 834,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
       "kind": "IntegerLiteral",
       "offset": 989,
       "length": 9,
       "value": "2592000"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/AppState\/Model\/AppStateModel.swift",
       "kind": "StringLiteral",
       "offset": 1169,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
       "kind": "StringLiteral",
       "offset": 4888,
       "length": 6,
       "value": "\"true\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
       "kind": "StringLiteral",
       "offset": 4925,
       "length": 7,
       "value": "\"false\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
       "kind": "IntegerLiteral",
       "offset": 5613,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
       "kind": "IntegerLiteral",
       "offset": 5959,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Attributes\/MutableAttributes+Conversion.swift",
       "kind": "IntegerLiteral",
       "offset": 6382,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "BooleanLiteral",
       "offset": 826,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 870,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 962,
       "length": 4,
       "value": "15.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 969,
       "length": 4,
       "value": "60.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 1009,
       "length": 3,
       "value": "4.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 1015,
       "length": 4,
       "value": "60.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 1022,
       "length": 4,
       "value": "60.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/ConfigurationDefaults.swift",
       "kind": "BooleanLiteral",
       "offset": 1062,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/ConfigurationHandler+Storage.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/ConfigurationHandler+Storage.swift",
       "kind": "StringLiteral",
       "offset": 654,
       "length": 23,
       "value": "\"AgentConfigurationKey\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/ConfigurationHandler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/ConfigurationHandler.swift",
       "kind": "Array",
       "offset": 982,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/ConfigurationHandler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/ConfigurationHandler.swift",
       "kind": "StringLiteral",
       "offset": 1069,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/Endpoints\/RemoteConfigurationEndpoint.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/Endpoints\/RemoteConfigurationEndpoint.swift",
       "kind": "StringLiteral",
       "offset": 1173,
       "length": 8,
       "value": "\"config\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/SplunkConfigurationHandler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/SplunkConfigurationHandler.swift",
       "kind": "StringLiteral",
       "offset": 1066,
       "length": 833,
       "value": "\"{\n    \"configuration\": {\n        \"mrum\": {\n            \"enabled\": true,\n            \"maxSessionLength\": \""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/SplunkConfigurationHandler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/SplunkConfigurationHandler.swift",
       "kind": "StringLiteral",
       "offset": 1255,
       "length": 1,
       "value": "\",\n            \"sessionTimeout\": \""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/SplunkConfigurationHandler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Configuration\/Handler\/SplunkConfigurationHandler.swift",
       "kind": "StringLiteral",
       "offset": 1334,
       "length": 1,
       "value": "\",\n            \"sessionReplay\": {\n                \"enabled\": true\n            },\n            \"crashReporting\": {\n                \"enabled\": true\n            },\n            \"networkTracing\": {\n                \"enabled\": true\n            },\n            \"slowFrameDetector\": {\n                \"enabled\": true\n            },\n            \"appStart\": {\n                \"enabled\": true\n            }\n        }\n    }\n}\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Event Manager\/DefaultEventManager.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Event Manager\/DefaultEventManager.swift",
       "kind": "IntegerLiteral",
       "offset": 1514,
       "length": 3,
       "value": "300"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CrashReportsDataEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CrashReportsDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 894,
       "length": 6,
       "value": "\"mrum\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CrashReportsDataEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CrashReportsDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 994,
       "length": 14,
       "value": "\"crashreports\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CrashReportsDataEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CrashReportsDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 1034,
       "length": 7,
       "value": "\"crash\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CustomTrackingDataEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/CustomTrackingDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 1158,
       "length": 25,
       "value": "\"CustomTrackingDataEvent\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 823,
       "length": 6,
       "value": "\"mrum\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 845,
       "length": 21,
       "value": "\"session_replay_data\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 931,
       "length": 15,
       "value": "\"sessionreplay\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
       "kind": "StringLiteral",
       "offset": 968,
       "length": 16,
       "value": "\"session.replay\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayDataEvent.swift",
       "kind": "Array",
       "offset": 1939,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
       "kind": "StringLiteral",
       "offset": 876,
       "length": 6,
       "value": "\"mrum\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
       "kind": "StringLiteral",
       "offset": 898,
       "length": 34,
       "value": "\"splunk.sessionReplay.isRecording\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
       "kind": "StringLiteral",
       "offset": 997,
       "length": 7,
       "value": "\"agent\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionReplayRefreshEvent.swift",
       "kind": "StringLiteral",
       "offset": 1026,
       "length": 16,
       "value": "\"session.replay\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
       "kind": "StringLiteral",
       "offset": 909,
       "length": 6,
       "value": "\"mrum\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
       "kind": "StringLiteral",
       "offset": 931,
       "length": 15,
       "value": "\"session.start\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
       "kind": "StringLiteral",
       "offset": 1011,
       "length": 7,
       "value": "\"agent\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Events\/SessionStartEvent.swift",
       "kind": "StringLiteral",
       "offset": 1040,
       "length": 7,
       "value": "\"agent\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Indexers\/SessionReplayEventIndexer.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Indexers\/SessionReplayEventIndexer.swift",
       "kind": "IntegerLiteral",
       "offset": 821,
       "length": 5,
       "value": "1000"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Indexers\/SessionReplayEventIndexer.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Indexers\/SessionReplayEventIndexer.swift",
       "kind": "IntegerLiteral",
       "offset": 968,
       "length": 9,
       "value": "2678400"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Memorizers\/SessionReplayEventMemorizer.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Memorizers\/SessionReplayEventMemorizer.swift",
       "kind": "IntegerLiteral",
       "offset": 781,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Memorizers\/SessionReplayEventMemorizer.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/Event Memorizers\/SessionReplayEventMemorizer.swift",
       "kind": "IntegerLiteral",
       "offset": 926,
       "length": 9,
       "value": "2678400"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
       "kind": "Array",
       "offset": 1502,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
       "kind": "BooleanLiteral",
       "offset": 1902,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
       "kind": "IntegerLiteral",
       "offset": 2235,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
       "kind": "IntegerLiteral",
       "offset": 2310,
       "length": 6,
       "value": "10000"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Events\/Utils\/UserActivityCollector.swift",
       "kind": "IntegerLiteral",
       "offset": 2674,
       "length": 5,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
       "kind": "Dictionary",
-      "offset": 915,
+      "offset": 985,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
       "kind": "Dictionary",
-      "offset": 980,
+      "offset": 1050,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
       "kind": "StringLiteral",
-      "offset": 1075,
+      "offset": 1145,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/Manager\/DefaultModulesManager.swift",
       "kind": "Array",
-      "offset": 1154,
+      "offset": 1224,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/SplunkRum+Modules.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Modules\/SplunkRum+Modules.swift",
       "kind": "Array",
-      "offset": 6228,
+      "offset": 6387,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Runtime Attributes\/CurrentScreenName.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Resources\/AppInstallationStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 676,
+      "length": 21,
+      "value": "\"app.installation.id\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Resources\/AppVersionTracker.swift",
+      "kind": "StringLiteral",
+      "offset": 667,
+      "length": 19,
+      "value": "\"app.version.state\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Runtime Attributes\/CurrentScreenName.swift",
       "kind": "StringLiteral",
       "offset": 937,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
       "kind": "IntegerLiteral",
       "offset": 773,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
       "kind": "IntegerLiteral",
       "offset": 805,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOffAgentSampler.swift",
       "kind": "IntegerLiteral",
       "offset": 838,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOnAgentSampler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOnAgentSampler.swift",
       "kind": "FloatLiteral",
       "offset": 776,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOnAgentSampler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOnAgentSampler.swift",
       "kind": "FloatLiteral",
       "offset": 810,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOnAgentSampler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Samplers\/Sampler Factory\/AlwaysOnAgentSampler.swift",
       "kind": "FloatLiteral",
       "offset": 844,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Replay Sampling\/SessionReplaySampler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Replay Sampling\/SessionReplaySampler.swift",
       "kind": "FloatLiteral",
       "offset": 1088,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Replay Sampling\/SessionReplaySampler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Replay Sampling\/SessionReplaySampler.swift",
       "kind": "FloatLiteral",
       "offset": 1190,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Sampling\/DefaultAgentSessionSampler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Sampling\/DefaultAgentSessionSampler.swift",
       "kind": "FloatLiteral",
       "offset": 1026,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Sampling\/DefaultAgentSessionSampler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Sampling\/DefaultAgentSessionSampler.swift",
       "kind": "FloatLiteral",
       "offset": 1128,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Sampling\/DefaultAgentSessionSampler.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Sampling\/Session Sampling\/DefaultAgentSessionSampler.swift",
       "kind": "FloatLiteral",
       "offset": 1300,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/DefaultSession.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/DefaultSession.swift",
       "kind": "StringLiteral",
       "offset": 1165,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/DefaultSession.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/DefaultSession.swift",
       "kind": "IntegerLiteral",
       "offset": 1555,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
       "kind": "IntegerLiteral",
       "offset": 762,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
       "kind": "IntegerLiteral",
       "offset": 909,
       "length": 9,
       "value": "2678400"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
       "kind": "Array",
       "offset": 1125,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/Model\/SessionsModel.swift",
       "kind": "StringLiteral",
       "offset": 1411,
       "length": 10,
       "value": "\"sessions\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/NoOpSession.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/Session\/NoOpSession.swift",
       "kind": "StringLiteral",
       "offset": 735,
       "length": 7,
       "value": "\"no-op\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/User\/NoOpUser.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Agent\/User\/NoOpUser.swift",
       "kind": "StringLiteral",
       "offset": 706,
       "length": 6,
       "value": "\"noop\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Extensions\/String+HexID.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Extensions\/String+HexID.swift",
       "kind": "IntegerLiteral",
       "offset": 879,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Extensions\/String+NanoID.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Extensions\/String+NanoID.swift",
       "kind": "IntegerLiteral",
       "offset": 657,
       "length": 2,
       "value": "21"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/API-1.0-AgentConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/API-1.0-AgentConfiguration.swift",
       "kind": "StringLiteral",
       "offset": 3277,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1209,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1572,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1623,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1683,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1735,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Deprecated\/Model\/API-1.0-SplunkRumBuilder.swift",
       "kind": "StringLiteral",
       "offset": 1906,
       "length": 18,
       "value": "\"SplunkRumBuilder\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Custom Tracking\/Proxies\/Module\/CustomTracking+Tracking.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Custom Tracking\/Proxies\/Module\/CustomTracking+Tracking.swift",
       "kind": "Dictionary",
       "offset": 2116,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Custom Tracking\/Proxies\/Non-Operational\/CustomTrackingNonOperational+Tracking.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Custom Tracking\/Proxies\/Non-Operational\/CustomTrackingNonOperational+Tracking.swift",
       "kind": "Dictionary",
       "offset": 2011,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplay.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplay.swift",
       "kind": "Array",
       "offset": 1063,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplay.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplay.swift",
       "kind": "IntegerLiteral",
       "offset": 1285,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplay.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplay.swift",
       "kind": "FloatLiteral",
       "offset": 1398,
       "length": 3,
       "value": "0.2"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplayState.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Module\/SessionReplayState.swift",
       "kind": "FloatLiteral",
       "offset": 1103,
       "length": 3,
       "value": "0.2"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Non-Operational\/SessionReplayNonOperational.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Non-Operational\/SessionReplayNonOperational.swift",
       "kind": "FloatLiteral",
       "offset": 1335,
       "length": 3,
       "value": "0.2"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Non-Operational\/SessionReplayNonOperationalState.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Proxies\/Non-Operational\/SessionReplayNonOperationalState.swift",
       "kind": "FloatLiteral",
       "offset": 1065,
       "length": 3,
       "value": "0.2"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Public API\/API-1.0-Sensitivity+SwiftUI.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Public API\/API-1.0-Sensitivity+SwiftUI.swift",
       "kind": "BooleanLiteral",
       "offset": 1149,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RecordingMask.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RecordingMask.swift",
       "kind": "IntegerLiteral",
       "offset": 1113,
       "length": 7,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RecordingMask.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/Modules\/Session Replay\/Public API\/Model\/API-1.0-RecordingMask.swift",
       "kind": "Array",
       "offset": 2594,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/SplunkRum.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/SplunkRum.swift",
       "kind": "BooleanLiteral",
-      "offset": 1672,
+      "offset": 1703,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/SplunkRum.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Public API\/SplunkRum.swift",
       "kind": "StringLiteral",
-      "offset": 12158,
+      "offset": 12825,
       "length": 7,
-      "value": "\"2.4.1\""
+      "value": "\"2.4.3\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
       "kind": "StringLiteral",
       "offset": 833,
       "length": 5,
       "value": "\"GET\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
       "kind": "StringLiteral",
       "offset": 859,
       "length": 6,
       "value": "\"POST\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
       "kind": "StringLiteral",
       "offset": 888,
       "length": 8,
       "value": "\"DELETE\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
       "kind": "StringLiteral",
       "offset": 916,
       "length": 5,
       "value": "\"PUT\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/APIClient\/Endpoints\/Service.swift",
       "kind": "StringLiteral",
       "offset": 943,
       "length": 7,
       "value": "\"PATCH\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Info\/AppInfo.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Info\/AppInfo.swift",
       "kind": "StringLiteral",
       "offset": 744,
       "length": 14,
       "value": "\"CFBundleName\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Info\/AppInfo.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Info\/AppInfo.swift",
       "kind": "StringLiteral",
       "offset": 879,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Info\/AppInfo.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Info\/AppInfo.swift",
       "kind": "StringLiteral",
       "offset": 973,
       "length": 17,
       "value": "\"CFBundleVersion\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/KeyValue Storage\/UserDefaultsStorage.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/KeyValue Storage\/UserDefaultsStorage.swift",
       "kind": "StringLiteral",
       "offset": 967,
       "length": 7,
       "value": "\"Agent\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/KeyValue Storage\/UserDefaultsStorage.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/KeyValue Storage\/UserDefaultsStorage.swift",
       "kind": "StringLiteral",
       "offset": 1190,
       "length": 31,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/KeyValue Storage\/UserDefaultsStorage.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/KeyValue Storage\/UserDefaultsStorage.swift",
       "kind": "StringLiteral",
       "offset": 1219,
       "length": 1,
       "value": "\".\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Repeating jobs\/LifecycleRepeatingJob.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Repeating jobs\/LifecycleRepeatingJob.swift",
       "kind": "BooleanLiteral",
       "offset": 1247,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Repeating jobs\/RepeatingJob.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkAgent\/Sources\/SplunkAgent\/Utils\/Repeating jobs\/RepeatingJob.swift",
       "kind": "FloatLiteral",
       "offset": 961,
       "length": 3,

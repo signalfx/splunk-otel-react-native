@@ -1,0 +1,6 @@
+framework module SplunkCrashReporter {
+  umbrella header "SplunkCrashReporter.h"
+  export *
+
+  module * { export * }
+}

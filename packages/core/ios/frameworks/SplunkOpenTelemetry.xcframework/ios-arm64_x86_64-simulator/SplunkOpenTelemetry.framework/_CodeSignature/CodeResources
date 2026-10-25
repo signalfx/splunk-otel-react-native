@@ -6,51 +6,51 @@
 	<dict>
 		<key>Headers/SplunkOpenTelemetry-Swift.h</key>
 		<data>
-		ZBDmgtjl97RZ8PDi21C6Q42yG2I=
+		K0SaAFWb9uSu8UbqaU3xOiiMwjA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TVKXVlcSQUDaTPLuqqZypaR6m84=
+		2uGpx7aARzu66BBcnTIjUKX4J60=
 		</data>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		NE6oMXU3MsQKuamU9DY3tgM8ePg=
+		Rdc/MX59dnSc+EPnGqG5KOH1lgg=
 		</data>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		9HFFUI+e36yhi+pxK1n9oTzavac=
+		7Hv5pMmu655RUksZxDFLJAR4tjU=
 		</data>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		bkMG4M2LGui69uGSfOgin9lawgY=
+		WMXnNS64vxG5W5lUUyhCOImgo7g=
 		</data>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		woNfW5JpBp3Aa3mqIQyNpLlyy0c=
+		bx2zE0kPclPildHhFONXlswViuM=
 		</data>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		f0nU/6UXLn+BhPLmbtQ2dwaZRg8=
+		G1BjkNL0M1zPfSEKImyybEnuIdA=
 		</data>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		NE6oMXU3MsQKuamU9DY3tgM8ePg=
+		Rdc/MX59dnSc+EPnGqG5KOH1lgg=
 		</data>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		1pm/6oLyQOOCKNu5i78OVAjfvuI=
+		iJvc/pbKqhMcm4sbDIc30DY0M+I=
 		</data>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		X1IkHTS9/opv1QiR5nM3phsIXaw=
+		VVo9Bln15W4UxP0hHmEQR8CM3GU=
 		</data>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		iXFfwGca2WerLyXMfjwypCM7CFc=
+		Xem7HhjP71BKXi1WWWUtWSigW5o=
 		</data>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rnLdjejks029A1XmgWVOBMF4Az4=
+		3RDAd3Ic9Ib1aMhWQdDpX0NFDEE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,77 +63,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z8a6xgf3lxFD4Jbn+T8IwVli74okYD3Q/7bFrI2KGls=
+			n8ApvJUAxIHdiFVbJrWR/18vHRT485hIsPlRYqbf4xw=
 			</data>
 		</dict>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UPeuBHgVCiRyQmjD1t/2EiFzfYAkvitEOUFANsgoqgg=
+			um8/zxw6AGaR8X7vcz9WEqt0eq9ASVjqLZdG6ojsq84=
 			</data>
 		</dict>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FhmaLo6YqGV2+A1NDYtWlC9fl/x0zkqGf5ni7uSl21A=
+			AA8HxIrfa4FRvLZlEnpLg/o6uwCErYdtpoGJeDrZdao=
 			</data>
 		</dict>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oxQcEOt3nM9MiAyRR7zLnnpQTh2ZMt3dcqvF6d6A330=
+			qNGbW3zLdo26cbq7634x2lnwkFeDikF+dr0Xc3MAhKU=
 			</data>
 		</dict>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7FNJOwbZYdFbvQgB/1pIwWH/KL2MOFRp1o20aj+j0ns=
+			iFxwbqDDExWEDsQKcOZ7O9LMeB61WCod5ahgeUwiK1I=
 			</data>
 		</dict>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JR057OzhdM9/ytbXf6BfK/uz9VE7Td1do4+WD3WqVKw=
+			7ddRGFHz2YFVTHVoE5Q0Oun4S+ZrlzjzcGJtfiwxvxg=
 			</data>
 		</dict>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UPeuBHgVCiRyQmjD1t/2EiFzfYAkvitEOUFANsgoqgg=
+			um8/zxw6AGaR8X7vcz9WEqt0eq9ASVjqLZdG6ojsq84=
 			</data>
 		</dict>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			l/E4pZayZJeccvmvKwMhXs20fzrw0u6tWrFUzqUL350=
+			g8NpFS6AdSjFzlnwhaGbsoR7/THEF7eEpw2deX3VrrI=
 			</data>
 		</dict>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			INgP7Qiql4TKsATocrduV74iSw+btgDYFmTWDztE4MU=
+			ed1agvq3CCDTUXopD7Vj5Uko8ata1oCFbX9eQgkfu1g=
 			</data>
 		</dict>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BGqUPyPVqmN87QmM6WNvE9Ih+pzEHLDZpoTCKEdX6ls=
+			Mj9EY8GyKtLgcekltJmU+R8yQyUqIZuL326iGvuPKyU=
 			</data>
 		</dict>
 		<key>Modules/SplunkOpenTelemetry.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			q9zmaIYu1L1gN5OFySML2AJ7NbP0+epiG3KebojPiOs=
+			7ywGmXkoGkgVYxvQ1ru3uJFZ+GMPz3lY4UVFDRXNeeo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

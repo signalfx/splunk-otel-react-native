@@ -503,15 +503,7 @@
             "mangledName": "$s17CiscoRuntimeCache0bC0C15unownedExecutorScevp",
             "moduleName": "CiscoRuntimeCache",
             "implicit": true,
-            "intro_Macosx": "10.15",
-            "intro_iOS": "13.0",
-            "intro_tvOS": "13.0",
-            "intro_watchOS": "6.0",
             "declAttributes": [
-              "Available",
-              "Available",
-              "Available",
-              "Available",
               "Final",
               "Nonisolated",
               "Semantics"
@@ -659,28 +651,28 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoRuntimeCache\/Sources\/RuntimeCache.swift",
+      "filePath": "\/tmp\/session-replay-1.1.3-build266\/CiscoRuntimeCache\/Sources\/RuntimeCache.swift",
       "kind": "IntegerLiteral",
       "offset": 1148,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoRuntimeCache\/Sources\/RuntimeCache.swift",
+      "filePath": "\/tmp\/session-replay-1.1.3-build266\/CiscoRuntimeCache\/Sources\/RuntimeCache.swift",
       "kind": "StringLiteral",
       "offset": 1781,
       "length": 14,
       "value": "\"RuntimeCache\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoRuntimeCache\/Sources\/RuntimeCache.swift",
+      "filePath": "\/tmp\/session-replay-1.1.3-build266\/CiscoRuntimeCache\/Sources\/RuntimeCache.swift",
       "kind": "IntegerLiteral",
       "offset": 1837,
       "length": 4,
       "value": "3000"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoRuntimeCache\/Sources\/RuntimeCache.swift",
+      "filePath": "\/tmp\/session-replay-1.1.3-build266\/CiscoRuntimeCache\/Sources\/RuntimeCache.swift",
       "kind": "BooleanLiteral",
       "offset": 5591,
       "length": 5,

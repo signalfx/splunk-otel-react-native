@@ -2492,6 +2492,50 @@
         "moduleName": "SplunkNetwork"
       },
       {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCommon",
+        "printedName": "SplunkCommon",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OpenTelemetryApi",
+        "printedName": "OpenTelemetryApi",
+        "declKind": "Import",
+        "moduleName": "SplunkNetwork"
+      },
+      {
         "kind": "TypeDecl",
         "name": "TraceContextInjector",
         "printedName": "TraceContextInjector",
@@ -2687,7 +2731,6 @@
           "ObjC",
           "SynthesizedProtocol",
           "NonSendable",
-          "Sendable",
           "Dynamic"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -2781,270 +2824,368 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/Module\/NetworkInstrumentationConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/Module\/NetworkInstrumentationConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 871,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/Module\/NetworkInstrumentationConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/Module\/NetworkInstrumentationConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 2290,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/Module\/NetworkInstrumentationConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/Module\/NetworkInstrumentationConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 2886,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/Module\/NetworkInstrumentationConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/Module\/NetworkInstrumentationConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 2966,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkInstrumentation.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkInstrumentation.swift",
       "kind": "Array",
       "offset": 904,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkInstrumentation.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkInstrumentation.swift",
       "kind": "Array",
       "offset": 1035,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkInstrumentation.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkInstrumentation.swift",
       "kind": "BooleanLiteral",
       "offset": 1146,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1019,
       "length": 11,
       "value": "\"component\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1139,
       "length": 14,
       "value": "\"link.traceId\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1260,
       "length": 13,
       "value": "\"link.spanId\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1367,
       "length": 12,
       "value": "\"session.id\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1450,
       "length": 7,
       "value": "\"error\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1629,
       "length": 22,
       "value": "\"http.request.header.\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeKeys.swift",
       "kind": "StringLiteral",
       "offset": 1779,
       "length": 23,
       "value": "\"http.response.header.\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeValues.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/NetworkSpanAttributeValues.swift",
       "kind": "StringLiteral",
       "offset": 867,
       "length": 6,
       "value": "\"http\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
       "kind": "StringLiteral",
       "offset": 3972,
       "length": 53,
       "value": "\"Failed to swizzle \""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
       "kind": "StringLiteral",
       "offset": 4024,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 5527,
+      "offset": 5645,
       "length": 53,
       "value": "\"Failed to swizzle \""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 5579,
+      "offset": 5697,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 6033,
+      "offset": 6151,
       "length": 78,
       "value": "\"Original downloadTask(with: URLRequest, completionHandler:) IMP not captured\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 9205,
+      "offset": 9441,
       "length": 53,
       "value": "\"Failed to swizzle \""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+DownloadTaskSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 9257,
+      "offset": 9493,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+Swizzling.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+Swizzling.swift",
       "kind": "IntegerLiteral",
       "offset": 669,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreation.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreation.swift",
       "kind": "IntegerLiteral",
       "offset": 713,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreation.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreation.swift",
       "kind": "IntegerLiteral",
       "offset": 754,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreation.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreation.swift",
       "kind": "IntegerLiteral",
       "offset": 790,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 842,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
       "offset": 3823,
       "length": 53,
       "value": "\"Failed to swizzle \""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
       "offset": 3875,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 5445,
+      "offset": 5563,
       "length": 53,
       "value": "\"Failed to swizzle \""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 5497,
+      "offset": 5615,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 6114,
+      "offset": 6232,
       "length": 74,
       "value": "\"Original dataTask(with: URLRequest, completionHandler:) IMP not captured\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 10842,
+      "offset": 11078,
       "length": 53,
       "value": "\"Failed to swizzle \""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 10894,
+      "offset": 11130,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 12553,
+      "offset": 12907,
       "length": 53,
       "value": "\"Failed to swizzle \""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation+TaskCreationSwizzlers.swift",
       "kind": "StringLiteral",
-      "offset": 12605,
+      "offset": 12959,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation.swift",
       "kind": "StringLiteral",
       "offset": 1262,
       "length": 31,
       "value": "\"com.splunk.networkModuleQueue\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation.swift",
       "kind": "BooleanLiteral",
-      "offset": 1325,
+      "offset": 1472,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/Instrumentation.swift",
       "kind": "StringLiteral",
-      "offset": 1468,
+      "offset": 1615,
       "length": 24,
       "value": "\"NetworkInstrumentation\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/NetworkSpanFinalizationCoordinator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1672,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/NetworkSpanFinalizationCoordinator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1676,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/NetworkSpanFinalizationCoordinator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1842,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/NetworkSpanFinalizationCoordinator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1847,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/NetworkSpanFinalizationCoordinator.swift",
+      "kind": "StringLiteral",
+      "offset": 1885,
+      "length": 25,
+      "value": "\"instrumentation.timeout\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/NetworkSpanFinalizationCoordinator.swift",
+      "kind": "StringLiteral",
+      "offset": 1948,
+      "length": 76,
+      "value": "\"Network task did not provide a completion callback before the SDK deadline\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/NetworkSpanFinalizationCoordinator.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2224,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/NetworkSpanFinalizationCoordinator.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2259,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/NetworkSpanWatchdogScheduler.swift",
+      "kind": "Dictionary",
+      "offset": 2310,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/NetworkSpanWatchdogScheduler.swift",
+      "kind": "Array",
+      "offset": 2357,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/NetworkSpanWatchdogScheduler.swift",
+      "kind": "Dictionary",
+      "offset": 2404,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/NetworkSpanWatchdogScheduler.swift",
+      "kind": "StringLiteral",
+      "offset": 2548,
+      "length": 21,
+      "value": "\"NetworkSpanWatchdog\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkNetwork\/Sources\/SplunkNetwork\/URLSessionInstrumentation\/NetworkSpanWatchdogScheduler.swift",
+      "kind": "StringLiteral",
+      "offset": 2713,
+      "length": 28,
+      "value": "\"NetworkSpanWatchdogActions\""
     }
   ]
 }

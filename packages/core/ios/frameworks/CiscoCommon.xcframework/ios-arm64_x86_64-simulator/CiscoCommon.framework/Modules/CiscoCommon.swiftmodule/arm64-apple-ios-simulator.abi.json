@@ -168,15 +168,7 @@
             "mangledName": "$s11CiscoCommon22AsyncStreamBroadcasterC15unownedExecutorScevp",
             "moduleName": "CiscoCommon",
             "implicit": true,
-            "intro_Macosx": "10.15",
-            "intro_iOS": "13.0",
-            "intro_tvOS": "13.0",
-            "intro_watchOS": "6.0",
             "declAttributes": [
-              "Available",
-              "Available",
-              "Available",
-              "Available",
               "Final",
               "Nonisolated",
               "Semantics"
@@ -262,7 +254,7 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/ruzicka\/Work\/smartlook\/smartlook-ios-sdk-private\/CiscoCommon\/Sources\/AsyncStreamBroadcaster.swift",
+      "filePath": "\/tmp\/session-replay-1.1.3-build266\/CiscoCommon\/Sources\/AsyncStreamBroadcaster.swift",
       "kind": "Array",
       "offset": 294,
       "length": 2,
