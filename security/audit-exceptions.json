@@ -40,6 +40,16 @@
       "dependencyPath": "release-it 19.2.4 > proxy-agent 6.5.0 > pac-proxy-agent 7.2.0 > get-uri 6.0.5 > basic-ftp 5.3.1",
       "mitigation": "The package is release tooling only and is reached only when a PAC proxy script is fetched over ftp://. Never configure release runs with an FTP-hosted PAC proxy. Do not force basic-ftp across the major boundary; remove the exception when get-uri accepts a patched range.",
       "reason": "GHSA-c475-qrg2-pj4r is fixed only in basic-ftp 6.2.1 and later. Every get-uri release, including the latest 8.0.1, depends on basic-ftp ^5, so no patched release exists inside the range the dependency chain accepts."
+    },
+    {
+      "id": "1243074",
+      "package": "body-parser",
+      "severity": "high",
+      "expires": "2026-11-05",
+      "owner": "@signalfx/mrum-react-native-maintainers",
+      "dependencyPath": "splunk-otel-react-native-example > @react-native-community/cli 20.2.0 > @react-native-community/cli-server-api 20.2.0 > body-parser 2.3.0",
+      "mitigation": "The package is confined to the private example app's local Metro development server and is not shipped by either SDK package. Do not expose the Metro development server beyond localhost. Resolve body-parser@npm:^2.2.2 to 2.4.0 once it clears the cooldown on 2026-10-29, together with qs 6.16.1 and content-type 2.1.0, which 2.4.0 requires.",
+      "reason": "GHSA-27r3-jxmh-p828 is fixed only in body-parser 2.4.0, published 2026-10-22, inside the 7-day npmMinimalAgeGate. The fix is deliberately not fast-tracked past the dependency cooldown. The 2.4.0 tarball has been reviewed: it matches the upstream v2.4.0 tag and carries verified npm provenance."
     }
   ],
   "observations": [
