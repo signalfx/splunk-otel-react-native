@@ -62,7 +62,9 @@ export function toNativeAgentConfiguration(
       [ATTR_RN_FRAMEWORK_VERSION]: getReactNativeVersion(),
       [ATTR_RN_SDK_VERSION]: getSdkVersion(),
     } as Attributes as NativeAttributes,
-    user: { trackingMode: configuration.user?.trackingMode ?? null },
+    user: {
+      trackingMode: configuration.user?.trackingMode ?? 'ANONYMOUS_TRACKING',
+    },
     session: {
       samplingRate: clampSamplingRate(
         configuration.session?.samplingRate ?? 1.0

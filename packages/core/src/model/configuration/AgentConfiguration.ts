@@ -72,7 +72,7 @@ export interface AgentConfiguration {
    */
   user?: {
     /**
-     * User tracking mode.
+     * User tracking mode. Defaults to `ANONYMOUS_TRACKING`.
      *
      * - `NO_TRACKING`: No user identifier generated.
      * - `ANONYMOUS_TRACKING`: Generates anonymous user ID per session.

@@ -126,6 +126,15 @@ export async function runApiAssertionTests(): Promise<ApiTestReport> {
       'trackingMode after set'
     );
 
+    await sdk.user.preferences.setTrackingMode('ANONYMOUS_TRACKING');
+    const userStateRestored = await sdk.user.state();
+    assertions.assertEqual(
+      userStateRestored.trackingMode,
+      'ANONYMOUS_TRACKING',
+      'User',
+      'trackingMode after restore'
+    );
+
     console.log('[API Test] Testing Global Attributes...');
     const ga = sdk.globalAttributes;
 

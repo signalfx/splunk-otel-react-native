@@ -84,7 +84,7 @@ const manifest = `${JSON.stringify(
     algorithm: 'sha256',
     source: {
       repository: 'signalfx/splunk-otel-ios',
-      version: '2.4.1',
+      version: '2.4.3',
     },
     frameworks,
   },

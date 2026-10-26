@@ -6,27 +6,27 @@
 	<dict>
 		<key>ios-arm64/SplunkNetworkMonitor.framework/Headers/SplunkNetworkMonitor-Swift.h</key>
 		<data>
-		wJiUn+wNXKT2NuK01ketUnkc49I=
+		HtsFBN9behyW4XcdLcTzpg/XCPs=
 		</data>
 		<key>ios-arm64/SplunkNetworkMonitor.framework/Info.plist</key>
 		<data>
-		ccTIEHd0VLePWoPBUOTRifnMd6o=
+		gv+8vyoaPQhnjasraRRpFK2ZPBM=
 		</data>
 		<key>ios-arm64/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		BuLOCReyIwq3eQcMC2gAgtGyC4s=
+		1xvczBl9sMVgluhnj2KoFGXsj8I=
 		</data>
 		<key>ios-arm64/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		626y0t0iXO9zxWuT7Q9ehQZu5k8=
+		wEPklozxN/H8yvbbCwcCXpXzUhA=
 		</data>
 		<key>ios-arm64/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		8uSbsc8lX8RCFEsGzcuP+j8V5iY=
+		bHqemzmcjXsvm9kdHYQu7DW5Y0s=
 		</data>
 		<key>ios-arm64/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		bMMlvn053GDxznKVdp/IbT5HEPQ=
+		NmH2t1NHzdNINL/ZrZcLSgu6RC4=
 		</data>
 		<key>ios-arm64/SplunkNetworkMonitor.framework/Modules/module.modulemap</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>ios-arm64/SplunkNetworkMonitor.framework/SplunkNetworkMonitor</key>
 		<data>
-		meQztCLx4P2n4iKqkdwK2pupHes=
+		1dItC1QPwtor9TS6txkP8BETzJk=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -42,59 +42,59 @@
 		</data>
 		<key>ios-arm64/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/DWARF/SplunkNetworkMonitor</key>
 		<data>
-		iM6ExO1I02Cg6e9VMgeBFlEi4fw=
+		aOG+lGWWX9l3m+TSZ+AjF2QxsT8=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkNetworkMonitor.yml</key>
 		<data>
-		dcx7VRduJbh5bpXegDLQKFhHx3M=
+		GYzDHNJ0kVM/aaopb6BirrV9+Vw=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoLogger.swiftinterface</key>
 		<data>
-		R1rC3zDoL3GSFXxvAxVqmyS/Oik=
+		20gUoMxmzXg58nHC7ADu0IQQ74k=
 		</data>
 		<key>ios-arm64/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Swift/aarch64/OpenTelemetryApi.swiftinterface</key>
 		<data>
-		tcAmDEuuMpjFQQ2Jb1WEiVsuGoA=
+		Sua30yXQwoOQXY19kySbs1D35lk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Headers/SplunkNetworkMonitor-Swift.h</key>
 		<data>
-		rrJQykM1/fiHDmiNTqw5AMZVpjE=
+		GmluzBONRy5n/U+bu/aO18fJqZo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Info.plist</key>
 		<data>
-		GjOtC8PP831KIFCC1u6oH3zKZTU=
+		JUcDseKk4a0ye8Yh/IH8l/Wl4uw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		BuLOCReyIwq3eQcMC2gAgtGyC4s=
+		1xvczBl9sMVgluhnj2KoFGXsj8I=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		jOuNATPZQREN4+RMvvsVc1fGJqI=
+		GI0KNIsDkF76GwMGAN1ZffJzgDw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		xuQ5DuFyXu4H3O9iPzTefpLaif0=
+		Ybbr8KBZ7kTegAVt+maX5Ji7mx4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Z1HQ0An94Q7OKfQYezq8Anq0rno=
+		2ubshW3ES5kKxPbksGyZUsYNQVM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		BuLOCReyIwq3eQcMC2gAgtGyC4s=
+		1xvczBl9sMVgluhnj2KoFGXsj8I=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		+LCsdhmwe20EbNxvunYSorX2SdQ=
+		4Pblc7XpSgHWFyWrU96A4n03JR4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		cR277jc2rAj1MngdPKrA2GhK3dA=
+		l6+heNBzCNbKQhEHg8H2oas0KnI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		oLnYTjFwXqvthbzGFsPH39UFRE0=
+		sPjeRJ4khx3SDp6y10awT8bPOo0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/module.modulemap</key>
 		<data>
@@ -102,11 +102,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/SplunkNetworkMonitor</key>
 		<data>
-		OWRueuNvq8nNJFA9cXfIyax+X58=
+		vWPGp6c2ROCW9QO8Upj1miqT5hA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/_CodeSignature/CodeResources</key>
 		<data>
-		m6cn4e8Hb0DoCjHRTDKR3/Q6E14=
+		LaUMriEZr39d9DyBDATZK/wpWZI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -114,31 +114,31 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/DWARF/SplunkNetworkMonitor</key>
 		<data>
-		D6kd4xcCpKg6PqYev2mWv0rj06s=
+		JkAUCLcFr9uS0aTsayKLc77iY5k=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkNetworkMonitor.yml</key>
 		<data>
-		MgzYPJNfg1bgnWB21oOkMkbMbbY=
+		uWod6sgvJw1aiuUh4xQEQghPqcs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Relocations/x86_64/SplunkNetworkMonitor.yml</key>
 		<data>
-		MwJVJWkt8toqwQRLqIBCgbR2+bc=
+		mGcolZVDNFxREZOG+xes0vwUFmc=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoLogger.swiftinterface</key>
 		<data>
-		/u6ukBlvZmsJSgqZr6Vqo1g/SSw=
+		uShxrUCuYicPr87Brk1gyM8Vj3E=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Swift/aarch64/OpenTelemetryApi.swiftinterface</key>
 		<data>
-		KvkVdl15pkD9bvHM1Nyx6kGUp6M=
+		v7janBATihfkPNPaQBe00Wv/2dE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Swift/x86_64/CiscoLogger.swiftinterface</key>
 		<data>
-		2+AXtFWBJPFPIa0hOleSBvsx0js=
+		Cx+RggGdraO64OJ/KiuRaj3+qnI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Swift/x86_64/OpenTelemetryApi.swiftinterface</key>
 		<data>
-		79UqbclFmTS6wBGQcHnT57ojRbY=
+		zSsanZwkZra+AS0yYh6SjeT76iw=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -147,42 +147,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			guFr+wffkdi8mXBZcealrslRXzdJuR6yu28COKOCZNw=
+			jawTf+M9lO2ogJV0hVaNrblTGfiM32ba+6VtYyhUClA=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkNetworkMonitor.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ig8MonMFrqVtV1XAY+OsKJ4GJ/SSi9Jb8lFlb1BKZsk=
+			xQYVQyZOqzxsQjIDwzEwZnYfbMvcTZpUXYp1aS/x5Mo=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XGg5L3kWDfjSvFo0aiNjonyOLmoHbwWRO7D8nLD2o+w=
+			P39ktK/Hs8S+Aql2c4hsGdXSkH82w8gEmC7ixHVNWow=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3qNc8peVwbsE/xsWX8KwM8gxXb2Y4pxGxUvrp4XJP3o=
+			3nrKrYGbBsDSsXVSGFbXGjaxoF/eRIksTy+aVvaB57Q=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ua1praGK+q0m466GaihKH4fgKvHo9d9Eq9+jCQvM7DU=
+			sswJKh9OB1JuSVLek+ITOEeEalGlpdZ7ls4P1iXev70=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T7p10LrXHmqdnYw6tbhSgLrewLfzjT8UqXm7Ksj5o8Q=
+			kuC5BC5AvC3pP1sejBspdunLFD1thWRrHLQUWFyw7tc=
 			</data>
 		</dict>
 		<key>ios-arm64/SplunkNetworkMonitor.framework/Modules/module.modulemap</key>
@@ -196,7 +196,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			n8GE5WWeYb9ArmEyzwetadeWof+UZoIMjArhU3d/HFs=
+			ryzprz9rY+dG5db9t1BMUPRNkxzyL/YzCUaT2KyiExk=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Info.plist</key>
@@ -210,98 +210,98 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+/zXrdJPIWhrINh/l+X3ri7XnKju6a82ukwkL3SygLw=
+			HMTVs5R9U7Chxnb89HkOgoCz+msdTf3wP7ZmWyK39Dg=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkNetworkMonitor.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aSynnpUgbep13JQutIZY/mOi/8lywUXn0NLXGTAu09M=
+			Rm8rfco+IAFFLOGBydOY2frRqomO0fRsQ6wC3alSBfM=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoLogger.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7FDe7NNmaUi6fVemlT8QxulgykpzO0XUm+29RPVLnVY=
+			f8jKAzqnZnoIPnK7fOApvGJR+FbxgY/PMfadLQgWEdU=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Swift/aarch64/OpenTelemetryApi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Kbc1a29zUv1H+grpOYMw4yN66Bs8ADPYa9FfktE6Ekw=
+			TZKCem6w4nUI0CYj+HXqGSDaibVrN8EO7tPIwr5HRPo=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Headers/SplunkNetworkMonitor-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rEgRnioG4S2xQT1FC4QVRedDX6juLx1hPTZco2kzjUE=
+			0hFw5Ge6C4HPE5Vioms6GIWfkqaWjgeAIq5T2c2NB8E=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1G6PHWbVyga+orKLZbxkkoIug4VC+aKrImUvdh48svg=
+			KcURnhJGmN6uxpNoWH694xFy4r1HBnKiwnYwNCQuQGk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XGg5L3kWDfjSvFo0aiNjonyOLmoHbwWRO7D8nLD2o+w=
+			P39ktK/Hs8S+Aql2c4hsGdXSkH82w8gEmC7ixHVNWow=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5Zax0k02jXG2SevGFdy6wqPUYHkf0nfBCrThWXm6Kas=
+			05+NnZSn2SqqsxSiJyCv1F9fIBP1DLVxyREu1RJ4pKs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nK709Cfg46zlQKj8qe3wm8PgwXowcrnQ6M6O+szTu7M=
+			AA8AiwjLJInOSgDyNM7RU3FGRCkcFav2s282/FER/Gw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			e+yJ9H2cgDFfVWM5FZr66l31mKe+5rp69qcQpef1j/o=
+			zX/ow0+nEbuJG3C1J5WHY7NUG04ceRsHQF7qUTuZeTU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XGg5L3kWDfjSvFo0aiNjonyOLmoHbwWRO7D8nLD2o+w=
+			P39ktK/Hs8S+Aql2c4hsGdXSkH82w8gEmC7ixHVNWow=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g3lkRbhXIyl/Bcwn5IzjntUFQnJg79PUQnoDtFuSUG8=
+			CoXMNl87U+cug6phYwdR0phESIcFXqZCZJEXkGl0zFI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7hsRrNkzU9aKR1RJzlS5Lr3qw9TlizdYC1WEFSDdvhI=
+			dyH831NUB6DhViWy6syCOhNex2mO89TGY/oIQ01Xx/o=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/SplunkNetworkMonitor.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RnoCI+JNlP6fgW9ffwAzrgFnbvJ08kZ1oBM8Iu0iKvo=
+			twvsrN5sF450Y+Of5U0FmG1IfdFOmq3LQRWDMe/eSYA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/Modules/module.modulemap</key>
@@ -315,14 +315,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			i5yaJJeFVd/2LxvQlkQ+GR1x64hVNUzSyACFuldTc4Y=
+			1uJAAsmoejAlprQ+IDHYYTy7QLBtqiDowMnaxyFIvOc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SplunkNetworkMonitor.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uix3s5VzF78rWGeRzysqzZkGySOfaDG8NQLP/FEXV9E=
+			u46rtJzxy4VSoCtTWPYOn2Klm6Y9xvxyQ8gcUwxsI5k=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Info.plist</key>
@@ -336,49 +336,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Sl2wPTO9uDvZaxNQM2sEHJ+xMwKkzlfYx6tcsqt3KLU=
+			JiDEbn9sbHS9/sw1o8hh74qdYYpeY94yRYhmb+kO1hs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Relocations/aarch64/SplunkNetworkMonitor.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2lrtPvYN1u8GEkSDEGd5ibxVfryPvhMIyPzRm8oapdM=
+			3esGhOg0E2SFfbyQvBkuaRy+nzvkPhEpN2qQuMInRwM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Relocations/x86_64/SplunkNetworkMonitor.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Iwpo/gUq6TOslIcCHA89i4CXN/dkIqvb1O7Z+27vZXs=
+			0SnMYcqVUJg35empBouxH2usdtrQDpcdJDHg5hm0o7A=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Swift/aarch64/CiscoLogger.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			72xVo94jHdDRMRTGYVwiWl45ajtAhPojRmG4WCzsbtQ=
+			QGh3L4o9l2qWlALX5bCs67HDYx6rRCAUiyCyEnX+DiA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Swift/aarch64/OpenTelemetryApi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vWDhBtFsoVk9G0de3Ijl2mLubgugmmg+N+a5ok5uIH0=
+			rLFdBbmM3jjbF6cmTINFiSzyXowb7x16y5jkGLEBrAc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Swift/x86_64/CiscoLogger.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ttXZC3srPOlkvu4HfVnfpwlqAPiMN11m10W25p3rcvE=
+			KrybgdzdLwuXhNIb13uz29l2olUPXTNNg2UP5ivj9tk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SplunkNetworkMonitor.framework.dSYM/Contents/Resources/Swift/x86_64/OpenTelemetryApi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ta6Y6SAzd4CfN4G+Hbhwfga6bd7IXuxMtZpdetLhdPg=
+			vUAlfunc9zAUrxJGigjYhAoQy8q5+Sgx2mPtA/YAOTg=
 			</data>
 		</dict>
 	</dict>

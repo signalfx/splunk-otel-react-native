@@ -47,7 +47,8 @@ public class SplunkOtelReactNativeImplementation: NSObject {
 
       _ = try SplunkRum.install(with: agentConfig, moduleConfigurations: moduleConfigs)
 
-      // We are tracking app start manually since install() is called after didBecomeActive in RN
+      // Install runs long after launch in RN, so the native AppStart module needs the
+      // lifecycle evidence captured before it. It must be handed off right after install.
       AppStartHandler.shared.trackAppStart()
 
       resolve(nil)

@@ -6,51 +6,51 @@
 	<dict>
 		<key>Headers/SplunkCustomTracking-Swift.h</key>
 		<data>
-		cs91/qwKoA23ArtaC3J+1aN3NjQ=
+		RZJiuKK67pi+R1QqvlB57vPxTmA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		sF5g6lMtMOr3dWQVyCo2rmagCsg=
+		U2sErYfx19xhJ5b/ehuOtmd6PVk=
 		</data>
 		<key>Modules/SplunkCustomTracking.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		5elJ1L/f5GyLCxGotJwKCDOP0Mc=
+		qKP1co+L1Rs3LiZs2BOb+WJt01k=
 		</data>
 		<key>Modules/SplunkCustomTracking.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		lq8/qsFUWEgKdOM1vdWOhruGZVE=
+		sieQgNZMamDrzMQuE8ggGw2e9EI=
 		</data>
 		<key>Modules/SplunkCustomTracking.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		jq23PNulCE77hS38HiV4jB0K34w=
+		kXnisFAiiRbGKOa+36Wv+yMqJMs=
 		</data>
 		<key>Modules/SplunkCustomTracking.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		lq8/qsFUWEgKdOM1vdWOhruGZVE=
+		sieQgNZMamDrzMQuE8ggGw2e9EI=
 		</data>
 		<key>Modules/SplunkCustomTracking.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		MhQtDLM5QRNKSvli5B/iHP2LnGQ=
+		4YETLmV6e7J2cAI7sdXaEB1wxxk=
 		</data>
 		<key>Modules/SplunkCustomTracking.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		wl3Etonf4hgYdld5CHiWppeD3Jk=
+		7mA4D9Gkq/cWdS+8XWB2X2lkYwc=
 		</data>
 		<key>Modules/SplunkCustomTracking.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		h3z0MEZOpLnUP/n3OiD+a+Q0nsE=
+		7mv8wJ7gdQsnZQ/5wXFDkOpPif0=
 		</data>
 		<key>Modules/SplunkCustomTracking.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		K6qnfGFCspJch/I/Pva44I4pNRs=
+		rNcRcivZ2BgLvlVSj0knmRLydYQ=
 		</data>
 		<key>Modules/SplunkCustomTracking.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		h3z0MEZOpLnUP/n3OiD+a+Q0nsE=
+		7mv8wJ7gdQsnZQ/5wXFDkOpPif0=
 		</data>
 		<key>Modules/SplunkCustomTracking.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qNzbxUJUfLqbmCUoqC65JA9mBBA=
+		7KC4Qcoqqt4FQNuLX26XB8lS2rY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,77 +63,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VEave1bEHLM9C1pSDE0Jg9cHWfZmhUQMXiXOM2rrmy0=
+			3HvAYj/L8LfePZz68cSMdckj3EeAHYnkNfYzgvigHRo=
 			</data>
 		</dict>
 		<key>Modules/SplunkCustomTracking.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/mblMBY6JXPPrjJxQe73LIVDeUe+TAKOyQ/uUx2DM0g=
+			KV+2BFyS5xHqTB+71OzZw793+Y7+kPQUi1JogJSo7rU=
 			</data>
 		</dict>
 		<key>Modules/SplunkCustomTracking.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jSmGSIj/GBgzTHURSJMmR165H077v24HjtwX/RF77UU=
+			mAjSU4tV6K9jF+/PMmJw119Me7gcJDtqT2skDqsz4ak=
 			</data>
 		</dict>
 		<key>Modules/SplunkCustomTracking.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ao44axXeomXyFSrdKyv8F1+ko50+7eutG2fjbudHjMw=
+			GHE6MAqKggZtfwAPRINpkwSypWpx8YqilBK0v9yFmi8=
 			</data>
 		</dict>
 		<key>Modules/SplunkCustomTracking.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jSmGSIj/GBgzTHURSJMmR165H077v24HjtwX/RF77UU=
+			mAjSU4tV6K9jF+/PMmJw119Me7gcJDtqT2skDqsz4ak=
 			</data>
 		</dict>
 		<key>Modules/SplunkCustomTracking.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KV3tz19hXwu/iHGjUHe6k2KrUyaPHLHwDvNuYD25jWM=
+			1LIX0ihYcqKQJFGtPaZXXE920qD3Mg2u9I3nZzGyXVQ=
 			</data>
 		</dict>
 		<key>Modules/SplunkCustomTracking.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZKJDaJ4LhRDn261fB0ec4gBsl4Kavge1vaF2zstV310=
+			hjjmewedOcPV8n9ZPsukZWJb1e53KCzwsR6GlZohAbw=
 			</data>
 		</dict>
 		<key>Modules/SplunkCustomTracking.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			P3HGqS5l8iNcW4x9XsMUbgYbq49lf6bMMDezGTCAdZc=
+			qV4Yk1Slaj4HKbrpy3H0HC5XttbCD8M1LCxzFILe/Sg=
 			</data>
 		</dict>
 		<key>Modules/SplunkCustomTracking.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IEGBP06cQUSN0tKk+kHrH/DUyWwkbASLVIyj30e/xQk=
+			crQyBEX305pbhpZb9GYPisCLm1czkN5iB5XpsicAFgw=
 			</data>
 		</dict>
 		<key>Modules/SplunkCustomTracking.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			P3HGqS5l8iNcW4x9XsMUbgYbq49lf6bMMDezGTCAdZc=
+			qV4Yk1Slaj4HKbrpy3H0HC5XttbCD8M1LCxzFILe/Sg=
 			</data>
 		</dict>
 		<key>Modules/SplunkCustomTracking.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ce0jnEWjW+yslg9HXEudNnWNykSHzZsicM5cjjeEs2s=
+			qsWFWY+anIiVpSLY6iG/vezyEeGIeHmCYL6w2YE59LI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

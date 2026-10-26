@@ -66,8 +66,8 @@ public class UserSessionHandler: NSObject {
   static func deserializeUserTrackingMode(_ mode: String?) -> UserTrackingMode {
     switch mode {
     case "ANONYMOUS_TRACKING": return .anonymousTracking
-    case "NO_TRACKING": fallthrough
-    default: return .noTracking
+    case "NO_TRACKING": return .noTracking
+    default: return .default
     }
   }
 }

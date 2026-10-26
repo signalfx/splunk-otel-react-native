@@ -6,51 +6,51 @@
 	<dict>
 		<key>Headers/SplunkSessionReplayProxy-Swift.h</key>
 		<data>
-		fbZeGVLU9V/Oev3nimhUC6ccvjA=
+		wl34waM7lRfXfz0Qwe3PGyOm9f8=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YvKxVOJC3v4wgK5NOPMWl3usKew=
+		XqGd10NauTlkAFZTQsO8tZxwnhA=
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		fOdxBvE3VsjZfM/XT5ve9iQOQQo=
+		EKTNFGju920TSbN86oM3/bJaEkE=
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		aTgsEwlzulpBMjbBE4l6WakoY+8=
+		zqR5uoEqjnxcueu0Wka5ok1poNs=
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		geevfPM5lx5EeXJ4EzlGfalm7Nk=
+		LCVOVlGbOcRvnlJe+cq0qw6mcyw=
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		aTgsEwlzulpBMjbBE4l6WakoY+8=
+		zqR5uoEqjnxcueu0Wka5ok1poNs=
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		sFRIRd0nVo/Rm6tImH3IEFrMaQw=
+		E/nXedYcvOeQ/AY4mxh4JxhUuh4=
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		fOdxBvE3VsjZfM/XT5ve9iQOQQo=
+		EKTNFGju920TSbN86oM3/bJaEkE=
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		XVVkYFBCglzbpea9RglekndytSI=
+		d/Lu0lRUViH3lDaLAVZvIcdcHLI=
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		daFeoW+at1rOoj8CYRjgxCmonYE=
+		Ecu0xf/n3gmet3sIJkLkKW3vncU=
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		XVVkYFBCglzbpea9RglekndytSI=
+		d/Lu0lRUViH3lDaLAVZvIcdcHLI=
 		</data>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		vcYqboPr3joFvVCHIeskFmWx5WY=
+		9eZUGZy3FYiI+xM0KzR/gZQsuDk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,77 +63,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z/itZo9agQyXnZ3GUW34IBOJr8ujU6MPE/150iUUVGs=
+			DdRKl3W9YYRIosx5GxvXV2kFrI3KXifPbY7YHemfEIg=
 			</data>
 		</dict>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FMJKtFbWQeByM2lJzcmFYZbmW9Mhi9nrc0M6a2F62p8=
+			VScn8k5r7I5qZtPFDOHg/r1Ebk+20wmd6NSiIhaZEpI=
 			</data>
 		</dict>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F5tT8fREYHk1ByStnRaCcBtb5hRphLSJCo2RQwWhvr0=
+			fzev328GTSdxLx1IdFI120dOtGwmP/seHU8kbwHll1c=
 			</data>
 		</dict>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yCbin/Xmuhk33NkGQb5oOLKJQYE27dbOSN0z1P+XWvw=
+			gNlwKcgRVcdEgdyEXyeqO9GdWb+k+lxMFX53JIkhhb0=
 			</data>
 		</dict>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F5tT8fREYHk1ByStnRaCcBtb5hRphLSJCo2RQwWhvr0=
+			fzev328GTSdxLx1IdFI120dOtGwmP/seHU8kbwHll1c=
 			</data>
 		</dict>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9+KjiV9THVfSXvwcAkvU2E0K/IANsIujfELrdjm5u48=
+			EVKtdK0YMk7OZq77lYc9Nrkqu0TelriRaNpDnznz1fY=
 			</data>
 		</dict>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FMJKtFbWQeByM2lJzcmFYZbmW9Mhi9nrc0M6a2F62p8=
+			VScn8k5r7I5qZtPFDOHg/r1Ebk+20wmd6NSiIhaZEpI=
 			</data>
 		</dict>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KeBtwW6TJsJHvVTrCyRcl8NQ/1d6FnUOCVDKBY3nV0c=
+			HK04Akj4sh9wU5dzyiPeabAq2AhC6WYsJjMYFrh+CRQ=
 			</data>
 		</dict>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sph97X7m9AEXD1/aaMhwnLiedMNAL+l7Pv1z7NUGs4Q=
+			++hutw7vwOgdDceaKko+5RO17NJxZmP0rjeqbnVlcy4=
 			</data>
 		</dict>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KeBtwW6TJsJHvVTrCyRcl8NQ/1d6FnUOCVDKBY3nV0c=
+			HK04Akj4sh9wU5dzyiPeabAq2AhC6WYsJjMYFrh+CRQ=
 			</data>
 		</dict>
 		<key>Modules/SplunkSessionReplayProxy.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VAsG6F3g2bvGYRfsyPUWatuKonKM0XCisJBvXgMukv4=
+			UvYjiZZzttHaR1LzR7FChAdwJ+utoWNYssz5ozd5zUA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

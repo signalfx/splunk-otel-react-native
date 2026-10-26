@@ -2912,238 +2912,245 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerLogExporter.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerLogExporter.swift",
       "kind": "Array",
       "offset": 780,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerLogExporter.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerLogExporter.swift",
       "kind": "StringLiteral",
       "offset": 949,
       "length": 15,
       "value": "\"OpenTelemetry\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerSpanExporter.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerSpanExporter.swift",
       "kind": "Array",
       "offset": 766,
       "length": 72,
       "value": "[\"component\", \"screen.name\", \"session.id\"]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerSpanExporter.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Attribute Checker Exporters\/AttributeCheckerSpanExporter.swift",
       "kind": "StringLiteral",
       "offset": 1001,
       "length": 15,
       "value": "\"OpenTelemetry\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPLogToSpanEventProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPLogToSpanEventProcessor.swift",
       "kind": "StringLiteral",
       "offset": 1320,
       "length": 25,
       "value": "\"LogToSpanEventProcessor\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPSessionReplayEventProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPSessionReplayEventProcessor.swift",
       "kind": "StringLiteral",
       "offset": 1983,
       "length": 15,
       "value": "\"OpenTelemetry\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPSessionReplayEventProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Log Event Processors\/OTLPSessionReplayEventProcessor.swift",
       "kind": "StringLiteral",
       "offset": 2141,
       "length": 29,
       "value": "\"SessionReplayEventProcessor\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/LogToSpanExporter\/OTLPLogToSpanExporter.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/LogToSpanExporter\/OTLPLogToSpanExporter.swift",
       "kind": "StringLiteral",
       "offset": 1043,
       "length": 22,
       "value": "\"Log to Span Exporter\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/OTel.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/OTel.swift",
       "kind": "StringLiteral",
       "offset": 615,
       "length": 12,
       "value": "\"OTel 0.0.1\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/BatchSpanProcessorCore+Draining.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Resources\/Resource+AgentResources.swift",
+      "kind": "StringLiteral",
+      "offset": 722,
+      "length": 22,
+      "value": "\"app.previous_version\""
+    },
+    {
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/BatchSpanProcessorCore+Draining.swift",
       "kind": "BooleanLiteral",
       "offset": 8094,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPAttributesSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPAttributesSpanProcessor.swift",
       "kind": "BooleanLiteral",
       "offset": 1035,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPAttributesSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPAttributesSpanProcessor.swift",
       "kind": "BooleanLiteral",
       "offset": 1072,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "IntegerLiteral",
       "offset": 1665,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
-      "kind": "FloatLiteral",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "kind": "IntegerLiteral",
       "offset": 1789,
-      "length": 3,
-      "value": "0.5"
+      "length": 1,
+      "value": "1"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "IntegerLiteral",
-      "offset": 1932,
+      "offset": 1930,
       "length": 5,
       "value": "2048"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "BooleanLiteral",
-      "offset": 2085,
+      "offset": 2083,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "BooleanLiteral",
-      "offset": 2116,
+      "offset": 2114,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "FloatLiteral",
-      "offset": 5225,
+      "offset": 5223,
       "length": 3,
       "value": "0.1"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "FloatLiteral",
-      "offset": 5657,
+      "offset": 5655,
       "length": 4,
       "value": "10.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "FloatLiteral",
-      "offset": 6133,
+      "offset": 6131,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "FloatLiteral",
-      "offset": 6295,
+      "offset": 6293,
       "length": 3,
       "value": "5.0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "StringLiteral",
-      "offset": 6636,
+      "offset": 6634,
       "length": 20,
       "value": "\"BatchSpanProcessor\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "BooleanLiteral",
-      "offset": 6915,
+      "offset": 6913,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "BooleanLiteral",
-      "offset": 7051,
+      "offset": 7049,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "BooleanLiteral",
-      "offset": 7170,
+      "offset": 7168,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "IntegerLiteral",
-      "offset": 7316,
+      "offset": 7314,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "IntegerLiteral",
-      "offset": 7463,
+      "offset": 7461,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/OTLPBatchSpanProcessor.swift",
       "kind": "StringLiteral",
-      "offset": 7820,
+      "offset": 7818,
       "length": 15,
       "value": "\"OpenTelemetry\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/ReadableSpanQueue.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/ReadableSpanQueue.swift",
       "kind": "IntegerLiteral",
       "offset": 1397,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/ReadableSpanQueue.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/ReadableSpanQueue.swift",
       "kind": "IntegerLiteral",
       "offset": 1422,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/ReadableSpanQueue.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Span Processors\/ReadableSpanQueue.swift",
       "kind": "IntegerLiteral",
       "offset": 1513,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Stdout Exporters\/SplunkStdoutLogExporter.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Stdout Exporters\/SplunkStdoutLogExporter.swift",
       "kind": "StringLiteral",
       "offset": 969,
       "length": 15,
       "value": "\"OpenTelemetry\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Stdout Exporters\/SplunkStdoutSpanExporter.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Stdout Exporters\/SplunkStdoutSpanExporter.swift",
       "kind": "StringLiteral",
       "offset": 954,
       "length": 15,
       "value": "\"OpenTelemetry\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Utils\/Foundation\/Date+Formatting.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkOpenTelemetry\/Sources\/SplunkOpenTelemetry\/Utils\/Foundation\/Date+Formatting.swift",
       "kind": "IntegerLiteral",
       "offset": 838,
       "length": 1,

@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CiscoSessionReplay
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
+// swift-compiler-version: Apple Swift version 6.4 effective-5.10 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -language-mode 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CiscoSessionReplay
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.4
 import AVFoundation
 import CiscoCommon
 import CiscoDiskStorage
@@ -28,229 +28,229 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AsyncViewSnapshotOperation : CiscoSessionReplay.BaseOperation {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AsyncViewSnapshotOperation : CiscoSessionReplay::BaseOperation {
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers public class AsyncScreenshotOperation : CiscoSessionReplay.BaseOperation {
+@objc @_hasMissingDesignatedInitializers public class AsyncScreenshotOperation : CiscoSessionReplay::BaseOperation {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class Log {
-  final public func onLog(block: ((CiscoSessionReplay.LogMessage) -> Swift.Void)?)
+  final public func onLog(block: ((CiscoSessionReplay::LogMessage) -> Swift::Void)?)
   @objc deinit
 }
 infix operator ?+ : AdditionPrecedence
 @_hasMissingDesignatedInitializers public class Sensitivity {
-  public subscript(view: UIKit.UIView) -> Swift.Bool? {
+  public subscript(view: UIKit::UIView) -> Swift::Bool? {
     get
     set
   }
   @discardableResult
-  public func set(_ view: UIKit.UIView, _ sensitive: Swift.Bool?) -> CiscoSessionReplay.Sensitivity
-  public subscript(viewClass: UIKit.UIView.Type) -> Swift.Bool? {
+  public func set(_ view: UIKit::UIView, _ sensitive: Swift::Bool?) -> CiscoSessionReplay::Sensitivity
+  public subscript(viewClass: UIKit::UIView.Type) -> Swift::Bool? {
     get
     set
   }
   @discardableResult
-  public func set(_ viewClass: UIKit.UIView.Type, _ sensitive: Swift.Bool?) -> CiscoSessionReplay.Sensitivity
+  public func set(_ viewClass: UIKit::UIView.Type, _ sensitive: Swift::Bool?) -> CiscoSessionReplay::Sensitivity
   @objc deinit
 }
-public enum RecordingQuality : Swift.Int {
+public enum RecordingQuality : Swift::Int {
   case low
   case medium
   case high
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
     get
   }
 }
-extension CiscoSessionReplay.RecordingQuality {
-  public static let `default`: CiscoSessionReplay.RecordingQuality
+extension CiscoSessionReplay::RecordingQuality {
+  public static let `default`: CiscoSessionReplay::RecordingQuality
 }
-public enum RenderingMode : Swift.Equatable, Swift.Codable {
+public enum RenderingMode : Swift::Equatable, Swift::Codable {
   case native
   case wireframe
-  public static func == (a: CiscoSessionReplay.RenderingMode, b: CiscoSessionReplay.RenderingMode) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public static func == (a: CiscoSessionReplay::RenderingMode, b: CiscoSessionReplay::RenderingMode) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
     get
   }
-  public init(from decoder: any Swift.Decoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-extension CiscoSessionReplay.RenderingMode {
-  public static let `default`: CiscoSessionReplay.RenderingMode
+extension CiscoSessionReplay::RenderingMode {
+  public static let `default`: CiscoSessionReplay::RenderingMode
 }
-extension CiscoSessionReplay.RenderingMode : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
-  public var description: Swift.String {
+extension CiscoSessionReplay::RenderingMode : Swift::CustomStringConvertible, Swift::CustomDebugStringConvertible {
+  public var description: Swift::String {
     get
   }
-  public var debugDescription: Swift.String {
+  public var debugDescription: Swift::String {
     get
   }
 }
-extension Dispatch.DispatchTimeInterval : @retroactive Swift.Comparable {
-  public static func < (lhs: Dispatch.DispatchTimeInterval, rhs: Dispatch.DispatchTimeInterval) -> Swift.Bool
+extension Dispatch::DispatchTimeInterval : @retroactive Swift::Comparable {
+  public static func < (lhs: Dispatch::DispatchTimeInterval, rhs: Dispatch::DispatchTimeInterval) -> Swift::Bool
 }
-extension UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency public var customId: Swift.String? {
+extension UIKit::UIView {
+  @_Concurrency::MainActor @preconcurrency public var customId: Swift::String? {
     get
     set
   }
 }
-extension SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public func ciscoSessionReplaySensitive(_ sensitive: Swift.Bool = true) -> some SwiftUICore.View
+extension SwiftUICore::View {
+  @_Concurrency::MainActor @preconcurrency public func ciscoSessionReplaySensitive(_ sensitive: Swift::Bool = true) -> some SwiftUICore::View
   
   @available(*, unavailable, renamed: "ciscoSessionReplaySensitive(_:)")
-  @_Concurrency.MainActor @preconcurrency public func sessionReplaySensitive(_ sensitive: Swift.Bool = true) -> some SwiftUICore.View
+  @_Concurrency::MainActor @preconcurrency public func sessionReplaySensitive(_ sensitive: Swift::Bool = true) -> some SwiftUICore::View
   
 }
-extension CiscoSessionReplay.RuntimeState : Swift.CustomReflectable {
-  public var customMirror: Swift.Mirror {
+extension CiscoSessionReplay::RuntimeState : Swift::CustomReflectable {
+  public var customMirror: Swift::Mirror {
     get
   }
 }
-public struct Metadata : Swift.Codable, Swift.Equatable, Swift.Hashable {
-  public let startUnixMs: Swift.Int
-  public let endUnixMs: Swift.Int
-  public let source: Swift.String
-  public init(startUnixMs: Swift.Int, endUnixMs: Swift.Int)
-  public static func == (a: CiscoSessionReplay.Metadata, b: CiscoSessionReplay.Metadata) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+public struct Metadata : Swift::Codable, Swift::Equatable, Swift::Hashable {
+  public let startUnixMs: Swift::Int
+  public let endUnixMs: Swift::Int
+  public let source: Swift::String
+  public init(startUnixMs: Swift::Int, endUnixMs: Swift::Int)
+  public static func == (a: CiscoSessionReplay::Metadata, b: CiscoSessionReplay::Metadata) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
     get
   }
-  public init(from decoder: any Swift.Decoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-extension CiscoSessionReplay.SessionReplay {
-  final public func onPublish(data block: @escaping (CiscoSessionReplay.Metadata, Foundation.Data) -> Swift.Void)
-  final public func deleteData(for metadata: CiscoSessionReplay.Metadata)
+extension CiscoSessionReplay::SessionReplay {
+  final public func onPublish(data block: @escaping (CiscoSessionReplay::Metadata, Foundation::Data) -> Swift::Void)
+  final public func deleteData(for metadata: CiscoSessionReplay::Metadata)
 }
-@_hasMissingDesignatedInitializers final public class Preferences : Swift.Codable {
-  final public var framerate: Swift.Int? {
+@_hasMissingDesignatedInitializers final public class Preferences : Swift::Codable {
+  final public var framerate: Swift::Int? {
     get
     set
   }
   @discardableResult
-  final public func framerate(_ framerate: Swift.Int?) -> CiscoSessionReplay.Preferences
-  final public var useAdaptiveFramerate: Swift.Bool? {
+  final public func framerate(_ framerate: Swift::Int?) -> CiscoSessionReplay::Preferences
+  final public var useAdaptiveFramerate: Swift::Bool? {
     get
     set
   }
   @discardableResult
-  final public func useAdaptiveFramerate(_ useAdaptiveFramerate: Swift.Bool) -> CiscoSessionReplay.Preferences
-  final public var recordingQuality: CiscoSessionReplay.RecordingQuality? {
+  final public func useAdaptiveFramerate(_ useAdaptiveFramerate: Swift::Bool) -> CiscoSessionReplay::Preferences
+  final public var recordingQuality: CiscoSessionReplay::RecordingQuality? {
     get
     set
   }
   @discardableResult
-  final public func recordingQuality(_ recordingQuality: CiscoSessionReplay.RecordingQuality?) -> CiscoSessionReplay.Preferences
-  final public var renderingMode: CiscoSessionReplay.RenderingMode? {
+  final public func recordingQuality(_ recordingQuality: CiscoSessionReplay::RecordingQuality?) -> CiscoSessionReplay::Preferences
+  final public var renderingMode: CiscoSessionReplay::RenderingMode? {
     get
     set
   }
   @discardableResult
-  final public func renderingMode(_ renderingMode: CiscoSessionReplay.RenderingMode?) -> CiscoSessionReplay.Preferences
+  final public func renderingMode(_ renderingMode: CiscoSessionReplay::RenderingMode?) -> CiscoSessionReplay::Preferences
   @objc deinit
-  final public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+  final public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-extension CiscoSessionReplay.Preferences {
-  convenience public init(framerate: Swift.Int? = nil, useAdaptiveFramerate: Swift.Bool? = nil, renderingMode: CiscoSessionReplay.RenderingMode)
+extension CiscoSessionReplay::Preferences {
+  convenience public init(framerate: Swift::Int? = nil, useAdaptiveFramerate: Swift::Bool? = nil, renderingMode: CiscoSessionReplay::RenderingMode)
 }
-public enum LogLevel : Swift.Int {
+public enum LogLevel : Swift::Int {
   case debug
   case info
   case notice
   case warn
   case error
   case fault
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
     get
   }
 }
 public struct LogMessage {
-  public let severity: CiscoSessionReplay.LogLevel
-  public let tag: Swift.String
-  public let message: Swift.String
+  public let severity: CiscoSessionReplay::LogLevel
+  public let tag: Swift::String
+  public let message: Swift::String
 }
-public struct MaskElement : Swift.Codable, Swift.Equatable {
-  public enum MaskType : Swift.Int, Swift.Codable {
+public struct MaskElement : Swift::Codable, Swift::Equatable {
+  public enum MaskType : Swift::Int, Swift::Codable {
     case covering
     case erasing
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
+    public init?(rawValue: Swift::Int)
+    public typealias RawValue = Swift::Int
+    public var rawValue: Swift::Int {
       get
     }
   }
-  public let rect: CoreFoundation.CGRect
-  public let type: CiscoSessionReplay.MaskElement.MaskType
-  public init(rect: CoreFoundation.CGRect, type: CiscoSessionReplay.MaskElement.MaskType = .covering)
-  public static func == (a: CiscoSessionReplay.MaskElement, b: CiscoSessionReplay.MaskElement) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+  public let rect: CoreFoundation::CGRect
+  public let type: CiscoSessionReplay::MaskElement.CiscoSessionReplay::MaskType
+  public init(rect: CoreFoundation::CGRect, type: CiscoSessionReplay::MaskElement.CiscoSessionReplay::MaskType = .covering)
+  public static func == (a: CiscoSessionReplay::MaskElement, b: CiscoSessionReplay::MaskElement) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct RecordingMask : Swift.Codable, Swift.Equatable {
-  public var elements: [CiscoSessionReplay.MaskElement]
-  public init(elements: [CiscoSessionReplay.MaskElement] = [])
-  public static func == (a: CiscoSessionReplay.RecordingMask, b: CiscoSessionReplay.RecordingMask) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct RecordingMask : Swift::Codable, Swift::Equatable {
+  public var elements: [CiscoSessionReplay::MaskElement]
+  public init(elements: [CiscoSessionReplay::MaskElement] = [])
+  public static func == (a: CiscoSessionReplay::RecordingMask, b: CiscoSessionReplay::RecordingMask) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
 public protocol SnapshotCoordinator : AnyObject {
-  func addAsyncScreenshot(operation: CiscoSessionReplay.AsyncScreenshotOperation)
-  func addAsyncViewSnapshot(operation: CiscoSessionReplay.AsyncViewSnapshotOperation)
+  func addAsyncScreenshot(operation: CiscoSessionReplay::AsyncScreenshotOperation)
+  func addAsyncViewSnapshot(operation: CiscoSessionReplay::AsyncViewSnapshotOperation)
 }
-extension CiscoSessionReplay.SessionReplay {
-  final public var recordingMask: CiscoSessionReplay.RecordingMask? {
+extension CiscoSessionReplay::SessionReplay {
+  final public var recordingMask: CiscoSessionReplay::RecordingMask? {
     get
     set
   }
   @discardableResult
-  final public func recordingMask(_ recordingMask: CiscoSessionReplay.RecordingMask?) -> CiscoSessionReplay.SessionReplay
+  final public func recordingMask(_ recordingMask: CiscoSessionReplay::RecordingMask?) -> CiscoSessionReplay::SessionReplay
 }
-extension CiscoSessionReplay.SessionReplay {
-  final public var preferences: CiscoSessionReplay.Preferences {
+extension CiscoSessionReplay::SessionReplay {
+  final public var preferences: CiscoSessionReplay::Preferences {
     get
     set
   }
   @discardableResult
-  final public func preferences(_ preferences: CiscoSessionReplay.Preferences) -> CiscoSessionReplay.SessionReplay
+  final public func preferences(_ preferences: CiscoSessionReplay::Preferences) -> CiscoSessionReplay::SessionReplay
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BaseOperation : Foundation.Operation {
-  @objc override dynamic public var isFinished: Swift.Bool {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BaseOperation : Foundation::Operation {
+  @objc override dynamic public var isFinished: Swift::Bool {
     @objc get
   }
-  @objc override dynamic public var isExecuting: Swift.Bool {
+  @objc override dynamic public var isExecuting: Swift::Bool {
     @objc get
   }
   @objc override final public func start()
   @objc override final public func main()
   @objc deinit
 }
-extension CiscoSessionReplay.BaseOperation {
-  @objc override dynamic public var description: Swift.String {
+extension CiscoSessionReplay::BaseOperation {
+  @objc override dynamic public var description: Swift::String {
     @objc get
   }
-  @objc override dynamic public var debugDescription: Swift.String {
+  @objc override dynamic public var debugDescription: Swift::String {
     @objc get
   }
 }
-extension CiscoSessionReplay.SessionReplay {
+extension CiscoSessionReplay::SessionReplay {
   @discardableResult
-  final public func start() -> CiscoSessionReplay.SessionReplay
+  final public func start() -> CiscoSessionReplay::SessionReplay
   @discardableResult
-  final public func stop() -> CiscoSessionReplay.SessionReplay
+  final public func stop() -> CiscoSessionReplay::SessionReplay
   @discardableResult
-  final public func startNewDataChunk() -> CiscoSessionReplay.SessionReplay
+  final public func startNewDataChunk() -> CiscoSessionReplay::SessionReplay
 }
-public enum Status : Swift.Equatable {
+public enum Status : Swift::Equatable {
   case recording
-  case notRecording(CiscoSessionReplay.Status.Cause)
+  case notRecording(CiscoSessionReplay::Status.CiscoSessionReplay::Cause)
   public enum Cause {
     case notStarted
     case stopped
@@ -258,81 +258,81 @@ public enum Status : Swift.Equatable {
     case swiftUIPreviewContext
     case unsupportedPlatform
     case diskCacheCapacityOverreached
-    public static func == (a: CiscoSessionReplay.Status.Cause, b: CiscoSessionReplay.Status.Cause) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
+    public static func == (a: CiscoSessionReplay::Status.CiscoSessionReplay::Cause, b: CiscoSessionReplay::Status.CiscoSessionReplay::Cause) -> Swift::Bool
+    public func hash(into hasher: inout Swift::Hasher)
+    public var hashValue: Swift::Int {
       get
     }
   }
-  public static func == (a: CiscoSessionReplay.Status, b: CiscoSessionReplay.Status) -> Swift.Bool
+  public static func == (a: CiscoSessionReplay::Status, b: CiscoSessionReplay::Status) -> Swift::Bool
 }
-@_hasMissingDesignatedInitializers public class RuntimeState : Combine.ObservableObject {
-  @Combine.Published<CiscoSessionReplay.Status> @_projectedValueProperty($status) public var status: CiscoSessionReplay.Status {
+@_hasMissingDesignatedInitializers public class RuntimeState : Combine::ObservableObject {
+  @Combine::Published<CiscoSessionReplay::Status> @_projectedValueProperty($status) public var status: CiscoSessionReplay::Status {
     get
   }
-  public var $status: Combine.Published<CiscoSessionReplay.Status>.Publisher {
+  public var $status: Combine::Published<CiscoSessionReplay::Status>.Combine::Publisher {
     get
   }
-  @Combine.Published<Swift.Bool> @_projectedValueProperty($isRecording) public var isRecording: Swift.Bool {
+  @Combine::Published<Swift::Bool> @_projectedValueProperty($isRecording) public var isRecording: Swift::Bool {
     get
   }
-  public var $isRecording: Combine.Published<Swift.Bool>.Publisher {
+  public var $isRecording: Combine::Published<Swift::Bool>.Combine::Publisher {
     get
   }
-  public var framerate: Swift.Int {
+  public var framerate: Swift::Int {
     get
   }
-  public var usingAdaptiveFramerate: Swift.Bool {
+  public var usingAdaptiveFramerate: Swift::Bool {
     get
   }
-  public var recordingQuality: CiscoSessionReplay.RecordingQuality {
+  public var recordingQuality: CiscoSessionReplay::RecordingQuality {
     get
   }
-  @Combine.Published<CiscoSessionReplay.RenderingMode> @_projectedValueProperty($renderingMode) public var renderingMode: CiscoSessionReplay.RenderingMode {
+  @Combine::Published<CiscoSessionReplay::RenderingMode> @_projectedValueProperty($renderingMode) public var renderingMode: CiscoSessionReplay::RenderingMode {
     get
   }
-  public var $renderingMode: Combine.Published<CiscoSessionReplay.RenderingMode>.Publisher {
+  public var $renderingMode: Combine::Published<CiscoSessionReplay::RenderingMode>.Combine::Publisher {
     get
   }
-  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  public typealias ObjectWillChangePublisher = Combine::ObservableObjectPublisher
   @objc deinit
 }
-extension QuartzCore.CATransform3D : @retroactive Swift.Codable, @retroactive Swift.Equatable {
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
-  public static func == (lhs: QuartzCore.CATransform3D, rhs: QuartzCore.CATransform3D) -> Swift.Bool
+extension QuartzCore::CATransform3D : @retroactive Swift::Codable, @retroactive Swift::Equatable {
+  public init(from decoder: any Swift::Decoder) throws
+  public func encode(to encoder: any Swift::Encoder) throws
+  public static func == (lhs: QuartzCore::CATransform3D, rhs: QuartzCore::CATransform3D) -> Swift::Bool
 }
-final public class SessionReplay : Combine.ObservableObject {
+final public class SessionReplay : Combine::ObservableObject {
   public init()
-  final public var state: CiscoSessionReplay.RuntimeState {
+  final public var state: CiscoSessionReplay::RuntimeState {
     get
   }
-  final public var sensitivity: CiscoSessionReplay.Sensitivity {
+  final public var sensitivity: CiscoSessionReplay::Sensitivity {
     get
   }
-  final public var log: CiscoSessionReplay.Log {
+  final public var log: CiscoSessionReplay::Log {
     get
   }
-  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  public typealias ObjectWillChangePublisher = Combine::ObservableObjectPublisher
   @objc deinit
 }
-extension CiscoSessionReplay.SessionReplay {
-  public static var instance: CiscoSessionReplay.SessionReplay {
+extension CiscoSessionReplay::SessionReplay {
+  public static var instance: CiscoSessionReplay::SessionReplay {
     get
   }
-  public static var isInstanceInitialized: Swift.Bool {
+  public static var isInstanceInitialized: Swift::Bool {
     get
   }
 }
-extension CiscoSessionReplay.RecordingQuality : Swift.Equatable {}
-extension CiscoSessionReplay.RecordingQuality : Swift.Hashable {}
-extension CiscoSessionReplay.RecordingQuality : Swift.RawRepresentable {}
-extension CiscoSessionReplay.RenderingMode : Swift.Hashable {}
-extension CiscoSessionReplay.LogLevel : Swift.Equatable {}
-extension CiscoSessionReplay.LogLevel : Swift.Hashable {}
-extension CiscoSessionReplay.LogLevel : Swift.RawRepresentable {}
-extension CiscoSessionReplay.MaskElement.MaskType : Swift.Equatable {}
-extension CiscoSessionReplay.MaskElement.MaskType : Swift.Hashable {}
-extension CiscoSessionReplay.MaskElement.MaskType : Swift.RawRepresentable {}
-extension CiscoSessionReplay.Status.Cause : Swift.Equatable {}
-extension CiscoSessionReplay.Status.Cause : Swift.Hashable {}
+extension CiscoSessionReplay::RecordingQuality : Swift::Equatable {}
+extension CiscoSessionReplay::RecordingQuality : Swift::Hashable {}
+extension CiscoSessionReplay::RecordingQuality : Swift::RawRepresentable {}
+extension CiscoSessionReplay::RenderingMode : Swift::Hashable {}
+extension CiscoSessionReplay::LogLevel : Swift::Equatable {}
+extension CiscoSessionReplay::LogLevel : Swift::Hashable {}
+extension CiscoSessionReplay::LogLevel : Swift::RawRepresentable {}
+extension CiscoSessionReplay::MaskElement.CiscoSessionReplay::MaskType : Swift::Equatable {}
+extension CiscoSessionReplay::MaskElement.CiscoSessionReplay::MaskType : Swift::Hashable {}
+extension CiscoSessionReplay::MaskElement.CiscoSessionReplay::MaskType : Swift::RawRepresentable {}
+extension CiscoSessionReplay::Status.CiscoSessionReplay::Cause : Swift::Equatable {}
+extension CiscoSessionReplay::Status.CiscoSessionReplay::Cause : Swift::Hashable {}

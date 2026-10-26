@@ -16,9 +16,10 @@
 
 import Foundation
 import UIKit
-@_spi(SplunkInternal) import SplunkAgent
+import SplunkAgent
 
-/// Handles the late app start measurement for React Native. 
+/// Captures app lifecycle evidence before the agent is installed from JavaScript and
+/// hands it to the native AppStart module, which classifies and emits the span.
 @objcMembers
 @objc(AppStartHandler)
 public final class AppStartHandler: NSObject {
@@ -35,15 +36,12 @@ public final class AppStartHandler: NSObject {
     _ = shared
   }
 
-  // MARK: - Lifecycle timestamps
-
-  private var didFinishLaunchingAt: Date?
-  private var willEnterForegroundAt: Date?
-  private var didBecomeActiveAt: Date?
-
   // MARK: - State
 
-  private var hasTrackedAppStart = false
+  // Notifications are recorded on the posting (main) thread, while the handoff
+  // runs on the React Native module queue.
+  private let lock = NSLock()
+  private var recorder = AppStartLifecycleRecorder()
   private var notificationObservers: [NSObjectProtocol] = []
 
   // MARK: - Initialization
@@ -54,97 +52,120 @@ public final class AppStartHandler: NSObject {
   }
 
   deinit {
-    stopObservingLifecycleNotifications()
+    for observer in notificationObservers {
+      NotificationCenter.default.removeObserver(observer)
+    }
   }
 
   // MARK: - Notification Observers
 
   private func startObservingLifecycleNotifications() {
-    // Observe didFinishLaunching - marks cold start path
-    let didFinishLaunchingObserver = NotificationCenter.default.addObserver(
-      forName: UIApplication.didFinishLaunchingNotification,
-      object: nil,
-      queue: .main
-    ) { [weak self] _ in
-      self?.handleDidFinishLaunching()
-    }
+    let observers = [
+      observe(UIApplication.didFinishLaunchingNotification) { recorder, notification, timestamp in
+        recorder.recordDidFinishLaunching(at: timestamp, origin: Self.launchOrigin(of: notification))
+      },
+      observe(UIApplication.willEnterForegroundNotification) { recorder, _, timestamp in
+        recorder.recordWillEnterForeground(at: timestamp)
+      },
+      observe(UIApplication.didBecomeActiveNotification) { recorder, _, timestamp in
+        recorder.recordDidBecomeActive(at: timestamp)
+      },
+      observe(UIApplication.didEnterBackgroundNotification) { recorder, _, _ in
+        recorder.recordDidEnterBackground()
+      }
+    ]
 
-    notificationObservers.append(didFinishLaunchingObserver)
-
-    // Observe willEnterForeground - marks warm/hot start path
-    let willEnterForegroundObserver = NotificationCenter.default.addObserver(
-      forName: UIApplication.willEnterForegroundNotification,
-      object: nil,
-      queue: .main
-    ) { [weak self] _ in
-      self?.handleWillEnterForeground()
-    }
-
-    notificationObservers.append(willEnterForegroundObserver)
-
-    // Observe didBecomeActive - common endpoint for both cold and warm starts
-    let didBecomeActiveObserver = NotificationCenter.default.addObserver(
-      forName: UIApplication.didBecomeActiveNotification,
-      object: nil,
-      queue: .main
-    ) { [weak self] _ in
-      self?.handleDidBecomeActive()
-    }
-
-    notificationObservers.append(didBecomeActiveObserver)
+    withLock { notificationObservers = observers }
   }
 
-  private func stopObservingLifecycleNotifications() {
-    for observer in notificationObservers {
-      NotificationCenter.default.removeObserver(observer)
-    }
+  private func observe(
+    _ name: Notification.Name,
+    record: @escaping (inout AppStartLifecycleRecorder, Notification, Date) -> Void
+  ) -> NSObjectProtocol {
+    // A nil queue runs the block synchronously on the posting thread, so the
+    // timestamp and application state belong to the notification itself.
+    NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil) { [weak self] notification in
+      let timestamp = Date()
 
-    notificationObservers.removeAll()
-  }
+      guard let self else {
+        return
+      }
 
-  // MARK: - Notification Handlers
-
-  private func handleDidFinishLaunching() {
-    if didFinishLaunchingAt == nil {
-      didFinishLaunchingAt = Date()
+      self.withLock { record(&self.recorder, notification, timestamp) }
     }
   }
 
-  private func handleWillEnterForeground() {
-    willEnterForegroundAt = Date()
-  }
+  private static func launchOrigin(of notification: Notification) -> AppStartLifecycleRecorder.LaunchOrigin {
+    guard Thread.isMainThread, let application = notification.object as? UIApplication else {
+      return .unknown
+    }
 
-  private func handleDidBecomeActive() {
-    didBecomeActiveAt = Date()
+    switch application.applicationState {
+    case .active, .inactive:
+      return .foreground
+
+    case .background:
+      return .background
+
+    @unknown default:
+      return .unknown
+    }
   }
 
   // MARK: - App Start Tracking
 
-  /// Tracks app start timing using the native SDK API.
+  /// Hands the captured lifecycle evidence to the native AppStart module.
+  ///
+  /// Call exactly once, immediately after `SplunkRum.install`. Later calls are ignored.
   public func trackAppStart() {
-    guard !hasTrackedAppStart else {
+    let (snapshot, observers) = withLock { () -> (AppStartLifecycleRecorder.Snapshot?, [NSObjectProtocol]) in
+      let observers = notificationObservers
+      notificationObservers = []
+      return (recorder.handOff(), observers)
+    }
+
+    guard let snapshot else {
       return
     }
 
-    let becameActiveAt = didBecomeActiveAt ?? Date()
+    _ = SplunkRum.shared.appStart.track(initialLifecycle: AppStartLifecycleSnapshot(snapshot))
 
-    SplunkRum.shared.appStart.track(
-      didBecomeActive: becameActiveAt,
-      didFinishLaunching: didFinishLaunchingAt,
-      willEnterForeground: willEnterForegroundAt
-    )
-
-    hasTrackedAppStart = true
-
-    // Cleanup for native SDK.
-    willEnterForegroundAt = nil
+    for observer in observers {
+      NotificationCenter.default.removeObserver(observer)
+    }
   }
 
-  /// Resets the handler state. Primarily for testing purposes.
-  public func reset() {
-    didFinishLaunchingAt = nil
-    willEnterForegroundAt = nil
-    didBecomeActiveAt = nil
-    hasTrackedAppStart = false
+  private func withLock<Result>(_ work: () -> Result) -> Result {
+    lock.lock()
+    defer { lock.unlock() }
+    return work()
+  }
+}
+
+private extension AppStartLifecycleSnapshot {
+
+  init(_ snapshot: AppStartLifecycleRecorder.Snapshot) {
+    let launchOrigin: AppStartLaunchOrigin
+
+    switch snapshot.launchOrigin {
+    case .foreground:
+      launchOrigin = .foreground
+
+    case .background:
+      launchOrigin = .background
+
+    case .foregroundResumed:
+      launchOrigin = .foregroundResumed
+
+    case .unknown:
+      launchOrigin = .unknown
+    }
+
+    self.init(
+      launchOrigin: launchOrigin,
+      didFinishLaunching: snapshot.didFinishLaunching,
+      willEnterForeground: snapshot.willEnterForeground,
+      didBecomeActive: snapshot.didBecomeActive
+    )
   }
 }

@@ -62,7 +62,7 @@ object AgentConfigurationBuilder {
 
     val userMap = if (map.hasKey("user")) map.getMap("user") else null
     val userConfig = com.splunk.rum.integration.agent.api.user.UserConfiguration(
-      trackingMode = userMap?.getString("trackingMode")?.let { UserTrackingMode.valueOf(it) } ?: UserTrackingMode.NO_TRACKING
+      trackingMode = userMap?.getString("trackingMode")?.let { UserTrackingMode.valueOf(it) } ?: UserTrackingMode.ANONYMOUS_TRACKING
     )
 
     val sessionMap = if (map.hasKey("session")) map.getMap("session") else null

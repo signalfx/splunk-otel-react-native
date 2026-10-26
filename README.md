@@ -29,6 +29,7 @@ The Splunk Distribution of OpenTelemetry for React Native provides automatic ins
 - React Native >= 0.75.0
 - React >= 18.2.0
 - iOS >= 15.0
+- Xcode >= 26.4 (for iOS builds)
 - Android minSdkVersion >= 24
 
 ## Installation
@@ -247,13 +248,13 @@ await SplunkRum.instance.globalAttributes.set({
 
 ### User Tracking
 
-Control user session tracking:
+Anonymous user tracking (`ANONYMOUS_TRACKING`) is on by default. Set `user.trackingMode` in the agent configuration, or change it at runtime:
 
 ```tsx
 import { SplunkRum } from '@splunk/otel-react-native';
 
-// Set tracking mode
-await SplunkRum.instance.user.setTrackingMode('ANONYMOUS_TRACKING');
+// Stop generating an anonymous user ID
+await SplunkRum.instance.user.preferences.setTrackingMode('NO_TRACKING');
 ```
 
 ### Custom Events

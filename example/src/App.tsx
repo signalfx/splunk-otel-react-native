@@ -50,7 +50,7 @@ const agentConfig: AgentConfiguration = {
     'app.type': 'test',
     'app.framework': 'react-native',
   },
-  user: { trackingMode: 'NO_TRACKING' },
+  user: { trackingMode: 'ANONYMOUS_TRACKING' },
   session: { samplingRate: 1.0 },
   deferredUntilForeground: false,
 };
@@ -116,7 +116,7 @@ export default function App() {
       modules={modules}
       onReady={onReady}
       setGlobalAttributes={{ 'app.init': 'provider' }}
-      setUser={{ trackingMode: 'NO_TRACKING' }}
+      setUser={{ trackingMode: 'ANONYMOUS_TRACKING' }}
     >
       <NavigationContainer ref={navigationRef}>
         <RootNavigator installed={installed} />

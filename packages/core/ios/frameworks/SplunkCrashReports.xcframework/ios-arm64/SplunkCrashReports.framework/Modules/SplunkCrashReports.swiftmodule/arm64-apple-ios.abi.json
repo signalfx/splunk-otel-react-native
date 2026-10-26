@@ -6,8 +6,8 @@
     "children": [
       {
         "kind": "Import",
-        "name": "CrashReporter",
-        "printedName": "CrashReporter",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "SplunkCrashReports",
         "declAttributes": [
@@ -16,15 +16,18 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "SplunkCrashReporter",
+        "printedName": "SplunkCrashReporter",
         "declKind": "Import",
-        "moduleName": "SplunkCrashReports"
+        "moduleName": "SplunkCrashReports",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "Import",
-        "name": "CrashReporter",
-        "printedName": "CrashReporter",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "SplunkCrashReports",
         "declAttributes": [
@@ -33,10 +36,13 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "SplunkCrashReporter",
+        "printedName": "SplunkCrashReporter",
         "declKind": "Import",
-        "moduleName": "SplunkCrashReports"
+        "moduleName": "SplunkCrashReports",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -70,8 +76,8 @@
       },
       {
         "kind": "Import",
-        "name": "CrashReporter",
-        "printedName": "CrashReporter",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "SplunkCrashReports",
         "declAttributes": [
@@ -80,10 +86,13 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "SplunkCrashReporter",
+        "printedName": "SplunkCrashReporter",
         "declKind": "Import",
-        "moduleName": "SplunkCrashReports"
+        "moduleName": "SplunkCrashReports",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -95,13 +104,6 @@
           "AccessControl",
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "CrashReporter",
-        "printedName": "CrashReporter",
-        "declKind": "Import",
-        "moduleName": "SplunkCrashReports"
       },
       {
         "kind": "Import",
@@ -125,6 +127,16 @@
         "moduleName": "SplunkCrashReports",
         "declAttributes": [
           "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SplunkCrashReporter",
+        "printedName": "SplunkCrashReporter",
+        "declKind": "Import",
+        "moduleName": "SplunkCrashReports",
+        "declAttributes": [
+          "AccessControl"
         ]
       },
       {
@@ -1589,6 +1601,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "ModuleEventData",
             "printedName": "ModuleEventData",
             "usr": "s:12SplunkCommon15ModuleEventDataP",
@@ -2141,203 +2160,203 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports+JSON.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports+JSON.swift",
       "kind": "IntegerLiteral",
       "offset": 700,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
       "kind": "Array",
-      "offset": 1202,
+      "offset": 1217,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
       "kind": "StringLiteral",
-      "offset": 1289,
+      "offset": 1304,
       "length": 14,
       "value": "\"CrashReports\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
       "kind": "BooleanLiteral",
-      "offset": 1743,
+      "offset": 1762,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
       "kind": "Dictionary",
-      "offset": 1930,
+      "offset": 1949,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/CrashReports.swift",
       "kind": "StringLiteral",
-      "offset": 2099,
+      "offset": 2118,
       "length": 36,
       "value": "\"com.splunk.crashreports.devicedata\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
       "kind": "StringLiteral",
       "offset": 841,
       "length": 19,
       "value": "\"SplunkCrashReport\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
       "kind": "StringLiteral",
       "offset": 956,
       "length": 21,
       "value": "\"splunk-crash-report\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
       "kind": "StringLiteral",
       "offset": 1077,
       "length": 18,
       "value": "\"device.app.crash\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
       "kind": "StringLiteral",
       "offset": 1212,
       "length": 7,
       "value": "\"crash\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportConstants.swift",
       "kind": "StringLiteral",
       "offset": 1338,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 873,
       "length": 15,
       "value": "\"ios.app.state\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 916,
       "length": 17,
       "value": "\"crash.timestamp\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 962,
       "length": 25,
       "value": "\"crash.observedTimestamp\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 1013,
       "length": 21,
       "value": "\"crash.freeDiskSpace\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 1059,
       "length": 20,
       "value": "\"crash.batteryLevel\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 1102,
       "length": 18,
       "value": "\"crash.freeMemory\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 1143,
       "length": 13,
       "value": "\"screen.name\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 1176,
       "length": 20,
       "value": "\"crash.app.build_id\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 1221,
       "length": 19,
       "value": "\"crash.processPath\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 1261,
       "length": 16,
       "value": "\"crash.isNative\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 1323,
       "length": 15,
       "value": "\"crash.address\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 1365,
       "length": 16,
       "value": "\"exception.type\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 1409,
       "length": 19,
       "value": "\"exception.message\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 1449,
       "length": 19,
       "value": "\"exception.threads\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 1487,
       "length": 18,
       "value": "\"exception.images\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 1729,
       "length": 9,
       "value": "\"crashed\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Model\/CrashReportKeys.swift",
       "kind": "StringLiteral",
       "offset": 1876,
       "length": 12,
       "value": "\"session.id\""
     },
     {
-      "filePath": "\/Users\/ruzicka\/Work\/splunk\/github\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Module\/CrashReportsConfiguration.swift",
+      "filePath": "\/Users\/ruzicka\/.codex\/worktrees\/release-2-4-3\/splunk-otel-ios\/SplunkCrashReports\/Sources\/SplunkCrashReports\/Module\/CrashReportsConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 908,
       "length": 4,

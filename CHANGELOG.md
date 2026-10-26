@@ -7,9 +7,21 @@
 #### Added
 * **Workflow attributes.** `WorkflowHandle.end(attributes?)` now accepts optional attributes that are attached to the workflow span, for detail that is only known once the work has finished (an outcome, a record count, whether it retried). `startWorkflow()` is unchanged and existing `end()` calls keep working, so the change is additive. The native agents set their own keys when the workflow starts, and attributes passed to `end()` would overwrite them, so those keys are stripped from caller input: `component`, `workflow.name`, `session.id`, `session.previous_id`, `user.anonymous_id`, `app.installation.id`, `screen.name` and `last.screen.name`. The `customEndWorkflow` bridge method now takes an attributes argument on both platforms.
 
+#### Changed
+* Bumped the native iOS RUM SDK to `2.4.3`.
+* Building for iOS now requires Xcode 26.4 or later.
+* **Anonymous user tracking is now on by default on both platforms.** When `user.trackingMode` is not set, the SDK uses `ANONYMOUS_TRACKING`, matching the native agents' default. Previously Android fell back to `NO_TRACKING` while iOS used `ANONYMOUS_TRACKING`. On iOS, `user.preferences.setTrackingMode(null)` now resets to `ANONYMOUS_TRACKING` instead of `NO_TRACKING`. To keep the previous Android behaviour, set `user: { trackingMode: 'NO_TRACKING' }` in the agent configuration.
+
 #### Fixed
+* **iOS app start no longer reports background time or JavaScript start-up as launch time.** The SDK still records app lifecycle events before JavaScript installs the agent, but it now hands them to the iOS AppStart module together with how the app was launched (in the foreground, in the background, or in the foreground and then interrupted).
 * **iOS attribute types now match Android.** Whole numbers in custom event, workflow, and global attributes are sent as integers instead of doubles, and the numbers `0` and `1` are no longer converted to booleans.
 * **Android attribute arrays no longer fail on `null` or mixed-type elements.** Arrays take the type of their first non-null element, and other elements are dropped. Previously such an array rejected the call, and on `WorkflowHandle.end()` the workflow span was never ended or exported.
+
+### `@splunk/otel-session-replay-react-native`
+
+#### Changed
+* Uses the native iOS RUM SDK `2.4.3`, provided through `@splunk/otel-react-native`.
+* Building for iOS now requires Xcode 26.4 or later, because `@splunk/otel-react-native` now bundles an iOS RUM SDK that older Xcode versions cannot build.
 
 ## 1.3.0
 
