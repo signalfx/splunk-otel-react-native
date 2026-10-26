@@ -4,6 +4,7 @@
 
 ### Changed
 * Bumped the native iOS RUM SDK to `2.4.3`.
+* Bumped the native Splunk Android RUM SDK to `2.4.0`.
 * Building for iOS now requires Xcode 26.4 or later.
 * **Anonymous user tracking is now on by default on both platforms.** When `user.trackingMode` is not set, the SDK uses `ANONYMOUS_TRACKING`, matching the native agents' default. Previously Android fell back to `NO_TRACKING` while iOS used `ANONYMOUS_TRACKING`. On iOS, `user.preferences.setTrackingMode(null)` now resets to `ANONYMOUS_TRACKING` instead of `NO_TRACKING`. To keep the previous Android behaviour, set `user: { trackingMode: 'NO_TRACKING' }` in the agent configuration.
 
