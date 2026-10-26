@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+* TBD
+
+## 1.4.0
+
+### Added
+* **Workflow attributes.** `WorkflowHandle.end(attributes?)` now accepts optional attributes that are attached to the workflow span, for detail that is only known once the work has finished (an outcome, a record count, whether it retried). `startWorkflow()` is unchanged and existing `end()` calls keep working, so the change is additive. The native agents set their own keys when the workflow starts, and attributes passed to `end()` would overwrite them, so those keys are stripped from caller input: `component`, `workflow.name`, `session.id`, `session.previous_id`, `user.anonymous_id`, `app.installation.id`, `screen.name` and `last.screen.name`. The `customEndWorkflow` bridge method now takes an attributes argument on both platforms.
+
 ### Changed
 * Bumped the native iOS RUM SDK to `2.4.3`.
 * Bumped the native Splunk Android RUM SDK to `2.4.0`.
@@ -10,6 +17,8 @@
 
 ### Fixed
 * **iOS app start no longer reports background time or JavaScript start-up as launch time.** The SDK still records app lifecycle events before JavaScript installs the agent, but it now hands them to the iOS AppStart module together with how the app was launched (in the foreground, in the background, or in the foreground and then interrupted).
+* **iOS attribute types now match Android.** Whole numbers in custom event, workflow, and global attributes are sent as integers instead of doubles, and the numbers `0` and `1` are no longer converted to booleans.
+* **Android attribute arrays no longer fail on `null` or mixed-type elements.** Arrays take the type of their first non-null element, and other elements are dropped. Previously such an array rejected the call, and on `WorkflowHandle.end()` the workflow span was never ended or exported.
 
 ## 1.3.0
 
