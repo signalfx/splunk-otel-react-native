@@ -1939,7 +1939,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - SplunkOtelReactNative (1.3.0):
+  - SplunkOtelReactNative (1.4.0):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -1961,7 +1961,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - SplunkSessionReplay (1.3.0):
+  - SplunkSessionReplay (1.4.0):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -2306,8 +2306,8 @@ SPEC CHECKSUMS:
   ReactCommon: 9002f006f571256348994183f7d4387aa7cf84e8
   ReactNativeDependencies: 2bd6854ade79bf1b60586d1ab7813a389df1b6bf
   RNScreens: de068bbd7d91b820fedac25c597d4b14830de74b
-  SplunkOtelReactNative: e18b59a0e9ec9dd041ee094a4db3b383c882af80
-  SplunkSessionReplay: 9413afc27fbcd1c90271cc2ac3eef8c68fab91e5
+  SplunkOtelReactNative: e19f2d3eff9aca99dff70a0e01b0117ddf328738
+  SplunkSessionReplay: 8fdda6cff391a03011ae93530ffd13d69a5553b3
   Yoga: 9891cfb1c680f64de9c41b09e7453dea33454d2b
 
 PODFILE CHECKSUM: e223790c69291fb299de33a9ecbdad9b39283d1f

@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* TBD
+
+## 1.4.0
+
 ### Changed
 * Version bump in sync with `@splunk/otel-react-native`.
 * Bumped the native Splunk Android session replay SDK to `2.4.0`.
