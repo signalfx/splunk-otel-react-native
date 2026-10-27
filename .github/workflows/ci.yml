@@ -213,7 +213,7 @@ jobs:
         if: env.turbo_cache_hit != 1
         uses: ruby/setup-ruby@7f797815d8adceb1c412e7abefdd1ab4abc47a5f # v1.335.0
         with:
-          ruby-version: '3.3'
+          ruby-version: '3.3.13'
 
       - name: Install CocoaPods
         if: env.turbo_cache_hit != 1
