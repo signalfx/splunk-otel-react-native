@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
-# CocoaPods tooling is validated on Ruby 3.2 and the hosted runner's Ruby 3.3.
-ruby '>= 3.1', '< 3.4'
+# CocoaPods tooling is validated on Ruby 3.3. 3.3.13 is the minimum release
+# with the Regexp compilation fixes for CVE-2026-89078, CVE-2026-93577,
+# CVE-2026-97229 and CVE-2026-110264.
+ruby '>= 3.3.13', '< 3.4'
 
 # Pin the reviewed CocoaPods toolchain; excluded CocoaPods releases are broken.
 gem 'cocoapods', '>= 1.13', '!= 1.15.0', '!= 1.15.1'
