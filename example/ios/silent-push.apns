@@ -1,0 +1,6 @@
+{
+  "Simulator Target Bundle": "splunkotelreactnative.example",
+  "aps": {
+    "content-available": 1
+  }
+}
