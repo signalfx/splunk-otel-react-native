@@ -56,6 +56,7 @@ jest.mock('./src/specs/NativeSplunkOtelReactNative', () => ({
     globalAttributesValues: jest.fn().mockResolvedValue([]),
     globalAttributesSize: jest.fn().mockResolvedValue(0),
     customTrackEvent: jest.fn().mockResolvedValue(undefined),
+    recordReactNativeFatalCrashSync: jest.fn().mockReturnValue(true),
     customStartWorkflow: jest.fn().mockResolvedValue(1),
     customEndWorkflow: jest.fn().mockResolvedValue(undefined),
     navigationTrack: jest.fn().mockResolvedValue(undefined),

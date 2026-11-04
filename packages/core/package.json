@@ -39,17 +39,24 @@
       "types": "./jest/mock.d.ts",
       "default": "./jest/mock.js"
     },
+    "./metro": {
+      "types": "./metro/index.d.ts",
+      "default": "./metro/index.js"
+    },
     "./package.json": "./package.json",
     "./app.plugin.js": "./app.plugin.js"
   },
   "files": [
     "src/**",
     "lib/**",
+    "metro/**",
     "jest/**",
     "android/build.gradle",
+    "android/splunk-rum.gradle",
     "android/gradle.properties",
     "android/src/**",
-    "ios/**/*.{h,m,mm,swift}",
+    "!android/src/test/**",
+    "ios/**/*.{h,m,mm,swift,sh}",
     "ios/frameworks/*.xcframework/**",
     "ios/frameworks/manifest.json",
     "plugin/build/**",
