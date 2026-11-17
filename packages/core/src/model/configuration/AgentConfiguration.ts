@@ -105,4 +105,13 @@ export interface AgentConfiguration {
    * **Android only.** Useful for background-started apps.
    */
   deferredUntilForeground?: boolean;
+
+  /**
+   * When `true` (default), installs global JavaScript error and unhandled promise
+   * rejection reporters after `SplunkRum.install()` completes.
+   *
+   * Set to `false` to disable automatic reporting while keeping manual
+   * `customTracking.trackError()` available.
+   */
+  automaticErrorReporting?: boolean;
 }

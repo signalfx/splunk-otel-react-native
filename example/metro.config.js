@@ -1,4 +1,5 @@
 const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
+const { withSplunkRumConfig } = require('@splunk/otel-react-native/metro');
 const path = require('path');
 
 const root = path.resolve(__dirname, '..');
@@ -35,4 +36,4 @@ const config = {
   },
 };
 
-module.exports = mergeConfig(defaultConfig, config);
+module.exports = withSplunkRumConfig(mergeConfig(defaultConfig, config));

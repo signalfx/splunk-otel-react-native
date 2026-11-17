@@ -4,6 +4,7 @@ apply plugin: "com.facebook.react"
 // Splunk RUM auto-instrumentation plugins for network tracking
 apply plugin: "com.splunk.rum-okhttp3-auto-plugin"
 apply plugin: "com.splunk.rum-httpurlconnection-auto-plugin"
+apply from: file("../../node_modules/@splunk/otel-react-native/android/splunk-rum.gradle")
 
 // Pin Byte Buddy explicitly because Splunk network instrumentation depends on its bytecode behavior.
 configurations.matching { it.name.toLowerCase().contains("bytebuddyclasspath") }.all {
@@ -62,6 +63,31 @@ react {
 
     /* Autolinking */
     autolinkLibrariesWithApp()
+}
+
+splunkRumReactNative {
+    // Explicit opt-in keeps normal local builds unchanged. Supplying only the
+    // dry-run property enables validation without calling the artifact API.
+    enabled.set(
+        providers.gradleProperty("splunkRumSourceMapEnabled")
+            .map { it.toBoolean() }
+            .orElse(
+                providers.gradleProperty("splunkRumSourceMapDryRun")
+                    .map { it.toBoolean() }
+            )
+            .orElse(false)
+    )
+    dryRun.set(
+        providers.gradleProperty("splunkRumSourceMapDryRun")
+            .map { it.toBoolean() }
+            .orElse(false)
+    )
+    variants.set(["release"])
+    cliPath.set(
+        providers.gradleProperty("splunkRumCliPath").orElse(
+            file("../../node_modules/.bin/splunk-rum").absolutePath
+        )
+    )
 }
 
 /**

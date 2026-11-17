@@ -105,6 +105,12 @@ class SplunkOtelReactNativeModule(reactContext: ReactApplicationContext) :
   override fun customTrackEvent(name: String, attributes: ReadableMap, promise: Promise) =
     implementation.customTrackEvent(name, attributes, promise)
 
+  override fun recordReactNativeFatalCrashSync(
+    message: String,
+    stack: String?,
+    attributes: ReadableMap
+  ): Boolean = implementation.recordReactNativeFatalCrashSync(message, stack, attributes)
+
   override fun customStartWorkflow(name: String, promise: Promise) =
     implementation.customStartWorkflow(name, promise)
 
@@ -116,20 +122,16 @@ class SplunkOtelReactNativeModule(reactContext: ReactApplicationContext) :
     message: String,
     stacktrace: String,
     attributes: ReadableMap,
-    framesJson: String,
     source: String,
     handled: Boolean,
-    sourceMapIdsJson: String,
     promise: Promise,
   ) = implementation.reportError(
     type,
     message,
     stacktrace,
     attributes,
-    framesJson,
     source,
     handled,
-    sourceMapIdsJson,
     promise,
   )
 

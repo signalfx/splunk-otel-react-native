@@ -30,7 +30,7 @@ import com.splunk.rum.integration.navigation.extension.navigation
 class SplunkOtelReactNativeImplementation(private val reactContext: ReactApplicationContext) {
 
   private val globalAttributesHandler = GlobalAttributesHandler()
-  private val customTrackingHandler = CustomTrackingHandler()
+  private val customTrackingHandler = CustomTrackingHandler(reactContext)
   private val userSessionHandler = UserSessionHandler()
   private val webViewHandler = WebViewHandler(reactContext)
 
@@ -174,6 +174,17 @@ class SplunkOtelReactNativeImplementation(private val reactContext: ReactApplica
   fun customTrackEvent(name: String, attributes: ReadableMap, promise: Promise) =
     customTrackingHandler.trackEvent(name, attributes, promise)
 
+  fun recordReactNativeFatalCrashSync(
+    message: String,
+    stack: String?,
+    attributes: ReadableMap,
+  ): Boolean = try {
+    customTrackingHandler.recordFatalCrashSync(message, stack, attributes)
+  } catch (t: Throwable) {
+    Log.e(TAG, "recordReactNativeFatalCrashSync() - failed", t)
+    false
+  }
+
   fun customStartWorkflow(name: String, promise: Promise) =
     customTrackingHandler.startWorkflow(name, promise)
 
@@ -187,20 +198,16 @@ class SplunkOtelReactNativeImplementation(private val reactContext: ReactApplica
     message: String,
     stacktrace: String,
     attributes: ReadableMap,
-    framesJson: String,
     source: String,
     handled: Boolean,
-    sourceMapIdsJson: String,
     promise: Promise,
   ) = customTrackingHandler.reportError(
     type,
     message,
     stacktrace,
     attributes,
-    framesJson,
     source,
     handled,
-    sourceMapIdsJson,
     promise,
   )
 
