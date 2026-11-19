@@ -62,6 +62,7 @@ export interface AgentConfiguration {
 
   /**
    * Initial global attributes sent with all signals.
+   * Empty arrays are preserved as empty array values.
    *
    * Can be modified at runtime via `SplunkRum.instance.globalAttributes`.
    */
