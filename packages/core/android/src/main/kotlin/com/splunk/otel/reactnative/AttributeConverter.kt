@@ -69,8 +69,13 @@ object AttributeConverter {
    * first non-null element. Nulls and elements of any other type are dropped,
    * because the `ReadableArray` getters throw on a type mismatch.
    */
-  private fun elementType(arr: ReadableArray): ReadableType? =
-    (0 until arr.size()).map { arr.getType(it) }.firstOrNull { it != ReadableType.Null }
+  private fun elementType(arr: ReadableArray): ReadableType? {
+    // JS empty arrays have no element type. Store an empty string array to match
+    // iOS and replace any previous value in both mutable and builder conversions.
+    if (arr.size() == 0) return ReadableType.String
+
+    return (0 until arr.size()).map { arr.getType(it) }.firstOrNull { it != ReadableType.Null }
+  }
 
   private fun indicesOf(arr: ReadableArray, type: ReadableType): List<Int> =
     (0 until arr.size()).filter { arr.getType(it) == type }

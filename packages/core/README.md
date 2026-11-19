@@ -237,14 +237,24 @@ Add custom attributes to all telemetry:
 import { SplunkRum } from '@splunk/otel-react-native';
 
 // Set a single attribute
-await SplunkRum.instance.globalAttributes.set('user.id', '12345');
+await SplunkRum.instance.globalAttributes.setValue('user.id', '12345');
 
 // Set multiple attributes
-await SplunkRum.instance.globalAttributes.set({
+await SplunkRum.instance.globalAttributes.setAll({
   'app.version': '1.2.3',
   'user.tier': 'premium',
 });
+
+// Replace an array with an empty array
+await SplunkRum.instance.globalAttributes.setArray('user.tags', []);
+
+// Remove the attribute entirely
+await SplunkRum.instance.globalAttributes.remove('user.tags');
 ```
+
+Empty arrays are stored on both Android and iOS and replace any previous value.
+This also applies to `setValue`, `setAll`, `setAllInNamespace`, and initial
+`globalAttributes` in the agent configuration.
 
 ### User Tracking
 

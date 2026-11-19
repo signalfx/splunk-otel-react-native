@@ -22,6 +22,8 @@ import { SplunkNativeBridge as Native } from '../../sdk/SplunkNativeBridge';
  * Thread-safe mutable collection of attributes.
  *
  * Attributes set via this API are sent with all telemetry signals (spans, events).
+ * Empty arrays are stored and replace any previous value, including in bulk
+ * and namespaced updates. Use `remove` or a `null` setter value to remove a key.
  *
  * Access via `SplunkRum.instance.globalAttributes`.
  *
@@ -126,6 +128,7 @@ export class MutableAttributes {
 
   /**
    * Sets an array attribute.
+   * An empty array replaces the previous value with an empty array.
    *
    * @param key - Attribute key.
    * @param value - Array of primitives or `null` to remove.

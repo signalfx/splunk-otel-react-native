@@ -148,6 +148,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
+      - name: Run Android unit tests
+        if: env.turbo_cache_hit != 1
+        run: ./gradlew :splunk_otel-react-native:testDebugUnitTest --console=plain
+        working-directory: example/android
+
       - name: Build example app for Android
         env:
           JAVA_OPTS: '-XX:MaxHeapSize=6g'
