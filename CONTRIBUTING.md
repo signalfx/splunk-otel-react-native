@@ -36,7 +36,7 @@ See [SECURITY.md](SECURITY.md#reporting-security-issues) for instructions.
 This repository is a Yarn (Berry) monorepo using Yarn workspaces and Turborepo.
 To build and test the project locally:
 
-1. Install [Node.js](https://nodejs.org/) `>=22` and enable Yarn via
+1. Install [Node.js](https://nodejs.org/) `>=22.13.0` and enable Yarn via
    [Corepack](https://yarnpkg.com/corepack) (`corepack enable`).
 2. Fork and clone the repository.
 3. Install dependencies and build the packages:
@@ -55,7 +55,8 @@ TypeScript type-checking; on commit messages they run commitlint.
 Contributions via Pull Requests (PRs) are much appreciated. Before sending us a
 pull request, make sure that:
 
-1. You are working against the latest source on the `main` branch.
+1. Base your work on the latest `develop` branch and target it in your pull
+   request.
 2. You check existing open, and recently merged, pull requests to make sure
    someone else hasn't addressed the problem already.
 3. You open an issue to discuss any significant work - we would hate for your
@@ -89,8 +90,8 @@ All must pass before a PR can be merged:
 | Lint & Typecheck | ESLint and TypeScript pass | `yarn lint` / `yarn typecheck` |
 | Unit Tests | All package tests pass | `yarn test` |
 | Build Library | SDK packages build with valid artifacts | `yarn build` |
-| Build Android | Example app builds (old and new arch) | `yarn build:android` |
-| Build iOS | Example app builds (old and new arch) | `yarn build:ios` |
+| Build Android | Android example app builds | `yarn build:android` |
+| Build iOS | iOS example app builds | `yarn build:ios` |
 | CLA Assistant | Signed Splunk CLA (see [Licensing](#licensing)) | n/a |
 
 Run this before pushing to catch issues early:
