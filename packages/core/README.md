@@ -36,7 +36,7 @@ The Splunk Distribution of OpenTelemetry for React Native provides automatic ins
 
 ### For Expo Projects (with Development Builds)
 
-This SDK supports Expo projects that use development builds (custom native code). It includes an Expo Config Plugin that automatically configures the native projects.
+This SDK supports Expo projects that use development builds (custom native code). During prebuild, the Expo config plugin adds the Splunk Maven repository and configures core library desugaring for standard Groovy Android app projects. If prebuild warns about a customized Gradle layout or Kotlin DSL, use the Android setup below.
 
 > **Note:** This SDK does not work with Expo Go since it requires custom native code. You must use a development build.
 
@@ -81,35 +81,25 @@ cd ios && pod install && cd ..
 
 3. **Android Setup:**
 
-Enable core library desugaring in your android/app/build.gradle:
+Enable core library desugaring in your `android/app/build.gradle`. The SDK's desugaring dependency (`2.1.5`) requires Android Gradle Plugin (AGP) 8.0 or higher. Keep your project's existing Java and Kotlin compiler targets. The example below uses Java 8 targets.
 
 ```groovy
 android {
   compileOptions {
-    // Flag to enable support for the new language APIs
-    // For AGP 4.1+
-    isCoreLibraryDesugaringEnabled = true
-    // For AGP 4.0
-    // coreLibraryDesugaringEnabled = true
+    coreLibraryDesugaringEnabled true
     sourceCompatibility JavaVersion.VERSION_1_8
     targetCompatibility JavaVersion.VERSION_1_8
   }
   kotlinOptions {
-    // If this setting is present, jvmTarget must be "1.8"
     jvmTarget = "1.8"
   }
 }
 dependencies {
-  // For AGP 8+
   coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.1.5"
-  // For AGP 7.4+
-  // coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.3")
-  // For AGP 7.3
-  // coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.2.3")
-  // For AGP 4.0 to 7.2
-  // coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.9")
 }
 ```
+
+In Kotlin DSL (`android/app/build.gradle.kts`), use `isCoreLibraryDesugaringEnabled = true` and the parenthesized `coreLibraryDesugaring("…")` dependency syntax. For desugaring library requirements by AGP version, see the [Android compatibility reference](https://developer.android.com/studio/write/java8-support#library-desugaring).
 
 Ensure minSdkVersion is 24 or higher.
 
